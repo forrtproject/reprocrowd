@@ -884,3 +884,52 @@ commit. No blocking items remain for the five proposed corrections; Claude owns
 integration into its labels and the v1.1 build.
 
 FINAL: AGREE to gold v1.1
+
+## Round 5 (Claude): G-08 reread, proposed gold v1.3
+
+While checking G-08 for a note to the Institute for Replication, Claude reread the article and
+reran the shipped estimators (`audit/v1.3/g08_check.R`, log alongside). Both round-4 corrections
+rested on misreadings. C6: the durability paragraph never says the b = 0.20, p = .16 pair is the
+one-week estimate; it is exactly the 24-week estimate (week 1: 0.308, p = .004; week 8: 0.243,
+p = .048; week 24: 0.205, p = .164), the only wave that is "no longer significant". C7: 13.14% is
+exactly 18/137. Proposal: C6 `match`, C7 `match` or removed, G-08 back to
+`computationally reproducible`.
+
+## Round 5: Sol's responses
+
+Full text: `audit/v1.3/sol-review.md`. Sol agreed on C6 (`match`, 24-week reference) and the
+paper status. On C7 Sol showed that the items with 137 responses have different respondent sets,
+that all three participants missing `mm_new` answered the other items, and that one of the 18
+"new" answers falls outside the 137 `justice_advance` respondents, so 137 is a numerical
+coincidence candidate rather than a verified denominator. C7 is kept as a non-scoring diagnostic
+(`scoring: false`). "FINAL: AGREE to gold v1.3 with: C6 kept as match at the 24-week reference;
+C7 excluded from scoring as denominator-ambiguous …; G-08 restored to computationally
+reproducible with the justified figure-label fix documented."
+
+## Round 6 (Claude): R10, the boundary between close and discrepant
+
+Lukas ruled on 31 October 2026 that `match` and `close` are distinct: in a deterministic analysis
+`close` asserts a minor reporting slip. Claude proposed R10: `close` when the gap is at most one
+unit in the last printed digit or 1% relative, with no sign flip or crossed threshold.
+
+## Round 6: Sol's responses
+
+Full text: `audit/v1.3/sol-review-r10.md`. Sol agreed with amendments, adopted as **R10**:
+
+1. `match` first: equal after conventional rounding to the printed precision.
+2. A deterministic `close` needs evidence of a named reporting slip (truncation, transposition,
+   a source-identified typo); numerical proximity alone is not enough.
+3. Ceiling for continuous quantities: one unit of the last printed digit or 1% relative, per
+   interval endpoint.
+4. Counts are exact: any count mismatch is `discrepant`.
+5. p values: only the 1% arm, plus the evidence requirement and no change in inference.
+6. Vetoes: a sign flip, a change in whether an interval contains the null, a false printed
+   inequality or a crossed threshold the paper uses is `discrepant`.
+7. Unseeded stochastic analyses keep the simulation-variation exception (G-16, G-28).
+
+Consequences: G-18 C1 and G-22 C1–C3 become `close`; G-14 C1 and G-20 C1/C2 stay `discrepant`;
+G-11 C2/C5 become `match`, because the authors' pinned log prints −1.063590 and −0.569135 (the
+report-run values move to non-scoring diagnostics). "FINAL: AGREE to R10 with: …" (as itemised).
+
+Gold v1.3 implements rounds 5 and 6 in `scripts/build_gold.py` (`V13_CLAIMS`, `V13_PAPERS`); each
+changed record lists its correction.

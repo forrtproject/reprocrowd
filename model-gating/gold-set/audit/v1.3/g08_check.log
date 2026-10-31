@@ -1,0 +1,12 @@
+pardon week1: b=0.3080994760 p=0.0040619090 n=222
+pardon week24: b=0.2047054162 p=0.1640234164 n=129
+treated n: 138 
+   0    1    2 <NA> 
+  11  106   18    3 
+18/135 = 13.3333%; 18/137 = 13.1387%; 18/138 = 13.0435%
+[1] "R version 4.6.1 (2026-06-24)"
+[1] ‘3.1.1’
+[1] ‘0.9.40’
+pardon week8: b=0.2433283278 p=0.0478123941 n=179
+non-missing mm_new among treated: 135 
+treated variables with 137 non-missing: justice_advance, interested, stimulated, enthusiastic, energetic, proud, alert, inspired, attentive, active, tense, guilty, hostile, irritable, nervous 

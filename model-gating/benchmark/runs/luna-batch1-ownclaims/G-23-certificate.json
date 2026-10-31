@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "paper": {
+    "doi": "10.5194/agile-giss-4-13-2023",
+    "title": "Does spatial thinking ability relate to performance when using web-mapping services? A survey with digital natives",
+    "authors": ["Eleni Tomai", "Margarita Kokla", "Christos Charcharos", "Marinos Kavouras"],
+    "year": 2023
+  },
+  "procedure": {
+    "version": "ReproCrowd benchmark prompt 0.1.2",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "engine": "Codex",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "rules_version": "crowd-repro v1.1.0",
+  "date": "2026-10-31",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS Tahoe 26.7 (aarch64-apple-darwin23)",
+    "language": "R",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1 (2026-06-24)",
+        "packages": {
+          "tidyverse": "2.0.0",
+          "DescTools": "0.99.60",
+          "gdata": "3.0.1",
+          "psych": "2.6.9",
+          "rstatix": "1.1.0",
+          "RColorBrewer": "1.1-3",
+          "readr": "2.2.0",
+          "ltm": "1.2-0"
+        },
+        "lockfile": "sessionInfo.txt"
+      },
+      {
+        "name": "Python",
+        "version": "3.14.6",
+        "packages": {
+          "py7zr": "1.1.4"
+        },
+        "lockfile": "python-environment.txt"
+      }
+    ],
+    "versions": {
+      "R": "4.6.1",
+      "Python": "3.14.6",
+      "py7zr": "1.1.4"
+    },
+    "lockfile": "sessionInfo.txt"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "The sample's STAT score has mean 10.62 and SD 2.45.",
+      "exhibit": "Section 4.3, STAT results"
+    },
+    {
+      "id": "C2",
+      "claim": "For Group 1 Task 1, success was 35.14% on Google Maps and 86.49% on Bing Maps; McNemar chi-square = 15.43, p < .001.",
+      "exhibit": "Table 1, Task 1"
+    },
+    {
+      "id": "C3",
+      "claim": "Group 1 overall task scores differed between Google Maps and Bing Maps: Wilcoxon V = 78, p = .012.",
+      "exhibit": "Table 4, GM-BM row"
+    },
+    {
+      "id": "C4",
+      "claim": "The 95% confidence interval for the Group 1 GM-BM overall score difference is [-1.5, 0.0].",
+      "exhibit": "Table 4, GM-BM row"
+    },
+    {
+      "id": "C5",
+      "claim": "STAT score correlates with Google Maps task score (Kendall's tau = .29, z = 3.19, p = .001).",
+      "exhibit": "Table 9, STAT / TS GM"
+    },
+    {
+      "id": "C6",
+      "claim": "The script computes the Group 2 analyses and Table 9 correlations for Bing Maps and HERE WeGo.",
+      "exhibit": "Tables 2, 3, 5, 7-9; Sections 4.4-4.5"
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "STAT score mean ± SD",
+      "reported": "10.62 ± 2.45",
+      "recomputed": "10.62 ± 2.45",
+      "status": "match",
+      "basis": "justified_fix",
+      "fix": "The shipped R file was executed with its working directory pointed to the extracted CSV files, required packages installed, and its interactive View() calls replaced at runtime with a no-op. No analysis statement, data, or sample was changed."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Group 1 Task 1 success rates; McNemar chi-square and p-value",
+      "reported": "35.14% vs 86.49%; 15.43; p < .001",
+      "recomputed": "13/37 (35.14%) vs 32/37 (86.49%); 15.43; p < .001",
+      "status": "match",
+      "basis": "justified_fix",
+      "fix": "The shipped R file was executed with its working directory pointed to the extracted CSV files, required packages installed, and its interactive View() calls replaced at runtime with a no-op. No analysis statement, data, or sample was changed."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Group 1 overall task score comparison, Wilcoxon V and p-value",
+      "reported": "V = 78; p = .012",
+      "recomputed": "V = 78; p = .012",
+      "status": "match",
+      "basis": "justified_fix",
+      "fix": "The shipped R file was executed with its working directory pointed to the extracted CSV files, required packages installed, and its interactive View() calls replaced at runtime with a no-op. No analysis statement, data, or sample was changed."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Group 1 overall task score difference 95% confidence interval",
+      "reported": "[-1.5, 0.0]",
+      "recomputed": "[-1.0, 0.0]",
+      "status": "discrepant",
+      "basis": "justified_fix",
+      "fix": "The shipped R file was executed with its working directory pointed to the extracted CSV files, required packages installed, and its interactive View() calls replaced at runtime with a no-op. No analysis statement, data, or sample was changed.",
+      "note": "The shipped wilcox.test(..., conf.int = TRUE) output differs by 0.5 at the lower bound; the test statistic and p-value match. The paper does not identify a pinned R version, so version drift is possible but not established as the cause."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Kendall correlation between STAT and Google Maps task score",
+      "reported": "tau = .29; z = 3.19; p = .001",
+      "recomputed": "Not computed: the script stops before constructing GM_Performance",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped script stops at object 'GMHWG' not found before it constructs the combined Google Maps performance data used by this correlation."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Group 2 comparisons and downstream Bing Maps / HERE WeGo analyses",
+      "reported": "Reported in Tables 2, 3, 5, 7-9 and Sections 4.4-4.5",
+      "recomputed": "Not computed: the shipped script stops at object 'GMHWG' not found",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The data archive contains GM_HWG.csv, but the R file states that Group 2 code is omitted and never reads or processes this CSV to create GMHWG. Supplying this missing analysis would exceed the permitted fixes."
+    }
+  ],
+  "validation_status": "technical failure",
+  "confidence_level": "HighConfidence",
+  "findings": [
+    {
+      "id": "DEF-001",
+      "severity": "P0",
+      "type": "defect",
+      "description": "The shipped script terminates at its Google Maps across-groups section because GMHWG is undefined. The Group 2 calculations are explicitly omitted from the script, leaving the available GM_HWG.csv unread and unprocessed. Consequently the remainder of the workflow, including key Table 9 correlations, cannot execute.",
+      "evidence": "logs/run-04.log records 'SHIPPED_SCRIPT_ERROR: object 'GMHWG' not found'; survey_2021.R lines 761-764 say Group 2 code is omitted and identify GM_HWG.csv as the file to use.",
+      "suggested_fix": "Publish the omitted Group 2 analysis code and rerun the complete workflow against the shipped data."
+    },
+    {
+      "id": "DEF-002",
+      "severity": "P1",
+      "type": "defect",
+      "description": "The lower bound of the Group 1 GM-BM overall score confidence interval differs from Table 4, although the reported Wilcoxon statistic and p-value recur.",
+      "evidence": "The shipped wilcox.test call returns [-1.0, 0.0] in logs/run-04.log; Table 4 reports [-1.5, 0.0].",
+      "suggested_fix": "Report the R version used for the published result and verify the interval in that environment; correct the table or document the version-related difference if confirmed."
+    }
+  ],
+  "limitations": [
+    "Only the shipped Figshare version 1 analysis script and data were used. Their SHA-256 hashes matched the user-supplied values. The current Figshare record has later versions; no later-version files were used.",
+    "The workflow is incomplete as shipped. No omitted Group 2 code was authored or inferred, and all downstream values blocked by the error are not_checkable.",
+    "This certificate assesses computational reproducibility only; outcome_robustness is not checked."
+  ],
+  "artifacts": {
+    "pipeline": "https://forrtproject.github.io/reprocrowd/",
+    "console_log": "logs/run-04.log"
+  },
+  "signatories": [
+    {
+      "name": "Codex (GPT-6, OpenAI)",
+      "role": "codechecker"
+    }
+  ],
+  "provenance": {
+    "raw_data": "Figshare article 22132940 version 1; dataset.7z file 39347477; SHA-256 86898d52d894af27904f3e80428c71a32af4f8a42f3bc575ad30138caf8ee89e",
+    "processed_data": "None retained in this certification bundle; original CSV files were extracted to a temporary working directory.",
+    "analysis_script": "survey_2021.R, Figshare file 39347480; SHA-256 ce9f3a018da08164caa62e0b601399ee740bed9b2f2cd4311bfb47bbf3c4fa5e"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "technical failure",
+    "outcome_robustness": "not checked"
+  }
+}

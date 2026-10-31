@@ -23,6 +23,16 @@ idea.
    packages. Whether the two runs used different model families is secondary.
 5. **How labels work.** One simple public label, with the detailed confidence dimensions stored in
    the metadata.
+6. **Two tasks, benchmarked separately (31 October 2026).** Models do *computational
+   reproduction* (run the shipped code) and, separately, *blinded recreation* (rebuild the analysis
+   from the paper without access to the code). The current gold set covers computational
+   reproduction only. There, each claim has three outcomes: it reproduces, it reproduces with
+   justified fixes, or it does not. Code a model writes itself counts as "does not reproduce".
+7. **`match` and `close` are distinct (31 October 2026).** In a deterministic analysis, `close`
+   asserts a minor reporting slip, so a model must not use it where the value matches.
+8. **Stata (31 October 2026).** Models translate shipped Stata code directly into R (preferred)
+   or Python, and the result is labelled as translated. Stata papers are therefore eligible for
+   the benchmark.
 
 The idea running through all five is that confidence in a model (or pipeline) and confidence in a
 single reproduction result are different things. A benchmarked model can still fail on a given
@@ -40,10 +50,12 @@ hallucination leaderboard, because our main risk is goal-directed error (silentl
 specification, hard-coding a value so the output hits the reported number), which those
 leaderboards do not measure.
 
-- Proposed cut-off: **35**. The meeting suggested about **39**. Neither number has
-  reproduction-specific evidence behind it; this is the first open decision below.
-- Record the exact model version and reasoning setting, plus the index version and score at the
-  time of submission. Re-check the cut-off when Artificial Analysis changes its methodology.
+- Cut-off (decided 31 October 2026): a model is eligible if it scores **at or above DeepSeek V4
+  Flash** on the index at the time of assessment. The cut-off is pegged to a reference model rather
+  than a number because Artificial Analysis rescales its scores when it changes the index.
+  This replaces the memo's fixed 35 or 39.
+- Record the exact model version and reasoning setting, plus the index version and both scores
+  (the model's and DeepSeek V4 Flash's) at the time of submission.
 - Artificial Analysis has a free [API](https://artificialanalysis.ai/api-reference), so we store
   scores rather than maintain a hand-curated whitelist.
 
@@ -123,7 +135,7 @@ result-level agreement, disputes and corrections; and the scope of any human ver
 
 ## Implementation sequence
 
-1. Implement Route 1 with the Artificial Analysis API and a provisional cut-off.
+1. Implement Route 1 with the Artificial Analysis API, pegged to DeepSeek V4 Flash.
 2. Audit REPRO-Bench, SCORE, selected I4R reports and data-editor packages for coverage, access,
    unit of evaluation and evidence quality.
 3. Build the 30-paper pilot (see [`gold-benchmark-30.md`](gold-benchmark-30.md)).
@@ -134,11 +146,9 @@ result-level agreement, disputes and corrections; and the scope of any human ver
 
 ## Open decisions for the team
 
-1. **Route 1 cut-off: 35 or about 39?** The memo leans to 35 as a starting point, to be revised
-   once the pilot shows how the index relates to reproduction performance.
-2. **What disqualifies a benchmark attempt outright?** The memo's preference is that clear
+1. **What disqualifies a benchmark attempt outright?** The memo's preference is that clear
    evidence fabrication (hard-coded outputs, reporting a run that never happened) fails the whole
    attempt even when the final verdict is right, while other errors feed into the metrics.
-3. **When does corroboration override the ordinary label?** The memo's preference is only after
+2. **When does corroboration override the ordinary label?** The memo's preference is only after
    the benchmark shows that independent agreement adds predictive value; until then, it is shown
    as a descriptive attribute.

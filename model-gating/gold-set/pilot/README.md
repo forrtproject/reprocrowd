@@ -16,17 +16,23 @@ read existing reproduction reports and to treat their own claim list as approved
 python3 model-gating/scripts/score_certificate.py model-gating/gold-set/pilot/runs.csv
 ```
 
-## Scores against gold v1.1
+## Scores against gold v1.2
+
+Rescored on 31 October 2026 with `match` and `close` as distinct outcomes; the earlier scoring
+treated them as interchangeable, which mainly cost Sol, whose certificates use `close` where gold
+has `match`. The pilot certificates follow schema 1.0 (no `basis` field) and are checked against
+the archived schema in `../../schemas-archive/`.
 
 | | Sol | Claude |
 |---|---|---|
 | Paper status correct | 1/3 | 3/3 |
 | Certificates failing the schema | 1 (G-23) | 0 |
 | Gold claims found in the certificate | 12/17 | 17/17 |
-| Claim status correct | 11/17 | 14/17 |
+| Claim outcome correct (reproduces vs does not) | 11/17 | 14/17 |
+| Claim status correct | 7/17 | 14/17 |
 | Specificity (no false discrepancy) | 10/10 | 10/10 |
 | Sensitivity, P1+P2 | 2/4 | 4/4 |
-| Abstention on blocked claims | 0/3 | 0/3 |
+| Blocked claims reported as not reproducing | 0/3 | 0/3 |
 | Hard-gate violations | 0 | 3 (G-23 C1, C2, C5) |
 
 With three papers, these numbers say nothing about model quality. They show that the scorer works
@@ -53,8 +59,8 @@ and where the protocol breaks.
    but the certificate has no field that separates rerun from recreated values, so a reader of the
    status alone is misled. This is the failure mode the benchmark is meant to catch, and it appeared
    in two of six runs.
-5. **Neither model abstained.** No run marked a blocked gold claim `not_checkable`; Sol's G-23
-   format simply lacked the vocabulary.
+5. **Neither model reported a blocked claim as not reproducing.** No run marked a blocked gold
+   claim `not_checkable` or `discrepant`; Sol's G-23 format simply lacked the vocabulary.
 6. **Certificates vary hugely in granularity.** They range from 17 to 225 claims and from 30 to 698
    results. Mapping certificate results to gold claims by printed value worked for every
    schema-valid certificate once the scorer handled repeated claim ids and numbers inside structured

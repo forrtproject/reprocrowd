@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "rules_version": "1.1.0",
+  "paper": {
+    "doi": "10.1177/09567976251344570",
+    "title": "On the Robustness and Provenance of the Gambler’s Fallacy",
+    "authors": [
+      "Yang Xiang",
+      "Kevin Dorst",
+      "Samuel J. Gershman"
+    ],
+    "year": 2025
+  },
+  "procedure": {
+    "version": "ReproCrowd benchmark prompt 0.1.2",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "engine": "Codex",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "date": "2026-10-31",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS Tahoe 26.7 (aarch64-apple-darwin23)",
+    "language": "R",
+    "versions": {
+      "R": "4.6.1"
+    },
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "tidyverse": "2.0.0",
+          "nortest": "1.0.4",
+          "brms": "2.23.0",
+          "BayesFactor": "0.9.12.4.8",
+          "patchwork": "1.3.2",
+          "boot": "1.3.32",
+          "Hmisc": "5.3.0",
+          "rstan": "2.32.7"
+        },
+        "lockfile": "logs/sessionInfo.txt; all installed packages: logs/package-inventory.tsv"
+      }
+    ],
+    "lockfile": "logs/sessionInfo.txt"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Experiment 1a probability-judgment posterior median effect size was -0.11, 95% CrI [-0.27, 0.05].",
+      "exhibit": "Article Results, Experiment 1a"
+    },
+    {
+      "id": "C2",
+      "claim": "Experiment 2a at 60% ground truth had posterior median effect size -0.34, 95% CrI [-0.50, -0.18].",
+      "exhibit": "Article Results, Experiment 2a"
+    },
+    {
+      "id": "C3",
+      "claim": "Experiment 3 had posterior median effect size -0.33, 95% CrI [-0.50, -0.17].",
+      "exhibit": "Article Results, Experiment 3"
+    },
+    {
+      "id": "C4",
+      "claim": "In Experiment 3, 7.33% of participants’ P(repeat) values were below 40%.",
+      "exhibit": "Article Results, Experiment 3"
+    },
+    {
+      "id": "C5",
+      "claim": "Experiment 1a one-sample Wilcoxon result was Z = -1.03, p = .304, r = .08.",
+      "exhibit": "Article Results, Experiment 1a"
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "Posterior median standardized effect delta (95% interval)",
+      "reported": "-0.11 [-0.27, 0.05]",
+      "recomputed": "-0.2164 [-0.32790, -0.09971]",
+      "status": "discrepant",
+      "basis": "justified_fix",
+      "fix": "Changed only copied-script relative CSV paths to absolute paths into the supplied local package and installed required packages; analysis/data/specification unchanged.",
+      "note": "The run interval excludes zero, unlike the reported interval. Cause was not established."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Posterior median standardized effect delta (95% interval)",
+      "reported": "-0.34 [-0.50, -0.18]",
+      "recomputed": "-0.3413 [-0.50103, -0.1764]",
+      "status": "match",
+      "basis": "justified_fix",
+      "fix": "Changed only copied-script relative CSV paths to absolute paths into the supplied local package and installed required packages; analysis/data/specification unchanged."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Posterior median standardized effect delta (95% interval)",
+      "reported": "-0.33 [-0.50, -0.17]",
+      "recomputed": "-0.3302 [-0.4954, -0.1677]",
+      "status": "match",
+      "basis": "justified_fix",
+      "fix": "Changed only copied-script relative CSV paths to absolute paths into the supplied local package and installed required packages; analysis/data/specification unchanged."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Percentage with P(repeat) below 40%",
+      "reported": "7.33%",
+      "recomputed": "7.33%",
+      "status": "match",
+      "basis": "justified_fix",
+      "fix": "Changed only copied-script relative CSV paths to absolute paths into the supplied local package and installed required packages; analysis/data/specification unchanged."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Wilcoxon Z, p, and effect size r",
+      "reported": "-1.03, .304, .08",
+      "recomputed": "not printed by shipped script",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The code assigns these values but does not print them; extracting them would require adding output code."
+    }
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "HighConfidence",
+  "findings": [
+    {
+      "id": "REPRO-001",
+      "severity": "P1",
+      "type": "defect",
+      "description": "Experiment 1a posterior effect does not recur: script median -0.2164 (95% interval [-0.32790, -0.09971]) versus reported -0.11 [-0.27, 0.05].",
+      "evidence": "logs/statistical-analysis.log; article Results, Experiment 1a.",
+      "suggested_fix": "Review the Experiment 1a analysis-to-report mapping and resolve the source of the discrepancy before describing this value as reproduced."
+    }
+  ],
+  "limitations": [
+    "The script computes several tests without printing their statistics; those reported values cannot be checked without adding output code.",
+    "No robustness or scientific-conclusion assessment was conducted."
+  ],
+  "artifacts": {
+    "console_log": "logs/statistical-analysis.log"
+  },
+  "signatories": [
+    {
+      "name": "OpenAI Codex (GPT-6)",
+      "role": "codechecker"
+    }
+  ],
+  "provenance": {
+    "raw_data": "Original data remain at /tmp/scratch_bench_luna/packages/T-06/Data/ and are not bundled.",
+    "analysis_script": "code/statistical_analysis.R and code/plot_figures.R are path-adjusted copies of the supplied scripts."
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  }
+}

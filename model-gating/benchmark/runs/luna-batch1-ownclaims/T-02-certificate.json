@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "repro_standard_version": "ReproCrowd crowd-repro v1.1.0",
+  "rules_version": "1.1.0",
+  "paper": {
+    "doi": "10.1111/ajps.12702",
+    "title": "Entertaining Beliefs in Economic Mobility",
+    "authors": [
+      "Eunji Kim"
+    ],
+    "year": 2023
+  },
+  "procedure": {
+    "version": "ReproCrowd Reproduction Study 0.1.2",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "engine": "Codex; analysis scripts executed with Rscript",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "date": "2026-10-31",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS Tahoe 26.7 (aarch64-apple-darwin23)",
+    "language": "R",
+    "versions": {
+      "R": "4.6.1",
+      "reported_by_package_readme": "R 4.1.0 (macOS Catalina 10.15.7)"
+    },
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "foreign": "0.8-91",
+          "ggplot2": "4.0.3",
+          "readstata13": "0.11.0",
+          "dplyr": "1.2.1",
+          "haven": "2.5.5",
+          "xtable": "1.8-8",
+          "stargazer": "5.2.3",
+          "tidytext": "0.4.3",
+          "stringr": "1.6.0",
+          "tidyr": "1.3.2",
+          "scales": "1.4.0",
+          "tables": "0.9.35",
+          "ggpubr": "1.0.0",
+          "wordcloud": "2.6",
+          "lubridate": "1.9.5",
+          "DescTools": "0.99.60",
+          "ggeffects": "2.3.2",
+          "tidyverse": "2.0.0",
+          "egg": "0.4.5"
+        },
+        "lockfile": "sessionInfo.txt"
+      }
+    ],
+    "lockfile": "sessionInfo.txt"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "All-participant MTurk treatment coefficient in Table 1",
+      "exhibit": "Table 1"
+    },
+    {
+      "id": "C2",
+      "claim": "All-participant lab-in-the-field treatment coefficient in Table 1",
+      "exhibit": "Table 1"
+    },
+    {
+      "id": "C3",
+      "claim": "Heavy-viewer coefficient in the controlled upward-mobility model",
+      "exhibit": "Table 2, column 2"
+    },
+    {
+      "id": "C4",
+      "claim": "Unweighted Cohen kappa for coding ordinary character category",
+      "exhibit": "Appendix Table A1"
+    },
+    {
+      "id": "C5",
+      "claim": "Unweighted Cohen kappa for coding economic-benefit category",
+      "exhibit": "Appendix Table A1"
+    },
+    {
+      "id": "C6",
+      "claim": "Unweighted Cohen kappa for coding hard-work category",
+      "exhibit": "Appendix Table A1"
+    },
+    {
+      "id": "C7",
+      "claim": "Share of respondents reporting America’s Got Talent viewing",
+      "exhibit": "Appendix Table E1"
+    },
+    {
+      "id": "C8",
+      "claim": "Treatment by high system-justification interaction coefficient",
+      "exhibit": "Appendix Table K1"
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "All-participant MTurk treatment coefficient in Table 1",
+      "reported": 0.055,
+      "recomputed": 0.057,
+      "status": "discrepant",
+      "basis": "justified_fix",
+      "fix": "Installed the shipped scripts’ declared R package dependencies into the task-local R library and ran each unmodified script from a working directory containing copies of the supplied .RData inputs. No model, sample, or data changes.",
+      "note": "The supplied manuscript .R script reports 0.057. Its packaged rendered RMarkdown output reports 0.055. The .R script omits optimism_index from model m1, while the RMarkdown model includes it; the 0.002 absolute difference is therefore attributable to inconsistent shipped specifications."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "All-participant lab-in-the-field treatment coefficient in Table 1",
+      "reported": 0.068,
+      "recomputed": 0.068,
+      "status": "match",
+      "basis": "justified_fix",
+      "fix": "Installed the shipped scripts’ declared R package dependencies into the task-local R library and ran each unmodified script from a working directory containing copies of the supplied .RData inputs. No model, sample, or data changes.",
+      "note": "Printed precision: three decimals."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Heavy-viewer coefficient in the controlled upward-mobility model",
+      "reported": 0.04,
+      "recomputed": 0.04,
+      "status": "match",
+      "basis": "justified_fix",
+      "fix": "Installed the shipped scripts’ declared R package dependencies into the task-local R library and ran each unmodified script from a working directory containing copies of the supplied .RData inputs. No model, sample, or data changes.",
+      "note": "Printed precision: three decimals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Unweighted Cohen kappa for coding ordinary character category",
+      "reported": 0.936,
+      "recomputed": 0.936,
+      "status": "match",
+      "basis": "justified_fix",
+      "fix": "Installed the shipped scripts’ declared R package dependencies into the task-local R library and ran each unmodified script from a working directory containing copies of the supplied .RData inputs. No model, sample, or data changes.",
+      "note": "Printed precision: three decimals."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Unweighted Cohen kappa for coding economic-benefit category",
+      "reported": 0.91,
+      "recomputed": 0.91,
+      "status": "match",
+      "basis": "justified_fix",
+      "fix": "Installed the shipped scripts’ declared R package dependencies into the task-local R library and ran each unmodified script from a working directory containing copies of the supplied .RData inputs. No model, sample, or data changes.",
+      "note": "The printed output is 0.91 (equivalent to 0.910)."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Unweighted Cohen kappa for coding hard-work category",
+      "reported": 0.835,
+      "recomputed": 0.835,
+      "status": "match",
+      "basis": "justified_fix",
+      "fix": "Installed the shipped scripts’ declared R package dependencies into the task-local R library and ran each unmodified script from a working directory containing copies of the supplied .RData inputs. No model, sample, or data changes.",
+      "note": "Printed precision: three decimals."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Share of respondents reporting America’s Got Talent viewing",
+      "reported": 39.6,
+      "recomputed": 39.6,
+      "status": "match",
+      "basis": "justified_fix",
+      "fix": "Installed the shipped scripts’ declared R package dependencies into the task-local R library and ran each unmodified script from a working directory containing copies of the supplied .RData inputs. No model, sample, or data changes.",
+      "note": "Percent; printed precision: one decimal."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Treatment by high system-justification interaction coefficient",
+      "reported": 0.181,
+      "recomputed": 0.181,
+      "status": "match",
+      "basis": "justified_fix",
+      "fix": "Installed the shipped scripts’ declared R package dependencies into the task-local R library and ran each unmodified script from a working directory containing copies of the supplied .RData inputs. No model, sample, or data changes.",
+      "note": "Printed precision: three decimals."
+    }
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "Moderate",
+  "findings": [
+    {
+      "id": "STAT-001",
+      "severity": "P1",
+      "type": "defect",
+      "description": "The all-participant MTurk treatment estimate in Table 1 does not recur from the manuscript .R script: 0.057 instead of 0.055. The shipped R and rendered RMarkdown files specify different models for this column.",
+      "evidence": "logs/manuscript.log prints 0.057. The supplied AJPS_2021_Kim_Manuscript_RMarkdown.html reports 0.055; the corresponding RMarkdown model includes optimism_index, omitted by m1 in AJPS_2021_Kim_Manuscript.R.",
+      "suggested_fix": "Align the shipped .R model with the published specification and rerun; this certification did not alter the analysis."
+    },
+    {
+      "id": "ENV-001",
+      "severity": "P2",
+      "type": "normalization",
+      "description": "The archive specifies R 4.1.0 on macOS Catalina; this run used R 4.6.1 on macOS Tahoe. Ten required packages were installed into a task-local library; all declared script packages and versions are recorded in the environment block.",
+      "evidence": "AJPS_Kim_readme.txt states R 4.1.0 / macOS Catalina 10.15.7; sessionInfo.txt records R 4.6.1 / macOS Tahoe 26.7.",
+      "suggested_fix": "For exact historical environment matching, rerun with R 4.1.0 and the contemporaneous package versions."
+    }
+  ],
+  "limitations": [
+    "The claim list covers selected headline numerical outputs and key appendix outputs; graphical results were executed but not compared point-by-point.",
+    "The paper and archive contain multiple code representations; results from the README-designated .R scripts are the reproduction basis. Rendered RMarkdown outputs were used only as the source of the printed comparison values.",
+    "Original code and data were not copied into the certification bundle or uploaded."
+  ],
+  "artifacts": {
+    "console_log": "logs/",
+    "chain_uris": [
+      "https://doi.org/10.1111/ajps.12702",
+      "https://doi.org/10.7910/DVN/P4AH5C"
+    ]
+  },
+  "signatories": [
+    {
+      "name": "Codex (GPT-6, OpenAI)",
+      "role": "codechecker"
+    }
+  ],
+  "provenance": {
+    "raw_data": "Local supplied package at /tmp/scratch_bench_luna/packages/T-02 (not included in bundle); replication archive: https://doi.org/10.7910/DVN/P4AH5C",
+    "processed_data": "Analysis used supplied .RData files without changes.",
+    "analysis_script": "code/AJPS_2021_Kim_Manuscript.R and code/AJPS_2021_Kim_Appendix.R"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  }
+}

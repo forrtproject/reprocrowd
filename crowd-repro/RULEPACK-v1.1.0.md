@@ -68,6 +68,8 @@ science is correct; that is a separate robustness/replication question.
 ## 6. Enumerate claims first
 - List every numeric claim (C1, C2, …) and the exhibits they map to; get the list approved
   before checking.
+- Give each printed number its own result (a coefficient and its p value are two results with
+  the same `claim_id`), so each can be matched and judged separately.
 
 ## 7. Verify, don't recall
 - Quotes verbatim from the PDF (`verify_quote`); DOIs must resolve (`resolve_doi`); Wikidata
@@ -104,11 +106,15 @@ are out of scope here); do not fill the robustness fields.
 ## 12. Claim status and basis
 Each result in `certificate.json` has a `status` and a `basis`.
 - `match`: the recomputed value equals the printed value at its printed precision.
-- `close`: the difference is a minor reporting slip you can name (rounding or truncation, a
-  transposed digit, a typo), or, for an unseeded stochastic analysis, within simulation
-  variation. In a deterministic analysis, `close` asserts a reporting error, so do not use it
-  loosely.
-- `discrepant`: any larger difference.
+- `close`: a minor reporting slip you can name and support (truncation instead of rounding,
+  transposed digits or rows, a typo the evidence points to), with a gap of at most one unit in the
+  last printed digit or 1% of the value. Counts must match exactly; for p values only the 1% limit
+  applies. In a deterministic analysis, `close` asserts a reporting error, so a small gap with no
+  identifiable slip is `discrepant`, not `close`. For an unseeded stochastic analysis, `close`
+  also covers differences within simulation variation.
+- `discrepant`: any other difference. A flipped sign, an interval that now includes or excludes
+  the null, a false printed inequality (`< .01` when the value is .012) or a crossed threshold the
+  paper relies on is always `discrepant`, however small.
 - `not_checkable`: the shipped code, with only justified fixes or a direct translation, cannot
   produce the value (missing data or code, fatal error).
 

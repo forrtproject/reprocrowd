@@ -1,6 +1,6 @@
 {
  "gold_id": "G-22",
- "gold_version": "1.2",
+ "gold_version": "1.3",
  "cand_id": "I4R-bz8pf",
  "doi": "10.1177/09567976231217410",
  "title": "Attitudes and Laws About Abortion Are Linked to Extrinsic Mortality Risk: A Life-History Perspective on Variability in Reproductive Rights",
@@ -224,7 +224,14 @@
  "acceptable_alternatives": [],
  "label_confidence": "high",
  "requires_human_rerun": null,
- "corrections": [],
+ "corrections": [
+  {
+   "version": "1.3",
+   "change": "C1-C3 discrepant -> close (source-identified typos).",
+   "reason": "R10 (audit/v1.3/sol-review-r10.md)",
+   "evidence": "audit/v1.3/sol-review-r10.md"
+  }
+ ],
  "labelled_by": [
   "gpt-6.1-sol",
   "claude-opus-5-5"
@@ -237,10 +244,10 @@
    "page": null,
    "quantity": "Standard error of life-expectancy coefficient",
    "reported": "0.07",
-   "expected_status": "discrepant",
+   "expected_status": "close",
    "reference_recomputed": 0.07849,
    "tolerance": "Equality at the precision printed in the article; conventional rounding.",
-   "severity": "P2",
+   "severity": null,
    "cause": "The state-model coefficient SE was truncated rather than rounded.",
    "evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
    "rationale": "The source gives .07849 in the original Pandoc output, which rounds to .08 rather than the article’s .07.",
@@ -248,9 +255,10 @@
    "reference_evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
    "reference_scope": "authors_workflow",
    "acceptable_statuses": [
-    "discrepant"
+    "close"
    ],
-   "second_labeller_rationale": "Code output is 0.07849, which rounds to 0.08, so the printed 0.07 is wrong at printed precision. It is a truncation error with no inferential consequence."
+   "second_labeller_rationale": "Code output is 0.07849, which rounds to 0.08, so the printed 0.07 is wrong at printed precision. It is a truncation error with no inferential consequence.",
+   "r10_slip_evidence": "Source report identifies truncation: .07849 printed as .07."
   },
   {
    "id": "C2",
@@ -259,10 +267,10 @@
    "page": null,
    "quantity": "Intercept estimate",
    "reported": "5.25",
-   "expected_status": "discrepant",
+   "expected_status": "close",
    "reference_recomputed": 5.28,
    "tolerance": "Equality at the precision printed in the article; conventional rounding.",
-   "severity": "P2",
+   "severity": null,
    "cause": "The printed intercept differs from the original rendered analysis output.",
    "evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
    "rationale": "The source reports an intercept of 5.28, rather than 5.25.",
@@ -270,9 +278,10 @@
    "reference_evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
    "reference_scope": "authors_workflow",
    "acceptable_statuses": [
-    "discrepant"
+    "close"
    ],
-   "second_labeller_rationale": "Shipped output gives 5.28 (raw 5.27565). The printed 5.25 differs beyond rounding. The intercept is not the focal estimate."
+   "second_labeller_rationale": "Shipped output gives 5.28 (raw 5.27565). The printed 5.25 differs beyond rounding. The intercept is not the focal estimate.",
+   "r10_slip_evidence": "Source report lists the intercept 5.25 vs 5.28 among the table's typos."
   },
   {
    "id": "C3",
@@ -281,13 +290,13 @@
    "page": null,
    "quantity": "95% confidence interval",
    "reported": "[5.08, 5.43]",
-   "expected_status": "discrepant",
+   "expected_status": "close",
    "reference_recomputed": [
     5.11,
     5.44
    ],
    "tolerance": "Equality at the precision printed in the article; conventional rounding.",
-   "severity": "P2",
+   "severity": null,
    "cause": "The printed intercept CI differs from the original rendered analysis output.",
    "evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
    "rationale": "The source gives [5.11, 5.44], rather than [5.08, 5.43].",
@@ -295,9 +304,10 @@
    "reference_evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
    "reference_scope": "authors_workflow",
    "acceptable_statuses": [
-    "discrepant"
+    "close"
    ],
-   "second_labeller_rationale": "Both bounds differ from shipped output by more than rounding."
+   "second_labeller_rationale": "Both bounds differ from shipped output by more than rounding.",
+   "r10_slip_evidence": "Source report contrasts [5.08, 5.43] with [5.11, 5.44] in the intercept-typo discussion; both endpoints within 1%."
   },
   {
    "id": "C4",

@@ -10,6 +10,7 @@ import hashlib
 import json
 import subprocess
 import sys
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -29,9 +30,12 @@ def fetch(entry, dest):
     urls = [u for u in (entry.get("lfs_media_url"), entry.get("url")) if u]
     for url in urls:
         req = urllib.request.Request(url, headers={"User-Agent": "reprocrowd-benchmark"})
-        with urllib.request.urlopen(req, timeout=300) as resp, open(dest, "wb") as out:
-            while block := resp.read(1 << 20):
-                out.write(block)
+        try:
+            with urllib.request.urlopen(req, timeout=300) as resp, open(dest, "wb") as out:
+                while block := resp.read(1 << 20):
+                    out.write(block)
+        except urllib.error.HTTPError:
+            continue  # e.g. no LFS media for a plain Git file; try the next URL
         if sha256(dest) in (want, entry["sha256"]):
             return
     raise SystemExit(f"hash mismatch for {entry['path']} from {urls}")

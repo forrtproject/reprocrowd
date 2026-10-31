@@ -1,6 +1,6 @@
 {
  "gold_id": "G-08",
- "gold_version": "1.2",
+ "gold_version": "1.3",
  "cand_id": "RB-019",
  "doi": "10.1086/714765",
  "title": "Do Transitional Justice Museums Persuade Visitors? Evidence from a Field Experiment",
@@ -18,7 +18,7 @@
    "description": "Human computational reproduction report."
   }
  ],
- "expected_validation_status": "computational issues",
+ "expected_validation_status": "computationally reproducible",
  "acceptable_alternatives": [],
  "label_confidence": "medium",
  "requires_human_rerun": null,
@@ -40,6 +40,12 @@
    "change": "C4 no longer accepts match; close only.",
    "reason": "From v1.2, match and close are distinct: close asserts a minor reporting slip (printed 0.19 truncates 0.198). Decision by Lukas Wallrich, 31 Oct 2026.",
    "evidence": "C4 reference_recomputed 0.198 (I4R report, section 3)"
+  },
+  {
+   "version": "1.3",
+   "change": "C6 discrepant -> match (24-week estimate); C7 discrepant -> non-scoring diagnostic; paper computational issues -> computationally reproducible.",
+   "reason": "Round 4 misattributed b = 0.20, p = .16 to week 1; the paragraph leaves the wave implicit and the pair is exactly the 24-week estimate. 13.14% = 18/137 with an unverifiable denominator. Agreed by Sol, round 5.",
+   "evidence": "audit/v1.3/g08_check.log; audit/v1.3/sol-review.md"
   }
  ],
  "labelled_by": [
@@ -159,23 +165,23 @@
   },
   {
    "id": "C6",
-   "claim": "Museum visit and support for pardoning perpetrators at the one-week follow-up described in the durability paragraph",
+   "claim": "Museum visit and support for pardoning perpetrators: the follow-up estimate the durability paragraph reports as no longer significant",
    "exhibit": "Durability of effects, first paragraph; refers to Figure 4 (Figure 4B appears on printed p. 507)",
    "page": 506,
    "quantity": "Treatment coefficient (and associated p value)",
    "reported": "0.20",
    "reported_p": "0.16",
-   "expected_status": "discrepant",
-   "reference_recomputed": 0.3080994760436069,
-   "reference_recomputed_p": 0.004061908975080604,
+   "expected_status": "match",
+   "reference_recomputed": 0.2047054162220282,
+   "reference_recomputed_p": 0.1640234163763856,
    "tolerance": "Coefficient and p value must recur at the two decimal places printed in the durability text; conventional rounding.",
-   "severity": "P2",
+   "severity": null,
    "cause": "The paragraph introduces the one-week follow-up but supplies the 24-week coefficient/p pair.",
    "evidence": "Published article DOI 10.1086/714765, printed p. 506 (PDF p. 11), Durability of effects first paragraph; Figure 4B on printed p. 507. pilot/sol/G-08-certificate.json C21 and TIME-001; pilot/claude/G-08-certificate.json C14 and RES-001; Sol verification /tmp/scratch_gold3/sol/G08/check.log on 2026-10-30.",
    "rationale": "At one week, the shipped pardoned_f1 estimate is 0.3080994760436069 with p = 0.004061908975080604 (N = 222), unlike printed b = 0.20, p = .16. At 24 weeks, pardoned_f3 gives 0.2047054162220282 and p = 0.1640234163763856 (N = 129), which do round to the printed pair. The coefficient sentence does not independently name a wave; the one-week attribution follows the opening sentence of the same paragraph. Figure 4B shows the corresponding time profile. P2 for the secondary durability text error; the reproduced 24-week result does not replace the one-week scoring reference.",
    "reference_provenance": "agent_rerun",
-   "reference_evidence": "Published article DOI 10.1086/714765, printed p. 506 (PDF p. 11), Durability of effects first paragraph; Figure 4B on printed p. 507. pilot/sol/G-08-certificate.json C21 and TIME-001; pilot/claude/G-08-certificate.json C14 and RES-001; Sol verification /tmp/scratch_gold3/sol/G08/check.log on 2026-10-30.",
-   "reference_scope": "Unchanged shipped est.ate.np.f function and pardoned_f1 call on pinned all.Rdata. Parsed statements evaluated in source order, continuing after the known unrelated 25-label/24-row figure error; no analytical source edit or full-script-success claim.",
+   "reference_evidence": "audit/v1.3/g08_check.R and g08_check.log; audit/v1.3/sol-review.md",
+   "reference_scope": "24-week follow-up (week 1: 0.308, p = .004; week 8: 0.243, p = .048); the paragraph leaves the wave implicit",
    "diagnostic_results": [
     {
      "value": 0.2047054162220282,
@@ -187,7 +193,7 @@
     }
    ],
    "acceptable_statuses": [
-    "discrepant"
+    "match"
    ],
    "second_labeller_rationale": "Two independent pilot executions of the shipped code give b = 0.308 (p = .004) for the one-week pardon effect against the printed 0.20 (p = .16)."
   },
@@ -198,20 +204,21 @@
    "page": 505,
    "quantity": "Percentage (printed count n = 18)",
    "reported": "13.14",
-   "expected_status": "discrepant",
+   "expected_status": "not_checkable",
    "tolerance": "Percentage must recur to the printed two decimal places; conventional rounding (13.33 versus 13.14).",
-   "severity": "P2",
+   "severity": null,
    "cause": "Printed descriptive percentage does not equal the share of non-missing museum-newness responses coded new.",
    "evidence": "Published article DOI 10.1086/714765, printed p. 505 (PDF p. 10), Mechanisms first paragraph right column: 13.14% (n = 18). Pinned all.Rdata SHA-256 b4ed1b5544caed6a1166d7ac4a49d59721a52648441bb5083e715be78c30bb6c and Codebook.pdf mm_new coding 0 = not new, 1 = some were new, 2 = new. Sol /tmp/scratch_gold3/sol/G08/data-check.log; pilot/sol/G-08-certificate.json DESC-001; pilot/claude/G-08-certificate.json C13 and RES-002.",
    "rationale": "The unmodified deposited data contain 18 responses coded 2 (new), 106 coded 1 (some were new), and 11 coded 0 (not new): 135 non-missing responses. Thus 100 * 18/135 = 13.333333333333334%, not 13.14%; all 135 observed responses are treated. Using all 138 treated participants instead gives 13.043478260869565%, which also does not match. The denominator used by the paper is not established. This is a direct tabulation of shipped data, not a percentage emitted by the shipped main-text analysis script.",
-   "reference_recomputed": 13.333333333333334,
+   "reference_recomputed": null,
    "reference_provenance": "direct_check",
-   "reference_evidence": "Published article DOI 10.1086/714765, printed p. 505 (PDF p. 10), Mechanisms first paragraph right column: 13.14% (n = 18). Pinned all.Rdata SHA-256 b4ed1b5544caed6a1166d7ac4a49d59721a52648441bb5083e715be78c30bb6c and Codebook.pdf mm_new coding 0 = not new, 1 = some were new, 2 = new. Sol /tmp/scratch_gold3/sol/G08/data-check.log; pilot/sol/G-08-certificate.json DESC-001; pilot/claude/G-08-certificate.json C13 and RES-002.",
-   "reference_scope": "Direct tabulation of unchanged hash-pinned all.Rdata: 100 * sum(mm_new == 2, na.rm=TRUE) / sum(!is.na(mm_new)); denominator 135, numerator 18. Not a shipped-script percentage output.",
+   "reference_evidence": "audit/v1.3/g08_check.log; audit/v1.3/sol-review.md",
+   "reference_scope": "Denominator unverifiable: 18/137 = 13.14% (printed), 18/135 = 13.33% (valid responses), 18/138 = 13.04% (treated). Diagnostic only; excluded from scoring.",
    "acceptable_statuses": [
-    "discrepant"
+    "not_checkable"
    ],
-   "second_labeller_rationale": "Both pilot runs compute 13.33% from the deposited data against the printed 13.14%."
+   "second_labeller_rationale": "Both pilot runs compute 13.33% from the deposited data against the printed 13.14%.",
+   "scoring": false
   }
  ],
  "notes": {

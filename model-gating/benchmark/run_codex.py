@@ -27,6 +27,20 @@ GOLD = HERE.parent / "gold-set"
 WORK = Path("/tmp/scratch_bench_luna")
 
 
+def claim_block(gold_id):
+    """The verdict-free claim list (claims/G-xx.json): ids, wording, location and printed values."""
+    gold = {c["id"]: c for c in json.loads((GOLD / "gold" / f"{gold_id}.json").read_text())["claims"]}
+    lines = []
+    for c in json.loads((GOLD / "claims" / f"{gold_id}.json").read_text())["claims"]:
+        if gold.get(c["id"], {}).get("scoring") is False:
+            continue
+        printed = c["reported"] + (f" (p = {c['reported_p']})" if c.get("reported_p") else "")
+        page = f", p. {c['page']}" if c.get("page") else ""
+        lines.append(f"- {c['id']}: {c['claim']} ({c['exhibit']}{page}). "
+                     f"{c.get('quantity') or 'Value'} printed as {printed}.")
+    return "\n".join(lines)
+
+
 def target_info(target):
     if target.startswith("T-"):
         twin = json.loads((GOLD / "twins" / target / "twin.json").read_text())
@@ -37,9 +51,9 @@ def target_info(target):
                            check=True)
         link = (f"{pkg} (a local copy of the shipped code and data; treat this folder as the "
                 "package and do not download another copy)")
-        return gold["doi"], link
+        return gold["doi"], link, claim_block(twin["base_gold_id"])
     gold = json.loads((GOLD / "gold" / f"{target}.json").read_text())
-    return gold["doi"], f"{gold['package']['url']} ({gold['package']['version_pin']})"
+    return gold["doi"], f"{gold['package']['url']} ({gold['package']['version_pin']})", claim_block(target)
 
 
 def run(target, args):
@@ -48,8 +62,8 @@ def run(target, args):
     cert_out = out_dir / f"{target}-certificate.json"
     if cert_out.exists():
         return target, "already collected", 0
-    doi, link = target_info(target)
-    prompt = (HERE / "prompt.txt").read_text()
+    doi, link, claims = target_info(target)
+    prompt = (HERE / "prompt.txt").read_text().replace("{claims}", claims)
     prompt = prompt.replace("Article link or DOI:", f"Article link or DOI: https://doi.org/{doi}")
     prompt = prompt.replace("Code & Data link:", f"Code & Data link: {link}")
     rundir = WORK / "runs" / args.config / target

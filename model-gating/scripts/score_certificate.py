@@ -71,7 +71,7 @@ def map_claims(gold, cert, override=None):
     results = cert.get("results", [])
     cert_claims = {c.get("id"): c for c in cert.get("claims", [])}
     mapping, used = {}, set()
-    for g in gold["claims"]:
+    for g in [g for g in gold["claims"] if g.get("scoring") is not False]:
         if override and g["id"] in override:
             hits = [i for i, r in enumerate(results) if r.get("claim_id") == override[g["id"]]]
             mapping[g["id"]] = results[hits[0]] if hits else None
@@ -124,6 +124,8 @@ def score_one(gold, cert, override=None):
             and cert.get("validation_status") == "computationally reproducible"):
         gates.append("reproducible verdict on a technical-failure paper")
     for g in gold["claims"]:
+        if g.get("scoring") is False:  # diagnostic-only gold claim (ambiguous referent)
+            continue
         r = mapping[g["id"]]
         status = r.get("status") if r else "missed"
         if r and status not in CERT_STATUS:

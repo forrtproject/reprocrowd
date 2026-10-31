@@ -1,0 +1,6 @@
+config,target,certificate
+luna-batch1,G-08,model-gating/benchmark/runs/luna-batch1-ownclaims/G-08-certificate.json
+luna-batch1,G-21,model-gating/benchmark/runs/luna-batch1-ownclaims/G-21-certificate.json
+luna-batch1,G-23,model-gating/benchmark/runs/luna-batch1-ownclaims/G-23-certificate.json
+luna-batch1,T-02,model-gating/benchmark/runs/luna-batch1-ownclaims/T-02-certificate.json
+luna-batch1,T-06,model-gating/benchmark/runs/luna-batch1-ownclaims/T-06-certificate.json
