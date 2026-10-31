@@ -1,7 +1,7 @@
 # ReproCrowd rule pack — crowd-repro
 
 **Version:** `1.0.0`
-**URI:** `https://lukasroeseler.github.io/reprocrowd/crowd-repro/RULEPACK-v1.0.0.md`
+**URI:** `https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.0.0.md`
 **Status:** stable
 **Maintainer:** ReproCrowd
 **License:** CC BY 4.0

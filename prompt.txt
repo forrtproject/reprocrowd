@@ -1,5 +1,5 @@
 ReproCrowd certification.
-Prompt version: 0.1.0.
+Prompt version: 0.1.1.
 
 Certify the computational reproducibility of this paper: run its shipped code and data as a
 Reproduction Study (same methodology, same tools) and record faithfully what reproduces and
@@ -21,7 +21,7 @@ Certify that the computation is reproducible and executable. Do NOT rule on whet
 scientific conclusion is correct. Use the FORRT nanopublication chain vocabulary. Report the
 engine, model + provider, rules version, and environment you used.
 
-Follow the ReproCrowd rule pack (https://lukasroeseler.github.io/reprocrowd/crowd-repro/RULEPACK-v1.0.0.md).
+Follow the ReproCrowd rule pack (https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.0.0.md).
 If that URL is unreachable, treat the artefact list above as the requirement and do not skip
 any of the files.
 
