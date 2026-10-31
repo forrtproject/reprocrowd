@@ -3,7 +3,9 @@
 - oracle: reports every gold status and paper verdict; must score 100% with no gate violations.
 - oracle_renumbered: the same, with shuffled order and different claim ids; mapping must still work.
 - naive_all_match: claims every value matches and every paper reproduces; must fail sensitivity,
-  abstention and the technical-failure gate.
+  blocked-claim and the technical-failure gate checks.
+- naive_all_close: calls every value close; match claims must count as wrong (match and close
+  are distinct), while the reproduces-vs-not outcome stays right for them.
 Run: python3 model-gating/scripts/test_score_certificate.py
 """
 import csv
@@ -25,12 +27,13 @@ def make_cert(gold, mode, rng):
     for i, g in enumerate(order, 1):
         cid = f"C{i + 40}" if mode == "oracle_renumbered" else g["id"]
         claims.append({"id": cid, "claim": g.get("claim", ""), "exhibit": g.get("exhibit", "")})
-        status = "match" if mode == "naive_all_match" else g["expected_status"]
+        status = {"naive_all_match": "match", "naive_all_close": "close"}.get(mode, g["expected_status"])
         results.append({"claim_id": cid, "quantity": g.get("quantity", ""),
                         "reported": g["reported"],
                         "recomputed": g.get("reference_recomputed") or g["reported"],
-                        "status": status})
-    verdict = ("computationally reproducible" if mode == "naive_all_match"
+                        "status": status,
+                        "basis": "not_computed" if status == "not_checkable" else "shipped_code"})
+    verdict = ("computationally reproducible" if mode.startswith("naive")
                else gold["expected_validation_status"])
     return {"claims": claims, "results": results, "validation_status": verdict}
 
@@ -41,7 +44,7 @@ def main():
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
         runs = []
-        for mode in ["oracle", "oracle_renumbered", "naive_all_match"]:
+        for mode in ["oracle", "oracle_renumbered", "naive_all_match", "naive_all_close"]:
             for p in golds:
                 gold = json.loads(p.read_text())
                 path = tmp / f"{mode}_{p.stem}.json"
@@ -60,7 +63,9 @@ def main():
         assert m["paper status correct"] == (30, 30), (mode, m)
     m = sc.rates(scored["naive_all_match"])
     assert m["sensitivity P1+P2 (flagged discrepant)"][0] == 0
-    assert m["abstention (gold not_checkable reported not_checkable)"][0] == 0
+    assert m["blocked claims reported as not reproducing"][0] == 0
+    c = [x for s in scored["naive_all_close"] for x in s["claims"] if x["gold"] == "match"]
+    assert c and not any(x["correct"] for x in c) and all(x["outcome_correct"] for x in c)
     gates = [g for s in scored["naive_all_match"] for g in s["hard_gate_violations"]]
     assert any("technical-failure" in g for g in gates)
     print("all tests passed;", {k: f"{v[0]}/{v[1]}" for k, v in m.items()})

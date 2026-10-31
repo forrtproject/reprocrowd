@@ -1,6 +1,6 @@
 {
  "gold_id": "G-08",
- "gold_version": "1.1",
+ "gold_version": "1.2",
  "cand_id": "RB-019",
  "doi": "10.1086/714765",
  "title": "Do Transitional Justice Museums Persuade Visitors? Evidence from a Field Experiment",
@@ -34,6 +34,12 @@
    "change": "Added C6, C7 (discrepant P2); paper reproducible -> computational issues",
    "reason": "Two independent pilot executions; Sol rerun in round 4",
    "evidence": "pilot/*/G-08-certificate.json; reconciliation.md round 4"
+  },
+  {
+   "version": "1.2",
+   "change": "C4 no longer accepts match; close only.",
+   "reason": "From v1.2, match and close are distinct: close asserts a minor reporting slip (printed 0.19 truncates 0.198). Decision by Lukas Wallrich, 31 Oct 2026.",
+   "evidence": "C4 reference_recomputed 0.198 (I4R report, section 3)"
   }
  ],
  "labelled_by": [
@@ -125,8 +131,7 @@
    "reference_evidence": "https://osf.io/download/tj2w8/ Section 3: 'desires for victim compensation increased by 19.8 percent, again close to the reported coefficient of .19 that Balcells et al. included' and 'the results reported for the transitional justice hypothesis were replicated perfectly'",
    "reference_scope": "authors_workflow",
    "acceptable_statuses": [
-    "close",
-    "match"
+    "close"
    ],
    "second_labeller_rationale": "Recomputed 0.198 would round to 0.20, not the printed 0.19, but the report treats it as reproduced; likely truncation."
   },

@@ -95,13 +95,20 @@ def map_claims(gold, cert, override=None):
     return mapping
 
 
+SCHEMAS = {"1.0": ROOT.parent / "schemas-archive" / "certificate.schema.v1.0.json",
+           "1.1": ROOT.parents[1] / "schemas" / "certificate.schema.json"}
+
+
 def schema_errors(cert):
-    """Errors against certificate.schema.json (Draft 7 checks: required fields, types, enums)."""
+    """Errors against the certificate schema the certificate declares (Draft 7 checks)."""
     try:
         import jsonschema
     except ImportError:
         return ["jsonschema not installed; schema not checked"]
-    schema = json.loads((ROOT.parents[1] / "schemas" / "certificate.schema.json").read_text())
+    path = SCHEMAS.get(str(cert.get("schema_version")))
+    if path is None:
+        return [f"schema_version: unknown {cert.get('schema_version')!r}"]
+    schema = json.loads(path.read_text())
     schema.pop("$schema", None)
     validator = jsonschema.Draft7Validator(schema)
     return [f"{'/'.join(map(str, e.path)) or '(root)'}: {e.message[:120]}"
@@ -123,10 +130,12 @@ def score_one(gold, cert, override=None):
             status = f"invalid:{status}"
         accepted = set(g.get("acceptable_statuses") or [g["expected_status"]])
         accepted.add(g["expected_status"])
-        if accepted & CHECKED:  # match vs close is a tolerance convention; both mean "recurs"
-            accepted |= CHECKED
+        # match and close are distinct: close asserts a minor reporting slip in the paper
         row = {"id": g["id"], "gold": g["expected_status"], "severity": g.get("severity"),
-               "model": status, "correct": status in accepted}
+               "model": status, "basis": r.get("basis") if r else None,
+               "correct": status in accepted,
+               "outcome_correct": status in CERT_STATUS and bool(
+                   accepted & CHECKED if status in CHECKED else accepted - CHECKED)}
         if r and g["expected_status"] == "not_checkable" and g.get("severity") == "P0" \
                 and status in CHECKED:
             gates.append(f"{g['id']}: match/close claimed on a blocked (P0) claim")
@@ -157,10 +166,15 @@ def rates(scored):
                     c["sensitivity P1 only"][0] += x["model"] == "discrepant"
                     c["sensitivity P1 only"][1] += 1
             if x["gold"] == "not_checkable":
-                c["abstention (gold not_checkable reported not_checkable)"][0] += x["model"] == "not_checkable"
-                c["abstention (gold not_checkable reported not_checkable)"][1] += 1
+                c["blocked claims reported as not reproducing"][0] += x["model"] in ("not_checkable", "discrepant")
+                c["blocked claims reported as not reproducing"][1] += 1
+            c["claim outcome correct (reproduces vs does not)"][0] += x["outcome_correct"]
+            c["claim outcome correct (reproduces vs does not)"][1] += 1
             c["claim status correct (incl. accepted alternatives)"][0] += x["correct"]
             c["claim status correct (incl. accepted alternatives)"][1] += 1
+            if x["model"] in CHECKED:
+                c["reproduced claims resting on fixes or translation"][0] += x["basis"] in ("justified_fix", "translated")
+                c["reproduced claims resting on fixes or translation"][1] += 1
             c["gold claims missed by the certificate"][0] += x["model"] == "missed"
             c["gold claims missed by the certificate"][1] += 1
     return {k: tuple(v) for k, v in c.items()}

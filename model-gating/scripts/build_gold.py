@@ -10,10 +10,17 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1] / "gold-set"
-GOLD_VERSION = "1.1"
+GOLD_VERSION = "1.2"
 CONF = ["low", "medium", "high"]
 # R7: paper-level alternatives only at category boundaries (lossless-edit, version/stochastic noise)
 EXTRA_ALTERNATIVES = {"G-11": ["computational issues"], "G-19": ["computational issues"]}
+# v1.2: match and close are distinct outcomes (close asserts a minor reporting slip), so a claim
+# never accepts both. Only G-08 C4 did; its printed 0.19 is a truncation of 0.198, so close stands.
+DROP_STATUSES = {("G-08", "C4"): ["match"]}
+V12_NOTE = {"version": "1.2", "change": "C4 no longer accepts match; close only.",
+            "reason": "From v1.2, match and close are distinct: close asserts a minor reporting slip "
+                      "(printed 0.19 truncates 0.198). Decision by Lukas Wallrich, 31 Oct 2026.",
+            "evidence": "C4 reference_recomputed 0.198 (I4R report, section 3)"}
 # v1.0 flagged G-04 and G-26 for a human rerun; from v1.1 the flag comes from the label files.
 
 
@@ -35,8 +42,8 @@ def main():
             assert (s.get("severity") or None) == (k.get("severity") or None), (gid, c["id"])
             entry = {**c, **{x: v for x, v in s.items() if x != "id"}}
             entry["acceptable_statuses"] = sorted(
-                set(s.get("acceptable_statuses") or []) | set(k.get("acceptable_statuses") or [])
-                | {s["expected_status"]})
+                (set(s.get("acceptable_statuses") or []) | set(k.get("acceptable_statuses") or [])
+                 | {s["expected_status"]}) - set(DROP_STATUSES.get((gid, c["id"]), [])))
             entry["second_labeller_rationale"] = k.get("rationale", "")
             merged.append(entry)
         alts = sorted(set(sol["acceptable_alternatives"]) | set(EXTRA_ALTERNATIVES.get(gid, [])))
@@ -50,7 +57,8 @@ def main():
             "acceptable_alternatives": alts, "label_confidence": conf,
             "requires_human_rerun": sol.get("requires_human_rerun") or cla.get("requires_human_rerun") or None,
             "corrections": sol.get("corrections", []) + [c for c in cla.get("corrections", [])
-                                                         if c not in sol.get("corrections", [])],
+                                                         if c not in sol.get("corrections", [])]
+                           + ([V12_NOTE] if any(g == gid for g, _ in DROP_STATUSES) else []),
             "labelled_by": ["gpt-6.1-sol", "claude-opus-5-5"],
             "claims": merged,
             "notes": {"claim_list": claims.get("notes", ""), "sol": sol.get("notes", ""),

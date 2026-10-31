@@ -17,12 +17,28 @@
      1.0
     ]
    },
-   "claim status correct (incl. accepted alternatives)": {
+   "claim outcome correct (reproduces vs does not)": {
     "num": 11,
     "den": 17,
     "ci95": [
      0.0,
      1.0
+    ]
+   },
+   "claim status correct (incl. accepted alternatives)": {
+    "num": 7,
+    "den": 17,
+    "ci95": [
+     0.0,
+     1.0
+    ]
+   },
+   "reproduced claims resting on fixes or translation": {
+    "num": 0,
+    "den": 10,
+    "ci95": [
+     0.0,
+     0.0
     ]
    },
    "gold claims missed by the certificate": {
@@ -41,7 +57,7 @@
      1.0
     ]
    },
-   "abstention (gold not_checkable reported not_checkable)": {
+   "blocked claims reported as not reproducing": {
     "num": 0,
     "den": 3,
     "ci95": [
@@ -62,49 +78,63 @@
       "gold": "match",
       "severity": null,
       "model": "match",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C2",
       "gold": "match",
       "severity": null,
       "model": "match",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C3",
       "gold": "match",
       "severity": null,
       "model": "match",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C4",
       "gold": "close",
       "severity": null,
       "model": "close",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C5",
       "gold": "match",
       "severity": null,
       "model": "match",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C6",
       "gold": "discrepant",
       "severity": "P2",
       "model": "discrepant",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C7",
       "gold": "discrepant",
       "severity": "P2",
       "model": "discrepant",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      }
     ],
     "hard_gate_violations": [],
@@ -120,35 +150,45 @@
       "gold": "discrepant",
       "severity": "P2",
       "model": "close",
-      "correct": false
+      "basis": null,
+      "correct": false,
+      "outcome_correct": false
      },
      {
       "id": "C2",
       "gold": "match",
       "severity": null,
       "model": "close",
-      "correct": true
+      "basis": null,
+      "correct": false,
+      "outcome_correct": true
      },
      {
       "id": "C3",
       "gold": "match",
       "severity": null,
       "model": "close",
-      "correct": true
+      "basis": null,
+      "correct": false,
+      "outcome_correct": true
      },
      {
       "id": "C4",
       "gold": "match",
       "severity": null,
       "model": "close",
-      "correct": true
+      "basis": null,
+      "correct": false,
+      "outcome_correct": true
      },
      {
       "id": "C5",
       "gold": "match",
       "severity": null,
       "model": "close",
-      "correct": true
+      "basis": null,
+      "correct": false,
+      "outcome_correct": true
      }
     ],
     "hard_gate_violations": [],
@@ -158,16 +198,7 @@
     "paper_status": "PartiallySupported",
     "paper_correct": false,
     "schema_errors": [
-     "(root): 'schema_version' is a required property",
-     "(root): 'certification_id' is a required property",
-     "(root): 'procedure' is a required property",
-     "(root): 'repro_standard_version' is a required property",
-     "(root): 'engine' is a required property",
-     "(root): 'model' is a required property",
-     "(root): 'date' is a required property",
-     "(root): 'findings' is a required property",
-     "(root): 'ai_generated' is a required property",
-     "(root): 'github_url' is a required property"
+     "schema_version: unknown None"
     ],
     "claims": [
      {
@@ -175,35 +206,45 @@
       "gold": "not_checkable",
       "severity": "P0",
       "model": "missed",
-      "correct": false
+      "basis": null,
+      "correct": false,
+      "outcome_correct": false
      },
      {
       "id": "C2",
       "gold": "not_checkable",
       "severity": "P0",
       "model": "missed",
-      "correct": false
+      "basis": null,
+      "correct": false,
+      "outcome_correct": false
      },
      {
       "id": "C3",
       "gold": "match",
       "severity": null,
       "model": "missed",
-      "correct": false
+      "basis": null,
+      "correct": false,
+      "outcome_correct": false
      },
      {
       "id": "C4",
       "gold": "discrepant",
       "severity": "P2",
       "model": "missed",
-      "correct": false
+      "basis": null,
+      "correct": false,
+      "outcome_correct": false
      },
      {
       "id": "C5",
       "gold": "not_checkable",
       "severity": "P0",
       "model": "missed",
-      "correct": false
+      "basis": null,
+      "correct": false,
+      "outcome_correct": false
      }
     ],
     "hard_gate_violations": [],
@@ -229,12 +270,28 @@
      1.0
     ]
    },
+   "claim outcome correct (reproduces vs does not)": {
+    "num": 14,
+    "den": 17,
+    "ci95": [
+     0.4,
+     1.0
+    ]
+   },
    "claim status correct (incl. accepted alternatives)": {
     "num": 14,
     "den": 17,
     "ci95": [
      0.4,
      1.0
+    ]
+   },
+   "reproduced claims resting on fixes or translation": {
+    "num": 0,
+    "den": 13,
+    "ci95": [
+     0.0,
+     0.0
     ]
    },
    "gold claims missed by the certificate": {
@@ -253,7 +310,7 @@
      1.0
     ]
    },
-   "abstention (gold not_checkable reported not_checkable)": {
+   "blocked claims reported as not reproducing": {
     "num": 0,
     "den": 3,
     "ci95": [
@@ -278,49 +335,63 @@
       "gold": "match",
       "severity": null,
       "model": "match",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C2",
       "gold": "match",
       "severity": null,
       "model": "match",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C3",
       "gold": "match",
       "severity": null,
       "model": "match",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C4",
       "gold": "close",
       "severity": null,
       "model": "close",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C5",
       "gold": "match",
       "severity": null,
       "model": "match",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C6",
       "gold": "discrepant",
       "severity": "P2",
       "model": "discrepant",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C7",
       "gold": "discrepant",
       "severity": "P2",
       "model": "discrepant",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      }
     ],
     "hard_gate_violations": [],
@@ -336,35 +407,45 @@
       "gold": "discrepant",
       "severity": "P2",
       "model": "discrepant",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C2",
       "gold": "match",
       "severity": null,
       "model": "match",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C3",
       "gold": "match",
       "severity": null,
       "model": "match",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C4",
       "gold": "match",
       "severity": null,
       "model": "match",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C5",
       "gold": "match",
       "severity": null,
       "model": "match",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      }
     ],
     "hard_gate_violations": [],
@@ -380,35 +461,45 @@
       "gold": "not_checkable",
       "severity": "P0",
       "model": "match",
-      "correct": false
+      "basis": null,
+      "correct": false,
+      "outcome_correct": false
      },
      {
       "id": "C2",
       "gold": "not_checkable",
       "severity": "P0",
       "model": "match",
-      "correct": false
+      "basis": null,
+      "correct": false,
+      "outcome_correct": false
      },
      {
       "id": "C3",
       "gold": "match",
       "severity": null,
       "model": "match",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C4",
       "gold": "discrepant",
       "severity": "P2",
       "model": "discrepant",
-      "correct": true
+      "basis": null,
+      "correct": true,
+      "outcome_correct": true
      },
      {
       "id": "C5",
       "gold": "not_checkable",
       "severity": "P0",
       "model": "match",
-      "correct": false
+      "basis": null,
+      "correct": false,
+      "outcome_correct": false
      }
     ],
     "hard_gate_violations": [
