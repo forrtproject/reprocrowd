@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ReproCrowd model gating: gold benchmark status</title>
+<title>ReproCrowd model gating: decisions implemented, first Luna runs</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧪</text></svg>">
 <style>
   :root { --ink:#1d2433; --muted:#5b6475; --line:#e3e6ec; --accent:#2f6f8f; --warn:#a4561b; --ok:#2e7d4f; --bg:#fbfbfa; }
@@ -16,7 +16,7 @@
   h3 { font-size: 17px; margin: 24px 0 8px; }
   .sub { color: var(--muted); font-family: "Avenir Next", Helvetica, Arial, sans-serif; font-size: 14px; }
   .lead { font-size: 18px; margin-top: 22px; }
-  .stats { display:grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap:12px; margin: 22px 0 6px; }
+  .stats { display:grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap:12px; margin: 22px 0 6px; }
   .stat { background:#fff; border:1px solid var(--line); border-radius:8px; padding:12px 14px; }
   .stat b { display:block; font: 600 24px/1.2 "Avenir Next", Helvetica, Arial, sans-serif; color: var(--accent); }
   .stat span { font-size: 13.5px; color: var(--muted); font-family: "Avenir Next", Helvetica, Arial, sans-serif; }
@@ -38,148 +38,101 @@
 </head>
 <body>
 <main>
-<h1>ReproCrowd model gating: the gold benchmark is built</h1>
-<div class="sub">Part 2 (models and validation) · status report · 30 October 2026 · all files in <code>model-gating/</code>, nothing committed</div>
+<h1>Model gating: your decisions are in, and Luna has run</h1>
+<p class="sub">ReproCrowd Part 2 · status report · 31 October 2026 · everything committed and pushed to <code>main</code></p>
 
-<p class="lead">Sol (GPT-6.1) and I built and agreed a 30-paper gold set with claim-level ground
-truth, then went further. Agent reruns confirmed it in places and corrected it in others, so it is
-now at <b>v1.1</b>. Eight seeded "twin" packages test hard-coding directly. A scoring script grades
-any certificate against the gold set. A six-run pilot of the real prompt shows that the loop works,
-and it surfaced problems in both the prompt and the certificate format that need your decision.</p>
+<p class="lead">All seven decisions are implemented and live on the site. The prompt is now v0.1.2 and the rule pack v1.1.0; certificates use schema 1.1 and record how each value was obtained. GPT-6 Luna has run five validation targets. Checking G-08 for an I4R note showed that the "errors" we had added to the gold set were our own misreading. So there is nothing to send to I4R, and gold is now v1.3.</p>
 
 <div class="stats">
-  <div class="stat"><b>30 papers</b><span>13 reproducible · 13 with issues · 4 technical failures</span></div>
-  <div class="stat"><b>169 claims</b><span>103 match · 8 close · 29 discrepant · 29 not checkable</span></div>
-  <div class="stat"><b>8 twins</b><span>20 planted discrepancies (13 P1), verified by two independent runs</span></div>
-  <div class="stat"><b>6 pilot runs</b><span>Real prompt, 2 models × 3 papers; found 3 gold errors</span></div>
-  <div class="stat"><b>US$0</b><span>Metered spend. Everything ran on the Codex and Claude subscriptions</span></div>
+  <div class="stat"><b>5/5</b><span>Luna paper statuses correct (validation batch, gold v1.3)</span></div>
+  <div class="stat"><b>2/2</b><span>planted P1 twin errors caught by Luna</span></div>
+  <div class="stat"><b>0</b><span>clear I4R errors found; the one candidate was ours</span></div>
+  <div class="stat"><b>v1.3</b><span>gold: 14 / 12 / 4 papers, 168 scoring claims</span></div>
+  <div class="stat"><b>US$0</b><span>metered spend; Codex subscription only</span></div>
 </div>
 
 <h2>Needs your decision</h2>
 
 <div class="decision">
-<h3><span class="tag urgent">blocks use</span>1. Commit, and deploy the prompt URL fix</h3>
-<p>The live prompt points agents to <code>lukasroeseler.github.io/reprocrowd/…</code>, which returns
-404. The site actually lives at <code>forrtproject.github.io/reprocrowd/</code>. In the pilot, the one
-agent that never got the right URL produced a certificate in an invented format. I fixed every
-reference (prompt, the copy in <code>index.html</code>, rule-pack header, schema <code>$id</code>s)
-and bumped the prompt to <b>v0.1.1</b>, as the README requires.</p>
-<p class="rec"><b>Recommendation:</b> commit the URL fix and <code>model-gating/</code> as two commits on a branch, then open a PR, or push to <code>main</code> if you prefer. Pushing publishes the fix via Pages; I have not pushed.</p>
-</div>
-
-<div class="decision">
-<h3>2. Separate "rerun" from "recreated" in the certificate</h3>
-<p>In 2 of 6 pilot runs, a model changed the analysis and still labelled the result as recurring.
-Sol reached G-21's printed AIC only by swapping in a different model specification and called it
-<code>close</code>. Claude wrote missing code for G-23 itself and called those results
-<code>match</code>. Both disclosed this in notes, but <code>results[].status</code> alone misleads.
-This is exactly the hard-coding risk you raised.</p>
-<p class="rec"><b>Recommendation:</b> add <code>results[].basis</code> to the schema (<code>shipped_code</code> / <code>lossless_edit</code> / <code>modified_code</code> / <code>recreated</code>). Only the first two bases may carry <code>match</code> or <code>close</code>. This needs agreement with the pipeline group (Luna, Anne) and the labels group (Shaheed, Reza), since it implements the rerun-versus-recreated distinction from the 16 October meeting.</p>
-</div>
-
-<div class="decision">
-<h3>3. Remove the "certify" pressure from the prompt</h3>
-<p>The prompt still opens "Certify the computational reproducibility…" and says "Certify that the
-computation is reproducible and executable". The meeting flagged this wording as a cause of
-hard-coded results, and the pilot saw two runs that repaired code towards the target.</p>
-<p class="rec"><b>Recommendation:</b> reword to "Check whether…" and "Report what does and does not recur" (prompt v0.2.0). The decision sits with the pipeline group, so it goes to that owner.</p>
-</div>
-
-<div class="decision">
-<h3>4. Slim the bundle that benchmark runs must produce</h3>
-<p>The prompt requires pixi, a Snakefile, MyST, nanopublications and more. No pilot run built
-MyST or minted nanopublications, every run installed pixi itself, and one certified numbers from
-host R rather than the pinned environment. Benchmark scoring needs only <code>certificate.json</code>
-plus the code and logs that back each value.</p>
-<p class="rec"><b>Recommendation:</b> for benchmark runs, require only a certificate, the executed code, run logs and a lockfile. Keep the full bundle for public deposits.</p>
-</div>
-
-<div class="decision">
-<h3>5. Run the first real benchmark: which configurations, and budget</h3>
-<p>The scorer and gold set are ready. One run takes about 12 to 17 minutes on these small packages.</p>
-<p class="rec"><b>Recommendation:</b> 4 configurations × (30 papers + 8 twins) = 152 runs. My suggested set is GPT-6.1 Sol, Claude Opus 5.5, the newest Gemini Flash (3.8 or above), and one cheaper model scoring about 35 to 39 on Artificial Analysis to inform the cut-off. Run on subscriptions where possible. Metered API use would probably cost several hundred dollars, well above the US$5 limit, so it needs your approval. Before the run, I would let agents execute the 19 papers that have no execution evidence yet. That runs on subscriptions, and on G-08 and G-23 execution changed the gold labels.</p>
-</div>
-
-<div class="decision">
-<h3>6. Confirm the scoring conventions I adopted</h3>
+<h3><span class="tag urgent">blocks full run</span>1. Approve the benchmark approach, then the full Luna run</h3>
+<p>You asked to review the approach first. It is set out in <code>model-gating/benchmark/README.md</code>; the main points:</p>
 <ul>
-  <li><b>Severity (R2, amended):</b> P1 covers a primary test's estimate or statistic, plus uncertainty errors that change a primary comparison. Every other wrong printed number is P2. Only 3 of the 29 discrepancies in the 30 papers are P1 (the twins add 13), so the memo's "≥90% sensitivity on P1" cannot be estimated. The scorer reports P1 and P2 pooled, with P1 separately.</li>
-  <li><b>match and close are interchangeable</b> at claim level; both mean "recurs".</li>
-  <li><b>Transparent recreation still violates a hard gate:</b> <code>match</code> on a blocked claim fails even when the notes disclose the repair.</li>
-  <li><b>Abstention</b> counts only an explicit <code>not_checkable</code>. Neither model abstained once in the pilot.</li>
+<li><b>The model gets the gold claim list.</b> Each run receives the claims to check: wording, location and printed value, but no verdicts. When Luna picked its own claims (batch 1), it addressed only 11 of 27 gold claims and never listed the planted claim on T-06. Scores then measured claim selection, not reproduction. With the list (batch 2), all 26 were addressed.</li>
+<li><b>Prompt.</b> The public prompt word for word, except for a slim bundle: certificate, executed code, logs and environment record.</li>
+<li><b>Isolation.</b> A fresh folder outside the repository per target, with network access open and an instruction not to read existing reports. Twins are rebuilt locally from hash-pinned inputs, and nothing names them as twins.</li>
+<li><b>Configuration.</b> <code>gpt-6-luna</code> through the Codex CLI on your ChatGPT subscription, at the default (medium) reasoning effort.</li>
 </ul>
+<p class="rec">Recommendation: approve and run the remaining 33 targets. At 2 to 10 minutes each, five at a time, that is about an hour on the subscription. Score claim selection separately later.</p>
 </div>
 
 <div class="decision">
-<h3>7. Still open from the memo</h3>
-<ul>
-  <li><b>Stata.</b> The pilot is R/Python only because the pipeline cannot run Stata. That restriction is why only 4 technical-failure papers exist, and it leaves economics underrepresented.</li>
-  <li><b>Route 1 cut-off: Artificial Analysis 35 or about 39.</b> The benchmark can inform this once run (decision 5).</li>
-  <li><b>Source balance.</b> 28 of the 30 papers rest on Institute for Replication reports. More data-editor or CODECHECK cases would need new sources.</li>
-  <li><b>G-08's authors and the I4R report.</b> Both pilot models found two wrong printed numbers that the I4R reproduction called reproduced. Whether and how to tell the authors falls under the governance group's notification procedure.</li>
-</ul>
+<h3>2. Does switching on an option the authors document count as a justified fix?</h3>
+<p>G-21's printed AICs (410, 497, 507) come from a mixed-effects variant that the authors' script describes in a comment but does not run. Run as shipped, the script gives 463, 570 and 785. Gold labels these claims <code>match</code>, following the I4R reproducer. Luna called them <code>discrepant</code>, which is defensible because rule pack 1.1.0 only allows fixes that leave the analysis unchanged. These three claims are Luna's main errors in batch 2.</p>
+<p class="rec">Recommendation: no. Switching to a different model specification is a change of analysis even when a comment describes it. G-21 C3 to C5 would become <code>discrepant</code> (P2), and the printed values stay recorded as diagnostics. This needs Sol's agreement before I change gold.</p>
 </div>
 
-<h2>Decisions I took (please review)</h2>
+<div class="decision">
+<h3>3. May a model run the statements after a crash that they do not depend on?</h3>
+<p>On G-23 the script stops on a missing object. Two later statistics do not use that object: C3 recurs, and for C4 the paper prints 1037.5 where the code gives 1137.5. Reaching them means skipping the failing statement. Luna stopped at the crash and called both <code>not_checkable</code>.</p>
+<p class="rec">Recommendation: yes, as a justified fix. It is the same kind of change as running scripts in the right order, provided the skipped statement feeds nothing the claim uses. I would add this to rule pack §3.</p>
+</div>
+
+<div class="decision">
+<h3>4. Blinded recreation needs its own benchmark</h3>
+<p>The gold set and prompt cover computational reproduction only. Blinded recreation, where the model rebuilds the analysis from the paper without the code, needs a separate prompt, a rule that hides the code, and scoring against the same printed values. The 30 papers could be reused: their packages exist, and the gold says which numbers are recoverable at all.</p>
+<p class="rec">Recommendation: build it on the same 30 papers after the full Luna run. Tell me if the pipeline group already has a recreation prompt I should start from.</p>
+</div>
+
+<div class="decision">
+<h3>5. Add Stata papers to the gold set</h3>
+<p>With direct translation now allowed, Stata packages become eligible. That is the main route to more technical-failure cases and more economics. The current pool holds only three Stata candidates, because screening filtered Stata out early, so this needs a new screening round of I4R and REPRO-Bench Stata packages. Each paper then needs the full double-labelling and reconciliation cycle with Sol.</p>
+<p class="rec">Recommendation: after the full Luna run, add 10 Stata papers (G-31 to G-40), labelled the same way, and test whether translation works at all before scaling up.</p>
+</div>
+
+<h2>Decisions to review</h2>
 <table>
 <tr><th>Decision</th><th>Why</th></tr>
-<tr><td>Draw quotas 12/10/3/5, not 10/10/5/5</td><td>Only 3 eligible technical failures existed after two screening rounds. The final labels are 13/13/4, because labels follow evidence, not strata.</td></tr>
-<tr><td>"Ambiguous" is a claim-level label, not a paper status</td><td><code>computation not checked</code> means no attempt was made, which is wrong for these papers (rule R1).</td></tr>
-<tr><td>Code edits count as lossless only when equivalence is shown (R4)</td><td>Sol's counter-proposal, adopted. Path, library and execution-order fixes are allowed; logic and data changes are not.</td></tr>
-<tr><td>Repaired or translated values are non-scoring diagnostics (R5)</td><td>So the scorer never rewards a repair as faithful execution.</td></tr>
-<tr><td>A paper with a confirmed wrong number cannot also accept "reproducible" (R7)</td><td>Otherwise paper-level and claim-level scoring contradict each other.</td></tr>
-<tr><td>Gold v1.1 corrections (G-04, G-08, G-23, G-26)</td><td>Based on execution evidence and agreed with Sol. Every record lists its corrections.</td></tr>
-<tr><td>Pilot protocol: fresh agent per paper in an isolated worktree, told not to read existing reports</td><td>This works on the honour system; network-level blocking is not possible here.</td></tr>
+<tr><td><b>Gold v1.3: G-08 is reproducible again.</b> C6 is now <code>match</code>; C7 is diagnostic only.</td><td>The paragraph says significance fades "after one week" and gives b = 0.20, p = .16. That pair is exactly the 24-week estimate (week 1: 0.31, p = .004; week 8: 0.24, p = .048). 13.14% equals 18/137, but Sol showed the denominator cannot be verified. Both pilot models, Sol and I had misread it; the I4R verdict stands. Sol agreed (round 5).</td></tr>
+<tr><td><b>Rule R10: where <code>close</code> ends.</b> A deterministic <code>close</code> needs a named reporting slip, within one unit of the last digit or 1%. Counts must be exact. p values get only the 1% limit. A sign flip or false inequality is always <code>discrepant</code>.</td><td>This puts your ruling into practice. Sol tightened my draft. Effects: G-18 C1 and G-22 C1–C3 become <code>close</code>; G-11 C2/C5 become <code>match</code> (the authors' log prints the article's values). No paper status changed.</td></tr>
+<tr><td><b><code>results[].basis</code></b>: <code>shipped_code</code>, <code>justified_fix</code>, <code>translated</code> or <code>not_computed</code>. Fixes and translations must be described.</td><td>This implements your three outcomes: reproduces, reproduces with justified fixes, does not. Code the agent writes itself, or a changed specification, counts as "does not reproduce".</td></tr>
+<tr><td>Kept the FLoRA paper-level vocabulary; "with justified fixes" is derived from the bases.</td><td>FLoRA's import format is an external contract.</td></tr>
+<tr><td>Prompt v0.1.2, not 0.2.0.</td><td>The README's rule: every prompt commit bumps the patch number.</td></tr>
+<tr><td>Rule pack 1.1.0 was amended in place an hour after it went live, to add R10 and "one result per printed number".</td><td>Only our own validation runs had used it. A 1.1.1 would be cleaner if you prefer.</td></tr>
+<tr><td>Certificate schema 1.1 makes <code>basis</code> required.</td><td>Version 1.0 certificates no longer validate against it. The scorer validates each certificate against the version it declares; the 1.0 schema is archived in <code>model-gating/schemas-archive/</code>.</td></tr>
+<tr><td>Abstention is replaced by "blocked claims reported as not reproducing" (<code>not_checkable</code> or <code>discrepant</code>), plus a reproduces-vs-does-not outcome rate.</td><td>Your point that abstention does not fit the three outcomes.</td></tr>
+<tr><td>Stata goes to R by preference; a command without an exact equivalent makes dependent claims <code>not_checkable</code>.</td><td>You left R vs Python to me. R is closer to Stata's regression and survey tooling.</td></tr>
+<tr><td>Route 1 is pegged to DeepSeek V4 Flash's Artificial Analysis score at the time of assessment, with no fixed number.</td><td>As decided. I did not look up its current score.</td></tr>
 </table>
 
-<h2>Pilot: the real prompt on three papers</h2>
-<table>
-<tr><th></th><th>GPT-6.1 Sol</th><th>Claude Opus 5.5</th></tr>
-<tr><td>Paper status correct</td><td>1/3</td><td>3/3</td></tr>
-<tr><td>Certificates failing the schema</td><td>1 (G-23, after the broken URL)</td><td>0</td></tr>
-<tr><td>Gold claims found</td><td>12/17</td><td>17/17</td></tr>
-<tr><td>Sensitivity, P1+P2</td><td>2/4</td><td>4/4</td></tr>
-<tr><td>Specificity</td><td>10/10</td><td>10/10</td></tr>
-<tr><td>Hard-gate violations</td><td>0</td><td>3 (recreated code labelled match)</td></tr>
-</table>
-<p class="muted">With three papers these numbers show the loop works; they do not rank models. The
-G-08 gold labels were corrected using what these same runs found.</p>
+<h2>What "transparent recreation" meant</h2>
+<p>In the pilot, two models could not get a number from the shipped code. They then wrote or changed code themselves until it gave the printed value, said so in a note, and still labelled the claim <code>match</code>. Under your framing that is simply "does not reproduce", and the new rule pack and <code>basis</code> field say so explicitly. Luna did not do this once in either batch: I read every fix and note it wrote, and its fixes were paths, package installs, a figure-label loop, a column alias and stubbing out <code>View()</code>.</p>
+<p>A related finding: in batch 1, Luna spotted T-02's planted change by comparing the patched script with the authors' rendered output, which still shows the original value. Twins whose packages include rendered outputs can therefore be caught by comparison as well as by execution. Before the full run I would strip rendered outputs from twin packages, or accept that as a legitimate way of finding the error.</p>
 
-<h2>What was done</h2>
-<ol>
-  <li><b>Screening and draw.</b> Sol screened 111 candidates (49 eligible); I ran a seeded stratified draw (seed 20261030).</li>
-  <li><b>Blind double labelling and reconciliation.</b> Agreement before reconciliation was 25/30 on papers and 161/167 on claims. Four rounds followed, with nine written rules. Both sides signed off on v1.0 and then on v1.1 (<code>reconciliation.md</code>).</li>
-  <li><b>Execution.</b> Agents ran the shipped code for the claims of 11 papers: the G-04 and G-26 reruns, eight twin bases, and the three pilot papers. This confirmed G-04 and G-26 (whose rerun flags are now cleared) and corrected G-08 and G-23.</li>
-  <li><b>Twins.</b> Sol built eight; I reran all 16 runs from fresh copies, and every value matched. Two twins (T-01, T-03) look artificial if a reader inspects the code closely.</li>
-  <li><b>Scorer.</b> <code>score_certificate.py</code> maps certificate results to gold claims by printed value. It checks the schema, computes specificity, sensitivity and abstention with paper-clustered bootstrap intervals, and flags hard-gate violations. Sanity tests are in <code>test_score_certificate.py</code>.</li>
-  <li><b>Prompt fix.</b> I corrected the dead URLs and bumped the prompt to v0.1.1 (decision 1).</li>
-</ol>
+<h2>I4R: nothing to report</h2>
+<p>I checked every gold claim where our labels contradict a human report. All discrepancies but G-08's came from the reports themselves. Rereading the article, rerunning the shipped estimators and Sol's independent review all showed that the two G-08 "errors" were our misreading. G-11's I4R table differs from the article by a few thousandths while calling the reproduction perfect. The authors' own log matches the article, so this is a rerun difference, not an error to report. One finding concerns CODECHECK rather than I4R: on G-23 the shipped code does compute two statistics that the CODECHECK notes treated as blocked, and for one of them the paper prints W = 1037.5 where the code gives 1137.5. Tell me if you want a note for CODECHECK or the authors.</p>
 
-<h3>Incidents</h3>
+<h2>Done since your answers</h2>
 <ul>
-  <li>Two of my labellers sent your email address to the Unpaywall API (a free service for finding open-access copies of papers) before I stopped them. No saved file contains it.</li>
-  <li>A paper-download cache had stored the wrong PDF under G-20's DOI; I deleted the file.</li>
-  <li>Sol revised G-14's claim list while my labeller was working on it, so I had G-14 relabelled blind.</li>
-  <li>A Claude pilot run wrongly claimed that two Figshare versions were identical. Checking this exposed a pin mismatch, which is now documented.</li>
+<li><b>Committed and pushed</b>: the URL fix, <code>model-gating/</code>, prompt v0.1.2, rule pack 1.1.0, schema 1.1 and gold v1.3. The live site serves the new prompt, rule pack and schema.</li>
+<li><b>Prompt.</b> The instructive sentences now say "check" rather than "certify". The prompt forbids self-written code and changed specifications, and asks for Stata to be translated. File names such as <code>certificate.json</code> are unchanged.</li>
+<li><b>Benchmark tooling</b>: a slim benchmark prompt derived automatically from the public one, a twin-package builder with hash checks, and a Codex runner that collects certificates.</li>
+<li><b>Scorer</b>: <code>match</code> and <code>close</code> are scored as distinct, non-scoring gold claims are skipped, and tests are extended. The pilot was rescored against v1.3.</li>
+<li><b>Sol review rounds 5 and 6</b>, recorded in <code>reconciliation.md</code> and <code>gold-set/audit/v1.3/</code>.</li>
+<li><b>Your email and academic APIs.</b> I added to <code>~/.claude/CLAUDE.md</code> that it may be sent to Crossref, Unpaywall, OpenAlex and similar services.</li>
 </ul>
 
-<h3>Where things are</h3>
+<h2>Where things are</h2>
 <table>
 <tr><th>Path</th><th>Contents</th></tr>
-<tr><td><code>model-gating/README.md</code></td><td>The model-gating plan summary</td></tr>
-<tr><td><code>model-gating/gold-benchmark-30.md</code></td><td>The benchmark design</td></tr>
-<tr><td><code>model-gating/gold-set/README.md</code></td><td>Gold v1.1: how it was built, contents, limitations</td></tr>
-<tr><td><code>model-gating/gold-set/gold/</code>, <code>gold-summary.csv</code></td><td>The 30 gold records</td></tr>
-<tr><td><code>model-gating/gold-set/twins/</code></td><td>Eight seeded twins</td></tr>
-<tr><td><code>model-gating/gold-set/pilot/</code></td><td>Pilot certificates, scores and findings</td></tr>
-<tr><td><code>model-gating/gold-set/reconciliation.md</code></td><td>Every disagreement and its resolution</td></tr>
-<tr><td><code>model-gating/scripts/</code></td><td>Draw, compare, build, score, test</td></tr>
+<tr><td><code>model-gating/benchmark/README.md</code></td><td>The approach for decision 1, with batch 2 scores and their errors explained</td></tr>
+<tr><td><code>model-gating/benchmark/runs/</code></td><td>Luna certificates (batch 2; batch 1 kept as <code>luna-batch1-ownclaims/</code>), run logs, scores</td></tr>
+<tr><td><code>crowd-repro/RULEPACK-v1.1.0.md</code></td><td>The current rule pack (§3 fixes and translation, §12 claim status and basis)</td></tr>
+<tr><td><code>model-gating/gold-set/</code></td><td>Gold v1.3; <code>reconciliation.md</code> rounds 5–6; <code>audit/v1.3/</code></td></tr>
 </table>
 
-<h3>Commands</h3>
-<pre>python3 model-gating/scripts/test_score_certificate.py
-python3 model-gating/scripts/score_certificate.py model-gating/gold-set/pilot/runs.csv
-python3 model-gating/scripts/build_gold.py</pre>
+<h2>Commands</h2>
+<pre>python3 model-gating/scripts/score_certificate.py model-gating/benchmark/runs/runs-luna.csv
+python3 model-gating/scripts/test_score_certificate.py</pre>
 </main>
 </body>
 </html>

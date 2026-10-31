@@ -1,5 +1,7 @@
 # The 30-paper gold benchmark: how to build it and what success looks like
 
+> **Superseded in part (31 October 2026).** This is the original design. For the set as built see [`gold-set/README.md`](gold-set/README.md). Three points here no longer hold: abstention is not scored (blocked claims must be reported as not reproducing), `match` and `close` are distinct (rule R10), and Stata packages are eligible through direct translation into R or Python.
+
 Status: suggestion for discussion, 30 October 2026. Builds on the plan in [README.md](README.md).
 
 ## In short
