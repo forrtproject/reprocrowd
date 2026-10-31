@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "paper": {
+    "doi": "10.1111/ajps.12702",
+    "title": "Entertaining Beliefs in Economic Mobility",
+    "authors": ["Eunji Kim"],
+    "year": 2021
+  },
+  "procedure": {
+    "version": "0.1.2",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "engine": "Codex",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "rules_version": "1.1.0",
+  "date": "2026-10-31",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS Tahoe 26.7 (aarch64-apple-darwin23)",
+    "language": "R",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1 (2026-06-24)",
+        "packages": {
+          "foreign": "0.8-91",
+          "ggplot2": "4.0.3",
+          "readstata13": "0.11.0",
+          "dplyr": "1.2.1",
+          "haven": "2.5.5",
+          "xtable": "1.8-8",
+          "stargazer": "5.2.3",
+          "tidytext": "0.4.3",
+          "stringr": "1.6.0",
+          "tidyr": "1.3.2",
+          "scales": "1.4.0",
+          "tables": "0.9.35",
+          "ggpubr": "1.0.0"
+        },
+        "lockfile": "R-packages.txt (complete installed package inventory); sessionInfo.txt"
+      }
+    ],
+    "versions": {
+      "R": "4.6.1",
+      "platform": "aarch64-apple-darwin23",
+      "OS": "macOS Tahoe 26.7"
+    },
+    "lockfile": "R-packages.txt; sessionInfo.txt"
+  },
+  "claims": [
+    {"id": "C1", "claim": "MTurk treatment effect on belief in economic mobility; OLS treatment coefficient printed as 0.055.", "exhibit": "Table 1, column 1", "page": 46},
+    {"id": "C2", "claim": "Lab-in-the-field treatment effect on belief in economic mobility; OLS treatment coefficient printed as 0.068.", "exhibit": "Table 1, column 5", "page": 46},
+    {"id": "C3", "claim": "Frequent-viewer coefficient for belief in upward mobility printed as 0.032.", "exhibit": "Table 2, column 2", "page": 48},
+    {"id": "C4", "claim": "Heavy-viewer coefficient for belief in upward mobility printed as 0.040.", "exhibit": "Table 2, column 2", "page": 48},
+    {"id": "C5", "claim": "Occasional-viewer coefficient for belief in upward mobility printed as 0.013.", "exhibit": "Table 2, column 2", "page": 48}
+  ],
+  "results": [
+    {"claim_id": "C1", "quantity": "OLS treatment coefficient", "reported": 0.055, "recomputed": 0.057, "status": "discrepant", "basis": "shipped_code", "note": "The shipped manuscript script prints 0.057 at three decimals (Table 1, column 1), a gap of 0.002 from 0.055. The deterministic gap exceeds one unit in the last printed digit; no specific reporting slip was identifiable."},
+    {"claim_id": "C2", "quantity": "OLS treatment coefficient", "reported": 0.068, "recomputed": 0.068, "status": "match", "basis": "shipped_code"},
+    {"claim_id": "C3", "quantity": "OLS frequent-viewer coefficient", "reported": 0.032, "recomputed": 0.032, "status": "match", "basis": "shipped_code"},
+    {"claim_id": "C4", "quantity": "OLS heavy-viewer coefficient", "reported": 0.040, "recomputed": 0.040, "status": "match", "basis": "shipped_code"},
+    {"claim_id": "C5", "quantity": "OLS occasional-viewer coefficient", "reported": 0.013, "recomputed": 0.013, "status": "match", "basis": "shipped_code"}
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "HighConfidence",
+  "findings": [
+    {
+      "id": "REPRO-001",
+      "severity": "P1",
+      "type": "defect",
+      "description": "The MTurk treatment coefficient does not reproduce the approved printed value: the shipped script yields 0.057 rather than 0.055.",
+      "evidence": "Successful full manuscript-script run (exit status 0); console output in logs/manuscript-run-4.txt.",
+      "suggested_fix": "Check the paper's Table 1 value against the archived analysis output and document any correction; no analysis change was made in this check."
+    }
+  ],
+  "limitations": [
+    "This checks computational reproducibility only and makes no judgement about the scientific conclusion.",
+    "The successful run executed the manuscript script unchanged from the package directory so its relative data paths resolved.",
+    "The displayed coefficient values are at three-decimal table precision; p values were not part of the approved claim list.",
+    "The run emitted an expected many-to-many join warning in the NYT text analysis and an ignored geom_col size-parameter warning; execution completed with exit status 0."
+  ],
+  "artifacts": {
+    "console_log": "logs/manuscript-run-4.txt"
+  },
+  "signatories": [
+    {"name": "Codex (GPT-6, OpenAI)", "role": "codechecker"}
+  ],
+  "provenance": {
+    "raw_data": "Local shipped package at /tmp/scratch_bench_luna/packages/T-02; original data not copied into certification artifacts.",
+    "analysis_script": "code/AJPS_2021_Kim_Manuscript.R (unchanged copy of shipped script)"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  }
+}

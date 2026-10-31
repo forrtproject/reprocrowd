@@ -1,4 +1,4 @@
-# Gold set v1.1 (30 papers)
+# Gold set v1.3 (30 papers)
 
 The pilot gold benchmark proposed in [`../gold-benchmark-30.md`](../gold-benchmark-30.md). Each
 record states what a paper's shipped original code and data produce relative to the printed
@@ -57,14 +57,23 @@ Scripts are in [`../scripts/`](../scripts/):
    and C4 turned out to be computable from shipped code (C3 match, C4 discrepant). Sol checked and
    agreed to every change ("FINAL: AGREE to gold v1.1"). Each changed record lists its
    `corrections`.
+7. **v1.2 and v1.3 (rounds 5 and 6, 31 October 2026).** After Lukas ruled that `match` and `close`
+   are distinct, rule R10 fixed the boundary: a deterministic `close` needs a named reporting slip
+   within one unit of the last digit or 1%, counts must be exact, and sign flips or false
+   inequalities are always `discrepant`. This moved G-18 C1 and G-22 C1–C3 to `close` and, using
+   the authors' own log, G-11 C2/C5 to `match`. A reread of G-08 showed that both v1.1
+   corrections were misreadings: C6's printed pair is the 24-week estimate, and C7's denominator
+   cannot be verified, so C7 no longer scores (`scoring: false`). G-08 is again
+   `computationally reproducible`, in line with the I4R report.
 
 ## What the set contains
 
 The final statuses differ from the drawn strata because labels follow the evidence. For example,
 G-07 has a wrong printed SD, and G-19's blocker turned out to be a lossless filename fix.
 
-- Papers: 13 computationally reproducible, 13 computational issues, 4 technical failure.
-- Claims: 169 in total. 103 match, 8 close, 29 discrepant (3 P1, 26 P2) and 29 not_checkable.
+- Papers: 14 computationally reproducible, 12 computational issues, 4 technical failure.
+- Scoring claims: 168 (plus one diagnostic-only claim, G-08 C7). 106 match, 10 close,
+  23 discrepant (3 P1, 20 P2) and 29 not_checkable.
   Of the not_checkable claims, 24 are P0 blockers; the other 5 depend on unstated choices such as
   unseeded bootstraps or undefined procedures.
 - Execution evidence: agents have run the shipped code for the selected claims of 11 papers: the
@@ -77,12 +86,14 @@ G-07 has a wrong printed SD, and G-19's blocker turned out to be a lossless file
 - **One source dominates.** 28 of the 30 papers rest on Institute for Replication reports (REPRO-Bench's human reports are I4R reports; the exceptions are one CODECHECK and one SCORE case), and the
   set leans heavily towards psychology and R. This reflects which public reports have claim-level
   detail and open R or Python code; it is not a sample of the literature.
-- **Few P1 discrepancies.** Only 3 of the 29 discrepant claims in the 30 papers are P1 (the twins add 13). Most documented
+- **Few P1 discrepancies.** Only 3 of the 23 discrepant claims in the 30 papers are P1 (the twins add 13). Most documented
   discrepancies are wrong secondary numbers (P2), so sensitivity has to be estimated on P1 and P2
   together.
 - **Partial execution.** 19 papers still rest on human reports and static checks. One paper (G-16)
   has low label confidence. No human has rerun any analysis; all executions were by agents.
 - **Public sources.** All reports are public, so models may have seen them. The twins counter
   this, because their correct answers exist nowhere else.
-- **Human reports miss things.** G-08 shows that a favourable human report does not guarantee
-  every printed number recurs. Gold labels for unexecuted papers may contain similar errors.
+- **Overruling a human report needs strong evidence.** In round 4 two pilot models, Sol and
+  Claude all read G-08's durability paragraph as misreporting the one-week estimate; a closer
+  reading showed the report had been right. Corrections against a human report now need both the
+  exact text and an execution that rules out other readings.

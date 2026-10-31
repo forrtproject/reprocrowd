@@ -1,0 +1,360 @@
+{
+ "luna": {
+  "metrics": {
+   "paper status correct": {
+    "num": 5,
+    "den": 5,
+    "ci95": [
+     1.0,
+     1.0
+    ]
+   },
+   "specificity (gold match/close not flagged discrepant)": {
+    "num": 16,
+    "den": 19,
+    "ci95": [
+     0.47058823529411764,
+     1.0
+    ]
+   },
+   "claim outcome correct (reproduces vs does not)": {
+    "num": 22,
+    "den": 26,
+    "ci95": [
+     0.6153846153846154,
+     1.0
+    ]
+   },
+   "claim status correct (incl. accepted alternatives)": {
+    "num": 21,
+    "den": 26,
+    "ci95": [
+     0.56,
+     1.0
+    ]
+   },
+   "reproduced claims resting on fixes or translation": {
+    "num": 7,
+    "den": 15,
+    "ci95": [
+     0.0,
+     1.0
+    ]
+   },
+   "gold claims missed by the certificate": {
+    "num": 0,
+    "den": 26,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "sensitivity P1+P2 (flagged discrepant)": {
+    "num": 3,
+    "den": 4,
+    "ci95": [
+     0.25,
+     1.0
+    ]
+   },
+   "blocked claims reported as not reproducing": {
+    "num": 3,
+    "den": 3,
+    "ci95": [
+     1.0,
+     1.0
+    ]
+   },
+   "sensitivity P1 only": {
+    "num": 2,
+    "den": 2,
+    "ci95": [
+     1.0,
+     1.0
+    ]
+   }
+  },
+  "hard_gate_violations": [],
+  "papers": [
+   {
+    "paper_status": "computationally reproducible",
+    "paper_correct": true,
+    "schema_errors": [],
+    "claims": [
+     {
+      "id": "C1",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "basis": "justified_fix",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C2",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "basis": "justified_fix",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C3",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "basis": "justified_fix",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C4",
+      "gold": "close",
+      "severity": null,
+      "model": "close",
+      "basis": "justified_fix",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C5",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "basis": "justified_fix",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C6",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "basis": "justified_fix",
+      "correct": true,
+      "outcome_correct": true
+     }
+    ],
+    "hard_gate_violations": [],
+    "target": "G-08"
+   },
+   {
+    "paper_status": "computational issues",
+    "paper_correct": true,
+    "schema_errors": [],
+    "claims": [
+     {
+      "id": "C1",
+      "gold": "discrepant",
+      "severity": "P2",
+      "model": "discrepant",
+      "basis": "justified_fix",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C2",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "basis": "justified_fix",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C3",
+      "gold": "match",
+      "severity": null,
+      "model": "discrepant",
+      "basis": "justified_fix",
+      "correct": false,
+      "outcome_correct": false
+     },
+     {
+      "id": "C4",
+      "gold": "match",
+      "severity": null,
+      "model": "discrepant",
+      "basis": "justified_fix",
+      "correct": false,
+      "outcome_correct": false
+     },
+     {
+      "id": "C5",
+      "gold": "match",
+      "severity": null,
+      "model": "discrepant",
+      "basis": "justified_fix",
+      "correct": false,
+      "outcome_correct": false
+     }
+    ],
+    "hard_gate_violations": [],
+    "target": "G-21"
+   },
+   {
+    "paper_status": "technical failure",
+    "paper_correct": true,
+    "schema_errors": [],
+    "claims": [
+     {
+      "id": "C1",
+      "gold": "not_checkable",
+      "severity": "P0",
+      "model": "not_checkable",
+      "basis": "not_computed",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C2",
+      "gold": "not_checkable",
+      "severity": "P0",
+      "model": "not_checkable",
+      "basis": "not_computed",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C3",
+      "gold": "match",
+      "severity": null,
+      "model": "not_checkable",
+      "basis": "not_computed",
+      "correct": false,
+      "outcome_correct": false
+     },
+     {
+      "id": "C4",
+      "gold": "discrepant",
+      "severity": "P2",
+      "model": "not_checkable",
+      "basis": "not_computed",
+      "correct": false,
+      "outcome_correct": true
+     },
+     {
+      "id": "C5",
+      "gold": "not_checkable",
+      "severity": "P0",
+      "model": "not_checkable",
+      "basis": "not_computed",
+      "correct": true,
+      "outcome_correct": true
+     }
+    ],
+    "hard_gate_violations": [],
+    "target": "G-23"
+   },
+   {
+    "paper_status": "computational issues",
+    "paper_correct": true,
+    "schema_errors": [],
+    "claims": [
+     {
+      "id": "C1",
+      "gold": "discrepant",
+      "severity": "P1",
+      "model": "discrepant",
+      "basis": "shipped_code",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C2",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "basis": "shipped_code",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C3",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "basis": "shipped_code",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C4",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "basis": "shipped_code",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C5",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "basis": "shipped_code",
+      "correct": true,
+      "outcome_correct": true
+     }
+    ],
+    "hard_gate_violations": [],
+    "target": "T-02"
+   },
+   {
+    "paper_status": "computational issues",
+    "paper_correct": true,
+    "schema_errors": [],
+    "claims": [
+     {
+      "id": "C1",
+      "gold": "discrepant",
+      "severity": "P1",
+      "model": "discrepant",
+      "basis": "shipped_code",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C2",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "basis": "shipped_code",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C3",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "basis": "shipped_code",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C4",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "basis": "shipped_code",
+      "correct": true,
+      "outcome_correct": true
+     },
+     {
+      "id": "C5",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "basis": "shipped_code",
+      "correct": true,
+      "outcome_correct": true
+     }
+    ],
+    "hard_gate_violations": [],
+    "target": "T-06"
+   }
+  ]
+ }
+}

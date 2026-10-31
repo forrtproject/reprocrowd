@@ -10,24 +10,24 @@
     ]
    },
    "specificity (gold match/close not flagged discrepant)": {
-    "num": 10,
-    "den": 10,
+    "num": 11,
+    "den": 11,
     "ci95": [
      1.0,
      1.0
     ]
    },
    "claim outcome correct (reproduces vs does not)": {
-    "num": 11,
-    "den": 17,
+    "num": 10,
+    "den": 16,
     "ci95": [
      0.0,
      1.0
     ]
    },
    "claim status correct (incl. accepted alternatives)": {
-    "num": 7,
-    "den": 17,
+    "num": 6,
+    "den": 16,
     "ci95": [
      0.0,
      1.0
@@ -35,7 +35,7 @@
    },
    "reproduced claims resting on fixes or translation": {
     "num": 0,
-    "den": 10,
+    "den": 11,
     "ci95": [
      0.0,
      0.0
@@ -43,18 +43,18 @@
    },
    "gold claims missed by the certificate": {
     "num": 5,
-    "den": 17,
+    "den": 16,
     "ci95": [
      0.0,
      1.0
     ]
    },
    "sensitivity P1+P2 (flagged discrepant)": {
-    "num": 2,
-    "den": 4,
+    "num": 0,
+    "den": 2,
     "ci95": [
      0.0,
-     1.0
+     0.0
     ]
    },
    "blocked claims reported as not reproducing": {
@@ -120,18 +120,9 @@
      },
      {
       "id": "C6",
-      "gold": "discrepant",
-      "severity": "P2",
-      "model": "discrepant",
-      "basis": null,
-      "correct": true,
-      "outcome_correct": true
-     },
-     {
-      "id": "C7",
-      "gold": "discrepant",
-      "severity": "P2",
-      "model": "discrepant",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
       "basis": null,
       "correct": true,
       "outcome_correct": true
@@ -255,32 +246,32 @@
  "claude": {
   "metrics": {
    "paper status correct": {
-    "num": 3,
+    "num": 2,
     "den": 3,
     "ci95": [
-     1.0,
+     0.0,
      1.0
     ]
    },
    "specificity (gold match/close not flagged discrepant)": {
     "num": 10,
-    "den": 10,
+    "den": 11,
     "ci95": [
-     1.0,
+     0.8333333333333334,
      1.0
     ]
    },
    "claim outcome correct (reproduces vs does not)": {
-    "num": 14,
-    "den": 17,
+    "num": 12,
+    "den": 16,
     "ci95": [
      0.4,
      1.0
     ]
    },
    "claim status correct (incl. accepted alternatives)": {
-    "num": 14,
-    "den": 17,
+    "num": 12,
+    "den": 16,
     "ci95": [
      0.4,
      1.0
@@ -296,15 +287,15 @@
    },
    "gold claims missed by the certificate": {
     "num": 0,
-    "den": 17,
+    "den": 16,
     "ci95": [
      0.0,
      0.0
     ]
    },
    "sensitivity P1+P2 (flagged discrepant)": {
-    "num": 4,
-    "den": 4,
+    "num": 2,
+    "den": 2,
     "ci95": [
      1.0,
      1.0
@@ -327,7 +318,7 @@
   "papers": [
    {
     "paper_status": "computational issues",
-    "paper_correct": true,
+    "paper_correct": false,
     "schema_errors": [],
     "claims": [
      {
@@ -377,21 +368,12 @@
      },
      {
       "id": "C6",
-      "gold": "discrepant",
-      "severity": "P2",
+      "gold": "match",
+      "severity": null,
       "model": "discrepant",
       "basis": null,
-      "correct": true,
-      "outcome_correct": true
-     },
-     {
-      "id": "C7",
-      "gold": "discrepant",
-      "severity": "P2",
-      "model": "discrepant",
-      "basis": null,
-      "correct": true,
-      "outcome_correct": true
+      "correct": false,
+      "outcome_correct": false
      }
     ],
     "hard_gate_violations": [],

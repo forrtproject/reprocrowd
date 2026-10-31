@@ -40,7 +40,7 @@ Third-party packages and data remain in `/tmp/scratch_gold2/sol/`, outside the r
 
 [`verification.json`](verification.json) records the independent clean-copy check for each twin. For each run, the checker rebuilt a package from hash-verified original inputs, applied `twin.patch` for the twin copy, then executed the retained `reproduce.R`. Both processes must exit zero, all claim values must agree with the recorded run at printed precision, and the computed affected-claim set must equal the labels. Every patch must contain one hunk and apply without rejects.
 
-Fresh original and patched copies from that check are retained under `/tmp/scratch_gold2/sol/verify/T-01/` through `T-08/`. From the repository root, these commands rerun T-07’s two numerical checks:
+The temporary copies used for that check have been deleted. To rebuild a twin package from the hash-pinned inputs, run `python3 model-gating/benchmark/build_twin_package.py T-07 /tmp/scratch_twins/T-07` from the repository root (it downloads the manifest inputs, checks every SHA-256 and applies `twin.patch`). The original check ran commands of this form, which need the original copy and an R library with the packages installed:
 
 ```sh
 R_LIBS=/tmp/scratch_gold2/sol/rlib TMPDIR=/tmp/scratch_gold2/sol/tmp Rscript --vanilla model-gating/gold-set/twins/reproduce.R G-19 /tmp/scratch_gold2/sol/verify/T-07/original

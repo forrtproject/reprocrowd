@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "procedure": {
+    "version": "0.1.2",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "paper": {
+    "doi": "10.5194/agile-giss-4-13-2023",
+    "title": "Does spatial thinking ability relate to performance when using web-mapping services? A survey with digital natives",
+    "authors": [
+      "Eleni Tomai",
+      "Margarita Kokla",
+      "Christos Charcharos",
+      "Marinos Kavouras"
+    ],
+    "year": 2023
+  },
+  "engine": "Codex",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "rules_version": "ReproCrowd crowd-repro v1.1.0",
+  "date": "2026-10-31",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS-26.7-arm64-arm-64bit-Mach-O",
+    "language": "R",
+    "versions": {
+      "R": "4.6.1"
+    },
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "tidyverse": "see logs/environment_sessionInfo.txt (all installed package versions)",
+          "DescTools": "see logs/environment_sessionInfo.txt (all installed package versions)",
+          "gdata": "see logs/environment_sessionInfo.txt (all installed package versions)",
+          "stats": "see logs/environment_sessionInfo.txt (all installed package versions)",
+          "psych": "see logs/environment_sessionInfo.txt (all installed package versions)",
+          "rstatix": "see logs/environment_sessionInfo.txt (all installed package versions)",
+          "RColorBrewer": "see logs/environment_sessionInfo.txt (all installed package versions)",
+          "readr": "see logs/environment_sessionInfo.txt (all installed package versions)",
+          "ltm": "see logs/environment_sessionInfo.txt (all installed package versions)"
+        },
+        "lockfile": "logs/environment_sessionInfo.txt"
+      }
+    ],
+    "lockfile": "logs/environment_sessionInfo.txt"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Total task scores: Google Maps versus HERE WeGo; Wilcoxon signed-rank V printed as 281.",
+      "exhibit": "Table 4"
+    },
+    {
+      "id": "C2",
+      "claim": "Total task scores: Bing Maps versus HERE WeGo; Wilcoxon rank-sum W printed as 1036.",
+      "exhibit": "Table 4"
+    },
+    {
+      "id": "C3",
+      "claim": "SUS scores: Google Maps versus HERE WeGo; paired t statistic printed as 9.45.",
+      "exhibit": "Table 8"
+    },
+    {
+      "id": "C4",
+      "claim": "SUS scores: Bing Maps versus HERE WeGo; Wilcoxon rank-sum W printed as 1037.5.",
+      "exhibit": "Table 8"
+    },
+    {
+      "id": "C5",
+      "claim": "Spatial-thinking ability and Google Maps task accuracy (STAT / TS GM); Kendall tau printed as 0.29.",
+      "exhibit": "Table 9"
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "Wilcoxon signed-rank V",
+      "reported": 281,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped script contains no Google Maps versus HERE WeGo total-task Wilcoxon test; its relevant Group 2 total-task comparison is omitted. No statistic was computed."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Wilcoxon rank-sum W",
+      "reported": 1036,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "After the documented import fix, execution stops because the script never creates GMHWG$Sum_GM_Group2. Creating that score requires missing preprocessing, so the target test was not reached and no statistic was computed."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "paired t statistic",
+      "reported": 9.45,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Execution stops before the shipped SUS analysis and paired t test are reached; no statistic was computed."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Wilcoxon rank-sum W",
+      "reported": 1037.5,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Execution stops before the shipped between-group SUS rank-sum test is reached; no statistic was computed."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Kendall tau",
+      "reported": 0.29,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Execution stops before STAT_GMCorrelation is reached; no correlation was computed."
+    }
+  ],
+  "validation_status": "technical failure",
+  "confidence_level": "HighConfidence",
+  "findings": [
+    {
+      "id": "DEF-001",
+      "severity": "P0",
+      "type": "defect",
+      "description": "The script is not executable through its analysis section: it uses GMHWG$Sum_GM_Group2 without creating that column or the other Group 2 score variables. The shipped source omits this preprocessing, and the run terminates at the first missing field.",
+      "evidence": "logs/full_run.log ends with \"Unknown or uninitialised column: `Sum_GM_Group2`\" followed by an error in fligner.test.default; the run exits 1.",
+      "suggested_fix": "Restore the original Group 2 preprocessing from the authors; no replacement was written for this check."
+    },
+    {
+      "id": "DEF-002",
+      "severity": "P1",
+      "type": "defect",
+      "description": "The approved Google Maps versus HERE WeGo total-task Wilcoxon result is not implemented in the shipped script; it is among the Group 2 analyses described as omitted.",
+      "evidence": "survey_2021.R comments at the Group 2 section state that Group 1 tests are omitted for Group 2; no GM versus HERE WeGo total-task Wilcoxon test appears.",
+      "suggested_fix": "Provide the authors\u2019 original analysis code for this comparison."
+    }
+  ],
+  "limitations": [
+    "No approved numeric result was computed because the shipped script stops before the target analyses.",
+    "The paper\u2019s scientific conclusions were not assessed.",
+    "Original code and data are linked, not included in this certification bundle."
+  ],
+  "artifacts": {
+    "console_log": "logs/full_run.log"
+  },
+  "provenance": {
+    "raw_data": "Figshare article 22132940 version 1; file IDs 39347477 and 39347480; supplied SHA-256 fingerprints verified before execution.",
+    "analysis_script": "Original survey_2021.R with documented execution fixes in code/survey_2021.R."
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "technical failure",
+    "outcome_robustness": "not checked"
+  }
+}

@@ -4,7 +4,7 @@ This folder holds the working plan for deciding which models' reproductions Repr
 into FLoRA. It summarises the draft Part 2 memo of 23 October 2026 (developed in a
 [ChatGPT conversation](https://chatgpt.com/share/6ae48bf0-cea8-83ed-b8ed-149661d8cdc0)) and the
 design decisions taken before it was drafted. The concrete proposal for the first benchmark is in
-[`gold-benchmark-30.md`](gold-benchmark-30.md). The resulting 30-paper gold set (v1.0) is in [`gold-set/`](gold-set/).
+[`gold-benchmark-30.md`](gold-benchmark-30.md). The resulting 30-paper gold set (v1.3) is in [`gold-set/`](gold-set/); benchmark runs and their scores are in [`benchmark/`](benchmark/).
 
 Part 2 covers three tasks from the 16 October meeting: propose a two-route acceptance scheme with
 a suggested cut-off, outline our own reproduction benchmark, and evaluate the two-model agreement
