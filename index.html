@@ -79,7 +79,7 @@
             <li class="card">
               <span class="card-step">2</span>
               <h3>Run the reprocheck</h3>
-              <p>Your agent certifies the paper's <strong>computational reproducibility</strong>, running the shipped code and data as a Reproduction Study.</p>
+              <p>Your agent checks the paper's <strong>computational reproducibility</strong> by running the shipped code and data as a Reproduction Study.</p>
             </li>
             <li class="flow-arrow" aria-hidden="true">→</li>
             <li class="card">
@@ -104,7 +104,7 @@
       <div class="container">
         <h2 class="section-title">Prompt</h2>
         <p class="lead">
-          Tell your coding agent (Claude, Codex, DeepSeek, …) to certify the computational
+          Tell your coding agent (Claude, Codex, DeepSeek, …) to check the computational
           reproducibility of a paper. The agent needs nothing else. The rule pack is
           referenced by the prompt and pinned in the report.
         </p>
@@ -114,15 +114,21 @@
             <span>ReproCrowd certification prompt</span>
             <button id="copy-prompt" class="btn btn-small">Copy</button>
           </div>
-          <pre id="prompt-text"><code>ReproCrowd certification.
-Prompt version: 0.1.1.
+          <pre id="prompt-text"><code>ReproCrowd reproduction check.
+Prompt version: 0.1.2.
 
-Certify the computational reproducibility of this paper: run its shipped code and data as a
-Reproduction Study (same methodology, same tools) and record faithfully what reproduces and
-what does not. Do NOT upload the original data or code; the licence may not permit it. Link to
-them instead.
+Check the computational reproducibility of this paper: run its shipped code and data as a
+Reproduction Study (same methodology, same tools) and report faithfully what recurs and what
+does not. A result that does not reproduce is as useful as one that does. Do NOT upload the
+original data or code; the licence may not permit it. Link to them instead.
 
-Work in a new directory `<slug>-certification` and produce the whole reproducible bundle, so the
+Only run the shipped code. Fixes that leave the analysis unchanged (paths, package installs,
+an exact equivalent for a deprecated call, script order) are allowed and must be documented.
+Never write missing analysis code yourself or change the specification, sample or data to make
+a number recur; such a value is not a reproduction. If the code is in Stata (or another
+language you cannot run), translate it directly into R (preferred) or Python and say so.
+
+Work in a new directory `&lt;slug&gt;-certification` and produce the whole reproducible bundle, so the
 folder can be re-run from scratch. It must contain ALL of these files:
 - myst.yml (the reproducible-report config)
 - pixi.toml and pixi.lock (the pinned environment, every dependency versioned)
@@ -133,23 +139,25 @@ folder can be re-run from scratch. It must contain ALL of these files:
 - CITATION.cff (the citation metadata)
 - certificate.json, certificate.md, SIGN-OFF.md, flora-entry.json (the report and sign-off)
 
-Certify that the computation is reproducible and executable. Do NOT rule on whether the
+Report whether the computation is reproducible and executable. Do NOT rule on whether the
 scientific conclusion is correct. Use the FORRT nanopublication chain vocabulary. Report the
 engine, model + provider, rules version, and environment you used.
 
-Follow the ReproCrowd rule pack (https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.0.0.md).
-If that URL is unreachable, treat the artefact list above as the requirement and do not skip
+Follow the ReproCrowd rule pack (https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md)
+and write certificate.json to the schema at
+https://forrtproject.github.io/reprocrowd/schemas/certificate.schema.json.
+If those URLs are unreachable, treat the artefact list above as the requirement and do not skip
 any of the files.
 
 Article link or DOI:
-Code & Data link:</code></pre>
+Code &amp; Data link:</code></pre>
         </div>
 
         <h3 class="subsection-title">How to use it</h3>
         <ol class="steps">
           <li><strong>Copy the prompt.</strong> Add the paper's article link or DOI and the code &amp; data link at the bottom.</li>
           <li><strong>Feed it to your LLM.</strong> Paste it into the coding agent you already use, in a fresh directory.</li>
-          <li><strong>Run it.</strong> The agent reads the rule pack, builds the reproducible pipeline, and certifies the computation.</li>
+          <li><strong>Run it.</strong> The agent reads the rule pack, builds the reproducible pipeline, and reports what recurs and what does not.</li>
           <li><strong>Submit.</strong> The agent writes <code>certificate.json</code>, <code>certificate.md</code>, <code>SIGN-OFF.md</code> and <code>flora-entry.json</code>; you save the folder to the repo.</li>
           <li><strong>Get signed.</strong> A human reviews the single <code>SIGN-OFF.md</code>, verifies the artifacts, and approves it for FLoRA.</li>
         </ol>
@@ -158,7 +166,7 @@ Code & Data link:</code></pre>
           Reports are comparable because the <strong>rule pack version, engine, model and
           provider</strong> are all recorded in the report. The exact prompt is saved as
           <a href="./prompt.txt" target="_blank" rel="noopener">prompt.txt</a>. See the
-          <a href="https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.0.0.md" target="_blank" rel="noopener">rule pack v1.0.0</a>.
+          <a href="https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md" target="_blank" rel="noopener">rule pack v1.1.0</a>.
         </p>      </div>
     </section>
 
@@ -299,7 +307,7 @@ Code & Data link:</code></pre>
       <span>ReproCrowd: crowdsourced numerical reproductions.</span>
       <span>
         <a href="https://github.com/LukasRoeseler/reprocrowd" target="_blank" rel="noopener">GitHub</a>
-        · <a href="https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.0.0.md" target="_blank" rel="noopener">Rule pack</a>
+        · <a href="https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md" target="_blank" rel="noopener">Rule pack</a>
         · <a href="https://forrt.org/flora-replication-atlas" target="_blank" rel="noopener">FLoRA Atlas</a>
       </span>
     </div>

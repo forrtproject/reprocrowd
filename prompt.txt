@@ -1,10 +1,16 @@
-ReproCrowd certification.
-Prompt version: 0.1.1.
+ReproCrowd reproduction check.
+Prompt version: 0.1.2.
 
-Certify the computational reproducibility of this paper: run its shipped code and data as a
-Reproduction Study (same methodology, same tools) and record faithfully what reproduces and
-what does not. Do NOT upload the original data or code; the licence may not permit it. Link to
-them instead.
+Check the computational reproducibility of this paper: run its shipped code and data as a
+Reproduction Study (same methodology, same tools) and report faithfully what recurs and what
+does not. A result that does not reproduce is as useful as one that does. Do NOT upload the
+original data or code; the licence may not permit it. Link to them instead.
+
+Only run the shipped code. Fixes that leave the analysis unchanged (paths, package installs,
+an exact equivalent for a deprecated call, script order) are allowed and must be documented.
+Never write missing analysis code yourself or change the specification, sample or data to make
+a number recur; such a value is not a reproduction. If the code is in Stata (or another
+language you cannot run), translate it directly into R (preferred) or Python and say so.
 
 Work in a new directory `<slug>-certification` and produce the whole reproducible bundle, so the
 folder can be re-run from scratch. It must contain ALL of these files:
@@ -17,12 +23,14 @@ folder can be re-run from scratch. It must contain ALL of these files:
 - CITATION.cff (the citation metadata)
 - certificate.json, certificate.md, SIGN-OFF.md, flora-entry.json (the report and sign-off)
 
-Certify that the computation is reproducible and executable. Do NOT rule on whether the
+Report whether the computation is reproducible and executable. Do NOT rule on whether the
 scientific conclusion is correct. Use the FORRT nanopublication chain vocabulary. Report the
 engine, model + provider, rules version, and environment you used.
 
-Follow the ReproCrowd rule pack (https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.0.0.md).
-If that URL is unreachable, treat the artefact list above as the requirement and do not skip
+Follow the ReproCrowd rule pack (https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md)
+and write certificate.json to the schema at
+https://forrtproject.github.io/reprocrowd/schemas/certificate.schema.json.
+If those URLs are unreachable, treat the artefact list above as the requirement and do not skip
 any of the files.
 
 Article link or DOI:

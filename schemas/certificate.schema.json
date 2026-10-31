@@ -5,7 +5,7 @@
   "type": "object",
   "required": ["schema_version", "certification_id", "paper", "procedure", "repro_standard_version", "engine", "model", "date", "environment", "claims", "results", "validation_status", "findings", "ai_generated", "github_url"],
   "properties": {
-    "schema_version": { "type": "string", "const": "1.0" },
+    "schema_version": { "type": "string", "const": "1.1" },
     "certification_id": { "type": "string", "pattern": "^RC-[0-9]{4}-[0-9]{3}$" },
     "repro_standard_version": { "type": "string", "description": "The ReproCrowd / ReproAI standard used, e.g. 'crowd-repro v1.0.0' or the ReproAI rules date '2026.06.27'." },
     "paper": {
@@ -79,15 +79,21 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["claim_id", "quantity", "reported", "recomputed", "status"],
+        "required": ["claim_id", "quantity", "reported", "recomputed", "status", "basis"],
         "properties": {
           "claim_id": { "type": "string" },
           "quantity": { "type": "string" },
           "reported": { "type": [ "number", "string" ] },
           "recomputed": { "type": [ "number", "string" ] },
-          "status": { "type": "string", "enum": ["match", "close", "discrepant", "not_checkable"] },
+          "status": { "type": "string", "enum": ["match", "close", "discrepant", "not_checkable"], "description": "match: equals the printed value at its printed precision. close: differs only through a named minor reporting slip (rounding or truncation, a transposed digit, a typo), or for an unseeded stochastic analysis within simulation variation. discrepant: any larger difference. not_checkable: the shipped code, with only justified fixes or a direct translation, cannot compute it." },
+          "basis": { "type": "string", "enum": ["shipped_code", "justified_fix", "translated", "not_computed"], "description": "How the recomputed value was obtained. shipped_code: the original code, unchanged. justified_fix: the original code with documented changes needed to run it that leave the analysis unchanged (paths, package installs, a deprecated call replaced by an equivalent, execution order). translated: a direct translation of shipped Stata (or other unavailable-language) code into R or Python. not_computed: no value was obtained. Code the agent wrote itself, or a changed specification, sample or data, is not a reproduction: report not_checkable (or discrepant if the shipped code gives a different value) and describe the attempt in note." },
+          "fix": { "type": "string", "description": "Required when basis is justified_fix or translated: exactly what was changed or translated, and why the analysis is unchanged." },
           "note": { "type": "string" }
-        }
+        },
+        "allOf": [
+          { "if": { "properties": { "basis": { "enum": ["justified_fix", "translated"] } }, "required": ["basis"] }, "then": { "required": ["fix"] } },
+          { "if": { "properties": { "basis": { "const": "not_computed" } }, "required": ["basis"] }, "then": { "properties": { "status": { "const": "not_checkable" } } } }
+        ]
       }
     },
     "validation_status": { "type": "string", "enum": ["computationally reproducible", "computational issues", "technical failure", "computation not checked"] },

@@ -5,7 +5,7 @@ reproducibility of a paper in their field find a reprocheck prompt, feed it to t
 already use, and submit a standardized report. The report is reviewed and signed by a human and
 then shared with the field and fed into FLoRA with an AI tag.
 
-A ReproCrowd report **certifies computational reproducibility** - a numerical/computational
+A ReproCrowd report **checks computational reproducibility** - a numerical/computational
 outcome, not a robustness test. It never rules on whether the science is correct.
 
 This repository hosts the public website (GitHub Pages) for ReproCrowd.
@@ -15,7 +15,7 @@ This repository hosts the public website (GitHub Pages) for ReproCrowd.
 - `index.html` - what ReproCrowd is, the prompt, a submission + sign-off flow, and a searchable
   reproductions table linked to the [FLoRA Replication Atlas](https://forrt.org/flora-replication-atlas).
 - `prompt.txt` - the exact certification prompt (the copy button reads this file).
-- `crowd-repro/RULEPACK-v1.0.0.md` - the rule pack, hosted here so the prompt's link resolves.
+- `crowd-repro/RULEPACK-v1.1.0.md` - the current rule pack (v1.0.0 is kept for older reports), hosted here so the prompt's link resolves.
 - `schemas/` - the `certificate.schema.json` and `flora-entry.schema.json` used to validate a bundle.
 - `model-gating/` - Part 2 planning: which models' reproductions enter FLoRA, and the proposed
   30-paper gold benchmark (not part of the website).
@@ -30,7 +30,7 @@ This repository hosts the public website (GitHub Pages) for ReproCrowd.
 - `hex-sticker.png` - the ReproCrowd hex sticker (transparent background, cropped from `logo.png`).
 - `logo.png` - the full source logo.
 
-The prompt carries a version line (`Prompt version: 0.1.0`). Every commit that modifies the prompt
+The prompt carries a version line (`Prompt version: 0.1.2`). Every commit that modifies the prompt
 (`prompt.txt` and the inline copy in `index.html`) bumps the third number (the patch), e.g.
 `0.1.0` → `0.1.1`.
 
