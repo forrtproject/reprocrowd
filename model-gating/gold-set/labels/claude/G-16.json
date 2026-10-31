@@ -1,0 +1,77 @@
+{
+ "gold_id": "G-16",
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "close",
+   "reference_recomputed": "-8.2",
+   "tolerance": "1 dp (pp)",
+   "severity": null,
+   "cause": "0.2 pp shift on rerun; package versions not provided (grf forests, platform/version-dependent)",
+   "evidence": "https://osf.io/download/shk6u/ p.5: 'Replicated result for men: estimate = −8.2 pp, s.e. = 1.7, P < 0.001, 95% CI = [−11.5, −4.9]'; 'The replicated results were overall very closely aligned to the original paper.'",
+   "rationale": "A 0.2 pp shift that the report treats as a minor, reproduced difference; close is the only accepted status.",
+   "reported_check": "confirmed in arXiv v6 preprint (arXiv:2212.13638v6, 15 Sep 2023); published NHB text not accessed but quoted identically by the report",
+   "rationale_blind_original": "Report treats Table 1 as 'Minor differences' and reproduced; shift exceeds printed precision, so a reconciler may prefer discrepant P2."
+  },
+  {
+   "id": "C2",
+   "expected_status": "close",
+   "reference_recomputed": "10.3",
+   "tolerance": "1 dp (pp)",
+   "severity": null,
+   "cause": "0.2 pp shift on rerun; package versions not provided",
+   "evidence": "https://osf.io/download/shk6u/ p.5: 'Replicated result for low digital literacy: estimate = 10.3 pp, s.e. = 1.7, ... 95% CI = [7.0, 13.6]'",
+   "rationale": "Same as C1: a minor difference the report treats as reproduced; close only.",
+   "reported_check": "confirmed in arXiv v6 preprint (arXiv:2212.13638v6, 15 Sep 2023); published NHB text not accessed but quoted identically by the report",
+   "rationale_blind_original": "Same as C1: report calls it a minor difference consistent with platform/version; discrepant P2 is the defensible alternative."
+  },
+  {
+   "id": "C3",
+   "expected_status": "discrepant",
+   "reference_recomputed": "4.9",
+   "tolerance": "1 dp (pp)",
+   "severity": "P2",
+   "cause": "Rerun of restricted targeted policy (grf causal forest) gives a materially smaller estimate; likely grf/platform version dependence, not explained by the report",
+   "evidence": "https://osf.io/download/shk6u/ p.6: 'Table 3: Partial match' ... 'Replicated Facebook tips increase: (estimate = 4.9 pp, s.e. = 2.2, Z = xx, P = 0.027, 95% CI = [0.5, 9.3]'",
+   "rationale": "6.5 vs 4.9 pp is beyond rounding/seed noise and the report labels Table 3 only a partial match; exploratory, non-preregistered analysis so P2.",
+   "reported_check": "confirmed in arXiv v6 preprint (arXiv:2212.13638v6, 15 Sep 2023); published NHB text not accessed but quoted identically by the report",
+   "acceptable_statuses": [
+    "discrepant",
+    "not_checkable"
+   ]
+  },
+  {
+   "id": "C4",
+   "expected_status": "close",
+   "reference_recomputed": "-1.9",
+   "tolerance": "1 dp (pp)",
+   "severity": null,
+   "cause": "0.2 pp shift on rerun",
+   "evidence": "https://osf.io/download/shk6u/ p.6: 'Replicated accuracy nudge vs Facebook tips: (estimate = −1.9 pp, s.e. = 1.2, P = 0.111, 95% CI = [−4.2, 0.4]'",
+   "rationale": "Same 0.2 pp shift as C1/C2 with sign and inference unchanged; close only.",
+   "reported_check": "confirmed in arXiv v6 preprint (arXiv:2212.13638v6, 15 Sep 2023); published NHB text not accessed but quoted identically by the report",
+   "rationale_blind_original": "Same 0.2 pp shift as C1/C2, sign and inference unchanged; Table 3 overall labelled 'Partial match', so discrepant P2 is a reasonable alternative."
+  },
+  {
+   "id": "C5",
+   "expected_status": "close",
+   "reference_recomputed": null,
+   "tolerance": "1 dp (pp)",
+   "severity": null,
+   "cause": "Report gives no replicated accuracy-vs-control estimate",
+   "evidence": "https://osf.io/download/shk6u/ p.6: 'Fig 2 – smaller differences in decimals but largely similar: Minor differences could come from the Monte Carlo modelling, rounding differences or similar'",
+   "rationale": "The report covers Fig. 2 only qualitatively ('smaller differences in decimals'); close is the expected status, with not_checkable accepted because no recomputed scalar is given.",
+   "reported_check": "confirmed in arXiv v6 preprint (arXiv:2212.13638v6, 15 Sep 2023); published NHB text not accessed but quoted identically by the report",
+   "acceptable_statuses": [
+    "close",
+    "not_checkable"
+   ],
+   "rationale_blind_original": "The report quotes reruns only for the two headline treatments in Table 2, not the accuracy-nudge contrast; the Fig 2 comment covers it only qualitatively (close is the alternative)."
+  }
+ ],
+ "label_confidence": "medium",
+ "notes": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "Scope: R Rmd using author-provided contextual_probabilities.RDS (as in claims-file note); replicators edited gsub(xx[1]) -> gsub(xx) for LaTeX table formatting only (display, no numeric effect). I checked the shipped outputs at the pinned commit: tables/table1.tex (gender any-false diff -0.080; digital-literacy 0.101), tables/table2.tex (Accuracy any-false -0.023), tables/table3.tex (FB-tips group diff 0.065; accuracy group -0.021) all match the printed text, so the report's remark 'original numbers for Facebook tips don't match table 3' does not hold for the shipped table; it likely refers to their own rerun. The rerun differences (also fact-check 0.4 vs -0.6, related articles 0.1 vs 0.8, Figure 3 covariate significance flips) were consistent across Windows/Linux/macOS, suggesting grf/package-version dependence (main Rmd sets set.seed(60637) but no package versions are pinned). Paper-level 'computational issues' rests on Table 3 and Figure 3; C1/C2/C4 close-vs-discrepant is the main boundary to reconcile. Report also uses 'reduction ... 4.9%' framing; claim C5 value -2.3 confirmed in preprint abstract."
+}

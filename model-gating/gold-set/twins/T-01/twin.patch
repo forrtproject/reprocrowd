@@ -1,0 +1,11 @@
+--- a/02-scripts/03-meta-analysis.Rmd	
++++ b/02-scripts/03-meta-analysis.Rmd	
+@@ -507,7 +507,7 @@
+   m <- rma(
+     # yi = estimate
+     formula(fm)
+-    , sei = `std.error`
++    , sei = `std.error` * 1.001
+     , ni = n.group
+     , slab = study
+     , data = d

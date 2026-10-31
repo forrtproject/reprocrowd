@@ -1,0 +1,108 @@
+{
+ "gold_id": "G-27",
+ "expected_validation_status": "technical failure",
+ "acceptable_alternatives": [
+  "computational issues"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "not_checkable",
+   "reference_recomputed": "-69.356 3.102 59.054 2.641 -64.699 2.893",
+   "tolerance": "2 dp (t), 2 dp (d)",
+   "severity": "P0",
+   "cause": "Shipped script does not run (file.choose(), outdated SemNetCleaner/SemNeT API, undefined object 'binary'); partboot() bootstrap is unseeded and run on 4 cores, so Table 3 values vary between runs and package versions.",
+   "evidence": "https://osf.io/download/spx8e/ SCORE claims mvwky9/g6zqdl/yox4lo, Table 3 90%: e.g. 'Focal test statistic t = -65.69 ... -69.356'; Discussion: 'given that the code was altered with new versions of some functions this outcome could be counted as a successful reproduction'",
+   "rationale": "The shipped script stops before any output (renamed dependency functions, an undefined object), so the blocker is P0; in addition the bootstrap is unseeded. SCORE's values come from a repaired run and are diagnostics only.",
+   "reported_check": "confirmed in paper (author manuscript, Table 3 90% row)",
+   "rationale_blind_original": "The values come from an unseeded partial-node bootstrap (1,000 iterations, cores=4) run with renamed functions from updated packages, so exact recurrence is not expected. The SCORE analyst coded every cell as 'did not reproduce' by the precise criterion."
+  },
+  {
+   "id": "C2",
+   "expected_status": "not_checkable",
+   "reference_recomputed": "-45.475 2.034 37.862 1.693 -42.81 1.915",
+   "tolerance": "2 dp (t), 2 dp (d)",
+   "severity": "P0",
+   "cause": "Shipped script does not run (file.choose(), outdated SemNetCleaner/SemNeT API, undefined object 'binary'); partboot() bootstrap is unseeded and run on 4 cores, so Table 3 values vary between runs and package versions.",
+   "evidence": "https://osf.io/download/spx8e/ SCORE claims bkpj4j/b31372/2kjpzv, Table 3 80%: e.g. 't = -42.79 ... -45.475'; Discussion: 'given that the code was altered with new versions of some functions this outcome could be counted as a successful reproduction'",
+   "rationale": "The shipped script stops before any output (renamed dependency functions, an undefined object), so the blocker is P0; in addition the bootstrap is unseeded. SCORE's values come from a repaired run and are diagnostics only.",
+   "reported_check": "confirmed in paper (author manuscript, Table 3 80% row)",
+   "rationale_blind_original": "The values come from an unseeded partial-node bootstrap (1,000 iterations, cores=4) run with renamed functions from updated packages, so exact recurrence is not expected. The SCORE analyst coded every cell as 'did not reproduce' by the precise criterion."
+  },
+  {
+   "id": "C3",
+   "expected_status": "not_checkable",
+   "reference_recomputed": "-29.268 1.309 27.995 1.252 -30.359 1.358",
+   "tolerance": "2 dp (t), 2 dp (d)",
+   "severity": "P0",
+   "cause": "Shipped script does not run (file.choose(), outdated SemNetCleaner/SemNeT API, undefined object 'binary'); partboot() bootstrap is unseeded and run on 4 cores, so Table 3 values vary between runs and package versions.",
+   "evidence": "https://osf.io/download/spx8e/ SCORE claims b7lx28/9q35x9/8974q1, Table 3 70%: e.g. 't = 36.38 ... 27.995'; Discussion: 'given that the code was altered with new versions of some functions this outcome could be counted as a successful reproduction'",
+   "rationale": "The shipped script stops before any output (renamed dependency functions, an undefined object), so the blocker is P0; in addition the bootstrap is unseeded. SCORE's values come from a repaired run and are diagnostics only.",
+   "reported_check": "confirmed in paper (author manuscript, Table 3 70% row)",
+   "rationale_blind_original": "The values come from an unseeded partial-node bootstrap (1,000 iterations, cores=4) run with renamed functions from updated packages, so exact recurrence is not expected. The SCORE analyst coded every cell as 'did not reproduce' by the precise criterion."
+  },
+  {
+   "id": "C4",
+   "expected_status": "not_checkable",
+   "reference_recomputed": "-23.439 1.048 23.248 1.04 -26.369 1.179",
+   "tolerance": "2 dp (t), 2 dp (d)",
+   "severity": "P0",
+   "cause": "Shipped script does not run (file.choose(), outdated SemNetCleaner/SemNeT API, undefined object 'binary'); partboot() bootstrap is unseeded and run on 4 cores, so Table 3 values vary between runs and package versions.",
+   "evidence": "https://osf.io/download/spx8e/ SCORE claims gzjkoy/4d9x6l/od1lpq, Table 3 60%: e.g. 't = -20.01 ... -23.439'; Discussion: 'given that the code was altered with new versions of some functions this outcome could be counted as a successful reproduction'",
+   "rationale": "The shipped script stops before any output (renamed dependency functions, an undefined object), so the blocker is P0; in addition the bootstrap is unseeded. SCORE's values come from a repaired run and are diagnostics only.",
+   "reported_check": "confirmed in paper (author manuscript, Table 3 60% row)",
+   "rationale_blind_original": "The values come from an unseeded partial-node bootstrap (1,000 iterations, cores=4) run with renamed functions from updated packages, so exact recurrence is not expected. The SCORE analyst coded every cell as 'did not reproduce' by the precise criterion."
+  },
+  {
+   "id": "C5",
+   "expected_status": "not_checkable",
+   "reference_recomputed": "-16.306 0.729 17.927 0.802 -19.224 0.86",
+   "tolerance": "2 dp (t), 2 dp (d)",
+   "severity": "P0",
+   "cause": "Shipped script does not run (file.choose(), outdated SemNetCleaner/SemNeT API, undefined object 'binary'); partboot() bootstrap is unseeded and run on 4 cores, so Table 3 values vary between runs and package versions.",
+   "evidence": "https://osf.io/download/spx8e/ SCORE claims mlq1kp/5v4j3k/n1j7wn, Table 3 50%: e.g. 't = -12.27 ... -16.306'; Discussion: 'given that the code was altered with new versions of some functions this outcome could be counted as a successful reproduction'",
+   "rationale": "The shipped script stops before any output (renamed dependency functions, an undefined object), so the blocker is P0; in addition the bootstrap is unseeded. SCORE's values come from a repaired run and are diagnostics only.",
+   "reported_check": "confirmed in paper (author manuscript, Table 3 50% row)",
+   "rationale_blind_original": "The values come from an unseeded partial-node bootstrap (1,000 iterations, cores=4) run with renamed functions from updated packages, so exact recurrence is not expected. The SCORE analyst coded every cell as 'did not reproduce' by the precise criterion."
+  },
+  {
+   "id": "C6",
+   "expected_status": "not_checkable",
+   "reference_recomputed": 2.9574,
+   "tolerance": "2 dp",
+   "severity": "P0",
+   "cause": "Cleaning stage replaced by a deposited intermediate (Cleaning File.Rdata) and code modified; recomputed t = 2.957 (d = 0.260) vs printed -3.53 (d = 0.24).",
+   "evidence": "https://osf.io/download/spx8e/ Claim ID r1zw73: 'Focal test statistic t = -3.53 ... 2.9574'; 'Reproduction outcome: Based on these criteria, the claim did not reproduce.' 'Discussion: T-test result has the opposite sign to the original outcome. This could be caused by the changes introduced to the code and using updated versions of the commands.'",
+   "rationale": "Blocked as shipped (P0). The repaired run's t = 2.9574 used a substituted intermediate and altered functions, so it is a non-scoring diagnostic, not evidence of a discrepancy.",
+   "reported_check": "confirmed in paper (author manuscript: 't(514) = -3.53, p = .007, d = .24')",
+   "rationale_blind_original": "The t-test is deterministic, but the shipped script cannot run unchanged and the analyst's input came from a substituted intermediate, so the unchanged-code condition for discrepant is not met. Live alternative: discrepant P2. The printed -3.53 conflicts with the paper's own p = .007 and d = .24, which imply |t| of about 2.7-2.9."
+  },
+  {
+   "id": "C7",
+   "expected_status": "not_checkable",
+   "reference_recomputed": 0.1697285,
+   "tolerance": "2 dp",
+   "severity": "P0",
+   "cause": null,
+   "evidence": "https://osf.io/download/spx8e/ Claim ID d5r3o4: 'Focal coefficient r = 0.17 ... 0.1697285'; 'the claim did reproduce.'",
+   "rationale": "Blocked as shipped (P0). Deterministic statistics on a substituted intermediate input do not establish the original-run value; the repaired 0.1697 is a non-scoring diagnostic.",
+   "reported_check": "confirmed in paper (author manuscript: 'r(514) = .17, p < .001')",
+   "rationale_blind_original": "Recomputed r rounds to the printed .17 (run with the modified script, but the correlation is deterministic)."
+  },
+  {
+   "id": "C8",
+   "expected_status": "not_checkable",
+   "reference_recomputed": 16.908,
+   "tolerance": "2 dp",
+   "severity": "P0",
+   "cause": null,
+   "evidence": "https://osf.io/download/spx8e/ Claim ID v4wj5w: 'Focal test statistic chi-square = 16.91 ... 16.908'; 'the claim did reproduce.'",
+   "rationale": "Blocked as shipped (P0). As C7: the repaired McNemar value 16.908 is a non-scoring diagnostic.",
+   "reported_check": "confirmed in paper (author manuscript: 'chi2 (1) = 16.91, p < .001')",
+   "rationale_blind_original": "Recomputed McNemar chi-square rounds to 16.91 (modified script; deterministic test)."
+  }
+ ],
+ "label_confidence": "medium",
+ "notes": "Technical failure, alternative computational issues. All eight claims are not_checkable P0 because the pipeline stops before any output; SCORE's values come from a repaired run on a substituted intermediate and are non-scoring diagnostics. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "SCORE push-button attempt: 'Completed claim(s): none'. The shipped script (SHA matches the pin) uses interactive file.choose(), calls functions since renamed in SemNetCleaner/SemNeT (partboot, partboot.test), and calls autoDeStr(binary, ...) where the object is 'bin'. The analyst skipped the first 30 lines, loaded Cleaning File.Rdata, renamed functions and copied old helpers from GitHub. No set.seed anywhere, and partboot uses cores=4. The analyst also notes 'even with setting a seed the outcome can be different each time'. Some Table 3 cells fall outside SCORE's approximate band despite the analyst's boilerplate line (CC 70%: 27.995 vs 36.38; ASPL 50%: -16.306 vs -12.27; ASPL 60%: -23.439 vs -20.01; CC 50%: 17.927 vs 21.71). The likely causes are package versions and the unseeded bootstrap. C6 is the main judgement call (see rationale). The claim list has no problems, and its reported values match the manuscript."
+}

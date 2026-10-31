@@ -1,0 +1,77 @@
+{
+ "gold_id": "G-07",
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "discrepant",
+   "reference_recomputed": 1.14,
+   "tolerance": "2 dp as printed",
+   "severity": "P2",
+   "cause": "typo in printed SD: paper prints 0.14, shipped script outputs 1.14",
+   "evidence": "https://osf.io/download/k6xce/ Section 2: 'in Experiment 2a, the standard deviation for the number of trips in the long-delay condition is reported as SD = 0.14 in the paper, whereas the analytical script outputs SD = 1.14.'",
+   "rationale": "The printed SD (0.14) differs from the unchanged code's 1.14; under R2 a wrong descriptive number is P2.",
+   "reported_check": "confirmed in paper (PMC11969038 full text, Results 'Comparison between conditions'): 'long delay: M = 3.32 times, SD = 0.14'",
+   "rationale_blind_original": "The printed number itself is wrong relative to the unchanged code's output; it is a descriptive SD with no effect on the inferential tests, hence low severity."
+  },
+  {
+   "id": "C2",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "2 dp as printed",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/k6xce/ Section 2: 'All reported effects in the paper correspond to those produced by the analytical code'",
+   "rationale": "Report states all reported effects recur; no per-value recomputed number given.",
+   "reported_check": "confirmed in paper (PMC11969038 full text, Results 'Comparison between conditions'): 'χ2 = 5.95, p = .015'"
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "2 dp as printed",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/k6xce/ Section 2: 'All reported effects in the paper correspond to those produced by the analytical code'",
+   "rationale": "Report states all reported effects recur; no per-value number given.",
+   "reported_check": "confirmed in paper (PMC11969038 full text, Results 'Comparison between conditions'): 'χ2 = 10.81, p = .001'"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "2 dp as printed",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/k6xce/ Section 2: 'All reported effects in the paper correspond to those produced by the analytical code'",
+   "rationale": "Report states all reported effects recur; no per-value number given.",
+   "reported_check": "confirmed in paper (PMC11969038 full text, Results 'Comparison between conditions'): 'Experiment 2a, χ2 = 79.62, p < .001'"
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "2 dp as printed",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/k6xce/ Section 2: 'All reported effects in the paper correspond to those produced by the analytical code'",
+   "rationale": "Report states all reported effects recur; no per-value number given.",
+   "reported_check": "confirmed in paper (PMC11969038 full text, Results 'Comparison between conditions'): 'Experiment 2b, χ2 = 37.54, p < .001'"
+  },
+  {
+   "id": "C6",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "2 dp as printed",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/k6xce/ Section 2: 'All reported effects in the paper correspond to those produced by the analytical code'",
+   "rationale": "Report states all reported effects recur; no per-value number given.",
+   "reported_check": "confirmed in paper (PMC11969038 full text): 'significant effect on streak correct (Experiment 2a, χ2 = 65.97, p < .001'"
+  }
+ ],
+ "label_confidence": "medium",
+ "notes": "C1 is P2 under R2 (a wrong descriptive SD, 0.14 vs 1.14). No paper alternative under R7: a confirmed wrong printed number rules out 'computationally reproducible'. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "C1 is exactly the typo'd value the report flags (paper SD = 0.14, script SD = 1.14), so the claim list deliberately includes the one non-recurring output. By the letter of the rules (printed number wrong, unchanged code gives a different value) C1 is discrepant and the paper is 'computational issues'; the report's own verdict is 'we successfully reached computational reproducibility from raw data', hence 'computationally reproducible' as an acceptable alternative. Severity: P3 chosen because it is a typo in a descriptive SD with no effect on tests; P2 (wrong secondary descriptive statistic) is also defensible. Report gives no recomputed numbers for C2-C6; label rests on its blanket statement. Report notes 'Trial' coded as integer only in unreported models (not relevant). Robustness section ignored."
+}

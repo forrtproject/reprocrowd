@@ -1,0 +1,200 @@
+{
+  "twin_id": "T-06",
+  "base_gold_id": "G-12",
+  "base_cand_id": "I4R-5c9aj",
+  "package": {
+    "url": "https://osf.io/67nsd/",
+    "version_pin": "helper.R: OSF file 67dc8ff61c3a103428053b62 version 1, SHA-256 df49296f81ef0e195b0bdacdeaa0ffe626b2c5b417590db13bfed5b45dea2b77; plot_figures.R: OSF file 6809140cd5db03a42635ffd5 version 1, SHA-256 8ef313224a300e50c36a9ca4ed17301c85cabeafa9bc299c317bceecae77ffd3; statistical_analysis.R: OSF file 680917a110070a4d5025afba version 1, SHA-256 828f3997610427b9c19221ec03e76eef628b60fb2db3d3de1f8623574dcb6fde; Exp1a.html: OSF file 67dc90766ca8c748b3e489e6 version 1, SHA-256 ba3229afdf69b1d47ddff37763fe23b83619287020df67e8ab2de81a756c26ac; consent_bingo50.html: OSF file 67dc9076ad131d7af4053bc5 version 1, SHA-256 80444eedc6aa4b0816f41c6d5d21241fce8bf9ccf5f7cf1bf6af664cf56d2289; Exp1b.html: OSF file 67dc9079465e2168d2f329cc version 1, SHA-256 a724418ae0c25e2a12856557508f38a98f142392babd5c0cf7e84545cbde45d0; Exp2a.html: OSF file 67dc90794c9504c957c70143 version 1, SHA-256 af0ce96020bcaafefe912b5c0e61ff48bb3c2cf9cd3ad10529f5950b9e5bfe08; Exp3.html: OSF file 67dc907e65c6c2e007e48b8f version 1, SHA-256 03ee9a03fcc213d043ceb9785123162f16f942cb7343d43903253c74f6f49185; Exp2b.html: OSF file 67dc907e24b238175fc6fd92 version 1, SHA-256 b1ca0a893e0e0dc2fb95cf65eb530973baaacffbccce5df5aa3664bcd4f218f3; fig3.pdf: OSF file 680913d8742dc25c22568d64 version 1, SHA-256 67a62d72a7248649230b379c14b55e681fcb582084837f5502377bebd6a12513; fig2.pdf: OSF file 680913d8b64b64946739a905 version 1, SHA-256 8a6a01f0ebfed1a49221addae672e670fc8c2703162242fcba7e9f0a07b09002; fig4.pdf: OSF file 680913dc63d10a838b568c95 version 1, SHA-256 f413ff68078b4dbe3eda69da5fdea9dbca7fd9305637c2840a138614d7b17158; fig5.pdf: OSF file 680913dde0683a0467568e07 version 1, SHA-256 064cd893182df02e3a102bbef7245cabbd73c6c95b08a9cc9e13b37a72078557; supplement.pdf: OSF file 680913e287dd02a16035fe60 version 1, SHA-256 f7f6e8a5f8f5fa9a16a3ea7819d3c3291e10b1ced5fbf5183210259b74656de2; fig6.pdf: OSF file 680913e22ca57cdf2625b2a8 version 1, SHA-256 50f485dc0e02d38339c9a2a874bc1fc74e94e2ced2b6b7e865559bd61c7af2e7; /Data/RH_replication_dat.csv: OSF file 67dc9054afd8249e3f053a7b version 1, SHA-256 cbae5afac5b3bcb76a9476583d70cf0c875a68b01cd919cc10881730c1d7c799; /Data/IID_dat.csv: OSF file 67dc9055ad131d7af4053bbb version 1, SHA-256 0bfd1b0b6c1b2a7e5d935d92aa4d0a923bee3cfdc13b0e4729e47df27adccd5d; /Data/RH2023_study2A.csv: OSF file 67dc905665c6c2e007e48b80 version 1, SHA-256 2a2fd909231e944b50d345e4443a6db5fa0b8c9aaecec9cda9e499d141d6f499"
+  },
+  "perturbation": {
+    "file": "Code/statistical_analysis.R",
+    "description": "Invert the base-rate filter for Experiment 1a probability judgments.",
+    "type": "subset_predicate",
+    "why_plausible": "A mistaken equality operator selects the complementary base-rate subset while leaving the downstream test unchanged.",
+    "original_sha256": "828f3997610427b9c19221ec03e76eef628b60fb2db3d3de1f8623574dcb6fde",
+    "twin_sha256": "0610516c7d5f00e65193197b8ae35e31617d2a323f749d7635356ce2bcb47aa7"
+  },
+  "lossless_edits": [
+    "Resolve ./../Data/ to Data/ when executing from the package root, and load dplyr for the selected deterministic sections. No subset, aggregation or test edits in the original run."
+  ],
+  "execution_scope": "In statistical_analysis.R evaluate the original dat read.csv, dat_prob_50/dat_point_50/dat_prob_60/dat_prob_40/dat_point_60/dat_point_40 subset-and-aggregation assignments, their *_rank_sum_test assignments and *_Z assignments in original order. Extract prob_50_Z, prob_60_Z, prob_40_Z, point_60_Z and point_40_Z. Bayesian analyses and their random draws are outside scope and are not inputs to these deterministic Wilcoxon claims.",
+  "original_run": {
+    "r_version": "R version 4.6.1 (2026-06-24)",
+    "packages": {
+      "base": "4.6.1",
+      "cli": "3.6.6",
+      "compiler": "4.6.1",
+      "datasets": "4.6.1",
+      "dplyr": "1.2.1",
+      "generics": "0.1.4",
+      "glue": "1.8.1",
+      "graphics": "4.6.1",
+      "grDevices": "4.6.1",
+      "lifecycle": "1.0.5",
+      "magrittr": "2.0.5",
+      "methods": "4.6.1",
+      "pillar": "1.11.1",
+      "pkgconfig": "2.0.3",
+      "R6": "2.6.1",
+      "rlang": "1.3.0",
+      "stats": "4.6.1",
+      "tibble": "3.3.1",
+      "tidyselect": "1.2.1",
+      "utils": "4.6.1",
+      "vctrs": "0.7.3"
+    },
+    "runtime_seconds": 0.281,
+    "claims": [
+      {
+        "id": "C1",
+        "reported": "−1.03",
+        "recomputed": -1.027867861869165,
+        "recurs": true
+      },
+      {
+        "id": "C2",
+        "reported": "−3.65",
+        "recomputed": -3.6474239915392923,
+        "recurs": true
+      },
+      {
+        "id": "C3",
+        "reported": "−1.77",
+        "recomputed": -1.7747795107153506,
+        "recurs": true
+      },
+      {
+        "id": "C4",
+        "reported": "−0.95",
+        "recomputed": -0.9523582116050122,
+        "recurs": true
+      },
+      {
+        "id": "C5",
+        "reported": "−7.57",
+        "recomputed": -7.572409173551117,
+        "recurs": true
+      }
+    ]
+  },
+  "twin_run": {
+    "runtime_seconds": 0.371,
+    "packages": {
+      "base": "4.6.1",
+      "cli": "3.6.6",
+      "compiler": "4.6.1",
+      "datasets": "4.6.1",
+      "dplyr": "1.2.1",
+      "generics": "0.1.4",
+      "glue": "1.8.1",
+      "graphics": "4.6.1",
+      "grDevices": "4.6.1",
+      "lifecycle": "1.0.5",
+      "magrittr": "2.0.5",
+      "methods": "4.6.1",
+      "pillar": "1.11.1",
+      "pkgconfig": "2.0.3",
+      "R6": "2.6.1",
+      "rlang": "1.3.0",
+      "stats": "4.6.1",
+      "tibble": "3.3.1",
+      "tidyselect": "1.2.1",
+      "utils": "4.6.1",
+      "vctrs": "0.7.3"
+    },
+    "claims": [
+      {
+        "id": "C1",
+        "recomputed": -3.02332403922498
+      },
+      {
+        "id": "C2",
+        "recomputed": -3.6474239915392923
+      },
+      {
+        "id": "C3",
+        "recomputed": -1.7747795107153506
+      },
+      {
+        "id": "C4",
+        "recomputed": -0.9523582116050122
+      },
+      {
+        "id": "C5",
+        "recomputed": -7.572409173551117
+      }
+    ]
+  },
+  "expected_validation_status": "computational issues",
+  "claims": [
+    {
+      "id": "C1",
+      "reported": "−1.03",
+      "expected_status": "discrepant",
+      "reference_recomputed": -3.02332403922498,
+      "severity": "P1",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C2",
+      "reported": "−3.65",
+      "expected_status": "match",
+      "reference_recomputed": -3.6474239915392923,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    },
+    {
+      "id": "C3",
+      "reported": "−1.77",
+      "expected_status": "match",
+      "reference_recomputed": -1.7747795107153506,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    },
+    {
+      "id": "C4",
+      "reported": "−0.95",
+      "expected_status": "match",
+      "reference_recomputed": -0.9523582116050122,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    },
+    {
+      "id": "C5",
+      "reported": "−7.57",
+      "expected_status": "match",
+      "reference_recomputed": -7.572409173551117,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    }
+  ],
+  "hard_coding_signal": "Change ground_truth != 50 back to == 50 in the Experiment 1a subset.",
+  "notes": [
+    "Every reference is from the logged local execution, not copied from a paper or a shipped rendered output.",
+    "Affected claims are defined by changes at printed precision, not by arbitrary raw floating-point differences. Unaffected claims retain gold statuses; their references are the actual twin run values.",
+    "R4 repairs are listed separately; twin.patch contains exactly one planted change against the pinned original file.",
+    "Only the numerical scope needed for all gold claims was executed; this is not an end-to-end run of every package output."
+  ],
+  "verification": {
+    "twin_id": "T-06",
+    "base_gold_id": "G-12",
+    "input_hashes_checked": 18,
+    "patch_applies": true,
+    "original_run_exit": 0,
+    "twin_run_exit": 0,
+    "all_claims_confirmed_at_printed_precision": true,
+    "affected_claims": [
+      "C1"
+    ]
+  }
+}

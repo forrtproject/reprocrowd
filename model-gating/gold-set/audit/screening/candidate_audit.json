@@ -1,0 +1,1553 @@
+{
+  "I4R-s4et7": {
+    "textpath": "/tmp/scratch_gold/sol/osf/s4et7/6a206d14d9ede4ab4cdb0d65.pdf.txt",
+    "report_sha256": "886c3eee52bc641c5d80938dd84cd8d5fe7a43e6f19aed7468ee62d697d656bc",
+    "inventory_nfiles": 6,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-96nec": {
+    "textpath": "/tmp/scratch_gold/sol/osf/96nec/6a835b8a945d20f460edd94a.pdf.txt",
+    "report_sha256": "fb7cc51e3555ba3ab2e4ca5e14b521ef9eea1d2d56a1b2171fe1a0971c079469",
+    "inventory_nfiles": 87,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-bz8pf": {
+    "textpath": "/tmp/scratch_gold/sol/osf/bz8pf/6a8dab91bef1626ff08e0770.pdf.txt",
+    "report_sha256": "f47e0451437109e1dce09b84d8b168b9208d39518342d0220cdc0c30bdd16ebb",
+    "inventory_nfiles": 36,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "Life_expectancy_by_state_2019-2021.xlsx",
+        "bytes": 11059,
+        "url": "https://osf.io/download/jkh3e/",
+        "sha256": "fae1bd07ace2bcbe2adb7d99af5800a0624cc17a974d0f7821bb645ed4409103"
+      },
+      {
+        "filename": "CIP - Competitive Industrial Performance Index.zip",
+        "bytes": 2531454,
+        "url": "https://osf.io/download/x8ajt/",
+        "sha256": "b470e614992fcd7f2a74f6c08d1760c56f0f1ac9f8a4151ef4ba90f35fbab44c",
+        "zip_uncompressed_bytes": 3569940,
+        "zip_files": [
+          "cip2022_download.csv",
+          "cip2022_download.xlsx"
+        ]
+      },
+      {
+        "filename": "F00012155-EVS_WVS_Joint_rData_v3_0.zip",
+        "bytes": 11755078,
+        "url": "https://osf.io/download/gsu4w/",
+        "sha256": "4313fe0af648b784fc8ad3f30ac055d2d847ffefb5da11f9cd6c2396a83b4ca2",
+        "zip_uncompressed_bytes": 108265703,
+        "zip_files": [
+          "EVS_WVS_Joint_rData_v3_0.rdata"
+        ]
+      }
+    ]
+  },
+  "I4R-4a2ne": {
+    "textpath": "/tmp/scratch_gold/sol/osf/4a2ne/6a847474b0297f50edeffe4d.pdf.txt",
+    "report_sha256": "d5208ce3a284907a17879cfc1663673c9e006ecccd2f08f4d437f8c019fe0100",
+    "inventory_nfiles": 65,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-us2g4": {
+    "textpath": "/tmp/scratch_gold/sol/osf/us2g4/6a8332b520a9e1847bd41ec8.pdf.txt",
+    "report_sha256": "1ea159f550ef6f55c229fd4339ff843010627671468034b5fdb6079181826431",
+    "inventory_nfiles": 40,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-hxadk": {
+    "textpath": "/tmp/scratch_gold/sol/osf/hxadk/6a981b1deec8b3592b8fca8c.pdf.txt",
+    "report_sha256": "d196e123b0e03ad346f1e7d15fa75c4985e3b410c01f6fdc0acfde066f142f49",
+    "inventory_nfiles": 6,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-rn8t7": {
+    "textpath": "/tmp/scratch_gold/sol/osf/rn8t7/6a21705d547dc1339f99cd40.pdf.txt",
+    "report_sha256": "9e6e637c5d11ee62791b6ec06d16fe791ebdc257e2b134a0660584763b441eea",
+    "inventory_nfiles": 0,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-mgy45": {
+    "textpath": "/tmp/scratch_gold/sol/osf/mgy45/6a8460c9d7263b6355bb647a.pdf.txt",
+    "report_sha256": "ff4f491f5deb2a07279d89a5d562525df9c429208207c9e851164af773f556fb",
+    "inventory_nfiles": 6,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-j65xf": {
+    "textpath": "/tmp/scratch_gold/sol/osf/j65xf/6a22c9a69f8f1fac35479f82.pdf.txt",
+    "report_sha256": "734eaeac7c51890efc7f230511330221925b4a75be266aed3f1cbbbeaa3d3fbb",
+    "inventory_nfiles": 14,
+    "inventory_errors": [
+      "HTTP Error 404: Not Found"
+    ],
+    "sample_checks": [
+      {
+        "filename": "bisexualitySensitivityAnalysisScript.R",
+        "bytes": 17293,
+        "url": "https://osf.io/download/xrsau/",
+        "sha256": "3524cb5dac362e2bad0e3652a59fce11afec838b5f6224c06783b69af2278d2a"
+      },
+      {
+        "filename": "BisexualityPooledData20241008 101955.csv",
+        "bytes": 215159,
+        "url": "https://osf.io/download/xvz97/",
+        "sha256": "ced88a453882f19a73cde297cc2acd949670a853f11871b320f485a6d007516d"
+      }
+    ]
+  },
+  "I4R-w8gd7": {
+    "textpath": "/tmp/scratch_gold/sol/osf/w8gd7/6a2062ac1462785eda43f185.pdf.txt",
+    "report_sha256": "dc1db88a487f4403d97a38e6cb9bd686eba8642239cee501121d32cd251c612e",
+    "inventory_nfiles": 27,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-gjm3c": {
+    "textpath": "/tmp/scratch_gold/sol/osf/gjm3c/6a981d84aa3574ef882a9c70.pdf.txt",
+    "report_sha256": "f64e35c50cad5eb5b9dfb0ec6a9fde2b70e1f26e5b4244820920446d0c5547c4",
+    "inventory_nfiles": 5,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "analyze.R",
+        "bytes": 29715,
+        "url": "https://osf.io/download/sx3jy/",
+        "sha256": "e4a4de86658da48b54b9f9d4de3d2b4dd1a305d6b9da0c2801f17acfb1ef3147"
+      },
+      {
+        "filename": "pic_frag_completion_both_exp.csv",
+        "bytes": 433837,
+        "url": "https://osf.io/download/gsx3j/",
+        "sha256": "70c165afba1d3916749e6dc5b1edbc2fc3d555ba39074234cc27d1ce8e86d694",
+        "retried_after_transient_error": "HTTP Error 403: Forbidden"
+      }
+    ]
+  },
+  "I4R-k6ntc": {
+    "textpath": "/tmp/scratch_gold/sol/osf/k6ntc/69a843ea8c37eef0da79790e.pdf.txt",
+    "report_sha256": "0f69a9a1194031ea828d2bfcc8f5e9df3b68795fdade36a038bbb4b7097a222c",
+    "inventory_nfiles": 0,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-qe3fx": {
+    "textpath": "/tmp/scratch_gold/sol/osf/qe3fx/6a8356c75ca906a1cebb686b.pdf.txt",
+    "report_sha256": "f6225f70bc79af15c8645770381d26fde3b7a8d7032c088cc9b5d2f264bded70",
+    "inventory_nfiles": 0,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-pzhgw": {
+    "textpath": "/tmp/scratch_gold/sol/osf/pzhgw/6a8361300f861fee9bd42150.pdf.txt",
+    "report_sha256": "0b5ffb872cfc5e316a40ca9f5cd7c1cee3f0f2be39cc1d1678197d3b6531bd98",
+    "inventory_nfiles": 9,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-ejsb9": {
+    "textpath": "/tmp/scratch_gold/sol/osf/ejsb9/6a216b185fb623fb1a414f14.pdf.txt",
+    "report_sha256": "28e0fcbf4bc0b0f54be0c8e463bcfcea6d24fab8630a36fe688eac9b8e4fe3f0",
+    "inventory_nfiles": 0,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-grvnq": {
+    "textpath": "/tmp/scratch_gold/sol/osf/grvnq/6a280f744b7f57c10897fa64.pdf.txt",
+    "report_sha256": "206b41b829613cd66e9937db831f0c31dcb7b78bb6d3b1a6b58707c2952384de",
+    "inventory_nfiles": 5,
+    "inventory_errors": [
+      "HTTP Error 404: Not Found"
+    ],
+    "sample_checks": []
+  },
+  "I4R-9yve3": {
+    "textpath": "/tmp/scratch_gold/sol/osf/9yve3/6a295555d612920b54878625.pdf.txt",
+    "report_sha256": "910931035b418797d17d04c99cdf99330b2c926843bc44a8bb8c2b67e10650f1",
+    "inventory_nfiles": 2,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-ts2mp": {
+    "textpath": "/tmp/scratch_gold/sol/osf/ts2mp/6a22cd9b13fc6b17998f9781.pdf.txt",
+    "report_sha256": "4e4d5102908e0189b98c6035f6b7c70e716a9af7efbcd4a88d3595004e74b3d8",
+    "inventory_nfiles": 89,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-mhrf7": {
+    "textpath": "/tmp/scratch_gold/sol/osf/mhrf7/6a28122382723c7e6dcdd349.pdf.txt",
+    "report_sha256": "482a2d722defa3996c2b2af453f5b09bbe729ea51b950d8f8066376000d5baa6",
+    "inventory_nfiles": 697,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-6smqd": {
+    "textpath": "/tmp/scratch_gold/sol/osf/6smqd/6a280deeb83f6ddbd46d8307.pdf.txt",
+    "report_sha256": "a4dd746e1d06fdec324cdcf1032189cf7e79f8d59135deaf42e597168cf57eb0",
+    "inventory_nfiles": 0,
+    "inventory_errors": [
+      "HTTP Error 404: Not Found https://api.osf.io/v2/nodes/x2gaz/files/osfstorage/?page[size]=100",
+      "HTTP Error 404: Not Found",
+      "HTTP Error 404: Not Found"
+    ],
+    "sample_checks": []
+  },
+  "I4R-rcngs": {
+    "textpath": "/tmp/scratch_gold/sol/osf/rcngs/6a22cff0d872e4736e878db4.pdf.txt",
+    "report_sha256": "237f64c94e1c0f8815fdf1a9307f2eed21c4fc7634836706a14bd1bef4b354f4",
+    "inventory_nfiles": 16,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-u2rx8": {
+    "textpath": "/tmp/scratch_gold/sol/osf/u2rx8/6a981e679137634b898fca51.pdf.txt",
+    "report_sha256": "feb404eb4482e6fecb13e0c425b5523980a30c65d0433e53cc4ea7ecae4eae51",
+    "inventory_nfiles": 0,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-9jzvk": {
+    "textpath": "/tmp/scratch_gold/sol/osf/9jzvk/68c41e272a70dfd23d5604a5.pdf.txt",
+    "report_sha256": "a758a418ae16397861c3d1238cc2d498bbeb0f50e3389ad4f696c6c7770e69d8",
+    "inventory_nfiles": 17,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-hbpcs": {
+    "textpath": "/tmp/scratch_gold/sol/osf/hbpcs/698ce5ba6ce767bb4ac72a82.pdf.txt",
+    "report_sha256": "817ebcd6c20befb43f2b9b2e45eef61f567e378492c622f754d8f86a9b253c5f",
+    "inventory_nfiles": 4,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-7cd2s": {
+    "textpath": "/tmp/scratch_gold/sol/osf/7cd2s/6a216eefee84266e775b8113.pdf.txt",
+    "report_sha256": "36bd846a7127fde524d9b8cf8aebab5a51e7ce9fb15e4990b4d3cd8a724099b9",
+    "inventory_nfiles": 18,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "E1_analysis.R",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "filename": "e2_data.csv",
+        "bytes": 425584,
+        "url": "https://osf.io/download/hfnqz/",
+        "sha256": "81dc9769badd516188c0f52e6ac655387ef704dc0088f4ba31139e5ff3f763ed"
+      }
+    ]
+  },
+  "I4R-8czs5": {
+    "textpath": "/tmp/scratch_gold/sol/osf/8czs5/6a20616134f2a044f3db115d.pdf.txt",
+    "report_sha256": "e12112028a3fe7b247ad3a74ccb5613031362ca0e05f57246d65abc3f6774976",
+    "inventory_nfiles": 74,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-rkdqv": {
+    "textpath": "/tmp/scratch_gold/sol/osf/rkdqv/6a835dc213377a9144bb66fe.pdf.txt",
+    "report_sha256": "d44fda2f459434d033a178b3cd69667080a00b9de7e9e1f2720fe79d4dc9d234",
+    "inventory_nfiles": 44,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "disagreement_exp2_code.Rmd",
+        "bytes": 32908,
+        "url": "https://osf.io/download/9t5pg/",
+        "sha256": "0759046242d7edc51fd5d8db9434b02e7f4b9a4a1f302d0d368da320d4905c47",
+        "retried_after_transient_error": "The read operation timed out"
+      },
+      {
+        "filename": "disagreement_exp2_raw_data.csv",
+        "bytes": 119080,
+        "url": "https://osf.io/download/awvyj/",
+        "sha256": "54160a3069a2453b18d7e511b7badacfbe76390bfca71abb2a6454255a9c5560"
+      }
+    ]
+  },
+  "I4R-xqnhw": {
+    "textpath": "/tmp/scratch_gold/sol/osf/xqnhw/6a564826a754311bf75b92b1.pdf.txt",
+    "report_sha256": "392d96bee64ab701718f81aaf0003d2543000c17cb28e5d226b19cb223d522fd",
+    "inventory_nfiles": 5,
+    "inventory_errors": [
+      "HTTP Error 404: Not Found"
+    ],
+    "sample_checks": []
+  },
+  "I4R-g82fy": {
+    "textpath": "/tmp/scratch_gold/sol/osf/g82fy/6a847edce884632335bb6487.pdf.txt",
+    "report_sha256": "95739b7f26df8d46dbefed5d438e30960fd9a083f63931e3cdb6fae1321c2658",
+    "inventory_nfiles": 21,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-5c9aj": {
+    "textpath": "/tmp/scratch_gold/sol/osf/5c9aj/6a28147abb1cb321d56d8201.pdf.txt",
+    "report_sha256": "db7f9f0ecec25c34788fc515474a3fe5ac30c7a06b99a29d74f3f4e1ac1c2673",
+    "inventory_nfiles": 22,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "helper.R",
+        "bytes": 11171,
+        "url": "https://osf.io/download/vqt4u/",
+        "sha256": "df49296f81ef0e195b0bdacdeaa0ffe626b2c5b417590db13bfed5b45dea2b77",
+        "retried_after_transient_error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "filename": "RH_replication_dat.csv",
+        "bytes": 147903,
+        "url": "https://osf.io/download/2n9bc/",
+        "sha256": "cbae5afac5b3bcb76a9476583d70cf0c875a68b01cd919cc10881730c1d7c799"
+      }
+    ]
+  },
+  "I4R-wg2sv": {
+    "textpath": "/tmp/scratch_gold/sol/osf/wg2sv/6a2067bc53e5246172441968.pdf.txt",
+    "report_sha256": "d4235f3ae623f9a9d00b842ce3a84b4cd2a15550ea07a9ba8ec838527c70d90c",
+    "inventory_nfiles": 84,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "E1_CleanResults.Rmd",
+        "bytes": 5195,
+        "url": "https://osf.io/download/4s3pq/",
+        "sha256": "975ccfd8104dff018f57a505a6fc8a6b0a2bf65fc5409c915209799dd77da48b"
+      },
+      {
+        "filename": "E1_Data.csv",
+        "bytes": 50894,
+        "url": "https://osf.io/download/h8apv/",
+        "sha256": "a83a2157ae5eb03645fbfdbe5f631b62c36d63989d4ee23fa9a1f1d9eef50dee"
+      }
+    ]
+  },
+  "I4R-fpaxs": {
+    "textpath": "/tmp/scratch_gold/sol/osf/fpaxs/6a985481a1d020921e2a9dc8.pdf.txt",
+    "report_sha256": "4090583225a8564801832b350f610256dea1de1f9550792c0cd1dace7dea4b5d",
+    "inventory_nfiles": 69,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "cashout-prob-analyses.R",
+        "bytes": 54967,
+        "url": "https://osf.io/download/e38wp/",
+        "sha256": "72d3c824f82c9cfe5eed7e78242ce46a2013301e10169ea7f291ed8c778abedb"
+      },
+      {
+        "filename": "behav_data.csv",
+        "bytes": 562805,
+        "url": "https://osf.io/download/qwnbg/",
+        "sha256": "652bca559aa7574c106676f58643404d27aa36d19400e8a42a11f468b883702d"
+      }
+    ]
+  },
+  "I4R-xg3h9": {
+    "textpath": "/tmp/scratch_gold/sol/osf/xg3h9/6a2810aecf43cea14b97fb20.pdf.txt",
+    "report_sha256": "f6a429b9bdcacc3036eedc24cee7d7b1768eb83f54cbe53685ea369e997d4f64",
+    "inventory_nfiles": 26,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "04. Experiment 4.Rmd",
+        "bytes": 9886,
+        "url": "https://osf.io/download/4wqzj/",
+        "sha256": "1b81cce9a43a73b29b1cea48a7ef3a2198328c096ba05ac1798cdc520953aac6"
+      },
+      {
+        "filename": "Exp2.csv",
+        "bytes": 413619,
+        "url": "https://osf.io/download/86sgb/",
+        "sha256": "0265d831b34820ccdcce85468024c66575d424d22be59e712fd7831d826bbdd8"
+      }
+    ]
+  },
+  "I4R-jybu2": {
+    "textpath": "/tmp/scratch_gold/sol/osf/jybu2/6a20699d8a10ce5c0712f8f4.pdf.txt",
+    "report_sha256": "8335bed111e1d46edd0d6c42971a052c6e2158cf2b85cbf2e59b94d21f60fb4d",
+    "inventory_nfiles": 0,
+    "inventory_errors": [
+      "HTTP Error 404: Not Found",
+      "HTTP Error 404: Not Found"
+    ],
+    "sample_checks": []
+  },
+  "I4R-9c8p6": {
+    "textpath": "/tmp/scratch_gold/sol/osf/9c8p6/6a3545a28ccc642dde1cd363.pdf.txt",
+    "report_sha256": "c1f5642c9b7c9b48a04cd426a56807d3ce204f1f55c60c235391ed77d807d3c0",
+    "inventory_nfiles": 14,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-d5y3e": {
+    "textpath": "/tmp/scratch_gold/sol/osf/d5y3e/6a847e51926c4b2051edd88d.pdf.txt",
+    "report_sha256": "eb47973e10a0742c82f468ab926828623cd279da4b9766c35570fb133c6cbd66",
+    "inventory_nfiles": 22,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-529en": {
+    "textpath": "/tmp/scratch_gold/sol/osf/529en/6a2064f7e41c670dd0db2649.pdf.txt",
+    "report_sha256": "b16dc7eb135d7d3c3f44075708348109c8cfa655aa47ab9a41849409456c1b74",
+    "inventory_nfiles": 128,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "Main Text Study 1 End Survey EFA Code.R",
+        "bytes": 2668,
+        "url": "https://osf.io/download/j974x/",
+        "sha256": "1c02248afd48ab15d5c59c870ed61085562ccaa0235063c9c0ec744e7b48791a"
+      },
+      {
+        "filename": "Individual Cors Between Models.csv",
+        "bytes": 8778,
+        "url": "https://osf.io/download/pqbhn/",
+        "sha256": "2f24cef09179024bae82a554e8c19d6be5314f2dcf705266c8ac933eaf522c08"
+      }
+    ]
+  },
+  "I4R-qt7kr": {
+    "textpath": "/tmp/scratch_gold/sol/osf/qt7kr/6a206709d6ed59a380bf3f2b.pdf.txt",
+    "report_sha256": "eab71bd0479aa9dc5a48086e6595d20c32d6aa34a75af7c22abd673ca2347ab6",
+    "inventory_nfiles": 7,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-vjka5": {
+    "textpath": "/tmp/scratch_gold/sol/osf/vjka5/6a8359c1e7fdcb65a0edd9d4.pdf.txt",
+    "report_sha256": "74d2621942aeee641e1e880a840bf4f8c3faba54c12ed05a11852324f3b42a2e",
+    "inventory_nfiles": 11,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-t68dc": {
+    "textpath": "/tmp/scratch_gold/sol/osf/t68dc/6a2171894b14de0e8d99cded.pdf.txt",
+    "report_sha256": "40c93842a2cb69e07faf63fdfaf30f0490cae7375f238c1998d0be9d24b3a298",
+    "inventory_nfiles": 24,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "BOTH_Analyses.R",
+        "bytes": 50556,
+        "url": "https://osf.io/download/vcd7h/",
+        "sha256": "61ae079aa1e1b667f560749a307287955beeed841bbfe3896573936b0ff3d671"
+      },
+      {
+        "filename": "BOTH_CleanData.csv",
+        "bytes": 585553,
+        "url": "https://osf.io/download/qkzcn/",
+        "sha256": "e76c0ca6152f16ea5aadf63ed38a39a115c23ae90bb3bf53d67fee8b2be94c2b"
+      }
+    ]
+  },
+  "I4R-8tzx5": {
+    "textpath": "/tmp/scratch_gold/sol/osf/8tzx5/6a847d56b9fa2d76bdcd3a74.pdf.txt",
+    "report_sha256": "c4ea13c76be109e4582bcfd2a206188c3cb7805148546de4652fc8e5a68ff089",
+    "inventory_nfiles": 289,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-gh7cv": {
+    "textpath": "/tmp/scratch_gold/sol/osf/gh7cv/6a280c679445aed5f497fb62.pdf.txt",
+    "report_sha256": "7fa3b46b48a2120a9692c2cc9da17473fe8a17005cb8b176bf3839db833376bf",
+    "inventory_nfiles": 22,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-6mzpv": {
+    "textpath": "/tmp/scratch_gold/sol/osf/6mzpv/6a8c36f22533b6a83271e55e.pdf.txt",
+    "report_sha256": "4a14795eda4b97b1e70ce17b8533f6d353949361370a9612e39222ef0adf8b4a",
+    "inventory_nfiles": 10,
+    "inventory_errors": [
+      "HTTP Error 404: Not Found",
+      "HTTP Error 404: Not Found"
+    ],
+    "sample_checks": []
+  },
+  "I4R-3b8z4": {
+    "textpath": "/tmp/scratch_gold/sol/osf/3b8z4/6a22d2908565b14bd2878bcc.pdf.txt",
+    "report_sha256": "936bfa4fbd0a1054ab62ef811614da0731162caf33dd1917efbc6ac6e1dfe3b3",
+    "inventory_nfiles": 345,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-av3mz": {
+    "textpath": "/tmp/scratch_gold/sol/osf/av3mz/6a832e31a5203b2f9cd41e99.pdf.txt",
+    "report_sha256": "6ff7b09458b728737492c8a9f8d87b229396414eff32756e2c1c84a5a85a0eec",
+    "inventory_nfiles": 20,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "Experiment 4a_R Project.zip",
+        "bytes": 3354748,
+        "url": "https://osf.io/download/ytnv3/",
+        "sha256": "c8878de54346c5e2a06902c13310717457bd11f7704f361a0a67093596f434bd",
+        "zip_uncompressed_bytes": 3889661,
+        "zip_files": [
+          "Experiment 4a_R Project/",
+          "__MACOSX/._Experiment 4a_R Project",
+          "Experiment 4a_R Project/.Rhistory",
+          "__MACOSX/Experiment 4a_R Project/._.Rhistory",
+          "Experiment 4a_R Project/Experiment 4a_L.pdf",
+          "__MACOSX/Experiment 4a_R Project/._Experiment 4a_L.pdf",
+          "Experiment 4a_R Project/.DS_Store",
+          "__MACOSX/Experiment 4a_R Project/._.DS_Store",
+          "Experiment 4a_R Project/Experiment 4a_VM.pdf",
+          "__MACOSX/Experiment 4a_R Project/._Experiment 4a_VM.pdf",
+          "Experiment 4a_R Project/Experiment 4a_preprocessing+analysis.R",
+          "__MACOSX/Experiment 4a_R Project/._Experiment 4a_preprocessing+analysis.R",
+          "Experiment 4a_R Project/.RData",
+          "__MACOSX/Experiment 4a_R Project/._.RData",
+          "Experiment 4a_R Project/Experiment 4a_R Project.Rproj",
+          "__MACOSX/Experiment 4a_R Project/._Experiment 4a_R Project.Rproj",
+          "Experiment 4a_R Project/data/",
+          "__MACOSX/Experiment 4a_R Project/._data",
+          "Experiment 4a_R Project/.Rproj.user/",
+          "__MACOSX/Experiment 4a_R Project/._.Rproj.user",
+          "Experiment 4a_R Project/data/.DS_Store",
+          "__MACOSX/Experiment 4a_R Project/data/._.DS_Store",
+          "Experiment 4a_R Project/data/Experiment_4a_anonymized.csv",
+          "__MACOSX/Experiment 4a_R Project/data/._Experiment_4a_anonymized.csv",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/._8178D222",
+          "Experiment 4a_R Project/.Rproj.user/shared/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/._shared",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/._15C75EAC",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/pcs/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/._pcs",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/bibliography-index/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/._bibliography-index",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/tutorial/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/._tutorial",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/saved_source_markers",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/._saved_source_markers",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/explorer-cache/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/._explorer-cache",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/rmd-outputs",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/._rmd-outputs",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/._sources",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/profiles-cache/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/._profiles-cache",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/ctx/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/._ctx",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/viewer-cache/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/._viewer-cache",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/presentation/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/._presentation",
+          "Experiment 4a_R Project/.Rproj.user/shared/notebooks/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/shared/._notebooks",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/pcs/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/._pcs",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/bibliography-index/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/._bibliography-index",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/tutorial/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/._tutorial",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/saved_source_markers",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/._saved_source_markers",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/explorer-cache/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/._explorer-cache",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/rmd-outputs",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/._rmd-outputs",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/._sources",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/profiles-cache/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/._profiles-cache",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/ctx/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/._ctx",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/viewer-cache/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/._viewer-cache",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/jobs/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/._jobs",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/presentation/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/._presentation",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/pcs/source-window.pper",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/pcs/._source-window.pper",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/pcs/source-pane.pper",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/pcs/._source-pane.pper",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/pcs/windowlayoutstate.pper",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/pcs/._windowlayoutstate.pper",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/pcs/workbench-pane.pper",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/pcs/._workbench-pane.pper",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/pcs/files-pane.pper",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/pcs/._files-pane.pper",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/prop/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/._prop",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/._per",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/viewer-cache/D4039B5B.Rdata",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/viewer-cache/._D4039B5B.Rdata",
+          "Experiment 4a_R Project/.Rproj.user/shared/notebooks/paths",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/shared/notebooks/._paths",
+          "Experiment 4a_R Project/.Rproj.user/shared/notebooks/patch-chunk-names",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/shared/notebooks/._patch-chunk-names",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/pcs/source-pane.pper",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/pcs/._source-pane.pper",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/pcs/windowlayoutstate.pper",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/pcs/._windowlayoutstate.pper",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/pcs/workbench-pane.pper",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/pcs/._workbench-pane.pper",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/pcs/files-pane.pper",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/pcs/._files-pane.pper",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/._prop",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/per/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/._per",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/prop/FE3F0190",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/prop/._FE3F0190",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/prop/E52BF933",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/prop/._E52BF933",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/prop/D9CFAF45",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/prop/._D9CFAF45",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/prop/9243FD9D",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/prop/._9243FD9D",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/prop/INDEX",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/prop/._INDEX",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/prop/905B3591",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/prop/._905B3591",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/prop/6CAD6484",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/prop/._6CAD6484",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/u/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/._u",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/t/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/._t",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/9084A453",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._9084A453",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/427C0AEA",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._427C0AEA",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/00A062BD",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._00A062BD",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/62F6ED6E",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._62F6ED6E",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/09B3AF86",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._09B3AF86",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/0F80689E",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._0F80689E",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/CD1A84C2",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._CD1A84C2",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/B13464A5",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._B13464A5",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/ED8EADEB",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._ED8EADEB",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/2272358B",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._2272358B",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/8290A001",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._8290A001",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/INDEX",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._INDEX",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/4597C960",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._4597C960",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/B584C467",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._B584C467",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/6EE4D026",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._6EE4D026",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/B8476EDB",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._B8476EDB",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/8DBFD106",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/prop/._8DBFD106",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/per/u/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/per/._u",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/per/t/",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/per/._t",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/t/83A475CF",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/t/._83A475CF",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/t/85EC238D-contents",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/t/._85EC238D-contents",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/t/85EC238D",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/t/._85EC238D",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/t/06520E5C-contents",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/t/._06520E5C-contents",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/t/06520E5C",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/t/._06520E5C",
+          "Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/t/83A475CF-contents",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/8178D222/sources/per/t/._83A475CF-contents",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/per/t/44107560-contents",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/per/t/._44107560-contents",
+          "Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/per/t/44107560",
+          "__MACOSX/Experiment 4a_R Project/.Rproj.user/15C75EAC/sources/per/t/._44107560"
+        ]
+      },
+      {
+        "filename": "Experiment 3_R Project.zip",
+        "bytes": 3839184,
+        "url": "https://osf.io/download/8pxd7/",
+        "sha256": "7a703ee6caa84ff2e9a5f7b8d5eb15a16fd009df7eb8225e23713bbe281570ce",
+        "zip_uncompressed_bytes": 4822548,
+        "zip_files": [
+          "Experiment 3_R Project/",
+          "__MACOSX/._Experiment 3_R Project",
+          "Experiment 3_R Project/.Rhistory",
+          "__MACOSX/Experiment 3_R Project/._.Rhistory",
+          "Experiment 3_R Project/Experiment 3.pdf",
+          "__MACOSX/Experiment 3_R Project/._Experiment 3.pdf",
+          "Experiment 3_R Project/.DS_Store",
+          "__MACOSX/Experiment 3_R Project/._.DS_Store",
+          "Experiment 3_R Project/Experiment 3_preprocessing+analysis.R",
+          "__MACOSX/Experiment 3_R Project/._Experiment 3_preprocessing+analysis.R",
+          "Experiment 3_R Project/Experiment 3_R Project.Rproj",
+          "__MACOSX/Experiment 3_R Project/._Experiment 3_R Project.Rproj",
+          "Experiment 3_R Project/.RData",
+          "__MACOSX/Experiment 3_R Project/._.RData",
+          "Experiment 3_R Project/data/",
+          "__MACOSX/Experiment 3_R Project/._data",
+          "Experiment 3_R Project/.Rproj.user/",
+          "__MACOSX/Experiment 3_R Project/._.Rproj.user",
+          "Experiment 3_R Project/data/.DS_Store",
+          "__MACOSX/Experiment 3_R Project/data/._.DS_Store",
+          "Experiment 3_R Project/data/Experiment_3_anonymized.csv",
+          "__MACOSX/Experiment 3_R Project/data/._Experiment_3_anonymized.csv",
+          "Experiment 3_R Project/.Rproj.user/8178D222/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/._8178D222",
+          "Experiment 3_R Project/.Rproj.user/shared/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/._shared",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/._15C75EAC",
+          "Experiment 3_R Project/.Rproj.user/8178D222/pcs/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/._pcs",
+          "Experiment 3_R Project/.Rproj.user/8178D222/bibliography-index/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/._bibliography-index",
+          "Experiment 3_R Project/.Rproj.user/8178D222/tutorial/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/._tutorial",
+          "Experiment 3_R Project/.Rproj.user/8178D222/saved_source_markers",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/._saved_source_markers",
+          "Experiment 3_R Project/.Rproj.user/8178D222/explorer-cache/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/._explorer-cache",
+          "Experiment 3_R Project/.Rproj.user/8178D222/rmd-outputs",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/._rmd-outputs",
+          "Experiment 3_R Project/.Rproj.user/8178D222/sources/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/._sources",
+          "Experiment 3_R Project/.Rproj.user/8178D222/profiles-cache/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/._profiles-cache",
+          "Experiment 3_R Project/.Rproj.user/8178D222/ctx/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/._ctx",
+          "Experiment 3_R Project/.Rproj.user/8178D222/viewer-cache/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/._viewer-cache",
+          "Experiment 3_R Project/.Rproj.user/8178D222/presentation/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/._presentation",
+          "Experiment 3_R Project/.Rproj.user/shared/notebooks/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/shared/._notebooks",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/pcs/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/._pcs",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/bibliography-index/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/._bibliography-index",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/tutorial/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/._tutorial",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/saved_source_markers",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/._saved_source_markers",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/explorer-cache/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/._explorer-cache",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/rmd-outputs",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/._rmd-outputs",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/._sources",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/profiles-cache/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/._profiles-cache",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/ctx/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/._ctx",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/viewer-cache/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/._viewer-cache",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/presentation/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/._presentation",
+          "Experiment 3_R Project/.Rproj.user/8178D222/pcs/source-pane.pper",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/pcs/._source-pane.pper",
+          "Experiment 3_R Project/.Rproj.user/8178D222/pcs/windowlayoutstate.pper",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/pcs/._windowlayoutstate.pper",
+          "Experiment 3_R Project/.Rproj.user/8178D222/pcs/workbench-pane.pper",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/pcs/._workbench-pane.pper",
+          "Experiment 3_R Project/.Rproj.user/8178D222/pcs/debug-breakpoints.pper",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/pcs/._debug-breakpoints.pper",
+          "Experiment 3_R Project/.Rproj.user/8178D222/pcs/files-pane.pper",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/pcs/._files-pane.pper",
+          "Experiment 3_R Project/.Rproj.user/8178D222/sources/prop/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/sources/._prop",
+          "Experiment 3_R Project/.Rproj.user/8178D222/sources/per/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/sources/._per",
+          "Experiment 3_R Project/.Rproj.user/shared/notebooks/paths",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/shared/notebooks/._paths",
+          "Experiment 3_R Project/.Rproj.user/shared/notebooks/patch-chunk-names",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/shared/notebooks/._patch-chunk-names",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/pcs/source-pane.pper",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/pcs/._source-pane.pper",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/pcs/windowlayoutstate.pper",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/pcs/._windowlayoutstate.pper",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/pcs/workbench-pane.pper",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/pcs/._workbench-pane.pper",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/pcs/files-pane.pper",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/pcs/._files-pane.pper",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/._prop",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/per/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/._per",
+          "Experiment 3_R Project/.Rproj.user/8178D222/sources/prop/5173B17E",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/sources/prop/._5173B17E",
+          "Experiment 3_R Project/.Rproj.user/8178D222/sources/prop/A8BD69E9",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/sources/prop/._A8BD69E9",
+          "Experiment 3_R Project/.Rproj.user/8178D222/sources/prop/INDEX",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/sources/prop/._INDEX",
+          "Experiment 3_R Project/.Rproj.user/8178D222/sources/prop/FBBEE4CA",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/sources/prop/._FBBEE4CA",
+          "Experiment 3_R Project/.Rproj.user/8178D222/sources/per/u/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/sources/per/._u",
+          "Experiment 3_R Project/.Rproj.user/8178D222/sources/per/t/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/8178D222/sources/per/._t",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/A51EEF6C",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._A51EEF6C",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/64E8153A",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._64E8153A",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/B16B3FE5",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._B16B3FE5",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/FB13909B",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._FB13909B",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/811610E4",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._811610E4",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/D39F7DAD",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._D39F7DAD",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/E6C7477C",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._E6C7477C",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/DFFBAA07",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._DFFBAA07",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/CB6E8BC4",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._CB6E8BC4",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/D1003646",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._D1003646",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/AB7853CA",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._AB7853CA",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/80442725",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._80442725",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/3F168230",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._3F168230",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/INDEX",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._INDEX",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/6DA2CB36",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._6DA2CB36",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/AC53A5BC",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._AC53A5BC",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/796401BD",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/prop/._796401BD",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/per/u/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/per/._u",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/per/t/",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/per/._t",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/per/t/26A2EC21",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/per/t/._26A2EC21",
+          "Experiment 3_R Project/.Rproj.user/15C75EAC/sources/per/t/26A2EC21-contents",
+          "__MACOSX/Experiment 3_R Project/.Rproj.user/15C75EAC/sources/per/t/._26A2EC21-contents"
+        ]
+      },
+      {
+        "filename": "Experiment 4b_R Project.zip",
+        "bytes": 3351007,
+        "url": "https://osf.io/download/4mfcz/",
+        "sha256": "ef1fbf7c3818e905c51c39a53228cdc102fb2dddf355cb53cfce274f336684a7",
+        "zip_uncompressed_bytes": 4503095,
+        "zip_files": [
+          "Experiment 4b_R Project/",
+          "__MACOSX/._Experiment 4b_R Project",
+          "Experiment 4b_R Project/.Rhistory",
+          "__MACOSX/Experiment 4b_R Project/._.Rhistory",
+          "Experiment 4b_R Project/Experiment 4b_R Project.Rproj",
+          "__MACOSX/Experiment 4b_R Project/._Experiment 4b_R Project.Rproj",
+          "Experiment 4b_R Project/.DS_Store",
+          "__MACOSX/Experiment 4b_R Project/._.DS_Store",
+          "Experiment 4b_R Project/Experiment 4b_L.pdf",
+          "__MACOSX/Experiment 4b_R Project/._Experiment 4b_L.pdf",
+          "Experiment 4b_R Project/.RData",
+          "__MACOSX/Experiment 4b_R Project/._.RData",
+          "Experiment 4b_R Project/Experiment 4b_preprocessing+analysis.R",
+          "__MACOSX/Experiment 4b_R Project/._Experiment 4b_preprocessing+analysis.R",
+          "Experiment 4b_R Project/data/",
+          "__MACOSX/Experiment 4b_R Project/._data",
+          "Experiment 4b_R Project/.Rproj.user/",
+          "__MACOSX/Experiment 4b_R Project/._.Rproj.user",
+          "Experiment 4b_R Project/data/.DS_Store",
+          "__MACOSX/Experiment 4b_R Project/data/._.DS_Store",
+          "Experiment 4b_R Project/data/Experiment_4b_anonymized.csv",
+          "__MACOSX/Experiment 4b_R Project/data/._Experiment_4b_anonymized.csv",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/._8178D222",
+          "Experiment 4b_R Project/.Rproj.user/shared/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/._shared",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/._15C75EAC",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/pcs/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/._pcs",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/bibliography-index/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/._bibliography-index",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/tutorial/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/._tutorial",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/saved_source_markers",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/._saved_source_markers",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/explorer-cache/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/._explorer-cache",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/rmd-outputs",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/._rmd-outputs",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/sources/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/._sources",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/profiles-cache/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/._profiles-cache",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/ctx/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/._ctx",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/viewer-cache/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/._viewer-cache",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/presentation/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/._presentation",
+          "Experiment 4b_R Project/.Rproj.user/shared/notebooks/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/shared/._notebooks",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/pcs/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/._pcs",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/bibliography-index/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/._bibliography-index",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/tutorial/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/._tutorial",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/saved_source_markers",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/._saved_source_markers",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/explorer-cache/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/._explorer-cache",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/rmd-outputs",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/._rmd-outputs",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/._sources",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/profiles-cache/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/._profiles-cache",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/ctx/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/._ctx",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/viewer-cache/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/._viewer-cache",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/jobs/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/._jobs",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/presentation/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/._presentation",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/pcs/source-pane.pper",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/pcs/._source-pane.pper",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/pcs/windowlayoutstate.pper",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/pcs/._windowlayoutstate.pper",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/pcs/workbench-pane.pper",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/pcs/._workbench-pane.pper",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/pcs/files-pane.pper",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/pcs/._files-pane.pper",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/sources/prop/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/sources/._prop",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/sources/._per",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/viewer-cache/F933F6B5.Rdata",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/viewer-cache/._F933F6B5.Rdata",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/viewer-cache/6D9BB9C3.Rdata",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/viewer-cache/._6D9BB9C3.Rdata",
+          "Experiment 4b_R Project/.Rproj.user/shared/notebooks/paths",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/shared/notebooks/._paths",
+          "Experiment 4b_R Project/.Rproj.user/shared/notebooks/patch-chunk-names",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/shared/notebooks/._patch-chunk-names",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/pcs/source-pane.pper",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/pcs/._source-pane.pper",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/pcs/windowlayoutstate.pper",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/pcs/._windowlayoutstate.pper",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/pcs/workbench-pane.pper",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/pcs/._workbench-pane.pper",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/pcs/files-pane.pper",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/pcs/._files-pane.pper",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/._prop",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/per/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/._per",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/jobs/9027DC76-output.json",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/jobs/._9027DC76-output.json",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/jobs/27EA62CD-output.json",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/jobs/._27EA62CD-output.json",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/sources/prop/7DD93BD6",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/sources/prop/._7DD93BD6",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/sources/prop/06AD3D70",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/sources/prop/._06AD3D70",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/sources/prop/00652AEA",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/sources/prop/._00652AEA",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/sources/prop/INDEX",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/sources/prop/._INDEX",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/sources/prop/C52B059C",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/sources/prop/._C52B059C",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/u/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/._u",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/t/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/._t",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/9200A97E",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._9200A97E",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/04305DF8",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._04305DF8",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/DC73B08C",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._DC73B08C",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/855490AB",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._855490AB",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/CF78B741",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._CF78B741",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/F95F1902",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._F95F1902",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/21B86490",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._21B86490",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/D37DD9D3",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._D37DD9D3",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/88D25E14",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._88D25E14",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/A70157F6",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._A70157F6",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/90A29FD9",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._90A29FD9",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/19A8D5BD",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._19A8D5BD",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/C7593560",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._C7593560",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/077DA1B7",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._077DA1B7",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/INDEX",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._INDEX",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/43CBB9BB",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._43CBB9BB",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/0D60840F",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._0D60840F",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/B1E0B6F1",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._B1E0B6F1",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/F18B0E6B",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._F18B0E6B",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/ED8BA96D",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/prop/._ED8BA96D",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/per/u/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/per/._u",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/per/t/",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/per/._t",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/t/01BF3CC1-contents",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/t/._01BF3CC1-contents",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/t/01BF3CC1",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/t/._01BF3CC1",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/t/C5392876",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/t/._C5392876",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/t/C5392876-contents",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/t/._C5392876-contents",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/t/B7516DE0-contents",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/t/._B7516DE0-contents",
+          "Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/t/B7516DE0",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/8178D222/sources/per/t/._B7516DE0",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/per/t/EE6ACDEE",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/per/t/._EE6ACDEE",
+          "Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/per/t/EE6ACDEE-contents",
+          "__MACOSX/Experiment 4b_R Project/.Rproj.user/15C75EAC/sources/per/t/._EE6ACDEE-contents"
+        ]
+      }
+    ]
+  },
+  "I4R-kpm3d": {
+    "textpath": "/tmp/scratch_gold/sol/osf/kpm3d/6a22d140d4f93d9731343b6e.pdf.txt",
+    "report_sha256": "c8b115492bcdeb88c345e42c349de5a0975ff9186486f619ac6ee486ab20019c",
+    "inventory_nfiles": 58,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "interpretation_narrative.R",
+        "bytes": 9170,
+        "url": "https://osf.io/download/66101d44e65c6026e17d9c78/",
+        "sha256": "6350d6ddb182f1931ee555ec1e639e86c050a4ba7fcdd834ebe5b918be6d5dd0"
+      },
+      {
+        "filename": "SM_tableS5b.csv",
+        "bytes": 808,
+        "url": "https://osf.io/download/ahkmv/",
+        "sha256": "a2cedae99662eb7fceb35c25655d40767e23309a4cef56a2c138a8db80957c41"
+      }
+    ]
+  },
+  "I4R-s59j2": {
+    "textpath": "/tmp/scratch_gold/sol/osf/s59j2/6a22c8d5b955ea17088f95e2.pdf.txt",
+    "report_sha256": "399f11f920423562780276507c97f6fbbcaa6d15110b7c1825cb0a31784c1a10",
+    "inventory_nfiles": 0,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-z5pjq": {
+    "textpath": "/tmp/scratch_gold/sol/osf/z5pjq/6a8306fe86e9e1fe75bb64bf.pdf.txt",
+    "report_sha256": "7186b85ebbc2ffc0fe8e6731c198d6f9f40a56866313fd0f9b37df2e32567a16",
+    "inventory_nfiles": 44,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-eb89k": {
+    "textpath": "/tmp/scratch_gold/sol/osf/eb89k/6a7b4277f7487ac8ac692ab9.pdf.txt",
+    "report_sha256": "17509277eab590ba0d89753eb95737c8c32230b5b0cb0e5393d8a73b6ef57c85",
+    "inventory_nfiles": 0,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-p8f7d": {
+    "textpath": "/tmp/scratch_gold/sol/osf/p8f7d/6a31f57958187928306dbc4f.pdf.txt",
+    "report_sha256": "7a4437c5be71e5ec8c1c476c5149ff75a12338f0d5468d02c1cc9f503e5b10ad",
+    "inventory_nfiles": 0,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-kwqj6": {
+    "textpath": "/tmp/scratch_gold/sol/osf/kwqj6/6a7b5f2934bc5b78cb12d374.pdf.txt",
+    "report_sha256": "665aa3f7ef3f065a21a980435f0be374f758cdfc357ec514828e23f0d282c03b",
+    "inventory_nfiles": 2579,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "Process_Chinese_Data.R",
+        "bytes": 12477,
+        "url": "https://osf.io/download/5gnyf/",
+        "sha256": "9f1cd400683a8948d56309dbedc224580bd4ade3a2c51b09e9a3fda9a38e92f6"
+      },
+      {
+        "filename": "verbs.csv",
+        "bytes": 672,
+        "url": "https://osf.io/download/mujfk/",
+        "sha256": "6e6fddaab742b7d54fc26729948141d5d27c2cf179ca1445d615c4978a08dfc8"
+      }
+    ]
+  },
+  "I4R-vdm68": {
+    "textpath": "/tmp/scratch_gold/sol/osf/vdm68/6a83037a1926ed8280bb6617.pdf.txt",
+    "report_sha256": "0a33ee33f4835cde8dabf5971b8e3bfba0cf33f431456ca23209a27f9ed2ff36",
+    "inventory_nfiles": 0,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-kyufb": {
+    "textpath": "/tmp/scratch_gold/sol/osf/kyufb/6a7f211708af4f886fa59211.pdf.txt",
+    "report_sha256": "37e4b28e5c9493e467bb956d7a52bf65f5066bca25a6ff46fd8cac61700f09fb",
+    "inventory_nfiles": 7,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "study1_analysis.R",
+        "bytes": 2741,
+        "url": "https://osf.io/download/j6mw4/",
+        "sha256": "307a2b1fabad3be23fd346ae76d1bc5669cef83af2c85d40cffa53950bdbd52f"
+      },
+      {
+        "filename": "data_study1.csv",
+        "bytes": 4858,
+        "url": "https://osf.io/download/gpx2e/",
+        "sha256": "619562439f82c4b1b3c47eb577f1e15dd873e85c3d7c5fa09501f4b568c49227"
+      }
+    ]
+  },
+  "I4R-f5p78": {
+    "textpath": "/tmp/scratch_gold/sol/osf/f5p78/69ca9e9c2c0d55b10a2592e3.pdf.txt",
+    "report_sha256": "6245873eb8af7bfc9642cfbf85a9c880040af83d4b3cde8fe002da26decec16b",
+    "inventory_nfiles": 76,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-8dxvk": {
+    "textpath": "/tmp/scratch_gold/sol/osf/8dxvk/6a7b6264550f4cce0d6a5aa0.pdf.txt",
+    "report_sha256": "46816b93027bb286614bdda943a3855fcb892d36eb8c326622fd7a3fddfa0585",
+    "inventory_nfiles": 17,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "LASSO_regression_and_figures_Aug_31_23.Rmd",
+        "bytes": 66668,
+        "url": "https://osf.io/download/m5xnw/",
+        "sha256": "325e6b79935e9d6464545a7a91f52aa4f6ee2ec84d88abfa12e3c8c714170b69"
+      },
+      {
+        "filename": "RawDemo_6Feb2026.csv",
+        "bytes": 741207,
+        "url": "https://osf.io/download/8unw5/",
+        "sha256": "e7fb4bd5ac2c9a6da049f916bf7b658ac92b0fb29680a4e6e5807df43be9bf50"
+      }
+    ]
+  },
+  "I4R-2ar74": {
+    "textpath": "/tmp/scratch_gold/sol/osf/2ar74/6a871a51131c1a965c6c5929.pdf.txt",
+    "report_sha256": "5772a4f16cd0228ae0ab86755d75723ab798b94ca167b4cb077bf30dece44c91",
+    "inventory_nfiles": 0,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-9qa3x": {
+    "textpath": "/tmp/scratch_gold/sol/osf/9qa3x/6a7088b27aa3029e0fbc8867.pdf.txt",
+    "report_sha256": "340d710c0c3284ac91f95520ccd13ea4d0973fbf523f4b96b44f53f2f123e52e",
+    "inventory_nfiles": 1,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-3qs8e": {
+    "textpath": "/tmp/scratch_gold/sol/osf/3qs8e/6ac68c3fd84bc49220f7cf4b.pdf.txt",
+    "report_sha256": "513f95ae8e2274d5d08f31ee6bf4e29302c822c9d18d899cf2e3def1bc86180b",
+    "inventory_nfiles": 0,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-4wxms": {
+    "textpath": "/tmp/scratch_gold/sol/osf/4wxms/69d90f7a92078de30d78df6a.pdf.txt",
+    "report_sha256": "3952dcfbc94eb3b361d48da5ccdd2160c6b2f2e98310a82c750e9805721cc09a",
+    "inventory_nfiles": 14,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "Study1_OSF_deidentified.Rmd",
+        "bytes": 12153,
+        "url": "https://osf.io/download/nrezq/",
+        "sha256": "fca2c602a74eb0f8c61f80b928f014bb7dd755c2180e3be1ed9d9b5b5efec190"
+      },
+      {
+        "filename": "Distance_US_2005to2014.csv",
+        "bytes": 217,
+        "url": "https://osf.io/download/as7z5/",
+        "sha256": "0f5702b02840602176afecfa3d33d0ab0a1015946f500b462165064bc38226dd",
+        "retried_after_transient_error": "HTTP Error 403: Forbidden"
+      }
+    ]
+  },
+  "I4R-vzpu2": {
+    "textpath": "/tmp/scratch_gold/sol/osf/vzpu2/6818c5786eb6eda7a27c59ca.pdf.txt",
+    "report_sha256": "e1c49745dd2e27cf5dfce91c60ee4aee0dd240cc4e645d243de4bc1cfdd2c109",
+    "inventory_nfiles": 9,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "! R scripts new.R",
+        "bytes": 60300,
+        "url": "https://osf.io/download/q8x6a/",
+        "sha256": "5c17ed0efefe3e1651e46c39ba03a166b946d5c2a59ebc716d853ad3e1ee2dc9"
+      },
+      {
+        "filename": "! new raw data.dta",
+        "bytes": 114994,
+        "url": "https://osf.io/download/r8nhy/",
+        "sha256": "7641fec575478cfa8278c189057df567256669092bd590f4a3648a3f1cface6c"
+      }
+    ]
+  },
+  "I4R-vjkyg": {
+    "textpath": "/tmp/scratch_gold/sol/osf/vjkyg/6a79cfc33076b2f6199ae6d8.pdf.txt",
+    "report_sha256": "cda1f98d0a3d72c50ab3fcd41ba38185987c9ff163abfe4cac297a06dd3a8a9d",
+    "inventory_nfiles": 52,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-6by24": {
+    "textpath": "/tmp/scratch_gold/sol/osf/6by24/6a79dec619deeca93409e23c.pdf.txt",
+    "report_sha256": "72340be5a3f9768f47a1f18bca209969f63bbe7a1b407afd1d5ec24ea473dce3",
+    "inventory_nfiles": 22,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "2_descriptives_table1.R",
+        "bytes": 5398,
+        "url": "https://osf.io/download/96hnw/",
+        "sha256": "d2d520bbe76f996a19fec9ab2160a46843959539e7a45ea6607aac40dcf72abf"
+      },
+      {
+        "filename": "risk_of_bias_ratings.csv",
+        "bytes": 22622,
+        "url": "https://osf.io/download/c8k2d/",
+        "sha256": "6f49fbbdd292ee1e002a297b94b45a3a137427bfd59257e439a0175df85c58b3"
+      }
+    ]
+  },
+  "I4R-6x8wy": {
+    "textpath": "/tmp/scratch_gold/sol/osf/6x8wy/6a830af67e7f1a33a3fe8808.pdf.txt",
+    "report_sha256": "3268ca5285d66ff6b1880e4783a9e9c5c91c849b5b3876a3d72cb20815328df3",
+    "inventory_nfiles": 0,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-vcsfj": {
+    "textpath": "/tmp/scratch_gold/sol/osf/vcsfj/6a8300554f615ee65bedd827.pdf.txt",
+    "report_sha256": "b7b3f6f7b31e6bcacc6906c50cb24334d8c953cffd5041bc1e28af775eeb99c7",
+    "inventory_nfiles": 1,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "Pyramids_Data_Codes_NHB.zip",
+        "bytes": 9399122,
+        "url": "https://osf.io/download/rg6nw/",
+        "sha256": "05ea451aed69c63adddab9adbfa5fc4affb9e2b782a1be89ec324d9cc36c6434",
+        "zip_uncompressed_bytes": 15936817,
+        "zip_files": [
+          "Pyramids_analysis_NHB_revision/",
+          "__MACOSX/._Pyramids_analysis_NHB_revision",
+          "Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/",
+          "__MACOSX/Pyramids_analysis_NHB_revision/._Studies_S1ab_2_3_4_XPs_with_adults",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/",
+          "__MACOSX/Pyramids_analysis_NHB_revision/._Studies_5ab_6ab_7ab_XPs_with_infants",
+          "Pyramids_analysis_NHB_revision/.DS_Store",
+          "__MACOSX/Pyramids_analysis_NHB_revision/._.DS_Store",
+          "Pyramids_analysis_NHB_revision/Overview of the files and analysis scripts.pdf",
+          "__MACOSX/Pyramids_analysis_NHB_revision/._Overview of the files and analysis scripts.pdf",
+          "Pyramids_analysis_NHB_revision/Study 1a/",
+          "Pyramids_analysis_NHB_revision/Study_1b/",
+          "__MACOSX/Pyramids_analysis_NHB_revision/._Study_1b",
+          "Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/.Rhistory",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/._.Rhistory",
+          "Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/Plot_adults_S1.eps",
+          "Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/Data_pyramids_adults.csv",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/._Data_pyramids_adults.csv",
+          "Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/.DS_Store",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/._.DS_Store",
+          "Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/ST4.one_sample_t_test.csv",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/._ST4.one_sample_t_test.csv",
+          "Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/ST2.one_sample_t_test.csv",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/._ST2.one_sample_t_test.csv",
+          "Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/Plot_adults_S2-4.eps",
+          "Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/.RData",
+          "Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/Plot_adults_S2-4.jpg",
+          "Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/Plot_adults_S2-4.pdf",
+          "Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/Plot_adults_S1.pdf",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/._Plot_adults_S1.pdf",
+          "Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/Plot_adults_S1.jpg",
+          "Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/ST3.one_sample_t_test.csv",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/._ST3.one_sample_t_test.csv",
+          "Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/STS1.one_sample_t_test.csv",
+          "Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/Studies_S1ab_2_3_4.R",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Studies_S1ab_2_3_4_XPs_with_adults/._Studies_S1ab_2_3_4.R",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/Plot5a-5b.pdf",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/.Rhistory",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/._.Rhistory",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/Plot5a-5b.jpg",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/.DS_Store",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/._.DS_Store",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/ST5.t_tests.csv",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/._ST5.t_tests.csv",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/ST6.t_tests.csv",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/._ST6.t_tests.csv",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/data_pyramids_infants.csv",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/._data_pyramids_infants.csv",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/Plot7a-7b.eps",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/Plot6a-6b.eps",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/Plot6a-6b.pdf",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/.RData",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/Plot7a-7b.pdf",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/Plot7a-7b.jpg",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/Plot6a-6b.jpg",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/Studies_5ab_6ab_7ab.R",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/._Studies_5ab_6ab_7ab.R",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/Plot5a-5b.eps",
+          "Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/ST7.t_tests.csv",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Studies_5ab_6ab_7ab_XPs_with_infants/._ST7.t_tests.csv",
+          "Pyramids_analysis_NHB_revision/Study 1a/ST1a_plots.R",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study 1a/._ST1a_plots.R",
+          "Pyramids_analysis_NHB_revision/Study 1a/.Rhistory",
+          "Pyramids_analysis_NHB_revision/Study 1a/Global_tpm_plot.eps",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study 1a/._Global_tpm_plot.eps",
+          "Pyramids_analysis_NHB_revision/Study 1a/ST1a_animals.R",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study 1a/._ST1a_animals.R",
+          "Pyramids_analysis_NHB_revision/Study 1a/list_children_dominance_matrix.Rdata",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study 1a/._list_children_dominance_matrix.Rdata",
+          "Pyramids_analysis_NHB_revision/Study 1a/ST1a_combine.R",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study 1a/._ST1a_combine.R",
+          "Pyramids_analysis_NHB_revision/Study 1a/.DS_Store",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study 1a/._.DS_Store",
+          "Pyramids_analysis_NHB_revision/Study 1a/ST1a_children.R",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study 1a/._ST1a_children.R",
+          "Pyramids_analysis_NHB_revision/Study 1a/children_SP_plot.jpeg",
+          "Pyramids_analysis_NHB_revision/Study 1a/primate_tree.pdf",
+          "Pyramids_analysis_NHB_revision/Study 1a/dom.data.RData",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study 1a/._dom.data.RData",
+          "Pyramids_analysis_NHB_revision/Study 1a/Global_SP_plot.eps",
+          "Pyramids_analysis_NHB_revision/Study 1a/Global_tpm_plot.jpeg",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study 1a/._Global_tpm_plot.jpeg",
+          "Pyramids_analysis_NHB_revision/Study 1a/Global_SP_plot.jpeg",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study 1a/._Global_SP_plot.jpeg",
+          "Pyramids_analysis_NHB_revision/Study 1a/dom_mat_SP_plot.jpeg",
+          "Pyramids_analysis_NHB_revision/Study 1a/Global_SP_plot.pdf",
+          "Pyramids_analysis_NHB_revision/Study 1a/.RData",
+          "Pyramids_analysis_NHB_revision/Study 1a/combined_dom_mat_SP.Rdata",
+          "Pyramids_analysis_NHB_revision/Study 1a/tableS1.csv",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study 1a/._tableS1.csv",
+          "Pyramids_analysis_NHB_revision/Study 1a/tableS3.csv",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study 1a/._tableS3.csv",
+          "Pyramids_analysis_NHB_revision/Study 1a/tableS2.csv",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study 1a/._tableS2.csv",
+          "Pyramids_analysis_NHB_revision/Study 1a/Metadata.csv",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study 1a/._Metadata.csv",
+          "Pyramids_analysis_NHB_revision/Study 1a/dom_mat_SP_df_long_animals.Rdata",
+          "Pyramids_analysis_NHB_revision/Study 1a/dom_mat_SP_df_children.Rdata",
+          "Pyramids_analysis_NHB_revision/Study 1a/dom_mat_SP_df_animals.Rdata",
+          "Pyramids_analysis_NHB_revision/Study 1a/dom_mat_SP_df_long_children.Rdata",
+          "Pyramids_analysis_NHB_revision/Study 1a/Global_tpm_plot.pdf",
+          "Pyramids_analysis_NHB_revision/Study 1a/dom.metadata.RData",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study 1a/._dom.metadata.RData",
+          "Pyramids_analysis_NHB_revision/Study_1b/.Rhistory",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study_1b/._.Rhistory",
+          "Pyramids_analysis_NHB_revision/Study_1b/.DS_Store",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study_1b/._.DS_Store",
+          "Pyramids_analysis_NHB_revision/Study_1b/primate_tree.pdf",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study_1b/._primate_tree.pdf",
+          "Pyramids_analysis_NHB_revision/Study_1b/Study_1b.R",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study_1b/._Study_1b.R",
+          "Pyramids_analysis_NHB_revision/Study_1b/primate_tree_tpm.pdf",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study_1b/._primate_tree_tpm.pdf",
+          "Pyramids_analysis_NHB_revision/Study_1b/Primate_Tree.nex",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study_1b/._Primate_Tree.nex",
+          "Pyramids_analysis_NHB_revision/Study_1b/.RData",
+          "Pyramids_analysis_NHB_revision/Study_1b/combined_dom_mat_SP.Rdata",
+          "Pyramids_analysis_NHB_revision/Study_1b/full_tree_tpm.pdf",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study_1b/._full_tree_tpm.pdf",
+          "Pyramids_analysis_NHB_revision/Study_1b/10kTrees_Primates_storedSession2022-06-17T12 30 55+00 00",
+          "__MACOSX/Pyramids_analysis_NHB_revision/Study_1b/._10kTrees_Primates_storedSession2022-06-17T12 30 55+00 00"
+        ]
+      }
+    ]
+  },
+  "I4R-4mtga": {
+    "textpath": "/tmp/scratch_gold/sol/osf/4mtga/6a7b3f9e7c69893d2512d30d.pdf.txt",
+    "report_sha256": "8353c1f2a15dd968065e644c94d14cb1d4e78978fa28ac81c2bdf33a4fc9b245",
+    "inventory_nfiles": 0,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-mepbv": {
+    "textpath": "/tmp/scratch_gold/sol/osf/mepbv/698ce9fe0ebe396bc8dfcb8f.pdf.txt",
+    "report_sha256": "7b33399861aac58a0a42155f9d10d9ea0df7cc7ab6791c9d387b2bfcc55c2076",
+    "inventory_nfiles": 0,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-fwzbg": {
+    "textpath": "/tmp/scratch_gold/sol/osf/fwzbg/6a79c776e1f7606c196d36fd.pdf.txt",
+    "report_sha256": "af70973d089db17d22846b8f5f0327d8805814f6e63702975b7a49fd85c04447",
+    "inventory_nfiles": 15,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-ucz85": {
+    "textpath": "/tmp/scratch_gold/sol/osf/ucz85/6a7b3badebc9200abc6a59d9.pdf.txt",
+    "report_sha256": "66903a858d71cf0e3d5eb9d1ef2c9d88593ba773b468e30b8505f078066313d2",
+    "inventory_nfiles": 0,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "I4R-vg2kt": {
+    "textpath": "/tmp/scratch_gold/sol/osf/vg2kt/6a7a1dffeee6a966776a5a35.pdf.txt",
+    "report_sha256": "a25d7763de1a3524caec33cd77a078253fe915f27a6560a0e299f3aacf361707",
+    "inventory_nfiles": 150,
+    "inventory_errors": [],
+    "sample_checks": [
+      {
+        "filename": "Tree Building.R",
+        "bytes": 1786,
+        "url": "https://osf.io/download/3u5at/",
+        "sha256": "b2e5b008139945735ab6d0d696c6ccd645ec7988ca360d2334bd7526fcbfbb09"
+      },
+      {
+        "filename": "hrafd3_long.csv",
+        "bytes": 744925,
+        "url": "https://osf.io/download/usvyg/",
+        "sha256": "f0c689959459251628077901e07b2bb9d70da8da723b1785640d13ec354bf863"
+      }
+    ]
+  },
+  "I4R-ek7dy": {
+    "textpath": "/tmp/scratch_gold/sol/osf/ek7dy/6818c068ccd66c75055ef74d.pdf.txt",
+    "report_sha256": "9c8221e3425b6e6741a0765ed6cc26f302c2757b34384ba3fdb18820be952094",
+    "inventory_nfiles": 0,
+    "inventory_errors": [
+      "HTTP Error 404: Not Found https://api.osf.io/v2/nodes/nwmzb/files/osfstorage/?page[size]=100",
+      "HTTP Error 404: Not Found",
+      "HTTP Error 404: Not Found"
+    ],
+    "sample_checks": []
+  },
+  "I4R-ghkn9": {
+    "textpath": "/tmp/scratch_gold/sol/osf/ghkn9/6a83014313dc90bfecbb646f.pdf.txt",
+    "report_sha256": "0f9cd85c74b60f215c40ee970a1944d87c465f3408f1c1b7f3fb823ce21c944e",
+    "inventory_nfiles": 455,
+    "inventory_errors": [],
+    "sample_checks": []
+  },
+  "RB-004": {
+    "textpath": "/tmp/scratch_gold/sol/dp/61.pdf.txt",
+    "source_score": "4",
+    "inventory_nfiles": 10
+  },
+  "RB-019": {
+    "textpath": "/tmp/scratch_gold/sol/osf/m3hwg/65984eea9513848b6a23860b.pdf.txt",
+    "source_score": "4",
+    "inventory_nfiles": 5
+  },
+  "RB-023": {
+    "textpath": "/tmp/scratch_gold/sol/dp/86.pdf.txt",
+    "source_score": "3",
+    "inventory_nfiles": 90
+  },
+  "RB-025": {
+    "textpath": "/tmp/scratch_gold/sol/osf/xf5w2/657b1a0c8e942d00a8a0f1be.pdf.txt",
+    "source_score": "2",
+    "inventory_nfiles": 21
+  },
+  "RB-029": {
+    "textpath": "/tmp/scratch_gold/sol/dp/36.pdf.txt",
+    "source_score": "4",
+    "inventory_nfiles": 76
+  },
+  "RB-038": {
+    "textpath": "/tmp/scratch_gold/sol/osf/gx4d6/6579d7fa52cc213b0b1bba7a.pdf.txt",
+    "source_score": "4",
+    "inventory_nfiles": 5
+  },
+  "RB-049": {
+    "textpath": "/tmp/scratch_gold/sol/osf/ecymu/65ef0784e5e51c0c62bc556b.pdf.txt",
+    "source_score": "1",
+    "inventory_nfiles": 3
+  },
+  "RB-053": {
+    "textpath": "/tmp/scratch_gold/sol/dp/73.pdf.txt",
+    "source_score": "3",
+    "inventory_nfiles": 24
+  },
+  "RB-065": {
+    "textpath": "/tmp/scratch_gold/sol/dp/108.pdf.txt",
+    "source_score": "1",
+    "inventory_nfiles": 41
+  },
+  "SC-AvOr": {
+    "textpath": "/tmp/scratch_gold/sol/score/repro_outcomes.csv",
+    "claim_id": "AvOr_gdyrdr"
+  },
+  "SC-8R9d": {
+    "textpath": "/tmp/scratch_gold/sol/score_projects/8R9d/Transparency Trail - Christensen_EurJournPersonality_2018_8R9d - Szabelska - 69yok.docx.txt",
+    "claim_id": "8R9d_r1zw73"
+  },
+  "SC-9DZl": {
+    "textpath": "/tmp/scratch_gold/sol/score/repro_outcomes.csv",
+    "claim_id": "9DZl_k1rz68"
+  },
+  "SC-E4Am": {
+    "textpath": "/tmp/scratch_gold/sol/score/repro_outcomes.csv",
+    "claim_id": "E4Am_g39923"
+  },
+  "SC-J0Yv": {
+    "textpath": "/tmp/scratch_gold/sol/score/repro_outcomes.csv",
+    "claim_id": "J0Yv_pprv8w"
+  },
+  "SC-zK2": {
+    "textpath": "/tmp/scratch_gold/sol/score/repro_outcomes.csv",
+    "claim_id": "zK2_gkzl8g"
+  },
+  "SC-rjb": {
+    "textpath": "/tmp/scratch_gold/sol/score/repro_outcomes.csv",
+    "claim_id": "rjb_bz1ddg"
+  },
+  "SC-0qar": {
+    "textpath": "/tmp/scratch_gold/sol/score/repro_outcomes.csv",
+    "claim_id": "0qar_blj3kw"
+  },
+  "SC-LbEB": {
+    "textpath": "/tmp/scratch_gold/sol/score/repro_outcomes.csv",
+    "claim_id": "LbEB_myjqqn"
+  },
+  "SC-GJe4": {
+    "textpath": "/tmp/scratch_gold/sol/score/repro_outcomes.csv",
+    "claim_id": "GJe4_single-trace"
+  }
+}

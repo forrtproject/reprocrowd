@@ -1,0 +1,65 @@
+{
+ "gold_id": "G-01",
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "match",
+   "reference_recomputed": "0.07",
+   "tolerance": "printed precision (2 dp); report Table 2 gives 0.072 from its own Rubin-pooled re-creation",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/9ht7y/ p.12 (report page numbering; PDF p.13), Figure 1 'Reproduced Figures 1a (left) and 1b (right)': reproduced forest plot shows 'RE Model (Q = 365.91, df = 7, p = 0, I2 = 98.74)' and 'Meta-Analytic 0.07 [0.02, 0.13] 69732'; p.7: 'After overcoming this issues, we were able to rerun the meta-analysis script on both a Windows and Linux system, reproducing all figures, including age2-imp-Quadratic-slope-Main-adj.png'; Table 2 'REML estimation (original) 0.017 0.072 0.127'",
+   "rationale": "Re-running the authors' meta-analysis script regenerated Figure 1a with the identical pooled estimate.",
+   "reported_check": "confirmed in paper (Fig. 1a, p.8: 'Meta−Analytic 0.07 [0.02, 0.13] 69732')"
+  },
+  {
+   "id": "C2",
+   "expected_status": "match",
+   "reference_recomputed": "[0.02, 0.13]",
+   "tolerance": "printed precision (2 dp)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/9ht7y/ p.12 (report page numbering; PDF p.13), Figure 1 'Reproduced Figures 1a (left) and 1b (right)': reproduced forest plot shows 'RE Model (Q = 365.91, df = 7, p = 0, I2 = 98.74)' and 'Meta-Analytic 0.07 [0.02, 0.13] 69732'; p.7: 'After overcoming this issues, we were able to rerun the meta-analysis script on both a Windows and Linux system, reproducing all figures, including age2-imp-Quadratic-slope-Main-adj.png'; Table 2 REML row CI 0.017 to 0.127",
+   "rationale": "Reproduced Figure 1a shows the identical CI.",
+   "reported_check": "confirmed in paper (Fig. 1a, p.8)"
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": "365.91",
+   "tolerance": "printed precision (2 dp)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/9ht7y/ p.12 (report page numbering; PDF p.13), Figure 1 'Reproduced Figures 1a (left) and 1b (right)': reproduced forest plot shows 'RE Model (Q = 365.91, df = 7, p = 0, I2 = 98.74)' and 'Meta-Analytic 0.07 [0.02, 0.13] 69732'; p.7: 'After overcoming this issues, we were able to rerun the meta-analysis script on both a Windows and Linux system, reproducing all figures, including age2-imp-Quadratic-slope-Main-adj.png'",
+   "rationale": "Q is printed in the regenerated forest-plot header; the report does not discuss it in text but the reproduced figure shows the same value.",
+   "reported_check": "confirmed in paper (Fig. 1a header 'Q = 365.91, df = 7')"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": "98.74",
+   "tolerance": "printed precision (2 dp)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/9ht7y/ p.12 (report page numbering; PDF p.13), Figure 1 'Reproduced Figures 1a (left) and 1b (right)': reproduced forest plot shows 'RE Model (Q = 365.91, df = 7, p = 0, I2 = 98.74)' and 'Meta-Analytic 0.07 [0.02, 0.13] 69732'; p.7: 'After overcoming this issues, we were able to rerun the meta-analysis script on both a Windows and Linux system, reproducing all figures, including age2-imp-Quadratic-slope-Main-adj.png'",
+   "rationale": "I-squared appears identically in the regenerated forest-plot header.",
+   "reported_check": "confirmed in paper (Fig. 1a header 'I2 = 98.74')"
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": "69732",
+   "tolerance": "exact integer",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/9ht7y/ p.12 (report page numbering; PDF p.13), Figure 1 'Reproduced Figures 1a (left) and 1b (right)': reproduced forest plot shows 'RE Model (Q = 365.91, df = 7, p = 0, I2 = 98.74)' and 'Meta-Analytic 0.07 [0.02, 0.13] 69732'; p.7: 'After overcoming this issues, we were able to rerun the meta-analysis script on both a Windows and Linux system, reproducing all figures, including age2-imp-Quadratic-slope-Main-adj.png'",
+   "rationale": "Meta-analytic N in the regenerated figure equals the printed N.",
+   "reported_check": "confirmed in paper (Fig. 1a, p.8)"
+  }
+ ],
+ "label_confidence": "high",
+ "notes": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "Report (I4R DP 224, Pawel, Kutlar & Knopfle 2025) reproduced from the analysis data only (raw data not shipped; scope matches claims file). Initial obstacles: Git LFS-tracked .RData model files load as pointer files unless `git lfs pull` is run (undocumented; OSF mirror unusable), absolute paths, missing library() calls, and dependence on objects from the cleaning script. These were fixed without changing the analysis and the report concludes 'our computational reproduction was successful'. A reconciler might rate the LFS/OSF issue a P3 documentation problem; it does not change any number. Q, I2 and N are only verified via the reproduced figure image (report PDF p.13), not in report text. The report says 'In the initial attempt the meta-analyses were not computationally reproducible'. A strict reading of 'cannot be executed as shipped' could point to technical failure. I did not list it as an alternative because the fixes (git lfs pull, paths, library calls) are standard setup and change no numbers."
+}

@@ -1,0 +1,11 @@
+--- a/BPV_museums_maintext.R	
++++ b/BPV_museums_maintext.R	
+@@ -48,7 +48,7 @@
+ 
+ # this function recodes NAs to the mean, per our PAP
+ f <- function(x){ 
+-  m <- mean(x, na.rm = TRUE) 
++  m <- 0 
+   x[is.na(x)] <- m 
+   x 
+ }

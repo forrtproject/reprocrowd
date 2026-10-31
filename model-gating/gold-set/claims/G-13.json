@@ -1,0 +1,67 @@
+{
+  "gold_id": "G-13",
+  "cand_id": "RB-023",
+  "doi": "10.1017/s0003055421000940",
+  "title": "Effective for Whom? Ethnic Identity and Nonviolent Resistance",
+  "stratum_drawn": "computational issues",
+  "paper_url": "https://doi.org/10.1017/s0003055421000940",
+  "package": {
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/23/replication_package",
+    "version_pin": "REPRO-Bench snapshot commit 74958fba32daeacff51f2e1fd37be3916595648f",
+    "language": "R",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf",
+      "description": "Human computational reproduction report."
+    },
+    {
+      "url": "https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0003055421000940/resource/name/S0003055421000940sup001.pdf",
+      "description": "Original article supplementary information."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Precision of campaign success for nonviolent non-excluded groups",
+      "exhibit": "Online Appendix Table A5, Group Status row 1; Figure 1a",
+      "page": 7,
+      "quantity": "Standard error of predicted success probability",
+      "reported": "0.05"
+    },
+    {
+      "id": "C2",
+      "claim": "Precision of campaign success for nonviolent excluded groups",
+      "exhibit": "Online Appendix Table A5, Group Status row 2; Figure 1a",
+      "page": 7,
+      "quantity": "Standard error of predicted success probability",
+      "reported": "0.05"
+    },
+    {
+      "id": "C3",
+      "claim": "Precision of campaign success for nonviolent groups at or above mean size",
+      "exhibit": "Online Appendix Table A5, Group Size row 5; Figure 1b",
+      "page": 7,
+      "quantity": "Standard error of predicted success probability",
+      "reported": "0.04"
+    },
+    {
+      "id": "C4",
+      "claim": "US experiment: Black protesters and perceived violence",
+      "exhibit": "Table 2, panel A, column 1",
+      "page": null,
+      "quantity": "Black-protester coefficient",
+      "reported": "0.347"
+    },
+    {
+      "id": "C5",
+      "claim": "US experiment: Black protesters and required police action",
+      "exhibit": "Table 2, panel A, column 3",
+      "page": null,
+      "quantity": "Black-protester coefficient",
+      "reported": "0.429"
+    }
+  ],
+  "notes": ""
+}

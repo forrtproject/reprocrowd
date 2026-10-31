@@ -1,0 +1,87 @@
+{
+  "gold_id": "G-15",
+  "expected_validation_status": "computational issues",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "discrepant",
+      "reference_recomputed": -0.11,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "The printed linear Pr(win) coefficient does not match the original-code output.",
+      "evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2 Friction 2, PDF p. 5: “-0.11”.",
+      "rationale": "The source runs the deposited scripts without changing their logic and obtains -0.11 rather than -0.05; the accompanying chi-squared and p value recur.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2 Friction 2, PDF p. 5: “-0.11”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C2",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.26,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "The printed linear Pr(win) standard error does not match the original-code output.",
+      "evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2 Friction 2, PDF p. 5: “SE = 0.26”.",
+      "rationale": "The source obtains SE 0.26 rather than 0.06. This is the deterministic reporting discrepancy, separated from version-dependent Wald-statistic differences.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2 Friction 2, PDF p. 5: “SE = 0.26”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": 0.75,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2, PDF p. 4: “d = 0.75”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2, PDF p. 4: “d = 0.75”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": 0.46,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2, PDF p. 4: “d = 0.46”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2, PDF p. 4: “d = 0.46”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": "35%",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2, PDF p. 4: “35%”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2, PDF p. 4: “35%”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C6",
+      "expected_status": "match",
+      "reference_recomputed": "24%",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2, PDF p. 4: “24%”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2, PDF p. 4: “24%”.",
+      "reference_scope": "authors_workflow"
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "Use the deterministic linear Pr(win) reporting mismatch. Version-sensitive Wald tests, changed inference methods, covariate removal and trial-level robustness models do not supply discrepancy labels."
+}

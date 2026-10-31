@@ -1,0 +1,206 @@
+{
+ "gold_id": "G-03",
+ "gold_version": "1.1",
+ "cand_id": "I4R-vcsfj",
+ "doi": "10.1038/s41562-023-01634-5",
+ "title": "Human and animal dominance hierarchies show a pyramidal structure guiding adult and infant social inferences",
+ "stratum_drawn": "computationally reproducible",
+ "paper_url": "https://doi.org/10.1038/s41562-023-01634-5",
+ "package": {
+  "url": "https://osf.io/pk7bg/",
+  "version_pin": "Pyramids_Data_Codes_NHB.zip: OSF file 6452552641630914f1e404cb version 1, SHA-256 05ea451aed69c63adddab9adbfa5fc4affb9e2b782a1be89ec324d9cc36c6434",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/vmjf4/",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "label_confidence": "medium",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Triadic-pyramid prevalence test for human children",
+   "exhibit": "Supplementary Table 2",
+   "page": 19,
+   "quantity": "Holm-corrected Wilcoxon p-value",
+   "reported": "2.1420e-04",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/vmjf4/ — §2.1 Overall Computational Reproducibility, PDF pp. 3–4 and Table 1 Original columns: “all key results”.",
+   "rationale": "The report section 2.1 supports the match judgement through a general original-analysis reproduction statement. Its Original column quotes article values, and the shipped CSV only corroborates at two significant figures. No independent rerun at the full printed precision is established; reference_recomputed remains null.",
+   "diagnostic_results": [
+    {
+     "value": "2.1e-04",
+     "provenance": "shipped_output",
+     "evidence": "Author package Pyramids_analysis_NHB_revision/Study 1a/tableS3.csv, pattern X021D, p.adj; report https://osf.io/download/vmjf4/ section 2.1 confirms reproduction generally.",
+     "scope": "CSV rounded to two significant figures; corroboration only, not a recomputation at the full printed precision of Supplementary Table 2",
+     "is_scoring_reference": false
+    }
+   ],
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report states all key results reproduce (section 2.1). Its Table 1 'Original' column (captioned as the paper's values, so possibly quoted rather than re-run) and the authors' shipped tableS3.csv output both agree with the printed value, at 3 sf and 2 sf respectively."
+  },
+  {
+   "id": "C2",
+   "claim": "Triadic-pyramid prevalence test for non-human primates",
+   "exhibit": "Supplementary Table 2",
+   "page": 19,
+   "quantity": "Holm-corrected Wilcoxon p-value",
+   "reported": "6.8250e-09",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/vmjf4/ — §2.1 Overall Computational Reproducibility, PDF pp. 3–4 and Table 1 Original columns: “all key results”.",
+   "rationale": "The report section 2.1 supports the match judgement through a general original-analysis reproduction statement. Its Original column quotes article values, and the shipped CSV only corroborates at two significant figures. No independent rerun at the full printed precision is established; reference_recomputed remains null.",
+   "diagnostic_results": [
+    {
+     "value": "6.8e-09",
+     "provenance": "shipped_output",
+     "evidence": "Author package Pyramids_analysis_NHB_revision/Study 1a/tableS3.csv, pattern X021D, p.adj; report https://osf.io/download/vmjf4/ section 2.1 confirms reproduction generally.",
+     "scope": "CSV rounded to two significant figures; corroboration only, not a recomputation at the full printed precision of Supplementary Table 2",
+     "is_scoring_reference": false
+    }
+   ],
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report states all key results reproduce (section 2.1). Its Table 1 'Original' column (captioned as the paper's values, so possibly quoted rather than re-run) and the authors' shipped tableS3.csv output both agree with the printed value, at 3 sf and 2 sf respectively."
+  },
+  {
+   "id": "C3",
+   "claim": "Triadic-pyramid prevalence test for ungulates",
+   "exhibit": "Supplementary Table 2",
+   "page": 19,
+   "quantity": "Holm-corrected Wilcoxon p-value",
+   "reported": "4.3180e-05",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/vmjf4/ — §2.1 Overall Computational Reproducibility, PDF pp. 3–4 and Table 1 Original columns: “all key results”.",
+   "rationale": "The report section 2.1 supports the match judgement through a general original-analysis reproduction statement. Its Original column quotes article values, and the shipped CSV only corroborates at two significant figures. No independent rerun at the full printed precision is established; reference_recomputed remains null.",
+   "diagnostic_results": [
+    {
+     "value": "4.3e-05",
+     "provenance": "shipped_output",
+     "evidence": "Author package Pyramids_analysis_NHB_revision/Study 1a/tableS3.csv, pattern X021D, p.adj; report https://osf.io/download/vmjf4/ section 2.1 confirms reproduction generally.",
+     "scope": "CSV rounded to two significant figures; corroboration only, not a recomputation at the full printed precision of Supplementary Table 2",
+     "is_scoring_reference": false
+    }
+   ],
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report states all key results reproduce (section 2.1). Its Table 1 'Original' column (captioned as the paper's values, so possibly quoted rather than re-run) and the authors' shipped tableS3.csv output both agree with the printed value, at 3 sf and 2 sf respectively."
+  },
+  {
+   "id": "C4",
+   "claim": "Triadic-pyramid prevalence test for carnivores",
+   "exhibit": "Supplementary Table 2",
+   "page": 19,
+   "quantity": "Holm-corrected Wilcoxon p-value",
+   "reported": "3.1200e-06",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/vmjf4/ — §2.1 Overall Computational Reproducibility, PDF pp. 3–4 and Table 1 Original columns: “all key results”.",
+   "rationale": "The report section 2.1 supports the match judgement through a general original-analysis reproduction statement. Its Original column quotes article values, and the shipped CSV only corroborates at two significant figures. No independent rerun at the full printed precision is established; reference_recomputed remains null.",
+   "diagnostic_results": [
+    {
+     "value": "3.1e-06",
+     "provenance": "shipped_output",
+     "evidence": "Author package Pyramids_analysis_NHB_revision/Study 1a/tableS3.csv, pattern X021D, p.adj; report https://osf.io/download/vmjf4/ section 2.1 confirms reproduction generally.",
+     "scope": "CSV rounded to two significant figures; corroboration only, not a recomputation at the full printed precision of Supplementary Table 2",
+     "is_scoring_reference": false
+    }
+   ],
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report states all key results reproduce (section 2.1). Its Table 1 'Original' column (captioned as the paper's values, so possibly quoted rather than re-run) and the authors' shipped tableS3.csv output both agree with the printed value, at 3 sf and 2 sf respectively."
+  },
+  {
+   "id": "C5",
+   "claim": "Triadic-pyramid prevalence test for rodents",
+   "exhibit": "Supplementary Table 2",
+   "page": 19,
+   "quantity": "Holm-corrected Wilcoxon p-value",
+   "reported": "3.2860e-08",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/vmjf4/ — §2.1 Overall Computational Reproducibility, PDF pp. 3–4 and Table 1 Original columns: “all key results”.",
+   "rationale": "The report section 2.1 supports the match judgement through a general original-analysis reproduction statement. Its Original column quotes article values, and the shipped CSV only corroborates at two significant figures. No independent rerun at the full printed precision is established; reference_recomputed remains null.",
+   "diagnostic_results": [
+    {
+     "value": "3.3e-08",
+     "provenance": "shipped_output",
+     "evidence": "Author package Pyramids_analysis_NHB_revision/Study 1a/tableS3.csv, pattern X021D, p.adj; report https://osf.io/download/vmjf4/ section 2.1 confirms reproduction generally.",
+     "scope": "CSV rounded to two significant figures; corroboration only, not a recomputation at the full printed precision of Supplementary Table 2",
+     "is_scoring_reference": false
+    }
+   ],
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report states all key results reproduce (section 2.1). Its Table 1 'Original' column (captioned as the paper's values, so possibly quoted rather than re-run) and the authors' shipped tableS3.csv output both agree with the printed value, at 3 sf and 2 sf respectively."
+  },
+  {
+   "id": "C6",
+   "claim": "Triadic-pyramid prevalence test for birds",
+   "exhibit": "Supplementary Table 2",
+   "page": 19,
+   "quantity": "Holm-corrected Wilcoxon p-value",
+   "reported": "4.5440e-05",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/vmjf4/ — §2.1 Overall Computational Reproducibility, PDF pp. 3–4 and Table 1 Original columns: “all key results”.",
+   "rationale": "The report section 2.1 supports the match judgement through a general original-analysis reproduction statement. Its Original column quotes article values, and the shipped CSV only corroborates at two significant figures. No independent rerun at the full printed precision is established; reference_recomputed remains null.",
+   "diagnostic_results": [
+    {
+     "value": "4.5e-05",
+     "provenance": "shipped_output",
+     "evidence": "Author package Pyramids_analysis_NHB_revision/Study 1a/tableS3.csv, pattern X021D, p.adj; report https://osf.io/download/vmjf4/ section 2.1 confirms reproduction generally.",
+     "scope": "CSV rounded to two significant figures; corroboration only, not a recomputation at the full printed precision of Supplementary Table 2",
+     "is_scoring_reference": false
+    }
+   ],
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report states all key results reproduce (section 2.1). Its Table 1 'Original' column (captioned as the paper's values, so possibly quoted rather than re-run) and the authors' shipped tableS3.csv output both agree with the printed value, at 3 sf and 2 sf respectively."
+  }
+ ],
+ "notes": {
+  "claim_list": "",
+  "sol": "The source reproduces the original normalization and its reported outputs. Its Correctly Normalized column is a changed analysis and is excluded. Source comparison p-values are rounded more coarsely than original Supplementary Table 2; no invented high-precision reference values are supplied. Round 1: the report Table 1 Original column is a quotation of article values. The shipped tableS3.csv has only two significant figures, recorded as diagnostic_results; no extra precision is imputed to reference_recomputed.",
+  "claude": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "Values confirmed in the published Supplementary Information (static-content.springer.com, MOESM1, Supplementary Table 2). The report's Table 1 'Original' column is captioned as 'the original calculations in the paper', so it may quote the paper rather than show the re-run output; the reproduction verdict comes from the general statement in section 2.1. Its 'Original' tree p-value for human children (1.51e-1) differs from the printed 1.1520e-01, probably a transcription slip; trees are not claimed. The code sets set.seed(123) before the 1000-replicate Monte Carlo z-scores, so the values are deterministic. Mislabelling in the deposit and SI (P3, no numeric consequence): printed Supplementary Table 2 values are the one-sample Wilcoxon tests of normalized z-scores vs 0 (ST1a_plots.R writes these to 'tableS3.csv'), whereas the shipped 'tableS2.csv' holds the paired pyramid-vs-tree test, and the SI Table 2 caption describes the paired test. A checker matching by file name will find different numbers. The report's Z-score normalization finding (code normalizes across metrics within study, unlike the text's equation 3) is a code-vs-description inconsistency. It does not stop the shipped code reproducing the printed values, but a reconciler could treat it as a P2/P3 methods-description issue."
+ }
+}

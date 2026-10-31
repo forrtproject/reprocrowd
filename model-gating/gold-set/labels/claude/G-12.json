@@ -1,0 +1,65 @@
+{
+ "gold_id": "G-12",
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "exact at 2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/6ruqx/ (I4R DP 295) PDF p.7, Sec. 2: \"All comparative statistical analyses (normality tests, Wilcoxon tests, and Bayesian t-tests) reproduced the results reported in the original study without deviation.\"",
+   "rationale": "Report states all Wilcoxon tests reproduced exactly from the deposited analysis data and code with no modification; no individual value is listed.",
+   "reported_check": "confirmed in preprint (PsyArXiv j8g3p_v1: \"Z = −1.03, p = .304\"); published version not accessed (paywalled)"
+  },
+  {
+   "id": "C2",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "exact at 2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "I4R DP 295 PDF p.7: \"Wilcoxon tests ... reproduced the results reported in the original study without deviation.\"",
+   "rationale": "Covered by the report's blanket statement of exact reproduction of Wilcoxon tests.",
+   "reported_check": "confirmed in preprint (PsyArXiv j8g3p_v1: \"Z = −3.65, p < .001\"); published version not accessed"
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "exact at 2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "I4R DP 295 PDF p.7: \"Wilcoxon tests ... reproduced the results reported in the original study without deviation.\"",
+   "rationale": "Covered by the report's blanket statement of exact reproduction of Wilcoxon tests.",
+   "reported_check": "confirmed in preprint (PsyArXiv j8g3p_v1: \"Z = −1.77, p = .076\"); published version not accessed"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "exact at 2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "I4R DP 295 PDF p.7: \"Wilcoxon tests ... reproduced the results reported in the original study without deviation.\"",
+   "rationale": "Covered by the report's blanket statement of exact reproduction of Wilcoxon tests.",
+   "reported_check": "confirmed in preprint (PsyArXiv j8g3p_v1: \"Z = −0.95, p = .341\"); published version not accessed"
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "exact at 2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "I4R DP 295 PDF p.7: \"Wilcoxon tests ... reproduced the results reported in the original study without deviation.\"",
+   "rationale": "Covered by the report's blanket statement of exact reproduction of Wilcoxon tests.",
+   "reported_check": "confirmed in preprint (PsyArXiv j8g3p_v1: \"Z = −7.57, p < .001\"); published version not accessed"
+  }
+ ],
+ "label_confidence": "high",
+ "notes": "The data files are now pinned in the claims file; the earlier missing-pin remark is obsolete. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "The report gives no per-test recomputed values, only a blanket exact-reproduction statement, so reference_recomputed is null. It does table small MCMC differences in the Bayesian mixed models (e.g. Exp 1b intercept 63.82 vs 63.761), but none of these claims depends on them. Raw data are absent; scope starts from processed data, which matches the claim-file note. The published Psychological Science article is closed access, so printed values were checked against the PsyArXiv preprint j8g3p_v1. The package version_pin lists code, experiment and figure files but not the three data CSVs (Data/IID_dat.csv etc.), which are needed to run the code."
+}

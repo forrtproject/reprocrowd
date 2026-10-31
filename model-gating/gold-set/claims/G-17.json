@@ -1,0 +1,71 @@
+{
+  "gold_id": "G-17",
+  "cand_id": "I4R-vg2kt",
+  "doi": "10.1038/s41562-023-01558-0",
+  "title": "Supernatural explanations across 114 societies are more common for natural than social phenomena",
+  "stratum_drawn": "computational issues",
+  "paper_url": "https://www.joshuaconradjackson.com/s/Jackson-et-al.pdf",
+  "package": {
+    "url": "https://osf.io/jsk4t/",
+    "version_pin": "Tree Building.R: OSF file 625f11ca99126100806e3e92 version 1, SHA-256 b2e5b008139945735ab6d0d696c6ccd645ec7988ca360d2334bd7526fcbfbb09; Supernatural Explanations (Cleaning).R: OSF file 625f11ca63950d0083d7f7b4 version 1, SHA-256 4b7a43d57828de93e7cc0aa42e85acb08ae39c4d7e0284b27299d07f549c050e; Supernatural Explanations (Analyses).R: OSF file 625f11986ac2a700824a9bb0 version 1, SHA-256 73ba61a804313215f05d8affc1d956e047c048624ecc7a58f4a117f24f80486b; tiplabel_update.R: OSF file 63532484f17f301296e3cea2 version 1, SHA-256 68458b8eadf43298cc6ac2e37c3776148d1bce9eaa13e54b48b890c8b0ed0ff1; Supernatural Explanations (Analyses).R: OSF file 635331dae6a23a12a29aa67d version 1, SHA-256 e316767a459837dc1c673d7e1fcc023fe767812569251d161df49dac50fb2225; Building 3 Glottolog Trees.R: OSF file 6353249ff17f30129be3cf11 version 1, SHA-256 14c97e3904b965e34b9335841c24df2d2c89c23ad3d6287770e77d99b9ebff6e; Supernatural Explanations (Cleaning).R: OSF file 635324a393d35212a191b83b version 1, SHA-256 56f75f6da7c92f5254744af1196fbcd73f3c17ef2be1b34191cbd5024676a35f; Supernatural Explanations (Text Analysis).R: OSF file 639a52844cc86c0b921156ad version 1, SHA-256 bfd6952366ddb31a993c51692d6f96904e4479bfb709a7c54e299d8600a4eac0",
+    "language": "R",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/vrbtz/",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Natural-phenomenon explanations at low social complexity",
+      "exhibit": "Results, Social complexity; Figure 4b",
+      "page": 709,
+      "quantity": "Predicted mean at minus one SD social complexity",
+      "reported": "0.95"
+    },
+    {
+      "id": "C2",
+      "claim": "Social-phenomenon explanations at low social complexity",
+      "exhibit": "Results, Social complexity; Figure 4b",
+      "page": 709,
+      "quantity": "Predicted mean at minus one SD social complexity",
+      "reported": "0.52"
+    },
+    {
+      "id": "C3",
+      "claim": "Natural-phenomenon explanations at high social complexity",
+      "exhibit": "Results, Social complexity; Figure 4b",
+      "page": 709,
+      "quantity": "Predicted mean at plus one SD social complexity",
+      "reported": "0.85"
+    },
+    {
+      "id": "C4",
+      "claim": "Social-phenomenon explanations at high social complexity",
+      "exhibit": "Results, Social complexity; Figure 4b",
+      "page": 709,
+      "quantity": "Predicted mean at plus one SD social complexity",
+      "reported": "0.71"
+    },
+    {
+      "id": "C5",
+      "claim": "Prevalence of natural versus social supernatural explanations",
+      "exhibit": "Results, Prevalence across domains",
+      "page": 709,
+      "quantity": "Phylogenetically adjusted paired t statistic",
+      "reported": "10.20"
+    },
+    {
+      "id": "C6",
+      "claim": "Social complexity and supernatural explanations of social phenomena",
+      "exhibit": "Results, Social complexity",
+      "page": 709,
+      "quantity": "Unstandardized regression coefficient",
+      "reported": "0.17"
+    }
+  ],
+  "notes": ""
+}

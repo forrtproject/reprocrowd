@@ -1,0 +1,74 @@
+{
+  "gold_id": "G-18",
+  "expected_validation_status": "computational issues",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.004,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "The Study 5 lead partial eta-squared is misreported.",
+      "evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+      "rationale": "The original published PDF prints .01; the source’s original-code comparison gives .004, which rounds to .00 at two decimals.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C2",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.012,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "The Study 5 candidate partial eta-squared is misreported.",
+      "evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+      "rationale": "The article prints < .01; the source gives .012, which does not satisfy that bound.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": 41.57,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": 5.319,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": -3.733,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+      "reference_scope": "authors_workflow"
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "The same source confirms the F and pairwise t results. These are effect-size reporting discrepancies, not failures of the principal interaction or the underlying substantive finding."
+}

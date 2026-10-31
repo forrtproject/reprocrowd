@@ -1,0 +1,78 @@
+{
+ "gold_id": "G-11",
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [
+  "computational issues"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "match",
+   "reference_recomputed": "−1.321",
+   "tolerance": "exact at 3 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf PDF p.6-7, Sec. 2.1 and recreated Table 1 col (1): \"Bisbee and Honig (2022)'s presidential primary outcomes replicate perfectly using the R code provided on the Harvard Dataverse repository\"; Exposure Dummy −1.321∗ (0.552)",
+   "rationale": "Report's rerun of the unchanged code gives the printed coefficient exactly.",
+   "reported_check": "confirmed in paper (REPRO-Bench snapshot 29/paper.pdf, Table 1: −1.321)"
+  },
+  {
+   "id": "C2",
+   "expected_status": "close",
+   "reference_recomputed": "−1.066",
+   "tolerance": "±0.005 (matched-sample estimate; 3 dp printed)",
+   "severity": null,
+   "cause": "Matched-sample column (MatchIt nearest-neighbour Mahalanobis) reruns slightly differently, probably due to package version; shipped log reproduces the printed value exactly (treatBin −1.063590, s.e. 0.476627)",
+   "evidence": "I4R-DP036 PDF p.7, recreated Table 1 col (2): \"Exposure Dummy ... −1.066∗ (0.478)\" vs paper −1.064∗ (0.477); report text: \"replicate perfectly\"",
+   "rationale": "Report treats the result as perfectly replicated, but its own table differs by 0.002 at printed precision; the shipped log matches the paper, so the gap comes from the environment, not the code.",
+   "reported_check": "confirmed in paper (Table 1 col 2: −1.064 (0.477))"
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": "−1.348",
+   "tolerance": "exact at 3 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "I4R-DP036 PDF p.7, recreated Table 1 col (3): \"−1.348∗∗∗ (0.380)\"",
+   "rationale": "Identical to printed value.",
+   "reported_check": "confirmed in paper (Table 1 col 3: −1.348)"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": "−0.885",
+   "tolerance": "exact at 3 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "I4R-DP036 PDF p.7, recreated Table 1 col (4): \"−0.885∗ (0.382)\"",
+   "rationale": "Identical to printed value.",
+   "reported_check": "confirmed in paper (Table 1 col 4: −0.885)"
+  },
+  {
+   "id": "C5",
+   "expected_status": "close",
+   "reference_recomputed": "−0.574",
+   "tolerance": "±0.005 (matched-sample estimate; 3 dp printed)",
+   "severity": null,
+   "cause": "Matched-sample column; rerun differs slightly (likely MatchIt/optmatch version). Code seeds set.seed(123).",
+   "evidence": "I4R-DP036 PDF p.7, recreated Table 1 col (5): \"−0.574∗∗ (0.204)\" vs paper −0.569∗∗ (0.200); report text: \"replicate perfectly\"",
+   "rationale": "Small environment-driven difference that the report treats as perfectly replicated; significance stars unchanged.",
+   "reported_check": "confirmed in paper (Table 1 col 5: −0.569 (0.200))"
+  },
+  {
+   "id": "C6",
+   "expected_status": "match",
+   "reference_recomputed": "−0.885",
+   "tolerance": "exact at 3 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "I4R-DP036 PDF p.7, recreated Table 1 col (6): \"−0.885∗∗ (0.325)\"",
+   "rationale": "Identical to printed value.",
+   "reported_check": "confirmed in paper (Table 1 col 6: −0.885)"
+  }
+ ],
+ "label_confidence": "high",
+ "notes": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "The report says Table 1 replicates perfectly, but its recreated table differs in the two matched-sample columns (2) and (5): exposure −1.066 vs −1.064 and −0.574 vs −0.569. Other covariates in col 2 differ more (caucus switch 0.434 vs printed 0.897; caucus dummy 0.023 vs 0.337), so the matched sample itself changed in their environment. The shipped log (Code/LOG/log_Table 1, SI3, SI4, SI5, Figure SI13, SI14.txt in the REPRO-Bench snapshot) shows treatBin −1.063590 (0.476627) for col 2, matching the paper. So the code is correct but matching output depends on the version. That is why C2/C5 are 'close'; a strict reconciler could argue 'not_checkable' (version-dependent output) for those two claims, or 'computational issues' at paper level. The paper was checked via the REPRO-Bench snapshot's paper.pdf."
+}

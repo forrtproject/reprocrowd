@@ -1,0 +1,148 @@
+{
+ "gold_id": "G-01",
+ "gold_version": "1.1",
+ "cand_id": "I4R-ejsb9",
+ "doi": "10.1177/09567976241242037",
+ "title": "Do We Become More Lonely With Age? A Coordinated Data Analysis of Nine Longitudinal Studies",
+ "stratum_drawn": "computationally reproducible",
+ "paper_url": "https://pscresearch.faculty.ucdavis.edu/wp-content/uploads/sites/112/2024/11/beck-yoneda-2024-loneliness-coordinated-data.pdf",
+ "package": {
+  "url": "https://github.com/emoriebeck/loneliness-trajectories",
+  "version_pin": "Git commit 5abae4b94d995b4fd412780175c14b8080623592",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/9ht7y/",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "label_confidence": "medium",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Pooled quadratic age effect on loneliness",
+   "exhibit": "Figure 1a, Meta-Analytic row",
+   "page": 8,
+   "quantity": "Pooled quadratic age coefficient",
+   "reported": "0.07",
+   "expected_status": "match",
+   "reference_recomputed": "0.07",
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/9ht7y/ — §2 Computational Reproducibility, pp. 5–6: “computationally reproduced”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/9ht7y/ p.12 (report page numbering; PDF p.13), Figure 1 'Reproduced Figures 1a (left) and 1b (right)': reproduced forest plot shows 'RE Model (Q = 365.91, df = 7, p = 0, I2 = 98.74)' and 'Meta-Analytic 0.07 [0.02, 0.13] 69732'; p.7: 'After overcoming this issues, we were able to rerun the meta-analysis script on both a Windows and Linux system, reproducing all figures, including age2-imp-Quadratic-slope-Main-adj.png'; Table 2 'REML estimation (original) 0.017 0.072 0.127'",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Re-running the authors' meta-analysis script regenerated Figure 1a with the identical pooled estimate."
+  },
+  {
+   "id": "C2",
+   "claim": "Uncertainty in the pooled quadratic age effect",
+   "exhibit": "Figure 1a, Meta-Analytic row",
+   "page": 8,
+   "quantity": "95% confidence interval",
+   "reported": "[0.02, 0.13]",
+   "expected_status": "match",
+   "reference_recomputed": "[0.02, 0.13]",
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/9ht7y/ — §2 Computational Reproducibility, pp. 5–6: “computationally reproduced”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/9ht7y/ p.12 (report page numbering; PDF p.13), Figure 1 'Reproduced Figures 1a (left) and 1b (right)': reproduced forest plot shows 'RE Model (Q = 365.91, df = 7, p = 0, I2 = 98.74)' and 'Meta-Analytic 0.07 [0.02, 0.13] 69732'; p.7: 'After overcoming this issues, we were able to rerun the meta-analysis script on both a Windows and Linux system, reproducing all figures, including age2-imp-Quadratic-slope-Main-adj.png'; Table 2 REML row CI 0.017 to 0.127",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Reproduced Figure 1a shows the identical CI."
+  },
+  {
+   "id": "C3",
+   "claim": "Heterogeneity in quadratic age effects",
+   "exhibit": "Figure 1a, RE Model",
+   "page": 8,
+   "quantity": "Cochran Q",
+   "reported": "365.91",
+   "expected_status": "match",
+   "reference_recomputed": "365.91",
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/9ht7y/ — §2 Computational Reproducibility, pp. 5–6: “computationally reproduced”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/9ht7y/ p.12 (report page numbering; PDF p.13), Figure 1 'Reproduced Figures 1a (left) and 1b (right)': reproduced forest plot shows 'RE Model (Q = 365.91, df = 7, p = 0, I2 = 98.74)' and 'Meta-Analytic 0.07 [0.02, 0.13] 69732'; p.7: 'After overcoming this issues, we were able to rerun the meta-analysis script on both a Windows and Linux system, reproducing all figures, including age2-imp-Quadratic-slope-Main-adj.png'",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Q is printed in the regenerated forest-plot header; the report does not discuss it in text but the reproduced figure shows the same value."
+  },
+  {
+   "id": "C4",
+   "claim": "Proportion of heterogeneity in quadratic age effects",
+   "exhibit": "Figure 1a, RE Model",
+   "page": 8,
+   "quantity": "I-squared",
+   "reported": "98.74",
+   "expected_status": "match",
+   "reference_recomputed": "98.74",
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/9ht7y/ — §2 Computational Reproducibility, pp. 5–6: “computationally reproduced”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/9ht7y/ p.12 (report page numbering; PDF p.13), Figure 1 'Reproduced Figures 1a (left) and 1b (right)': reproduced forest plot shows 'RE Model (Q = 365.91, df = 7, p = 0, I2 = 98.74)' and 'Meta-Analytic 0.07 [0.02, 0.13] 69732'; p.7: 'After overcoming this issues, we were able to rerun the meta-analysis script on both a Windows and Linux system, reproducing all figures, including age2-imp-Quadratic-slope-Main-adj.png'",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "I-squared appears identically in the regenerated forest-plot header."
+  },
+  {
+   "id": "C5",
+   "claim": "Participants contributing to the quadratic-age meta-analysis",
+   "exhibit": "Figure 1a, Meta-Analytic row",
+   "page": 8,
+   "quantity": "Meta-analytic sample size",
+   "reported": "69732",
+   "expected_status": "match",
+   "reference_recomputed": "69732",
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/9ht7y/ — §2 Computational Reproducibility, pp. 5–6: “computationally reproduced”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/9ht7y/ p.12 (report page numbering; PDF p.13), Figure 1 'Reproduced Figures 1a (left) and 1b (right)': reproduced forest plot shows 'RE Model (Q = 365.91, df = 7, p = 0, I2 = 98.74)' and 'Meta-Analytic 0.07 [0.02, 0.13] 69732'; p.7: 'After overcoming this issues, we were able to rerun the meta-analysis script on both a Windows and Linux system, reproducing all figures, including age2-imp-Quadratic-slope-Main-adj.png'",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Meta-analytic N in the regenerated figure equals the printed N."
+  }
+ ],
+ "notes": {
+  "claim_list": "replaces I4R-qe3fx: reason in REPLACE file. Scope begins with the deposited study-level meta-analysis inputs.",
+  "sol": "Replacement I4R-ejsb9. Scope starts from the public study-level meta-analysis inputs, not restricted individual-level studies. The source reran the meta-analysis after lossless setup/path/package repairs, including loading variables defined in supplied scripts. Its reproduced forest plot (report p.12; PDF p.13) supplies the references for Q, I-squared and pooled sample size as well as the pooled estimate and interval. Those are source-report references, not null or a new local meta-analysis rerun. C2 is the pooled interval [0.02, 0.13].",
+  "claude": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "Report (I4R DP 224, Pawel, Kutlar & Knopfle 2025) reproduced from the analysis data only (raw data not shipped; scope matches claims file). Initial obstacles: Git LFS-tracked .RData model files load as pointer files unless `git lfs pull` is run (undocumented; OSF mirror unusable), absolute paths, missing library() calls, and dependence on objects from the cleaning script. These were fixed without changing the analysis and the report concludes 'our computational reproduction was successful'. A reconciler might rate the LFS/OSF issue a P3 documentation problem; it does not change any number. Q, I2 and N are only verified via the reproduced figure image (report PDF p.13), not in report text. The report says 'In the initial attempt the meta-analyses were not computationally reproducible'. A strict reading of 'cannot be executed as shipped' could point to technical failure. I did not list it as an alternative because the fixes (git lfs pull, paths, library calls) are standard setup and change no numbers."
+ }
+}

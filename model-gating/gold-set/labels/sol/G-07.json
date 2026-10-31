@@ -1,0 +1,72 @@
+{
+  "gold_id": "G-07",
+  "expected_validation_status": "computational issues",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "discrepant",
+      "reference_recomputed": 1.14,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "A descriptive SD is mistyped in the published article.",
+      "evidence": "https://osf.io/download/k6xce/ — §2 Computational Reproducibility, PDF p. 3: “outputs SD = 1.14”.",
+      "rationale": "The final published PDF, p. 27, prints 0.14; the source reports that the original analytical script yields 1.14. This is a secondary numerical reporting discrepancy even though the report calls the main analyses reproduced.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/k6xce/ — §2 Computational Reproducibility, PDF p. 3: “outputs SD = 1.14”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C2",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/k6xce/ — §2 Computational Reproducibility, PDF p. 3: “All reported effects”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/k6xce/ — §2 Computational Reproducibility, PDF p. 3: “All reported effects”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/k6xce/ — §2 Computational Reproducibility, PDF p. 3: “All reported effects”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/k6xce/ — §2 Computational Reproducibility, PDF p. 3: “All reported effects”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    },
+    {
+      "id": "C6",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/k6xce/ — §2 Computational Reproducibility, PDF p. 3: “All reported effects”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "Drawn as reproducible, but independent labelling identifies the source-documented secondary discrepancy. The accessible accepted manuscript prints 1.14; the final SAGE PDF prints 0.14 and is the reported-value target. Trial coding and revised model specifications do not enter the verdict."
+}

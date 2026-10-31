@@ -1,0 +1,63 @@
+{
+  "gold_id": "G-06",
+  "cand_id": "RB-004",
+  "doi": "10.1086/716289",
+  "title": "Black Workers in White Places: Daytime Racial Diversity and White Public Opinion",
+  "stratum_drawn": "computationally reproducible",
+  "paper_url": "https://doi.org/10.1086/716289",
+  "package": {
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/4/replication_package",
+    "version_pin": "REPRO-Bench snapshot commit 74958fba32daeacff51f2e1fd37be3916595648f",
+    "language": "R",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Racial flux and Democratic presidential voting",
+      "exhibit": "Table 1, President",
+      "page": 1832,
+      "quantity": "Racial flux coefficient",
+      "reported": "−.002"
+    },
+    {
+      "id": "C2",
+      "claim": "Racial flux and Democratic House voting",
+      "exhibit": "Table 1, US House",
+      "page": 1832,
+      "quantity": "Racial flux coefficient",
+      "reported": "−.001"
+    },
+    {
+      "id": "C3",
+      "claim": "Racial flux and racial resentment",
+      "exhibit": "Table 1, Racial Resentment",
+      "page": 1832,
+      "quantity": "Racial flux coefficient",
+      "reported": ".005"
+    },
+    {
+      "id": "C4",
+      "claim": "Racial flux and opposition to affirmative action",
+      "exhibit": "Table 1, Affirmative Action",
+      "page": 1832,
+      "quantity": "Racial flux coefficient",
+      "reported": ".003"
+    },
+    {
+      "id": "C5",
+      "claim": "Precision of the racial-flux estimate for racial resentment",
+      "exhibit": "Table 1, Racial Resentment",
+      "page": 1832,
+      "quantity": "Clustered standard error",
+      "reported": ".001"
+    }
+  ],
+  "notes": ""
+}

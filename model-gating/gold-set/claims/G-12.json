@@ -1,0 +1,93 @@
+{
+  "gold_id": "G-12",
+  "cand_id": "I4R-5c9aj",
+  "doi": "10.1177/09567976251344570",
+  "title": "On the Robustness and Provenance of the Gambler’s Fallacy",
+  "stratum_drawn": "computationally reproducible",
+  "paper_url": "https://doi.org/10.1177/09567976251344570",
+  "package": {
+    "url": "https://osf.io/67nsd/",
+    "version_pin": "helper.R: OSF file 67dc8ff61c3a103428053b62 version 1, SHA-256 df49296f81ef0e195b0bdacdeaa0ffe626b2c5b417590db13bfed5b45dea2b77; plot_figures.R: OSF file 6809140cd5db03a42635ffd5 version 1, SHA-256 8ef313224a300e50c36a9ca4ed17301c85cabeafa9bc299c317bceecae77ffd3; statistical_analysis.R: OSF file 680917a110070a4d5025afba version 1, SHA-256 828f3997610427b9c19221ec03e76eef628b60fb2db3d3de1f8623574dcb6fde; Exp1a.html: OSF file 67dc90766ca8c748b3e489e6 version 1, SHA-256 ba3229afdf69b1d47ddff37763fe23b83619287020df67e8ab2de81a756c26ac; consent_bingo50.html: OSF file 67dc9076ad131d7af4053bc5 version 1, SHA-256 80444eedc6aa4b0816f41c6d5d21241fce8bf9ccf5f7cf1bf6af664cf56d2289; Exp1b.html: OSF file 67dc9079465e2168d2f329cc version 1, SHA-256 a724418ae0c25e2a12856557508f38a98f142392babd5c0cf7e84545cbde45d0; Exp2a.html: OSF file 67dc90794c9504c957c70143 version 1, SHA-256 af0ce96020bcaafefe912b5c0e61ff48bb3c2cf9cd3ad10529f5950b9e5bfe08; Exp3.html: OSF file 67dc907e65c6c2e007e48b8f version 1, SHA-256 03ee9a03fcc213d043ceb9785123162f16f942cb7343d43903253c74f6f49185; Exp2b.html: OSF file 67dc907e24b238175fc6fd92 version 1, SHA-256 b1ca0a893e0e0dc2fb95cf65eb530973baaacffbccce5df5aa3664bcd4f218f3; fig3.pdf: OSF file 680913d8742dc25c22568d64 version 1, SHA-256 67a62d72a7248649230b379c14b55e681fcb582084837f5502377bebd6a12513; fig2.pdf: OSF file 680913d8b64b64946739a905 version 1, SHA-256 8a6a01f0ebfed1a49221addae672e670fc8c2703162242fcba7e9f0a07b09002; fig4.pdf: OSF file 680913dc63d10a838b568c95 version 1, SHA-256 f413ff68078b4dbe3eda69da5fdea9dbca7fd9305637c2840a138614d7b17158; fig5.pdf: OSF file 680913dde0683a0467568e07 version 1, SHA-256 064cd893182df02e3a102bbef7245cabbd73c6c95b08a9cc9e13b37a72078557; supplement.pdf: OSF file 680913e287dd02a16035fe60 version 1, SHA-256 f7f6e8a5f8f5fa9a16a3ea7819d3c3291e10b1ced5fbf5183210259b74656de2; fig6.pdf: OSF file 680913e22ca57cdf2625b2a8 version 1, SHA-256 50f485dc0e02d38339c9a2a874bc1fc74e94e2ced2b6b7e865559bd61c7af2e7; /Data/RH_replication_dat.csv: OSF file 67dc9054afd8249e3f053a7b version 1, SHA-256 cbae5afac5b3bcb76a9476583d70cf0c875a68b01cd919cc10881730c1d7c799; /Data/IID_dat.csv: OSF file 67dc9055ad131d7af4053bbb version 1, SHA-256 0bfd1b0b6c1b2a7e5d935d92aa4d0a923bee3cfdc13b0e4729e47df27adccd5d; /Data/RH2023_study2A.csv: OSF file 67dc905665c6c2e007e48b80 version 1, SHA-256 2a2fd909231e944b50d345e4443a6db5fa0b8c9aaecec9cda9e499d141d6f499",
+    "language": "R",
+    "code_format": "files",
+    "data_files": [
+      {
+        "path": "/Data/RH_replication_dat.csv",
+        "osf_file_id": "67dc9054afd8249e3f053a7b",
+        "version": 1,
+        "sha256": "cbae5afac5b3bcb76a9476583d70cf0c875a68b01cd919cc10881730c1d7c799",
+        "url": "https://osf.io/download/2n9bc/"
+      },
+      {
+        "path": "/Data/IID_dat.csv",
+        "osf_file_id": "67dc9055ad131d7af4053bbb",
+        "version": 1,
+        "sha256": "0bfd1b0b6c1b2a7e5d935d92aa4d0a923bee3cfdc13b0e4729e47df27adccd5d",
+        "url": "https://osf.io/download/eshq6/"
+      },
+      {
+        "path": "/Data/RH2023_study2A.csv",
+        "osf_file_id": "67dc905665c6c2e007e48b80",
+        "version": 1,
+        "sha256": "2a2fd909231e944b50d345e4443a6db5fa0b8c9aaecec9cda9e499d141d6f499",
+        "url": "https://osf.io/download/cgxbn/"
+      }
+    ]
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/6ruqx/",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Experiment 1a probability judgments relative to the 50% base rate",
+      "exhibit": "Experiment 1a results",
+      "page": null,
+      "quantity": "Wilcoxon Z",
+      "reported": "−1.03"
+    },
+    {
+      "id": "C2",
+      "claim": "Experiment 2a probability judgments relative to the 60% base rate",
+      "exhibit": "Experiment 2a results",
+      "page": null,
+      "quantity": "Wilcoxon Z",
+      "reported": "−3.65"
+    },
+    {
+      "id": "C3",
+      "claim": "Experiment 2a probability judgments relative to the 40% base rate",
+      "exhibit": "Experiment 2a results",
+      "page": null,
+      "quantity": "Wilcoxon Z",
+      "reported": "−1.77"
+    },
+    {
+      "id": "C4",
+      "claim": "Experiment 2b point predictions relative to the 60% base rate",
+      "exhibit": "Experiment 2b results",
+      "page": null,
+      "quantity": "Wilcoxon Z",
+      "reported": "−0.95"
+    },
+    {
+      "id": "C5",
+      "claim": "Experiment 2b point predictions relative to the 40% base rate",
+      "exhibit": "Experiment 2b results",
+      "page": null,
+      "quantity": "Wilcoxon Z",
+      "reported": "−7.57"
+    }
+  ],
+  "notes": "Scope begins with the deposited processed analysis data.",
+  "corrections": [
+    {
+      "round": 1,
+      "claim_ids": [],
+      "reason": "Added exact data-file IDs, versions, and SHA-256 hashes from the archived OSF inventory; these augment the existing code pins."
+    }
+  ]
+}

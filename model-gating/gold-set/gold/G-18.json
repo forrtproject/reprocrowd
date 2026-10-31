@@ -1,0 +1,148 @@
+{
+ "gold_id": "G-18",
+ "gold_version": "1.1",
+ "cand_id": "I4R-82c6v",
+ "doi": "10.1177/09567976251355594",
+ "title": "“Stop the Count!”—How Reporting Partial Election Results Fuels Beliefs in Election Fraud",
+ "stratum_drawn": "computational issues",
+ "paper_url": "https://journals.sagepub.com/doi/pdf/10.1177/09567976251355594",
+ "package": {
+  "url": "https://osf.io/vcb53/",
+  "version_pin": "OSF file 6823545b03c183ef6aeadf6f version 3, 2025 03 CRB Elections Revision All Analyses.Rmd, SHA-256 db0b296a0e1b31b1d278f5648dcb3bdc54343cdf1ebf19b5ac189143c480f4a7; rendered HTML file 6823545b03c183ef6aeadf70 version 3, SHA-256 a2b7131e470fbb14fab2693fb90aecf08356015e30ab61bda00824323628f9ca",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/kqneu/",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "label_confidence": "high",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Study 5 lead main effect on fraud judgments",
+   "exhibit": "Study 5 Results",
+   "page": 684,
+   "quantity": "Partial eta-squared",
+   "reported": ".01",
+   "expected_status": "discrepant",
+   "reference_recomputed": 0.004,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P2",
+   "cause": "The Study 5 lead partial eta-squared is misreported.",
+   "evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+   "rationale": "The original published PDF prints .01; the source’s original-code comparison gives .004, which rounds to .00 at two decimals.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": "Shipped output gives ηp² = .004 (printed .01); the two Study 5 effect sizes are swapped. A wrong printed number is P2 under R2."
+  },
+  {
+   "id": "C2",
+   "claim": "Study 5 candidate main effect on fraud judgments",
+   "exhibit": "Study 5 Results",
+   "page": 684,
+   "quantity": "Partial eta-squared",
+   "reported": "< .01",
+   "expected_status": "discrepant",
+   "reference_recomputed": 0.012,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P2",
+   "cause": "The Study 5 candidate partial eta-squared is misreported.",
+   "evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+   "rationale": "The article prints < .01; the source gives .012, which does not satisfy that bound.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": ".012 rounds to .01, so '< .01' is wrong; consistent with F/(F+df) = 2.04/166.04."
+  },
+  {
+   "id": "C3",
+   "claim": "Study 5 lead-by-candidate interaction",
+   "exhibit": "Study 5 Results",
+   "page": 684,
+   "quantity": "F statistic",
+   "reported": "41.57",
+   "expected_status": "match",
+   "reference_recomputed": 41.57,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Identical."
+  },
+  {
+   "id": "C4",
+   "claim": "Study 5 late-lead winning-versus-losing candidate contrast",
+   "exhibit": "Study 5 Results",
+   "page": 684,
+   "quantity": "t statistic",
+   "reported": "5.32",
+   "expected_status": "match",
+   "reference_recomputed": 5.319,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Rounds to printed 5.32."
+  },
+  {
+   "id": "C5",
+   "claim": "Study 5 early-lead winning-versus-losing candidate contrast",
+   "exhibit": "Study 5 Results",
+   "page": 684,
+   "quantity": "t statistic",
+   "reported": "−3.73",
+   "expected_status": "match",
+   "reference_recomputed": -3.733,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/kqneu/ — Study 5 comparison, Table 5, PDF pp. 10–11: “minor discrepancy”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Rounds to printed −3.73."
+  }
+ ],
+ "notes": {
+  "claim_list": "",
+  "sol": "The same source confirms the F and pairwise t results. These are effect-size reporting discrepancies, not failures of the principal interaction or the underlying substantive finding.",
+  "claude": "C1 and C2 are P2 under R2. No paper alternative under R7. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "Report headline says results are 'fully computationally reproducible' with only a 'minor reporting discrepancy' in two Study 5 effect sizes; hence 'computationally reproducible' as an acceptable alternative. Under the gold rules the printed C1/C2 numbers differ from the shipped output (swapped), so claim-level discrepant. I verified the swap directly in the shipped rendered HTML (afex nice() table)."
+ }
+}

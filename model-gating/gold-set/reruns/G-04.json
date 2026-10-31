@@ -1,0 +1,74 @@
+{
+  "gold_id": "G-04",
+  "executed_by": "claude agent (not a human)",
+  "date": "2026-10-30",
+  "r_version": "4.6.1 (2026-06-24), aarch64-apple-darwin, macOS",
+  "packages": {
+    "lme4": "2.1.0",
+    "Matrix": "1.7.5",
+    "lmerTest": "3.2.1",
+    "dplyr": "1.2.1",
+    "readr": "2.2.0",
+    "lsmeans": "2.30.2",
+    "emmeans": "2.0.4",
+    "rmarkdown": "2.31"
+  },
+  "inputs": "All 15 downloaded package files (scripts, raw and clean CSVs, rendered cleaning HTML, xlsx, README.pdf) matched the SHA-256 values in gold/G-04.json package.version_pin. PDFs other than README were not downloaded.",
+  "lossless_edits": [],
+  "runtime_seconds": 53.9,
+  "runtime_breakdown_seconds": {
+    "MTurk_Analyses.R": 35.0,
+    "REP_Analyses.R": 18.9,
+    "total_claim_runs": 53.9,
+    "cleaning_Rmds_from_raw": 9.0,
+    "BOTH_Analyses.R_diagnostic": 82.6,
+    "note": "runtime_seconds = the two claim-producing analysis scripts on deposited clean data"
+  },
+  "exit_ok": true,
+  "claims": [
+    {
+      "id": "C1",
+      "reported": "2.18",
+      "recomputed": "2.177492530832682",
+      "recurs_at_printed_precision": true,
+      "note": "MTurk_Analyses.R object StdFE: glmer(Choice ~ Frame + (1|ID)), cells G4/L6 only (standard framing problem), CloudResearch sample, N = 375 choices / 94 participants. Printed 95% CI [1.15, 3.21] also recurs (Wald: 1.1476, 3.2073)."
+    },
+    {
+      "id": "C2",
+      "reported": "0.96",
+      "recomputed": "0.957617777650171",
+      "recurs_at_printed_precision": true,
+      "note": "REP_Analyses.R object StdFE, cells G4/L6, student sample, N = 236 / 59. Printed CI [0.24, 1.68] recurs (0.2360, 1.6792); z = 2.601 vs printed 2.60."
+    },
+    {
+      "id": "C3",
+      "reported": "1.04",
+      "recomputed": "1.038648712680527",
+      "recurs_at_printed_precision": true,
+      "note": "MTurk_Analyses.R object mlr1 (primary model: VDA + Frame + VDA:Frame + (1|ID), bobyqa), full CloudResearch sample, N = 3615 / 906; VDA coefficient. Printed CI [0.92, 1.16] recurs (0.9154, 1.1619)."
+    },
+    {
+      "id": "C4",
+      "reported": "0.68",
+      "recomputed": "0.6795394929910186",
+      "recurs_at_printed_precision": true,
+      "note": "REP_Analyses.R object mlr1, full student sample, N = 2080 / 521; VDA coefficient. Printed CI [0.57, 0.79] recurs (0.5694, 0.7897)."
+    },
+    {
+      "id": "C5",
+      "reported": "1.20",
+      "recomputed": "1.199396784123377",
+      "recurs_at_printed_precision": true,
+      "note": "MTurk_Analyses.R object mlr1; Frame coefficient. Printed CI [0.89, 1.51] recurs (0.8908, 1.5080)."
+    },
+    {
+      "id": "C6",
+      "reported": "0.66",
+      "recomputed": "0.6631139770796413",
+      "recurs_at_printed_precision": true,
+      "note": "REP_Analyses.R object mlr1; Frame coefficient. Printed CI [0.38, 0.95] recurs (0.3771, 0.9492)."
+    }
+  ],
+  "implications_for_gold": "Supports the current labels: all six claims are 'match' with expected_status match. Proposed changes: fill reference_recomputed for C1-C6 with the values above (provenance: direct execution of the shipped, unmodified R scripts on the pinned deposited data; scope: original analysis); clear requires_human_rerun (with the caveat that this run was by an agent, not a human, if the field must stay human-specific); raise label_confidence from low; paper-level 'computationally reproducible' is supported, and from raw data too (Run B). Optionally note in the record that the report's unmapped 'b = 1.64, SE = 0.332, t = 4.94' is the combined-sample (BOTH_Analyses.R) standard-framing model, not a discrepancy for any per-sample claim.",
+  "notes": "Scripts ran unchanged, with current CRAN packages, from the deposited *_CleanData.csv (Run A). Run B followed the authors' intended order: MTurk_Cleaning.Rmd and REP_Cleaning.Rmd rendered from the pinned raw CSVs regenerate CleanData files with identical dimensions and values except last-digit floating-point noise in t_duration (mean relative difference ~4e-15); all claim coefficients from Run B are identical to Run A to 15 significant digits. Diagnostic: BOTH_Analyses.R's standard-framing model (Choice ~ Frame + (1|ID), cells G4/L6, combined sample, N = 611) gives Frame b = 1.6384, SE = 0.3316, z = 4.940, which is the report's 'b = 1.64, SE = 0.332, t = 4.94'. Non-claim observation: two printed z statistics are off by one unit in the last digit under lme4 2.1.0 (CR standard FE z = 4.144 vs printed 4.15; CR ValenceDiff z = 16.517 vs printed 16.53), plausibly optimizer/version differences in the SE; coefficients and CIs are unaffected. Full logs and downloads stay in /tmp/scratch_gold2/claude/G-04 (not in the repo)."
+}

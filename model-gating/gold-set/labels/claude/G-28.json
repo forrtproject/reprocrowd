@@ -1,0 +1,81 @@
+{
+ "gold_id": "G-28",
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [
+  "computationally reproducible"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "not_checkable",
+   "reference_recomputed": 0.11,
+   "tolerance": "2 dp",
+   "severity": "P0",
+   "cause": "BlumeC_NHB_KSS.R subsets on time == 'Evening_1', but KSS_data.csv has no 'time' column (and the script has no data-load line); the file pools several evenings (KSS_no 1 has 144 rows = 48 sessions x 3), so Evening 1 cannot be identified. lmBF is also unseeded.",
+   "evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ 'Deviations in the Reporting of Results': 'the authors report \"moderate (inconclusive) evidence against a time x condition interaction (BF10 = 0.27; BF10 rank-based = 0.14)\". We found inconclusive evidence against a time x condition interaction (BF10 = 0.11; BF10 rank-based = 0.05).' 'Errors in the Data': 'a variable used in the code (time) to subset data was not provided in the corresponding data (KSS_data.csv)'",
+   "rationale": "The shipped KSS data lack the 'time' column the script filters on, so the Evening 1 subset cannot be built (P0). The report's subset provenance is unresolved; its 0.11 is a diagnostic only.",
+   "reported_check": "confirmed in paper (Nature HTML: 'BF10 = 0.27; BF10 rank-based = 0.14')",
+   "rationale_blind_original": "A required subsetting variable is missing from the shipped data, so the reproducers' 0.11 comes from a different subset than the authors used. Live alternative: discrepant P2. The report also contradicts itself: Table 1 gives 'Condition x time interaction, strong evidence against H1 (BF = 0.01 +/-2.89%) - matched result reported'."
+  },
+  {
+   "id": "C2",
+   "expected_status": "not_checkable",
+   "reference_recomputed": 0.05,
+   "tolerance": "2 dp",
+   "severity": "P0",
+   "cause": "Same missing 'time' variable in KSS_data.csv; unseeded lmBF.",
+   "evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ 'Deviations in the Reporting of Results': 'We found inconclusive evidence against a time x condition interaction (BF10 = 0.11; BF10 rank-based = 0.05).'",
+   "rationale": "Same blocker as C1 (P0); the report's 0.05 is a diagnostic only.",
+   "reported_check": "confirmed in paper (Nature HTML: 'BF10 rank-based = 0.14')",
+   "rationale_blind_original": "The rank-based interaction BF comes from the same unrunnable subset step as C1. Live alternative: discrepant P2."
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": 0.3,
+   "tolerance": "1 dp (MCMC error +/-5.74%)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ Table 1, Primary Outcome DLMO (C1): 'Inconclusive evidence for primary hypothesis (BF = 0.3 +/-5.74%) - matched reported result'; text: 'These claims were also supported by our replication results.'",
+   "rationale": "The primary BF recurred at printed precision despite unseeded MCMC.",
+   "reported_check": "confirmed in paper (Nature HTML: 'condition difference (BF10 = 0.3)')"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": 0.09,
+   "tolerance": "2 dp (MCMC error +/-1.95%)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ Table 1, Melatonin concentrations (S1): 'Strong evidence in favour of H0 (BF = 0.09 +/-1.95%) - matched reported result'",
+   "rationale": "Recurred at printed precision.",
+   "reported_check": "confirmed in paper (Nature HTML: 'during the light exposure (BF10 = 0.09)')"
+  },
+  {
+   "id": "C5",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "2 dp",
+   "severity": "P0",
+   "cause": "Same KSS script/data problem as C1 (no 'time' column). The report does not clearly give a recomputed overall condition BF.",
+   "evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ Table 1, Subjective sleepiness (S2): 'Condition difference between the yellow-bright and the blue-dim conditions, inconclusive evidence in favour of H1 (BF = 0.52 +/-2.21%) - matched result reported'",
+   "rationale": "Same KSS blocker (P0). The report's 0.52 is the yellow-bright vs blue-dim contrast, not the overall condition effect, so there is no reference.",
+   "reported_check": "confirmed in paper (Nature HTML: 'BF10 = 0.62; BF10 rank-based = 0.23')",
+   "rationale_blind_original": "The report's only nearby value (0.52) is labelled as a yellow-bright vs blue-dim contrast, not the overall condition effect printed as 0.62, and the KSS subset cannot be built from the shipped data. Live alternative: close, if a reconciler reads 0.52 'matched' as the condition effect."
+  },
+  {
+   "id": "C6",
+   "expected_status": "close",
+   "reference_recomputed": 0.17,
+   "tolerance": "2 dp; unseeded MCMC (+/-2.34%)",
+   "severity": null,
+   "cause": "Unseeded BayesFactor sampling; 0.17 vs printed 0.16, treated as matched by the report.",
+   "evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ Table 1, Visual comfort (S4): 'Inconclusive evidence (BF = 0.17 +/-2.34%) - matched reported result'",
+   "rationale": "A one-unit difference in the second decimal, consistent with MCMC noise, which the report treats as matched.",
+   "reported_check": "confirmed in paper (Nature HTML: 'visual comfort ... (BF10 = 0.16)')"
+  }
+ ],
+ "label_confidence": "medium",
+ "notes": "C1, C2 and C5 are not_checkable P0: the shipped KSS data lack the 'time' column the script filters on. The report's 0.11/0.05 are diagnostics; its 0.52 is a different contrast (yellow-bright vs blue-dim) and is not a reference for C5. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "The report states 'There was no attempt to make random number generation reproducible (e.g. with the set.seed() function)'. 'Major Deviations in Results: We were unable to replicate ... Supplementary Table 20.' I confirmed directly that KSS_data.csv (figshare 23578698, Data.zip) has columns PB_No, appointment, condition, KSS_value, KSS_no, gender, with no 'time' column, while BlumeC_NHB_KSS.R at the pinned commit filters on time == 'Evening_1'. The report itself is inconsistent for the KSS interaction (text 0.11/0.05 vs Table 1 0.01 'matched'). Paper-level status is 'computational issues' because KSS outputs and Supp Table 20 did not recur, while the primary claim (C3) did."
+}

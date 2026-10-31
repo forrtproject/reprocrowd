@@ -1,0 +1,124 @@
+{
+  "gold_id": "G-08",
+  "expected_validation_status": "computational issues",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "match",
+      "reference_recomputed": 0.15,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/tj2w8/ — §2 Reproducibility and §3, PDF pp. 3–4: “point estimates precisely”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/tj2w8/ — §2 Reproducibility and §3, PDF pp. 3–4: “point estimates precisely”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C2",
+      "expected_status": "match",
+      "reference_recomputed": 0.14,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/tj2w8/ — §2 Reproducibility and §3, PDF pp. 3–4: “point estimates precisely”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/tj2w8/ — §2 Reproducibility and §3, PDF pp. 3–4: “point estimates precisely”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": -0.319,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/tj2w8/ — §2 Reproducibility and §3, PDF pp. 3–4: “point estimates precisely”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/tj2w8/ Section 3: 'The belief that dwelling on the past prevents advancements in democracy was reduced by 31.9 percent, very close to the 32 percent that the authors stated'",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C4",
+      "expected_status": "close",
+      "reference_recomputed": 0.198,
+      "tolerance": "Absolute coefficient gap 0.008; source explicitly treats this as reproduced; conventional rounding of 0.198 gives 0.20.",
+      "severity": null,
+      "cause": "Small source-reported difference at the printed precision.",
+      "evidence": "https://osf.io/download/tj2w8/ — §2 Reproducibility and §3, PDF pp. 3–4: “point estimates precisely”.",
+      "rationale": "The report gives 19.8 percent for the printed 0.19 coefficient. Close is primary; match is accepted for the report-based interpretation.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/tj2w8/ Section 3: 'desires for victim compensation increased by 19.8 percent, again close to the reported coefficient of .19 that Balcells et al. included' and 'the results reported for the transitional justice hypothesis were replicated perfectly'",
+      "reference_scope": "authors_workflow",
+      "acceptable_statuses": [
+        "close",
+        "match"
+      ]
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": 0.182,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/tj2w8/ — §2 Reproducibility and §3, PDF pp. 3–4: “point estimates precisely”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/tj2w8/ Section 3: 'A desire for a public apology by the military increased by 18.2 percent, and the authors reported a coefficient of .18.'",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C6",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.3080994760436069,
+      "reference_recomputed_p": 0.004061908975080604,
+      "tolerance": "Coefficient and p value must recur at the two decimal places printed in the durability text; conventional rounding.",
+      "severity": "P2",
+      "cause": "The paragraph introduces the one-week follow-up but supplies the 24-week coefficient/p pair.",
+      "evidence": "Published article DOI 10.1086/714765, printed p. 506 (PDF p. 11), Durability of effects first paragraph; Figure 4B on printed p. 507. pilot/sol/G-08-certificate.json C21 and TIME-001; pilot/claude/G-08-certificate.json C14 and RES-001; Sol verification /tmp/scratch_gold3/sol/G08/check.log on 2026-10-30.",
+      "rationale": "At one week, the shipped pardoned_f1 estimate is 0.3080994760436069 with p = 0.004061908975080604 (N = 222), unlike printed b = 0.20, p = .16. At 24 weeks, pardoned_f3 gives 0.2047054162220282 and p = 0.1640234163763856 (N = 129), which do round to the printed pair. The coefficient sentence does not independently name a wave; the one-week attribution follows the opening sentence of the same paragraph. Figure 4B shows the corresponding time profile. P2 for the secondary durability text error; the reproduced 24-week result does not replace the one-week scoring reference.",
+      "reference_provenance": "agent_rerun",
+      "reference_evidence": "Published article DOI 10.1086/714765, printed p. 506 (PDF p. 11), Durability of effects first paragraph; Figure 4B on printed p. 507. pilot/sol/G-08-certificate.json C21 and TIME-001; pilot/claude/G-08-certificate.json C14 and RES-001; Sol verification /tmp/scratch_gold3/sol/G08/check.log on 2026-10-30.",
+      "reference_scope": "Unchanged shipped est.ate.np.f function and pardoned_f1 call on pinned all.Rdata. Parsed statements evaluated in source order, continuing after the known unrelated 25-label/24-row figure error; no analytical source edit or full-script-success claim.",
+      "diagnostic_results": [
+        {
+          "value": 0.2047054162220282,
+          "p_value": 0.1640234163763856,
+          "provenance": "agent_rerun",
+          "evidence": "Published article DOI 10.1086/714765, printed p. 506 (PDF p. 11), Durability of effects first paragraph; Figure 4B on printed p. 507. pilot/sol/G-08-certificate.json C21 and TIME-001; pilot/claude/G-08-certificate.json C14 and RES-001; Sol verification /tmp/scratch_gold3/sol/G08/check.log on 2026-10-30.",
+          "scope": "pardoned_f3 at 24 weeks, N = 129; explains the printed pair but is a different wave.",
+          "is_scoring_reference": false
+        }
+      ]
+    },
+    {
+      "id": "C7",
+      "expected_status": "discrepant",
+      "tolerance": "Percentage must recur to the printed two decimal places; conventional rounding (13.33 versus 13.14).",
+      "severity": "P2",
+      "cause": "Printed descriptive percentage does not equal the share of non-missing museum-newness responses coded new.",
+      "evidence": "Published article DOI 10.1086/714765, printed p. 505 (PDF p. 10), Mechanisms first paragraph right column: 13.14% (n = 18). Pinned all.Rdata SHA-256 b4ed1b5544caed6a1166d7ac4a49d59721a52648441bb5083e715be78c30bb6c and Codebook.pdf mm_new coding 0 = not new, 1 = some were new, 2 = new. Sol /tmp/scratch_gold3/sol/G08/data-check.log; pilot/sol/G-08-certificate.json DESC-001; pilot/claude/G-08-certificate.json C13 and RES-002.",
+      "rationale": "The unmodified deposited data contain 18 responses coded 2 (new), 106 coded 1 (some were new), and 11 coded 0 (not new): 135 non-missing responses. Thus 100 * 18/135 = 13.333333333333334%, not 13.14%; all 135 observed responses are treated. Using all 138 treated participants instead gives 13.043478260869565%, which also does not match. The denominator used by the paper is not established. This is a direct tabulation of shipped data, not a percentage emitted by the shipped main-text analysis script.",
+      "reference_recomputed": 13.333333333333334,
+      "reference_provenance": "direct_check",
+      "reference_evidence": "Published article DOI 10.1086/714765, printed p. 505 (PDF p. 10), Mechanisms first paragraph right column: 13.14% (n = 18). Pinned all.Rdata SHA-256 b4ed1b5544caed6a1166d7ac4a49d59721a52648441bb5083e715be78c30bb6c and Codebook.pdf mm_new coding 0 = not new, 1 = some were new, 2 = new. Sol /tmp/scratch_gold3/sol/G08/data-check.log; pilot/sol/G-08-certificate.json DESC-001; pilot/claude/G-08-certificate.json C13 and RES-002.",
+      "reference_scope": "Direct tabulation of unchanged hash-pinned all.Rdata: 100 * sum(mm_new == 2, na.rm=TRUE) / sum(!is.na(mm_new)); denominator 135, numerator 18. Not a shipped-script percentage output."
+    }
+  ],
+  "label_confidence": "medium",
+  "notes": "The existing C1-C5 source-report references and C4 close/match interpretation are retained. New C6/C7 have two independent pilot corroborations and this round's direct checks. Printed locations were verified visually in the published article: pardon paragraph p. 506 (Figure 4B p. 507), new-information percentage p. 505. C6 scores the one-week reading introduced by its paragraph; the printed pair matches the 24-week model and is retained only as a different-wave diagnostic. C7 is a deposited-data tabulation, not an emitted analysis-script percentage. The unchanged source has the known figure-label assignment error; statement-wise execution continues past it to reach the follow-up functions, without claiming a clean whole-script run. The favourable I4R verdict does not cover these two numerical discrepancies; R7 now requires computational issues without a reproducible alternative.",
+  "requires_human_rerun": false,
+  "corrections": [
+    {
+      "version": "1.1",
+      "change": "Add C6 (one-week pardon coefficient/p) and C7 (new-information percentage), both discrepant/P2; paper becomes computational issues without an alternative.",
+      "reason": "Published text gives 0.20/.16 in the one-week durability context and 13.14%; unchanged follow-up expressions yield 0.3080994760/.0040619090 and the pinned response tabulation gives 18/135 = 13.33%. Correct published-page locations are 506 and 505.",
+      "evidence": "pilot/sol/G-08-certificate.json C21, TIME-001 and DESC-001; pilot/claude/G-08-certificate.json C13/C14; Sol /tmp/scratch_gold3/sol/G08/check.log and data-check.log; visually checked published PDF pages 10-11"
+    }
+  ]
+}

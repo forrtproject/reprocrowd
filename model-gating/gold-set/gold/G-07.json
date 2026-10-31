@@ -1,0 +1,155 @@
+{
+ "gold_id": "G-07",
+ "gold_version": "1.1",
+ "cand_id": "I4R-3b8z4",
+ "doi": "10.1177/09567976241306424",
+ "title": "The Extended Mind in Young Children: Cost-Dependent Trade-Off Between External and Internal Memory",
+ "stratum_drawn": "computationally reproducible",
+ "paper_url": "https://journals.sagepub.com/doi/pdf/10.1177/09567976241306424",
+ "package": {
+  "url": "https://osf.io/a2u48/",
+  "version_pin": "preProcessingExp2a_clean.R: OSF file 66fcfc592866804ba69fd1ac version 1, SHA-256 778bdcd0a2773267a47918c551c3b4a32459e049a384371d9683deb3b7c0f0ea; preProcessingExp2b_clean.R: OSF file 66fcfc592866804ba69fd1ad version 1, SHA-256 72db6ecd92e98836b1783a9ced62c277b96b0ef067af87cc2e9fc5a5f7297636; Exp2a_2b_MT_SM.Rmd: OSF file 66fcfc592866804ba69fd1ae version 1, SHA-256 0f19aae9afdb12d01f22ed43527854f4fc2dd8e22b245e7bb5622ab382aed624; Exp2a_2b_additional_code.Rmd: OSF file 66fcfc592866804ba69fd1af version 1, SHA-256 90683b6fa9308d82b1ef7d96b9fcdd5a40fd9758b4e6676bc788f29acabdd9ed; preProcessingExp1_clean.R: OSF file 66fcfc632866804ba69fd25b version 1, SHA-256 f20ff7a9841b6e4377c8e93e9b68155e7dd11f1f520be314e193eb4f1d68ed94; Exp1_MT_SM.Rmd: OSF file 66fcfc632866804ba69fd25c version 1, SHA-256 f64b87f61775474e23667f739e9058d028cf92e96ba6a932286ec345e48a3607; Exp1_additional_code.Rmd: OSF file 66fcfc632866804ba69fd25d version 1, SHA-256 8f7670876a947783e8b1a3835f03e9e6d8630e80a59bfe33f5a2176ceb61735f; pilot_preprocess_and_analysis.Rmd: OSF file 66fcfc652866804ba69fd273 version 1, SHA-256 a8e85aaab7fed2e29750a1648aff22fc0c2c8a5d8d1cc8c094d7749b9d67266b; Combined_Expeiments_MT_SM.Rmd: OSF file 66fcfc652866804ba69fd276 version 1, SHA-256 476d691112982f852f58f3d023f5080be91dc18dd35408dfeb6b0a7b114828b7",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/k6xce/",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "label_confidence": "medium",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Variability of trips in the long-delay condition in Experiment 2a",
+   "exhibit": "Results, comparison between conditions",
+   "page": 27,
+   "quantity": "Standard deviation of trips",
+   "reported": "0.14",
+   "expected_status": "discrepant",
+   "reference_recomputed": 1.14,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P2",
+   "cause": "A descriptive SD is mistyped in the published article.",
+   "evidence": "https://osf.io/download/k6xce/ — §2 Computational Reproducibility, PDF p. 3: “outputs SD = 1.14”.",
+   "rationale": "The final published PDF, p. 27, prints 0.14; the source reports that the original analytical script yields 1.14. This is a secondary numerical reporting discrepancy even though the report calls the main analyses reproduced.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/k6xce/ — §2 Computational Reproducibility, PDF p. 3: “outputs SD = 1.14”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": "The printed SD (0.14) differs from the unchanged code's 1.14; under R2 a wrong descriptive number is P2."
+  },
+  {
+   "id": "C2",
+   "claim": "Effect of condition on trips in Experiment 2a",
+   "exhibit": "Results, comparison between conditions",
+   "page": 27,
+   "quantity": "Chi-squared",
+   "reported": "5.95",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/k6xce/ — §2 Computational Reproducibility, PDF p. 3: “All reported effects”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report states all reported effects recur; no per-value recomputed number given."
+  },
+  {
+   "id": "C3",
+   "claim": "Effect of condition on trips in Experiment 2b",
+   "exhibit": "Results, comparison between conditions",
+   "page": 27,
+   "quantity": "Chi-squared",
+   "reported": "10.81",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/k6xce/ — §2 Computational Reproducibility, PDF p. 3: “All reported effects”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report states all reported effects recur; no per-value number given."
+  },
+  {
+   "id": "C4",
+   "claim": "Effect of condition on dwell time in Experiment 2a",
+   "exhibit": "Results, comparison between conditions",
+   "page": 27,
+   "quantity": "Chi-squared",
+   "reported": "79.62",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/k6xce/ — §2 Computational Reproducibility, PDF p. 3: “All reported effects”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report states all reported effects recur; no per-value number given."
+  },
+  {
+   "id": "C5",
+   "claim": "Effect of condition on dwell time in Experiment 2b",
+   "exhibit": "Results, comparison between conditions",
+   "page": 27,
+   "quantity": "Chi-squared",
+   "reported": "37.54",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/k6xce/ — §2 Computational Reproducibility, PDF p. 3: “All reported effects”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report states all reported effects recur; no per-value number given."
+  },
+  {
+   "id": "C6",
+   "claim": "Effect of condition on streak correct in Experiment 2a",
+   "exhibit": "Results, comparison between conditions",
+   "page": 27,
+   "quantity": "Chi-squared",
+   "reported": "65.97",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/k6xce/ — §2 Computational Reproducibility, PDF p. 3: “All reported effects”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report states all reported effects recur; no per-value number given."
+  }
+ ],
+ "notes": {
+  "claim_list": "",
+  "sol": "Drawn as reproducible, but independent labelling identifies the source-documented secondary discrepancy. The accessible accepted manuscript prints 1.14; the final SAGE PDF prints 0.14 and is the reported-value target. Trial coding and revised model specifications do not enter the verdict.",
+  "claude": "C1 is P2 under R2 (a wrong descriptive SD, 0.14 vs 1.14). No paper alternative under R7: a confirmed wrong printed number rules out 'computationally reproducible'. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "C1 is exactly the typo'd value the report flags (paper SD = 0.14, script SD = 1.14), so the claim list deliberately includes the one non-recurring output. By the letter of the rules (printed number wrong, unchanged code gives a different value) C1 is discrepant and the paper is 'computational issues'; the report's own verdict is 'we successfully reached computational reproducibility from raw data', hence 'computationally reproducible' as an acceptable alternative. Severity: P3 chosen because it is a typo in a descriptive SD with no effect on tests; P2 (wrong secondary descriptive statistic) is also defensible. Report gives no recomputed numbers for C2-C6; label rests on its blanket statement. Report notes 'Trial' coded as integer only in unreported models (not relevant). Robustness section ignored."
+ }
+}

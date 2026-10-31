@@ -1,0 +1,96 @@
+{
+  "gold_id": "G-04",
+  "expected_validation_status": "computationally reproducible",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "match",
+      "reference_recomputed": 2.177492530832682,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "reruns/G-04.json and reruns/G-04.log, C1; independent corroboration: twins/T-03/run_original.log RUN_RESULT_JSON and twins/T-03/input_manifest.json.",
+      "rationale": "Two independent agent executions reproduce the coefficient at printed precision. MTurk_Analyses.R object StdFE: glmer(Choice ~ Frame + (1|ID)), cells G4/L6 only (standard framing problem), CloudResearch sample, N = 375 choices / 94 participants. Printed 95% CI [1.15, 3.21] also recurs (Wald: 1.1476, 3.2073).",
+      "reference_provenance": "agent_rerun",
+      "reference_evidence": "reruns/G-04.json and reruns/G-04.log, C1; independent corroboration: twins/T-03/run_original.log RUN_RESULT_JSON and twins/T-03/input_manifest.json.",
+      "reference_scope": "Unmodified shipped per-sample R analysis on hash-pinned deposited clean data; raw-cleaning rerun also agrees to 15 significant digits."
+    },
+    {
+      "id": "C2",
+      "expected_status": "match",
+      "reference_recomputed": 0.957617777650171,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "reruns/G-04.json and reruns/G-04.log, C2; independent corroboration: twins/T-03/run_original.log RUN_RESULT_JSON and twins/T-03/input_manifest.json.",
+      "rationale": "Two independent agent executions reproduce the coefficient at printed precision. REP_Analyses.R object StdFE, cells G4/L6, student sample, N = 236 / 59. Printed CI [0.24, 1.68] recurs (0.2360, 1.6792); z = 2.601 vs printed 2.60.",
+      "reference_provenance": "agent_rerun",
+      "reference_evidence": "reruns/G-04.json and reruns/G-04.log, C2; independent corroboration: twins/T-03/run_original.log RUN_RESULT_JSON and twins/T-03/input_manifest.json.",
+      "reference_scope": "Unmodified shipped per-sample R analysis on hash-pinned deposited clean data; raw-cleaning rerun also agrees to 15 significant digits."
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": 1.038648712680527,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "reruns/G-04.json and reruns/G-04.log, C3; independent corroboration: twins/T-03/run_original.log RUN_RESULT_JSON and twins/T-03/input_manifest.json.",
+      "rationale": "Two independent agent executions reproduce the coefficient at printed precision. MTurk_Analyses.R object mlr1 (primary model: VDA + Frame + VDA:Frame + (1|ID), bobyqa), full CloudResearch sample, N = 3615 / 906; VDA coefficient. Printed CI [0.92, 1.16] recurs (0.9154, 1.1619).",
+      "reference_provenance": "agent_rerun",
+      "reference_evidence": "reruns/G-04.json and reruns/G-04.log, C3; independent corroboration: twins/T-03/run_original.log RUN_RESULT_JSON and twins/T-03/input_manifest.json.",
+      "reference_scope": "Unmodified shipped per-sample R analysis on hash-pinned deposited clean data; raw-cleaning rerun also agrees to 15 significant digits."
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": 0.6795394929910186,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "reruns/G-04.json and reruns/G-04.log, C4; independent corroboration: twins/T-03/run_original.log RUN_RESULT_JSON and twins/T-03/input_manifest.json.",
+      "rationale": "Two independent agent executions reproduce the coefficient at printed precision. REP_Analyses.R object mlr1, full student sample, N = 2080 / 521; VDA coefficient. Printed CI [0.57, 0.79] recurs (0.5694, 0.7897).",
+      "reference_provenance": "agent_rerun",
+      "reference_evidence": "reruns/G-04.json and reruns/G-04.log, C4; independent corroboration: twins/T-03/run_original.log RUN_RESULT_JSON and twins/T-03/input_manifest.json.",
+      "reference_scope": "Unmodified shipped per-sample R analysis on hash-pinned deposited clean data; raw-cleaning rerun also agrees to 15 significant digits."
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": 1.199396784123377,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "reruns/G-04.json and reruns/G-04.log, C5; independent corroboration: twins/T-03/run_original.log RUN_RESULT_JSON and twins/T-03/input_manifest.json.",
+      "rationale": "Two independent agent executions reproduce the coefficient at printed precision. MTurk_Analyses.R object mlr1; Frame coefficient. Printed CI [0.89, 1.51] recurs (0.8908, 1.5080).",
+      "reference_provenance": "agent_rerun",
+      "reference_evidence": "reruns/G-04.json and reruns/G-04.log, C5; independent corroboration: twins/T-03/run_original.log RUN_RESULT_JSON and twins/T-03/input_manifest.json.",
+      "reference_scope": "Unmodified shipped per-sample R analysis on hash-pinned deposited clean data; raw-cleaning rerun also agrees to 15 significant digits."
+    },
+    {
+      "id": "C6",
+      "expected_status": "match",
+      "reference_recomputed": 0.6631139770796413,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "reruns/G-04.json and reruns/G-04.log, C6; independent corroboration: twins/T-03/run_original.log RUN_RESULT_JSON and twins/T-03/input_manifest.json.",
+      "rationale": "Two independent agent executions reproduce the coefficient at printed precision. REP_Analyses.R object mlr1; Frame coefficient. Printed CI [0.38, 0.95] recurs (0.3771, 0.9492).",
+      "reference_provenance": "agent_rerun",
+      "reference_evidence": "reruns/G-04.json and reruns/G-04.log, C6; independent corroboration: twins/T-03/run_original.log RUN_RESULT_JSON and twins/T-03/input_manifest.json.",
+      "reference_scope": "Unmodified shipped per-sample R analysis on hash-pinned deposited clean data; raw-cleaning rerun also agrees to 15 significant digits."
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "Two independent agent executions (Claude rerun and Sol T-03 original/base run) agree for all six coefficients; neither is a human rerun. The shipped analysis scripts ran unchanged. The Claude raw-data cleaning rerun also reproduced the claim estimates. The report's b = 1.64 is accounted for by BOTH_Analyses.R: combined-sample standard framing gives b = 1.6384, SE = 0.3316, z = 4.940. That combined-sample result is outside these six per-sample claims. The v1.0 provisional blanket-report limitation is resolved by claim-specific execution evidence.",
+  "requires_human_rerun": false,
+  "corrections": [
+    {
+      "version": "1.1",
+      "change": "Fill six agent_rerun scoring references; raise confidence to high; clear human-rerun requirement.",
+      "reason": "Unchanged shipped analyses reproduce all six coefficients in two independent agent runs; the former blanket-report evidence gap is closed.",
+      "evidence": "reruns/G-04.json; reruns/G-04.log; twins/T-03/run_original.log; twins/T-03/input_manifest.json"
+    }
+  ]
+}

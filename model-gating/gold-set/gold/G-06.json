@@ -1,0 +1,148 @@
+{
+ "gold_id": "G-06",
+ "gold_version": "1.1",
+ "cand_id": "RB-004",
+ "doi": "10.1086/716289",
+ "title": "Black Workers in White Places: Daytime Racial Diversity and White Public Opinion",
+ "stratum_drawn": "computationally reproducible",
+ "paper_url": "https://doi.org/10.1086/716289",
+ "package": {
+  "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/4/replication_package",
+  "version_pin": "REPRO-Bench snapshot commit 74958fba32daeacff51f2e1fd37be3916595648f",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "label_confidence": "high",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Racial flux and Democratic presidential voting",
+   "exhibit": "Table 1, President",
+   "page": 1832,
+   "quantity": "Racial flux coefficient",
+   "reported": "−.002",
+   "expected_status": "match",
+   "reference_recomputed": -0.002,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf — §2 Reproducibility, pp. 5–6 and comparison Table 1: “original authors’ R code”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf p. 5-6, Section 2 and Table 1 (Replication column): 'we show that the supplied code and data exactly reproduce the results from the paper'; Racial Flux, President: −0.002∗∗∗ (0.000)",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report reran the original R code and the replication column is identical to the original."
+  },
+  {
+   "id": "C2",
+   "claim": "Racial flux and Democratic House voting",
+   "exhibit": "Table 1, US House",
+   "page": 1832,
+   "quantity": "Racial flux coefficient",
+   "reported": "−.001",
+   "expected_status": "match",
+   "reference_recomputed": -0.001,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf — §2 Reproducibility, pp. 5–6 and comparison Table 1: “original authors’ R code”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf p. 6, Table 1 Replication column, U.S. House: Racial Flux −0.001∗∗∗ (0.000)",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Identical to printed value in the report's side-by-side table."
+  },
+  {
+   "id": "C3",
+   "claim": "Racial flux and racial resentment",
+   "exhibit": "Table 1, Racial Resentment",
+   "page": 1832,
+   "quantity": "Racial flux coefficient",
+   "reported": ".005",
+   "expected_status": "match",
+   "reference_recomputed": 0.005,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf — §2 Reproducibility, pp. 5–6 and comparison Table 1: “original authors’ R code”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf p. 6, Table 1 Replication column, Racial Resentment: Racial Flux 0.005∗∗∗ (0.001)",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Identical to printed value."
+  },
+  {
+   "id": "C4",
+   "claim": "Racial flux and opposition to affirmative action",
+   "exhibit": "Table 1, Affirmative Action",
+   "page": 1832,
+   "quantity": "Racial flux coefficient",
+   "reported": ".003",
+   "expected_status": "match",
+   "reference_recomputed": 0.003,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf — §2 Reproducibility, pp. 5–6 and comparison Table 1: “original authors’ R code”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf p. 6, Table 1 Replication column, Affirmative Action: Racial Flux 0.003∗∗∗ (0.001)",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Identical to printed value."
+  },
+  {
+   "id": "C5",
+   "claim": "Precision of the racial-flux estimate for racial resentment",
+   "exhibit": "Table 1, Racial Resentment",
+   "page": 1832,
+   "quantity": "Clustered standard error",
+   "reported": ".001",
+   "expected_status": "match",
+   "reference_recomputed": 0.001,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf — §2 Reproducibility, pp. 5–6 and comparison Table 1: “original authors’ R code”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf p. 6, Table 1 Replication column, Racial Resentment: Racial Flux 0.005∗∗∗ (0.001); note 'Standard Errors clustered by zip code in parentheses'",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Clustered SE reproduced identically."
+  }
+ ],
+ "notes": {
+  "claim_list": "",
+  "sol": "Use the supplied original data and R code. Rebuilt Census/CCES measures, the multiverse and Nationscape are separate analyses and are excluded.",
+  "claude": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "Report compared against HW appendix Table A3 rather than main-text Table 1; the shipped an_main.R writes Table 1 and Table A3 from the same texreg call ('TABLE 1 AND TABLE A3'), so the exhibit difference is cosmetic. Report used the Harvard Dataverse package (doi:10.7910/DVN/FMOR6K, v3.0), not the REPRO-Bench snapshot; REPRO-Bench folder 4 contains the same an_main.R. Report made only path edits ('allowing for opening the data file from a different location'), not a P0. Report's N Clusters were 'Not Reported' in the replication column (display only). Sections 3-5 (reconstruction, multiverse, Nationscape) are robustness and were ignored. Paper itself not accessed."
+ }
+}

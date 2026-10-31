@@ -1,0 +1,290 @@
+{
+  "twin_id": "T-07",
+  "base_gold_id": "G-19",
+  "base_cand_id": "I4R-9c8p6",
+  "package": {
+    "url": "https://osf.io/hpvsu/files/osfstorage/645e5cac9f8fa621544dae79?revision=6",
+    "version_pin": "OSF s2_analysis.R file 645e5cac9f8fa621544dae79 revision 6 (2024-03-27), SHA-256 ecedfe3161827b762c787a4e6b066e67d64eda8c348ff2672d6a00f307214f0d; /Study 1/s1_analysis.R: OSF file 645e5ca91a368819ec5481e6 version 5, SHA-256 e51b140bc4e399faf4823f665f8408147e6d01aab6528b3bdfd1a196b53de79b; /Study 1/s1_data.csv: OSF file 645e5cb560fc5d18dcca0a9e version 3, SHA-256 3b3be5118deb2bebd2f36ad5d5fb49a9fa3cb0561402ad6061682ac290d28ecb; /Study 2/s2_data_actions.csv: OSF file 659c057d5e925a0bdc45b93e version 1 (2024-01-08), SHA-256 89e1deb53407bd4b6aebc27c51e04c9b8627e8ec7203147410addd017103bd48"
+  },
+  "perturbation": {
+    "file": "Study 2/s2_analysis.R",
+    "description": "Stop the PEB count at repair, omitting the final activism indicator.",
+    "type": "column_range",
+    "why_plausible": "An off-by-one endpoint in a tidyselect column range silently omits one activity category.",
+    "original_sha256": "ecedfe3161827b762c787a4e6b066e67d64eda8c348ff2672d6a00f307214f0d",
+    "twin_sha256": "f62a38f82ef80efde6fc532b977f7271dcab98bec088c7a287a78f9d295b4955"
+  },
+  "lossless_edits": [
+    "Resolve Study 1's Data/For OSF/s1_data.csv to Study 1/s1_data.csv and Study 2's Data/S2 text.csv to Study 2/s2_data_actions.csv; these are the exact pinned deposited files. Load lmerTest, dplyr, readr and psych for the selected numerical expressions. No data, centering or model changes."
+  ],
+  "execution_scope": "In s1_analysis.R evaluate the original s1$peb recode, person means, between/within centering, s1.m1 and s1.m2 assignments, in order, on the pinned s1_data.csv. In s2_analysis.R evaluate lines 34–39 on the pinned s2_data_actions.csv. Extract the two PEB descriptives, fun mean, and the three unstandardized mixed-model coefficients. Other Study 2 analyses, standardization and plots are outside scope. Singular-fit warnings recur in the original and twin and are retained in the logs.",
+  "original_run": {
+    "r_version": "R version 4.6.1 (2026-06-24)",
+    "packages": {
+      "base": "4.6.1",
+      "bit": "4.6.0",
+      "bit64": "4.8.4",
+      "boot": "1.3.32",
+      "cli": "3.6.6",
+      "compiler": "4.6.1",
+      "crayon": "1.5.3",
+      "datasets": "4.6.1",
+      "dplyr": "1.2.1",
+      "farver": "2.1.2",
+      "generics": "0.1.4",
+      "ggplot2": "4.0.3",
+      "glue": "1.8.1",
+      "graphics": "4.6.1",
+      "grDevices": "4.6.1",
+      "grid": "4.6.1",
+      "gtable": "0.3.6",
+      "hms": "1.1.4",
+      "lattice": "0.22.9",
+      "lifecycle": "1.0.5",
+      "lme4": "2.1.0",
+      "lmerTest": "3.2.1",
+      "magrittr": "2.0.5",
+      "MASS": "7.3.66",
+      "Matrix": "1.7.5",
+      "methods": "4.6.1",
+      "minqa": "1.2.8",
+      "mnormt": "2.1.2",
+      "nlme": "3.1.169",
+      "nloptr": "2.2.1",
+      "numDeriv": "2016.8.1.1",
+      "parallel": "4.6.1",
+      "pillar": "1.11.1",
+      "pkgconfig": "2.0.3",
+      "psych": "2.6.5",
+      "R6": "2.6.1",
+      "rbibutils": "2.4.1",
+      "RColorBrewer": "1.1.3",
+      "Rcpp": "1.1.2",
+      "Rdpack": "2.6.6",
+      "readr": "2.2.0",
+      "reformulas": "0.4.4",
+      "rlang": "1.3.0",
+      "S7": "0.2.2",
+      "scales": "1.4.0",
+      "splines": "4.6.1",
+      "stats": "4.6.1",
+      "tibble": "3.3.1",
+      "tidyselect": "1.2.1",
+      "tools": "4.6.1",
+      "tzdb": "0.5.0",
+      "utils": "4.6.1",
+      "vctrs": "0.7.3",
+      "vroom": "1.7.1",
+      "withr": "3.0.3"
+    },
+    "runtime_seconds": 2.048,
+    "claims": [
+      {
+        "id": "C1",
+        "reported": "2.11",
+        "recomputed": 2.110497237569061,
+        "recurs": true
+      },
+      {
+        "id": "C2",
+        "reported": "0.98",
+        "recomputed": 0.9769284496961174,
+        "recurs": true
+      },
+      {
+        "id": "C3",
+        "reported": "2.30",
+        "recomputed": 2.3011363636363638,
+        "recurs": true
+      },
+      {
+        "id": "C4",
+        "reported": "1.64",
+        "recomputed": 1.6412610274182866,
+        "recurs": true
+      },
+      {
+        "id": "C5",
+        "reported": "0.77",
+        "recomputed": 0.7729283247811678,
+        "recurs": true
+      },
+      {
+        "id": "C6",
+        "reported": "1.48",
+        "recomputed": 1.4764171331258682,
+        "recurs": true
+      }
+    ]
+  },
+  "twin_run": {
+    "runtime_seconds": 1.399,
+    "packages": {
+      "base": "4.6.1",
+      "bit": "4.6.0",
+      "bit64": "4.8.4",
+      "boot": "1.3.32",
+      "cli": "3.6.6",
+      "compiler": "4.6.1",
+      "crayon": "1.5.3",
+      "datasets": "4.6.1",
+      "dplyr": "1.2.1",
+      "farver": "2.1.2",
+      "generics": "0.1.4",
+      "ggplot2": "4.0.3",
+      "glue": "1.8.1",
+      "graphics": "4.6.1",
+      "grDevices": "4.6.1",
+      "grid": "4.6.1",
+      "gtable": "0.3.6",
+      "hms": "1.1.4",
+      "lattice": "0.22.9",
+      "lifecycle": "1.0.5",
+      "lme4": "2.1.0",
+      "lmerTest": "3.2.1",
+      "magrittr": "2.0.5",
+      "MASS": "7.3.66",
+      "Matrix": "1.7.5",
+      "methods": "4.6.1",
+      "minqa": "1.2.8",
+      "mnormt": "2.1.2",
+      "nlme": "3.1.169",
+      "nloptr": "2.2.1",
+      "numDeriv": "2016.8.1.1",
+      "parallel": "4.6.1",
+      "pillar": "1.11.1",
+      "pkgconfig": "2.0.3",
+      "psych": "2.6.5",
+      "R6": "2.6.1",
+      "rbibutils": "2.4.1",
+      "RColorBrewer": "1.1.3",
+      "Rcpp": "1.1.2",
+      "Rdpack": "2.6.6",
+      "readr": "2.2.0",
+      "reformulas": "0.4.4",
+      "rlang": "1.3.0",
+      "S7": "0.2.2",
+      "scales": "1.4.0",
+      "splines": "4.6.1",
+      "stats": "4.6.1",
+      "tibble": "3.3.1",
+      "tidyselect": "1.2.1",
+      "tools": "4.6.1",
+      "tzdb": "0.5.0",
+      "utils": "4.6.1",
+      "vctrs": "0.7.3",
+      "vroom": "1.7.1",
+      "withr": "3.0.3"
+    },
+    "claims": [
+      {
+        "id": "C1",
+        "recomputed": 2.1049723756906076
+      },
+      {
+        "id": "C2",
+        "recomputed": 0.9746951798778458
+      },
+      {
+        "id": "C3",
+        "recomputed": 2.3011363636363638
+      },
+      {
+        "id": "C4",
+        "recomputed": 1.6412610274182866
+      },
+      {
+        "id": "C5",
+        "recomputed": 0.7729283247811678
+      },
+      {
+        "id": "C6",
+        "recomputed": 1.4764171331258682
+      }
+    ]
+  },
+  "expected_validation_status": "computational issues",
+  "claims": [
+    {
+      "id": "C1",
+      "reported": "2.11",
+      "expected_status": "discrepant",
+      "reference_recomputed": 2.1049723756906076,
+      "severity": "P2",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C2",
+      "reported": "0.98",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.9746951798778458,
+      "severity": "P2",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C3",
+      "reported": "2.30",
+      "expected_status": "match",
+      "reference_recomputed": 2.3011363636363638,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    },
+    {
+      "id": "C4",
+      "reported": "1.64",
+      "expected_status": "match",
+      "reference_recomputed": 1.6412610274182866,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    },
+    {
+      "id": "C5",
+      "reported": "0.77",
+      "expected_status": "match",
+      "reference_recomputed": 0.7729283247811678,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    },
+    {
+      "id": "C6",
+      "reported": "1.48",
+      "expected_status": "match",
+      "reference_recomputed": 1.4764171331258682,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    }
+  ],
+  "hard_coding_signal": "Extend the row-sum column range from litter:repair back to litter:activism.",
+  "notes": [
+    "Every reference is from the logged local execution, not copied from a paper or a shipped rendered output.",
+    "Affected claims are defined by changes at printed precision, not by arbitrary raw floating-point differences. Unaffected claims retain gold statuses; their references are the actual twin run values.",
+    "R4 repairs are listed separately; twin.patch contains exactly one planted change against the pinned original file.",
+    "Only the numerical scope needed for all gold claims was executed; this is not an end-to-end run of every package output.",
+    "C1 mean and C2 SD are descriptive (P2). The SD moves from 0.98 to 0.97 because just the final activity indicator is omitted. The three Study 1 matching claims were rerun unchanged, including both mixed models."
+  ],
+  "verification": {
+    "twin_id": "T-07",
+    "base_gold_id": "G-19",
+    "input_hashes_checked": 4,
+    "patch_applies": true,
+    "original_run_exit": 0,
+    "twin_run_exit": 0,
+    "all_claims_confirmed_at_printed_precision": true,
+    "affected_claims": [
+      "C1",
+      "C2"
+    ]
+  }
+}

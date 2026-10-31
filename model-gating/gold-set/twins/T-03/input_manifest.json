@@ -1,0 +1,170 @@
+[
+  {
+    "path": "Quantrics Surveys/MTurk Survey.pdf",
+    "url": "https://osf.io/download/tkgc5/?revision=1",
+    "version": "1",
+    "sha256": "af89e09047e97492fd27a48b84ae4d2477432ce6032294ec7373b773485b8a8e",
+    "size": 561129
+  },
+  {
+    "path": "Quantrics Surveys/REP (Student) Survey.pdf",
+    "url": "https://osf.io/download/e4a6u/?revision=1",
+    "version": "1",
+    "sha256": "620cd40bfebd35b73b72eeb79194d020bf7243193420fe3156a45d43a1554b73",
+    "size": 557831
+  },
+  {
+    "path": "Data and R Code/BOTH_Analyses.R",
+    "url": "https://osf.io/download/vcd7h/?revision=1",
+    "version": "1",
+    "sha256": "61ae079aa1e1b667f560749a307287955beeed841bbfe3896573936b0ff3d671",
+    "size": 50556
+  },
+  {
+    "path": "Data and R Code/MTurk_Analyses.R",
+    "url": "https://osf.io/download/b62hn/?revision=1",
+    "version": "1",
+    "sha256": "377a122d70142c3eb1c818945e8fac204c3142b3bb29f5c5489f13e7ed639105",
+    "size": 48627
+  },
+  {
+    "path": "Data and R Code/MTurk_Cleaning.html",
+    "url": "https://osf.io/download/zft6w/?revision=1",
+    "version": "1",
+    "sha256": "7de7bb309923168714cb13f8728750fe6b937e1b64f24a465d8cfbcac84a1a1c",
+    "size": 1081725
+  },
+  {
+    "path": "Data and R Code/MTurk_Cleaning.Rmd",
+    "url": "https://osf.io/download/dwms9/?revision=1",
+    "version": "1",
+    "sha256": "0bdc8ebe680a0147dd5936ffa3feb21da72871b1e956f0e9806fb07f142a3f20",
+    "size": 49832
+  },
+  {
+    "path": "Data and R Code/REP_Analyses.R",
+    "url": "https://osf.io/download/2kjnx/?revision=1",
+    "version": "1",
+    "sha256": "73cf8d307d478837ca1c0e7e7fafa49180523d669692045ac0ced3aa7ccf74ec",
+    "size": 48435
+  },
+  {
+    "path": "Data and R Code/Power_Analyses.R",
+    "url": "https://osf.io/download/th2ae/?revision=2",
+    "version": "2",
+    "sha256": "2da45c1394d3bbcae2d6ab1af912f7215df08fd1fbb7caef4fb9a151b547b7e4",
+    "size": 8485
+  },
+  {
+    "path": "Data and R Code/REP_Cleaning.Rmd",
+    "url": "https://osf.io/download/zj4k9/?revision=1",
+    "version": "1",
+    "sha256": "9c6cd27ce2f19ed85b3c7ee80b5a902b49ac188234d29d03511a4fa5525c0761",
+    "size": 45406
+  },
+  {
+    "path": "Data and R Code/REP_Cleaning.html",
+    "url": "https://osf.io/download/4qc2d/?revision=1",
+    "version": "1",
+    "sha256": "62c4f5a79d8380e2d87e0fa309151a1fb14056866ae1640dd1c9fbe65ec48d11",
+    "size": 1054145
+  },
+  {
+    "path": "Data and R Code/CODEBOOK.pdf",
+    "url": "https://osf.io/download/m8s75/?revision=1",
+    "version": "1",
+    "sha256": "778feadca3bcb198904bbbb1da321cbb7534e47ab1ccf697d89b4a7a8c936cb8",
+    "size": 107706
+  },
+  {
+    "path": "Data and R Code/README.pdf",
+    "url": "https://osf.io/download/hmwez/?revision=1",
+    "version": "1",
+    "sha256": "242edb9d1583b85df918bf51a41549714aae9348b792cdccceb009fca4ad142b",
+    "size": 79766
+  },
+  {
+    "path": "AsPredicted Preregistrations/AsPredicted MTurk.pdf",
+    "url": "https://osf.io/download/kcpjm/?revision=2",
+    "version": "2",
+    "sha256": "27c6f4d16a1a238cbf02e7435c144e9f8addc73229eb57361485cd383112ce56",
+    "size": 191168
+  },
+  {
+    "path": "AsPredicted Preregistrations/AsPredicted REP.pdf",
+    "url": "https://osf.io/download/w6fvz/?revision=2",
+    "version": "2",
+    "sha256": "8350ac6f96a827305548f39554682899a164e122549a9490db8ece95c0a309e3",
+    "size": 191629
+  },
+  {
+    "path": "Main Supplemental Material.pdf",
+    "url": "https://osf.io/download/6ep2u/?revision=1",
+    "version": "1",
+    "sha256": "e19eb6437e966f2fe588eb8d482384e0cfcf24c2396787e1bb96fc08916420ad",
+    "size": 678941
+  },
+  {
+    "path": "StatCheck Main Article.pdf",
+    "url": "https://osf.io/download/fuqtk/?revision=1",
+    "version": "1",
+    "sha256": "0c6c036c46dfad3b95e169cce131dc2672ae77ba5f43e082056329f61158d3c8",
+    "size": 12423
+  },
+  {
+    "path": "StatCheck Supplemental Material.pdf",
+    "url": "https://osf.io/download/4rstk/?revision=1",
+    "version": "1",
+    "sha256": "16f10809a185c4be95c84f757886736da6c21b2607425898256ae90c55aa1b0f",
+    "size": 11898
+  },
+  {
+    "path": "DeKay Dou 2024 Accepted Manuscript.pdf",
+    "url": "https://osf.io/download/nemwv/?revision=3",
+    "version": "3",
+    "sha256": "53303707080100b927aa5096566ecb56cbfb618e673e960f5c432481ce008020",
+    "size": 603317
+  },
+  {
+    "path": "Data and R Code/MTurk_RawData.csv",
+    "url": "https://osf.io/download/nzs8a/?revision=1",
+    "version": "1",
+    "sha256": "963e082d835102b32526ce92add95e05b8ab054c2cd35d1ad309e89218197e44",
+    "size": 2005842
+  },
+  {
+    "path": "Data and R Code/REP_RawData.csv",
+    "url": "https://osf.io/download/r3x8u/?revision=1",
+    "version": "1",
+    "sha256": "0e93c56544a906eddb835d6320262cc1b0ff52f6069669d99b10c36b6fb5631d",
+    "size": 1330828
+  },
+  {
+    "path": "Data and R Code/BOTH_CleanData.csv",
+    "url": "https://osf.io/download/qkzcn/?revision=2",
+    "version": "2",
+    "sha256": "e76c0ca6152f16ea5aadf63ed38a39a115c23ae90bb3bf53d67fee8b2be94c2b",
+    "size": 585553
+  },
+  {
+    "path": "Data and R Code/MTurk_CleanData.csv",
+    "url": "https://osf.io/download/vjq8t/?revision=1",
+    "version": "1",
+    "sha256": "d0a1908665e614b10bda5efe4cb325fd437e2079332406592eeb973848bf3134",
+    "size": 435229
+  },
+  {
+    "path": "Data and R Code/REP_CleanData.csv",
+    "url": "https://osf.io/download/qdm2k/?revision=1",
+    "version": "1",
+    "sha256": "fa8fa4a2d65759d240a823d7a8a5ea8458e2b8ad808aae2ecc41dc857983f6cb",
+    "size": 251085
+  },
+  {
+    "path": "EVA and FTT Predictions for 18 Cells.xlsx",
+    "url": "https://osf.io/download/58bwj/?revision=1",
+    "version": "1",
+    "sha256": "6d13eab4f9e891a1f2ccf6d1d9c486f13b113119ceb422149e2522ae70a1c54f",
+    "size": 15482
+  }
+]

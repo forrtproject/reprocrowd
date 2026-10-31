@@ -1,0 +1,65 @@
+{
+ "gold_id": "G-09",
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "match",
+   "reference_recomputed": 0.279,
+   "tolerance": "rounding to 2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/s7wkt/ p. 5, Study 1: 'male participants preferred ideal partners who were more physically attractive (b = .279, p = .004)'",
+   "rationale": ".279 rounds to the printed 0.28.",
+   "reported_check": "confirmed in paper (PMC13428870 full text, Study 1 Results): 'more physically attractive ( b = 0.28, p = .004)'"
+  },
+  {
+   "id": "C2",
+   "expected_status": "match",
+   "reference_recomputed": -0.665,
+   "tolerance": "rounding to 2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/s7wkt/ p. 5, Study 1: 'and younger (b = -.665, p < .001) relative to female participants'",
+   "rationale": "−.665 rounds to the printed −0.67.",
+   "reported_check": "confirmed in paper (PMC13428870 full text, Study 1 Results): 'younger ( b = −0.67, p < .001)'"
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": -0.256,
+   "tolerance": "rounding to 2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/s7wkt/ p. 5, Study 1: 'significantly less kind relative to female participants (b = -.256, p = .007)'",
+   "rationale": "−.256 rounds to the printed −0.26.",
+   "reported_check": "confirmed in paper (PMC13428870 full text, Study 1 Results): 'less kind relative to female participants ( b = −0.26, p = .007)'"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": -0.082,
+   "tolerance": "rounding to 2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/s7wkt/ p. 5, Study 1: 'we did not find a significant effect of participant sex on preferences for resources (b = -.082, p = .389)'",
+   "rationale": "−.082 rounds to the printed −0.08.",
+   "reported_check": "confirmed in paper (PMC13428870 full text, Study 1 Results): 'preferences for resources ( b = −0.08, p = .389)'"
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": 6.23,
+   "tolerance": "2 dp as printed",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/s7wkt/ p. 5, Study 1: 'We then replicated the results demonstrating that female participants (M = 6.23) reported greater desire for resources in a partner than did male participants (M = 5.82)'",
+   "rationale": "Identical to printed mean.",
+   "reported_check": "confirmed in paper (PMC13428870 full text, Study 1 Results): 'Female participants ( M = 6.23) reported greater desire for resources'"
+  }
+ ],
+ "label_confidence": "high",
+ "notes": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "All Study 1 claims reproduce. Outside the claim list the report found (a) a likely text swap of the Study 2 same-sex-target resource means (paper: male M = 6.19, 'should read' male M = 6.29, female M = 6.19) and (b) the manuscript describing five traits while the code uses six. Both are reporting issues outside C1-C5; a strict reading of 'all assessed outputs recur' could support 'computational issues' for the paper, but the report treats them as 'small inconsistencies in reporting' and concludes full reproduction. The report also notes the omnibus backward-elimination code was not shipped and was reconstructed from the description; this does not affect the per-trait models behind C1-C5. Report's Study 2 attractiveness p = 0.120 differs from the paper's p = .012 (apparently a typo in the report; not a claim). Residual/age analyses (robustness) ignored."
+}

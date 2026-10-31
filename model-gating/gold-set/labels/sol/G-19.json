@@ -1,0 +1,89 @@
+{
+  "gold_id": "G-19",
+  "expected_validation_status": "computationally reproducible",
+  "acceptable_alternatives": [
+    "computational issues"
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "match",
+      "reference_recomputed": 2.110497237569,
+      "tolerance": "Equality at two decimal places as printed in the article.",
+      "severity": null,
+      "cause": null,
+      "evidence": "https://osf.io/download/nqx74/ Study 2 and Conclusion state the author fixed the called filename. OSF inventory dates the deposited s2_data_actions.csv to 2024-01-08, before revision 6. Direct local evaluation reproduces the printed activity summaries.",
+      "rationale": "The purported missing primary input exists under another filename and predates the pinned script revision. Pointing the original read_csv call to that deposited file is a lossless path repair under R4. The original expressions reproduce this summary; no later script, recoding, or replacement data are used.",
+      "reference_provenance": "direct_check",
+      "reference_scope": "Authors revision-6 activity-count expressions; deposited s2_data_actions.csv; lossless input path correction only; R 4.6.1",
+      "reference_evidence": "OSF file 659c057d5e925a0bdc45b93e v1, https://osf.io/download/crwsk/, SHA-256 89e1deb53407bd4b6aebc27c51e04c9b8627e8ec7203147410addd017103bd48. Original revision 6 formulas evaluated verbatim; model-gating/gold-set/audit/check_g19_actions.R and check_g19_actions.log."
+    },
+    {
+      "id": "C2",
+      "expected_status": "match",
+      "reference_recomputed": 0.976928449696,
+      "tolerance": "Equality at two decimal places as printed in the article.",
+      "severity": null,
+      "cause": null,
+      "evidence": "https://osf.io/download/nqx74/ Study 2 and Conclusion state the author fixed the called filename. OSF inventory dates the deposited s2_data_actions.csv to 2024-01-08, before revision 6. Direct local evaluation reproduces the printed activity summaries.",
+      "rationale": "The purported missing primary input exists under another filename and predates the pinned script revision. Pointing the original read_csv call to that deposited file is a lossless path repair under R4. The original expressions reproduce this summary; no later script, recoding, or replacement data are used.",
+      "reference_provenance": "direct_check",
+      "reference_scope": "Authors revision-6 activity-count expressions; deposited s2_data_actions.csv; lossless input path correction only; R 4.6.1",
+      "reference_evidence": "OSF file 659c057d5e925a0bdc45b93e v1, https://osf.io/download/crwsk/, SHA-256 89e1deb53407bd4b6aebc27c51e04c9b8627e8ec7203147410addd017103bd48. Original revision 6 formulas evaluated verbatim; model-gating/gold-set/audit/check_g19_actions.R and check_g19_actions.log."
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": 2.301136363636,
+      "tolerance": "Equality at two decimal places as printed in the article.",
+      "severity": null,
+      "cause": null,
+      "evidence": "https://osf.io/download/nqx74/ Study 2 and Conclusion state the author fixed the called filename. OSF inventory dates the deposited s2_data_actions.csv to 2024-01-08, before revision 6. Direct local evaluation reproduces the printed activity summaries.",
+      "rationale": "The purported missing primary input exists under another filename and predates the pinned script revision. Pointing the original read_csv call to that deposited file is a lossless path repair under R4. The original expressions reproduce this summary; no later script, recoding, or replacement data are used.",
+      "reference_provenance": "direct_check",
+      "reference_scope": "Authors revision-6 activity-count expressions; deposited s2_data_actions.csv; lossless input path correction only; R 4.6.1",
+      "reference_evidence": "OSF file 659c057d5e925a0bdc45b93e v1, https://osf.io/download/crwsk/, SHA-256 89e1deb53407bd4b6aebc27c51e04c9b8627e8ec7203147410addd017103bd48. Original revision 6 formulas evaluated verbatim; model-gating/gold-set/audit/check_g19_actions.R and check_g19_actions.log."
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": 1.6412610274,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "Authors' s1_analysis.R variable preparation and Model 1 (C4/C5) or Model 2 (C6), evaluated verbatim on deposited s1_data.csv; local audit model-gating/gold-set/audit/check_g19.R and check_g19.log; original report https://osf.io/download/nqx74/.",
+      "rationale": "A targeted local evaluation of the author's original variable-preparation and model expressions reproduces this value. Models warn of singular fits; the estimates recur at printed precision.",
+      "reference_provenance": "direct_check",
+      "reference_evidence": "Authors' s1_analysis.R variable preparation and Model 1 (C4/C5) or Model 2 (C6), evaluated verbatim on deposited s1_data.csv; local audit model-gating/gold-set/audit/check_g19.R and check_g19.log; original report https://osf.io/download/nqx74/.",
+      "reference_scope": "authors model expressions; R 4.6.1, lme4 2.0-1; inputs unchanged, local path only"
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": 0.7729283248,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "Authors' s1_analysis.R variable preparation and Model 1 (C4/C5) or Model 2 (C6), evaluated verbatim on deposited s1_data.csv; local audit model-gating/gold-set/audit/check_g19.R and check_g19.log; original report https://osf.io/download/nqx74/.",
+      "rationale": "A targeted local evaluation of the author's original variable-preparation and model expressions reproduces this value. Models warn of singular fits; the estimates recur at printed precision.",
+      "reference_provenance": "direct_check",
+      "reference_evidence": "Authors' s1_analysis.R variable preparation and Model 1 (C4/C5) or Model 2 (C6), evaluated verbatim on deposited s1_data.csv; local audit model-gating/gold-set/audit/check_g19.R and check_g19.log; original report https://osf.io/download/nqx74/.",
+      "reference_scope": "authors model expressions; R 4.6.1, lme4 2.0-1; inputs unchanged, local path only"
+    },
+    {
+      "id": "C6",
+      "expected_status": "match",
+      "reference_recomputed": 1.47641713313,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "Authors' s1_analysis.R variable preparation and Model 1 (C4/C5) or Model 2 (C6), evaluated verbatim on deposited s1_data.csv; local audit model-gating/gold-set/audit/check_g19.R and check_g19.log; original report https://osf.io/download/nqx74/.",
+      "rationale": "A targeted local evaluation of the author's original variable-preparation and model expressions reproduces this value. Models warn of singular fits; the estimates recur at printed precision.",
+      "reference_provenance": "direct_check",
+      "reference_evidence": "Authors' s1_analysis.R variable preparation and Model 1 (C4/C5) or Model 2 (C6), evaluated verbatim on deposited s1_data.csv; local audit model-gating/gold-set/audit/check_g19.R and check_g19.log; original report https://osf.io/download/nqx74/.",
+      "reference_scope": "authors model expressions; R 4.6.1, lme4 2.0-1; inputs unchanged, local path only"
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "Round 1 direct checks reproduce all six selected quantities. Study 2 activity data exist in OSF file 659c057d5e925a0bdc45b93e v1 (created 2024-01-08); revision 6 (2024-03-27) calls the wrong filename. A documented path correction from Data/S2 text.csv to deposited s2_data_actions.csv yields C1=2.110497237569, C2=0.976928449696, C3=2.301136363636 using the original expressions. The report independently says the author later fixed the called filename. Thus the historical P0 claim was false under R4: the input is present and no content changes are needed. Targeted Study 1 Model 1/2 checks also reproduce C4-C6 (singular-fit warnings recorded). Paper status is computationally reproducible within this source-supported scope. This is not a claim of a full end-to-end rerun of all analyses; other models remain supported by the human report. Audit scripts/logs are in model-gating/gold-set/audit/."
+}

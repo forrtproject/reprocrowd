@@ -1,0 +1,76 @@
+{
+ "gold_id": "G-17",
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "discrepant",
+   "reference_recomputed": "0.91",
+   "tolerance": "2 dp",
+   "severity": "P2",
+   "cause": "Unknown; report gives no explanation (Figure 4 figure code missing; predicted means not reproduced)",
+   "evidence": "https://osf.io/download/vrbtz/ p.8, Table 4: 'Low complexity (−1 SD): Mnatural = 0.95, 95% CIs [0.86, 1.04]' ✗ 'Mnatural = 0.91, 95% CIs [0.82, 1.00]'",
+   "rationale": "Report marks it not reproduced; 0.04 gap is beyond rounding. Secondary (predicted means illustrating the complexity interaction).",
+   "reported_check": "confirmed in paper (author-hosted PDF, p. 709)"
+  },
+  {
+   "id": "C2",
+   "expected_status": "discrepant",
+   "reference_recomputed": "0.44",
+   "tolerance": "2 dp",
+   "severity": "P2",
+   "cause": "Unknown; report gives no explanation",
+   "evidence": "https://osf.io/download/vrbtz/ p.8, Table 4: 'Low complexity (−1 SD): Msocial = 0.52, 95% CIs [0.37, 0.67]' ✗ 'Msocial = 0.44, 95% CIs [0.32, 0.55]'",
+   "rationale": "Marked ✗; 0.08 gap is material.",
+   "reported_check": "confirmed in paper (author-hosted PDF, p. 709)"
+  },
+  {
+   "id": "C3",
+   "expected_status": "discrepant",
+   "reference_recomputed": "0.88",
+   "tolerance": "2 dp",
+   "severity": "P2",
+   "cause": "Unknown; report gives no explanation",
+   "evidence": "https://osf.io/download/vrbtz/ p.8, Table 4: 'High complexity (+1 SD): Mnatural = 0.85, 95% CIs [0.75, 0.94]' ✗ 'Mnatural = 0.88, 95% CIs [0.73, 1.02]'",
+   "rationale": "Marked ✗; difference beyond rounding.",
+   "reported_check": "confirmed in paper (author-hosted PDF, p. 709)"
+  },
+  {
+   "id": "C4",
+   "expected_status": "discrepant",
+   "reference_recomputed": "0.68",
+   "tolerance": "2 dp",
+   "severity": "P2",
+   "cause": "Unknown; report gives no explanation",
+   "evidence": "https://osf.io/download/vrbtz/ p.8, Table 4: 'High complexity (+1 SD): Msocial = 0.71, 95% CIs [0.55, 0.88]' ✗ 'Msocial = 0.68, 95% CIs [0.52, 0.84]'",
+   "rationale": "Marked ✗; difference beyond rounding.",
+   "reported_check": "confirmed in paper (author-hosted PDF, p. 709)"
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": "10.20",
+   "tolerance": "2 dp",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/vrbtz/ p.7, Table 4: 'Paired t-test: t(104) = 10.20, P < 0.001, Mean difference= 0.32, 95% CIs [0.26, 0.38]' ✓; Appendix Table 5: 'Natural vs. social phenomena 0.32 10.20'",
+   "rationale": "Exact reproduction of the primary test.",
+   "reported_check": "confirmed in paper (author-hosted PDF, p. 709)"
+  },
+  {
+   "id": "C6",
+   "expected_status": "match",
+   "reference_recomputed": "0.174",
+   "tolerance": "2 dp",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/vrbtz/ p.8, Table 4: 'Social complexity → social phenomena: b = 0.17 ...' ✓ 'Rounding error in upper-bound of reported CIs'; Appendix Table 7: 'Social complexity 0.174 0.066 0.010'",
+   "rationale": "0.174 rounds to 0.17; only the CI upper bound has a rounding quibble.",
+   "reported_check": "confirmed in paper (author-hosted PDF, p. 709)"
+  }
+ ],
+ "label_confidence": "medium",
+ "notes": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "Puzzle for the reconciler: the regression behind Figure 4b (C6, b = 0.174) reproduces, yet the ±1 SD predicted means (C1-C4) do not, and the report says Figure 4 'Code generates the data, but not the figure' (p.6). The report does not say whether the predicted means came from shipped code or replicator-written prediction code, nor why they differ; hence medium confidence and P2 rather than P1. The version pin lists two deposits each of Analyses.R and Cleaning.R (2022 and later); the report does not say which it ran. Report's own summary: main results reproduced, 'discrepancies in some secondary statistics'."
+}

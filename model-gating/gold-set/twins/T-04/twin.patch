@@ -1,0 +1,11 @@
+--- a/an_main.R	
++++ b/an_main.R	
+@@ -36,7 +36,7 @@
+   na.omit()
+ 
+ ## Models and predicted probabilities
+-pres_dem = lm_robust(pres_dem ~ racial_flux + pid7 + ideo5 + female + age + faminc
++pres_dem = lm_robust(house_dem ~ racial_flux + pid7 + ideo5 + female + age + faminc
+                      + educ + pct_white + pct_black + pct_unemployed
+                      + pct_college + log_per_cap_inc + gini + south + non_rural
+                      + log_pop_density, data = dta %>% filter(white == 1),

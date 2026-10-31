@@ -1,0 +1,504 @@
+{
+  "schema_version": "1.0",
+  "certification_id": "RC-2026-908",
+  "paper": {
+    "doi": "10.1086/714765",
+    "title": "Do Transitional Justice Museums Persuade Visitors? Evidence from a Field Experiment",
+    "authors": [
+      "Laia Balcells",
+      "Valeria Palanza",
+      "Elsa Voytas"
+    ],
+    "year": 2022
+  },
+  "procedure": {
+    "version": "ReproCrowd prompt 0.1.0",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.0.0.md"
+  },
+  "repro_standard_version": "crowd-repro v1.0.0",
+  "rules_version": "1.0.0",
+  "engine": "Claude Code (Claude Agent SDK) - Claude Opus 5.5 (claude-opus-5-5) via Anthropic",
+  "model": {
+    "name": "Claude Opus 5.5 (claude-opus-5-5)",
+    "provider": "Anthropic"
+  },
+  "date": "2026-10-30",
+  "ai_generated": true,
+  "github_url": "https://github.com/forrtproject/reprocrowd",
+  "environment": {
+    "os": "macOS 26.7 (Darwin 25.6.0, arm64)",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.5.3",
+        "packages": {
+          "R6": "2.6.1",
+          "RColorBrewer": "1.1-3",
+          "Rcpp": "1.1.2",
+          "S7": "0.2.2",
+          "cli": "3.6.6",
+          "compiler": "4.5.3",
+          "dplyr": "1.2.1",
+          "farver": "2.1.2",
+          "generics": "0.1.4",
+          "ggplot2": "4.0.3",
+          "glue": "1.8.1",
+          "grid": "4.5.3",
+          "gridExtra": "2.3.1",
+          "gtable": "0.3.6",
+          "jsonlite": "2.0.0",
+          "labeling": "0.4.3",
+          "lattice": "0.23-1",
+          "lifecycle": "1.0.5",
+          "lmtest": "0.9-40",
+          "magrittr": "2.0.5",
+          "pillar": "1.11.1",
+          "pkgconfig": "2.0.3",
+          "plyr": "1.8.9",
+          "rlang": "1.3.0",
+          "sandwich": "3.1-3",
+          "scales": "1.4.0",
+          "tibble": "3.3.1",
+          "tidyselect": "1.2.1",
+          "tools": "4.5.3",
+          "vctrs": "0.7.3",
+          "withr": "3.0.3",
+          "zoo": "1.9-0"
+        },
+        "lockfile": "pixi.lock"
+      },
+      {
+        "name": "Python",
+        "version": "3.12.16",
+        "packages": {
+          "snakemake-minimal": "9.27.1",
+          "jsonschema": "4.26.0"
+        },
+        "lockfile": "pixi.lock"
+      },
+      {
+        "name": "pixi",
+        "version": "0.83.0",
+        "lockfile": "pixi.lock"
+      }
+    ],
+    "language": "R",
+    "versions": {
+      "R": "4.5.3",
+      "Python": "3.12.16",
+      "pixi": "0.83.0",
+      "snakemake": "9.27.1"
+    },
+    "lockfile": "pixi.lock"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "After visiting the museum, satisfaction with the current government increases (b = 0.15, p = .04).",
+      "exhibit": "Text p. 505; Figure 1",
+      "page": 505
+    },
+    {
+      "id": "C2",
+      "claim": "Satisfaction with democracy increases following a museum visit (b = 0.14, p = .03).",
+      "exhibit": "Text p. 505; Figure 1",
+      "page": 505
+    },
+    {
+      "id": "C3",
+      "claim": "Satisfaction with democracy increases particularly among those on the left (b = 0.16, p = .10).",
+      "exhibit": "Text p. 505; Figure 1",
+      "page": 505
+    },
+    {
+      "id": "C4",
+      "claim": "Individuals increase their trust in the church (b = .18, p = .01).",
+      "exhibit": "Text p. 505; Figure 1",
+      "page": 505
+    },
+    {
+      "id": "C5",
+      "claim": "Support for a military government drops 11% after visiting.",
+      "exhibit": "Text p. 505; Figure 1",
+      "page": 505
+    },
+    {
+      "id": "C6",
+      "claim": "Those treated on the right decrease their acceptance of a military government by 17%.",
+      "exhibit": "Text p. 505; Figure 1",
+      "page": 505
+    },
+    {
+      "id": "C7",
+      "claim": "The right-left gap in acceptance of a military government is reduced from 0.43 to 0.34 after visiting the museum.",
+      "exhibit": "Text p. 505",
+      "page": 505
+    },
+    {
+      "id": "C8",
+      "claim": "The partisan divide in satisfaction with democracy is reduced from 0.26 to 0.12 after treatment.",
+      "exhibit": "Text p. 505",
+      "page": 505
+    },
+    {
+      "id": "C9",
+      "claim": "Subjects are less likely to believe that dwelling on the past prevents progress (b = -0.32, p = .03).",
+      "exhibit": "Text p. 505; Figure 2",
+      "page": 505
+    },
+    {
+      "id": "C10",
+      "claim": "Greater support for victim compensation (b = 0.19, p = .00).",
+      "exhibit": "Text p. 505; Figure 2",
+      "page": 505
+    },
+    {
+      "id": "C11",
+      "claim": "Greater support for a public apology from the military (b = 0.18, p = .09).",
+      "exhibit": "Text p. 505; Figure 2",
+      "page": 505
+    },
+    {
+      "id": "C12",
+      "claim": "Visitors are more likely to say perpetrators should be pardoned (b = 0.22, p = .02).",
+      "exhibit": "Text p. 505; Figure 2",
+      "page": 505
+    },
+    {
+      "id": "C13",
+      "claim": "Only 13.14% (n = 18) indicated that the information in the museum was new to them.",
+      "exhibit": "Text p. 506",
+      "page": 506
+    },
+    {
+      "id": "C14",
+      "claim": "After one week, treated participants are still more likely to support pardoning (b = 0.20, p = .16).",
+      "exhibit": "Text p. 507; Figure 4B",
+      "page": 507
+    },
+    {
+      "id": "C15",
+      "claim": "126 control participants showed up; 143 treatment participants showed up, 5 of whom did not visit (CACE).",
+      "exhibit": "Text p. 502-503",
+      "page": 502
+    },
+    {
+      "id": "C16",
+      "claim": "Final follow-up round sample size n = 131.",
+      "exhibit": "Text p. 503",
+      "page": 503
+    },
+    {
+      "id": "C17",
+      "claim": "Figures 1-4 (coefficient plots) are produced by the shipped code.",
+      "exhibit": "Figures 1-4, pp. 505-507",
+      "page": 505
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "Govt satisfaction, CACE b (all)",
+      "reported": 0.15,
+      "recomputed": 0.152165,
+      "status": "match"
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Govt satisfaction, p (all)",
+      "reported": 0.04,
+      "recomputed": 0.034968,
+      "status": "close",
+      "note": "Recomputed p = 0.0350; rounds to .03 and truncates to .03, reported .04."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Satisfaction with democracy, b (all)",
+      "reported": 0.14,
+      "recomputed": 0.136478,
+      "status": "match"
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Satisfaction with democracy, p (all)",
+      "reported": 0.03,
+      "recomputed": 0.031779,
+      "status": "match"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Satisfaction with democracy, b (left)",
+      "reported": 0.16,
+      "recomputed": 0.160964,
+      "status": "match"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Satisfaction with democracy, p (left)",
+      "reported": 0.1,
+      "recomputed": 0.096458,
+      "status": "match"
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Trust in church, b (all)",
+      "reported": 0.18,
+      "recomputed": 0.180891,
+      "status": "match"
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Trust in church, p (all)",
+      "reported": 0.01,
+      "recomputed": 0.011267,
+      "status": "match"
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Support for military govt (0-1), b (all)",
+      "reported": -0.11,
+      "recomputed": -0.113631,
+      "status": "match"
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Support for military govt (0-1), b (right)",
+      "reported": -0.17,
+      "recomputed": -0.169941,
+      "status": "match"
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Right-left gap, military govt, pre (treated)",
+      "reported": 0.43,
+      "recomputed": 0.435714,
+      "status": "close",
+      "note": "Operationalised by the certifier as mean(right) - mean(left) among treated, pre vs post; the paper does not state the computation. 0.4357 truncates to 0.43 but rounds to 0.44."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Right-left gap, military govt, post (treated)",
+      "reported": 0.34,
+      "recomputed": 0.343475,
+      "status": "match",
+      "note": "Operationalised by the certifier as mean(right) - mean(left) among treated, pre vs post; the paper does not state the computation. 0.4357 truncates to 0.43 but rounds to 0.44."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Right-left gap, democracy, pre (treated)",
+      "reported": 0.26,
+      "recomputed": 0.256471,
+      "status": "match",
+      "note": "Same operationalisation as C7."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Right-left gap, democracy, post (treated)",
+      "reported": 0.12,
+      "recomputed": 0.121028,
+      "status": "match",
+      "note": "Same operationalisation as C7."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Dwelling on past prevents progress, b",
+      "reported": -0.32,
+      "recomputed": -0.31905,
+      "status": "match"
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Dwelling on past prevents progress, p",
+      "reported": 0.03,
+      "recomputed": 0.032087,
+      "status": "match"
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Victim compensation, b",
+      "reported": 0.19,
+      "recomputed": 0.198014,
+      "status": "close",
+      "note": "Recomputed 0.1980: consistent with truncation to two decimals, not rounding."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Victim compensation, p",
+      "reported": 0.0,
+      "recomputed": 0.00912,
+      "status": "close",
+      "note": "Recomputed p = 0.0091: consistent with truncation (.00), rounds to .01."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Public apology from military, b",
+      "reported": 0.18,
+      "recomputed": 0.181732,
+      "status": "match"
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Public apology from military, p",
+      "reported": 0.09,
+      "recomputed": 0.087998,
+      "status": "match"
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "Pardon perpetrators, b",
+      "reported": 0.22,
+      "recomputed": 0.216795,
+      "status": "match"
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "Pardon perpetrators, p",
+      "reported": 0.02,
+      "recomputed": 0.020264,
+      "status": "match"
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "Museum info new: n",
+      "reported": 18,
+      "recomputed": 18.0,
+      "status": "match",
+      "note": "18 of 135 non-missing treated answers = 13.33%; 18/138 treated = 13.04%. 13.14% equals 18/137; no denominator of 137 is found in the shipped data."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "Museum info new: percent",
+      "reported": 13.14,
+      "recomputed": 13.333333,
+      "status": "discrepant",
+      "note": "18 of 135 non-missing treated answers = 13.33%; 18/138 treated = 13.04%. 13.14% equals 18/137; no denominator of 137 is found in the shipped data."
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "Pardon, one-week follow-up, b (wave 1)",
+      "reported": 0.2,
+      "recomputed": 0.308099,
+      "status": "discrepant",
+      "note": "Wave 1 (one week) gives b = 0.31, p = .004 (n = 222). The reported b = 0.20, p = .16 equals the wave 3 (24-week) estimate: b = 0.2047, p = 0.1640 (n = 129)."
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "Pardon, one-week follow-up, p (wave 1)",
+      "reported": 0.16,
+      "recomputed": 0.004062,
+      "status": "discrepant",
+      "note": "Wave 1 (one week) gives b = 0.31, p = .004 (n = 222). The reported b = 0.20, p = .16 equals the wave 3 (24-week) estimate: b = 0.2047, p = 0.1640 (n = 129)."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "Control group n",
+      "reported": 126,
+      "recomputed": 126.0,
+      "status": "match"
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "Treated compliers n (143 showed up - 5)",
+      "reported": 138,
+      "recomputed": 138.0,
+      "status": "match"
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Final-round (24-week) n",
+      "reported": 131,
+      "recomputed": 131.0,
+      "status": "match"
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "Figures 1, 2, 3A, 3B, 4 regenerated",
+      "reported": "published figures",
+      "recomputed": "5 PDFs in figures/",
+      "status": "match",
+      "note": "Visual comparison by the agent of rendered PDFs against the published pages 505-507; the plotted values are the tool-checked estimates in results/estimates.csv. Figures 2-4 require the RUN-001 edit."
+    }
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "HighConfidence",
+  "findings": [
+    {
+      "id": "RUN-001",
+      "severity": "P0",
+      "type": "defect",
+      "description": "The shipped main-text script BPV_museums_maintext.R stops at Figure 2 (line 224) with \"replacement has 25 rows, data has 24\": the label loop `for (i in 22:34)` writes past the 24-row data frame. Figures 2-4 and all later estimates are not produced as shipped.",
+      "evidence": "results/maintext_unedited.log (exit code in results/comparison.json: maintext_as_shipped).",
+      "suggested_fix": "Change the loop bound to 22:24 (applied in working/ as a lossless edit; no estimate, SE or p-value changes)."
+    },
+    {
+      "id": "RES-001",
+      "severity": "P2",
+      "type": "defect",
+      "description": "C14: the text attributes b = 0.20, p = .16 to the one-week follow-up. The one-week (wave 1) estimate recomputes to b = 0.308, p = .004 (n = 222); b = 0.20, p = .16 equals the 24-week (wave 3) estimate (b = 0.205, p = .164, n = 129). Published Figure 4B also shows a week-1 point near 0.31 and a week-24 point near 0.20, so the code reproduces the figure and the text label does not match it. P2 because it is a secondary (durability) result and the figure reproduces.",
+      "evidence": "results/estimates.csv rows pardoned_f1, pardoned_f3; figures/figure4_durability.pdf vs published p. 507.",
+      "suggested_fix": "Authors could state which wave the in-text durability statistic refers to."
+    },
+    {
+      "id": "RES-002",
+      "severity": "P2",
+      "type": "defect",
+      "description": "C13: n = 18 recurs, but 13.14% does not: 18/135 non-missing treated answers = 13.33%, 18/138 treated = 13.04%. 13.14% equals 18/137; 137 is the non-missing count of several other post-visit items among treated (e.g. justice_advance), so the percentage may use another item's denominator; this could not be confirmed.",
+      "evidence": "results/descriptives.json (mm_new_table).",
+      "suggested_fix": "Document the denominator used for the 13.14% figure."
+    },
+    {
+      "id": "RES-003",
+      "severity": "P3",
+      "type": "normalization",
+      "description": "Reported p-values equal the heteroscedasticity-consistent p-value divided by itt.d (0.965): the code divides the whole coeftest row (estimate, SE, t and p) by itt.d. With the division, C3 (.096 -> .10) and C11 (.088 -> .09) match the text; without it they would read .09 and .08. Recorded as computed; not a judgement on the method.",
+      "evidence": "est.ate() and est.ate.np() in BPV_museums_maintext.R; raw p = reported p x 0.965.",
+      "suggested_fix": "State in the methods how p-values for the CACE are obtained."
+    },
+    {
+      "id": "RES-004",
+      "severity": "P3",
+      "type": "normalization",
+      "description": "Two-decimal reporting is not uniform: C10 (b = 0.198 reported 0.19; p = .009 reported .00) and C7 (0.436 reported 0.43) match truncation; C1 p = .0350 is reported as .04 (neither rounding nor truncation gives .04). Differences are in the last digit only.",
+      "evidence": "results/comparison.json.",
+      "suggested_fix": "Report values rounded consistently, or with three decimals for p."
+    },
+    {
+      "id": "DOC-001",
+      "severity": "P3",
+      "type": "defect",
+      "description": "No README, software versions or run instructions are shipped; Figure 4 is drawn with base graphics to the default device and never saved by the script; the Figure 1 label loop `for (i in 13:25)` overruns into later groups (harmless, later loops overwrite the labels).",
+      "evidence": "Shipped package contents (5 files).",
+      "suggested_fix": "Ship a README with R and package versions and save Figure 4 explicitly."
+    }
+  ],
+  "limitations": [
+    "Pilot run: the bundle is not yet published; github_url points to the ReproCrowd project repository, not to a repository holding this bundle.",
+    "No nanopublications were minted (artifacts.chain_uris is empty); see nanopubs/PUBLISHED.md.",
+    "The appendix script ran unmodified to exit 0, but appendix tables A1-A22 were not compared with the online appendix.",
+    "C7 and C8 use the certifier's operationalisation of the right-left gap (difference in means among treated, pre vs post); the paper does not state the computation.",
+    "Run on one platform (macOS arm64); linux-64 is solved in pixi.lock but was not executed.",
+    "The rule pack's verify_quote / resolve_doi / wikidata_lookup tools were not available; claims were transcribed from pdftotext output of the paper PDF and checked by reading."
+  ],
+  "artifacts": {
+    "pipeline": "https://github.com/forrtproject/reprocrowd",
+    "chain_uris": [],
+    "console_log": "results/maintext.log, results/appendix.log"
+  },
+  "signatories": [
+    {
+      "name": "Claude Opus 5.5 (AI agent, Anthropic)",
+      "role": "codechecker"
+    }
+  ],
+  "provenance": {
+    "raw_data": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/19/replication_package/all.Rdata",
+    "processed_data": "working/all.Rdata (unchanged copy)",
+    "analysis_script": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/19/replication_package/BPV_museums_maintext.R"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  }
+}

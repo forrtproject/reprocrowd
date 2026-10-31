@@ -1,0 +1,45 @@
+[
+  {
+    "path": "Study 1/Study1_OSF_deidentified.Rmd",
+    "url": "https://osf.io/download/nrezq/?revision=1",
+    "version": "1",
+    "sha256": "fca2c602a74eb0f8c61f80b928f014bb7dd755c2180e3be1ed9d9b5b5efec190",
+    "size": 12153
+  },
+  {
+    "path": "Study 2/Study2_OSF_deidentified.Rmd",
+    "url": "https://osf.io/download/d4pej/?revision=1",
+    "version": "1",
+    "sha256": "485b8cc4adc0698e5640721262bc0b172d7c3f5aeb127d6a207c3b011544a80f",
+    "size": 68347
+  },
+  {
+    "path": "Study 3/Study3_OSF_deidentified.Rmd",
+    "url": "https://osf.io/download/359na/?revision=1",
+    "version": "1",
+    "sha256": "f7676361486ba3d6b80a040d091db9f8656364b4321e9285be48370e870512cf",
+    "size": 25150
+  },
+  {
+    "path": "Study 4/Study4_OSF_deidentified.Rmd",
+    "url": "https://osf.io/download/y42vp/?revision=1",
+    "version": "1",
+    "sha256": "a0e091594389c478b0ca6673e90358c74471f1896d9beba6c124e3c15c601207",
+    "size": 16636
+  },
+  {
+    "path": "Study 2/Study2A_RAW_UK_deidentified.xlsx",
+    "url": "https://osf.io/download/uhye7/?revision=1",
+    "version": "1",
+    "sha256": "6e09e707d43c9393202e691ce437b3bdaf67adac4214028bd1d8ffc9e1fa68a1",
+    "size": 1899951
+  },
+  {
+    "path": "Study 2/Study2A_RAW_China_deidentified.xlsx",
+    "url": "https://osf.io/download/46e2j/?revision=1",
+    "version": 1,
+    "sha256": "aa31cfe5ef9ce27725b595cd257e27cee236ae657f8aa485c47cb50efd192bcb",
+    "bytes": 1916657,
+    "pin_scope": "Supplemental input pin: the gold record pins the analysis script and UK input but omits the required China input. This original deposited version is pinned here; gold is unchanged."
+  }
+]

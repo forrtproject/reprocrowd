@@ -1,0 +1,82 @@
+{
+ "gold_id": "G-19",
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [
+  "computational issues"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/nqx74/ p.5: 'one data file that was called in the analysis script was missing (\"Data/S2 text.csv\"). This led to line 33-100 of the analysis code not running.' Pinned s2_analysis.R rev 6 (SHA-256 ecedfe31... verified) line 31: s2_text <- read_csv(\"Data/S2 text.csv\")",
+   "rationale": "The deposited pre-revision-6 activity data and the second labeller's direct checks establish a lossless filename repair; the printed mean matches, severity null.",
+   "reported_check": "confirmed in author preprint/accepted manuscript text (published SAGE version not accessed) (mean 2.11, SD 0.98)",
+   "rationale_blind_original": "Blocked as shipped at revision 6; the author renamed the call only in revision 7 (2026-03-06), after the report."
+  },
+  {
+   "id": "C2",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/nqx74/ p.5: 'one data file that was called in the analysis script was missing (\"Data/S2 text.csv\"). This led to line 33-100 of the analysis code not running.' Pinned s2_analysis.R rev 6 (SHA-256 ecedfe31... verified) line 31: s2_text <- read_csv(\"Data/S2 text.csv\")",
+   "rationale": "As C1: lossless filename repair; the printed SD matches, severity null.",
+   "reported_check": "confirmed in author preprint/accepted manuscript text (published SAGE version not accessed)",
+   "rationale_blind_original": "Same block as C1."
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/nqx74/ p.5: 'one data file that was called in the analysis script was missing (\"Data/S2 text.csv\"). This led to line 33-100 of the analysis code not running.' Pinned s2_analysis.R rev 6 (SHA-256 ecedfe31... verified) line 31: s2_text <- read_csv(\"Data/S2 text.csv\")",
+   "rationale": "As C1: lossless filename repair; the printed mean matches, severity null.",
+   "reported_check": "confirmed in author preprint/accepted manuscript text (published SAGE version not accessed) (mean 2.30, SD 1.09)",
+   "rationale_blind_original": "Same block as C1."
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": "1.64126",
+   "tolerance": "2 dp",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/nqx74/ p.5: 'Computationally Reproducible from Analysis Data: analysis code with analysis data produces the same output as presented in the paper.' My run of shipped s1_analysis.R model 1: 'peb.between 1.64126 0.42003'",
+   "rationale": "Study 1 fully reproduced per report; confirmed by running the shipped code.",
+   "reported_check": "confirmed in author preprint/accepted manuscript text (published SAGE version not accessed)"
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": "0.77293",
+   "tolerance": "2 dp",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/nqx74/ p.5 (same quote); my run of model 1: 'peb.within 0.77293 0.06932'",
+   "rationale": "Reproduced.",
+   "reported_check": "confirmed in author preprint/accepted manuscript text (published SAGE version not accessed)"
+  },
+  {
+   "id": "C6",
+   "expected_status": "match",
+   "reference_recomputed": "1.47642",
+   "tolerance": "2 dp",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/nqx74/ p.5 (same quote); my run of shipped s1_analysis.R 'Model 2: Control for social desirability bias': 'peb.between 1.47642 0.42262', Wald CI 0.65-2.30",
+   "rationale": "1.48 is the social-desirability-controlled model (code Model 2), as the corrected exhibit states, and reproduces at printed precision.",
+   "reported_check": "confirmed in author preprint/accepted manuscript text (published SAGE version not accessed); text attributes b = 1.48 [0.65, 2.30] to the model adding social desirability bias; the claim's exhibit 'model 3' is a mislabel",
+   "rationale_blind_original": "1.48 is the social-desirability-controlled model and reproduces exactly; the claim's 'model 3' label is wrong (model 3, the moderation model, gives 1.45)."
+  }
+ ],
+ "label_confidence": "high",
+ "notes": "C1-C3 match, severity null: the deposited pre-revision-6 activity data file exists and the second labeller's direct checks establish that correcting the input filename is a lossless repair (R4 as amended). Paper computationally reproducible, alternative computational issues (R7); no technical-failure alternative. The C6 exhibit has been corrected to the social-desirability-controlled model; Study 1 inputs are now pinned. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "Claim-list problem: C6 exhibit says 'model 3' but 1.48 is the model with social desirability bias added (code Model 2); the report's Table 1 (p.10) lists model 3 between-person b = 1.45, which I also get from model 3 (1.452473). Value itself reproduces. Study 1 has no version pin; I ran the current s1_analysis.R and s1_data.csv from osf.io/hpvsu (my edits: data path, dropped effectsize/interactions calls and the figure block; did not touch models). Study 2: no 'S2 text.csv' anywhere in the project; s2_data_actions.csv is probably the intended file, but renaming is not 'as shipped'. Sourcing the whole s2 script would halt at line 31, which is why 'technical failure' is an acceptable alternative, though the gold primary claims (Study 1, Study 2 main ANCOVA) run. Report does not give values for C1-C3, only that Figure 2/S4 content was irreproducible."
+}

@@ -1,0 +1,74 @@
+{
+  "gold_id": "G-09",
+  "expected_validation_status": "computationally reproducible",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "match",
+      "reference_recomputed": 0.279,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C2",
+      "expected_status": "match",
+      "reference_recomputed": -0.665,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": -0.256,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": -0.082,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": 6.23,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+      "reference_scope": "authors_workflow"
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "The selected per-trait regressions and resource mean come from supplied analyses. The source reconstructs missing backward-elimination steps for omnibus models; those omnibus claims are not selected. Age removal and heteroscedasticity checks are scientific alternatives and are excluded."
+}

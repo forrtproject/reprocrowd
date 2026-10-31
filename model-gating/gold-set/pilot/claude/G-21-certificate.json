@@ -1,0 +1,649 @@
+{
+  "schema_version": "1.0",
+  "certification_id": "RC-2026-921",
+  "repro_standard_version": "crowd-repro v1.0.0",
+  "paper": {
+    "doi": "10.1177/09567976241251741",
+    "title": "Learning From Aggregated Opinion",
+    "authors": [
+      "Kerem Oktar",
+      "Tania Lombrozo",
+      "Thomas L. Griffiths"
+    ],
+    "year": 2024
+  },
+  "procedure": {
+    "version": "ReproCrowd prompt 0.1.0",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.0.0.md"
+  },
+  "engine": "Claude Code (Claude Agent SDK subagent) — Claude Opus 5.5 via Anthropic",
+  "model": {
+    "name": "claude-opus-5-5",
+    "provider": "Anthropic"
+  },
+  "rules_version": "1.0.0",
+  "date": "2026-10-30",
+  "ai_generated": true,
+  "github_url": "https://github.com/forrtproject/reprocrowd",
+  "environment": {
+    "os": "macOS 26.7 (arm64), Darwin 25.6.0",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1 (2026-06-24)",
+        "packages": {
+          "Hmisc": "5.3-0",
+          "Matrix": "1.7-5",
+          "MuMIn": "1.48.19",
+          "PairedData": "1.1.1",
+          "RColorBrewer": "1.1-3",
+          "cowplot": "1.2.0",
+          "data.table": "1.18.6.1",
+          "dplyr": "1.2.1",
+          "ggplot2": "4.0.3",
+          "ggpubr": "1.0.0",
+          "gmp": "0.7-5.1",
+          "gridExtra": "2.3.1",
+          "jsonlite": "2.0.0",
+          "lme4": "2.1-0",
+          "metR": "0.19.0",
+          "psych": "2.6.9",
+          "purrr": "1.2.2",
+          "qualtRics": "3.3.0",
+          "readr": "2.2.0",
+          "reshape2": "1.4.5",
+          "sjPlot": "2.9.0",
+          "stringr": "1.6.0",
+          "tidyr": "1.3.2"
+        },
+        "lockfile": "outputs/E*/E*_packages.csv + outputs/E*/E*_sessionInfo.txt (no renv.lock shipped by authors)"
+      },
+      {
+        "name": "Python",
+        "version": "3.14.6",
+        "packages": {},
+        "lockfile": "standard library only"
+      }
+    ],
+    "language": "R",
+    "versions": {
+      "R": "4.6.1",
+      "Python": "3.14.6",
+      "pixi": "0.83.0",
+      "r-base (pixi.lock)": "4.5.3"
+    },
+    "lockfile": "pixi.lock (pinned environment; certified numbers produced with host R 4.6.1, see environment.json)"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "E1: 133 adults recruited; 17 excluded on preregistered criteria",
+      "exhibit": "Exp. 1 Method, Participants",
+      "page": 1013
+    },
+    {
+      "id": "C2",
+      "claim": "E1: 46 male, 84 female, 3 other; mean age = 34",
+      "exhibit": "Exp. 1 Method, Participants",
+      "page": 1013
+    },
+    {
+      "id": "C3",
+      "claim": "E1: Bayes predictions correlate with mean judgments, r = .92, p < .001",
+      "exhibit": "Exp. 1 Results; Fig. 3a",
+      "page": 1015
+    },
+    {
+      "id": "C4",
+      "claim": "E1: UPCO r = -.08, p = .75 (Fig. 3a: p = .74)",
+      "exhibit": "Exp. 1 Results; Fig. 3a",
+      "page": 1015
+    },
+    {
+      "id": "C5",
+      "claim": "E1: Competence r = .79, p < .001",
+      "exhibit": "Exp. 1 Results; Fig. 3a",
+      "page": 1015
+    },
+    {
+      "id": "C6",
+      "claim": "E1: difference in correlations Bayes vs UPCO, t = 4.51, p < .001",
+      "exhibit": "Exp. 1 Results",
+      "page": 1015
+    },
+    {
+      "id": "C7",
+      "claim": "E1: difference in correlations Bayes vs Competence, t = 1.35, p = .18",
+      "exhibit": "Exp. 1 Results",
+      "page": 1015
+    },
+    {
+      "id": "C8",
+      "claim": "E1: per-participant correlations higher for Bayes than UPCO, t(132) = 13.68, p < .001",
+      "exhibit": "Fig. 2 caption; Fig. 3b",
+      "page": 1016
+    },
+    {
+      "id": "C9",
+      "claim": "E1: per-participant correlations higher for Bayes than Competence, t(132) = 4.19, p < .001",
+      "exhibit": "Fig. 2 caption; Fig. 3b",
+      "page": 1016
+    },
+    {
+      "id": "C10",
+      "claim": "E1: ~75% (correlations) / ~80% (deviations) of participants best captured by Bayes",
+      "exhibit": "Exp. 1 Results; Fig. S2",
+      "page": 1015
+    },
+    {
+      "id": "C11",
+      "claim": "E2: 458 adults recruited; 108 excluded (33 too fast, 72 attention check)",
+      "exhibit": "Exp. 2 Method, Participants",
+      "page": 1015
+    },
+    {
+      "id": "C12",
+      "claim": "E2: mean age = 38 years",
+      "exhibit": "Exp. 2 Method, Participants",
+      "page": 1015
+    },
+    {
+      "id": "C13",
+      "claim": "E2: model-mean judgment correlations r = .99 (Bayes), .97 (UPCO), .96 (Competence)",
+      "exhibit": "Fig. 4a",
+      "page": 1017
+    },
+    {
+      "id": "C14",
+      "claim": "E2: Bayes best single model by AIC; ensembles outperform; adding Competence helps more than UPCO",
+      "exhibit": "Exp. 2 Results; Fig. 6a",
+      "page": 1017
+    },
+    {
+      "id": "C15",
+      "claim": "E2: UPCO and Competence better predict one quarter of participants",
+      "exhibit": "Exp. 2 Results; Fig. 6b",
+      "page": 1017
+    },
+    {
+      "id": "C16",
+      "claim": "E3: 295 adults recruited; 60 excluded (52 time, 8 attention); mean age = 42",
+      "exhibit": "Exp. 3 Method, Participants",
+      "page": 1017
+    },
+    {
+      "id": "C17",
+      "claim": "E3: AIC ordering B+C < B+U+C < B+U < Bayes < U+C < UPCO < Competence",
+      "exhibit": "Fig. 8a",
+      "page": 1021
+    },
+    {
+      "id": "C18",
+      "claim": "E3: proportion heuristic AIC ~ 1722, prior heuristic AIC ~ 922",
+      "exhibit": "Exp. 3 Results",
+      "page": 1021
+    },
+    {
+      "id": "C19",
+      "claim": "E3: Bayes AIC ~ 410, UPCO ~ 497, Competence ~ 507",
+      "exhibit": "Exp. 3 Results",
+      "page": 1021
+    },
+    {
+      "id": "C20",
+      "claim": "E3: Bayes best captures 43% (correlations) and 48% (deviations) of participants",
+      "exhibit": "Exp. 3 Results; Fig. 8b",
+      "page": 1021
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "E1 participants recruited (rows in shipped data)",
+      "reported": 133,
+      "recomputed": 150,
+      "status": "discrepant",
+      "note": "Shipped e1_data.csv has 150 rows; script excludes 17 and analyses 133 (consistent with t(132)). Paper text calls 133 'recruited'."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "E1 participants excluded",
+      "reported": 17,
+      "recomputed": 17,
+      "status": "match",
+      "note": "Shipped e1_data.csv has 150 rows; script excludes 17 and analyses 133 (consistent with t(132)). Paper text calls 133 'recruited'."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "E1 participants analysed (paper text implies 133 - 17 = 116)",
+      "reported": 116,
+      "recomputed": 133,
+      "status": "discrepant",
+      "note": "Shipped e1_data.csv has 150 rows; script excludes 17 and analyses 133 (consistent with t(132)). Paper text calls 133 'recruited'."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "E1 mean age (analysed sample)",
+      "reported": 34,
+      "recomputed": 34,
+      "status": "match"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "E1 r(Bayes, mean judgments)",
+      "reported": 0.92,
+      "recomputed": 0.92,
+      "status": "match"
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "E1 r(UPCO, mean judgments)",
+      "reported": -0.08,
+      "recomputed": -0.08,
+      "status": "match"
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "E1 p for r(UPCO) (text .75, Fig. 3 .74)",
+      "reported": 0.75,
+      "recomputed": 0.75,
+      "status": "match"
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "E1 r(Competence, mean judgments)",
+      "reported": 0.79,
+      "recomputed": 0.79,
+      "status": "match"
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "E1 Bayes vs UPCO correlation difference (paired.r; printed as z)",
+      "reported": 4.51,
+      "recomputed": 4.51,
+      "status": "match",
+      "note": "psych::paired.r prints this as z, not t."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "E1 Bayes vs Competence correlation difference (paired.r; printed as z)",
+      "reported": 1.35,
+      "recomputed": 1.35,
+      "status": "match",
+      "note": "psych::paired.r prints this as z, not t."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "E1 Bayes vs Competence p",
+      "reported": 0.18,
+      "recomputed": 0.18,
+      "status": "match",
+      "note": "psych::paired.r prints this as z, not t."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "E1 paired t, per-participant r Bayes vs UPCO",
+      "reported": 13.68,
+      "recomputed": 13.68,
+      "status": "match"
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "E1 df of paired t",
+      "reported": 132,
+      "recomputed": 132,
+      "status": "match"
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "E1 paired t, per-participant r Bayes vs Competence",
+      "reported": 4.19,
+      "recomputed": 4.19,
+      "status": "match"
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "E1 % participants best captured by Bayes (correlation ~75%, deviation ~80%)",
+      "reported": "~75 / ~80",
+      "recomputed": "not computed by shipped code",
+      "status": "not_checkable",
+      "note": "No code in E1_analysis.R computes per-participant best-model shares."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "E2 participants recruited (rows in shipped data)",
+      "reported": 458,
+      "recomputed": 563,
+      "status": "discrepant",
+      "note": "Shipped e2_data.csv has 563 rows; script removes 33 (time) + 72 (attention) = 105 and analyses 458. Paper calls 458 'recruited' and states 108 excluded although 33 + 72 = 105."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "E2 excluded for completion time",
+      "reported": 33,
+      "recomputed": 33,
+      "status": "match",
+      "note": "Shipped e2_data.csv has 563 rows; script removes 33 (time) + 72 (attention) = 105 and analyses 458. Paper calls 458 'recruited' and states 108 excluded although 33 + 72 = 105."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "E2 excluded for attention check",
+      "reported": 72,
+      "recomputed": 72,
+      "status": "match",
+      "note": "Shipped e2_data.csv has 563 rows; script removes 33 (time) + 72 (attention) = 105 and analyses 458. Paper calls 458 'recruited' and states 108 excluded although 33 + 72 = 105."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "E2 total excluded",
+      "reported": 108,
+      "recomputed": 105,
+      "status": "discrepant",
+      "note": "Shipped e2_data.csv has 563 rows; script removes 33 (time) + 72 (attention) = 105 and analyses 458. Paper calls 458 'recruited' and states 108 excluded although 33 + 72 = 105."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "E2 participants analysed (paper text implies 458 - 108 = 350)",
+      "reported": 350,
+      "recomputed": 458,
+      "status": "discrepant",
+      "note": "Shipped e2_data.csv has 563 rows; script removes 33 (time) + 72 (attention) = 105 and analyses 458. Paper calls 458 'recruited' and states 108 excluded although 33 + 72 = 105."
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "E2 mean age",
+      "reported": 38,
+      "recomputed": 38,
+      "status": "match"
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "E2 r(Bayes, mean judgments)",
+      "reported": 0.99,
+      "recomputed": 0.99,
+      "status": "match",
+      "note": "Computed by the certifier as cor.test on the script's m_sk table (stat not printed by shipped E2 script). Row-order alignment of participant means verified (max diff 5.6e-17)."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "E2 r(UPCO, mean judgments)",
+      "reported": 0.97,
+      "recomputed": 0.97,
+      "status": "match",
+      "note": "Computed by the certifier as cor.test on the script's m_sk table (stat not printed by shipped E2 script). Row-order alignment of participant means verified (max diff 5.6e-17)."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "E2 r(Competence, mean judgments)",
+      "reported": 0.96,
+      "recomputed": 0.96,
+      "status": "match",
+      "note": "Computed by the certifier as cor.test on the script's m_sk table (stat not printed by shipped E2 script). Row-order alignment of participant means verified (max diff 5.6e-17)."
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "E2 Bayes has lowest AIC among single models (1 = yes)",
+      "reported": 1,
+      "recomputed": 1,
+      "status": "match"
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "E2 ensembles B+C and B+C+U beat Bayes; B+C beats B+U (1 = yes)",
+      "reported": 1,
+      "recomputed": 1,
+      "status": "match"
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "E2 % participants NOT best captured by Bayes, correlation (paper: one quarter)",
+      "reported": 25,
+      "recomputed": 30.8,
+      "status": "discrepant",
+      "note": "Shares from the shipped table(which.max/which.min) code: Bayes best for 69.2% (correlation) and 61.8% (deviation) of 458 participants."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "E2 % participants NOT best captured by Bayes, deviation (paper: one quarter)",
+      "reported": 25,
+      "recomputed": 38.2,
+      "status": "discrepant",
+      "note": "Shares from the shipped table(which.max/which.min) code: Bayes best for 69.2% (correlation) and 61.8% (deviation) of 458 participants."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "E3 participants recruited (rows in shipped data)",
+      "reported": 295,
+      "recomputed": 295,
+      "status": "match"
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "E3 excluded for completion time",
+      "reported": 52,
+      "recomputed": 52,
+      "status": "match"
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "E3 participants analysed (295 - 52 - 8)",
+      "reported": 235,
+      "recomputed": 235,
+      "status": "match"
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "E3 mean age",
+      "reported": 42,
+      "recomputed": 42,
+      "status": "match"
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "E3 AIC order of Fig. 8a (1 = same order)",
+      "reported": 1,
+      "recomputed": 1,
+      "status": "match",
+      "note": "Fixed-effects lm + MuMIn::dredge as shipped: B+C 322.7, B+U+C 323.8, B+U 418.9, B 463.1, U+C 505.4, U 569.8, C 785.1."
+    },
+    {
+      "claim_id": "C18",
+      "quantity": "E3 AIC prior heuristic (lmer)",
+      "reported": 922,
+      "recomputed": 922,
+      "status": "match",
+      "note": "Shipped lmer(post_j ~ (t / (t + f)) + (1|Subject) + (1|lab)) gives AIC 1766.3 (gap +44 vs 1722). Diagnostic: the same model with I(t / (t + f)) gives 1721.98, matching the reported value. Prior heuristic 922.2 matches."
+    },
+    {
+      "claim_id": "C18",
+      "quantity": "E3 AIC proportion heuristic (lmer)",
+      "reported": 1722,
+      "recomputed": 1766,
+      "status": "discrepant",
+      "note": "Shipped lmer(post_j ~ (t / (t + f)) + (1|Subject) + (1|lab)) gives AIC 1766.3 (gap +44 vs 1722). Diagnostic: the same model with I(t / (t + f)) gives 1721.98, matching the reported value. Prior heuristic 922.2 matches."
+    },
+    {
+      "claim_id": "C19",
+      "quantity": "E3 AIC Bayes (mixed model)",
+      "reported": 410,
+      "recomputed": 410,
+      "status": "match",
+      "note": "Not printed by shipped code as-is: obtained by the certifier following the script's own comment (random intercepts for Subject and lab, lmer default REML). lm values are 463/570/785."
+    },
+    {
+      "claim_id": "C19",
+      "quantity": "E3 AIC UPCO (mixed model)",
+      "reported": 497,
+      "recomputed": 497,
+      "status": "match",
+      "note": "Not printed by shipped code as-is: obtained by the certifier following the script's own comment (random intercepts for Subject and lab, lmer default REML). lm values are 463/570/785."
+    },
+    {
+      "claim_id": "C19",
+      "quantity": "E3 AIC Competence (mixed model)",
+      "reported": 507,
+      "recomputed": 507,
+      "status": "match",
+      "note": "Not printed by shipped code as-is: obtained by the certifier following the script's own comment (random intercepts for Subject and lab, lmer default REML). lm values are 463/570/785."
+    },
+    {
+      "claim_id": "C20",
+      "quantity": "E3 % participants best captured by Bayes, correlation",
+      "reported": 43,
+      "recomputed": 43,
+      "status": "match"
+    },
+    {
+      "claim_id": "C20",
+      "quantity": "E3 % participants best captured by Bayes, deviation",
+      "reported": 48,
+      "recomputed": 48,
+      "status": "match"
+    }
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "HighConfidence",
+  "findings": [
+    {
+      "id": "NORM-001",
+      "severity": "P3",
+      "type": "normalization",
+      "description": "Hard-coded setwd() in E1, E2 (author's G: drive path), E3 commented out; driver sets the working directory to the data folder.",
+      "evidence": "working/edits.json",
+      "suggested_fix": "Use relative paths (e.g. here::here())."
+    },
+    {
+      "id": "NORM-002",
+      "severity": "P3",
+      "type": "normalization",
+      "description": "E1 calls install.packages('PairedData') mid-script; commented out (package provided by the environment).",
+      "evidence": "working/E1_analysis.R line with #REPRO",
+      "suggested_fix": "Move installs to a setup script."
+    },
+    {
+      "id": "NORM-003",
+      "severity": "P0",
+      "type": "normalization",
+      "description": "Resolved by normalization. E1 halts as shipped under current data.table (1.18.6.1): melt(measure.vars = list(belief = ...)) now names the value column 'belief' and codes variable 1..18, so labels are never assigned and cor.test() errors ('x' and 'y' must have the same length). Restored the pre-1.15 output with a 4-line post-melt edit; no computation line changed.",
+      "evidence": "outputs/E1/E1_console.log; notebooks/02_data_clean.py",
+      "suggested_fix": "Pin data.table (renv.lock) or use measure.vars = c(...) with value.name = 'value'."
+    },
+    {
+      "id": "NORM-004",
+      "severity": "P2",
+      "type": "normalization",
+      "description": "E1 calls melt() on a plain data.frame, which data.table < 1.15 redirected to reshape2; current data.table errors. A melt.data.frame shim calling reshape2's method was added in the driver (script unchanged).",
+      "evidence": "notebooks/driver.R",
+      "suggested_fix": "library(reshape2) explicitly or use data.table::melt on a data.table."
+    },
+    {
+      "id": "DEF-001",
+      "severity": "P2",
+      "type": "defect",
+      "description": "E1 sample size reporting: paper says 133 recruited and 17 excluded, but the shipped data have 150 rows and 133 participants are analysed (df = 132 in the reported t-tests agrees with the code). The abstract N = 886 equals 133 + 458 + 295, i.e. E1 and E2 analysed counts plus E3 recruited count.",
+      "evidence": "outputs/E1/E1_results.json n_raw=150, n_analysed=133",
+      "suggested_fix": "Report 150 recruited, 17 excluded, 133 analysed."
+    },
+    {
+      "id": "DEF-002",
+      "severity": "P2",
+      "type": "defect",
+      "description": "E2 sample size reporting: paper says 458 recruited and 108 excluded (33 + 72 = 105); shipped data have 563 rows, the script excludes 105 and analyses 458.",
+      "evidence": "outputs/E2/E2_results.json n_raw=563, n_after_time=530, n_analysed=458",
+      "suggested_fix": "Report 563 recruited, 105 excluded, 458 analysed."
+    },
+    {
+      "id": "DEF-003",
+      "severity": "P2",
+      "type": "defect",
+      "description": "E2 participant-level heterogeneity: paper says UPCO and Competence best predict 'one quarter' of participants; shipped code gives 30.8% (correlation) and 38.2% (deviation).",
+      "evidence": "outputs/E2/E2_results.json corps/devps",
+      "suggested_fix": "Report the computed shares."
+    },
+    {
+      "id": "DEF-004",
+      "severity": "P2",
+      "type": "defect",
+      "description": "E3 proportion-heuristic AIC: shipped lmer gives 1766.3 vs reported ~1722. The formula post_j ~ (t / (t + f)) is parsed by R as nesting (t + t:(t+f)), not as a proportion; refitting with I(t / (t + f)) gives AIC 1721.98, matching the reported ~1722. Judgement: analysis-code difference (the shipped formula is not the one that produced the reported value), not version drift.",
+      "evidence": "outputs/E3/E3_results.json AIC_lmer_proportion=1766.30, AIC_lmer_proportion_I=1721.98",
+      "suggested_fix": "Use I(t / (t + f)) in the shipped script."
+    },
+    {
+      "id": "DEF-005",
+      "severity": "P2",
+      "type": "defect",
+      "description": "E3 single-model AICs in the text (~410/497/507) come from a mixed model that the shipped script only describes in a comment; the code as shipped prints fixed-effects AICs (463/570/785). Recomputed with lmer following the comment, they match.",
+      "evidence": "notebooks/driver.R (AIC_lmer_*)",
+      "suggested_fix": "Ship the mixed-model code that produced the reported values."
+    },
+    {
+      "id": "DEF-006",
+      "severity": "P2",
+      "type": "defect",
+      "description": "E1 per-participant best-model shares (~75% / ~80%) have no code in E1_analysis.R.",
+      "evidence": "osf.io/dexuy analysis_scripts/E1_analysis.R",
+      "suggested_fix": "Add the participant-level classification code for E1."
+    },
+    {
+      "id": "DEF-007",
+      "severity": "P3",
+      "type": "defect",
+      "description": "E2 participant-level plot labels: which.min/which.max index follows column order (Competence, UPCO, Bayes) but percplotd labels them (UPCO, Competence, Bayes), swapping UPCO and Competence in Fig. 6b. The Bayes share is unaffected.",
+      "evidence": "E2_analysis.R percplotd",
+      "suggested_fix": "Label from names(mods)."
+    },
+    {
+      "id": "DEF-008",
+      "severity": "P3",
+      "type": "defect",
+      "description": "Correlation-difference tests are reported as t but psych::paired.r returns z.",
+      "evidence": "outputs/E1/E1_console.log lines 606-613",
+      "suggested_fix": "Report as z."
+    },
+    {
+      "id": "DEF-009",
+      "severity": "P3",
+      "type": "defect",
+      "description": "Manual exclusions by hard-coded row indices after reading free-text responses (E1 comp_exclude, E2 good_exp). They reproduce, but cannot be derived from the stated criteria alone.",
+      "evidence": "E1_analysis.R, E2_analysis.R",
+      "suggested_fix": "Ship the coding of free-text responses."
+    },
+    {
+      "id": "DEF-010",
+      "severity": "P3",
+      "type": "defect",
+      "description": "No package versions, sessionInfo or lockfile shipped; E3 prior-fit plot uses unseeded rnorm() jitter.",
+      "evidence": "osf.io/dexuy",
+      "suggested_fix": "Ship renv.lock / sessionInfo and set.seed()."
+    }
+  ],
+  "limitations": [
+    "Pilot run: the bundle is not published; github_url points to the ReproCrowd project repository, not to a repository for this certificate.",
+    "No nanopublications were minted and no Zenodo DOI exists (see nanopubs/PUBLISHED.md).",
+    "Certified numbers were produced with host R 4.6.1 and current CRAN binaries; pixi.lock pins conda-forge r-base 4.5.3 and was solved and installed, and the Snakemake DAG was dry-run, but the full pipeline was not re-executed under pixi.",
+    "Pilot studies (pilot1-3, E3pilot scripts) and Supplemental Material values were not checked.",
+    "Reported values were transcribed from the author-hosted PDF of the published version (cognition.princeton.edu); quotes were checked against pdftotext output, not with a verify_quote tool.",
+    "The prompt's rule-pack and schema URLs (lukasroeseler.github.io) returned 404; the forrtproject.github.io copies were used."
+  ],
+  "artifacts": {
+    "pipeline": "https://github.com/forrtproject/reprocrowd",
+    "console_log": "outputs/E*/E*_console.log retained locally as evidence and excluded from publication (.gitignore): they echo the shipped source code and participant free-text responses."
+  },
+  "signatories": [
+    {
+      "name": "Claude Opus 5.5 (AI agent)",
+      "role": "codechecker"
+    }
+  ],
+  "provenance": {
+    "raw_data": "https://osf.io/dexuy/ (data/e1_data.csv tcf9w, e2_data.csv hfnqz, e3_data.csv p63cj; MD5-verified)",
+    "processed_data": "None shipped; scripts process raw Qualtrics exports directly",
+    "analysis_script": "https://osf.io/dexuy/ (analysis_scripts/E1_analysis.R dcrfb, E2_analysis.R uaje8, E3_analysis.R gx82e)"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  }
+}

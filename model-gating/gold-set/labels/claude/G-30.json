@@ -1,0 +1,78 @@
+{
+ "gold_id": "G-30",
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": 38.4,
+   "tolerance": "2 dp",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/uvf8k/ Section 2, Study 2A: 'All analyses were reproducible.' ... 'we were able to exactly reproduce the descriptive statistics for the study demographics. This was also the case for the regression models and the t-tests.'; Table 2: 'b = 38.40, t(2145) = 9.65'",
+   "rationale": "Regression coefficient reproduced exactly with the shipped Rmd.",
+   "reported_check": "confirmed in paper (Nature HTML: 'b = 38.40, t (2,145) = 9.65')"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": 9.65,
+   "tolerance": "2 dp",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/uvf8k/ Section 2, Study 2A: 'All analyses were reproducible.' ... 'we were able to exactly reproduce the descriptive statistics for the study demographics. This was also the case for the regression models and the t-tests.'; Table 2: 'b = 38.40, t(2145) = 9.65, P < 0.001'",
+   "rationale": "Reproduced exactly.",
+   "reported_check": "confirmed in paper"
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": "109.5%",
+   "tolerance": "1 dp",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/uvf8k/ Section 2, Study 2A: 'All analyses were reproducible.' ... 'we were able to exactly reproduce the descriptive statistics for the study demographics. This was also the case for the regression models and the t-tests.'; Table 2 Analysis 2 'UK 109.5% | 109.5%'",
+   "rationale": "Reproduced exactly (Table 2 is the robustness rerun on recomputed columns, but the computational section states that all analyses were reproducible).",
+   "reported_check": "confirmed in paper (Nature HTML: 'money increased effort by 109.5%')"
+  },
+  {
+   "id": "C6",
+   "expected_status": "match",
+   "reference_recomputed": "19.9%",
+   "tolerance": "1 dp",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/uvf8k/ Section 2, Study 2A: 'All analyses were reproducible.' ... 'we were able to exactly reproduce the descriptive statistics for the study demographics. This was also the case for the regression models and the t-tests.'; Table 2 Analysis 2 'China 19.9% | 19.9%'",
+   "rationale": "Reproduced exactly.",
+   "reported_check": "confirmed in paper (Nature HTML: 'extra pay increased effort by 19.9%')"
+  },
+  {
+   "id": "C7",
+   "expected_status": "match",
+   "reference_recomputed": -44.88,
+   "tolerance": "2 dp",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/uvf8k/ Section 2, Study 2A: 'All analyses were reproducible.' ... 'we were able to exactly reproduce the descriptive statistics for the study demographics. This was also the case for the regression models and the t-tests.'; Table 2, Analysis 3: 'Interaction between incentive and culture (Flat fee) | b = -44.88, t(2,143) = -9.82, P < 0.001, 95% CI -53.84 to -35.91 | b = -44.88, t(2143) = -9.82 ... | No impact'",
+   "rationale": "The OLS interaction coefficient (deterministic) recurred exactly. Table 2 is the rerun on recomputed response counts (one participant differs by one response), and the computational section states that the regression models reproduced exactly with the shipped Rmd.",
+   "reported_check": "confirmed in paper (Nature HTML: 'b = -44.88, t (2,143) = -9.82, P < 0.001, 95% CI -53.84 to -35.91 for the flat-fee condition')",
+   "reference_provenance": "source_report"
+  },
+  {
+   "id": "C8",
+   "expected_status": "match",
+   "reference_recomputed": 2.7,
+   "tolerance": "2 dp (df 574.32)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/uvf8k/ Section 2, Study 2A: 'All analyses were reproducible.' ... 'we were able to exactly reproduce the descriptive statistics for the study demographics. This was also the case for the regression models and the t-tests.'; Table 2, Analysis 4 (Welch t-tests): 'UK: Monetary vs norm | t(574.32) = 2.70, P = 0.007, PBonf = 0.029, Meandifference = 6.84, d = 0.20 | t(574.32) = 2.70, P = 0.007, PBonf = 0.029 ... | No impact'",
+   "rationale": "The Welch t-test on EffortPerDollar (compare_means, method = 't.test' in Study2_OSF_deidentified.Rmd) is deterministic, and the report reproduced the same t, df, p and d.",
+   "reported_check": "confirmed in paper (Nature HTML: 'In the United Kingdom, the monetary condition was significantly more cost-effective ... monetary and norm, two-sided Welch's t (574.32) = 2.70, P = 0.007')",
+   "reference_provenance": "source_report"
+  }
+ ],
+ "label_confidence": "high",
+ "notes": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "Claim list revised: C1/C2 (graphical bootstrap CIs with no printed numbers) were retired, and C7/C8 added. All remaining claims are deterministic (OLS, Welch t, percentage differences) and the report reproduced them exactly ('All analyses were reproducible'). The shipped Study 2 Rmd (SHA matches the pin) has no set.seed for its bootstraps, but that affects only the figure error bars, which are no longer claims. The report's Table 2 is a robustness rerun on recomputed response counts whose values equal the originals; the computational-reproducibility prose is the primary evidence."
+}

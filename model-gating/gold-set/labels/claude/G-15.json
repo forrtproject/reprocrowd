@@ -1,0 +1,76 @@
+{
+ "gold_id": "G-15",
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "discrepant",
+   "reference_recomputed": "-0.11",
+   "tolerance": "rounding to 2 dp",
+   "severity": "P2",
+   "cause": "Printed β is a reporting error (apparently copied from the adjacent row: cash-out offer time); the code gives -0.11, which is consistent with the printed χ² = 0.16, p = .69",
+   "evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ PDF p.5, Friction 2: \"for the linear effect of Pr(win) in Experiment 1, the article reports β = -0.05, SE = 0.06 in the same sentence as χ²(1) = 0.16, p = .69. These coefficient values are not mutually consistent. By contrast, the reproduced β = -0.11, SE = 0.26 are internally consistent\"",
+   "rationale": "Unchanged code gives a different coefficient than printed. This is a secondary (cash-out frequency) null term, so P2.",
+   "reported_check": "confirmed in OSF preprint.pdf (v3): 'χ2(1) = 0.16, β = -0.05, SE = 0.06, p = .69'; the next sentence reports offer time as 'β = -0.05, SE = 0.06, p = .38'; published version not accessed (Sage blocked)"
+  },
+  {
+   "id": "C2",
+   "expected_status": "discrepant",
+   "reference_recomputed": "0.26",
+   "tolerance": "rounding to 2 dp",
+   "severity": "P2",
+   "cause": "Same copy-over reporting error as C1",
+   "evidence": "Report PDF p.5, Friction 2: \"the reproduced β = -0.11, SE = 0.26 are internally consistent and yield the reported χ² and p\"",
+   "rationale": "Unchanged code gives SE 0.26 vs printed 0.06.",
+   "reported_check": "confirmed in OSF preprint.pdf (v3): 'SE = 0.06'; published version not accessed"
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "rounding to 2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "Report PDF p.4 Sec. 2.2: \"all reproduced, either exactly or within rounding, as did the reported effect sizes for the primary comparison (Experiment 1 within-participant Cohen's d = 0.75; Experiment 2 between-groups Cohen's d = 0.46)\"",
+   "rationale": "Report states d reproduced at printed precision.",
+   "reported_check": "confirmed in OSF preprint.pdf (v3): 'within-participant Cohen's d = 0.75'"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": "0.46",
+   "tolerance": "rounding to 2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "Report PDF p.4 (same quote as C3); robustness Table 5 full-sample row also lists Cohen's d 0.46",
+   "rationale": "Reproduced at printed precision.",
+   "reported_check": "confirmed in OSF preprint.pdf (v3): 'between-groups Cohen's d = 0.46'"
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": "35%",
+   "tolerance": "rounding to whole percent",
+   "severity": null,
+   "cause": "",
+   "evidence": "Report PDF p.4 Sec. 2.2: \"in Experiment 1 (within participants), participants bet on average 35% more when cash-out was available ... and the percentage increases in mean bet\" reproduced",
+   "rationale": "Point percentage reproduced. Only the bootstrap CIs around it lack code, and they are not part of this claim.",
+   "reported_check": "confirmed in OSF preprint.pdf (v3): '35% increase in mean bet size'"
+  },
+  {
+   "id": "C6",
+   "expected_status": "match",
+   "reference_recomputed": "24%",
+   "tolerance": "rounding to whole percent",
+   "severity": null,
+   "cause": "",
+   "evidence": "Report PDF p.4 Sec. 2.2: \"in Experiment 2 (between participants), the corresponding increase was 24%\"",
+   "rationale": "Reproduced.",
+   "reported_check": "confirmed in OSF preprint.pdf (v3): '24% increase in mean bet size'"
+  }
+ ],
+ "label_confidence": "high",
+ "notes": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "The report rates the paper 'partially computationally reproducible': scripts ran unchanged (only an empty .here marker was added), and the primary bet-amount results reproduce. Issues not in the claim list: Wald χ² drift in the cash-out mixed models (e.g. 26.54 vs 27.99), which the authors' response attributes to lme4/car versions; the Exp 2 Spearman df (85 vs 78); N = 180 vs 178 records; and several analyses without code (figures, bootstrap CIs, permutation tests; some since added per the authors' response). The authors' response (OSF file 6a8e3414...) does not address the C1/C2 β/SE copy error. C1/C2 are reporting errors rather than code errors, but the printed number itself is wrong and unchanged code yields a different value, so they are labelled discrepant. The published version could not be accessed (Sage returned 403); printed values were checked against the OSF preprint.pdf in the package, which may be the accepted manuscript."
+}

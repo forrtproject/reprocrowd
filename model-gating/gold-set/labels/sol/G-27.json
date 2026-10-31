@@ -1,0 +1,163 @@
+{
+  "gold_id": "G-27",
+  "expected_validation_status": "technical failure",
+  "acceptable_alternatives": [
+    "computational issues"
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The original raw-data pipeline stops before these outputs; SCORE substituted an intermediate and changed function names/arguments.",
+      "evidence": "https://osf.io/download/spx8e/ — push-button attempt: no completed claims; Analysis attempt 1 deletes the first 30 lines, loads Cleaning File.Rdata, and changes function names and arguments. Original script revision 1 calls autoDeStr(binary, ...) after defining bin.",
+      "rationale": "No push-button claim completed. The repaired workflow is not demonstrated equivalent to revision 1. Deterministic downstream calculations do not establish equivalence of their upstream analysis inputs; repaired-run values are diagnostic only.",
+      "diagnostic_results": [
+        {
+          "value": "-69.356 3.102 59.054 2.641 -64.699 2.893",
+          "provenance": "source_report",
+          "evidence": "https://osf.io/download/spx8e/ SCORE claims mvwky9/g6zqdl/yox4lo, Table 3 90%: e.g. 'Focal test statistic t = -65.69 ... -69.356'; Discussion: 'given that the code was altered with new versions of some functions this outcome could be counted as a successful reproduction'",
+          "scope": "SCORE repaired version 3; first 30 lines replaced by Cleaning File.Rdata; not original revision 1",
+          "is_scoring_reference": false
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The original raw-data pipeline stops before these outputs; SCORE substituted an intermediate and changed function names/arguments.",
+      "evidence": "https://osf.io/download/spx8e/ — push-button attempt: no completed claims; Analysis attempt 1 deletes the first 30 lines, loads Cleaning File.Rdata, and changes function names and arguments. Original script revision 1 calls autoDeStr(binary, ...) after defining bin.",
+      "rationale": "No push-button claim completed. The repaired workflow is not demonstrated equivalent to revision 1. Deterministic downstream calculations do not establish equivalence of their upstream analysis inputs; repaired-run values are diagnostic only.",
+      "diagnostic_results": [
+        {
+          "value": "-45.475 2.034 37.862 1.693 -42.81 1.915",
+          "provenance": "source_report",
+          "evidence": "https://osf.io/download/spx8e/ SCORE claims bkpj4j/b31372/2kjpzv, Table 3 80%: e.g. 't = -42.79 ... -45.475'; Discussion: 'given that the code was altered with new versions of some functions this outcome could be counted as a successful reproduction'",
+          "scope": "SCORE repaired version 3; first 30 lines replaced by Cleaning File.Rdata; not original revision 1",
+          "is_scoring_reference": false
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The original raw-data pipeline stops before these outputs; SCORE substituted an intermediate and changed function names/arguments.",
+      "evidence": "https://osf.io/download/spx8e/ — push-button attempt: no completed claims; Analysis attempt 1 deletes the first 30 lines, loads Cleaning File.Rdata, and changes function names and arguments. Original script revision 1 calls autoDeStr(binary, ...) after defining bin.",
+      "rationale": "No push-button claim completed. The repaired workflow is not demonstrated equivalent to revision 1. Deterministic downstream calculations do not establish equivalence of their upstream analysis inputs; repaired-run values are diagnostic only.",
+      "diagnostic_results": [
+        {
+          "value": "-29.268 1.309 27.995 1.252 -30.359 1.358",
+          "provenance": "source_report",
+          "evidence": "https://osf.io/download/spx8e/ SCORE claims b7lx28/9q35x9/8974q1, Table 3 70%: e.g. 't = 36.38 ... 27.995'; Discussion: 'given that the code was altered with new versions of some functions this outcome could be counted as a successful reproduction'",
+          "scope": "SCORE repaired version 3; first 30 lines replaced by Cleaning File.Rdata; not original revision 1",
+          "is_scoring_reference": false
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The original raw-data pipeline stops before these outputs; SCORE substituted an intermediate and changed function names/arguments.",
+      "evidence": "https://osf.io/download/spx8e/ — push-button attempt: no completed claims; Analysis attempt 1 deletes the first 30 lines, loads Cleaning File.Rdata, and changes function names and arguments. Original script revision 1 calls autoDeStr(binary, ...) after defining bin.",
+      "rationale": "No push-button claim completed. The repaired workflow is not demonstrated equivalent to revision 1. Deterministic downstream calculations do not establish equivalence of their upstream analysis inputs; repaired-run values are diagnostic only.",
+      "diagnostic_results": [
+        {
+          "value": "-23.439 1.048 23.248 1.04 -26.369 1.179",
+          "provenance": "source_report",
+          "evidence": "https://osf.io/download/spx8e/ SCORE claims gzjkoy/4d9x6l/od1lpq, Table 3 60%: e.g. 't = -20.01 ... -23.439'; Discussion: 'given that the code was altered with new versions of some functions this outcome could be counted as a successful reproduction'",
+          "scope": "SCORE repaired version 3; first 30 lines replaced by Cleaning File.Rdata; not original revision 1",
+          "is_scoring_reference": false
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The original raw-data pipeline stops before these outputs; SCORE substituted an intermediate and changed function names/arguments.",
+      "evidence": "https://osf.io/download/spx8e/ — push-button attempt: no completed claims; Analysis attempt 1 deletes the first 30 lines, loads Cleaning File.Rdata, and changes function names and arguments. Original script revision 1 calls autoDeStr(binary, ...) after defining bin.",
+      "rationale": "No push-button claim completed. The repaired workflow is not demonstrated equivalent to revision 1. Deterministic downstream calculations do not establish equivalence of their upstream analysis inputs; repaired-run values are diagnostic only.",
+      "diagnostic_results": [
+        {
+          "value": "-16.306 0.729 17.927 0.802 -19.224 0.86",
+          "provenance": "source_report",
+          "evidence": "https://osf.io/download/spx8e/ SCORE claims mlq1kp/5v4j3k/n1j7wn, Table 3 50%: e.g. 't = -12.27 ... -16.306'; Discussion: 'given that the code was altered with new versions of some functions this outcome could be counted as a successful reproduction'",
+          "scope": "SCORE repaired version 3; first 30 lines replaced by Cleaning File.Rdata; not original revision 1",
+          "is_scoring_reference": false
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The original raw-data pipeline stops before these outputs; SCORE substituted an intermediate and changed function names/arguments.",
+      "evidence": "https://osf.io/download/spx8e/ — push-button attempt: no completed claims; Analysis attempt 1 deletes the first 30 lines, loads Cleaning File.Rdata, and changes function names and arguments. Original script revision 1 calls autoDeStr(binary, ...) after defining bin.",
+      "rationale": "No push-button claim completed. The repaired workflow is not demonstrated equivalent to revision 1. Deterministic downstream calculations do not establish equivalence of their upstream analysis inputs; repaired-run values are diagnostic only.",
+      "diagnostic_results": [
+        {
+          "value": 2.9574,
+          "provenance": "source_report",
+          "evidence": "https://osf.io/download/spx8e/ Claim ID r1zw73: 'Focal test statistic t = -3.53 ... 2.9574'; 'Reproduction outcome: Based on these criteria, the claim did not reproduce.' 'Discussion: T-test result has the opposite sign to the original outcome. This could be caused by the changes introduced to the code and using updated versions of the commands.'",
+          "scope": "SCORE repaired version 3; first 30 lines replaced by Cleaning File.Rdata; not original revision 1",
+          "is_scoring_reference": false
+        }
+      ]
+    },
+    {
+      "id": "C7",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P0",
+      "cause": "The original raw-data pipeline stops before these outputs; SCORE substituted an intermediate and changed function names/arguments.",
+      "evidence": "https://osf.io/download/spx8e/ — push-button attempt: no completed claims; Analysis attempt 1 deletes the first 30 lines, loads Cleaning File.Rdata, and changes function names and arguments. Original script revision 1 calls autoDeStr(binary, ...) after defining bin.",
+      "rationale": "No push-button claim completed. The repaired workflow is not demonstrated equivalent to revision 1. Deterministic downstream calculations do not establish equivalence of their upstream analysis inputs; repaired-run values are diagnostic only.",
+      "diagnostic_results": [
+        {
+          "value": 0.1697285,
+          "provenance": "source_report",
+          "evidence": "https://osf.io/download/spx8e/ Claim ID d5r3o4: 'Focal coefficient r = 0.17 ... 0.1697285'; 'the claim did reproduce.'",
+          "scope": "SCORE repaired version 3; first 30 lines replaced by Cleaning File.Rdata; not original revision 1",
+          "is_scoring_reference": false
+        }
+      ]
+    },
+    {
+      "id": "C8",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P0",
+      "cause": "The original raw-data pipeline stops before these outputs; SCORE substituted an intermediate and changed function names/arguments.",
+      "evidence": "https://osf.io/download/spx8e/ — push-button attempt: no completed claims; Analysis attempt 1 deletes the first 30 lines, loads Cleaning File.Rdata, and changes function names and arguments. Original script revision 1 calls autoDeStr(binary, ...) after defining bin.",
+      "rationale": "No push-button claim completed. The repaired workflow is not demonstrated equivalent to revision 1. Deterministic downstream calculations do not establish equivalence of their upstream analysis inputs; repaired-run values are diagnostic only.",
+      "diagnostic_results": [
+        {
+          "value": 16.908,
+          "provenance": "source_report",
+          "evidence": "https://osf.io/download/spx8e/ Claim ID v4wj5w: 'Focal test statistic chi-square = 16.91 ... 16.908'; 'the claim did reproduce.'",
+          "scope": "SCORE repaired version 3; first 30 lines replaced by Cleaning File.Rdata; not original revision 1",
+          "is_scoring_reference": false
+        }
+      ]
+    }
+  ],
+  "label_confidence": "medium",
+  "notes": "The pinned original revision 1 and SCORE repaired revision 3 are distinct targets. Revision 1 has a pre-output blocker; all affected claims C1-C8 are not_checkable P0, independently of the extra unseeded parallel-bootstrap ambiguity on C1-C5. SCORE C6 2.9574 and C7/C8 matching values come from the repaired workflow and are retained as diagnostics. C6 discrepant is not accepted without evidence that the same intended inputs and procedure produce it. Technical failure is primary; computational issues is the partial-run alternative. No number from the repaired version is used as a scoring reference."
+}

@@ -1,0 +1,74 @@
+{
+  "gold_id": "G-02",
+  "expected_validation_status": "computationally reproducible",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "match",
+      "reference_recomputed": "0.055",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/dzrk9/ — §2 Code, PDF p. 1: “runs without issue”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/dzrk9/ p.1 section 2 'Code': 'We checked the code for the paper and found that it runs without issue and the results match with those presented in the paper.'; report 'Table 2' (MTurk Sample col 1): 'Rags-to-Riches TV Treatment 0.055*** (0.011)', N=763",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C2",
+      "expected_status": "match",
+      "reference_recomputed": "0.068",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/dzrk9/ — §2 Code, PDF p. 1: “results match”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/dzrk9/ p.1 section 2 'Code': 'We checked the code for the paper and found that it runs without issue and the results match with those presented in the paper.'; report 'Table 2' (Lab-in-the-Field col 3): 'Rags-to-Riches TV Treatment ... 0.068** (0.025)', N=203",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": 0.032,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/dzrk9/ — §4 original baseline specification and comparison table: “0.032”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/dzrk9/ — §4 original baseline specification and comparison table: “0.032”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": 0.04,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/dzrk9/ — §4 original baseline specification and comparison table: “0.040”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/dzrk9/ — §4 original baseline specification and comparison table: “0.040”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": 0.013,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/dzrk9/ — §4 original baseline specification and comparison table: “0.013”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/dzrk9/ — §4 original baseline specification and comparison table: “0.013”.",
+      "reference_scope": "authors_workflow"
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "Use the original baseline columns, not the merged experimental samples, recoded regressors or new interactions. The source’s prose drops a decimal for some observational coefficients; the source comparison table and original Table 2 retain 0.032 and 0.040."
+}

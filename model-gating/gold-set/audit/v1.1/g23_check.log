@@ -1,0 +1,19 @@
+failed top-level statements: 94 
+C3 SUS GM-HWG t: 9.446512 
+DiffScoreSUS_BMHWG 1137.5 9.680469e-07 
+SUS_BMCorrelation 1.621716 0.1048642 
+SUS_Group1Diff 382.5 4.383169e-05 
+SUS_Group2Diff 9.446512 2.780672e-11 
+5527a2a91256ec20d65a8db7dc8e1a6ae189a9ba6a729979ab5d2dc1c0f2b4dc  survey_2021.R
+3d1cc847fe8c394c63425bc0644eb79f85bde23352c0670ad4d4eb7280b27f6e  Demographics_DNAS.csv
+fe3a8c7174983ddb6140c46277f31631aa667fdce27a418c65f5ba6fe3b570bf  GM_BM.csv
+4374cd7aaa244b2ac7a24f0c47b12fd00fa17af1ea8ced4409d4b1471dd688ef  GM_BM_SUS.csv
+1ad39bfc213e9e222cebdbfc367f692c852066fbb291cd66d12bb84698fb64f8  GM_HWG.csv
+d05c5b51cdc3f5bcd100c9524c26d3259a4c4c4add1bee7b546e44c1c7dc6a28  GM_HWG_SUS.csv
+b38ef211b01e33e8b1148c325a0ea8cee05fd096ccdaf4ccb0415d8116bde7a0  Participants.csv
+1732c751f0cff79b1746b6f68c5cccaa2ae41383346d717135b454ef73c2c982  STAT.csv
+R version 4.6.1 (2026-06-24) -- "Happy Hop"
+# Note: this check used survey_2021.R from Figshare article 22132940 version 2 (file 39437014,
+# MD5 4e2f3136...), the version the paper cites. The gold pin is version 1 (file 39347480,
+# SHA-256 ce9f3a01...). Sol verified the same C3/C4 results on version 1 (round 4 in
+# reconciliation.md). The two script versions differ in sorting and figure code, not in these tests.

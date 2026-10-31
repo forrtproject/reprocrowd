@@ -1,0 +1,99 @@
+{
+ "gold_id": "G-08",
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "match",
+   "reference_recomputed": 0.15,
+   "tolerance": "2 dp as printed",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/tj2w8/ Section 3: 'we found that government satisfaction increases with the visit to the museum with a point estimate of 0.15, just as the authors did.'",
+   "rationale": "Exact point estimate reproduced from the original code.",
+   "reported_check": "confirmed in accepted-manuscript version ('Forthcoming at The Journal of Politics'); version of record p. 504 not accessed: 'β = 0.15, p=0.04'"
+  },
+  {
+   "id": "C2",
+   "expected_status": "match",
+   "reference_recomputed": 0.14,
+   "tolerance": "2 dp as printed",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/tj2w8/ Section 3: 'We derived the exact point estimates that the authors did: 0.14 increase in satisfaction with democracy'",
+   "rationale": "Exact point estimate reproduced.",
+   "reported_check": "confirmed in accepted-manuscript version ('Forthcoming at The Journal of Politics'); version of record p. 504 not accessed: 'β = 0.14, p= 0.03'"
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": -0.319,
+   "tolerance": "rounding to 2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/tj2w8/ Section 3: 'The belief that dwelling on the past prevents advancements in democracy was reduced by 31.9 percent, very close to the 32 percent that the authors stated'",
+   "rationale": "Report expresses the coefficient as a percentage; −0.319 rounds to the printed −0.32.",
+   "reported_check": "confirmed in accepted-manuscript version ('Forthcoming at The Journal of Politics'); version of record p. 504 not accessed: 'β = -0.32, p = 0.03'"
+  },
+  {
+   "id": "C4",
+   "expected_status": "close",
+   "reference_recomputed": 0.198,
+   "tolerance": "printed 0.19 vs recomputed 0.198 (rounds to 0.20); difference 0.01 at 2 dp",
+   "severity": null,
+   "cause": "printed value appears truncated rather than rounded",
+   "evidence": "https://osf.io/download/tj2w8/ Section 3: 'desires for victim compensation increased by 19.8 percent, again close to the reported coefficient of .19 that Balcells et al. included' and 'the results reported for the transitional justice hypothesis were replicated perfectly'",
+   "rationale": "Recomputed 0.198 would round to 0.20, not the printed 0.19, but the report treats it as reproduced; likely truncation.",
+   "reported_check": "confirmed in accepted-manuscript version ('Forthcoming at The Journal of Politics'); version of record p. 504 not accessed: 'support for victim compensation (β = 0.19, p = 0.00)'",
+   "acceptable_statuses": [
+    "close",
+    "match"
+   ]
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": 0.182,
+   "tolerance": "rounding to 2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/tj2w8/ Section 3: 'A desire for a public apology by the military increased by 18.2 percent, and the authors reported a coefficient of .18.'",
+   "rationale": "0.182 rounds to the printed 0.18.",
+   "reported_check": "confirmed in accepted-manuscript version ('Forthcoming at The Journal of Politics'); version of record p. 504 not accessed: 'public apology from the military (β = 0.18, p = 0.09)'"
+  },
+  {
+   "id": "C6",
+   "expected_status": "discrepant",
+   "reference_recomputed": 0.3080994760436069,
+   "tolerance": "rounding to 2 dp",
+   "severity": "P2",
+   "cause": "Printed one-week estimate equals the 24-week estimate",
+   "evidence": "pilot/sol/G-08-certificate.json C21; pilot/claude/G-08-certificate.json C14",
+   "rationale": "Two independent pilot executions of the shipped code give b = 0.308 (p = .004) for the one-week pardon effect against the printed 0.20 (p = .16).",
+   "reported_check": "confirmed by Sol, printed p. 506"
+  },
+  {
+   "id": "C7",
+   "expected_status": "discrepant",
+   "reference_recomputed": 13.333333333333334,
+   "tolerance": "rounding to 2 dp",
+   "severity": "P2",
+   "cause": "Denominator inconsistent with the data (18/135 = 13.33%)",
+   "evidence": "pilot/sol/G-08-certificate.json C29; pilot/claude/G-08-certificate.json C13",
+   "rationale": "Both pilot runs compute 13.33% from the deposited data against the printed 13.14%.",
+   "reported_check": "confirmed by Sol, printed p. 505"
+  }
+ ],
+ "label_confidence": "medium",
+ "notes": "v1.1: claims C6 and C7 added after both pilot runs independently found these discrepancies; paper status changed to computational issues with no alternative (R7). C4 is close, with match accepted. The earlier hypothetical 'discrepant P3' was not adopted. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "The report states results as 'percent' (31.9, 19.8, 18.2 percent); I read these as the coefficients 0.319, 0.198, 0.182 on the outcome scale, since the report compares them directly with the printed coefficients. C4: 'discrepant' with severity P3 is defensible (0.198 does not round to 0.19), but the report counts it as replicated, so 'close'. Report found one non-fatal code error in the shipped Figure 2 code (BPV_museums_maintext.R line 224, 'for (i in 22:34){results.df.tj$Variable[i] <- \"pardoned\"}' -> 'replacement has 25 rows, data has 24'); the figure was still produced and 'There were no differences between the replicated graphs and the graphs shown in the original article' (P3, no numeric consequence). Paper text checked in the accepted manuscript only. Robustness sections (gender, indices, mediation) ignored.",
+ "corrections": [
+  {
+   "version": "1.1",
+   "change": "Added C6, C7 (discrepant P2); paper reproducible -> computational issues",
+   "reason": "Two independent pilot executions; Sol rerun in round 4",
+   "evidence": "pilot/*/G-08-certificate.json; reconciliation.md round 4"
+  }
+ ]
+}

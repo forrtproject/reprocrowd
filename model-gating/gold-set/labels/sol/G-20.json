@@ -1,0 +1,68 @@
+{
+  "gold_id": "G-20",
+  "expected_validation_status": "computational issues",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "discrepant",
+      "reference_recomputed": 18.72,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "Study 1 descriptive mean age differs from the deposited analysis.",
+      "evidence": "https://osf.io/download/wqxbe/ — §2 Computation Reproducibility, PDF pp. 3–4: “provided data and code”.",
+      "rationale": "The source reports 18.72 from the supplied data/code against the paper’s 18.69.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/wqxbe/ — §2 Computation Reproducibility, PDF pp. 3–4: “provided data and code”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C2",
+      "expected_status": "discrepant",
+      "reference_recomputed": 1.83,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "Study 1 descriptive age SD differs from the deposited analysis.",
+      "evidence": "https://osf.io/download/wqxbe/ — §2 Computation Reproducibility, PDF pp. 3–4: “provided data and code”.",
+      "rationale": "The source reports 1.83 against the paper’s 1.84.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/wqxbe/ — §2 Computation Reproducibility, PDF pp. 3–4: “provided data and code”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C3",
+      "expected_status": "discrepant",
+      "reference_recomputed": 7,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "Non-serious-participation exclusions differ from the printed count.",
+      "evidence": "https://osf.io/download/wqxbe/ — §2 Computation Reproducibility, PDF pp. 3–4: “provided data and code”.",
+      "rationale": "The paper says five exclusions; the source reports seven when executing the supplied exclusion code.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/wqxbe/ — §2 Computation Reproducibility, PDF pp. 3–4: “provided data and code”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/wqxbe/ — §2 Computation Reproducibility, PDF pp. 3–4: “provided data and code”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/wqxbe/ — §2 Computation Reproducibility, PDF pp. 3–4: “provided data and code”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "The source assessed Studies 1 and 3, not all four studies. Scope starts from the supplied face-model dependent variable. Changes to composites, difference scores and outlier exclusions are robustness checks and are excluded."
+}

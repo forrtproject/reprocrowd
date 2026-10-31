@@ -1,0 +1,110 @@
+[
+  {
+    "twin_id": "T-01",
+    "base_gold_id": "G-01",
+    "input_hashes_checked": 171,
+    "patch_applies": true,
+    "original_run_exit": 0,
+    "twin_run_exit": 0,
+    "all_claims_confirmed_at_printed_precision": true,
+    "affected_claims": [
+      "C3",
+      "C4"
+    ]
+  },
+  {
+    "twin_id": "T-02",
+    "base_gold_id": "G-02",
+    "input_hashes_checked": 21,
+    "patch_applies": true,
+    "original_run_exit": 0,
+    "twin_run_exit": 0,
+    "all_claims_confirmed_at_printed_precision": true,
+    "affected_claims": [
+      "C1"
+    ]
+  },
+  {
+    "twin_id": "T-03",
+    "base_gold_id": "G-04",
+    "input_hashes_checked": 24,
+    "patch_applies": true,
+    "original_run_exit": 0,
+    "twin_run_exit": 0,
+    "all_claims_confirmed_at_printed_precision": true,
+    "affected_claims": [
+      "C1",
+      "C3",
+      "C5"
+    ]
+  },
+  {
+    "twin_id": "T-04",
+    "base_gold_id": "G-06",
+    "input_hashes_checked": 10,
+    "patch_applies": true,
+    "original_run_exit": 0,
+    "twin_run_exit": 0,
+    "all_claims_confirmed_at_printed_precision": true,
+    "affected_claims": [
+      "C1"
+    ]
+  },
+  {
+    "twin_id": "T-05",
+    "base_gold_id": "G-08",
+    "input_hashes_checked": 5,
+    "patch_applies": true,
+    "original_run_exit": 0,
+    "twin_run_exit": 0,
+    "all_claims_confirmed_at_printed_precision": true,
+    "affected_claims": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5"
+    ]
+  },
+  {
+    "twin_id": "T-06",
+    "base_gold_id": "G-12",
+    "input_hashes_checked": 18,
+    "patch_applies": true,
+    "original_run_exit": 0,
+    "twin_run_exit": 0,
+    "all_claims_confirmed_at_printed_precision": true,
+    "affected_claims": [
+      "C1"
+    ]
+  },
+  {
+    "twin_id": "T-07",
+    "base_gold_id": "G-19",
+    "input_hashes_checked": 4,
+    "patch_applies": true,
+    "original_run_exit": 0,
+    "twin_run_exit": 0,
+    "all_claims_confirmed_at_printed_precision": true,
+    "affected_claims": [
+      "C1",
+      "C2"
+    ]
+  },
+  {
+    "twin_id": "T-08",
+    "base_gold_id": "G-30",
+    "input_hashes_checked": 6,
+    "patch_applies": true,
+    "original_run_exit": 0,
+    "twin_run_exit": 0,
+    "all_claims_confirmed_at_printed_precision": true,
+    "affected_claims": [
+      "C3",
+      "C4",
+      "C5",
+      "C7",
+      "C8"
+    ]
+  }
+]

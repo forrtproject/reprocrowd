@@ -1,0 +1,281 @@
+{
+  "twin_id": "T-08",
+  "base_gold_id": "G-30",
+  "base_cand_id": "I4R-4wxms",
+  "package": {
+    "url": "https://osf.io/8yu95/",
+    "version_pin": "Study1_OSF_deidentified.Rmd: OSF file 652ee05387852d085ca58f6d version 1, SHA-256 fca2c602a74eb0f8c61f80b928f014bb7dd755c2180e3be1ed9d9b5b5efec190; Study2_OSF_deidentified.Rmd: OSF file 652ee0ff87852d085ca59003 version 1, SHA-256 485b8cc4adc0698e5640721262bc0b172d7c3f5aeb127d6a207c3b011544a80f; Study3_OSF_deidentified.Rmd: OSF file 652ee16013d27b07b994cbbc version 1, SHA-256 f7676361486ba3d6b80a040d091db9f8656364b4321e9285be48370e870512cf; Study4_OSF_deidentified.Rmd: OSF file 652ee1e2164d3207b4a5e176 version 1, SHA-256 a0e091594389c478b0ca6673e90358c74471f1896d9beba6c124e3c15c601207; /Study 2/Study2A_RAW_UK_deidentified.xlsx: OSF file 64b3b20f6f8ad002d5bc2145 version 1, SHA-256 6e09e707d43c9393202e691ce437b3bdaf67adac4214028bd1d8ffc9e1fa68a1"
+  },
+  "perturbation": {
+    "file": "Study 2/Study2_OSF_deidentified.Rmd",
+    "description": "Retain every UK submission rather than only the first submission per UniqueID.",
+    "type": "duplicate_exclusion",
+    "why_plausible": "A changed row-number predicate silently disables the duplicate-exclusion rule.",
+    "original_sha256": "485b8cc4adc0698e5640721262bc0b172d7c3f5aeb127d6a207c3b011544a80f",
+    "twin_sha256": "0a70778954f5bcc490a77e5e87d931c15e12ac2de80476bc4d713631bae7d8c4"
+  },
+  "lossless_edits": [
+    "Set the working directory to Study 2 and load tidyverse, readxl and knitr for the selected author-written numerical sections. No raw-data, exclusion, recode or model edits in the original run."
+  ],
+  "execution_scope": "Study2_OSF_deidentified.Rmd lines 74–192 (raw-to-clean Study 2A), 258–263 (author-written percentage-gain aggregation), 324–327 (lmS2a), and 350–356 (lmS2a3). C3/C4 are Monetary:Country_UK coefficient/t; C5/C6 are tempS2a marGain percentages; C7 is FlatFee:Country_UK. For C8 use the authors' Welch t.test from lines 1860–1861 on the Study 2A UK Monetary/Norm subset. This is the same subset selected by the later across-study loop; other countries/studies cannot enter this test. Bootsrap intervals, plots and Studies 2B/2C are outside scope.",
+  "original_run": {
+    "r_version": "R version 4.6.1 (2026-06-24)",
+    "packages": {
+      "base": "4.6.1",
+      "cellranger": "1.1.0",
+      "cli": "3.6.6",
+      "compiler": "4.6.1",
+      "datasets": "4.6.1",
+      "dplyr": "1.2.1",
+      "evaluate": "1.0.5",
+      "farver": "2.1.2",
+      "forcats": "1.0.1",
+      "generics": "0.1.4",
+      "ggplot2": "4.0.3",
+      "glue": "1.8.1",
+      "graphics": "4.6.1",
+      "grDevices": "4.6.1",
+      "grid": "4.6.1",
+      "gtable": "0.3.6",
+      "hms": "1.1.4",
+      "knitr": "1.51",
+      "lifecycle": "1.0.5",
+      "lubridate": "1.9.5",
+      "magrittr": "2.0.5",
+      "methods": "4.6.1",
+      "otel": "0.2.0",
+      "pillar": "1.11.1",
+      "pkgconfig": "2.0.3",
+      "plyr": "1.8.9",
+      "purrr": "1.2.2",
+      "R6": "2.6.1",
+      "RColorBrewer": "1.1.3",
+      "Rcpp": "1.1.2",
+      "readr": "2.2.0",
+      "readxl": "1.5.0",
+      "rlang": "1.3.0",
+      "S7": "0.2.2",
+      "scales": "1.4.0",
+      "stats": "4.6.1",
+      "stringi": "1.8.9",
+      "stringr": "1.6.0",
+      "tibble": "3.3.1",
+      "tidyr": "1.3.2",
+      "tidyselect": "1.2.1",
+      "tidyverse": "2.0.0",
+      "timechange": "0.4.0",
+      "tools": "4.6.1",
+      "tzdb": "0.5.0",
+      "utils": "4.6.1",
+      "vctrs": "0.7.3",
+      "withr": "3.0.3",
+      "xfun": "0.60"
+    },
+    "runtime_seconds": 1.112,
+    "claims": [
+      {
+        "id": "C3",
+        "reported": "38.40",
+        "recomputed": 38.397731017165476,
+        "recurs": true
+      },
+      {
+        "id": "C4",
+        "reported": "9.65",
+        "recomputed": 9.648853649343224,
+        "recurs": true
+      },
+      {
+        "id": "C5",
+        "reported": "109.5%",
+        "recomputed": 109.45387188925481,
+        "recurs": true
+      },
+      {
+        "id": "C6",
+        "reported": "19.9%",
+        "recomputed": 19.87545046332604,
+        "recurs": true
+      },
+      {
+        "id": "C7",
+        "reported": "−44.88",
+        "recomputed": -44.875668498718106,
+        "recurs": true
+      },
+      {
+        "id": "C8",
+        "reported": "2.70",
+        "recomputed": 2.6959245216085646,
+        "recurs": true
+      }
+    ]
+  },
+  "twin_run": {
+    "runtime_seconds": 1.0290000000000001,
+    "packages": {
+      "base": "4.6.1",
+      "cellranger": "1.1.0",
+      "cli": "3.6.6",
+      "compiler": "4.6.1",
+      "datasets": "4.6.1",
+      "dplyr": "1.2.1",
+      "evaluate": "1.0.5",
+      "farver": "2.1.2",
+      "forcats": "1.0.1",
+      "generics": "0.1.4",
+      "ggplot2": "4.0.3",
+      "glue": "1.8.1",
+      "graphics": "4.6.1",
+      "grDevices": "4.6.1",
+      "grid": "4.6.1",
+      "gtable": "0.3.6",
+      "hms": "1.1.4",
+      "knitr": "1.51",
+      "lifecycle": "1.0.5",
+      "lubridate": "1.9.5",
+      "magrittr": "2.0.5",
+      "methods": "4.6.1",
+      "otel": "0.2.0",
+      "pillar": "1.11.1",
+      "pkgconfig": "2.0.3",
+      "plyr": "1.8.9",
+      "purrr": "1.2.2",
+      "R6": "2.6.1",
+      "RColorBrewer": "1.1.3",
+      "Rcpp": "1.1.2",
+      "readr": "2.2.0",
+      "readxl": "1.5.0",
+      "rlang": "1.3.0",
+      "S7": "0.2.2",
+      "scales": "1.4.0",
+      "stats": "4.6.1",
+      "stringi": "1.8.9",
+      "stringr": "1.6.0",
+      "tibble": "3.3.1",
+      "tidyr": "1.3.2",
+      "tidyselect": "1.2.1",
+      "tidyverse": "2.0.0",
+      "timechange": "0.4.0",
+      "tools": "4.6.1",
+      "tzdb": "0.5.0",
+      "utils": "4.6.1",
+      "vctrs": "0.7.3",
+      "withr": "3.0.3",
+      "xfun": "0.60"
+    },
+    "claims": [
+      {
+        "id": "C3",
+        "recomputed": 38.777795571487594
+      },
+      {
+        "id": "C4",
+        "recomputed": 9.76304580770352
+      },
+      {
+        "id": "C5",
+        "recomputed": 110.59612074672316
+      },
+      {
+        "id": "C6",
+        "recomputed": 19.87545046332604
+      },
+      {
+        "id": "C7",
+        "recomputed": -45.29133396236023
+      },
+      {
+        "id": "C8",
+        "recomputed": 2.7490740992932365
+      }
+    ]
+  },
+  "expected_validation_status": "computational issues",
+  "claims": [
+    {
+      "id": "C3",
+      "reported": "38.40",
+      "expected_status": "discrepant",
+      "reference_recomputed": 38.777795571487594,
+      "severity": "P1",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C4",
+      "reported": "9.65",
+      "expected_status": "discrepant",
+      "reference_recomputed": 9.76304580770352,
+      "severity": "P1",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C5",
+      "reported": "109.5%",
+      "expected_status": "discrepant",
+      "reference_recomputed": 110.59612074672316,
+      "severity": "P1",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C6",
+      "reported": "19.9%",
+      "expected_status": "match",
+      "reference_recomputed": 19.87545046332604,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    },
+    {
+      "id": "C7",
+      "reported": "−44.88",
+      "expected_status": "discrepant",
+      "reference_recomputed": -45.29133396236023,
+      "severity": "P2",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C8",
+      "reported": "2.70",
+      "expected_status": "discrepant",
+      "reference_recomputed": 2.7490740992932365,
+      "severity": "P2",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    }
+  ],
+  "hard_coding_signal": "Restore row_number() == 1 for UK submissions, removing the repeated records from the twin analysis.",
+  "notes": [
+    "Every reference is from the logged local execution, not copied from a paper or a shipped rendered output.",
+    "Affected claims are defined by changes at printed precision, not by arbitrary raw floating-point differences. Unaffected claims retain gold statuses; their references are the actual twin run values.",
+    "R4 repairs are listed separately; twin.patch contains exactly one planted change against the pinned original file.",
+    "Only the numerical scope needed for all gold claims was executed; this is not an end-to-end run of every package output.",
+    "The omitted China-data pin is supplied in input_manifest.json as original OSF version 1 with SHA-256 aa31cfe5ef9ce27725b595cd257e27cee236ae657f8aa485c47cb50efd192bcb. The original run reproduces every claim. C7 is the secondary specific flat-fee contrast; C8 is the secondary Welch cost-effectiveness test. C6 uses China only and is unchanged."
+  ],
+  "verification": {
+    "twin_id": "T-08",
+    "base_gold_id": "G-30",
+    "input_hashes_checked": 6,
+    "patch_applies": true,
+    "original_run_exit": 0,
+    "twin_run_exit": 0,
+    "all_claims_confirmed_at_printed_precision": true,
+    "affected_claims": [
+      "C3",
+      "C4",
+      "C5",
+      "C7",
+      "C8"
+    ]
+  }
+}

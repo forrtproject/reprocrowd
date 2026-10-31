@@ -1,0 +1,63 @@
+{
+  "gold_id": "G-23",
+  "cand_id": "CC-2023-004",
+  "doi": "10.5194/agile-giss-4-13-2023",
+  "title": "Does spatial thinking ability relate to performance when using web-mapping services? A survey with digital natives",
+  "stratum_drawn": "technical failure",
+  "paper_url": "https://doi.org/10.5194/agile-giss-4-13-2023",
+  "package": {
+    "url": "https://figshare.com/articles/dataset/Does_spatial_thinking_ability_relate_to_performance_when_using_web-mapping_services_A_survey_with_digital_natives/22132940/1",
+    "version_pin": "Figshare article 22132940 version 1; survey_2021.R file 39347480 SHA-256 ce9f3a018da08164caa62e0b601399ee740bed9b2f2cd4311bfb47bbf3c4fa5e; dataset.7z file 39347477 SHA-256 86898d52d894af27904f3e80428c71a32af4f8a42f3bc575ad30138caf8ee89e",
+    "language": "R",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/3c2rx/",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Total task scores: Google Maps versus HERE WeGo",
+      "exhibit": "Table 4",
+      "page": null,
+      "quantity": "Wilcoxon signed-rank V",
+      "reported": "281"
+    },
+    {
+      "id": "C2",
+      "claim": "Total task scores: Bing Maps versus HERE WeGo",
+      "exhibit": "Table 4",
+      "page": null,
+      "quantity": "Wilcoxon rank-sum W",
+      "reported": "1036"
+    },
+    {
+      "id": "C3",
+      "claim": "SUS scores: Google Maps versus HERE WeGo",
+      "exhibit": "Table 8",
+      "page": null,
+      "quantity": "Paired t statistic",
+      "reported": "9.45"
+    },
+    {
+      "id": "C4",
+      "claim": "SUS scores: Bing Maps versus HERE WeGo",
+      "exhibit": "Table 8",
+      "page": null,
+      "quantity": "Wilcoxon rank-sum W",
+      "reported": "1037.5"
+    },
+    {
+      "id": "C5",
+      "claim": "Spatial-thinking ability and Google Maps task accuracy",
+      "exhibit": "Table 9, STAT / TS GM",
+      "page": null,
+      "quantity": "Kendall tau",
+      "reported": "0.29"
+    }
+  ],
+  "notes": ""
+}

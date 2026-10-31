@@ -1,0 +1,249 @@
+{
+ "seed": 20261030,
+ "quota": {
+  "computationally reproducible": 12,
+  "computational issues": 10,
+  "technical failure": 3,
+  "ambiguous": 5
+ },
+ "drawn": [
+  {
+   "gold_id": "G-01",
+   "cand_id": "I4R-qe3fx",
+   "stratum": "computationally reproducible",
+   "title": "Dissociable Codes in Motor Working Memory",
+   "doi": "10.1177/09567976231221756"
+  },
+  {
+   "gold_id": "G-02",
+   "cand_id": "RB-025",
+   "stratum": "computationally reproducible",
+   "title": "Entertaining Beliefs in Economic Mobility",
+   "doi": "10.1111/ajps.12702"
+  },
+  {
+   "gold_id": "G-03",
+   "cand_id": "I4R-vcsfj",
+   "stratum": "computationally reproducible",
+   "title": "Human and animal dominance hierarchies show a pyramidal structure guiding adult and infant social inferences",
+   "doi": "10.1038/s41562-023-01634-5"
+  },
+  {
+   "gold_id": "G-04",
+   "cand_id": "I4R-t68dc",
+   "stratum": "computationally reproducible",
+   "title": "Risky-Choice Framing Effects Result Partly From Mismatched Option Descriptions in Gains and Losses",
+   "doi": "10.1177/09567976241249183"
+  },
+  {
+   "gold_id": "G-05",
+   "cand_id": "RB-053",
+   "stratum": "computationally reproducible",
+   "title": "Playing Politics with Environmental Protection: The Political Economy of Designating Protected Areas",
+   "doi": "10.1086/718978"
+  },
+  {
+   "gold_id": "G-06",
+   "cand_id": "RB-004",
+   "stratum": "computationally reproducible",
+   "title": "Black Workers in White Places: Daytime Racial Diversity and White Public Opinion",
+   "doi": "10.1086/716289"
+  },
+  {
+   "gold_id": "G-07",
+   "cand_id": "I4R-3b8z4",
+   "stratum": "computationally reproducible",
+   "title": "The Extended Mind in Young Children: Cost-Dependent Trade-Off Between External and Internal Memory",
+   "doi": "10.1177/09567976241306424"
+  },
+  {
+   "gold_id": "G-08",
+   "cand_id": "RB-019",
+   "stratum": "computationally reproducible",
+   "title": "Do Transitional Justice Museums Persuade Visitors? Evidence from a Field Experiment",
+   "doi": "10.1086/714765"
+  },
+  {
+   "gold_id": "G-09",
+   "cand_id": "I4R-j65xf",
+   "stratum": "computationally reproducible",
+   "title": "*Deconfounding Sex and Sex of Partner in Mate-Preference Research",
+   "doi": "10.1177/09567976251319038"
+  },
+  {
+   "gold_id": "G-10",
+   "cand_id": "I4R-mgy45",
+   "stratum": "computationally reproducible",
+   "title": "Children Sustain Cooperation in a Threshold Public-Goods Game Even When Seeing Others’ Outcomes",
+   "doi": "10.1177/09567976241267854"
+  },
+  {
+   "gold_id": "G-11",
+   "cand_id": "RB-029",
+   "stratum": "computationally reproducible",
+   "title": "Flight to Safety: COVID-Induced Changes in the Intensity of Status Quo Preference and Voting Behavior",
+   "doi": "10.1017/s0003055421000691"
+  },
+  {
+   "gold_id": "G-12",
+   "cand_id": "I4R-5c9aj",
+   "stratum": "computationally reproducible",
+   "title": "On the Robustness and Provenance of the Gambler’s Fallacy",
+   "doi": "10.1177/09567976251344570"
+  },
+  {
+   "gold_id": "G-13",
+   "cand_id": "RB-023",
+   "stratum": "computational issues",
+   "title": "Effective for Whom? Ethnic Identity and Nonviolent Resistance",
+   "doi": "10.1017/s0003055421000940"
+  },
+  {
+   "gold_id": "G-14",
+   "cand_id": "I4R-u6gea",
+   "stratum": "computational issues",
+   "title": "When combinations of humans and AI are useful: A systematic review and meta-analysis",
+   "doi": "10.1038/s41562-024-02024-1"
+  },
+  {
+   "gold_id": "G-15",
+   "cand_id": "I4R-fpaxs",
+   "stratum": "computational issues",
+   "title": "People Place Larger Bets When Risky Choices Provide a Postbet Option to Cash Out",
+   "doi": "10.1177/09567976241266516"
+  },
+  {
+   "gold_id": "G-16",
+   "cand_id": "I4R-axj5y",
+   "stratum": "computational issues",
+   "title": "Battling the coronavirus ‘infodemic’ among social media users in Kenya and Nigeria",
+   "doi": "10.1038/s41562-023-01810-7"
+  },
+  {
+   "gold_id": "G-17",
+   "cand_id": "I4R-vg2kt",
+   "stratum": "computational issues",
+   "title": "Supernatural explanations across 114 societies are more common for natural than social phenomena",
+   "doi": "10.1038/s41562-023-01558-0"
+  },
+  {
+   "gold_id": "G-18",
+   "cand_id": "I4R-82c6v",
+   "stratum": "computational issues",
+   "title": "“Stop the Count!”—How Reporting Partial Election Results Fuels Beliefs in Election Fraud",
+   "doi": "10.1177/09567976251355594"
+  },
+  {
+   "gold_id": "G-19",
+   "cand_id": "I4R-9c8p6",
+   "stratum": "computational issues",
+   "title": "Proenvironmental Behavior Increases Subjective Well-Being: Evidence From an Experience-Sampling Study and a Randomized Experiment",
+   "doi": "10.1177/09567976241251766"
+  },
+  {
+   "gold_id": "G-20",
+   "cand_id": "I4R-529en",
+   "stratum": "computational issues",
+   "title": "Racial Prejudice Affects Representations of Facial Trustworthiness",
+   "doi": "10.1177/09567976231225094"
+  },
+  {
+   "gold_id": "G-21",
+   "cand_id": "I4R-7cd2s",
+   "stratum": "computational issues",
+   "title": "Learning From Aggregated Opinion",
+   "doi": "10.1177/09567976241251741"
+  },
+  {
+   "gold_id": "G-22",
+   "cand_id": "I4R-bz8pf",
+   "stratum": "computational issues",
+   "title": "Attitudes and Laws About Abortion Are Linked to Extrinsic Mortality Risk: A Life-History Perspective on Variability in Reproductive Rights",
+   "doi": "10.1177/09567976231217410"
+  },
+  {
+   "gold_id": "G-23",
+   "cand_id": "CC-2023-004",
+   "stratum": "technical failure",
+   "title": "Does spatial thinking ability relate to performance when using web-mapping services? A survey with digital natives",
+   "doi": "10.5194/agile-giss-4-13-2023"
+  },
+  {
+   "gold_id": "G-24",
+   "cand_id": "I4R-mepbv",
+   "stratum": "technical failure",
+   "title": "Insights into the accuracy of social scientists’ forecasts of societal change",
+   "doi": "10.1038/s41562-022-01517-1"
+  },
+  {
+   "gold_id": "G-25",
+   "cand_id": "I4R-eb89k",
+   "stratum": "technical failure",
+   "title": "A meta-analysis of genetic effects associated with neurodevelopmental disorders and co-occurring conditions",
+   "doi": "10.1038/s41562-023-01530-y"
+  },
+  {
+   "gold_id": "G-26",
+   "cand_id": "RB-111",
+   "stratum": "ambiguous",
+   "title": "Taste-Based Gender Favouritism in High-Stake Decisions: Evidence from The Price is Right",
+   "doi": "10.1093/ej/uead087"
+  },
+  {
+   "gold_id": "G-27",
+   "cand_id": "SC-8R9d",
+   "stratum": "ambiguous",
+   "title": "Remotely Close Associations: Openness To Experience And Semantic Memory Structure",
+   "doi": "10.1002/per.2157"
+  },
+  {
+   "gold_id": "G-28",
+   "cand_id": "I4R-vdm68",
+   "stratum": "ambiguous",
+   "title": "Effects of calibrated blue–yellow changes in light on the human circadian clock",
+   "doi": "10.1038/s41562-023-01791-7"
+  },
+  {
+   "gold_id": "G-29",
+   "cand_id": "I4R-kwqj6",
+   "stratum": "ambiguous",
+   "title": "Cognitive causes of ‘like me’ race and gender biases in human language production",
+   "doi": "10.1038/s41562-024-01943-3"
+  },
+  {
+   "gold_id": "G-30",
+   "cand_id": "I4R-4wxms",
+   "stratum": "ambiguous",
+   "title": "The motivating effect of monetary over psychological incentives is stronger in WEIRD cultures",
+   "doi": "10.1038/s41562-023-01769-5"
+  }
+ ],
+ "reserve_in_draw_order": {
+  "computationally reproducible": [
+   "I4R-ejsb9",
+   "I4R-96nec",
+   "I4R-av3mz",
+   "I4R-6by24",
+   "RB-038",
+   "I4R-gjm3c",
+   "I4R-xg3h9",
+   "I4R-vzpu2",
+   "I4R-4mtga",
+   "I4R-rkdqv",
+   "I4R-kyufb",
+   "RB-065",
+   "I4R-g82fy",
+   "I4R-wg2sv"
+  ],
+  "computational issues": [
+   "I4R-cyb24",
+   "I4R-gh7cv"
+  ],
+  "technical failure": [],
+  "ambiguous": [
+   "I4R-6mzpv",
+   "RB-049",
+   "I4R-fwzbg"
+  ]
+ }
+}

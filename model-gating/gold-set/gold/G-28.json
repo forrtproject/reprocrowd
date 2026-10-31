@@ -1,0 +1,185 @@
+{
+ "gold_id": "G-28",
+ "gold_version": "1.1",
+ "cand_id": "I4R-vdm68",
+ "doi": "10.1038/s41562-023-01791-7",
+ "title": "Effects of calibrated blue–yellow changes in light on the human circadian clock",
+ "stratum_drawn": "ambiguous",
+ "paper_url": "https://doi.org/10.1038/s41562-023-01791-7",
+ "package": {
+  "url": "https://github.com/ChristineBlume/Effects-of-calibrated-blue-yellow-changes-in-light-on-the-human-circadian-clock/",
+  "version_pin": "Git commit e9bc03f89244b7b00e1cd9ec63b3091b09d75018",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/6a83037a1926ed8280bb6617/",
+   "description": "Human computational reproduction report."
+  },
+  {
+   "url": "https://doi.org/10.6084/m9.figshare.23578698",
+   "description": "Original data deposit."
+  }
+ ],
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [
+  "computationally reproducible"
+ ],
+ "label_confidence": "medium",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Time-by-condition effect on subjective sleepiness",
+   "exhibit": "Subjective sleepiness (S2); Figure 3d",
+   "page": null,
+   "quantity": "Bayes factor BF10",
+   "reported": "0.27",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "No numerical scoring target: Evening_1 subset cannot be constructed from the deposited KSS data.",
+   "severity": "P0",
+   "cause": "KSS_data.csv has PB_No, appointment, condition, KSS_value, KSS_no, gender, with no time column; pinned KSS script filters time == Evening_1.",
+   "evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ — Deviations in the Reporting of Results, PDF p. 7: “BF10 = 0.11”.",
+   "rationale": "Direct inspection confirms the required subsetting column is absent. No lossless mapping from the pooled evenings to Evening_1 is supplied. Stochastic Bayesian computation adds uncertainty but does not remove the shipped-data blocker.",
+   "diagnostic_results": [
+    {
+     "value": 0.11,
+     "provenance": "source_report",
+     "evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ 'Deviations in the Reporting of Results': 'the authors report \"moderate (inconclusive) evidence against a time x condition interaction (BF10 = 0.27; BF10 rank-based = 0.14)\". We found inconclusive evidence against a time x condition interaction (BF10 = 0.11; BF10 rank-based = 0.05).' 'Errors in the Data': 'a variable used in the code (time) to subset data was not provided in the corresponding data (KSS_data.csv)'",
+     "scope": "Report run with unresolved KSS subset; report narrative conflicts with its Table 1 interaction result",
+     "is_scoring_reference": false
+    }
+   ],
+   "acceptable_statuses": [
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "The shipped KSS data lack the 'time' column the script filters on, so the Evening 1 subset cannot be built (P0). The report's subset provenance is unresolved; its 0.11 is a diagnostic only."
+  },
+  {
+   "id": "C2",
+   "claim": "Time-by-condition effect on rank-transformed subjective sleepiness",
+   "exhibit": "Subjective sleepiness (S2); Figure 3d",
+   "page": null,
+   "quantity": "Rank-based Bayes factor BF10",
+   "reported": "0.14",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "No numerical scoring target: Evening_1 subset cannot be constructed from the deposited KSS data.",
+   "severity": "P0",
+   "cause": "KSS_data.csv has PB_No, appointment, condition, KSS_value, KSS_no, gender, with no time column; pinned KSS script filters time == Evening_1.",
+   "evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ — Deviations in the Reporting of Results, PDF p. 7: “BF10 rank-based = 0.05”.",
+   "rationale": "Direct inspection confirms the required subsetting column is absent. No lossless mapping from the pooled evenings to Evening_1 is supplied. Stochastic Bayesian computation adds uncertainty but does not remove the shipped-data blocker.",
+   "diagnostic_results": [
+    {
+     "value": 0.05,
+     "provenance": "source_report",
+     "evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ 'Deviations in the Reporting of Results': 'We found inconclusive evidence against a time x condition interaction (BF10 = 0.11; BF10 rank-based = 0.05).'",
+     "scope": "Report run with unresolved KSS subset; report narrative conflicts with its Table 1 interaction result",
+     "is_scoring_reference": false
+    }
+   ],
+   "acceptable_statuses": [
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "Same blocker as C1 (P0); the report's 0.05 is a diagnostic only."
+  },
+  {
+   "id": "C3",
+   "claim": "Condition effect on circadian melatonin phase shift",
+   "exhibit": "Primary outcome (C1); Figure 3a",
+   "page": null,
+   "quantity": "Bayes factor BF10",
+   "reported": "0.3",
+   "expected_status": "match",
+   "reference_recomputed": 0.3,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ — Table 1, C1: “BF = 0.3”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ — Table 1, C1: “BF = 0.3”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "The primary BF recurred at printed precision despite unseeded MCMC."
+  },
+  {
+   "id": "C4",
+   "claim": "Condition effect on melatonin suppression during light exposure",
+   "exhibit": "Melatonin secretion (S1)",
+   "page": null,
+   "quantity": "Bayes factor BF10",
+   "reported": "0.09",
+   "expected_status": "match",
+   "reference_recomputed": 0.09,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ — Table 1, S1: “BF = 0.09”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ — Table 1, S1: “BF = 0.09”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Recurred at printed precision."
+  },
+  {
+   "id": "C5",
+   "claim": "Condition effect on subjective sleepiness",
+   "exhibit": "Subjective sleepiness (S2)",
+   "page": null,
+   "quantity": "Bayes factor BF10",
+   "reported": "0.62",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "No numerical scoring target: Evening_1 subset cannot be constructed from the deposited KSS data.",
+   "severity": "P0",
+   "cause": "KSS_data.csv has PB_No, appointment, condition, KSS_value, KSS_no, gender, with no time column; pinned KSS script filters time == Evening_1.",
+   "evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ — Table 1 S2 explicitly labels BF 0.52 as yellow-bright versus blue-dim; it is not a recomputation of the overall condition BF 0.62. Direct inspection of KSS_data.csv and BlumeC_NHB_KSS.R confirms the absent time column.",
+   "rationale": "Direct inspection confirms the required subsetting column is absent. No lossless mapping from the pooled evenings to Evening_1 is supplied. Stochastic Bayesian computation adds uncertainty but does not remove the shipped-data blocker.",
+   "acceptable_statuses": [
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "Same KSS blocker (P0). The report's 0.52 is the yellow-bright vs blue-dim contrast, not the overall condition effect, so there is no reference."
+  },
+  {
+   "id": "C6",
+   "claim": "Condition effect on visual comfort",
+   "exhibit": "Visual comfort (S4)",
+   "page": null,
+   "quantity": "Bayes factor BF10",
+   "reported": "0.16",
+   "expected_status": "close",
+   "reference_recomputed": 0.17,
+   "tolerance": "Absolute BF difference 0.01; retain the source’s explicitly matched evidence category.",
+   "severity": null,
+   "cause": "Small unseeded Bayesian/version variation treated as reproduced in the source.",
+   "evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ — Table 1, S4: “0.17”.",
+   "rationale": "The source treats the result as reproduced; the stated difference is small and does not establish an original-analysis discrepancy.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/6a83037a1926ed8280bb6617/ — Table 1, S4: “0.17”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "close"
+   ],
+   "second_labeller_rationale": "A one-unit difference in the second decimal, consistent with MCMC noise, which the report treats as matched."
+  }
+ ],
+ "notes": {
+  "claim_list": "",
+  "sol": "Directly verified the missing time column in figshare 23578698 Data.zip/KSS_data.csv and its use in the pinned KSS script. C1/C2 report values 0.11/0.05 are noncanonical diagnostics; Table 1 separately calls interaction BF 0.01 matched, an unresolved report inconsistency. C5 no longer substitutes pairwise yellow-bright versus blue-dim BF 0.52 for overall-condition BF 0.62. Primary DLMO and melatonin claims recur; KSS and supplementary outputs have problems, hence computational issues, with computationally reproducible retained as the source-summary interpretation.",
+  "claude": "C1, C2 and C5 are not_checkable P0: the shipped KSS data lack the 'time' column the script filters on. The report's 0.11/0.05 are diagnostics; its 0.52 is a different contrast (yellow-bright vs blue-dim) and is not a reference for C5. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "The report states 'There was no attempt to make random number generation reproducible (e.g. with the set.seed() function)'. 'Major Deviations in Results: We were unable to replicate ... Supplementary Table 20.' I confirmed directly that KSS_data.csv (figshare 23578698, Data.zip) has columns PB_No, appointment, condition, KSS_value, KSS_no, gender, with no 'time' column, while BlumeC_NHB_KSS.R at the pinned commit filters on time == 'Evening_1'. The report itself is inconsistent for the KSS interaction (text 0.11/0.05 vs Table 1 0.01 'matched'). Paper-level status is 'computational issues' because KSS outputs and Supp Table 20 did not recur, while the primary claim (C3) did."
+ }
+}

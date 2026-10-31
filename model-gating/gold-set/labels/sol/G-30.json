@@ -1,0 +1,87 @@
+{
+  "gold_id": "G-30",
+  "expected_validation_status": "computationally reproducible",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": 38.4,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A computational reproducibility, read with Table 2 Original outcome column.",
+      "rationale": "The report explicitly confirms original-workflow reproduction and gives the printed original value in its comparison table. Reference is sourced to that statement, with no claim of an independent original-run log.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A explicitly states that the original analyses, regression models and t tests reproduce. Section 3 Table 2 Original outcome column prints this article value; its recalculated-data column is not used as a direct original-run measurement.",
+      "reference_scope": "Original-workflow recurrence asserted by report; numerical precision from Original outcome column, not a separately printed original-run log"
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": 9.65,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A computational reproducibility, read with Table 2 Original outcome column.",
+      "rationale": "The report explicitly confirms original-workflow reproduction and gives the printed original value in its comparison table. Reference is sourced to that statement, with no claim of an independent original-run log.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A explicitly states that the original analyses, regression models and t tests reproduce. Section 3 Table 2 Original outcome column prints this article value; its recalculated-data column is not used as a direct original-run measurement.",
+      "reference_scope": "Original-workflow recurrence asserted by report; numerical precision from Original outcome column, not a separately printed original-run log"
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": "109.5%",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A computational reproducibility, read with Table 2 Original outcome column.",
+      "rationale": "The report explicitly confirms original-workflow reproduction and gives the printed original value in its comparison table. Reference is sourced to that statement, with no claim of an independent original-run log.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A explicitly states that the original analyses, regression models and t tests reproduce. Section 3 Table 2 Original outcome column prints this article value; its recalculated-data column is not used as a direct original-run measurement.",
+      "reference_scope": "Original-workflow recurrence asserted by report; numerical precision from Original outcome column, not a separately printed original-run log"
+    },
+    {
+      "id": "C6",
+      "expected_status": "match",
+      "reference_recomputed": "19.9%",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A computational reproducibility, read with Table 2 Original outcome column.",
+      "rationale": "The report explicitly confirms original-workflow reproduction and gives the printed original value in its comparison table. Reference is sourced to that statement, with no claim of an independent original-run log.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A explicitly states that the original analyses, regression models and t tests reproduce. Section 3 Table 2 Original outcome column prints this article value; its recalculated-data column is not used as a direct original-run measurement.",
+      "reference_scope": "Original-workflow recurrence asserted by report; numerical precision from Original outcome column, not a separately printed original-run log"
+    },
+    {
+      "id": "C7",
+      "expected_status": "match",
+      "reference_recomputed": -44.88,
+      "tolerance": "Equality at two decimal places as printed in the original article.",
+      "severity": null,
+      "cause": null,
+      "evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A states original regression models and t tests exactly reproduce; Table 2 Analysis 3, flat-fee comparison; article Supplementary Table 7.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/uvf8k/ — section 2 original-workflow reproduction statement and Table 2 Analysis 3, flat-fee comparison; article Supplementary Table 7 Original outcome column. The later recomputed-input analysis is corroboration, not treated as an original-code log.",
+      "reference_scope": "Original-workflow recurrence asserted by report; printed original value independently checked in article",
+      "rationale": "A printed original numerical test with explicit report-level support for recurrence; original and recalculated-data evidence kept distinct."
+    },
+    {
+      "id": "C8",
+      "expected_status": "match",
+      "reference_recomputed": 2.7,
+      "tolerance": "Equality at two decimal places as printed in the original article.",
+      "severity": null,
+      "cause": null,
+      "evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A states original regression models and t tests exactly reproduce; Table 2 Analysis 4, UK monetary versus norm comparison.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/uvf8k/ — section 2 original-workflow reproduction statement and Table 2 Analysis 4, UK monetary versus norm comparison Original outcome column. The later recomputed-input analysis is corroboration, not treated as an original-code log.",
+      "reference_scope": "Original-workflow recurrence asserted by report; printed original value independently checked in article",
+      "rationale": "A printed original numerical test with explicit report-level support for recurrence; original and recalculated-data evidence kept distinct."
+    }
+  ],
+  "label_confidence": "medium",
+  "notes": "Original Study 2A numerical analyses are reported reproduced; unprinted graphical CI endpoints C1/C2 are retired under R6. New C7/C8 use report section 2 plus its explicitly labelled original-outcome cells, not an assertion that the later reconstructed-input run was the shipped workflow. The report's seven-versus-six exclusion criticism has a denominator mismatch: direct evaluation of the pinned UK data finds 7 duplicate rows removed overall, of which 6 have positive num_total_answers (the other has 0). Supplement p.22 describes 6 exclusions among completers; final UK N is 1067. This does not establish a P2 count discrepancy or P3 typo. Audit: model-gating/gold-set/audit/check_g30.R, check_g30_completed.log. C3-C8 references are report-supported, not a new full Study 2A rerun."
+}

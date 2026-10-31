@@ -1,0 +1,65 @@
+{
+ "gold_id": "G-02",
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "match",
+   "reference_recomputed": "0.055",
+   "tolerance": "printed precision (3 dp)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/dzrk9/ p.1 section 2 'Code': 'We checked the code for the paper and found that it runs without issue and the results match with those presented in the paper.'; report 'Table 2' (MTurk Sample col 1): 'Rags-to-Riches TV Treatment 0.055*** (0.011)', N=763",
+   "rationale": "Report states code runs and matches; its re-estimated MTurk column gives 0.055 with N=763 as in the paper.",
+   "reported_check": "confirmed in paper (Table 1 col 1, p.46: 0.055)"
+  },
+  {
+   "id": "C2",
+   "expected_status": "match",
+   "reference_recomputed": "0.068",
+   "tolerance": "printed precision (3 dp)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/dzrk9/ p.1 section 2 'Code': 'We checked the code for the paper and found that it runs without issue and the results match with those presented in the paper.'; report 'Table 2' (Lab-in-the-Field col 3): 'Rags-to-Riches TV Treatment ... 0.068** (0.025)', N=203",
+   "rationale": "Report's lab-in-the-field column (its col 3, which corresponds to paper Table 1 col 5, N=203) gives 0.068.",
+   "reported_check": "confirmed in paper (Table 1 col 5, p.46: 0.068)"
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": "0.032",
+   "tolerance": "printed precision (3 dp)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/dzrk9/ p.1 section 2 'Code': 'We checked the code for the paper and found that it runs without issue and the results match with those presented in the paper.'; report regression table col (1) 'Baseline': 'frequentviewer 0.032** (0.011)'; text: 'Model 1 shows the original specification used in Kim's table 2 model 2'",
+   "rationale": "Report's baseline model reproduces paper Table 2 col 2 frequent-viewer coefficient.",
+   "reported_check": "confirmed in paper (Table 2 col 2, p.48: 0.032)"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": "0.040",
+   "tolerance": "printed precision (3 dp)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/dzrk9/ p.1 section 2 'Code': 'We checked the code for the paper and found that it runs without issue and the results match with those presented in the paper.'; report regression table col (1) 'Baseline': 'heavyviewer 0.040* (0.016)'",
+   "rationale": "Baseline model reproduces 0.040.",
+   "reported_check": "confirmed in paper (Table 2 col 2, p.48: 0.040)"
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": "0.013",
+   "tolerance": "printed precision (3 dp)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/dzrk9/ p.1 section 2 'Code': 'We checked the code for the paper and found that it runs without issue and the results match with those presented in the paper.'; report regression table col (1) 'Baseline': 'occasionalviewer 0.013 (0.011)'",
+   "rationale": "Baseline model reproduces 0.013.",
+   "reported_check": "confirmed in paper (Table 2 col 2, p.48: 0.013)"
+  }
+ ],
+ "label_confidence": "high",
+ "notes": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "Paper accessed via REPRO-Bench snapshot paper.pdf (25/paper.pdf). Report's own tables are titled 'Table 1'/'Table 2' with column numbering differing from the paper: the report's lab-in-the-field column is col 3 (MTurk cols 1-2), whereas paper Table 1 has MTurk cols 1-4 and lab cols 5-8; values and N match paper col 5. The report's tables mix original and robustness models; the relevant 'Baseline' column is the original specification. Report text has a typo ('frequentviewer is 0.32', i.e. 0.032) with no bearing on the label. Only transformed analysis data were shipped (scope begins there, as the claims file notes). REPRO-Bench should_reproduce.txt for item 25 lists 'Figure 3 / Table 1' (I did not use it for the label). The report's prose column references are garbled, but its t-statistics settle the mapping. 'column 4 [t=2.73]' = 0.068/0.025, which is paper col 5 (claim C2). 'column 5 [t=0.67]' is about 0.011/0.017, which is paper col 3. 'column 8 [t=1.89]' = 0.066/0.035, which is paper col 8."
+}

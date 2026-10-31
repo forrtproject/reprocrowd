@@ -1,0 +1,65 @@
+{
+ "gold_id": "G-06",
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "match",
+   "reference_recomputed": -0.002,
+   "tolerance": "3 dp as printed",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf p. 5-6, Section 2 and Table 1 (Replication column): 'we show that the supplied code and data exactly reproduce the results from the paper'; Racial Flux, President: −0.002∗∗∗ (0.000)",
+   "rationale": "Report reran the original R code and the replication column is identical to the original.",
+   "reported_check": "paper not accessed (JOP paywalled); report quotes the original value in its Table 1 'Original (Table A3)' column and intro text p. 4"
+  },
+  {
+   "id": "C2",
+   "expected_status": "match",
+   "reference_recomputed": -0.001,
+   "tolerance": "3 dp as printed",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf p. 6, Table 1 Replication column, U.S. House: Racial Flux −0.001∗∗∗ (0.000)",
+   "rationale": "Identical to printed value in the report's side-by-side table.",
+   "reported_check": "paper not accessed (JOP paywalled); report quotes the original value in its Table 1 'Original (Table A3)' column and intro text p. 4"
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": 0.005,
+   "tolerance": "3 dp as printed",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf p. 6, Table 1 Replication column, Racial Resentment: Racial Flux 0.005∗∗∗ (0.001)",
+   "rationale": "Identical to printed value.",
+   "reported_check": "paper not accessed (JOP paywalled); report quotes the original value in its Table 1 'Original (Table A3)' column and intro text p. 4"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": 0.003,
+   "tolerance": "3 dp as printed",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf p. 6, Table 1 Replication column, Affirmative Action: Racial Flux 0.003∗∗∗ (0.001)",
+   "rationale": "Identical to printed value.",
+   "reported_check": "paper not accessed (JOP paywalled); report quotes the original value in its Table 1 'Original (Table A3)' column and intro text p. 4"
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": 0.001,
+   "tolerance": "3 dp as printed",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf p. 6, Table 1 Replication column, Racial Resentment: Racial Flux 0.005∗∗∗ (0.001); note 'Standard Errors clustered by zip code in parentheses'",
+   "rationale": "Clustered SE reproduced identically.",
+   "reported_check": "paper not accessed (JOP paywalled); report quotes the original value in its Table 1 'Original (Table A3)' column and intro text p. 4"
+  }
+ ],
+ "label_confidence": "high",
+ "notes": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "Report compared against HW appendix Table A3 rather than main-text Table 1; the shipped an_main.R writes Table 1 and Table A3 from the same texreg call ('TABLE 1 AND TABLE A3'), so the exhibit difference is cosmetic. Report used the Harvard Dataverse package (doi:10.7910/DVN/FMOR6K, v3.0), not the REPRO-Bench snapshot; REPRO-Bench folder 4 contains the same an_main.R. Report made only path edits ('allowing for opening the data file from a different location'), not a P0. Report's N Clusters were 'Not Reported' in the replication column (display only). Sections 3-5 (reconstruction, multiverse, Nationscape) are robustness and were ignored. Paper itself not accessed."
+}

@@ -1,0 +1,68 @@
+{
+  "gold_id": "G-25",
+  "expected_validation_status": "technical failure",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The original code dereferences missing/misnamed variables and has execution-order failures.",
+      "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ — §2 Computational Reproducibility, pp. 3–4: “not runnable”.",
+      "rationale": "The human source reproduced Aim 1 only after modifications and could not execute Aims 2–3. The selected shipped-code outputs therefore have no defensible numerical reference.",
+      "diagnostic_results": [
+        {
+          "value": 0.66,
+          "provenance": "source_report",
+          "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ p.4-5: 'Running the provided code resulted in output errors because the code named variables that were not in the data file. ... replacing Cohort_for_agg_by_study with agg_by_study_cohorts across most of the code files' ... 'After modifying the provided code, we were able to reproduce some of the results, specifically the findings from Aim 1. For example, our team replicated results that indicated NDDs heritability at grand-h2 = 0.66.'; static check of pinned commit c4fac61 (= current repo HEAD): meta_analysis_h2.R line 217 uses agg_by_study_cohorts$Cohort_for_agg_by_study but Extraction_heritability.csv has no such column",
+          "scope": "Report run after variable replacements and reordered code; not the pinned shipped workflow",
+          "is_scoring_reference": false
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The original code dereferences missing/misnamed variables and has execution-order failures.",
+      "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ — §2 Computational Reproducibility, pp. 3–4: “not runnable”.",
+      "rationale": "The human source reproduced Aim 1 only after modifications and could not execute Aims 2–3. The selected shipped-code outputs therefore have no defensible numerical reference."
+    },
+    {
+      "id": "C3",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The original code dereferences missing/misnamed variables and has execution-order failures.",
+      "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ — §2 Computational Reproducibility, pp. 3–4: “not runnable”.",
+      "rationale": "The human source reproduced Aim 1 only after modifications and could not execute Aims 2–3. The selected shipped-code outputs therefore have no defensible numerical reference. Reported target corrected to the original-version 0.36; 0.47 belongs to the 2025-08-11 Author Correction, outside the package pin."
+    },
+    {
+      "id": "C4",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The original code dereferences missing/misnamed variables and has execution-order failures.",
+      "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ — §2 Computational Reproducibility, pp. 3–4: “not runnable”.",
+      "rationale": "The human source reproduced Aim 1 only after modifications and could not execute Aims 2–3. The selected shipped-code outputs therefore have no defensible numerical reference."
+    },
+    {
+      "id": "C5",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The original code dereferences missing/misnamed variables and has execution-order failures.",
+      "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ — §2 Computational Reproducibility, pp. 3–4: “not runnable”.",
+      "rationale": "The human source reproduced Aim 1 only after modifications and could not execute Aims 2–3. The selected shipped-code outputs therefore have no defensible numerical reference."
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "Original commit c4fac61 is pinned. Static inspection also finds references to Cohort_for_agg_by_study without that field in the supplied extraction CSV. Aims 2 and 3 are primary and blocked; numbers obtained after changing variable names or ordering are excluded."
+}

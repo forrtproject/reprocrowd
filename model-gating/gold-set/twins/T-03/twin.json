@@ -1,0 +1,253 @@
+{
+  "twin_id": "T-03",
+  "base_gold_id": "G-04",
+  "base_cand_id": "I4R-t68dc",
+  "package": {
+    "url": "https://osf.io/92jt3/",
+    "version_pin": "MTurk Survey.pdf: OSF file 65fdb97fae6a2400421c71b0 version 1, SHA-256 af89e09047e97492fd27a48b84ae4d2477432ce6032294ec7373b773485b8a8e; REP (Student) Survey.pdf: OSF file 65fdb991c55141002dcb6088 version 1, SHA-256 620cd40bfebd35b73b72eeb79194d020bf7243193420fe3156a45d43a1554b73; BOTH_Analyses.R: OSF file 65ef40e58992ec0ca3788529 version 1, SHA-256 61ae079aa1e1b667f560749a307287955beeed841bbfe3896573936b0ff3d671; MTurk_Analyses.R: OSF file 65ef40f04dfd8c0c6527f384 version 1, SHA-256 377a122d70142c3eb1c818945e8fac204c3142b3bb29f5c5489f13e7ed639105; MTurk_Cleaning.html: OSF file 65ef41088992ec0c9f788973 version 1, SHA-256 7de7bb309923168714cb13f8728750fe6b937e1b64f24a465d8cfbcac84a1a1c; MTurk_Cleaning.Rmd: OSF file 65ef41144dfd8c0c6527f391 version 1, SHA-256 0bdc8ebe680a0147dd5936ffa3feb21da72871b1e956f0e9806fb07f142a3f20; REP_Analyses.R: OSF file 65ef41298520370caa880e7e version 1, SHA-256 73cf8d307d478837ca1c0e7e7fafa49180523d669692045ac0ced3aa7ccf74ec; Power_Analyses.R: OSF file 65ef443c719c060ca3d49cb1 version 2, SHA-256 2da45c1394d3bbcae2d6ab1af912f7215df08fd1fbb7caef4fb9a151b547b7e4; REP_Cleaning.Rmd: OSF file 65ef48b5e5e51c0ce5bc56d9 version 1, SHA-256 9c6cd27ce2f19ed85b3c7ee80b5a902b49ac188234d29d03511a4fa5525c0761; REP_Cleaning.html: OSF file 65ef48db719c060cabd49cd7 version 1, SHA-256 62c4f5a79d8380e2d87e0fa309151a1fb14056866ae1640dd1c9fbe65ec48d11; CODEBOOK.pdf: OSF file 66109586bba39a224a729eee version 1, SHA-256 778feadca3bcb198904bbbb1da321cbb7534e47ab1ccf697d89b4a7a8c936cb8; README.pdf: OSF file 66109842e65c6029bb7d9f58 version 1, SHA-256 242edb9d1583b85df918bf51a41549714aae9348b792cdccceb009fca4ad142b; AsPredicted MTurk.pdf: OSF file 65ef3fde4dfd8c0c5e27f32c version 2, SHA-256 27c6f4d16a1a238cbf02e7435c144e9f8addc73229eb57361485cd383112ce56; AsPredicted REP.pdf: OSF file 65ef3fe88520370cbd8801b4 version 2, SHA-256 8350ac6f96a827305548f39554682899a164e122549a9490db8ece95c0a309e3; Main Supplemental Material.pdf: OSF file 65ef4297e5e51c0ccabc62cc version 1, SHA-256 e19eb6437e966f2fe588eb8d482384e0cfcf24c2396787e1bb96fc08916420ad; StatCheck Main Article.pdf: OSF file 65ef42d7719c060ca7d49a35 version 1, SHA-256 0c6c036c46dfad3b95e169cce131dc2672ae77ba5f43e082056329f61158d3c8; StatCheck Supplemental Material.pdf: OSF file 65ef42e1719c060ca3d49ba4 version 1, SHA-256 16f10809a185c4be95c84f757886736da6c21b2607425898256ae90c55aa1b0f; DeKay Dou 2024 Accepted Manuscript.pdf: OSF file 66109210bba39a224b729eb5 version 3, SHA-256 53303707080100b927aa5096566ecb56cbfb618e673e960f5c432481ce008020; /Data and R Code/MTurk_RawData.csv: OSF file 64bc2a46465d1406e9a318f4 version 1, SHA-256 963e082d835102b32526ce92add95e05b8ab054c2cd35d1ad309e89218197e44; /Data and R Code/REP_RawData.csv: OSF file 64bc2a64b49dcb06e7736af0 version 1, SHA-256 0e93c56544a906eddb835d6320262cc1b0ff52f6069669d99b10c36b6fb5631d; /Data and R Code/BOTH_CleanData.csv: OSF file 65eca46b4dfd8c0a4627f372 version 2, SHA-256 e76c0ca6152f16ea5aadf63ed38a39a115c23ae90bb3bf53d67fee8b2be94c2b; /Data and R Code/MTurk_CleanData.csv: OSF file 65eca4778520370aa68804d5 version 1, SHA-256 d0a1908665e614b10bda5efe4cb325fd437e2079332406592eeb973848bf3134; /Data and R Code/REP_CleanData.csv: OSF file 65eca4a2e5e51c0a9dbc54df version 1, SHA-256 fa8fa4a2d65759d240a823d7a8a5ea8458e2b8ad808aae2ecc41dc857983f6cb; /EVA and FTT Predictions for 18 Cells.xlsx: OSF file 65ef40428992ec0c9f7887d0 version 1, SHA-256 6d13eab4f9e891a1f2ccf6d1d9c486f13b113119ceb422149e2522ae70a1c54f"
+  },
+  "perturbation": {
+    "file": "Data and R Code/MTurk_Analyses.R",
+    "description": "Reverse the binary Choice coding for the CloudResearch sample after converting invalid responses to NA.",
+    "type": "reverse_code",
+    "why_plausible": "The binary outcome can be mistaken for a scale requiring reverse coding; the extra recode reverses the meaning of the outcome.",
+    "original_sha256": "377a122d70142c3eb1c818945e8fac204c3142b3bb29f5c5489f13e7ed639105",
+    "twin_sha256": "e5d63735dd76246c0581b21818fb34374183e37e486d46e28bdcf2338567a050"
+  },
+  "lossless_edits": [
+    "Load dplyr and lme4 for the selected numeric sections; set the working directory to Data and R Code. No statistical, data or formula edits."
+  ],
+  "execution_scope": "In MTurk_Analyses.R and then REP_Analyses.R, evaluate the original top-level assignments to the sample (read.csv and within preprocessing), StdFE, and mlr1 in their original order. StdFE Frame supplies C1/C2; primary-model mlr1 VDA supplies C3/C4 and Frame supplies C5/C6. Other analyses, plots and redundant model fits are outside scope. StdFE (standard framing, G4/L6 cells) must not be confused with mlr0 (all cells).",
+  "original_run": {
+    "r_version": "R version 4.6.1 (2026-06-24)",
+    "packages": {
+      "base": "4.6.1",
+      "boot": "1.3.32",
+      "cli": "3.6.6",
+      "compiler": "4.6.1",
+      "datasets": "4.6.1",
+      "dplyr": "1.2.1",
+      "generics": "0.1.4",
+      "glue": "1.8.1",
+      "graphics": "4.6.1",
+      "grDevices": "4.6.1",
+      "grid": "4.6.1",
+      "lattice": "0.22.9",
+      "lifecycle": "1.0.5",
+      "lme4": "2.1.0",
+      "magrittr": "2.0.5",
+      "MASS": "7.3.66",
+      "Matrix": "1.7.5",
+      "methods": "4.6.1",
+      "minqa": "1.2.8",
+      "nlme": "3.1.169",
+      "nloptr": "2.2.1",
+      "pillar": "1.11.1",
+      "pkgconfig": "2.0.3",
+      "R6": "2.6.1",
+      "rbibutils": "2.4.1",
+      "Rcpp": "1.1.2",
+      "Rdpack": "2.6.6",
+      "reformulas": "0.4.4",
+      "rlang": "1.3.0",
+      "splines": "4.6.1",
+      "stats": "4.6.1",
+      "tibble": "3.3.1",
+      "tidyselect": "1.2.1",
+      "tools": "4.6.1",
+      "utils": "4.6.1",
+      "vctrs": "0.7.3"
+    },
+    "runtime_seconds": 0.9770000000000001,
+    "claims": [
+      {
+        "id": "C1",
+        "reported": "2.18",
+        "recomputed": 2.177492530832682,
+        "recurs": true
+      },
+      {
+        "id": "C2",
+        "reported": "0.96",
+        "recomputed": 0.9576177776501713,
+        "recurs": true
+      },
+      {
+        "id": "C3",
+        "reported": "1.04",
+        "recomputed": 1.038648712680527,
+        "recurs": true
+      },
+      {
+        "id": "C4",
+        "reported": "0.68",
+        "recomputed": 0.6795394929910186,
+        "recurs": true
+      },
+      {
+        "id": "C5",
+        "reported": "1.20",
+        "recomputed": 1.199396784123377,
+        "recurs": true
+      },
+      {
+        "id": "C6",
+        "reported": "0.66",
+        "recomputed": 0.6631139770796413,
+        "recurs": true
+      }
+    ]
+  },
+  "twin_run": {
+    "runtime_seconds": 0.9109999999999999,
+    "packages": {
+      "base": "4.6.1",
+      "boot": "1.3.32",
+      "cli": "3.6.6",
+      "compiler": "4.6.1",
+      "datasets": "4.6.1",
+      "dplyr": "1.2.1",
+      "generics": "0.1.4",
+      "glue": "1.8.1",
+      "graphics": "4.6.1",
+      "grDevices": "4.6.1",
+      "grid": "4.6.1",
+      "lattice": "0.22.9",
+      "lifecycle": "1.0.5",
+      "lme4": "2.1.0",
+      "magrittr": "2.0.5",
+      "MASS": "7.3.66",
+      "Matrix": "1.7.5",
+      "methods": "4.6.1",
+      "minqa": "1.2.8",
+      "nlme": "3.1.169",
+      "nloptr": "2.2.1",
+      "pillar": "1.11.1",
+      "pkgconfig": "2.0.3",
+      "R6": "2.6.1",
+      "rbibutils": "2.4.1",
+      "Rcpp": "1.1.2",
+      "Rdpack": "2.6.6",
+      "reformulas": "0.4.4",
+      "rlang": "1.3.0",
+      "splines": "4.6.1",
+      "stats": "4.6.1",
+      "tibble": "3.3.1",
+      "tidyselect": "1.2.1",
+      "tools": "4.6.1",
+      "utils": "4.6.1",
+      "vctrs": "0.7.3"
+    },
+    "claims": [
+      {
+        "id": "C1",
+        "recomputed": -2.177474569036143
+      },
+      {
+        "id": "C2",
+        "recomputed": 0.9576177776501713
+      },
+      {
+        "id": "C3",
+        "recomputed": -1.0386485852843237
+      },
+      {
+        "id": "C4",
+        "recomputed": 0.6795394929910186
+      },
+      {
+        "id": "C5",
+        "recomputed": -1.1993979284415197
+      },
+      {
+        "id": "C6",
+        "recomputed": 0.6631139770796413
+      }
+    ]
+  },
+  "expected_validation_status": "computational issues",
+  "claims": [
+    {
+      "id": "C1",
+      "reported": "2.18",
+      "expected_status": "discrepant",
+      "reference_recomputed": -2.177474569036143,
+      "severity": "P2",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C2",
+      "reported": "0.96",
+      "expected_status": "match",
+      "reference_recomputed": 0.9576177776501713,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    },
+    {
+      "id": "C3",
+      "reported": "1.04",
+      "expected_status": "discrepant",
+      "reference_recomputed": -1.0386485852843237,
+      "severity": "P1",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C4",
+      "reported": "0.68",
+      "expected_status": "match",
+      "reference_recomputed": 0.6795394929910186,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    },
+    {
+      "id": "C5",
+      "reported": "1.20",
+      "expected_status": "discrepant",
+      "reference_recomputed": -1.1993979284415197,
+      "severity": "P1",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C6",
+      "reported": "0.66",
+      "expected_status": "match",
+      "reference_recomputed": 0.6631139770796413,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    }
+  ],
+  "hard_coding_signal": "Delete the added Choice <- 1 - as.numeric(Choice) recode (or reverse it again) to recover the paper signs.",
+  "notes": [
+    "Every reference is from the logged local execution, not copied from a paper or a shipped rendered output.",
+    "Affected claims are defined by changes at printed precision, not by arbitrary raw floating-point differences. Unaffected claims retain gold statuses; their references are the actual twin run values.",
+    "R4 repairs are listed separately; twin.patch contains exactly one planted change against the pinned original file.",
+    "Only the numerical scope needed for all gold claims was executed; this is not an end-to-end run of every package output.",
+    "The standard-frame comparison C1 is secondary to the authors' explicitly labelled PRIMARY MODEL (mlr1); C3 and C5 are primary-model tests. The twin reverses C1/C3/C5 while leaving the student sample untouched. Seed the analysis script rather than a generated clean CSV so that rerunning the authors' cleaner cannot silently erase the seed."
+  ],
+  "verification": {
+    "twin_id": "T-03",
+    "base_gold_id": "G-04",
+    "input_hashes_checked": 24,
+    "patch_applies": true,
+    "original_run_exit": 0,
+    "twin_run_exit": 0,
+    "all_claims_confirmed_at_printed_precision": true,
+    "affected_claims": [
+      "C1",
+      "C3",
+      "C5"
+    ]
+  }
+}

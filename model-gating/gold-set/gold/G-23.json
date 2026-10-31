@@ -1,0 +1,152 @@
+{
+ "gold_id": "G-23",
+ "gold_version": "1.1",
+ "cand_id": "CC-2023-004",
+ "doi": "10.5194/agile-giss-4-13-2023",
+ "title": "Does spatial thinking ability relate to performance when using web-mapping services? A survey with digital natives",
+ "stratum_drawn": "technical failure",
+ "paper_url": "https://doi.org/10.5194/agile-giss-4-13-2023",
+ "package": {
+  "url": "https://figshare.com/articles/dataset/Does_spatial_thinking_ability_relate_to_performance_when_using_web-mapping_services_A_survey_with_digital_natives/22132940/1",
+  "version_pin": "Figshare article 22132940 version 1; survey_2021.R file 39347480 SHA-256 ce9f3a018da08164caa62e0b601399ee740bed9b2f2cd4311bfb47bbf3c4fa5e; dataset.7z file 39347477 SHA-256 86898d52d894af27904f3e80428c71a32af4f8a42f3bc575ad30138caf8ee89e",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/3c2rx/",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "technical failure",
+ "acceptable_alternatives": [],
+ "label_confidence": "high",
+ "requires_human_rerun": null,
+ "corrections": [
+  {
+   "version": "1.1",
+   "change": "C3 changes from not_checkable/P0 to match; C4 changes from not_checkable/P0 to discrepant/P2, with agent_rerun references; retain the verified v1 pin and paper technical failure.",
+   "reason": "The SUS branch is independent of missing GMHWG. A fresh run of pinned v1 gives t = 9.446511875404669 and W = 1137.5; the audit's different source hash does not justify changing the correct pin.",
+   "evidence": "Figshare API article 22132940 version 1 and file 39347480; Sol /tmp/scratch_gold3/sol/G23/check-sus.log; pilot/sol/G-23-certificate.json C36/C37; pilot/claude/G-23-certificate.json C13"
+  },
+  {
+   "version": "1.1",
+   "change": "C3 not_checkable P0 -> match; C4 not_checkable P0 -> discrepant P2",
+   "reason": "Execution shows these SUS tests run without the missing object",
+   "evidence": "audit/v1.1/g23_check.log; pilot/claude/G-23-certificate.json; Sol round 4 (v1 file)"
+  }
+ ],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Total task scores: Google Maps versus HERE WeGo",
+   "exhibit": "Table 4",
+   "page": null,
+   "quantity": "Wilcoxon signed-rank V",
+   "reported": "281",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+   "severity": "P0",
+   "cause": "The deposited script uses GMHWG without constructing the Group 2 object.",
+   "evidence": "https://osf.io/download/3c2rx/ — CODECHECK reviewer notes and the archived Figshare v1 script: “GMHWG”.",
+   "rationale": "The missing Group 2 object blocks the selected primary across-service comparisons or combined-sample correlation. The checker’s correspondence-repaired script is not the shipped Figshare v1 script.",
+   "acceptable_statuses": [
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "The report never assessed Table 4 and gives no recomputed value. As shipped, the script halts at line 771 with GMHWG undefined."
+  },
+  {
+   "id": "C2",
+   "claim": "Total task scores: Bing Maps versus HERE WeGo",
+   "exhibit": "Table 4",
+   "page": null,
+   "quantity": "Wilcoxon rank-sum W",
+   "reported": "1036",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+   "severity": "P0",
+   "cause": "The deposited script uses GMHWG without constructing the Group 2 object.",
+   "evidence": "https://osf.io/download/3c2rx/ — CODECHECK reviewer notes and the archived Figshare v1 script: “GMHWG”.",
+   "rationale": "The missing Group 2 object blocks the selected primary across-service comparisons or combined-sample correlation. The checker’s correspondence-repaired script is not the shipped Figshare v1 script.",
+   "acceptable_statuses": [
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "The report never assessed Table 4 and gives no recomputed value. As shipped, the script halts at line 771 with GMHWG undefined."
+  },
+  {
+   "id": "C3",
+   "claim": "SUS scores: Google Maps versus HERE WeGo",
+   "exhibit": "Table 8",
+   "page": null,
+   "quantity": "Paired t statistic",
+   "reported": "9.45",
+   "expected_status": "match",
+   "reference_recomputed": 9.446511875404669,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "Fresh Figshare v1 file 39347480 survey_2021.R SHA-256 ce9f3a018da08164caa62e0b601399ee740bed9b2f2cd4311bfb47bbf3c4fa5e; Sol 2026-10-30 verification /tmp/scratch_gold3/sol/G23/check-sus.log (16 unchanged source expressions, no GMHWG); /tmp/scratch_gold3/sol/G23/check.log (statement-by-statement). Corroboration: pilot/sol/G-23-certificate.json C36/C37 and pilot/claude/G-23-certificate.json C13.",
+   "rationale": "The paired SUS t test uses SUS_ScoresGroup2 built directly from GM_HWG_SUS.csv; it does not require the absent GMHWG task-score object. t = 9.446511875404669 rounds to 9.45.",
+   "reference_provenance": "agent_rerun",
+   "reference_evidence": "Fresh Figshare v1 file 39347480 survey_2021.R SHA-256 ce9f3a018da08164caa62e0b601399ee740bed9b2f2cd4311bfb47bbf3c4fa5e; Sol 2026-10-30 verification /tmp/scratch_gold3/sol/G23/check-sus.log (16 unchanged source expressions, no GMHWG); /tmp/scratch_gold3/sol/G23/check.log (statement-by-statement). Corroboration: pilot/sol/G-23-certificate.json C36/C37 and pilot/claude/G-23-certificate.json C13.",
+   "reference_scope": "Independent SUS branch of pinned Figshare v1 survey_2021.R, original statements/data/ordering; View disabled in whole-script diagnostic; only the dependency-complete SUS expressions needed in isolated check. No missing GMHWG object was reconstructed.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "The Table 8 SUS tests do not depend on the missing GMHWG object; the shipped script (View() disabled, data beside script) gives t = 9.4465."
+  },
+  {
+   "id": "C4",
+   "claim": "SUS scores: Bing Maps versus HERE WeGo",
+   "exhibit": "Table 8",
+   "page": null,
+   "quantity": "Wilcoxon rank-sum W",
+   "reported": "1037.5",
+   "expected_status": "discrepant",
+   "reference_recomputed": 1137.5,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P2",
+   "cause": "Wrong printed W statistic; pattern consistent with transcription, with the p value and CI reproducing.",
+   "evidence": "Fresh Figshare v1 file 39347480 survey_2021.R SHA-256 ce9f3a018da08164caa62e0b601399ee740bed9b2f2cd4311bfb47bbf3c4fa5e; Sol 2026-10-30 verification /tmp/scratch_gold3/sol/G23/check-sus.log (16 unchanged source expressions, no GMHWG); /tmp/scratch_gold3/sol/G23/check.log (statement-by-statement). Corroboration: pilot/sol/G-23-certificate.json C36/C37 and pilot/claude/G-23-certificate.json C13.",
+   "rationale": "The SUS rank-sum test uses SUS_ScoresGroup1$BMSUS and SUS_ScoresGroup2$HWGSUS without GMHWG. W = 1137.5 differs from 1037.5, but p = 9.680468961992261e-7 and the CI [12.50005117286500, 29.99995511670494] match the printed <.001 and [12.5, 30.0]. This statistic-only error is P2 under amended R2; no changed inferential interpretation is established.",
+   "reference_provenance": "agent_rerun",
+   "reference_evidence": "Fresh Figshare v1 file 39347480 survey_2021.R SHA-256 ce9f3a018da08164caa62e0b601399ee740bed9b2f2cd4311bfb47bbf3c4fa5e; Sol 2026-10-30 verification /tmp/scratch_gold3/sol/G23/check-sus.log (16 unchanged source expressions, no GMHWG); /tmp/scratch_gold3/sol/G23/check.log (statement-by-statement). Corroboration: pilot/sol/G-23-certificate.json C36/C37 and pilot/claude/G-23-certificate.json C13.",
+   "reference_scope": "Independent SUS branch of pinned Figshare v1 survey_2021.R, original statements/data/ordering; View disabled in whole-script diagnostic; only the dependency-complete SUS expressions needed in isolated check. No missing GMHWG object was reconstructed.",
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": "The shipped script gives W = 1137.5 against the printed 1037.5; the p-value and CI recur, so this is a P2 transcription error under amended R2."
+  },
+  {
+   "id": "C5",
+   "claim": "Spatial-thinking ability and Google Maps task accuracy",
+   "exhibit": "Table 9, STAT / TS GM",
+   "page": null,
+   "quantity": "Kendall tau",
+   "reported": "0.29",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+   "severity": "P0",
+   "cause": "The deposited script uses GMHWG without constructing the Group 2 object.",
+   "evidence": "https://osf.io/download/3c2rx/ — CODECHECK reviewer notes and the archived Figshare v1 script: “GMHWG”.",
+   "rationale": "The missing Group 2 object blocks the selected primary across-service comparisons or combined-sample correlation. The checker’s correspondence-repaired script is not the shipped Figshare v1 script.",
+   "acceptable_statuses": [
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "The report never assessed Table 9 and gives no recomputed value. As shipped, the script halts at line 771 with GMHWG undefined."
+  }
+ ],
+ "notes": {
+  "claim_list": "",
+  "sol": "The original Figshare v1 script still blocks the primary task-score claims C1, C2 and C5 through missing GMHWG, so the paper remains technical failure. The independent SUS branch computes C3/C4 without reconstructing that object. Sol freshly downloaded v1, confirmed the existing ce9f3a01... source pin and 86898d52... archive pin, checked the SUS data against the pinned archive extraction, and executed 16 unchanged dependency-complete SUS expressions successfully. The broader statement-by-statement check agrees; it is not a successful whole-script run. The audit/v1.1 check used SHA-256 5527a2a9..., a substantively different script (including changed figure logic), not Figshare v1 or a simple newline variant. Therefore the claims pin is retained, and the audit log alone is not the scoring provenance. Both pilot certificates corroborate the SUS values; Sol's pilot additionally checked W under R 4.2.2.",
+  "claude": "v1.1: C3 and C4 are computable from shipped code (C3 match, C4 discrepant P2); C1, C2 and C5 remain blocked, so the paper stays technical failure. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "CODECHECK/AGILE report: only figures and Table 5 were assessed, and the reviewer obtained updated code via communication with the authors to fix 'missing columns in GMHWG CSV' / 'Sum_GM_Group2'. Static check of the pinned v1 script: it parses in R (419 expressions), but GMHWG is never assigned and is first used at line 771. SUS_ScoresGroup2 is used at line 777 before its assignment at line 1079. Figshare v2 (2023-02-28, adds README) also never creates GMHWG, so the fix is not on Figshare in either version. C3/C4 code does not depend on GMHWG and could be run interactively line by line, but the sourced script dies first and no one reported values. That is why I used P0 not_checkable rather than leaving them unassessed. Minor claim-list nit: the paper labels the between-group tests 'Wilcoxon signed-rank test', but the code runs unpaired (rank-sum) tests. The claim text ('rank-sum W') is correct."
+ }
+}

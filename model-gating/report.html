@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReproCrowd model gating: gold benchmark status</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧪</text></svg>">
+<style>
+  :root { --ink:#1d2433; --muted:#5b6475; --line:#e3e6ec; --accent:#2f6f8f; --warn:#a4561b; --ok:#2e7d4f; --bg:#fbfbfa; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.55 "Iowan Old Style", "Palatino Linotype", Georgia, serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 48px 28px 80px; }
+  h1, h2, h3 { font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif; line-height:1.25; }
+  h1 { font-size: 30px; margin: 0 0 6px; }
+  h2 { font-size: 21px; margin: 44px 0 12px; padding-top: 18px; border-top: 1px solid var(--line); }
+  h3 { font-size: 17px; margin: 24px 0 8px; }
+  .sub { color: var(--muted); font-family: "Avenir Next", Helvetica, Arial, sans-serif; font-size: 14px; }
+  .lead { font-size: 18px; margin-top: 22px; }
+  .stats { display:grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap:12px; margin: 22px 0 6px; }
+  .stat { background:#fff; border:1px solid var(--line); border-radius:8px; padding:12px 14px; }
+  .stat b { display:block; font: 600 24px/1.2 "Avenir Next", Helvetica, Arial, sans-serif; color: var(--accent); }
+  .stat span { font-size: 13.5px; color: var(--muted); font-family: "Avenir Next", Helvetica, Arial, sans-serif; }
+  table { width:100%; border-collapse: collapse; margin: 12px 0 8px; font-size: 14.5px; background:#fff; }
+  th, td { text-align:left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+  th { font-family: "Avenir Next", Helvetica, Arial, sans-serif; font-size: 13px; color: var(--muted); font-weight: 600; background:#f4f5f7; }
+  .decision { background:#fff; border:1px solid var(--line); border-left: 4px solid var(--warn); border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .decision h3 { margin-top: 0; }
+  .rec { font-size: 14.5px; color: var(--ink); border-left: 3px solid var(--ok); padding-left: 10px; margin-bottom: 2px; }
+  .tag { display:inline-block; font: 600 11.5px/1 "Avenir Next", Helvetica, Arial, sans-serif; padding: 4px 7px; border-radius: 4px; background:var(--accent-surface, #eef3f6); color: var(--accent); margin-right: 6px; vertical-align: 2px; }
+  .tag.urgent { background:#fbeee4; color: var(--warn); }
+  code { font: 13.5px "SF Mono", Menlo, Consolas, monospace; background:#f1f2f4; padding: 1px 4px; border-radius: 3px; }
+  pre { font: 13px "SF Mono", Menlo, Consolas, monospace; background:#1f2430; color:#e8ebf1; padding: 12px 14px; border-radius: 6px; overflow-x: auto; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); }
+  .muted { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+<h1>ReproCrowd model gating: the gold benchmark is built</h1>
+<div class="sub">Part 2 (models and validation) · status report · 30 October 2026 · all files in <code>model-gating/</code>, nothing committed</div>
+
+<p class="lead">Sol (GPT-6.1) and I built and agreed a 30-paper gold set with claim-level ground
+truth, then went further. Agent reruns confirmed it in places and corrected it in others, so it is
+now at <b>v1.1</b>. Eight seeded "twin" packages test hard-coding directly. A scoring script grades
+any certificate against the gold set. A six-run pilot of the real prompt shows that the loop works,
+and it surfaced problems in both the prompt and the certificate format that need your decision.</p>
+
+<div class="stats">
+  <div class="stat"><b>30 papers</b><span>13 reproducible · 13 with issues · 4 technical failures</span></div>
+  <div class="stat"><b>169 claims</b><span>103 match · 8 close · 29 discrepant · 29 not checkable</span></div>
+  <div class="stat"><b>8 twins</b><span>20 planted discrepancies (13 P1), verified by two independent runs</span></div>
+  <div class="stat"><b>6 pilot runs</b><span>Real prompt, 2 models × 3 papers; found 3 gold errors</span></div>
+  <div class="stat"><b>US$0</b><span>Metered spend. Everything ran on the Codex and Claude subscriptions</span></div>
+</div>
+
+<h2>Needs your decision</h2>
+
+<div class="decision">
+<h3><span class="tag urgent">blocks use</span>1. Commit, and deploy the prompt URL fix</h3>
+<p>The live prompt points agents to <code>lukasroeseler.github.io/reprocrowd/…</code>, which returns
+404. The site actually lives at <code>forrtproject.github.io/reprocrowd/</code>. In the pilot, the one
+agent that never got the right URL produced a certificate in an invented format. I fixed every
+reference (prompt, the copy in <code>index.html</code>, rule-pack header, schema <code>$id</code>s)
+and bumped the prompt to <b>v0.1.1</b>, as the README requires.</p>
+<p class="rec"><b>Recommendation:</b> commit the URL fix and <code>model-gating/</code> as two commits on a branch, then open a PR, or push to <code>main</code> if you prefer. Pushing publishes the fix via Pages; I have not pushed.</p>
+</div>
+
+<div class="decision">
+<h3>2. Separate "rerun" from "recreated" in the certificate</h3>
+<p>In 2 of 6 pilot runs, a model changed the analysis and still labelled the result as recurring.
+Sol reached G-21's printed AIC only by swapping in a different model specification and called it
+<code>close</code>. Claude wrote missing code for G-23 itself and called those results
+<code>match</code>. Both disclosed this in notes, but <code>results[].status</code> alone misleads.
+This is exactly the hard-coding risk you raised.</p>
+<p class="rec"><b>Recommendation:</b> add <code>results[].basis</code> to the schema (<code>shipped_code</code> / <code>lossless_edit</code> / <code>modified_code</code> / <code>recreated</code>). Only the first two bases may carry <code>match</code> or <code>close</code>. This needs agreement with the pipeline group (Luna, Anne) and the labels group (Shaheed, Reza), since it implements the rerun-versus-recreated distinction from the 16 October meeting.</p>
+</div>
+
+<div class="decision">
+<h3>3. Remove the "certify" pressure from the prompt</h3>
+<p>The prompt still opens "Certify the computational reproducibility…" and says "Certify that the
+computation is reproducible and executable". The meeting flagged this wording as a cause of
+hard-coded results, and the pilot saw two runs that repaired code towards the target.</p>
+<p class="rec"><b>Recommendation:</b> reword to "Check whether…" and "Report what does and does not recur" (prompt v0.2.0). The decision sits with the pipeline group, so it goes to that owner.</p>
+</div>
+
+<div class="decision">
+<h3>4. Slim the bundle that benchmark runs must produce</h3>
+<p>The prompt requires pixi, a Snakefile, MyST, nanopublications and more. No pilot run built
+MyST or minted nanopublications, every run installed pixi itself, and one certified numbers from
+host R rather than the pinned environment. Benchmark scoring needs only <code>certificate.json</code>
+plus the code and logs that back each value.</p>
+<p class="rec"><b>Recommendation:</b> for benchmark runs, require only a certificate, the executed code, run logs and a lockfile. Keep the full bundle for public deposits.</p>
+</div>
+
+<div class="decision">
+<h3>5. Run the first real benchmark: which configurations, and budget</h3>
+<p>The scorer and gold set are ready. One run takes about 12 to 17 minutes on these small packages.</p>
+<p class="rec"><b>Recommendation:</b> 4 configurations × (30 papers + 8 twins) = 152 runs. My suggested set is GPT-6.1 Sol, Claude Opus 5.5, the newest Gemini Flash (3.8 or above), and one cheaper model scoring about 35 to 39 on Artificial Analysis to inform the cut-off. Run on subscriptions where possible. Metered API use would probably cost several hundred dollars, well above the US$5 limit, so it needs your approval. Before the run, I would let agents execute the 19 papers that have no execution evidence yet. That runs on subscriptions, and on G-08 and G-23 execution changed the gold labels.</p>
+</div>
+
+<div class="decision">
+<h3>6. Confirm the scoring conventions I adopted</h3>
+<ul>
+  <li><b>Severity (R2, amended):</b> P1 covers a primary test's estimate or statistic, plus uncertainty errors that change a primary comparison. Every other wrong printed number is P2. Only 3 of the 29 discrepancies in the 30 papers are P1 (the twins add 13), so the memo's "≥90% sensitivity on P1" cannot be estimated. The scorer reports P1 and P2 pooled, with P1 separately.</li>
+  <li><b>match and close are interchangeable</b> at claim level; both mean "recurs".</li>
+  <li><b>Transparent recreation still violates a hard gate:</b> <code>match</code> on a blocked claim fails even when the notes disclose the repair.</li>
+  <li><b>Abstention</b> counts only an explicit <code>not_checkable</code>. Neither model abstained once in the pilot.</li>
+</ul>
+</div>
+
+<div class="decision">
+<h3>7. Still open from the memo</h3>
+<ul>
+  <li><b>Stata.</b> The pilot is R/Python only because the pipeline cannot run Stata. That restriction is why only 4 technical-failure papers exist, and it leaves economics underrepresented.</li>
+  <li><b>Route 1 cut-off: Artificial Analysis 35 or about 39.</b> The benchmark can inform this once run (decision 5).</li>
+  <li><b>Source balance.</b> 28 of the 30 papers rest on Institute for Replication reports. More data-editor or CODECHECK cases would need new sources.</li>
+  <li><b>G-08's authors and the I4R report.</b> Both pilot models found two wrong printed numbers that the I4R reproduction called reproduced. Whether and how to tell the authors falls under the governance group's notification procedure.</li>
+</ul>
+</div>
+
+<h2>Decisions I took (please review)</h2>
+<table>
+<tr><th>Decision</th><th>Why</th></tr>
+<tr><td>Draw quotas 12/10/3/5, not 10/10/5/5</td><td>Only 3 eligible technical failures existed after two screening rounds. The final labels are 13/13/4, because labels follow evidence, not strata.</td></tr>
+<tr><td>"Ambiguous" is a claim-level label, not a paper status</td><td><code>computation not checked</code> means no attempt was made, which is wrong for these papers (rule R1).</td></tr>
+<tr><td>Code edits count as lossless only when equivalence is shown (R4)</td><td>Sol's counter-proposal, adopted. Path, library and execution-order fixes are allowed; logic and data changes are not.</td></tr>
+<tr><td>Repaired or translated values are non-scoring diagnostics (R5)</td><td>So the scorer never rewards a repair as faithful execution.</td></tr>
+<tr><td>A paper with a confirmed wrong number cannot also accept "reproducible" (R7)</td><td>Otherwise paper-level and claim-level scoring contradict each other.</td></tr>
+<tr><td>Gold v1.1 corrections (G-04, G-08, G-23, G-26)</td><td>Based on execution evidence and agreed with Sol. Every record lists its corrections.</td></tr>
+<tr><td>Pilot protocol: fresh agent per paper in an isolated worktree, told not to read existing reports</td><td>This works on the honour system; network-level blocking is not possible here.</td></tr>
+</table>
+
+<h2>Pilot: the real prompt on three papers</h2>
+<table>
+<tr><th></th><th>GPT-6.1 Sol</th><th>Claude Opus 5.5</th></tr>
+<tr><td>Paper status correct</td><td>1/3</td><td>3/3</td></tr>
+<tr><td>Certificates failing the schema</td><td>1 (G-23, after the broken URL)</td><td>0</td></tr>
+<tr><td>Gold claims found</td><td>12/17</td><td>17/17</td></tr>
+<tr><td>Sensitivity, P1+P2</td><td>2/4</td><td>4/4</td></tr>
+<tr><td>Specificity</td><td>10/10</td><td>10/10</td></tr>
+<tr><td>Hard-gate violations</td><td>0</td><td>3 (recreated code labelled match)</td></tr>
+</table>
+<p class="muted">With three papers these numbers show the loop works; they do not rank models. The
+G-08 gold labels were corrected using what these same runs found.</p>
+
+<h2>What was done</h2>
+<ol>
+  <li><b>Screening and draw.</b> Sol screened 111 candidates (49 eligible); I ran a seeded stratified draw (seed 20261030).</li>
+  <li><b>Blind double labelling and reconciliation.</b> Agreement before reconciliation was 25/30 on papers and 161/167 on claims. Four rounds followed, with nine written rules. Both sides signed off on v1.0 and then on v1.1 (<code>reconciliation.md</code>).</li>
+  <li><b>Execution.</b> Agents ran the shipped code for the claims of 11 papers: the G-04 and G-26 reruns, eight twin bases, and the three pilot papers. This confirmed G-04 and G-26 (whose rerun flags are now cleared) and corrected G-08 and G-23.</li>
+  <li><b>Twins.</b> Sol built eight; I reran all 16 runs from fresh copies, and every value matched. Two twins (T-01, T-03) look artificial if a reader inspects the code closely.</li>
+  <li><b>Scorer.</b> <code>score_certificate.py</code> maps certificate results to gold claims by printed value. It checks the schema, computes specificity, sensitivity and abstention with paper-clustered bootstrap intervals, and flags hard-gate violations. Sanity tests are in <code>test_score_certificate.py</code>.</li>
+  <li><b>Prompt fix.</b> I corrected the dead URLs and bumped the prompt to v0.1.1 (decision 1).</li>
+</ol>
+
+<h3>Incidents</h3>
+<ul>
+  <li>Two of my labellers sent your email address to the Unpaywall API (a free service for finding open-access copies of papers) before I stopped them. No saved file contains it.</li>
+  <li>A paper-download cache had stored the wrong PDF under G-20's DOI; I deleted the file.</li>
+  <li>Sol revised G-14's claim list while my labeller was working on it, so I had G-14 relabelled blind.</li>
+  <li>A Claude pilot run wrongly claimed that two Figshare versions were identical. Checking this exposed a pin mismatch, which is now documented.</li>
+</ul>
+
+<h3>Where things are</h3>
+<table>
+<tr><th>Path</th><th>Contents</th></tr>
+<tr><td><code>model-gating/README.md</code></td><td>The model-gating plan summary</td></tr>
+<tr><td><code>model-gating/gold-benchmark-30.md</code></td><td>The benchmark design</td></tr>
+<tr><td><code>model-gating/gold-set/README.md</code></td><td>Gold v1.1: how it was built, contents, limitations</td></tr>
+<tr><td><code>model-gating/gold-set/gold/</code>, <code>gold-summary.csv</code></td><td>The 30 gold records</td></tr>
+<tr><td><code>model-gating/gold-set/twins/</code></td><td>Eight seeded twins</td></tr>
+<tr><td><code>model-gating/gold-set/pilot/</code></td><td>Pilot certificates, scores and findings</td></tr>
+<tr><td><code>model-gating/gold-set/reconciliation.md</code></td><td>Every disagreement and its resolution</td></tr>
+<tr><td><code>model-gating/scripts/</code></td><td>Draw, compare, build, score, test</td></tr>
+</table>
+
+<h3>Commands</h3>
+<pre>python3 model-gating/scripts/test_score_certificate.py
+python3 model-gating/scripts/score_certificate.py model-gating/gold-set/pilot/runs.csv
+python3 model-gating/scripts/build_gold.py</pre>
+</main>
+</body>
+</html>

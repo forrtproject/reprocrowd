@@ -1,0 +1,87 @@
+{
+  "gold_id": "G-14",
+  "expected_validation_status": "computational issues",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "discrepant",
+      "reference_recomputed": 132,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "Published subgroup counts differ from the deposited analysis CSV.",
+      "evidence": "https://osf.io/download/m657k/ — §2.3 Additional discrepancies: “N=132”.",
+      "rationale": "The human report flags Figure 2 subgroup tallies totaling 378 despite 370 effect sizes. A static inventory of the pinned CSV gives the specified subgroup count; no statistical models were rerun and no effect-size denominator was changed.",
+      "reference_provenance": "direct_check",
+      "reference_evidence": "Direct static row count of the pinned Data_Extraction.csv (370 rows), SHA-256 9584f9a27a32c567f4763f94ec2fce0434ea3bf2233f74d49a1b0d3f26674b0b, downloaded from https://osf.io/download/5vqd9/?view_only=b9e1e86079c048b4bfb03bee6966e560 : count Task_Output_Cleaned == 'Binary'. Rechecked against /tmp/scratch_gold/claude/l3/g14pkg/Data_Extraction.csv in round 2. Human report: https://osf.io/download/m657k/ — §2.3 Additional discrepancies: “N=132”.",
+      "reference_scope": "static_check"
+    },
+    {
+      "id": "C2",
+      "expected_status": "discrepant",
+      "reference_recomputed": 132,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "Published subgroup counts differ from the deposited analysis CSV.",
+      "evidence": "https://osf.io/download/m657k/ — §2.3 subgroup-tally comparison: “N=378”.",
+      "rationale": "The human report flags Figure 2 subgroup tallies totaling 378 despite 370 effect sizes. A static inventory of the pinned CSV gives the specified subgroup count; no statistical models were rerun and no effect-size denominator was changed.",
+      "reference_provenance": "direct_check",
+      "reference_evidence": "Direct static row count of the pinned Data_Extraction.csv (370 rows), SHA-256 9584f9a27a32c567f4763f94ec2fce0434ea3bf2233f74d49a1b0d3f26674b0b, downloaded from https://osf.io/download/5vqd9/?view_only=b9e1e86079c048b4bfb03bee6966e560 : count Task_Output_Cleaned == 'Binary'. Rechecked against /tmp/scratch_gold/claude/l3/g14pkg/Data_Extraction.csv in round 2. Human report: https://osf.io/download/m657k/ — §2.3 subgroup-tally comparison: “N=378”.",
+      "reference_scope": "static_check"
+    },
+    {
+      "id": "C3",
+      "expected_status": "discrepant",
+      "reference_recomputed": 336,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "Published subgroup counts differ from the deposited analysis CSV.",
+      "evidence": "https://osf.io/download/m657k/ — §2.3 subgroup-tally comparison: “N=378”.",
+      "rationale": "The human report flags Figure 2 subgroup tallies totaling 378 despite 370 effect sizes. A static inventory of the pinned CSV gives the specified subgroup count; no statistical models were rerun and no effect-size denominator was changed.",
+      "reference_provenance": "direct_check",
+      "reference_evidence": "Direct static row count of the pinned Data_Extraction.csv (370 rows), SHA-256 9584f9a27a32c567f4763f94ec2fce0434ea3bf2233f74d49a1b0d3f26674b0b, downloaded from https://osf.io/download/5vqd9/?view_only=b9e1e86079c048b4bfb03bee6966e560 : count Task_Type == 'Decide'. Rechecked against /tmp/scratch_gold/claude/l3/g14pkg/Data_Extraction.csv in round 2. Human report: https://osf.io/download/m657k/ — §2.3 subgroup-tally comparison: “N=378”.",
+      "reference_scope": "static_check"
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": 370,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/m657k/ — Introduction and §2.3: “370 effect sizes”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/m657k/ — Introduction and §2.3: “370 effect sizes”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C5",
+      "expected_status": "discrepant",
+      "reference_recomputed": 180,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "Published subgroup counts differ from the deposited analysis CSV.",
+      "evidence": "https://osf.io/download/m657k/ — §2.3 subgroup-tally comparison: “N=378”.",
+      "rationale": "The human report flags Figure 2 subgroup tallies totaling 378 despite 370 effect sizes. A static inventory of the pinned CSV gives the specified subgroup count; no statistical models were rerun and no effect-size denominator was changed.",
+      "reference_provenance": "direct_check",
+      "reference_evidence": "Direct static row count of the pinned Data_Extraction.csv (370 rows), SHA-256 9584f9a27a32c567f4763f94ec2fce0434ea3bf2233f74d49a1b0d3f26674b0b, downloaded from https://osf.io/download/5vqd9/?view_only=b9e1e86079c048b4bfb03bee6966e560 : count Task_Output_Cleaned == 'Categoric'. Rechecked against /tmp/scratch_gold/claude/l3/g14pkg/Data_Extraction.csv in round 2. Human report: https://osf.io/download/m657k/ — §2.3 subgroup-tally comparison: “N=378”.",
+      "reference_scope": "static_check"
+    },
+    {
+      "id": "C6",
+      "expected_status": "match",
+      "reference_recomputed": 34,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/m657k/ — §2.3 subgroup-tally comparison with original Figure 2: “Figure 2”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/m657k/ — §2.3 subgroup-tally comparison with original Figure 2: “Figure 2”.",
+      "reference_scope": "authors_workflow"
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "Original CSV: https://osf.io/download/5vqd9/?view_only=b9e1e86079c048b4bfb03bee6966e560 . The source explicitly identifies the 131-versus-132 Binary discrepancy and the Figure 2 subgroup-count inconsistencies. Static counts of Task_Output and Task_Type in the original Data_Extraction.csv confirm the references. The paper prints separate Binary counts of 131 in Supplementary Figure S2 and 136 in main Figure 2; both are retained. Its Decide and Categoric counts also disagree with the supplied data. The source changed the human-augmentation Hedges-g denominator before printing pooled estimates; those changed-code estimates are deliberately excluded. The missing secondary moderator input is an additional secondary P0, not a primary-run technical failure."
+}

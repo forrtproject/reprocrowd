@@ -1,0 +1,68 @@
+{
+  "gold_id": "G-13",
+  "expected_validation_status": "computational issues",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.07,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P1",
+      "cause": "Original observational-model uncertainty is larger than the published interval implies.",
+      "evidence": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf — §2.2, pp. 7–8; Table 2, p. 32: “0.07”.",
+      "rationale": "The report’s NoChanges reproduction table gives SE 0.07 for this prediction, exceeding the printed SE. This affects the primary Figure 1 comparison; recoding and added controls are not used as discrepancy evidence.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf — §2.2, pp. 7–8; Table 2, p. 32: “0.07”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C2",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.07,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P1",
+      "cause": "Original observational-model uncertainty is larger than the published interval implies.",
+      "evidence": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf — §2.2, pp. 7–8; Table 2, p. 32: “0.07”.",
+      "rationale": "The report’s NoChanges reproduction table gives SE 0.07 for this prediction, exceeding the printed SE. This affects the primary Figure 1 comparison; recoding and added controls are not used as discrepancy evidence.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf — §2.2, pp. 7–8; Table 2, p. 32: “0.07”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C3",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.07,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P1",
+      "cause": "Original observational-model uncertainty is larger than the published interval implies.",
+      "evidence": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf — §2.2, pp. 7–8; Table 3, p. 32: “0.07”.",
+      "rationale": "The report’s NoChanges reproduction table gives SE 0.07 for this prediction, exceeding the printed SE. This affects the primary Figure 1 comparison; recoding and added controls are not used as discrepancy evidence.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf — §2.2, pp. 7–8; Table 3, p. 32: “0.07”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf — Introduction and §3.2, p. 10: “reproduce exactly”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf — Introduction and §3.2, p. 10: “reproduce exactly”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "Reference SEs are from the source’s NoChanges tables, not the later reweighting, recoding, unit-of-analysis or topic-model extensions. Original Table A5, p. 7, was opened separately from the human report."
+}

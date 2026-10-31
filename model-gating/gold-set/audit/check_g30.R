@@ -1,0 +1,11 @@
+library(readxl)
+library(dplyr)
+d <- read_excel('/tmp/scratch_gold/sol/round1/Study2A_RAW_UK_deidentified.xlsx')
+# Original script's filters before grouping, and its duplicate-retention step.
+d <- d %>% arrange(StartDate) %>% mutate(RecordedDate2=as.POSIXct(RecordedDate, format='%Y-%m-%d %H:%M:%S')) %>% subset(RecordedDate2 <= as.POSIXct('2022-09-02 23:59:59', format='%Y-%m-%d %H:%M:%S')) %>% subset(Status==0)
+cat('before duplicate filter:',nrow(d),'\n')
+x <- d %>% group_by(UniqueID) %>% filter(row_number()==1) %>% ungroup()
+cat('after duplicate filter:',nrow(x),'\nremoved:',nrow(d)-nrow(x),'\n')
+x <- x %>% subset(num_total_answers>0) %>% subset(Progress>=83)
+cat('final UK sample:',nrow(x),'\n')
+print(sessionInfo())

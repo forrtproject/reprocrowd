@@ -1,0 +1,138 @@
+# G-26 rerun log (trimmed). Executed by claude agent (not a human), 2026-10-30, R 4.6.1, macOS.
+# Full logs and downloads kept outside the repo in /tmp/scratch_gold2/claude/G-26.
+
+## Input verification against REPRO-Bench commit 74958fba32daeacff51f2e1fd37be3916595648f (111/replication_package)
+re-check of local copies: 5853 files present, 0 hash mismatches, 0 missing
+(Run-time counts: 1,388 files fetched from HF at the pinned commit; 4,465 HTML files HF refused with HTTP 429 were copied from the authors' Zenodo deposit 10.5281/zenodo.8372384 (zip md5 f0dfe9179d753b0f65b5bf5fc5dd8178) and verified against the pinned git blob SHA-1: 0 mismatches. The verification above re-checks all 5,853 pinned files.)
+genderdata: installed from github.com/lmullen/genderdata master = commit df16017149a8adb9a75a2dcf734007cab12dd5da (2022-01-23); the authors' cleaning script comment names 'lmullen-genderdata-df16017'.
+
+## Lossless edits (diffs vs the authors' files)
+--- Cleaning scraped data.R
+14,15c14,15
+< setwd("C:/Users/k2258581/OneDrive - King's College London/Drive/Research/Price is Right Jason")
+< vEpisodes <- list.files("C:/Users/k2258581/OneDrive - King's College London/Drive/Research/Price is Right Jason/Scraping_2021") #all files in the directory
+---
+> setwd(Sys.getenv("G26_RUNDIR")) # LOSSLESS EDIT 1: path
+> vEpisodes <- list.files("Scraping_2021") # LOSSLESS EDIT 2: path #all files in the directory
+38c38
+<     Date <- read_html(sEpisode) %>% html_nodes('.post-footer') %>% html_text()
+---
+>     Date <- read_html(paste0("Scraping_2021/",sEpisode)) %>% html_nodes('.post-footer') %>% html_text() # LOSSLESS EDIT 3: path, as in line 32
+--- Analysis Taste based gender discrimination in TPIR Final EJ.R
+14c14
+< setwd("C:/Users/k2258581/OneDrive - King's College London/Drive/Research/Price is Right Jason/Final files EJ/To send/3. replication package")
+---
+> setwd(Sys.getenv("G26_RUNDIR")) # LOSSLESS EDIT: path
+--- HTML file names: pinned snapshot uses Episode_N.html; authors' deposit and Episode_name values use Episode_N; run_raw/Scraping_2021 holds symlinks named Episode_N -> pinned files.
+
+## Run 1: analysis on deposited Data_cleaned.csv
+          1 
+> reg_perlead_1 <- felm(Cutoff_perceived ~ Male + Same_gender_perceivedlead, 
++     data = fData_c4_perceivedlead)
+> reg_perlead_2 <- felm(Cutoff_perceived ~ Male + Same_gender_perceivedlead | 
++     Bidding_round, data = fData_c4_perceivedlead)
+> reg_perlead_3 <- felm(Cutoff_perceived ~ Male + Same_gender_perceivedlead | 
+...
+> reg_perlead_tex <- stargazer(reg_perlead_1, reg_perlead_2, 
++     reg_perlead_3, reg_perlead_4, reg_perlead_5, reg_perlead_6, 
++     title = "Likelihood of cutting off based on gender match", 
++     .... [TRUNCATED] 
+### RESULT deposited ERROR: the condition has length > 1 
+### RUNTIME_SECONDS deposited 1.910595 
+### FULLPREC deposited reg_perlead_1 N = 11016 
+              (Intercept)                      Male Same_gender_perceivedlead 
+       0.4836483505181214        0.0510683419279350       -0.0446586950649433 
+                                Estimate     Std. Error      t value
+(Intercept)                0.48364835052 0.008295232775 58.304373562
+Male                       0.05106834193 0.010175380408  5.018814028
+Same_gender_perceivedlead -0.04465869506 0.009881207890 -4.519558293
+                                 Pr(>|t|)
+(Intercept)               0.000000000e+00
+Male                      5.280389800e-07
+Same_gender_perceivedlead 6.261475062e-06
+### FULLPREC deposited reg_perlead_2 N = 11016 
+                     Male Same_gender_perceivedlead 
+       0.0511822718637803       -0.0490539101789201 
+                                Estimate     Std. Error      t value
+Male                       0.05118227186 0.010109601502  5.062738809
+Same_gender_perceivedlead -0.04905391018 0.009825589913 -4.992464637
+                                 Pr(>|t|)
+Male                      4.199593984e-07
+Same_gender_perceivedlead 6.052675888e-07
+### NROW fData_c4_perceivedlead 11016 
+### PKGVERS lfe 3.1.1 data.table 1.18.4 stargazer 5.2.3 
+real 2.00
+Error location (diagnostic re-call of the same stargazer() on the fitted models): stargazer -> .stargazer.wrap -> .get.object.names -> .inside.bracket : 'the condition has length > 1' (stargazer 5.2.3 under R >= 4.2 when a multi-model call deparses to several lines). The error occurs after all six Table 1 models are estimated; the script stops there, so later tables and figures were not produced.
+
+## Run 2a: raw HTML cleaning (Cleaning scraped data.R, edits 1-3)
+### RESULT cleaning OK 
+### RUNTIME_SECONDS cleaning 1266.056 
+### episodes read: 5834  non-null: 5834 
+### fData rows: 63320 
+### PKGVERS gender 0.6.0 genderdata 0.6.0 predictrace 2.0.1 rvest 1.0.5 xml2 1.6.0 data.table 1.18.4 
+real 1266.18
+EXIT 0
+
+## Run 2b: compare regenerated vs deposited Data_cleaned.csv
+cmp: files differ only in line endings (deposited CRLF, regenerated LF):
+IDENTICAL after CRLF normalisation (63,320 rows x 51 cols)
+
+## Run 2c: analysis on regenerated Data_cleaned.csv
+### RESULT regenerated ERROR: the condition has length > 1 
+### RUNTIME_SECONDS regenerated 2.426972 
+### FULLPREC regenerated reg_perlead_1 N = 11016 
+              (Intercept)                      Male Same_gender_perceivedlead 
+       0.4836483505181214        0.0510683419279350       -0.0446586950649433 
+                                Estimate     Std. Error      t value
+(Intercept)                0.48364835052 0.008295232775 58.304373562
+Male                       0.05106834193 0.010175380408  5.018814028
+Same_gender_perceivedlead -0.04465869506 0.009881207890 -4.519558293
+                                 Pr(>|t|)
+(Intercept)               0.000000000e+00
+Male                      5.280389800e-07
+Same_gender_perceivedlead 6.261475062e-06
+### FULLPREC regenerated reg_perlead_2 N = 11016 
+                     Male Same_gender_perceivedlead 
+       0.0511822718637803       -0.0490539101789201 
+                                Estimate     Std. Error      t value
+Male                       0.05118227186 0.010109601502  5.062738809
+Same_gender_perceivedlead -0.04905391018 0.009825589913 -4.992464637
+                                 Pr(>|t|)
+Male                      4.199593984e-07
+Same_gender_perceivedlead 6.052675888e-07
+### NROW fData_c4_perceivedlead 11016 
+### PKGVERS lfe 3.1.1 data.table 1.18.4 stargazer 5.2.3 
+
+## sessionInfo (cleaning run)
+R version 4.6.1 (2026-06-24)
+Platform: aarch64-apple-darwin23
+Running under: macOS Tahoe 26.7
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
+locale:
+[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8
+time zone: Europe/London
+tzcode source: internal
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+other attached packages:
+ [1] RPushbullet_0.3.5      xml2_1.6.0             XML_3.99-0.25         
+ [4] dplyr_1.2.1            rvest_1.0.5            lubridate_1.9.5       
+ [7] stringr_1.6.0          data.table_1.18.4      gender_0.6.0          
+[10] spatstat_3.6-3         spatstat.linnet_3.5-4  spatstat.model_3.7-2  
+[13] rpart_4.1.27           spatstat.explore_3.8-3 nlme_3.1-169          
+[16] spatstat.random_3.5-2  spatstat.geom_3.8-3    spatstat.univar_3.2-0 
+[19] spatstat.data_3.1-9    predictrace_2.0.1     
+loaded via a namespace (and not attached):
+
+## sessionInfo (analysis run, attached)
+other attached packages:
+ [1] PropCIs_0.3-0     lubridate_1.9.5   stringr_1.6.0     stringi_1.8.7    
+ [5] data.table_1.18.4 stargazer_5.2.3   lfe_3.1.1         Matrix_1.7-5     
+ [9] ggplot2_4.0.3     dplyr_1.2.1      
+loaded via a namespace (and not attached):
+
+## Check of the unedited cleaning line 38 (why edit 3 is needed)
+Unedited line 38 check, read_html("Episode_100") from run folder -> ERROR: 'Episode_100' does not exist in current working directory
+('/private/tmp/scratch_gold2/claude/G-26/run_raw'). 

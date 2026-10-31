@@ -1,0 +1,139 @@
+{
+ "gold_id": "G-10",
+ "gold_version": "1.1",
+ "cand_id": "I4R-mgy45",
+ "doi": "10.1177/09567976241267854",
+ "title": "Children Sustain Cooperation in a Threshold Public-Goods Game Even When Seeing Others’ Outcomes",
+ "stratum_drawn": "computationally reproducible",
+ "paper_url": "https://doi.org/10.1177/09567976241267854",
+ "package": {
+  "url": "https://osf.io/xzfce/",
+  "version_pin": "WaterGame_SUPPLEMENT_Materials and Methods.pdf: OSF file 662faa52f49cdf4b8dd25588 version 2, SHA-256 41638f6d27b7994d5d02b58f42a4c1aaa04d727299ee14f821465ee53625177f; WaterGame_RcodeResults_V2.pdf: OSF file 662fcb0d80d25c3b9af9194f version 1, SHA-256 58c11bb40f9588645954a3eae586f26bcdd26751ba623b5ea2a336d4cf44d289",
+  "language": "R",
+  "code_format": "embedded"
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/dc6bm/",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "label_confidence": "medium",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Condition-by-round effect on reaching the threshold",
+   "exhibit": "Results, Reaching the threshold",
+   "page": 1099,
+   "quantity": "Likelihood-ratio chi-squared",
+   "reported": "10.71",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/dc6bm/ — §2 Computational Reproducibility, pp. 3–4: “all of the results”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report states complete reproduction but gives no number for this test; the shipped rendered output matches the printed 10.71."
+  },
+  {
+   "id": "C2",
+   "claim": "Condition effect on social-comparison utterances",
+   "exhibit": "Results, Social comparisons",
+   "page": 1102,
+   "quantity": "Likelihood-ratio chi-squared",
+   "reported": "18.91",
+   "expected_status": "match",
+   "reference_recomputed": 18.905,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/dc6bm/ — §2 Computational Reproducibility, pp. 3–4: “all of the results”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/dc6bm/ — §2 Computational Reproducibility, pp. 3–4: “all of the results”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "18.905 rounds to the printed 18.91."
+  },
+  {
+   "id": "C3",
+   "claim": "Precision of the condition effect on social-comparison utterances",
+   "exhibit": "Results, Social comparisons",
+   "page": 1102,
+   "quantity": "Standard error",
+   "reported": "0.06",
+   "expected_status": "match",
+   "reference_recomputed": 0.056,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/dc6bm/ — §2 Computational Reproducibility, pp. 3–4: “all of the results”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/dc6bm/ — §2 Computational Reproducibility, pp. 3–4: “all of the results”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "0.056 rounds to the printed 0.06."
+  },
+  {
+   "id": "C4",
+   "claim": "Full-model test for references to giving water",
+   "exhibit": "Results, Verbal coordination; Figure 5",
+   "page": 1102,
+   "quantity": "Likelihood-ratio chi-squared",
+   "reported": "2,082.76",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/dc6bm/ — §2 Computational Reproducibility, pp. 3–4: “all of the results”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report states complete reproduction but gives no number for this test; shipped output matches the printed 2,082.76."
+  },
+  {
+   "id": "C5",
+   "claim": "Condition-by-location-by-subcategory interaction for giving-water utterances",
+   "exhibit": "Results, Verbal coordination; Figure 5",
+   "page": 1102,
+   "quantity": "Likelihood-ratio chi-squared",
+   "reported": "8.00",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/dc6bm/ — §2 Computational Reproducibility, pp. 3–4: “all of the results”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report states complete reproduction but gives no number for this test; shipped output matches the printed 8.00."
+  }
+ ],
+ "notes": {
+  "claim_list": "R code is embedded in the deposited WaterGame_RcodeResults_V2.pdf. Scope begins with the supplied coded utterance data.",
+  "sol": "Lossless extraction of the embedded R code is allowed by the settled design. The source reports one transcription detail about rounds 7–8 that does not change the results. Use its original-R reproduction; the Stata implementation and aggregation/model-selection changes are excluded. The sign of the social-comparison coefficient depends on coding, so the selected target is the invariant test statistic and its SE.",
+  "claude": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "Do not use the Stata values in the report's Tables 2-4 (e.g. 18.719, 19.014, 10.793) as recomputed references: they are Wald joint tests on marginal effects from the replicators' independent Stata reproduction and robustness checks, not the paper's LR tests. Code ships only inside a PDF (code_format 'embedded'); the replicators transcribed it ('the conversion is a substantial amount of work') and fixed one omission on PDF p. 36 (rounds 7 and 8 need adding) that 'does not appear to affect any results' (P3). Their transcribed code is at https://osf.io/4zhuq. Report rates the package as only partially providing raw data and cleaning code (conversation transcripts on request); claims begin from the coded utterance data, so this is in scope. For C1, C4 and C5 the label relies on the report's blanket statement plus the authors' rendered output, hence medium confidence; the paper sign convention for C2 (Est = 0.24) differs from the report's −0.243 (reference level), which does not affect C2/C3. Robustness findings (Result 1 sensitive) ignored."
+ }
+}

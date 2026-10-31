@@ -1,0 +1,146 @@
+{
+ "gold_id": "G-13",
+ "gold_version": "1.1",
+ "cand_id": "RB-023",
+ "doi": "10.1017/s0003055421000940",
+ "title": "Effective for Whom? Ethnic Identity and Nonviolent Resistance",
+ "stratum_drawn": "computational issues",
+ "paper_url": "https://doi.org/10.1017/s0003055421000940",
+ "package": {
+  "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/23/replication_package",
+  "version_pin": "REPRO-Bench snapshot commit 74958fba32daeacff51f2e1fd37be3916595648f",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf",
+   "description": "Human computational reproduction report."
+  },
+  {
+   "url": "https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0003055421000940/resource/name/S0003055421000940sup001.pdf",
+   "description": "Original article supplementary information."
+  }
+ ],
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "label_confidence": "medium",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Precision of campaign success for nonviolent non-excluded groups",
+   "exhibit": "Online Appendix Table A5, Group Status row 1; Figure 1a",
+   "page": 7,
+   "quantity": "Standard error of predicted success probability",
+   "reported": "0.05",
+   "expected_status": "discrepant",
+   "reference_recomputed": 0.07,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P1",
+   "cause": "Original observational-model uncertainty is larger than the published interval implies.",
+   "evidence": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf — §2.2, pp. 7–8; Table 2, p. 32: “0.07”.",
+   "rationale": "The report’s NoChanges reproduction table gives SE 0.07 for this prediction, exceeding the printed SE. This affects the primary Figure 1 comparison; recoding and added controls are not used as discrepancy evidence.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf — §2.2, pp. 7–8; Table 2, p. 32: “0.07”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": "Unchanged code gives SE 0.07 vs printed 0.05. The resulting overlap of CIs changes the visual inference in the main observational Figure 1."
+  },
+  {
+   "id": "C2",
+   "claim": "Precision of campaign success for nonviolent excluded groups",
+   "exhibit": "Online Appendix Table A5, Group Status row 2; Figure 1a",
+   "page": 7,
+   "quantity": "Standard error of predicted success probability",
+   "reported": "0.05",
+   "expected_status": "discrepant",
+   "reference_recomputed": 0.07,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P1",
+   "cause": "Original observational-model uncertainty is larger than the published interval implies.",
+   "evidence": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf — §2.2, pp. 7–8; Table 2, p. 32: “0.07”.",
+   "rationale": "The report’s NoChanges reproduction table gives SE 0.07 for this prediction, exceeding the printed SE. This affects the primary Figure 1 comparison; recoding and added controls are not used as discrepancy evidence.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf — §2.2, pp. 7–8; Table 2, p. 32: “0.07”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": "Unchanged code gives SE 0.07 vs printed 0.05."
+  },
+  {
+   "id": "C3",
+   "claim": "Precision of campaign success for nonviolent groups at or above mean size",
+   "exhibit": "Online Appendix Table A5, Group Size row 5; Figure 1b",
+   "page": 7,
+   "quantity": "Standard error of predicted success probability",
+   "reported": "0.04",
+   "expected_status": "discrepant",
+   "reference_recomputed": 0.07,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P1",
+   "cause": "Original observational-model uncertainty is larger than the published interval implies.",
+   "evidence": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf — §2.2, pp. 7–8; Table 3, p. 32: “0.07”.",
+   "rationale": "The report’s NoChanges reproduction table gives SE 0.07 for this prediction, exceeding the printed SE. This affects the primary Figure 1 comparison; recoding and added controls are not used as discrepancy evidence.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf — §2.2, pp. 7–8; Table 3, p. 32: “0.07”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": "Unchanged code gives SE 0.07 vs printed 0.04."
+  },
+  {
+   "id": "C4",
+   "claim": "US experiment: Black protesters and perceived violence",
+   "exhibit": "Table 2, panel A, column 1",
+   "page": null,
+   "quantity": "Black-protester coefficient",
+   "reported": "0.347",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf — Introduction and §3.2, p. 10: “reproduce exactly”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "The report states that Table 2 (Study 2) replicates perfectly; it gives no 3-dp value of its own."
+  },
+  {
+   "id": "C5",
+   "claim": "US experiment: Black protesters and required police action",
+   "exhibit": "Table 2, panel A, column 3",
+   "page": null,
+   "quantity": "Black-protester coefficient",
+   "reported": "0.429",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/279959/1/I4R-DP086.pdf — Introduction and §3.2, p. 10: “reproduce exactly”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Covered by the perfect-replication statement for Table 2."
+  }
+ ],
+ "notes": {
+  "claim_list": "",
+  "sol": "Reference SEs are from the source’s NoChanges tables, not the later reweighting, recoding, unit-of-analysis or topic-model extensions. Original Table A5, p. 7, was opened separately from the human report.",
+  "claude": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "Severity P1 for C1-C3 is a judgement: Table A5/Figure 1 is the paper's main observational figure, and the larger SEs make the key non-violent CIs overlap (the report's 'one exception' to reproducibility). P2 is defensible because the main interaction model (Table A3) 'replicate[s] perfectly'. The report's description is mixed: separately, the shipped replicate_fig_1.R also gives larger CIs, which do not overlap because it omits two controls (PASTNV, PASTV) present in the A5 code. So no shipped script regenerates the printed SEs. The A5 SEs come from ggeffects::ggpredict, which is deterministic but may vary by version; the report does not establish the cause. A reconciler could therefore argue 'not_checkable' for C1-C3. I did not choose that, because the report tested the unchanged code and found materially different values. Side observation: replicate_table_A5.R assigns Status labels using `preds$x==0` (an object not defined in that script) instead of `preds_status$x`, which could mislabel the status rows if run standalone. Row labels in the report ('Majority/dominant', 'Minority/disadvantaged') map to the SI's 'Not excluded'/'Excluded'."
+ }
+}

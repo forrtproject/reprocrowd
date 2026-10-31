@@ -1,0 +1,11 @@
+--- a/Study 2/s2_analysis.R	
++++ b/Study 2/s2_analysis.R	
+@@ -31,7 +31,7 @@
+ s2_text <- read_csv("Data/S2 text.csv")
+ 
+ # How many PEBs did each participant in the PEB condition report?
+-s2_text$pebCount <- rowSums(s2_text %>% select(litter:activism), na.rm=T)
++s2_text$pebCount <- rowSums(s2_text %>% select(litter:repair), na.rm=T)
+ describe(s2_text %>% filter(Condition=="PEB") %>% pull(pebCount))
+ 
+ # How many fun activities did each participant in the Fun condition report?

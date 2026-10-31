@@ -1,0 +1,133 @@
+{
+ "gold_id": "G-24",
+ "gold_version": "1.1",
+ "cand_id": "I4R-mepbv",
+ "doi": "10.1038/s41562-022-01517-1",
+ "title": "Insights into the accuracy of social scientists’ forecasts of societal change",
+ "stratum_drawn": "technical failure",
+ "paper_url": "https://doi.org/10.1038/s41562-022-01517-1",
+ "package": {
+  "url": "https://github.com/grossmania/Forecasting-Tournament/tree/32cfd57c635d08a54a2eff8f735382c3c16336ac",
+  "version_pin": "Git commit 32cfd57c635d08a54a2eff8f735382c3c16336ac",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/bk3ag/",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "technical failure",
+ "acceptable_alternatives": [],
+ "label_confidence": "medium",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Scientific versus lay forecasting accuracy for life satisfaction",
+   "exhibit": "Table 1",
+   "page": null,
+   "quantity": "Contrast t-ratio",
+   "reported": "4.321",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+   "severity": "P0",
+   "cause": "The pinned manuscript/update R Markdown files contain fatal syntax errors.",
+   "evidence": "https://osf.io/download/bk3ag/ — Computational-reproducibility notes, PDF pp. 3–5: “A parenthesis is missing”.",
+   "rationale": "The human report documents manuscript-code parse failures, and the retained static parse audit confirms them at the pinned commit. No repaired numerical output is assigned as an original-code result.",
+   "acceptable_statuses": [
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "The reproducers could not run the manuscript Rmd and report no Table 1 values. I confirmed the syntax fault statically in the pinned commit."
+  },
+  {
+   "id": "C2",
+   "claim": "Scientific versus lay forecasting accuracy for explicit gender–career bias",
+   "exhibit": "Table 1",
+   "page": null,
+   "quantity": "Contrast t-ratio",
+   "reported": "3.204",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+   "severity": "P0",
+   "cause": "The pinned manuscript/update R Markdown files contain fatal syntax errors.",
+   "evidence": "https://osf.io/download/bk3ag/ — Computational-reproducibility notes, PDF pp. 3–5: “A parenthesis is missing”.",
+   "rationale": "The human report documents manuscript-code parse failures, and the retained static parse audit confirms them at the pinned commit. No repaired numerical output is assigned as an original-code result.",
+   "acceptable_statuses": [
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "The reproducers could not run the manuscript Rmd and report no Table 1 values. I confirmed the syntax fault statically in the pinned commit."
+  },
+  {
+   "id": "C3",
+   "claim": "Scientific versus lay forecasting accuracy for implicit gender–career bias",
+   "exhibit": "Table 1",
+   "page": null,
+   "quantity": "Contrast t-ratio",
+   "reported": "3.161",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+   "severity": "P0",
+   "cause": "The pinned manuscript/update R Markdown files contain fatal syntax errors.",
+   "evidence": "https://osf.io/download/bk3ag/ — Computational-reproducibility notes, PDF pp. 3–5: “A parenthesis is missing”.",
+   "rationale": "The human report documents manuscript-code parse failures, and the retained static parse audit confirms them at the pinned commit. No repaired numerical output is assigned as an original-code result.",
+   "acceptable_statuses": [
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "The reproducers could not run the manuscript Rmd and report no Table 1 values. I confirmed the syntax fault statically in the pinned commit."
+  },
+  {
+   "id": "C4",
+   "claim": "Scientific versus lay forecasting accuracy for political polarization",
+   "exhibit": "Table 1",
+   "page": null,
+   "quantity": "Contrast t-ratio",
+   "reported": "2.819",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+   "severity": "P0",
+   "cause": "The pinned manuscript/update R Markdown files contain fatal syntax errors.",
+   "evidence": "https://osf.io/download/bk3ag/ — Computational-reproducibility notes, PDF pp. 3–5: “A parenthesis is missing”.",
+   "rationale": "The human report documents manuscript-code parse failures, and the retained static parse audit confirms them at the pinned commit. No repaired numerical output is assigned as an original-code result.",
+   "acceptable_statuses": [
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "The reproducers could not run the manuscript Rmd and report no Table 1 values. I confirmed the syntax fault statically in the pinned commit."
+  },
+  {
+   "id": "C5",
+   "claim": "Scientific versus lay forecasting accuracy for positive affect",
+   "exhibit": "Table 1",
+   "page": null,
+   "quantity": "Contrast t-ratio",
+   "reported": "2.128",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+   "severity": "P0",
+   "cause": "The pinned manuscript/update R Markdown files contain fatal syntax errors.",
+   "evidence": "https://osf.io/download/bk3ag/ — Computational-reproducibility notes, PDF pp. 3–5: “A parenthesis is missing”.",
+   "rationale": "The human report documents manuscript-code parse failures, and the retained static parse audit confirms them at the pinned commit. No repaired numerical output is assigned as an original-code result.",
+   "acceptable_statuses": [
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "The reproducers could not run the manuscript Rmd and report no Table 1 values. I confirmed the syntax fault statically in the pinned commit."
+  }
+ ],
+ "notes": {
+  "claim_list": "",
+  "sol": "Gold is the retained 32cfd57 commit, not later repaired analysis. Both manuscript and update R scripts fail the static parse check. The source spent more than twenty hours repairing/reconstructing material; none of those numbers is treated as shipped-code output.",
+  "claude": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "This case is disputed. The authors' response (https://osf.io/download/698cea243fa4fc8652e24ac1/, Dec 2025) says everything reproduces when chunks are run in the console following the README. They say the stan_lmer error comes from rstanarm 2.32's stricter ellipsis handling. My static check contradicts that explanation. At pinned commit 32cfd57, knitr::purl + parse() of the FINAL Rmd fails with 'unexpected symbol' at em_expert_simple, because 'prior = cauchy(0,c(0.707,0.707,0.5),' is never closed. That is a syntax fault independent of package versions. The README links the Rmd at commit 8db528c, and that version has the identical parse failure. 'Wave 1+2 Analyses update.Rmd' fails parse on 'dplyr::dplyr::select'. Mitigating facts for the reconciler: the Table 1 lay-vs-scientist contrasts (lmer + emmeans revpairwise ~isExpert.factor|domain, Rmd lines ~1182-1187) come before the faulty stan_lmer call in the same chunk and read dat_for_analyses.csv. So line-by-line interactive execution could plausibly produce them, and the dat_long V1/V2 ambiguity does not bear directly on Table 1. The two unreproduced files (contrast1.csv/contrast2.csv) are supplement method contrasts, not Table 1. Nobody has produced Table 1 values from the shipped code. The report did attempt the computation and failed, so the dispute is about who is at fault, not about whether computation was checked. 'Technical failure' is therefore kept with no alternative. Confidence is medium because of the author dispute and the possibility of interactive execution."
+ }
+}

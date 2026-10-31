@@ -1,0 +1,170 @@
+{
+ "gold_id": "G-15",
+ "gold_version": "1.1",
+ "cand_id": "I4R-fpaxs",
+ "doi": "10.1177/09567976241266516",
+ "title": "People Place Larger Bets When Risky Choices Provide a Postbet Option to Cash Out",
+ "stratum_drawn": "computational issues",
+ "paper_url": "https://doi.org/10.1177/09567976241266516",
+ "package": {
+  "url": "https://osf.io/as8pw/",
+  "version_pin": "preregistration-document.pdf: OSF file 6487adc4c8611600ce252951 version 1, SHA-256 87f16d1924442e092d780bf6daaac388522ddb92e081e0800914c6a32ca4c7f3; avail-group-code.zip: OSF file 6487ace2dc523b00aadb600b version 1, SHA-256 275733e1514d5ee53fa23732633143995494789d4ff09d44c3b5989b4ec6d97b; unavail-group-code.zip: OSF file 6487ad14a31091006cd11c6f version 1, SHA-256 6fec9be4bceac34dcc4bec88aa5d6b04d041e77df9a0e86be8446a450ee94d1a; app.zip: OSF file 6512724c333aef008cd701e8 version 1, SHA-256 ff88e2adc9e41e59cc15ae7b4e292b9ac14ffe3c90c003b867bafae66cff165d; app.zip: OSF file 6512727443df32008db62464 version 1, SHA-256 c9b290234f06b5eb3e70723d513c6c1093edf04e4489daf3900a96939a4d032a; preprint.pdf: OSF file 656e876202fa9620547d2883 version 3, SHA-256 61ad056ed20e81190b3ad2dc35afb761fbd5381dc0e4148ed8097826bda16662; supplementary-material.pdf: OSF file 656e876502fa9620537d284f version 2, SHA-256 0af6b9c3dac1b814b8ea69e36687669199a3196b8e171c21b74839e8a7eb2bc5; cashout-prob-analyses.R: OSF file 66134c4ec053942cf8b4d878 version 1, SHA-256 72d3c824f82c9cfe5eed7e78242ce46a2013301e10169ea7f291ed8c778abedb; bet-amount-analyses.R: OSF file 66134cd3e65c6037007d9fc8 version 2, SHA-256 0c7f7b4e51b74949f1cfab1bfb84e68494adbb7571ac69d8ac145ae3d915453e; make-fig2.R: OSF file 6a88b5d2eb337a301cdf4dda version 1, SHA-256 3846d369883c0a190876bba0be1ab72295ac568df5f6d369d2f61d525bde06c4; make-fig3&4.R: OSF file 6a88b7c264371401266c5822 version 1, SHA-256 3b15a782fc519776aa005c70be5e2e675fbdec87a9f20dc9d54b49667465ba1d; Response to computational reproducibility and robustness report.pdf: OSF file 6a8e3414379b86c6933d8e34 version 1, SHA-256 f85969a05483eac3ced2538c6909f76a60d0d98df51239fb67c579e56ea0ec27",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/6a985481a1d020921e2a9dc8/",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "label_confidence": "high",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Experiment 1 linear probability-of-winning effect on cash-out frequency",
+   "exhibit": "Results, Cash-out frequency",
+   "page": null,
+   "quantity": "Linear coefficient",
+   "reported": "-0.05",
+   "expected_status": "discrepant",
+   "reference_recomputed": -0.11,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P2",
+   "cause": "The printed linear Pr(win) coefficient does not match the original-code output.",
+   "evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2 Friction 2, PDF p. 5: “-0.11”.",
+   "rationale": "The source runs the deposited scripts without changing their logic and obtains -0.11 rather than -0.05; the accompanying chi-squared and p value recur.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2 Friction 2, PDF p. 5: “-0.11”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": "Unchanged code gives a different coefficient than printed. This is a secondary (cash-out frequency) null term, so P2."
+  },
+  {
+   "id": "C2",
+   "claim": "Precision of the Experiment 1 linear probability-of-winning effect",
+   "exhibit": "Results, Cash-out frequency",
+   "page": null,
+   "quantity": "Standard error",
+   "reported": "0.06",
+   "expected_status": "discrepant",
+   "reference_recomputed": 0.26,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P2",
+   "cause": "The printed linear Pr(win) standard error does not match the original-code output.",
+   "evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2 Friction 2, PDF p. 5: “SE = 0.26”.",
+   "rationale": "The source obtains SE 0.26 rather than 0.06. This is the deterministic reporting discrepancy, separated from version-dependent Wald-statistic differences.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2 Friction 2, PDF p. 5: “SE = 0.26”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": "Unchanged code gives SE 0.26 vs printed 0.06."
+  },
+  {
+   "id": "C3",
+   "claim": "Experiment 1 cash-out availability and bet amount",
+   "exhibit": "Results, Bet amount",
+   "page": null,
+   "quantity": "Within-participant Cohen d",
+   "reported": "0.75",
+   "expected_status": "match",
+   "reference_recomputed": 0.75,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2, PDF p. 4: “d = 0.75”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2, PDF p. 4: “d = 0.75”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report states d reproduced at printed precision."
+  },
+  {
+   "id": "C4",
+   "claim": "Experiment 2 cash-out availability and bet amount",
+   "exhibit": "Results, Bet amount",
+   "page": null,
+   "quantity": "Between-groups Cohen d",
+   "reported": "0.46",
+   "expected_status": "match",
+   "reference_recomputed": 0.46,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2, PDF p. 4: “d = 0.46”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2, PDF p. 4: “d = 0.46”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Reproduced at printed precision."
+  },
+  {
+   "id": "C5",
+   "claim": "Experiment 1 relative increase in mean bet size with cash-out",
+   "exhibit": "Discussion",
+   "page": null,
+   "quantity": "Percentage increase",
+   "reported": "35%",
+   "expected_status": "match",
+   "reference_recomputed": "35%",
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2, PDF p. 4: “35%”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2, PDF p. 4: “35%”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Point percentage reproduced. Only the bootstrap CIs around it lack code, and they are not part of this claim."
+  },
+  {
+   "id": "C6",
+   "claim": "Experiment 2 relative increase in mean bet size with cash-out",
+   "exhibit": "Discussion",
+   "page": null,
+   "quantity": "Percentage increase",
+   "reported": "24%",
+   "expected_status": "match",
+   "reference_recomputed": "24%",
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2, PDF p. 4: “24%”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/6a985481a1d020921e2a9dc8/ — §2.2, PDF p. 4: “24%”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Reproduced."
+  }
+ ],
+ "notes": {
+  "claim_list": "",
+  "sol": "Use the deterministic linear Pr(win) reporting mismatch. Version-sensitive Wald tests, changed inference methods, covariate removal and trial-level robustness models do not supply discrepancy labels.",
+  "claude": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "The report rates the paper 'partially computationally reproducible': scripts ran unchanged (only an empty .here marker was added), and the primary bet-amount results reproduce. Issues not in the claim list: Wald χ² drift in the cash-out mixed models (e.g. 26.54 vs 27.99), which the authors' response attributes to lme4/car versions; the Exp 2 Spearman df (85 vs 78); N = 180 vs 178 records; and several analyses without code (figures, bootstrap CIs, permutation tests; some since added per the authors' response). The authors' response (OSF file 6a8e3414...) does not address the C1/C2 β/SE copy error. C1/C2 are reporting errors rather than code errors, but the printed number itself is wrong and unchanged code yields a different value, so they are labelled discrepant. The published version could not be accessed (Sage returned 403); printed values were checked against the OSF preprint.pdf in the package, which may be the accepted manuscript."
+ }
+}

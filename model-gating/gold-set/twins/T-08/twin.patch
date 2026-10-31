@@ -1,0 +1,11 @@
+--- a/Study 2/Study2_OSF_deidentified.Rmd	
++++ b/Study 2/Study2_OSF_deidentified.Rmd	
+@@ -82,7 +82,7 @@
+ 
+ dfUK <- dfUKQualtrics %>%
+   group_by(UniqueID) %>%
+-  filter(row_number() == 1) %>%
++  filter(row_number() >= 1) %>%
+   subset(num_total_answers > 0) %>% 
+   subset(Progress >=83 ) %>%
+   ungroup(.) %>%

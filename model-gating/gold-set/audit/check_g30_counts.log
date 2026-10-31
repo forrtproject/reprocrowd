@@ -1,0 +1,63 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+before duplicate filter: 1164 
+after duplicate filter: 1157 
+removed: 7 
+final UK sample: 1067 
+R version 4.6.1 (2026-06-24)
+Platform: aarch64-apple-darwin23
+Running under: macOS Tahoe 26.7
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
+
+locale:
+[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8
+
+time zone: Europe/London
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_1.2.1  readxl_1.5.0
+
+loaded via a namespace (and not attached):
+ [1] tidyselect_1.2.1 compiler_4.6.1   magrittr_2.0.5   R6_2.6.1        
+ [5] generics_0.1.4   cli_3.6.6        tools_4.6.1      pillar_1.11.1   
+ [9] glue_1.8.1       tibble_3.3.1     cellranger_1.1.0 vctrs_0.7.3     
+[13] lifecycle_1.0.5  pkgconfig_2.0.3  rlang_1.3.0     
+Duplicates among each completion definition
+Progress>=83 N= 1158 duplicates= 7 unique= 1151 
+Progress==100 N= 1149 duplicates= 7 unique= 1142 
+num_total_answers>0 N= 1073 duplicates= 1 unique= 1072 
+Progress>=83 & num_total_answers>0 N= 1073 duplicates= 1 unique= 1072 
+duplicate records; completing status and recorded chronology
+# A tibble: 14 × 4
+   UniqueID StartDate           Progress num_total_answers
+      <dbl> <dttm>                 <dbl> <chr>            
+ 1      651 2022-02-05 16:57:07      100 155              
+ 2      554 2022-02-06 08:56:03      100 0                
+ 3      554 2022-02-06 08:57:59      100 0                
+ 4      692 2022-02-06 08:58:45      100 0                
+ 5      692 2022-02-06 09:04:00      100 20               
+ 6      457 2022-02-06 09:05:27      100 0                
+ 7      457 2022-02-06 09:07:25      100 20               
+ 8      509 2022-09-01 16:39:46      100 0                
+ 9      509 2022-09-01 16:41:53      100 69               
+10      854 2022-09-02 09:04:02      100 0                
+11      854 2022-09-02 09:05:40      100 140              
+12      651 2022-09-02 09:08:00      100 10               
+13     1088 2022-09-02 09:13:09      100 0                
+14     1088 2022-09-02 09:13:45      100 156              

@@ -17,6 +17,8 @@ This repository hosts the public website (GitHub Pages) for ReproCrowd.
 - `prompt.txt` - the exact certification prompt (the copy button reads this file).
 - `crowd-repro/RULEPACK-v1.0.0.md` - the rule pack, hosted here so the prompt's link resolves.
 - `schemas/` - the `certificate.schema.json` and `flora-entry.schema.json` used to validate a bundle.
+- `model-gating/` - Part 2 planning: which models' reproductions enter FLoRA, and the proposed
+  30-paper gold benchmark (not part of the website).
 - `scripts/validate_bundle.py` - checks a bundle for completeness (required artefacts, valid JSON,
   program inventory) and signature (SIGN-OFF.md filled in). Used by the ingest workflow.
 - `.github/workflows/ingest-submission.yml` - when an issue is labelled `submission`, it downloads

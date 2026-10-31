@@ -1,0 +1,73 @@
+{
+ "gold_id": "G-23",
+ "expected_validation_status": "technical failure",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "as printed",
+   "severity": "P0",
+   "cause": "Group 2 (GM vs HWG) paired test code omitted from shipped script; GMHWG never created",
+   "evidence": "https://osf.io/download/3c2rx/ p.5 (Tables): 'there was instructions missing to reproduce the tables. It was difficult to follow the different results computed by the authors for different tables. ... Table 5 was reproducible'; static check of pinned survey_2021.R (Figshare v1, file 39347480, SHA matches): object GMHWG is used from line 771 but never assigned (Group 2 code 'omitted': '#all tests run for Group1 are also run for Group2 in the same order in the same manner #hence code is omitted')",
+   "rationale": "The report never assessed Table 4 and gives no recomputed value. As shipped, the script halts at line 771 with GMHWG undefined.",
+   "reported_check": "confirmed in paper (AGILE GIScience Series 4, 13, 2023, PDF from Copernicus): Table 4 'GM - HWG 37 281 .066 [0.0, 1.0]'"
+  },
+  {
+   "id": "C2",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "as printed",
+   "severity": "P0",
+   "cause": "Test at line 887 uses GMHWG$Sum_HWG; GMHWG never created",
+   "evidence": "https://osf.io/download/3c2rx/ p.5 (Tables): 'there was instructions missing to reproduce the tables. It was difficult to follow the different results computed by the authors for different tables. ... Table 5 was reproducible'; static check of pinned survey_2021.R (Figshare v1, file 39347480, SHA matches): object GMHWG is used from line 771 but never assigned (Group 2 code 'omitted': '#all tests run for Group1 are also run for Group2 in the same order in the same manner #hence code is omitted')",
+   "rationale": "The report never assessed Table 4 and gives no recomputed value. As shipped, the script halts at line 771 with GMHWG undefined.",
+   "reported_check": "confirmed in paper (AGILE GIScience Series 4, 13, 2023, PDF from Copernicus): Table 4 'BM - HWG 37 1036 <.001 [1.0, 2.0]'"
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "as printed",
+   "severity": null,
+   "cause": "t.test code exists (uses SUS_ScoresGroup2 from GM_HWG_SUS.csv) but the script halts earlier at line 771 (GMHWG undefined); SUS_ScoresGroup2 also used at line 777 before assignment at line 1079",
+   "evidence": "https://osf.io/download/3c2rx/ p.5 (Tables): 'there was instructions missing to reproduce the tables. It was difficult to follow the different results computed by the authors for different tables. ... Table 5 was reproducible'; static check of pinned survey_2021.R (Figshare v1, file 39347480, SHA matches): object GMHWG is used from line 771 but never assigned (Group 2 code 'omitted': '#all tests run for Group1 are also run for Group2 in the same order in the same manner #hence code is omitted')",
+   "rationale": "The Table 8 SUS tests do not depend on the missing GMHWG object; the shipped script (View() disabled, data beside script) gives t = 9.4465.",
+   "reported_check": "confirmed in paper (AGILE GIScience Series 4, 13, 2023, PDF from Copernicus): Table 8 'GM - HWG 37 9.45 <.001 [24.5, 37.9]'"
+  },
+  {
+   "id": "C4",
+   "expected_status": "discrepant",
+   "reference_recomputed": null,
+   "tolerance": "as printed",
+   "severity": "P2",
+   "cause": "wilcox.test code exists but the script halts earlier at line 771 (GMHWG undefined)",
+   "evidence": "https://osf.io/download/3c2rx/ p.5 (Tables): 'there was instructions missing to reproduce the tables. It was difficult to follow the different results computed by the authors for different tables. ... Table 5 was reproducible'; static check of pinned survey_2021.R (Figshare v1, file 39347480, SHA matches): object GMHWG is used from line 771 but never assigned (Group 2 code 'omitted': '#all tests run for Group1 are also run for Group2 in the same order in the same manner #hence code is omitted')",
+   "rationale": "The shipped script gives W = 1137.5 against the printed 1037.5; the p-value and CI recur, so this is a P2 transcription error under amended R2.",
+   "reported_check": "confirmed in paper (AGILE GIScience Series 4, 13, 2023, PDF from Copernicus): Table 8 'BM - HWG 37 1037.5 <.001 [12.5, 30.0]'"
+  },
+  {
+   "id": "C5",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "as printed",
+   "severity": "P0",
+   "cause": "Kendall correlation uses GM_Performance$GM_Score, built from GMHWG columns that are never created",
+   "evidence": "https://osf.io/download/3c2rx/ p.5 (Tables): 'there was instructions missing to reproduce the tables. It was difficult to follow the different results computed by the authors for different tables. ... Table 5 was reproducible'; static check of pinned survey_2021.R (Figshare v1, file 39347480, SHA matches): object GMHWG is used from line 771 but never assigned (Group 2 code 'omitted': '#all tests run for Group1 are also run for Group2 in the same order in the same manner #hence code is omitted')",
+   "rationale": "The report never assessed Table 9 and gives no recomputed value. As shipped, the script halts at line 771 with GMHWG undefined.",
+   "reported_check": "confirmed in paper (AGILE GIScience Series 4, 13, 2023, PDF from Copernicus): Table 9 'TS GM 74 3.19 0.29 .001'"
+  }
+ ],
+ "label_confidence": "high",
+ "notes": "v1.1: C3 and C4 are computable from shipped code (C3 match, C4 discrepant P2); C1, C2 and C5 remain blocked, so the paper stays technical failure. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "CODECHECK/AGILE report: only figures and Table 5 were assessed, and the reviewer obtained updated code via communication with the authors to fix 'missing columns in GMHWG CSV' / 'Sum_GM_Group2'. Static check of the pinned v1 script: it parses in R (419 expressions), but GMHWG is never assigned and is first used at line 771. SUS_ScoresGroup2 is used at line 777 before its assignment at line 1079. Figshare v2 (2023-02-28, adds README) also never creates GMHWG, so the fix is not on Figshare in either version. C3/C4 code does not depend on GMHWG and could be run interactively line by line, but the sourced script dies first and no one reported values. That is why I used P0 not_checkable rather than leaving them unassessed. Minor claim-list nit: the paper labels the between-group tests 'Wilcoxon signed-rank test', but the code runs unpaired (rank-sum) tests. The claim text ('rank-sum W') is correct.",
+ "corrections": [
+  {
+   "version": "1.1",
+   "change": "C3 not_checkable P0 -> match; C4 not_checkable P0 -> discrepant P2",
+   "reason": "Execution shows these SUS tests run without the missing object",
+   "evidence": "audit/v1.1/g23_check.log; pilot/claude/G-23-certificate.json; Sol round 4 (v1 file)"
+  }
+ ]
+}

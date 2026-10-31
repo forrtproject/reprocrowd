@@ -1,0 +1,74 @@
+{
+  "gold_id": "G-06",
+  "expected_validation_status": "computationally reproducible",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "match",
+      "reference_recomputed": -0.002,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf — §2 Reproducibility, pp. 5–6 and comparison Table 1: “original authors’ R code”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf p. 5-6, Section 2 and Table 1 (Replication column): 'we show that the supplied code and data exactly reproduce the results from the paper'; Racial Flux, President: −0.002∗∗∗ (0.000)",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C2",
+      "expected_status": "match",
+      "reference_recomputed": -0.001,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf — §2 Reproducibility, pp. 5–6 and comparison Table 1: “original authors’ R code”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf p. 6, Table 1 Replication column, U.S. House: Racial Flux −0.001∗∗∗ (0.000)",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": 0.005,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf — §2 Reproducibility, pp. 5–6 and comparison Table 1: “original authors’ R code”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf p. 6, Table 1 Replication column, Racial Resentment: Racial Flux 0.005∗∗∗ (0.001)",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": 0.003,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf — §2 Reproducibility, pp. 5–6 and comparison Table 1: “original authors’ R code”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf p. 6, Table 1 Replication column, Affirmative Action: Racial Flux 0.003∗∗∗ (0.001)",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": 0.001,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf — §2 Reproducibility, pp. 5–6 and comparison Table 1: “original authors’ R code”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/284350/1/I4R-DP061upd.pdf p. 6, Table 1 Replication column, Racial Resentment: Racial Flux 0.005∗∗∗ (0.001); note 'Standard Errors clustered by zip code in parentheses'",
+      "reference_scope": "authors_workflow"
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "Use the supplied original data and R code. Rebuilt Census/CCES measures, the multiverse and Nationscape are separate analyses and are excluded."
+}

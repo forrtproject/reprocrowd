@@ -1,0 +1,71 @@
+{
+  "gold_id": "G-03",
+  "cand_id": "I4R-vcsfj",
+  "doi": "10.1038/s41562-023-01634-5",
+  "title": "Human and animal dominance hierarchies show a pyramidal structure guiding adult and infant social inferences",
+  "stratum_drawn": "computationally reproducible",
+  "paper_url": "https://doi.org/10.1038/s41562-023-01634-5",
+  "package": {
+    "url": "https://osf.io/pk7bg/",
+    "version_pin": "Pyramids_Data_Codes_NHB.zip: OSF file 6452552641630914f1e404cb version 1, SHA-256 05ea451aed69c63adddab9adbfa5fc4affb9e2b782a1be89ec324d9cc36c6434",
+    "language": "R",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/vmjf4/",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Triadic-pyramid prevalence test for human children",
+      "exhibit": "Supplementary Table 2",
+      "page": 19,
+      "quantity": "Holm-corrected Wilcoxon p-value",
+      "reported": "2.1420e-04"
+    },
+    {
+      "id": "C2",
+      "claim": "Triadic-pyramid prevalence test for non-human primates",
+      "exhibit": "Supplementary Table 2",
+      "page": 19,
+      "quantity": "Holm-corrected Wilcoxon p-value",
+      "reported": "6.8250e-09"
+    },
+    {
+      "id": "C3",
+      "claim": "Triadic-pyramid prevalence test for ungulates",
+      "exhibit": "Supplementary Table 2",
+      "page": 19,
+      "quantity": "Holm-corrected Wilcoxon p-value",
+      "reported": "4.3180e-05"
+    },
+    {
+      "id": "C4",
+      "claim": "Triadic-pyramid prevalence test for carnivores",
+      "exhibit": "Supplementary Table 2",
+      "page": 19,
+      "quantity": "Holm-corrected Wilcoxon p-value",
+      "reported": "3.1200e-06"
+    },
+    {
+      "id": "C5",
+      "claim": "Triadic-pyramid prevalence test for rodents",
+      "exhibit": "Supplementary Table 2",
+      "page": 19,
+      "quantity": "Holm-corrected Wilcoxon p-value",
+      "reported": "3.2860e-08"
+    },
+    {
+      "id": "C6",
+      "claim": "Triadic-pyramid prevalence test for birds",
+      "exhibit": "Supplementary Table 2",
+      "page": 19,
+      "quantity": "Holm-corrected Wilcoxon p-value",
+      "reported": "4.5440e-05"
+    }
+  ],
+  "notes": ""
+}

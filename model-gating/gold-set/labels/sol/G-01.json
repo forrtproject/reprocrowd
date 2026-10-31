@@ -1,0 +1,74 @@
+{
+  "gold_id": "G-01",
+  "expected_validation_status": "computationally reproducible",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "match",
+      "reference_recomputed": "0.07",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/9ht7y/ — §2 Computational Reproducibility, pp. 5–6: “computationally reproduced”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/9ht7y/ p.12 (report page numbering; PDF p.13), Figure 1 'Reproduced Figures 1a (left) and 1b (right)': reproduced forest plot shows 'RE Model (Q = 365.91, df = 7, p = 0, I2 = 98.74)' and 'Meta-Analytic 0.07 [0.02, 0.13] 69732'; p.7: 'After overcoming this issues, we were able to rerun the meta-analysis script on both a Windows and Linux system, reproducing all figures, including age2-imp-Quadratic-slope-Main-adj.png'; Table 2 'REML estimation (original) 0.017 0.072 0.127'",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C2",
+      "expected_status": "match",
+      "reference_recomputed": "[0.02, 0.13]",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/9ht7y/ — §2 Computational Reproducibility, pp. 5–6: “computationally reproduced”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/9ht7y/ p.12 (report page numbering; PDF p.13), Figure 1 'Reproduced Figures 1a (left) and 1b (right)': reproduced forest plot shows 'RE Model (Q = 365.91, df = 7, p = 0, I2 = 98.74)' and 'Meta-Analytic 0.07 [0.02, 0.13] 69732'; p.7: 'After overcoming this issues, we were able to rerun the meta-analysis script on both a Windows and Linux system, reproducing all figures, including age2-imp-Quadratic-slope-Main-adj.png'; Table 2 REML row CI 0.017 to 0.127",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": "365.91",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/9ht7y/ — §2 Computational Reproducibility, pp. 5–6: “computationally reproduced”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/9ht7y/ p.12 (report page numbering; PDF p.13), Figure 1 'Reproduced Figures 1a (left) and 1b (right)': reproduced forest plot shows 'RE Model (Q = 365.91, df = 7, p = 0, I2 = 98.74)' and 'Meta-Analytic 0.07 [0.02, 0.13] 69732'; p.7: 'After overcoming this issues, we were able to rerun the meta-analysis script on both a Windows and Linux system, reproducing all figures, including age2-imp-Quadratic-slope-Main-adj.png'",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": "98.74",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/9ht7y/ — §2 Computational Reproducibility, pp. 5–6: “computationally reproduced”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/9ht7y/ p.12 (report page numbering; PDF p.13), Figure 1 'Reproduced Figures 1a (left) and 1b (right)': reproduced forest plot shows 'RE Model (Q = 365.91, df = 7, p = 0, I2 = 98.74)' and 'Meta-Analytic 0.07 [0.02, 0.13] 69732'; p.7: 'After overcoming this issues, we were able to rerun the meta-analysis script on both a Windows and Linux system, reproducing all figures, including age2-imp-Quadratic-slope-Main-adj.png'",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": "69732",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/9ht7y/ — §2 Computational Reproducibility, pp. 5–6: “computationally reproduced”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/9ht7y/ p.12 (report page numbering; PDF p.13), Figure 1 'Reproduced Figures 1a (left) and 1b (right)': reproduced forest plot shows 'RE Model (Q = 365.91, df = 7, p = 0, I2 = 98.74)' and 'Meta-Analytic 0.07 [0.02, 0.13] 69732'; p.7: 'After overcoming this issues, we were able to rerun the meta-analysis script on both a Windows and Linux system, reproducing all figures, including age2-imp-Quadratic-slope-Main-adj.png'",
+      "reference_scope": "authors_workflow"
+    }
+  ],
+  "label_confidence": "medium",
+  "notes": "Replacement I4R-ejsb9. Scope starts from the public study-level meta-analysis inputs, not restricted individual-level studies. The source reran the meta-analysis after lossless setup/path/package repairs, including loading variables defined in supplied scripts. Its reproduced forest plot (report p.12; PDF p.13) supplies the references for Q, I-squared and pooled sample size as well as the pooled estimate and interval. Those are source-report references, not null or a new local meta-analysis rerun. C2 is the pooled interval [0.02, 0.13]."
+}

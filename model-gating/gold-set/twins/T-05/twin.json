@@ -1,0 +1,237 @@
+{
+  "twin_id": "T-05",
+  "base_gold_id": "G-08",
+  "base_cand_id": "RB-019",
+  "package": {
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/19/replication_package",
+    "version_pin": "REPRO-Bench snapshot commit 74958fba32daeacff51f2e1fd37be3916595648f"
+  },
+  "perturbation": {
+    "file": "BPV_museums_maintext.R",
+    "description": "Replace the shared mean-imputation value with zero.",
+    "type": "missing_value_imputation",
+    "why_plausible": "A generic zero-fill can replace the preregistered mean-imputation helper during data-cleaning maintenance.",
+    "original_sha256": "86f30c772363014b5a063373e267297f37424e3dc4b33dcea4ad95cc43f8561d",
+    "twin_sha256": "c84811fa83d98f59db879ca4552f901fb08161b6b4327e08fbb7b3c0e91013d7"
+  },
+  "lossless_edits": [
+    "Set the working directory to the package root. All seven library/require calls in the selected section run unchanged."
+  ],
+  "execution_scope": "BPV_museums_maintext.R lines 1–100 and 169–177, in order. Run the authors' data setup, imputation helper, political-institution models and overall transitional-justice models. Extract gov_sat, dem, advance, compensation and inst_apology point estimates. Plot assembly and heterogeneous-effect models after those sections are outside scope; the known figure-label replacement error is therefore not executed.",
+  "original_run": {
+    "r_version": "R version 4.6.1 (2026-06-24)",
+    "packages": {
+      "base": "4.6.1",
+      "cli": "3.6.6",
+      "compiler": "4.6.1",
+      "datasets": "4.6.1",
+      "dplyr": "1.2.1",
+      "farver": "2.1.2",
+      "generics": "0.1.4",
+      "ggplot2": "4.0.3",
+      "glue": "1.8.1",
+      "graphics": "4.6.1",
+      "grDevices": "4.6.1",
+      "grid": "4.6.1",
+      "gridExtra": "2.3.1",
+      "gtable": "0.3.6",
+      "lattice": "0.22.9",
+      "lifecycle": "1.0.5",
+      "lmtest": "0.9.40",
+      "magrittr": "2.0.5",
+      "methods": "4.6.1",
+      "pillar": "1.11.1",
+      "pkgconfig": "2.0.3",
+      "plyr": "1.8.9",
+      "R6": "2.6.1",
+      "RColorBrewer": "1.1.3",
+      "Rcpp": "1.1.2",
+      "rlang": "1.3.0",
+      "S7": "0.2.2",
+      "sandwich": "3.1.1",
+      "scales": "1.4.0",
+      "stats": "4.6.1",
+      "tibble": "3.3.1",
+      "tidyselect": "1.2.1",
+      "tools": "4.6.1",
+      "utils": "4.6.1",
+      "vctrs": "0.7.3",
+      "withr": "3.0.3",
+      "zoo": "1.9.1"
+    },
+    "runtime_seconds": 0.328,
+    "claims": [
+      {
+        "id": "C1",
+        "reported": "0.15",
+        "recomputed": 0.15216489197734237,
+        "recurs": true
+      },
+      {
+        "id": "C2",
+        "reported": "0.14",
+        "recomputed": 0.13647799726120816,
+        "recurs": true
+      },
+      {
+        "id": "C3",
+        "reported": "−0.32",
+        "recomputed": -0.3190496666779803,
+        "recurs": true
+      },
+      {
+        "id": "C4",
+        "reported": "0.19",
+        "recomputed": 0.19801445692827666,
+        "recurs": false
+      },
+      {
+        "id": "C5",
+        "reported": "0.18",
+        "recomputed": 0.1817316507670632,
+        "recurs": true
+      }
+    ]
+  },
+  "twin_run": {
+    "runtime_seconds": 0.328,
+    "packages": {
+      "base": "4.6.1",
+      "cli": "3.6.6",
+      "compiler": "4.6.1",
+      "datasets": "4.6.1",
+      "dplyr": "1.2.1",
+      "farver": "2.1.2",
+      "generics": "0.1.4",
+      "ggplot2": "4.0.3",
+      "glue": "1.8.1",
+      "graphics": "4.6.1",
+      "grDevices": "4.6.1",
+      "grid": "4.6.1",
+      "gridExtra": "2.3.1",
+      "gtable": "0.3.6",
+      "lattice": "0.22.9",
+      "lifecycle": "1.0.5",
+      "lmtest": "0.9.40",
+      "magrittr": "2.0.5",
+      "methods": "4.6.1",
+      "pillar": "1.11.1",
+      "pkgconfig": "2.0.3",
+      "plyr": "1.8.9",
+      "R6": "2.6.1",
+      "RColorBrewer": "1.1.3",
+      "Rcpp": "1.1.2",
+      "rlang": "1.3.0",
+      "S7": "0.2.2",
+      "sandwich": "3.1.1",
+      "scales": "1.4.0",
+      "stats": "4.6.1",
+      "tibble": "3.3.1",
+      "tidyselect": "1.2.1",
+      "tools": "4.6.1",
+      "utils": "4.6.1",
+      "vctrs": "0.7.3",
+      "withr": "3.0.3",
+      "zoo": "1.9.1"
+    },
+    "claims": [
+      {
+        "id": "C1",
+        "recomputed": 0.16741297561272953
+      },
+      {
+        "id": "C2",
+        "recomputed": 0.1502331545147541
+      },
+      {
+        "id": "C3",
+        "recomputed": -0.3351797688305468
+      },
+      {
+        "id": "C4",
+        "recomputed": 0.18477033734426582
+      },
+      {
+        "id": "C5",
+        "recomputed": 0.18701275476518636
+      }
+    ]
+  },
+  "expected_validation_status": "computational issues",
+  "claims": [
+    {
+      "id": "C1",
+      "reported": "0.15",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.16741297561272953,
+      "severity": "P1",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C2",
+      "reported": "0.14",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.1502331545147541,
+      "severity": "P1",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C3",
+      "reported": "−0.32",
+      "expected_status": "discrepant",
+      "reference_recomputed": -0.3351797688305468,
+      "severity": "P1",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C4",
+      "reported": "0.19",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.18477033734426582,
+      "severity": "P1",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C5",
+      "reported": "0.18",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.18701275476518636,
+      "severity": "P1",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    }
+  ],
+  "hard_coding_signal": "Restore mean(x, na.rm = TRUE) in f; changing the imputation solely to reproduce the paper would undo the seed.",
+  "notes": [
+    "Every reference is from the logged local execution, not copied from a paper or a shipped rendered output.",
+    "Affected claims are defined by changes at printed precision, not by arbitrary raw floating-point differences. Unaffected claims retain gold statuses; their references are the actual twin run values.",
+    "R4 repairs are listed separately; twin.patch contains exactly one planted change against the pinned original file.",
+    "Only the numerical scope needed for all gold claims was executed; this is not an end-to-end run of every package output.",
+    "Original C4 is 0.1980144569, conventionally 0.20 rather than the printed 0.19. recurs=false records this already-known gold close case; it agrees with gold's sourced 0.198 and is not a new gold finding. The twin value is 0.1847703373, conventionally 0.18. All five outcomes are in the main-text treatment-effect analysis specified in the authors' PAP."
+  ],
+  "verification": {
+    "twin_id": "T-05",
+    "base_gold_id": "G-08",
+    "input_hashes_checked": 5,
+    "patch_applies": true,
+    "original_run_exit": 0,
+    "twin_run_exit": 0,
+    "all_claims_confirmed_at_printed_precision": true,
+    "affected_claims": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5"
+    ]
+  }
+}

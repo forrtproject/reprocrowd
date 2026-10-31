@@ -1,0 +1,146 @@
+{
+ "gold_id": "G-25",
+ "gold_version": "1.1",
+ "cand_id": "I4R-eb89k",
+ "doi": "10.1038/s41562-023-01530-y",
+ "title": "A meta-analysis of genetic effects associated with neurodevelopmental disorders and co-occurring conditions",
+ "stratum_drawn": "technical failure",
+ "paper_url": "https://doi.org/10.1038/s41562-023-01530-y",
+ "package": {
+  "url": "https://github.com/CoDEresearchlab/Meta_analysis_NDDs_DICCs/tree/c4fac61e75db0b0106dd8051900d522a3c6ba274",
+  "version_pin": "Git commit c4fac61e75db0b0106dd8051900d522a3c6ba274",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/",
+   "description": "Human computational reproduction report."
+  },
+  {
+   "url": "https://www.nature.com/articles/s41562-025-02299-y",
+   "description": "Author Correction documents the later change from original grand family-based correlation 0.36 to 0.47; the original article remains the benchmark target."
+  }
+ ],
+ "expected_validation_status": "technical failure",
+ "acceptable_alternatives": [],
+ "label_confidence": "high",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Family-based heritability across neurodevelopmental disorders",
+   "exhibit": "Abstract; Figure 3",
+   "page": 642,
+   "quantity": "Grand family-based heritability",
+   "reported": "0.66",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+   "severity": "P0",
+   "cause": "The original code dereferences missing/misnamed variables and has execution-order failures.",
+   "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ — §2 Computational Reproducibility, pp. 3–4: “not runnable”.",
+   "rationale": "The human source reproduced Aim 1 only after modifications and could not execute Aims 2–3. The selected shipped-code outputs therefore have no defensible numerical reference.",
+   "diagnostic_results": [
+    {
+     "value": 0.66,
+     "provenance": "source_report",
+     "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ p.4-5: 'Running the provided code resulted in output errors because the code named variables that were not in the data file. ... replacing Cohort_for_agg_by_study with agg_by_study_cohorts across most of the code files' ... 'After modifying the provided code, we were able to reproduce some of the results, specifically the findings from Aim 1. For example, our team replicated results that indicated NDDs heritability at grand-h2 = 0.66.'; static check of pinned commit c4fac61 (= current repo HEAD): meta_analysis_h2.R line 217 uses agg_by_study_cohorts$Cohort_for_agg_by_study but Extraction_heritability.csv has no such column",
+     "scope": "Report run after variable replacements and reordered code; not the pinned shipped workflow",
+     "is_scoring_reference": false
+    }
+   ],
+   "acceptable_statuses": [
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "The value recurs (0.66), but only after non-trivial edits to the shipped code. As shipped it would fail: the column is absent, so cohort is never added to the aggregated data that rma.mv (random = ~1|cohort/id) needs. The report confirms the shipped code errored."
+  },
+  {
+   "id": "C2",
+   "claim": "SNP-based heritability across neurodevelopmental disorders",
+   "exhibit": "Abstract; Figure 3",
+   "page": 642,
+   "quantity": "Grand SNP heritability",
+   "reported": "0.19",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+   "severity": "P0",
+   "cause": "The original code dereferences missing/misnamed variables and has execution-order failures.",
+   "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ — §2 Computational Reproducibility, pp. 3–4: “not runnable”.",
+   "rationale": "The human source reproduced Aim 1 only after modifications and could not execute Aims 2–3. The selected shipped-code outputs therefore have no defensible numerical reference.",
+   "acceptable_statuses": [
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "SNP h2 belongs to Aim 1, which the report says reproduced after modification, but it quotes no value. As shipped it is blocked."
+  },
+  {
+   "id": "C3",
+   "claim": "Family-based genetic overlap among neurodevelopmental disorders",
+   "exhibit": "Abstract; Figure 4",
+   "page": 642,
+   "quantity": "Grand family-based genetic correlation",
+   "reported": "0.36",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+   "severity": "P0",
+   "cause": "The original code dereferences missing/misnamed variables and has execution-order failures.",
+   "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ — §2 Computational Reproducibility, pp. 3–4: “not runnable”.",
+   "rationale": "The human source reproduced Aim 1 only after modifications and could not execute Aims 2–3. The selected shipped-code outputs therefore have no defensible numerical reference. Reported target corrected to the original-version 0.36; 0.47 belongs to the 2025-08-11 Author Correction, outside the package pin.",
+   "acceptable_statuses": [
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "The report did not reproduce Aim 2, and the shipped script points at the wrong data file."
+  },
+  {
+   "id": "C4",
+   "claim": "SNP-based genetic overlap among neurodevelopmental disorders",
+   "exhibit": "Abstract; Figure 4",
+   "page": 642,
+   "quantity": "Grand SNP-based genetic correlation",
+   "reported": "0.39",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+   "severity": "P0",
+   "cause": "The original code dereferences missing/misnamed variables and has execution-order failures.",
+   "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ — §2 Computational Reproducibility, pp. 3–4: “not runnable”.",
+   "rationale": "The human source reproduced Aim 1 only after modifications and could not execute Aims 2–3. The selected shipped-code outputs therefore have no defensible numerical reference.",
+   "acceptable_statuses": [
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "Not assessed by the report, and blocked as shipped."
+  },
+  {
+   "id": "C5",
+   "claim": "Family-based genetic overlap between NDDs and DICCs",
+   "exhibit": "Abstract; Figure 5",
+   "page": 642,
+   "quantity": "Grand family-based genetic correlation",
+   "reported": "0.62",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+   "severity": "P0",
+   "cause": "The original code dereferences missing/misnamed variables and has execution-order failures.",
+   "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ — §2 Computational Reproducibility, pp. 3–4: “not runnable”.",
+   "rationale": "The human source reproduced Aim 1 only after modifications and could not execute Aims 2–3. The selected shipped-code outputs therefore have no defensible numerical reference.",
+   "acceptable_statuses": [
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "The NDD–DICC correlation data file is missing from the package and the report did not assess this claim."
+  }
+ ],
+ "notes": {
+  "claim_list": " Article target is the original 2023 version corresponding to Git commit c4fac61. The 2025 Author Correction (10.1038/s41562-025-02299-y, published 2025-08-11) changes the grand family-based correlation from 0.36 to 0.47; that later version is not the target.",
+  "sol": "Original commit c4fac61 is pinned. Static inspection also finds references to Cohort_for_agg_by_study without that field in the supplied extraction CSV. Aims 2 and 3 are primary and blocked; numbers obtained after changing variable names or ordering are excluded.",
+  "claude": "C3 now targets the original 2023 article value 0.36 (the 0.47 is from the 2025 Author Correction, which postdates the pinned commit). C1 is not_checkable P0; the repaired-run 0.66 is a non-scoring diagnostic, and match is not an accepted alternative. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "C1 judgement call: I labelled it not_checkable/P0 (with reference_recomputed 0.66) because it recurs only after reproducers renamed variables and reordered code. 'match' is the alternative if the reconciler accepts reproducer-repaired code. C3 claim/pin problem: the claim's reported 0.47 is the corrected value from the 2025 Author Correction. The pinned commit (2023-01-05; still repo HEAD as of this check) predates the correction, so even working code at the pin would correspond to the original 0.36 (coding artifact in ADHD–learning-disorder sign reversal). The claim should either use 0.36 (original VoR) or note the version mismatch. The extracted text of the I4R report says 'grand-h2 = 0.62' for the NDD–DICC genetic correlation in its abstract; that is the report's mislabelling of the rA estimate."
+ }
+}

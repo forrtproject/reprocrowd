@@ -1,0 +1,282 @@
+{
+  "twin_id": "T-04",
+  "base_gold_id": "G-06",
+  "base_cand_id": "RB-004",
+  "package": {
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/4/replication_package",
+    "version_pin": "REPRO-Bench snapshot commit 74958fba32daeacff51f2e1fd37be3916595648f"
+  },
+  "perturbation": {
+    "file": "an_main.R",
+    "description": "Use the House-vote outcome in the presidential-vote model.",
+    "type": "wrong_outcome",
+    "why_plausible": "The adjacent presidential and House models share the same predictors, making an outcome-name copy/paste error plausible.",
+    "original_sha256": "865050488ea275846008ca2d7d9330ac382380bd5dfa8e123775b7305456dc7e",
+    "twin_sha256": "267cadc112da6928e6b7a52a531df5510ba7ae970994b0b2de0967251a48fa75"
+  },
+  "lossless_edits": [
+    "Resolve the input path 01_data/dta.RData to the deposited dta.RData in the package root. No data or analysis changes."
+  ],
+  "execution_scope": "an_main.R lines 1–78, through all four author-written lm_robust models and predictions. Extract racial_flux coefficients from pres_dem, house_dem, rr and affirm, and the rr racial_flux clustered standard error. Rendering and writing the LaTeX table and figures are outside scope.",
+  "original_run": {
+    "r_version": "R version 4.6.1 (2026-06-24)",
+    "packages": {
+      "base": "4.6.1",
+      "cli": "3.6.6",
+      "coda": "0.19.4.1",
+      "codetools": "0.2.20",
+      "compiler": "4.6.1",
+      "datasets": "4.6.1",
+      "dplyr": "1.2.1",
+      "emmeans": "2.0.4",
+      "estimability": "2.0.0",
+      "estimatr": "2.0.0",
+      "farver": "2.1.2",
+      "forcats": "1.0.1",
+      "Formula": "1.2.6",
+      "generics": "0.1.4",
+      "ggplot2": "4.0.3",
+      "glue": "1.8.1",
+      "graphics": "4.6.1",
+      "grDevices": "4.6.1",
+      "grid": "4.6.1",
+      "gridExtra": "2.3.1",
+      "gtable": "0.3.6",
+      "hms": "1.1.4",
+      "httr": "1.4.8",
+      "lattice": "0.22.9",
+      "lifecycle": "1.0.5",
+      "lubridate": "1.9.5",
+      "magrittr": "2.0.5",
+      "MASS": "7.3.66",
+      "Matrix": "1.7.5",
+      "methods": "4.6.1",
+      "multcomp": "1.4.31",
+      "mvtnorm": "1.4.2",
+      "pillar": "1.11.1",
+      "pkgconfig": "2.0.3",
+      "purrr": "1.2.2",
+      "R6": "2.6.1",
+      "RColorBrewer": "1.1.3",
+      "Rcpp": "1.1.2",
+      "readr": "2.2.0",
+      "rlang": "1.3.0",
+      "S7": "0.2.2",
+      "sandwich": "3.1.1",
+      "scales": "1.4.0",
+      "splines": "4.6.1",
+      "stats": "4.6.1",
+      "stringi": "1.8.9",
+      "stringr": "1.6.0",
+      "survival": "3.8.6",
+      "texreg": "1.40",
+      "TH.data": "1.1.5",
+      "tibble": "3.3.1",
+      "tidyr": "1.3.2",
+      "tidyselect": "1.2.1",
+      "tidyverse": "2.0.0",
+      "timechange": "0.4.0",
+      "tools": "4.6.1",
+      "tzdb": "0.5.0",
+      "utils": "4.6.1",
+      "vctrs": "0.7.3",
+      "withr": "3.0.3",
+      "xtable": "1.8.8",
+      "zoo": "1.9.1"
+    },
+    "runtime_seconds": 1.814,
+    "claims": [
+      {
+        "id": "C1",
+        "reported": "−.002",
+        "recomputed": -0.0015705445952684184,
+        "recurs": true
+      },
+      {
+        "id": "C2",
+        "reported": "−.001",
+        "recomputed": -0.0013630426083842894,
+        "recurs": true
+      },
+      {
+        "id": "C3",
+        "reported": ".005",
+        "recomputed": 0.004755469187675437,
+        "recurs": true
+      },
+      {
+        "id": "C4",
+        "reported": ".003",
+        "recomputed": 0.0031801610217895675,
+        "recurs": true
+      },
+      {
+        "id": "C5",
+        "reported": ".001",
+        "recomputed": 0.0008379781883078237,
+        "recurs": true
+      }
+    ]
+  },
+  "twin_run": {
+    "runtime_seconds": 1.749,
+    "packages": {
+      "base": "4.6.1",
+      "cli": "3.6.6",
+      "coda": "0.19.4.1",
+      "codetools": "0.2.20",
+      "compiler": "4.6.1",
+      "datasets": "4.6.1",
+      "dplyr": "1.2.1",
+      "emmeans": "2.0.4",
+      "estimability": "2.0.0",
+      "estimatr": "2.0.0",
+      "farver": "2.1.2",
+      "forcats": "1.0.1",
+      "Formula": "1.2.6",
+      "generics": "0.1.4",
+      "ggplot2": "4.0.3",
+      "glue": "1.8.1",
+      "graphics": "4.6.1",
+      "grDevices": "4.6.1",
+      "grid": "4.6.1",
+      "gridExtra": "2.3.1",
+      "gtable": "0.3.6",
+      "hms": "1.1.4",
+      "httr": "1.4.8",
+      "lattice": "0.22.9",
+      "lifecycle": "1.0.5",
+      "lubridate": "1.9.5",
+      "magrittr": "2.0.5",
+      "MASS": "7.3.66",
+      "Matrix": "1.7.5",
+      "methods": "4.6.1",
+      "multcomp": "1.4.31",
+      "mvtnorm": "1.4.2",
+      "pillar": "1.11.1",
+      "pkgconfig": "2.0.3",
+      "purrr": "1.2.2",
+      "R6": "2.6.1",
+      "RColorBrewer": "1.1.3",
+      "Rcpp": "1.1.2",
+      "readr": "2.2.0",
+      "rlang": "1.3.0",
+      "S7": "0.2.2",
+      "sandwich": "3.1.1",
+      "scales": "1.4.0",
+      "splines": "4.6.1",
+      "stats": "4.6.1",
+      "stringi": "1.8.9",
+      "stringr": "1.6.0",
+      "survival": "3.8.6",
+      "texreg": "1.40",
+      "TH.data": "1.1.5",
+      "tibble": "3.3.1",
+      "tidyr": "1.3.2",
+      "tidyselect": "1.2.1",
+      "tidyverse": "2.0.0",
+      "timechange": "0.4.0",
+      "tools": "4.6.1",
+      "tzdb": "0.5.0",
+      "utils": "4.6.1",
+      "vctrs": "0.7.3",
+      "withr": "3.0.3",
+      "xtable": "1.8.8",
+      "zoo": "1.9.1"
+    },
+    "claims": [
+      {
+        "id": "C1",
+        "recomputed": -0.0013630426083842894
+      },
+      {
+        "id": "C2",
+        "recomputed": -0.0013630426083842894
+      },
+      {
+        "id": "C3",
+        "recomputed": 0.004755469187675437
+      },
+      {
+        "id": "C4",
+        "recomputed": 0.0031801610217895675
+      },
+      {
+        "id": "C5",
+        "recomputed": 0.0008379781883078237
+      }
+    ]
+  },
+  "expected_validation_status": "computational issues",
+  "claims": [
+    {
+      "id": "C1",
+      "reported": "−.002",
+      "expected_status": "discrepant",
+      "reference_recomputed": -0.0013630426083842894,
+      "severity": "P1",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C2",
+      "reported": "−.001",
+      "expected_status": "match",
+      "reference_recomputed": -0.0013630426083842894,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    },
+    {
+      "id": "C3",
+      "reported": ".005",
+      "expected_status": "match",
+      "reference_recomputed": 0.004755469187675437,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    },
+    {
+      "id": "C4",
+      "reported": ".003",
+      "expected_status": "match",
+      "reference_recomputed": 0.0031801610217895675,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    },
+    {
+      "id": "C5",
+      "reported": ".001",
+      "expected_status": "match",
+      "reference_recomputed": 0.0008379781883078237,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    }
+  ],
+  "hard_coding_signal": "Change the response of the presidential model from house_dem back to pres_dem.",
+  "notes": [
+    "Every reference is from the logged local execution, not copied from a paper or a shipped rendered output.",
+    "Affected claims are defined by changes at printed precision, not by arbitrary raw floating-point differences. Unaffected claims retain gold statuses; their references are the actual twin run values.",
+    "R4 repairs are listed separately; twin.patch contains exactly one planted change against the pinned original file.",
+    "Only the numerical scope needed for all gold claims was executed; this is not an end-to-end run of every package output."
+  ],
+  "verification": {
+    "twin_id": "T-04",
+    "base_gold_id": "G-06",
+    "input_hashes_checked": 10,
+    "patch_applies": true,
+    "original_run_exit": 0,
+    "twin_run_exit": 0,
+    "all_claims_confirmed_at_printed_precision": true,
+    "affected_claims": [
+      "C1"
+    ]
+  }
+}

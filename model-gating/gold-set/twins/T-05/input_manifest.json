@@ -1,0 +1,42 @@
+[
+  {
+    "path": "BPV_museums_appendix.R",
+    "sha256": "337178cc2b9e3dab3ddb75a396e50c81ea870ee69cce7a76907abde66109788b",
+    "bytes": 37035,
+    "git_blob_oid": "f7c486cda29eb370e6c152944197e7203d554840",
+    "lfs_sha256": null,
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/19/replication_package/BPV_museums_appendix.R"
+  },
+  {
+    "path": "BPV_museums_maintext.R",
+    "sha256": "86f30c772363014b5a063373e267297f37424e3dc4b33dcea4ad95cc43f8561d",
+    "bytes": 43609,
+    "git_blob_oid": "89e93e895f5c7740fba755bdf9ee5e44c16dac1c",
+    "lfs_sha256": null,
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/19/replication_package/BPV_museums_maintext.R"
+  },
+  {
+    "path": "Codebook.pdf",
+    "sha256": "c98532969543a114a9880334a7e30c521ddca3deaa6c76318bc118de8c43d071",
+    "bytes": 97238,
+    "git_blob_oid": "368086d47e50f957d40f970639b857d8c993df22",
+    "lfs_sha256": "c98532969543a114a9880334a7e30c521ddca3deaa6c76318bc118de8c43d071",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/19/replication_package/Codebook.pdf"
+  },
+  {
+    "path": "all.Rdata",
+    "sha256": "b4ed1b5544caed6a1166d7ac4a49d59721a52648441bb5083e715be78c30bb6c",
+    "bytes": 29977,
+    "git_blob_oid": "77147335f58fa571564b0de471b371ebdea148ef",
+    "lfs_sha256": "b4ed1b5544caed6a1166d7ac4a49d59721a52648441bb5083e715be78c30bb6c",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/19/replication_package/all.Rdata"
+  },
+  {
+    "path": "baseline.Rdata",
+    "sha256": "76030af9231de2450b8f8d32bd8450665c31022ee2f285cc7ded08ba3d406d9e",
+    "bytes": 14901,
+    "git_blob_oid": "a333be3b6a9327f2a4863919203e5315bfd51819",
+    "lfs_sha256": "76030af9231de2450b8f8d32bd8450665c31022ee2f285cc7ded08ba3d406d9e",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/19/replication_package/baseline.Rdata"
+  }
+]

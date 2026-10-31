@@ -1,0 +1,65 @@
+{
+ "gold_id": "G-25",
+ "expected_validation_status": "technical failure",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "not_checkable",
+   "reference_recomputed": 0.66,
+   "tolerance": "rounding to 2 dp",
+   "severity": "P0",
+   "cause": "Shipped code references a nonexistent variable (Cohort_for_agg_by_study); runs only after reproducers renamed variables and reordered code",
+   "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ p.4-5: 'Running the provided code resulted in output errors because the code named variables that were not in the data file. ... replacing Cohort_for_agg_by_study with agg_by_study_cohorts across most of the code files' ... 'After modifying the provided code, we were able to reproduce some of the results, specifically the findings from Aim 1. For example, our team replicated results that indicated NDDs heritability at grand-h2 = 0.66.'; static check of pinned commit c4fac61 (= current repo HEAD): meta_analysis_h2.R line 217 uses agg_by_study_cohorts$Cohort_for_agg_by_study but Extraction_heritability.csv has no such column",
+   "rationale": "The value recurs (0.66), but only after non-trivial edits to the shipped code. As shipped it would fail: the column is absent, so cohort is never added to the aggregated data that rma.mv (random = ~1|cohort/id) needs. The report confirms the shipped code errored.",
+   "reported_check": "confirmed in paper (PMC10129867 corrected HTML, Abstract): 'family-based heritability, 0.66 (s.e. = 0.03)'"
+  },
+  {
+   "id": "C2",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "rounding to 2 dp",
+   "severity": "P0",
+   "cause": "Same missing-variable blocker in meta_analysis_SNPh2.R; report gives no recomputed value",
+   "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ p.5: 'we were able to reproduce some of the results, specifically the findings from Aim 1' (only 0.66 quoted); static check of pinned commit c4fac61 (= current repo HEAD): meta_analysis_SNPh2.R uses the same Cohort_for_agg_by_study reference (58 occurrences)",
+   "rationale": "SNP h2 belongs to Aim 1, which the report says reproduced after modification, but it quotes no value. As shipped it is blocked.",
+   "reported_check": "confirmed in paper (PMC10129867 corrected HTML, Abstract): 'SNP heritability, 0.19 (s.e. = 0.03)'"
+  },
+  {
+   "id": "C3",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "rounding to 2 dp",
+   "severity": "P0",
+   "cause": "Aim 2 not reproduced; meta_analysis_rA.R reads Extraction_heritability.csv, which has no rA column; pinned code predates the 2025 correction",
+   "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ p.5: 'Due to the time restraints and extensive manual labor required to revise and run the analysis code files given, we were unable to replicate Aims 2 and 3.'; static check of pinned commit c4fac61 (= current repo HEAD): meta_analysis_rA.R line 177 reads 'Extraction_heritability.csv' then subsets on datMeta$rA (column absent; rA exists only in Extraction_correlations.csv)",
+   "rationale": "The report did not reproduce Aim 2, and the shipped script points at the wrong data file.",
+   "reported_check": "differs: 0.47 (s.e. = 0.06) is the value after the Author Correction (doi:10.1038/s41562-025-02299-y, 2025), which states the estimate 'increased from 0.36 (s.e. = 0.12) to 0.47 (s.e. = 0.06)'; the originally published version printed 0.36. Corrected PMC10129867 text shows 0.47."
+  },
+  {
+   "id": "C4",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "rounding to 2 dp",
+   "severity": "P0",
+   "cause": "Aim 2 not reproduced; meta_analysis_SNPrG.R also reads Extraction_heritability.csv (no rA column)",
+   "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ p.5: 'we were unable to replicate Aims 2 and 3.'; static check of pinned commit c4fac61 (= current repo HEAD): meta_analysis_SNPrG.R line 177 reads Extraction_heritability.csv and subsets on datMeta$rA",
+   "rationale": "Not assessed by the report, and blocked as shipped.",
+   "reported_check": "confirmed in paper (PMC10129867 corrected HTML, Abstract): 'grand SNP-based genetic correlation, 0.39 (s.e. = 0.19)'"
+  },
+  {
+   "id": "C5",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "rounding to 2 dp",
+   "severity": "P0",
+   "cause": "Aim 3 not reproduced; Fig5.R reads Extraction_comorbidity.csv, which is not in the repository",
+   "evidence": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/ p.5: 'we were unable to replicate Aims 2 and 3.'; static check of pinned commit c4fac61 (= current repo HEAD): Fig5.R line 1269 'read.csv(\"Extraction_comorbidity.csv\" ...)' – file absent from repo",
+   "rationale": "The NDD–DICC correlation data file is missing from the package and the report did not assess this claim.",
+   "reported_check": "confirmed in paper (PMC10129867 corrected HTML, Abstract): 'grand family-based genetic correlation, 0.62 (s.e. = 0.20)'"
+  }
+ ],
+ "label_confidence": "high",
+ "notes": "C3 now targets the original 2023 article value 0.36 (the 0.47 is from the 2025 Author Correction, which postdates the pinned commit). C1 is not_checkable P0; the repaired-run 0.66 is a non-scoring diagnostic, and match is not an accepted alternative. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "C1 judgement call: I labelled it not_checkable/P0 (with reference_recomputed 0.66) because it recurs only after reproducers renamed variables and reordered code. 'match' is the alternative if the reconciler accepts reproducer-repaired code. C3 claim/pin problem: the claim's reported 0.47 is the corrected value from the 2025 Author Correction. The pinned commit (2023-01-05; still repo HEAD as of this check) predates the correction, so even working code at the pin would correspond to the original 0.36 (coding artifact in ADHD–learning-disorder sign reversal). The claim should either use 0.36 (original VoR) or note the version mismatch. The extracted text of the I4R report says 'grand-h2 = 0.62' for the NDD–DICC genetic correlation in its abstract; that is the report's mislabelling of the rA estimate."
+}

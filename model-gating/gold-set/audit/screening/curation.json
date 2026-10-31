@@ -1,0 +1,499 @@
+{
+  "s4et7": {
+    "stratum": "ambiguous",
+    "language": "none",
+    "summary": "Section 2 reports no cleaning or analysis code; Study 1 mean differences depend on the unstated method (reported 34.83; Tukey HSD 35.38; marginal means 34.89).",
+    "note": "The report also finds deterministic descriptive discrepancies (45.26 vs 45.18); do not treat all results as ambiguous.",
+    "exclude": "No original executable analysis code; reconstruction rather than shipped-code rerun."
+  },
+  "96nec": {
+    "stratum": "computationally reproducible",
+    "language": "R; Python",
+    "summary": "Original-code exclusions reproduce beta=2.94, SE=1.3, chi-square(1)=7.01, p<.01; changing the exclusion rule changes N from 20 to 24.",
+    "note": "Code-versus-prose exclusion disagreement is not a numerical failure of the shipped code; do not label the alternative-rule values discrepant.",
+    "exclude": ""
+  },
+  "bz8pf": {
+    "stratum": "computational issues",
+    "language": "R",
+    "summary": "Section 2: Table 3 intercept is reported 5.25 [5.08,5.43] but original analysis output gives 5.28 [5.11,5.44]; Table S4 infant-mortality beta/t are 0.45/2.75 versus 0.41/2.58.",
+    "note": "P2 reporting discrepancies; R code is embedded in public HTML output rather than separate scripts.",
+    "exclude": ""
+  },
+  "4a2ne": {
+    "stratum": "computational issues",
+    "language": "R; SPSS",
+    "summary": "Reproduction section/Table 4 finds incorrect choice-share labels in Figure 10, absent error bars, and Study 3 code replacing gig-worker raw data with part of the lay sample (raw_gig=raw_lay[4:nrow(raw_gig),]).",
+    "note": "Potential P1 for Study 3; restrict any R-only selection to documented R analyses and exclude Study 2a SPSS.",
+    "exclude": "Mixed original workflow includes SPSS; pilot language restriction."
+  },
+  "us2g4": {
+    "stratum": "computationally reproducible",
+    "language": "Jamovi",
+    "summary": "The abstract and reproduction section report that all five experiments and the pooled results were fully reproduced from raw data; the original analysis used Jamovi.",
+    "note": "Reproducers recreated the analysis in R; that is not original shipped R code.",
+    "exclude": "Original analysis is Jamovi; no original R/Python code verified."
+  },
+  "hxadk": {
+    "stratum": "computational issues",
+    "language": "Stata",
+    "summary": "Report finds most main results reproducible but coding errors; its reproduction section identifies errors in the intervention analysis and provides original-versus-reproduction comparisons.",
+    "note": "Use the reproduction comparisons, not preregistration deviations, as potential claim evidence.",
+    "exclude": "Original Stata workflow; pilot language restriction."
+  },
+  "rn8t7": {
+    "stratum": "computational issues",
+    "language": "Excel",
+    "summary": "Abstract: main-test averages recur at t=6.76 and p=.0003, but average d is reported .953 versus recomputed .945; some confidence intervals fail, including one experiment with reproduced values twice the reported values.",
+    "note": "Original calculations are Excel formulas; JASP is the reproduction software.",
+    "exclude": "Original Excel workflow; pilot language restriction."
+  },
+  "mgy45": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "The report completely reproduces the original results after extracting the R code from its supplied PDF; social-comparison estimate=-0.243, SE=.056, chi-square=18.905; coordination estimate=-.382, SE=.144, z=-2.646, p=.008.",
+    "note": "Original code is R in a PDF, not a Stata requirement; Stata is the reproducer alternative. Robustness failures do not change this stratum.",
+    "exclude": ""
+  },
+  "j65xf": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "The report reproduces cleaning (Study 1 N=442; Study 2 N=380), all reported findings and sensitivity analyses; Study 1 target-sex effect F(1,3446.2)=14.768, b=.200.",
+    "note": "Missing exact backward-elimination lines were recreated from the described procedure; select claims produced by the original supplied models.",
+    "exclude": ""
+  },
+  "w8gd7": {
+    "stratum": "computational issues",
+    "language": "SPSS",
+    "summary": "Abstract: original code did not generate all reported analyses; added code recovered them with three minor discrepancies, including Study 1a happiness-effect Cohen d.",
+    "note": "A recreate reproduction, not fully executable as shipped.",
+    "exclude": "SPSS original workflow; pilot language restriction."
+  },
+  "gjm3c": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "The report computationally reproduces the main adult-versus-child learning findings, including the combined age-group by learning by experiment interaction reported at p=.000.",
+    "note": "Record p<.001 when labelling; the printed .000 is not literal zero.",
+    "exclude": ""
+  },
+  "k6ntc": {
+    "stratum": "ambiguous",
+    "language": "R",
+    "summary": "Study 1: reported final N=116 could not be reconstructed from the exclusions; independent attempts gave 142 raw or 130 cleaned participants, and the exact criteria remained unclear after correspondence.",
+    "note": "Use raw-to-analysis sample claims for abstention; Study 2 analysis-data code reproduces. ResearchBox access must be checked.",
+    "exclude": "Original ResearchBox package access/size not independently verified."
+  },
+  "qe3fx": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "The report uses the original open R pipeline and reproduces the main inferential patterns across Experiments 1-3; Table 2 provides the corresponding numerical checks.",
+    "note": "Alternative outlier filters belong to robustness and are excluded. Author GitHub README states trial-level data are preprocessed; original robot raw data are on request, so eligible scope begins from shipped CSV inputs.",
+    "exclude": ""
+  },
+  "pzhgw": {
+    "stratum": "computational issues",
+    "language": "SPSS",
+    "summary": "The report documents absent odds-ratio outputs, a misreported age effect and model-convergence failures; the central findings mostly recur when models are re-estimated in jamovi.",
+    "note": "Re-estimated model choices need checking against the original SPSS specification.",
+    "exclude": "SPSS original workflow; pilot language restriction."
+  },
+  "ejsb9": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "The report computationally reproduces the meta-analysis: quadratic age coefficient 0.07 with 95% CI [0.02,0.13].",
+    "note": "Scope is the public meta-analysis input estimates, not rerunning all nine restricted participant datasets.",
+    "exclude": ""
+  },
+  "grvnq": {
+    "stratum": "computationally reproducible",
+    "language": "Jamovi",
+    "summary": "Section 2 reports maximal computational reproducibility for both studies and supplies paired checks in Table 2; it explicitly states there were no specific original code files.",
+    "note": "Reproducers used R and jamovi.",
+    "exclude": "No original executable R/Python analysis code; recreated analyses."
+  },
+  "9yve3": {
+    "stratum": "computational issues",
+    "language": "R",
+    "summary": "All preregistered RI-CLPM results are reproduced exactly; the final exploratory fixed-effects model requires a code correction to estimate within-person effects.",
+    "note": "Do not accuse the preregistered main models of a numerical failure.",
+    "exclude": "The package contains syntax but not analysis data; LISS archive access/registration required."
+  },
+  "ts2mp": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "The report successfully reproduces the main Bayesian voice-pitch findings before attempting a separate frequentist robustness analysis.",
+    "note": "Large audio archive; do not silently shrink the package to a favourable subset.",
+    "exclude": "Public original package exceeds approximately 5 GB."
+  },
+  "mhrf7": {
+    "stratum": "technical failure",
+    "language": "R; MATLAB",
+    "summary": "Section 2: missing stimulus images/metadata and corrupted allwords.mat prevent recomputing embeddings and similarity scores; main numerical analyses reproduce from supplied analysis-level data.",
+    "note": "P0 only for the raw-to-embedding path; analysis-data scope would instead be a success.",
+    "exclude": "Original pipeline includes MATLAB; technical-failure label depends on a raw-data scope."
+  },
+  "6smqd": {
+    "stratum": "technical failure",
+    "language": "Python",
+    "summary": "The report could not execute the second and third raw-data transformation stages despite modifications; the fully processed dataset allowed the reported analyses to recur.",
+    "note": "P0 only for the raw pipeline; retain analysis-data success as an alternative.",
+    "exclude": "Raw-data endpoint x2gaz returned 404 during screening; original package completeness/size unverified."
+  },
+  "rcngs": {
+    "stratum": "computationally reproducible",
+    "language": "Stata; R",
+    "summary": "The report reproduces all Study 1 main results and all preregistered Study 2 results from raw and analysis data without sign, magnitude or significance discrepancies.",
+    "note": "R Markdown in a package does not establish an R-only analysis when original models use Stata.",
+    "exclude": "Stata is required by the original workflow."
+  },
+  "u2rx8": {
+    "stratum": "computationally reproducible",
+    "language": "SPSS; JASP",
+    "summary": "The report confirms raw/processed data and SPSS/JASP scripts, and reproduces the analyses across five experiments without major outcome discrepancies.",
+    "note": "",
+    "exclude": "SPSS/JASP original workflow; pilot language restriction."
+  },
+  "9jzvk": {
+    "stratum": "computational issues",
+    "language": "R",
+    "summary": "Table 2 confirmatory serial-mediation coefficients and test statistics differ by approximately .01 on reproduction; larger differences occur for supplementary Table S10, while signs/significance recur.",
+    "note": "Bootstrap mediation results may warrant close rather than discrepant; do not infer error from an alternative equally fitting model.",
+    "exclude": "Source does not establish a specific beyond-rounding P1/P2 discrepancy; tolerance and bootstrap uncertainty need adjudication."
+  },
+  "hbpcs": {
+    "stratum": "computationally reproducible",
+    "language": "JASP",
+    "summary": "The focal detection effect recurs: chi-square(1)=6.10, p=.014, detection rates 14.8% versus 24.4%.",
+    "note": "The public package inspected contains a JASP analysis; reproducer-generated R scripts are not the original workflow.",
+    "exclude": "Original analysis package is JASP, not R/Python."
+  },
+  "7cd2s": {
+    "stratum": "computational issues",
+    "language": "R",
+    "summary": "Direct-reproduction Table 3: likelihood-only model AIC is reported 1722 versus recomputed 1766.298; other original AIC values recur. Original code took 58.13 seconds.",
+    "note": "Do not use the MAE-versus-RMSE robustness comparison as evidence of a numerical defect.",
+    "exclude": ""
+  },
+  "8czs5": {
+    "stratum": "computational issues",
+    "language": "SPSS; R",
+    "summary": "The reproduction table flags missing code and results not reproduced for the mindful-gratitude experiments; the report separates these from its later robustness checks.",
+    "note": "Original data repository contains both SPSS and R files; exact original executable path needs checking.",
+    "exclude": "SPSS required for parts of original workflow; pilot language restriction."
+  },
+  "rkdqv": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "The report successfully reproduces main and supplemental experiments from the original data/code, but notes no code for Table 2 and some minor reporting differences.",
+    "note": "Select reproduced experiment claims; Table 2 should not be silently assumed checked.",
+    "exclude": ""
+  },
+  "xqnhw": {
+    "stratum": "computational issues",
+    "language": "R",
+    "summary": "The reproduction report challenges depression conclusions; the authors response states those model outputs recur and the contested sentence is an interpretation error, while acknowledging omitted reliability/descriptive code.",
+    "note": "Do not import the headline criticism as P1 numerical nonrecurrence; distinguish interpretation from missing computational materials.",
+    "exclude": "No qualifying P1 numerical nonrecurrence established; original archive access is also unresolved."
+  },
+  "g82fy": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "The report reproduces the main power/status-by-gender claims from analysis data (Studies 1a/1b) and raw data (Studies 2/3), with only minor numerical discrepancies.",
+    "note": "Original OSF components contain Studies1Aand1B_code.Rmd, Study2_code.Rmd and Study3_code.Rmd plus CSV data. Analysis data for Studies 1a/1b; raw for Studies 2/3.",
+    "exclude": ""
+  },
+  "5c9aj": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "Section 2 reports all main results reproduced from the processed data and original analysis code across five experiments.",
+    "note": "Raw-data cleaning is absent; benchmark scope must start from the shipped processed data.",
+    "exclude": ""
+  },
+  "wg2sv": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "The original code reproduces all inspected experiments to a high degree; Section 4.2.1 explicitly attributes the slight percentage differences to integer rounding, not an error.",
+    "note": "Use only the direct-reproduction comparisons; alternative outlier exclusions are robustness.",
+    "exclude": ""
+  },
+  "fpaxs": {
+    "stratum": "computational issues",
+    "language": "R",
+    "summary": "Original-code rerun: Experiment 1 linear Pr(win) coefficient/SE are reported -0.05/0.06 but recomputed -0.11/0.26; beta/SE support the reported chi-square=.16, p=.69. Primary bet effects recur.",
+    "note": "P2 for documented deterministic discrepancies; authors response attributes some differences to software inference. Review for ambiguity.",
+    "exclude": ""
+  },
+  "xg3h9": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "The report reproduces all main results and figures from the supplied semi-curated data and cleaning code; it notes independent confirmation by Psychological Science STAR.",
+    "note": "One minor Experiment 1 coding error did not change main results. The I4R report, not journal policy, supplies the public evidence.",
+    "exclude": ""
+  },
+  "jybu2": {
+    "stratum": "computational issues",
+    "language": "SPSS",
+    "summary": "The report reproduces most original numerical results exactly and the rest closely using other software; paired comparisons are provided before its new-data extension.",
+    "note": "",
+    "exclude": "SPSS original workflow; Stata is reproduction software, not a pilot-compatible substitute."
+  },
+  "9c8p6": {
+    "stratum": "technical failure",
+    "language": "R",
+    "summary": "The original Study 2 script calls missing Data/S2 text.csv, preventing lines 33-100 from running; the report explicitly says the author subsequently fixed the filename and the package is now fully reproducible.",
+    "note": "Historical P0 only; current package must not be labelled technical failure.",
+    "exclude": "The documented blocker is fixed; no accessible matching historical package version verified."
+  },
+  "d5y3e": {
+    "stratum": "computational issues",
+    "language": "SPSS",
+    "summary": "Original follow-back estimate b=-.037, 95% CI [-.064,-.010] largely recurs, with minor numerical differences documented; the report says some original SPSS analyses could not be run.",
+    "note": "",
+    "exclude": "SPSS original workflow; pilot language restriction."
+  },
+  "529en": {
+    "stratum": "computational issues",
+    "language": "R",
+    "summary": "Study 1 original data/code give N=217 versus reported 218 and age M=18.72, SD=1.83 versus reported M=18.69, SD=1.84; Study 3 main results recur.",
+    "note": "P2 descriptive statistics; start from the shipped dependent-variable data, not reconstructing facial models.",
+    "exclude": ""
+  },
+  "qt7kr": {
+    "stratum": "technical failure",
+    "language": "unknown",
+    "summary": "The report reproduces Studies 1A.1, 1B1 and 2A apart from rounding, but cannot reproduce 1A2, 1B2 and 2B because appropriate code is absent.",
+    "note": "Affected claims could be P0/not_checkable while remaining studies succeed.",
+    "exclude": "Original software not verified; incomplete code and current version need reconciliation."
+  },
+  "vjka5": {
+    "stratum": "computationally reproducible",
+    "language": "R; JAGS",
+    "summary": "Published M2/M7 latent-ability summaries recur when the archived Cohen d scripts are run literally with their indexing bug preserved; correcting the bug changes estimates.",
+    "note": "This is a useful success despite a scientific/coding concern: corrected-code output is not a shipped-code discrepancy.",
+    "exclude": "Original public archive URL/complete data/runtime not independently established; additional author-provided material used."
+  },
+  "t68dc": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "The report reproduces the main framing-effect claims using the supplied code and data; adding demographic controls is reported separately as robustness.",
+    "note": "",
+    "exclude": ""
+  },
+  "8tzx5": {
+    "stratum": "computationally reproducible",
+    "language": "Python; JASP",
+    "summary": "The original provided code reproduces reported results; the report separately proposes corrected computations whose main conclusions remain consistent.",
+    "note": "The report gives the four original paired t-tests (7.25, 2.97, 9.004 and 5.15) in its introduction.",
+    "exclude": "Original inferential analysis includes JASP; confirm whether all gold claims can use original Python alone."
+  },
+  "gh7cv": {
+    "stratum": "computational issues",
+    "language": "R",
+    "summary": "Section 2: Experiment 2 no-exclusion interaction is reported t(145)=14.075 versus recomputed t(144)=-14.795; Experiment 1 pleasant-condition simple effect is printed +10.89 versus -10.89.",
+    "note": "P2 reporting discrepancies; exclusion robustness checks are out of scope. Original package URLs recovered from primary manuscript transparency statement (OSF XQ53J/3TKJ7/PB2SK).",
+    "exclude": ""
+  },
+  "6mzpv": {
+    "stratum": "ambiguous",
+    "language": "R",
+    "summary": "The report reproduces the original IAT/EPT procedures but cannot reconstruct published participant counts and demographics from raw files because preprocessing steps are not fully documented.",
+    "note": "Processed-data model results reproduce; focus abstention on the undocumented sample-construction claims.",
+    "exclude": ""
+  },
+  "3b8z4": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "The report reproduces all statistical outputs from the original raw data and processing/analysis scripts, and states the published results match the script outputs.",
+    "note": "The incorrect Trial covariate coding is not a nonrecurrence: the reported outputs still recur. Original public package A2U48 identified in primary paper transparency statement.",
+    "exclude": ""
+  },
+  "av3mz": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "The report successfully reproduces all four principal experiments and the fifth supplementary experiment from the openly shared analysis package.",
+    "note": "Check the reproduction tables for rounding; do not use later robustness analyses as discrepancies.",
+    "exclude": ""
+  },
+  "kpm3d": {
+    "stratum": "computationally reproducible",
+    "language": "R; Python",
+    "summary": "Section 2 reproduces supplied supplementary analyses but explicitly does not rerun the main analysis or Table S8: those require 10,000 train/test splits, and the report substitutes 100 runs giving only an approximation.",
+    "note": "The broader time-split and Brier-score analyses are robustness exercises; main pipeline runtime needs particular attention.",
+    "exclude": "Human source does not fully reproduce the main analysis; full 10000-run workflow within two hours is not established."
+  },
+  "s59j2": {
+    "stratum": "computational issues",
+    "language": "none",
+    "summary": "Of 22 reported tests, six directly recur and three change significance; the repository has intermediate data but no cleaning or analysis code, so the reproducers reconstruct analyses.",
+    "note": "Not valid evidence that shipped code produces different numbers: no original code was provided.",
+    "exclude": "No original executable analysis code; recreated analyses do not meet shipped-code task."
+  },
+  "z5pjq": {
+    "stratum": "ambiguous",
+    "language": "R; SPSS",
+    "summary": "The Waller reproduction report states power-analysis scripts set no random seed, so repeated runs and R environments give differing numerical power outputs with no single recoverable value.",
+    "note": "Primary applicant results recur. Ambiguity applies to numerical power outputs; original primary analyses also include SPSS.",
+    "exclude": "Mixed SPSS/R original workflow; R-only power subtask needs explicit approval as paper scope."
+  },
+  "eb89k": {
+    "stratum": "technical failure",
+    "language": "R",
+    "summary": "Aims 2 and 3 cannot run from the supplied scripts because of variable misnaming/missing variables and code-order errors; Aim 1 reproduces only after edits.",
+    "note": "P0 for Aims 2/3; small public R/CSV package. Behavioural genetics/neurodevelopmental-disorder scope needs a second opinion.",
+    "exclude": ""
+  },
+  "p8f7d": {
+    "stratum": "technical failure",
+    "language": "Python",
+    "summary": "The reproduction report documents unresolved imports, absent dependencies and inaccessible data; proposed missing-file/environment fixes remain unmerged and prevent reproducing the study workflow.",
+    "note": "Human-aware scientific discovery is metascience; compute and data completeness need special scrutiny.",
+    "exclude": "Complete open inputs and under-2-hour laptop runtime not established."
+  },
+  "kwqj6": {
+    "stratum": "ambiguous",
+    "language": "R",
+    "summary": "The report attributes bootstrap-CI differences up to +/-0.2 to seed handling and explicitly finds no seed in overall_memory_analysis.R; some critical-sentence timing claims also lack an identifiable definition.",
+    "note": "There are separate deterministic issues (Study 4 TrialType/trial_type and a chi-square statistic); select ambiguous CI/timing claims only.",
+    "exclude": ""
+  },
+  "vdm68": {
+    "stratum": "ambiguous",
+    "language": "R",
+    "summary": "The report explicitly states Bayesian/simulation outputs cannot recur perfectly because no random-number seed was set; missing-value handling and code/data correspondence are also unspecified.",
+    "note": "Affect/circadian physiology is a scope boundary; no alternative covariate models enter the gold verdict.",
+    "exclude": ""
+  },
+  "kyufb": {
+    "stratum": "computationally reproducible",
+    "language": "R; Python",
+    "summary": "Original R analysis and seeded simulation code reproduce the main study results and figures; the simulation includes a fixed seed and runs without modification.",
+    "note": "Raw data/cleaning are absent, but analysis datasets are shipped; success scope starts from those data.",
+    "exclude": ""
+  },
+  "f5p78": {
+    "stratum": "technical failure",
+    "language": "Python",
+    "summary": "The reproduction table says wrangle_data.ipynb cannot run because it requires NewsGuard data; the report otherwise reproduces many analyses from the supplied processed inputs.",
+    "note": "Blocker depends on running the raw-data pipeline rather than its public analysis data.",
+    "exclude": "Required NewsGuard input is not openly available; primary analysis-only scope is not a P0 case."
+  },
+  "8dxvk": {
+    "stratum": "computational issues",
+    "language": "R",
+    "summary": "Authors response R1a explains that apparent reliability t/df discrepancies compare paired t-tests with the paper Pearson correlation tests; R3 acknowledges multiple-target errors, but its matching values come from newly added/corrected code.",
+    "note": "Do not count reliability comparisons as a computational defect: n-2 is correct for Pearson correlation. Other reported errors require separate original-versus-corrected-code adjudication; repository was updated 6 February 2026.",
+    "exclude": "No unconfounded unchanged-code P1/P2 discrepancy established after reading authors response; original versus corrected package versions need reconciliation."
+  },
+  "2ar74": {
+    "stratum": "ambiguous",
+    "language": "R",
+    "summary": "The report states original propensity-score randomization had no available seed; authors later supplied the original analysis weights, allowing Tables 2/3 to recur.",
+    "note": "With supplied weights this becomes reproducible; ambiguity only for regenerating those weights.",
+    "exclude": "Original seed uncertainty has been resolved for shipped regression inputs by publishing weights; no qualifying unresolved ambiguity established."
+  },
+  "9qa3x": {
+    "stratum": "computationally reproducible",
+    "language": "Python",
+    "summary": "The report reproduces numerical results; Figure 1 differs only in unseeded scatter jitter, which does not alter violin distributions or numerical claims.",
+    "note": "Explicitly rejected as an ambiguous numerical-claim case.",
+    "exclude": "Original package URL/size/runtime not verified; full RL training is outside the laptop budget."
+  },
+  "3qs8e": {
+    "stratum": "technical failure",
+    "language": "R; Python",
+    "summary": "The shipped package lacks Zipcode_la.csv, Zcta_counts_idx_mean_nonpo.csv, chetty_et_al_social_capital.csv and mutual_aid_models.rds required for analysis/Figure 3; population_total is also missing.",
+    "note": "P0 for the incomplete original R workflow; later Stata re-estimation is not the source of this blocker.",
+    "exclude": "Original partial analysis data are on Dataverse; unauthenticated access could not be verified from this environment, so complete open-package size is unknown."
+  },
+  "4wxms": {
+    "stratum": "ambiguous",
+    "language": "R",
+    "summary": "The report finds no bootstrap seed and says exact Figure 2a data cannot be confirmed; unclear progress/gc variables also prevent verifying exclusion counts.",
+    "note": "All other analyses reproduce. Numerical bootstrap intervals, not cosmetic figure edits, would be the candidate gold claims. Public original OSF 8yu95 subsequently verified (R Markdown/data; approximately 115 MB).",
+    "exclude": ""
+  },
+  "vzpu2": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "Section 2.1 reruns the original R code/data and finds them in line with Table 1; the -0.074 versus -0.0637 difference appears only after porting to a different estimator in Python/lmer.",
+    "note": "The alternative-estimator difference is not a computational failure of the original package.",
+    "exclude": ""
+  },
+  "vjkyg": {
+    "stratum": "ambiguous",
+    "language": "R",
+    "summary": "The report cannot identify how robust-predictor flags or leave-one-out stacking weights were obtained: code/model outputs omit cited models and do not match the paper description.",
+    "note": "Main MCMC point estimates recur within Monte Carlo error. Check whether missing implementation warrants P0 rather than ambiguity.",
+    "exclude": "Full Bayesian meta-analysis rerun under two hours not established; very specific sampling settings required."
+  },
+  "6by24": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "The report reproduces the main original meta-analyses and Table 2 using public R code/data; reported pooled g values are .74 for depression and .77 for anxiety.",
+    "note": "Publication-bias-adjusted models are separate robustness exercises and do not change the reproduction verdict.",
+    "exclude": ""
+  },
+  "6x8wy": {
+    "stratum": "technical failure",
+    "language": "Python",
+    "summary": "Original notebooks regenerate Figures 1-3 after cosmetic Matplotlib fixes, but Figure 4 fails with internal code/file-path errors and produces no output.",
+    "note": "P0 only if Figure 4 is a mandatory target; distinguish unknown internal errors from P3 path normalization.",
+    "exclude": "Precise fatal error and complete original package not verified; report does not establish an irreparable primary blocker."
+  },
+  "vcsfj": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "The original data/code reproduce all main figures and numerical results, including rank-based tests; changing the Z-score normalization does not change those conclusions.",
+    "note": "A potential methodological bug that preserves reported outputs is not a numerical reproduction failure.",
+    "exclude": ""
+  },
+  "4mtga": {
+    "stratum": "computationally reproducible",
+    "language": "Python",
+    "summary": "The report executes the original package and reproduces all main results (Tables 2-4); it finds no coding errors and the authors set random seeds.",
+    "note": "Do not treat the report randomized-seed robustness checks as unseeded-original ambiguity.",
+    "exclude": ""
+  },
+  "mepbv": {
+    "stratum": "technical failure",
+    "language": "R",
+    "summary": "The report identifies a missing parenthesis in stan_lmer in FINAL FOR MANUSCRIPT.Rmd, duplicated dplyr::dplyr::select parse errors in update.Rmd, and mutually inconsistent dat_long.csv versions.",
+    "note": "P0 parse failures as shipped; version/file ambiguity is also present. Human repair effort exceeded 20 hours; do not promise a successful rerun under two hours.",
+    "exclude": ""
+  },
+  "fwzbg": {
+    "stratum": "ambiguous",
+    "language": "R",
+    "summary": "Section 2.3: no confidence-interval method/code is supplied; Study 3 outrage CI is reported [.27,.93] versus profile-based [.37,.88], and the report cannot locate the cause without the authors method.",
+    "note": "Primary effects recur. Correcting duplicated author rows or changing models is not used as discrepancy evidence.",
+    "exclude": ""
+  },
+  "ucz85": {
+    "stratum": "computational issues",
+    "language": "R; Python; MATLAB",
+    "summary": "The report finds a published 95% CI upper bound of +.05 where the original-data reproduction gives -.05; the beta=-.12 main result otherwise recurs.",
+    "note": "P2 sign/reporting error; original regression function can generate missing beta/CI output without changing specification. Primary paper Code availability specifies R/Python/MATLAB. OSF uses a public GitHub provider, not its empty osfstorage provider.",
+    "exclude": "Full original package includes MATLAB predictions; an R-only gold-claim subset would need an explicit scope decision."
+  },
+  "vg2kt": {
+    "stratum": "computational issues",
+    "language": "R",
+    "summary": "Direct-reproduction Table 4: low-complexity natural-phenomenon prevalence is reported .95 [.86,1.04] versus .91 [.82,1.00]; social prevalence .52 [.37,.67] versus .44 [.32,.55].",
+    "note": "P2 secondary predicted values; do not use the alternative non-phylogenetic regressions in the appendix as computational evidence.",
+    "exclude": ""
+  },
+  "ek7dy": {
+    "stratum": "computationally reproducible",
+    "language": "R",
+    "summary": "The report reproduces the main original outputs; it then identifies 76 vaccinated participants coded NA and changes the code for a separate correction/robustness exercise.",
+    "note": "Preserved original output despite a coding concern belongs in success; do not call corrected-code changes nonrecurrence.",
+    "exclude": ""
+  },
+  "ghkn9": {
+    "stratum": "ambiguous",
+    "language": "R",
+    "summary": "The report reproduces results from two supplied data versions, but explicitly says it remains unclear which undocumented older/most-recent dataset should reproduce the published article.",
+    "note": "Raw data/cleaning absent; original uncentered code still reproduces the main table. Whether both versions matching means any numerical abstention is justified needs review.",
+    "exclude": "Both candidate data versions reproduce the main numerical results; no demonstrably choice-dependent numerical claim established."
+  }
+}

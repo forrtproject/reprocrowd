@@ -1,0 +1,171 @@
+{
+ "gold_id": "G-21",
+ "gold_version": "1.1",
+ "cand_id": "I4R-7cd2s",
+ "doi": "10.1177/09567976241251741",
+ "title": "Learning From Aggregated Opinion",
+ "stratum_drawn": "computational issues",
+ "paper_url": "https://cognition.princeton.edu/sites/g/files/toruqf3386/files/documents/Oktar_Learning_From_Aggregated_Opinion.pdf",
+ "package": {
+  "url": "https://osf.io/dexuy/",
+  "version_pin": "E1_analysis.R: OSF file 6574cabf52cc2114b71bb866 version 1, SHA-256 fbecf46569ace2c2e914a702a1aa5eff57c41d1deae0d2cf7c29a955345ecddf; E3pilot_analysis.R: OSF file 6574cf3b666e100f9a1a7cd3 version 1, SHA-256 a884dd5200b76abe48dff4df42c59af3fb0782de4ea71d6a0e82f3c97bb5122c; pilot2_analysis.R: OSF file 6574d40f74f361149f2e444c version 1, SHA-256 486c71e034a61f8ed2766dcb296b4ae532c9c2de27c2439a7b49e1a2955882ef; pilot1_analysis.R: OSF file 6574d45174f36114a02e44f5 version 1, SHA-256 b92d4b870440e3083d5b32891eb4804fa3171d9ae81801fb943f55a4d4d47a0e; E3_analysis.R: OSF file 65f0dcdb4dfd8c0e4027f312 version 1, SHA-256 c6144f8e7806007ea7b768392f8fffcde3e251a9677ad999c4d1facd2d6397c4; E2_analysis.R: OSF file 65f0e79e8520370ea48809bd version 1, SHA-256 25e1d84c48ef7817ed94dda774b7620d7692790d08cb173b05106bacca927cb0",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/6a216eefee84266e775b8113/",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "label_confidence": "medium",
+ "requires_human_rerun": null,
+ "corrections": [
+  {
+   "version": "1.1",
+   "change": "Add two non-scoring C1 diagnostics for AIC 1721.98; retain discrepant/P2 and source-report scoring reference 1766.298.",
+   "reason": "The shipped expression uses formula nesting; the I()-protected proportion and the documented mixed model with precomputed Proportion reproduce 1722 only under changed specifications.",
+   "evidence": "pilot/claude/G-21-certificate.json C18/DEF-004; pilot/sol/G-21-certificate.json C21; pinned E3_analysis.R lines 190, 194-197, 239-240; Sol R terms() verification"
+  }
+ ],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Experiment 3 proportional-opinion heuristic fit",
+   "exhibit": "Experiment 3 Results, numerical heuristic-comparison paragraph following Figure 8",
+   "page": 1021,
+   "quantity": "AIC",
+   "reported": "1722",
+   "expected_status": "discrepant",
+   "reference_recomputed": 1766.298,
+   "tolerance": "Nearest integer for the article’s approximate AIC; 1766 is materially different from 1722.",
+   "severity": "P2",
+   "cause": "Shipped formula uses R formula nesting rather than the intended arithmetic proportion.",
+   "evidence": "https://osf.io/download/6a216eefee84266e775b8113/ section 2.3 (p.7) and Table 3 (p.8); likelihood-only row. Pinned E3_analysis.R contains the corresponding executable lmer/AIC expression at lines 239-240; the source uses the same formula.",
+   "rationale": "The original article prints approximately 1722, whereas the source obtains 1766.298 from the original model predictions and AIC procedure. This is separate from the later RMSE-versus-MAE robustness comparison. Pilot diagnostics explain the discrepancy: R parses (t/(t+f)) as terms t and t:f. Protecting the arithmetic with I() gives AIC 1721.98145543401; the Sol pilot independently gets 1721.9814554340073 using the precomputed Proportion variable and documented mixed-effects option. Both diagnostics change how the predictor is specified relative to the executable nested expression and are non-scoring.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/6a216eefee84266e775b8113/ section 2.3 (p.7) and Table 3 (p.8); likelihood-only row. Pinned E3_analysis.R contains the corresponding executable lmer/AIC expression at lines 239-240; the source uses the same formula.",
+   "reference_scope": "Authors executable mixed-effects heuristic model; source-report run, not the fixed-effects Figure 8 bars",
+   "diagnostic_results": [
+    {
+     "value": 1721.98145543401,
+     "provenance": "agent_rerun",
+     "evidence": "pilot/claude/G-21-certificate.json C18 and DEF-004; pilot output E3_results.json AIC_lmer_proportion_I. Sol R terms() check: ~(t/(t+f)) yields t and t:f; ~I(t/(t+f)) yields the arithmetic predictor.",
+     "scope": "Diagnostic replacement of the shipped heuristic formula by I(t/(t+f)), with the same participant/item random intercepts. Changes the fitted specification; not lossless and not a scoring reference.",
+     "is_scoring_reference": false
+    },
+    {
+     "value": 1721.9814554340073,
+     "provenance": "agent_rerun",
+     "evidence": "pilot/sol/G-21-certificate.json C21; outputs/recomputed.json E3 aic_mixed_REML.Proportion; E3_analysis.R lines 190 and 194-197.",
+     "scope": "Diagnostic mixed-effects fit using the precomputed arithmetic Proportion variable and the authors' documented lmer/random-intercept option, default REML. Default fixed-effects AIC is 3299.089276221288. Does not execute the shipped nested heuristic expression unchanged and does not replace its 1766.298 scoring reference.",
+     "is_scoring_reference": false
+    }
+   ],
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": "Shipped E3_analysis.R line 240 computes this AIC (AIC(lmer(post_j ~ (t / (t + f)) + (1|Subject) + (1|lab)))) and the reproducer's script uses the identical formula, so unchanged code gives 1766.3, not ≈1722. A 44-point gap is not rounding."
+  },
+  {
+   "id": "C2",
+   "claim": "Experiment 3 prior-only heuristic fit",
+   "exhibit": "Experiment 3 Results, numerical heuristic-comparison paragraph following Figure 8",
+   "page": 1021,
+   "quantity": "AIC",
+   "reported": "922",
+   "expected_status": "match",
+   "reference_recomputed": 922.169,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/6a216eefee84266e775b8113/ section 2.3 (p.7) and Table 3 (p.8); prior-only row. Pinned E3_analysis.R contains the corresponding executable lmer/AIC expression at lines 239-240; the source uses the same formula.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/6a216eefee84266e775b8113/ section 2.3 (p.7) and Table 3 (p.8); prior-only row. Pinned E3_analysis.R contains the corresponding executable lmer/AIC expression at lines 239-240; the source uses the same formula.",
+   "reference_scope": "Authors executable mixed-effects heuristic model; source-report run, not the fixed-effects Figure 8 bars",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Computed by shipped E3_analysis.R line 239. The reproduced value rounds to the printed 922."
+  },
+  {
+   "id": "C3",
+   "claim": "Experiment 3 Bayesian-model fit",
+   "exhibit": "Experiment 3 Results, numerical heuristic-comparison paragraph following Figure 8",
+   "page": 1021,
+   "quantity": "AIC",
+   "reported": "410",
+   "expected_status": "match",
+   "reference_recomputed": 410.086,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/6a216eefee84266e775b8113/ section 2.3 (p.7) and Table 3 (p.8); Bayes row. Pinned E3_analysis.R SHA-256 c6144f8e7806007ea7b768392f8fffcde3e251a9677ad999c4d1facd2d6397c4, lines 194-197, explicitly instructs adding (1|lab)+(1|Subject) and using lmer for the mixed-effects option. Reproducer E3_FD.R at https://osf.io/uyrq8/ instantiates those models (lines 494-496 in the downloaded copy).",
+   "rationale": "The source Table 3 reproduces the printed main-text AIC using the mixed-effects option explicitly specified in the authors' script comments. The reproducer instantiates that documented model with item and participant random intercepts. This supports match for the intended mixed-effects procedure; it does not establish equivalence to the default fixed-effects branch or a lossless change between different statistical models.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/6a216eefee84266e775b8113/ section 2.3 (p.7) and Table 3 (p.8); Bayes row. Pinned E3_analysis.R SHA-256 c6144f8e7806007ea7b768392f8fffcde3e251a9677ad999c4d1facd2d6397c4, lines 194-197, explicitly instructs adding (1|lab)+(1|Subject) and using lmer for the mixed-effects option. Reproducer E3_FD.R at https://osf.io/uyrq8/ instantiates those models (lines 494-496 in the downloaded copy).",
+   "reference_scope": "Authors documented mixed-effects option instantiated by the reproducer; not a default lm/dredge execution or a fixed-effects Figure 8 reference",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "The reproduced value rounds to the printed ≈410."
+  },
+  {
+   "id": "C4",
+   "claim": "Experiment 3 UPCO-model fit",
+   "exhibit": "Experiment 3 Results, numerical heuristic-comparison paragraph following Figure 8",
+   "page": 1021,
+   "quantity": "AIC",
+   "reported": "497",
+   "expected_status": "match",
+   "reference_recomputed": 497.267,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/6a216eefee84266e775b8113/ section 2.3 (p.7) and Table 3 (p.8); UPCO row. Pinned E3_analysis.R SHA-256 c6144f8e7806007ea7b768392f8fffcde3e251a9677ad999c4d1facd2d6397c4, lines 194-197, explicitly instructs adding (1|lab)+(1|Subject) and using lmer for the mixed-effects option. Reproducer E3_FD.R at https://osf.io/uyrq8/ instantiates those models (lines 494-496 in the downloaded copy).",
+   "rationale": "The source Table 3 reproduces the printed main-text AIC using the mixed-effects option explicitly specified in the authors' script comments. The reproducer instantiates that documented model with item and participant random intercepts. This supports match for the intended mixed-effects procedure; it does not establish equivalence to the default fixed-effects branch or a lossless change between different statistical models.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/6a216eefee84266e775b8113/ section 2.3 (p.7) and Table 3 (p.8); UPCO row. Pinned E3_analysis.R SHA-256 c6144f8e7806007ea7b768392f8fffcde3e251a9677ad999c4d1facd2d6397c4, lines 194-197, explicitly instructs adding (1|lab)+(1|Subject) and using lmer for the mixed-effects option. Reproducer E3_FD.R at https://osf.io/uyrq8/ instantiates those models (lines 494-496 in the downloaded copy).",
+   "reference_scope": "Authors documented mixed-effects option instantiated by the reproducer; not a default lm/dredge execution or a fixed-effects Figure 8 reference",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "The reproduced value rounds to the printed ≈497."
+  },
+  {
+   "id": "C5",
+   "claim": "Experiment 3 Competence-model fit",
+   "exhibit": "Experiment 3 Results, numerical heuristic-comparison paragraph following Figure 8",
+   "page": 1021,
+   "quantity": "AIC",
+   "reported": "507",
+   "expected_status": "match",
+   "reference_recomputed": 506.928,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/6a216eefee84266e775b8113/ section 2.3 (p.7) and Table 3 (p.8); Competence row. Pinned E3_analysis.R SHA-256 c6144f8e7806007ea7b768392f8fffcde3e251a9677ad999c4d1facd2d6397c4, lines 194-197, explicitly instructs adding (1|lab)+(1|Subject) and using lmer for the mixed-effects option. Reproducer E3_FD.R at https://osf.io/uyrq8/ instantiates those models (lines 494-496 in the downloaded copy).",
+   "rationale": "The source Table 3 reproduces the printed main-text AIC using the mixed-effects option explicitly specified in the authors' script comments. The reproducer instantiates that documented model with item and participant random intercepts. This supports match for the intended mixed-effects procedure; it does not establish equivalence to the default fixed-effects branch or a lossless change between different statistical models.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/6a216eefee84266e775b8113/ section 2.3 (p.7) and Table 3 (p.8); Competence row. Pinned E3_analysis.R SHA-256 c6144f8e7806007ea7b768392f8fffcde3e251a9677ad999c4d1facd2d6397c4, lines 194-197, explicitly instructs adding (1|lab)+(1|Subject) and using lmer for the mixed-effects option. Reproducer E3_FD.R at https://osf.io/uyrq8/ instantiates those models (lines 494-496 in the downloaded copy).",
+   "reference_scope": "Authors documented mixed-effects option instantiated by the reproducer; not a default lm/dredge execution or a fixed-effects Figure 8 reference",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "The reproduced value rounds to the printed ≈507."
+  }
+ ],
+ "notes": {
+  "claim_list": "The five numerical AIC targets occur in the Experiment 3 Results paragraph following Figure 8 (p.1021), with approximation symbols. They are not exact readings from the Figure 8 fixed-effects bars. The source report Table 3 supplies mixed-effects AICs: C1/C2 have executable lmer expressions in the pinned script; C3-C5 use its documented mixed-effects option, instantiated by the reproducer.",
+  "sol": "C1-C5 target the printed numerical heuristic-comparison paragraph on p.1021, not values extracted from the Figure 8 fixed-effects bars. The paper describes Figure 8 as fixed effects but the source Table 3 reports mixed-effects values. C1/C2 are executable lmer expressions in the pinned script. C3-C5 follow the authors' explicit mixed-effects instruction (add participant/item random intercepts and use lmer), instantiated by the reproducer; their references are scoped to that documented intended procedure, not the default lm/dredge branch. No equivalence of fixed- and mixed-effects models is asserted. The 1722-versus-1766.298 difference remains a P2 discrepancy in the shipped heuristic expression. No RMSE/MAE robustness specification supplies these references. v1.1 adds both pilot explanations for C1 as explicitly non-scoring diagnostics. They converge on an arithmetic-proportion mixed model; merely switching between fixed and mixed effects does not itself establish the shipped expression is correct. No C1 status, severity, or scoring-reference change is made.",
+  "claude": "No paper alternative under R7. The exhibit now points to the Results paragraph after Fig. 8; references follow the authors' documented mixed-effects procedure. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "Claim list: the exhibit is given as 'Figure 6', but in the published paper the Experiment 3 AIC comparison is Fig. 8 (p. 1021). Provenance: the shipped E3_analysis.R (SHA matches pin) computes fixed-effects lm AICs for Bayes/UPCO/Competence via MuMIn::dredge, with a comment saying to switch to lmer with (1|lab)+(1|Subject) for the mixed models. Prior-only and proportion AICs are computed with lmer at lines 239-240. The report's Table 3 values for Bayes/UPCO/Competence (410.086/497.267/506.928) come from lmer models the reproducer added (E3_analysis_FD.R on https://osf.io/uyrq8/), following that comment. The report says this AIC table (supplementary Figure 12) 'was not included in the provided code'. So C3-C5 match only via a trivial reproducer addition. The paper is also internally inconsistent here: it says Fig. 8's AICs are fixed-effects estimates, yet the printed values coincide with the mixed-model numbers. C1 severity: I chose P2 rather than P1 because it is a baseline heuristic comparison and the ranking and conclusion are unchanged. P1 is arguable, since beating the heuristics is a stated Exp 3 hypothesis. My own hypothesis, not the report's: inside an R formula, t/(t+f) is nesting syntax, not a proportion (no I()). That could explain why the code's value differs from whatever produced 1722. The report's headline is that results 'reproduce almost perfectly'. Some scripts (E1, parts of E3 after the AIC section) needed minor fixes to run. Hence 'computationally reproducible' is an acceptable alternative."
+ }
+}

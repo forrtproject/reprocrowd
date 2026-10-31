@@ -1,0 +1,96 @@
+{
+  "gold_id": "G-22",
+  "expected_validation_status": "computational issues",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.07849,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "The state-model coefficient SE was truncated rather than rounded.",
+      "evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
+      "rationale": "The source gives .07849 in the original Pandoc output, which rounds to .08 rather than the article’s .07.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C2",
+      "expected_status": "discrepant",
+      "reference_recomputed": 5.28,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "The printed intercept differs from the original rendered analysis output.",
+      "evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
+      "rationale": "The source reports an intercept of 5.28, rather than 5.25.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C3",
+      "expected_status": "discrepant",
+      "reference_recomputed": [
+        5.11,
+        5.44
+      ],
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "The printed intercept CI differs from the original rendered analysis output.",
+      "evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
+      "rationale": "The source gives [5.11, 5.44], rather than [5.08, 5.43].",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C4",
+      "expected_status": "discrepant",
+      "reference_recomputed": [
+        0.09,
+        0.4
+      ],
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "Negative signs were added to both bounds of the life-expectancy CI.",
+      "evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
+      "rationale": "The source identifies both negative signs as erroneous. Static inspection of the original rendered HTML at https://osf.io/download/8wpgv/ confirms 0.09–0.40, without running or altering an analysis.",
+      "reference_provenance": "shipped_output",
+      "reference_evidence": "Static inspection of the authors' rendered individual-level HTML https://osf.io/download/8wpgv/ (pinned in package.version_pin); original confidence-interval output. Corroborating human report: https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
+      "reference_scope": "static_check"
+    },
+    {
+      "id": "C5",
+      "expected_status": "discrepant",
+      "reference_recomputed": [
+        0.03,
+        0.36
+      ],
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "A negative sign was added to the lower income-group CI bound.",
+      "evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
+      "rationale": "The source identifies the lower-bound negative sign as erroneous. Static inspection of the original rendered HTML at https://osf.io/download/8wpgv/ confirms 0.03–0.36.",
+      "reference_provenance": "shipped_output",
+      "reference_evidence": "Static inspection of the authors' rendered individual-level HTML https://osf.io/download/8wpgv/ (pinned in package.version_pin); original confidence-interval output. Corroborating human report: https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
+      "reference_scope": "static_check"
+    },
+    {
+      "id": "C6",
+      "expected_status": "match",
+      "reference_recomputed": 0.24,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ — §2 Computational Reproducibility, pp. 4–5: “typos”.",
+      "reference_scope": "authors_workflow"
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "Original R is embedded in the public HTML. The source reconstructs an analysis dataset using the embedded original preprocessing code because one preprocessed spreadsheet has misnamed columns. Imputation changes, new control variables and newer life-expectancy data are excluded."
+}

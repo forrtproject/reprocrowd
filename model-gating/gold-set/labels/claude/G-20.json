@@ -1,0 +1,65 @@
+{
+ "gold_id": "G-20",
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "discrepant",
+   "reference_recomputed": "18.72",
+   "tolerance": "2 dp",
+   "severity": "P2",
+   "cause": "Deposited raw data has 217 rows vs 218 reported; exclusion count differs",
+   "evidence": "https://osf.io/download/wqxbe/ p.3: 'the authors reported that Mage= 18.69, SDage= 1.84. However, using the provided data and code, our replication team got Mage= 18.72, SDage= 1.83.'",
+   "rationale": "Sample descriptive does not recur from the shipped data/code; secondary.",
+   "reported_check": "paper not accessed; relying on report's quote"
+  },
+  {
+   "id": "C2",
+   "expected_status": "discrepant",
+   "reference_recomputed": "1.83",
+   "tolerance": "2 dp",
+   "severity": "P2",
+   "cause": "Same data mismatch as C1 (not rounding)",
+   "evidence": "https://osf.io/download/wqxbe/ p.3 (same quote as C1)",
+   "rationale": "Small, but same root cause as C1 rather than rounding/version noise, so discrepant rather than close.",
+   "reported_check": "paper not accessed; relying on report's quote"
+  },
+  {
+   "id": "C3",
+   "expected_status": "discrepant",
+   "reference_recomputed": "seven",
+   "tolerance": "exact count",
+   "severity": "P2",
+   "cause": "Shipped code excludes 7 non-serious participants, paper says 5",
+   "evidence": "https://osf.io/download/wqxbe/ p.3-4: 'the authors stated in the main text that they excluded five participants who self-reported that they did not take the study seriously, but upon running the provided code, seven participants were excluded.'",
+   "rationale": "Count differs as shipped.",
+   "reported_check": "paper not accessed; relying on report's quote"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "2 dp",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/wqxbe/ p.2: 'The authors found that anti-Black prejudice predicted more negative associations ... Our replication team successfully reproduced these results with a few minor discrepancies (reported in the next section).'",
+   "rationale": "Report says main Study 1 regressions reproduced; the listed discrepancies concern only N, age and exclusions. No recomputed coefficient is printed.",
+   "reported_check": "paper not accessed"
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "2 dp",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/wqxbe/ p.2 (same quote as C4)",
+   "rationale": "Covered by the report's statement that main Study 1 results reproduced; no value printed.",
+   "reported_check": "paper not accessed"
+  }
+ ],
+ "label_confidence": "medium",
+ "notes": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "Could not access the paper: download attempt returned a different article (PLOS ONE 'Implicit race attitudes modulate visual information extraction for trustworthiness') under this DOI, so it was discarded. C1-C3 reported values match the report's quotes. Report also notes 4 extra outlier exclusions in the main analyses not stated in text/prereg (robustness-related, not scored). C4/C5 coefficients are never printed in the report, so 'match' rests on its general statement; a reconciler might prefer not_checkable if requiring a value. Report focused on Studies 1 and 3 only; face-model construction not reproduced (out of scope per claims-file note)."
+}

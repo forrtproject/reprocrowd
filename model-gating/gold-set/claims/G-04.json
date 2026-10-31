@@ -1,0 +1,122 @@
+{
+  "gold_id": "G-04",
+  "cand_id": "I4R-t68dc",
+  "doi": "10.1177/09567976241249183",
+  "title": "Risky-Choice Framing Effects Result Partly From Mismatched Option Descriptions in Gains and Losses",
+  "stratum_drawn": "computationally reproducible",
+  "paper_url": "https://doi.org/10.1177/09567976241249183",
+  "package": {
+    "url": "https://osf.io/92jt3/",
+    "version_pin": "MTurk Survey.pdf: OSF file 65fdb97fae6a2400421c71b0 version 1, SHA-256 af89e09047e97492fd27a48b84ae4d2477432ce6032294ec7373b773485b8a8e; REP (Student) Survey.pdf: OSF file 65fdb991c55141002dcb6088 version 1, SHA-256 620cd40bfebd35b73b72eeb79194d020bf7243193420fe3156a45d43a1554b73; BOTH_Analyses.R: OSF file 65ef40e58992ec0ca3788529 version 1, SHA-256 61ae079aa1e1b667f560749a307287955beeed841bbfe3896573936b0ff3d671; MTurk_Analyses.R: OSF file 65ef40f04dfd8c0c6527f384 version 1, SHA-256 377a122d70142c3eb1c818945e8fac204c3142b3bb29f5c5489f13e7ed639105; MTurk_Cleaning.html: OSF file 65ef41088992ec0c9f788973 version 1, SHA-256 7de7bb309923168714cb13f8728750fe6b937e1b64f24a465d8cfbcac84a1a1c; MTurk_Cleaning.Rmd: OSF file 65ef41144dfd8c0c6527f391 version 1, SHA-256 0bdc8ebe680a0147dd5936ffa3feb21da72871b1e956f0e9806fb07f142a3f20; REP_Analyses.R: OSF file 65ef41298520370caa880e7e version 1, SHA-256 73cf8d307d478837ca1c0e7e7fafa49180523d669692045ac0ced3aa7ccf74ec; Power_Analyses.R: OSF file 65ef443c719c060ca3d49cb1 version 2, SHA-256 2da45c1394d3bbcae2d6ab1af912f7215df08fd1fbb7caef4fb9a151b547b7e4; REP_Cleaning.Rmd: OSF file 65ef48b5e5e51c0ce5bc56d9 version 1, SHA-256 9c6cd27ce2f19ed85b3c7ee80b5a902b49ac188234d29d03511a4fa5525c0761; REP_Cleaning.html: OSF file 65ef48db719c060cabd49cd7 version 1, SHA-256 62c4f5a79d8380e2d87e0fa309151a1fb14056866ae1640dd1c9fbe65ec48d11; CODEBOOK.pdf: OSF file 66109586bba39a224a729eee version 1, SHA-256 778feadca3bcb198904bbbb1da321cbb7534e47ab1ccf697d89b4a7a8c936cb8; README.pdf: OSF file 66109842e65c6029bb7d9f58 version 1, SHA-256 242edb9d1583b85df918bf51a41549714aae9348b792cdccceb009fca4ad142b; AsPredicted MTurk.pdf: OSF file 65ef3fde4dfd8c0c5e27f32c version 2, SHA-256 27c6f4d16a1a238cbf02e7435c144e9f8addc73229eb57361485cd383112ce56; AsPredicted REP.pdf: OSF file 65ef3fe88520370cbd8801b4 version 2, SHA-256 8350ac6f96a827305548f39554682899a164e122549a9490db8ece95c0a309e3; Main Supplemental Material.pdf: OSF file 65ef4297e5e51c0ccabc62cc version 1, SHA-256 e19eb6437e966f2fe588eb8d482384e0cfcf24c2396787e1bb96fc08916420ad; StatCheck Main Article.pdf: OSF file 65ef42d7719c060ca7d49a35 version 1, SHA-256 0c6c036c46dfad3b95e169cce131dc2672ae77ba5f43e082056329f61158d3c8; StatCheck Supplemental Material.pdf: OSF file 65ef42e1719c060ca3d49ba4 version 1, SHA-256 16f10809a185c4be95c84f757886736da6c21b2607425898256ae90c55aa1b0f; DeKay Dou 2024 Accepted Manuscript.pdf: OSF file 66109210bba39a224b729eb5 version 3, SHA-256 53303707080100b927aa5096566ecb56cbfb618e673e960f5c432481ce008020; /Data and R Code/MTurk_RawData.csv: OSF file 64bc2a46465d1406e9a318f4 version 1, SHA-256 963e082d835102b32526ce92add95e05b8ab054c2cd35d1ad309e89218197e44; /Data and R Code/REP_RawData.csv: OSF file 64bc2a64b49dcb06e7736af0 version 1, SHA-256 0e93c56544a906eddb835d6320262cc1b0ff52f6069669d99b10c36b6fb5631d; /Data and R Code/BOTH_CleanData.csv: OSF file 65eca46b4dfd8c0a4627f372 version 2, SHA-256 e76c0ca6152f16ea5aadf63ed38a39a115c23ae90bb3bf53d67fee8b2be94c2b; /Data and R Code/MTurk_CleanData.csv: OSF file 65eca4778520370aa68804d5 version 1, SHA-256 d0a1908665e614b10bda5efe4cb325fd437e2079332406592eeb973848bf3134; /Data and R Code/REP_CleanData.csv: OSF file 65eca4a2e5e51c0a9dbc54df version 1, SHA-256 fa8fa4a2d65759d240a823d7a8a5ea8458e2b8ad808aae2ecc41dc857983f6cb; /EVA and FTT Predictions for 18 Cells.xlsx: OSF file 65ef40428992ec0c9f7887d0 version 1, SHA-256 6d13eab4f9e891a1f2ccf6d1d9c486f13b113119ceb422149e2522ae70a1c54f",
+    "language": "R",
+    "code_format": "files",
+    "data_files": [
+      {
+        "path": "/Data and R Code/MTurk_RawData.csv",
+        "osf_file_id": "64bc2a46465d1406e9a318f4",
+        "version": 1,
+        "sha256": "963e082d835102b32526ce92add95e05b8ab054c2cd35d1ad309e89218197e44",
+        "url": "https://osf.io/download/nzs8a/"
+      },
+      {
+        "path": "/Data and R Code/REP_RawData.csv",
+        "osf_file_id": "64bc2a64b49dcb06e7736af0",
+        "version": 1,
+        "sha256": "0e93c56544a906eddb835d6320262cc1b0ff52f6069669d99b10c36b6fb5631d",
+        "url": "https://osf.io/download/r3x8u/"
+      },
+      {
+        "path": "/Data and R Code/BOTH_CleanData.csv",
+        "osf_file_id": "65eca46b4dfd8c0a4627f372",
+        "version": 2,
+        "sha256": "e76c0ca6152f16ea5aadf63ed38a39a115c23ae90bb3bf53d67fee8b2be94c2b",
+        "url": "https://osf.io/download/qkzcn/"
+      },
+      {
+        "path": "/Data and R Code/MTurk_CleanData.csv",
+        "osf_file_id": "65eca4778520370aa68804d5",
+        "version": 1,
+        "sha256": "d0a1908665e614b10bda5efe4cb325fd437e2079332406592eeb973848bf3134",
+        "url": "https://osf.io/download/vjq8t/"
+      },
+      {
+        "path": "/Data and R Code/REP_CleanData.csv",
+        "osf_file_id": "65eca4a2e5e51c0a9dbc54df",
+        "version": 1,
+        "sha256": "fa8fa4a2d65759d240a823d7a8a5ea8458e2b8ad808aae2ecc41dc857983f6cb",
+        "url": "https://osf.io/download/qdm2k/"
+      },
+      {
+        "path": "/EVA and FTT Predictions for 18 Cells.xlsx",
+        "osf_file_id": "65ef40428992ec0c9f7887d0",
+        "version": 1,
+        "sha256": "6d13eab4f9e891a1f2ccf6d1d9c486f13b113119ceb422149e2522ae70a1c54f",
+        "url": "https://osf.io/download/58bwj/"
+      }
+    ]
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/zb642/",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Framing effect in the CloudResearch sample",
+      "exhibit": "Results, binary choices",
+      "page": null,
+      "quantity": "Frame coefficient",
+      "reported": "2.18"
+    },
+    {
+      "id": "C2",
+      "claim": "Framing effect in the student sample",
+      "exhibit": "Results, binary choices",
+      "page": null,
+      "quantity": "Frame coefficient",
+      "reported": "0.96"
+    },
+    {
+      "id": "C3",
+      "claim": "Valence-difference effect in the CloudResearch sample",
+      "exhibit": "Results, binary choices",
+      "page": null,
+      "quantity": "ValenceDiff coefficient",
+      "reported": "1.04"
+    },
+    {
+      "id": "C4",
+      "claim": "Valence-difference effect in the student sample",
+      "exhibit": "Results, binary choices",
+      "page": null,
+      "quantity": "ValenceDiff coefficient",
+      "reported": "0.68"
+    },
+    {
+      "id": "C5",
+      "claim": "Frame effect controlling for ValenceDiff in the CloudResearch sample",
+      "exhibit": "Results, binary choices",
+      "page": null,
+      "quantity": "Frame coefficient",
+      "reported": "1.20"
+    },
+    {
+      "id": "C6",
+      "claim": "Frame effect controlling for ValenceDiff in the student sample",
+      "exhibit": "Results, binary choices",
+      "page": null,
+      "quantity": "Frame coefficient",
+      "reported": "0.66"
+    }
+  ],
+  "notes": "",
+  "corrections": [
+    {
+      "round": 1,
+      "claim_ids": [],
+      "reason": "Added exact data-file IDs, versions, and SHA-256 hashes from the archived OSF inventory; these augment the existing code pins."
+    }
+  ]
+}

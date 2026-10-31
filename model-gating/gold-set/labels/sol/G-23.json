@@ -1,0 +1,74 @@
+{
+  "gold_id": "G-23",
+  "expected_validation_status": "technical failure",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The deposited script uses GMHWG without constructing the Group 2 object.",
+      "evidence": "https://osf.io/download/3c2rx/ — CODECHECK reviewer notes and the archived Figshare v1 script: “GMHWG”.",
+      "rationale": "The missing Group 2 object blocks the selected primary across-service comparisons or combined-sample correlation. The checker’s correspondence-repaired script is not the shipped Figshare v1 script."
+    },
+    {
+      "id": "C2",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The deposited script uses GMHWG without constructing the Group 2 object.",
+      "evidence": "https://osf.io/download/3c2rx/ — CODECHECK reviewer notes and the archived Figshare v1 script: “GMHWG”.",
+      "rationale": "The missing Group 2 object blocks the selected primary across-service comparisons or combined-sample correlation. The checker’s correspondence-repaired script is not the shipped Figshare v1 script."
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": 9.446511875404669,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "Fresh Figshare v1 file 39347480 survey_2021.R SHA-256 ce9f3a018da08164caa62e0b601399ee740bed9b2f2cd4311bfb47bbf3c4fa5e; Sol 2026-10-30 verification /tmp/scratch_gold3/sol/G23/check-sus.log (16 unchanged source expressions, no GMHWG); /tmp/scratch_gold3/sol/G23/check.log (statement-by-statement). Corroboration: pilot/sol/G-23-certificate.json C36/C37 and pilot/claude/G-23-certificate.json C13.",
+      "rationale": "The paired SUS t test uses SUS_ScoresGroup2 built directly from GM_HWG_SUS.csv; it does not require the absent GMHWG task-score object. t = 9.446511875404669 rounds to 9.45.",
+      "reference_provenance": "agent_rerun",
+      "reference_evidence": "Fresh Figshare v1 file 39347480 survey_2021.R SHA-256 ce9f3a018da08164caa62e0b601399ee740bed9b2f2cd4311bfb47bbf3c4fa5e; Sol 2026-10-30 verification /tmp/scratch_gold3/sol/G23/check-sus.log (16 unchanged source expressions, no GMHWG); /tmp/scratch_gold3/sol/G23/check.log (statement-by-statement). Corroboration: pilot/sol/G-23-certificate.json C36/C37 and pilot/claude/G-23-certificate.json C13.",
+      "reference_scope": "Independent SUS branch of pinned Figshare v1 survey_2021.R, original statements/data/ordering; View disabled in whole-script diagnostic; only the dependency-complete SUS expressions needed in isolated check. No missing GMHWG object was reconstructed."
+    },
+    {
+      "id": "C4",
+      "expected_status": "discrepant",
+      "reference_recomputed": 1137.5,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "Wrong printed W statistic; pattern consistent with transcription, with the p value and CI reproducing.",
+      "evidence": "Fresh Figshare v1 file 39347480 survey_2021.R SHA-256 ce9f3a018da08164caa62e0b601399ee740bed9b2f2cd4311bfb47bbf3c4fa5e; Sol 2026-10-30 verification /tmp/scratch_gold3/sol/G23/check-sus.log (16 unchanged source expressions, no GMHWG); /tmp/scratch_gold3/sol/G23/check.log (statement-by-statement). Corroboration: pilot/sol/G-23-certificate.json C36/C37 and pilot/claude/G-23-certificate.json C13.",
+      "rationale": "The SUS rank-sum test uses SUS_ScoresGroup1$BMSUS and SUS_ScoresGroup2$HWGSUS without GMHWG. W = 1137.5 differs from 1037.5, but p = 9.680468961992261e-7 and the CI [12.50005117286500, 29.99995511670494] match the printed <.001 and [12.5, 30.0]. This statistic-only error is P2 under amended R2; no changed inferential interpretation is established.",
+      "reference_provenance": "agent_rerun",
+      "reference_evidence": "Fresh Figshare v1 file 39347480 survey_2021.R SHA-256 ce9f3a018da08164caa62e0b601399ee740bed9b2f2cd4311bfb47bbf3c4fa5e; Sol 2026-10-30 verification /tmp/scratch_gold3/sol/G23/check-sus.log (16 unchanged source expressions, no GMHWG); /tmp/scratch_gold3/sol/G23/check.log (statement-by-statement). Corroboration: pilot/sol/G-23-certificate.json C36/C37 and pilot/claude/G-23-certificate.json C13.",
+      "reference_scope": "Independent SUS branch of pinned Figshare v1 survey_2021.R, original statements/data/ordering; View disabled in whole-script diagnostic; only the dependency-complete SUS expressions needed in isolated check. No missing GMHWG object was reconstructed."
+    },
+    {
+      "id": "C5",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The deposited script uses GMHWG without constructing the Group 2 object.",
+      "evidence": "https://osf.io/download/3c2rx/ — CODECHECK reviewer notes and the archived Figshare v1 script: “GMHWG”.",
+      "rationale": "The missing Group 2 object blocks the selected primary across-service comparisons or combined-sample correlation. The checker’s correspondence-repaired script is not the shipped Figshare v1 script."
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "The original Figshare v1 script still blocks the primary task-score claims C1, C2 and C5 through missing GMHWG, so the paper remains technical failure. The independent SUS branch computes C3/C4 without reconstructing that object. Sol freshly downloaded v1, confirmed the existing ce9f3a01... source pin and 86898d52... archive pin, checked the SUS data against the pinned archive extraction, and executed 16 unchanged dependency-complete SUS expressions successfully. The broader statement-by-statement check agrees; it is not a successful whole-script run. The audit/v1.1 check used SHA-256 5527a2a9..., a substantively different script (including changed figure logic), not Figshare v1 or a simple newline variant. Therefore the claims pin is retained, and the audit log alone is not the scoring provenance. Both pilot certificates corroborate the SUS values; Sol's pilot additionally checked W under R 4.2.2.",
+  "requires_human_rerun": false,
+  "corrections": [
+    {
+      "version": "1.1",
+      "change": "C3 changes from not_checkable/P0 to match; C4 changes from not_checkable/P0 to discrepant/P2, with agent_rerun references; retain the verified v1 pin and paper technical failure.",
+      "reason": "The SUS branch is independent of missing GMHWG. A fresh run of pinned v1 gives t = 9.446511875404669 and W = 1137.5; the audit's different source hash does not justify changing the correct pin.",
+      "evidence": "Figshare API article 22132940 version 1 and file 39347480; Sol /tmp/scratch_gold3/sol/G23/check-sus.log; pilot/sol/G-23-certificate.json C36/C37; pilot/claude/G-23-certificate.json C13"
+    }
+  ]
+}

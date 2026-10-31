@@ -1,0 +1,76 @@
+{
+ "gold_id": "G-03",
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "match",
+   "reference_recomputed": "2.14e-4",
+   "tolerance": "report gives 3 significant figures; shipped CSV 2 sf; printed value has 5 sf",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/vmjf4/ section 2.1: 'We are able to computationally reproduce all key results and figures using the same version of R and all listed packages ... including under variation of randomization seed.'; section 2.2 Table 1 'Original' Pyramids column: 'Human children 2.14e-4'; package Study 1a/tableS3.csv (X021D rows, p.adj): '2.1e-04'",
+   "rationale": "Report states all key results reproduce (section 2.1). Its Table 1 'Original' column (captioned as the paper's values, so possibly quoted rather than re-run) and the authors' shipped tableS3.csv output both agree with the printed value, at 3 sf and 2 sf respectively.",
+   "reported_check": "confirmed in paper (Supplementary Information, Supplementary Table 2 p.19: 2.1420e-04)"
+  },
+  {
+   "id": "C2",
+   "expected_status": "match",
+   "reference_recomputed": "6.83e-9",
+   "tolerance": "report gives 3 significant figures; shipped CSV 2 sf; printed value has 5 sf",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/vmjf4/ section 2.1: 'We are able to computationally reproduce all key results and figures using the same version of R and all listed packages ... including under variation of randomization seed.'; section 2.2 Table 1 'Original' Pyramids column: 'Non-human primates 6.83e-9'; package Study 1a/tableS3.csv (X021D rows, p.adj): '6.8e-09'",
+   "rationale": "Report states all key results reproduce (section 2.1). Its Table 1 'Original' column (captioned as the paper's values, so possibly quoted rather than re-run) and the authors' shipped tableS3.csv output both agree with the printed value, at 3 sf and 2 sf respectively.",
+   "reported_check": "confirmed in paper (Supplementary Information, Supplementary Table 2 p.19: 6.8250e-09)"
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": "4.32e-5",
+   "tolerance": "report gives 3 significant figures; shipped CSV 2 sf; printed value has 5 sf",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/vmjf4/ section 2.1: 'We are able to computationally reproduce all key results and figures using the same version of R and all listed packages ... including under variation of randomization seed.'; section 2.2 Table 1 'Original' Pyramids column: 'Ungulates 4.32e-5'; package Study 1a/tableS3.csv (X021D rows, p.adj): '4.3e-05'",
+   "rationale": "Report states all key results reproduce (section 2.1). Its Table 1 'Original' column (captioned as the paper's values, so possibly quoted rather than re-run) and the authors' shipped tableS3.csv output both agree with the printed value, at 3 sf and 2 sf respectively.",
+   "reported_check": "confirmed in paper (Supplementary Information, Supplementary Table 2 p.19: 4.3180e-05)"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": "3.12e-6",
+   "tolerance": "report gives 3 significant figures; shipped CSV 2 sf; printed value has 5 sf",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/vmjf4/ section 2.1: 'We are able to computationally reproduce all key results and figures using the same version of R and all listed packages ... including under variation of randomization seed.'; section 2.2 Table 1 'Original' Pyramids column: 'Carnivores 3.12e-6'; package Study 1a/tableS3.csv (X021D rows, p.adj): '3.1e-06'",
+   "rationale": "Report states all key results reproduce (section 2.1). Its Table 1 'Original' column (captioned as the paper's values, so possibly quoted rather than re-run) and the authors' shipped tableS3.csv output both agree with the printed value, at 3 sf and 2 sf respectively.",
+   "reported_check": "confirmed in paper (Supplementary Information, Supplementary Table 2 p.19: 3.1200e-06)"
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": "3.29e-8",
+   "tolerance": "report gives 3 significant figures; shipped CSV 2 sf; printed value has 5 sf",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/vmjf4/ section 2.1: 'We are able to computationally reproduce all key results and figures using the same version of R and all listed packages ... including under variation of randomization seed.'; section 2.2 Table 1 'Original' Pyramids column: 'Rodents 3.29e-8'; package Study 1a/tableS3.csv (X021D rows, p.adj): '3.3e-08'",
+   "rationale": "Report states all key results reproduce (section 2.1). Its Table 1 'Original' column (captioned as the paper's values, so possibly quoted rather than re-run) and the authors' shipped tableS3.csv output both agree with the printed value, at 3 sf and 2 sf respectively.",
+   "reported_check": "confirmed in paper (Supplementary Information, Supplementary Table 2 p.19: 3.2860e-08)"
+  },
+  {
+   "id": "C6",
+   "expected_status": "match",
+   "reference_recomputed": "4.54e-5",
+   "tolerance": "report gives 3 significant figures; shipped CSV 2 sf; printed value has 5 sf",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/vmjf4/ section 2.1: 'We are able to computationally reproduce all key results and figures using the same version of R and all listed packages ... including under variation of randomization seed.'; section 2.2 Table 1 'Original' Pyramids column: 'Birds 4.54e-5'; package Study 1a/tableS3.csv (X021D rows, p.adj): '4.5e-05'",
+   "rationale": "Report states all key results reproduce (section 2.1). Its Table 1 'Original' column (captioned as the paper's values, so possibly quoted rather than re-run) and the authors' shipped tableS3.csv output both agree with the printed value, at 3 sf and 2 sf respectively.",
+   "reported_check": "confirmed in paper (Supplementary Information, Supplementary Table 2 p.19: 4.5440e-05)"
+  }
+ ],
+ "label_confidence": "medium",
+ "notes": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "Values confirmed in the published Supplementary Information (static-content.springer.com, MOESM1, Supplementary Table 2). The report's Table 1 'Original' column is captioned as 'the original calculations in the paper', so it may quote the paper rather than show the re-run output; the reproduction verdict comes from the general statement in section 2.1. Its 'Original' tree p-value for human children (1.51e-1) differs from the printed 1.1520e-01, probably a transcription slip; trees are not claimed. The code sets set.seed(123) before the 1000-replicate Monte Carlo z-scores, so the values are deterministic. Mislabelling in the deposit and SI (P3, no numeric consequence): printed Supplementary Table 2 values are the one-sample Wilcoxon tests of normalized z-scores vs 0 (ST1a_plots.R writes these to 'tableS3.csv'), whereas the shipped 'tableS2.csv' holds the paired pyramid-vs-tree test, and the SI Table 2 caption describes the paired test. A checker matching by file name will find different numbers. The report's Z-score normalization finding (code normalizes across metrics within study, unlike the text's equation 3) is a code-vs-description inconsistency. It does not stop the shipped code reproducing the printed values, but a reconciler could treat it as a P2/P3 methods-description issue."
+}

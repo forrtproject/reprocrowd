@@ -1,0 +1,178 @@
+{
+ "gold_id": "G-14",
+ "gold_version": "1.1",
+ "cand_id": "I4R-u6gea",
+ "doi": "10.1038/s41562-024-02024-1",
+ "title": "When combinations of humans and AI are useful: A systematic review and meta-analysis",
+ "stratum_drawn": "computational issues",
+ "paper_url": "https://doi.org/10.1038/s41562-024-02024-1",
+ "package": {
+  "url": "https://osf.io/wrq7c/?view_only=b9e1e86079c048b4bfb03bee6966e560",
+  "version_pin": "AnalysisScript_Final.Rmd SHA-256 e66ec93f15af34b27383f75e3ba58419b206e21dc3f2613ee53730cbc089697e; Data_Extraction.csv SHA-256 9584f9a27a32c567f4763f94ec2fce0434ea3bf2233f74d49a1b0d3f26674b0b",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/m657k/",
+   "description": "Human computational reproduction report."
+  },
+  {
+   "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41562-024-02024-1/MediaObjects/41562_2024_2024_MOESM1_ESM.pdf",
+   "description": "Original article supplementary information."
+  },
+  {
+   "url": "https://osf.io/download/5vqd9/?view_only=b9e1e86079c048b4bfb03bee6966e560",
+   "description": "Original Data_Extraction.csv analysis input."
+  }
+ ],
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "label_confidence": "high",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Binary task outputs in the meta-analysis",
+   "exhibit": "Supplementary Figure S2, Task Output, Binary",
+   "page": 9,
+   "quantity": "Number of effect sizes",
+   "reported": "131",
+   "expected_status": "discrepant",
+   "reference_recomputed": 132,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P2",
+   "cause": "Published subgroup counts differ from the deposited analysis CSV.",
+   "evidence": "https://osf.io/download/m657k/ — §2.3 Additional discrepancies: “N=132”.",
+   "rationale": "The human report flags Figure 2 subgroup tallies totaling 378 despite 370 effect sizes. A static inventory of the pinned CSV gives the specified subgroup count; no statistical models were rerun and no effect-size denominator was changed.",
+   "reference_provenance": "direct_check",
+   "reference_evidence": "Direct static row count of the pinned Data_Extraction.csv (370 rows), SHA-256 9584f9a27a32c567f4763f94ec2fce0434ea3bf2233f74d49a1b0d3f26674b0b, downloaded from https://osf.io/download/5vqd9/?view_only=b9e1e86079c048b4bfb03bee6966e560 : count Task_Output_Cleaned == 'Binary'. Rechecked against /tmp/scratch_gold/claude/l3/g14pkg/Data_Extraction.csv in round 2. Human report: https://osf.io/download/m657k/ — §2.3 Additional discrepancies: “N=132”.",
+   "reference_scope": "static_check",
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": "The shipped code and data give 132 binary task outputs where Figure S2 prints 131; the source flags this exact mismatch. A wrong printed descriptive count is P2."
+  },
+  {
+   "id": "C2",
+   "claim": "Binary task outputs in the moderator summary",
+   "exhibit": "Figure 2, Task output, Binary",
+   "page": 2296,
+   "quantity": "Number of effect sizes",
+   "reported": "136",
+   "expected_status": "discrepant",
+   "reference_recomputed": 132,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P2",
+   "cause": "Published subgroup counts differ from the deposited analysis CSV.",
+   "evidence": "https://osf.io/download/m657k/ — §2.3 subgroup-tally comparison: “N=378”.",
+   "rationale": "The human report flags Figure 2 subgroup tallies totaling 378 despite 370 effect sizes. A static inventory of the pinned CSV gives the specified subgroup count; no statistical models were rerun and no effect-size denominator was changed.",
+   "reference_provenance": "direct_check",
+   "reference_evidence": "Direct static row count of the pinned Data_Extraction.csv (370 rows), SHA-256 9584f9a27a32c567f4763f94ec2fce0434ea3bf2233f74d49a1b0d3f26674b0b, downloaded from https://osf.io/download/5vqd9/?view_only=b9e1e86079c048b4bfb03bee6966e560 : count Task_Output_Cleaned == 'Binary'. Rechecked against /tmp/scratch_gold/claude/l3/g14pkg/Data_Extraction.csv in round 2. Human report: https://osf.io/download/m657k/ — §2.3 subgroup-tally comparison: “N=378”.",
+   "reference_scope": "static_check",
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": "The shipped data and moderator code give 132, while Figure 2 prints 136. The report flags that the Figure 2 tallies are inconsistent. A wrong printed count is P2."
+  },
+  {
+   "id": "C3",
+   "claim": "Decision-task effect sizes in the moderator summary",
+   "exhibit": "Figure 2, Type of task, Decide",
+   "page": 2296,
+   "quantity": "Number of effect sizes",
+   "reported": "344",
+   "expected_status": "discrepant",
+   "reference_recomputed": 336,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P2",
+   "cause": "Published subgroup counts differ from the deposited analysis CSV.",
+   "evidence": "https://osf.io/download/m657k/ — §2.3 subgroup-tally comparison: “N=378”.",
+   "rationale": "The human report flags Figure 2 subgroup tallies totaling 378 despite 370 effect sizes. A static inventory of the pinned CSV gives the specified subgroup count; no statistical models were rerun and no effect-size denominator was changed.",
+   "reference_provenance": "direct_check",
+   "reference_evidence": "Direct static row count of the pinned Data_Extraction.csv (370 rows), SHA-256 9584f9a27a32c567f4763f94ec2fce0434ea3bf2233f74d49a1b0d3f26674b0b, downloaded from https://osf.io/download/5vqd9/?view_only=b9e1e86079c048b4bfb03bee6966e560 : count Task_Type == 'Decide'. Rechecked against /tmp/scratch_gold/claude/l3/g14pkg/Data_Extraction.csv in round 2. Human report: https://osf.io/download/m657k/ — §2.3 subgroup-tally comparison: “N=378”.",
+   "reference_scope": "static_check",
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": "The shipped data give 336 decision-task effect sizes, but Figure 2 prints 344. The report's 378-vs-370 note covers this subgroup inconsistency."
+  },
+  {
+   "id": "C4",
+   "claim": "Total effect sizes in the meta-analysis",
+   "exhibit": "Figure 1 caption; Figure 2",
+   "page": 2295,
+   "quantity": "Number of effect sizes",
+   "reported": "370",
+   "expected_status": "match",
+   "reference_recomputed": 370,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/m657k/ — Introduction and §2.3: “370 effect sizes”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/m657k/ — Introduction and §2.3: “370 effect sizes”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "The meta-analysis is fitted on all 370 shipped rows, matching the printed k = 370. The script's printed n_es = length(unique(ES_ID)) would be 357 because 13 ES_IDs repeat, but this is not the printed claim."
+  },
+  {
+   "id": "C5",
+   "claim": "Categorical task outputs in the moderator summary",
+   "exhibit": "Figure 2, Task output, Categoric",
+   "page": 2296,
+   "quantity": "Number of effect sizes",
+   "reported": "184",
+   "expected_status": "discrepant",
+   "reference_recomputed": 180,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P2",
+   "cause": "Published subgroup counts differ from the deposited analysis CSV.",
+   "evidence": "https://osf.io/download/m657k/ — §2.3 subgroup-tally comparison: “N=378”.",
+   "rationale": "The human report flags Figure 2 subgroup tallies totaling 378 despite 370 effect sizes. A static inventory of the pinned CSV gives the specified subgroup count; no statistical models were rerun and no effect-size denominator was changed.",
+   "reference_provenance": "direct_check",
+   "reference_evidence": "Direct static row count of the pinned Data_Extraction.csv (370 rows), SHA-256 9584f9a27a32c567f4763f94ec2fce0434ea3bf2233f74d49a1b0d3f26674b0b, downloaded from https://osf.io/download/5vqd9/?view_only=b9e1e86079c048b4bfb03bee6966e560 : count Task_Output_Cleaned == 'Categoric'. Rechecked against /tmp/scratch_gold/claude/l3/g14pkg/Data_Extraction.csv in round 2. Human report: https://osf.io/download/m657k/ — §2.3 subgroup-tally comparison: “N=378”.",
+   "reference_scope": "static_check",
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": "The shipped data and moderator code give 180, while Figure 2 prints 184. A wrong printed count is P2."
+  },
+  {
+   "id": "C6",
+   "claim": "Creation-task effect sizes in the moderator summary",
+   "exhibit": "Figure 2, Type of task, Create",
+   "page": 2296,
+   "quantity": "Number of effect sizes",
+   "reported": "34",
+   "expected_status": "match",
+   "reference_recomputed": 34,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/m657k/ — §2.3 subgroup-tally comparison with original Figure 2: “Figure 2”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/m657k/ — §2.3 subgroup-tally comparison with original Figure 2: “Figure 2”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "The shipped data give exactly the printed 34 creation-task effect sizes."
+  }
+ ],
+ "notes": {
+  "claim_list": "Analysis inputs are AnalysisScript_Final.Rmd and Data_Extraction.csv. Supplementary page 9 is S9 in the printed supplement.",
+  "sol": "Original CSV: https://osf.io/download/5vqd9/?view_only=b9e1e86079c048b4bfb03bee6966e560 . The source explicitly identifies the 131-versus-132 Binary discrepancy and the Figure 2 subgroup-count inconsistencies. Static counts of Task_Output and Task_Type in the original Data_Extraction.csv confirm the references. The paper prints separate Binary counts of 131 in Supplementary Figure S2 and 136 in main Figure 2; both are retained. Its Decide and Categoric counts also disagree with the supplied data. The source changed the human-augmentation Hedges-g denominator before printing pooled estimates; those changed-code estimates are deliberately excluded. The missing secondary moderator input is an additional secondary P0, not a primary-run technical failure.",
+  "claude": "No paper alternative under R7: four printed counts are wrong (P2). Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "Shipped files verified against the pinned SHA-256 hashes (from the existing scratch download). All counts are direct static row counts of Data_Extraction.csv (370 rows, no missing Task_Type or Task_Output_Cleaned). The shipped script does not filter rows before the bar plots or moderator k_es, so these counts are what the shipped code produces. The supplement's own moderator table (S2.4) prints the shipped-data values (132/180/336/34), which shows that the Figure 2 n column in the main paper (136/184/344; also AI 251 and Human 127 vs 249/121) is inconsistent with the shipped code output. The report states that the Figure 2 plotting code was not shipped. Paper-level 'computational issues' follows from four P2 count discrepancies. 'computationally reproducible' is acceptable because the source report gives that overall verdict and treats these as minor tally inconsistencies; all main estimates reproduce. Side observation: 13 ES_ID values are duplicated in the shipped CSV (357 unique ES_IDs), which would affect the script's printed n_es but not k = 370."
+ }
+}

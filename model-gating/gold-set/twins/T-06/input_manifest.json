@@ -1,0 +1,128 @@
+[
+  {
+    "path": "Code/helper.R",
+    "url": "https://osf.io/download/vqt4u/?revision=1",
+    "version": "1",
+    "sha256": "df49296f81ef0e195b0bdacdeaa0ffe626b2c5b417590db13bfed5b45dea2b77",
+    "size": 11171
+  },
+  {
+    "path": "Code/plot_figures.R",
+    "url": "https://osf.io/download/r7wj3/?revision=1",
+    "version": "1",
+    "sha256": "8ef313224a300e50c36a9ca4ed17301c85cabeafa9bc299c317bceecae77ffd3",
+    "size": 9632
+  },
+  {
+    "path": "Code/statistical_analysis.R",
+    "url": "https://osf.io/download/9mks4/?revision=1",
+    "version": "1",
+    "sha256": "828f3997610427b9c19221ec03e76eef628b60fb2db3d3de1f8623574dcb6fde",
+    "size": 10877
+  },
+  {
+    "path": "Experiment/Exp1a.html",
+    "url": "https://osf.io/download/qfhv5/?revision=1",
+    "version": "1",
+    "sha256": "ba3229afdf69b1d47ddff37763fe23b83619287020df67e8ab2de81a756c26ac",
+    "size": 18717
+  },
+  {
+    "path": "Experiment/consent_bingo50.html",
+    "url": "https://osf.io/download/j95rt/?revision=1",
+    "version": "1",
+    "sha256": "80444eedc6aa4b0816f41c6d5d21241fce8bf9ccf5f7cf1bf6af664cf56d2289",
+    "size": 2813
+  },
+  {
+    "path": "Experiment/Exp1b.html",
+    "url": "https://osf.io/download/7gpy8/?revision=1",
+    "version": "1",
+    "sha256": "a724418ae0c25e2a12856557508f38a98f142392babd5c0cf7e84545cbde45d0",
+    "size": 17609
+  },
+  {
+    "path": "Experiment/Exp2a.html",
+    "url": "https://osf.io/download/cfxrh/?revision=1",
+    "version": "1",
+    "sha256": "af0ce96020bcaafefe912b5c0e61ff48bb3c2cf9cd3ad10529f5950b9e5bfe08",
+    "size": 20130
+  },
+  {
+    "path": "Experiment/Exp3.html",
+    "url": "https://osf.io/download/m67ch/?revision=1",
+    "version": "1",
+    "sha256": "03ee9a03fcc213d043ceb9785123162f16f942cb7343d43903253c74f6f49185",
+    "size": 20095
+  },
+  {
+    "path": "Experiment/Exp2b.html",
+    "url": "https://osf.io/download/xhgkv/?revision=1",
+    "version": "1",
+    "sha256": "b1ca0a893e0e0dc2fb95cf65eb530973baaacffbccce5df5aa3664bcd4f218f3",
+    "size": 19003
+  },
+  {
+    "path": "Figures/fig3.pdf",
+    "url": "https://osf.io/download/74j9k/?revision=1",
+    "version": "1",
+    "sha256": "67a62d72a7248649230b379c14b55e681fcb582084837f5502377bebd6a12513",
+    "size": 4554
+  },
+  {
+    "path": "Figures/fig2.pdf",
+    "url": "https://osf.io/download/m7bsv/?revision=1",
+    "version": "1",
+    "sha256": "8a6a01f0ebfed1a49221addae672e670fc8c2703162242fcba7e9f0a07b09002",
+    "size": 6406
+  },
+  {
+    "path": "Figures/fig4.pdf",
+    "url": "https://osf.io/download/pq5ew/?revision=1",
+    "version": "1",
+    "sha256": "f413ff68078b4dbe3eda69da5fdea9dbca7fd9305637c2840a138614d7b17158",
+    "size": 6209
+  },
+  {
+    "path": "Figures/fig5.pdf",
+    "url": "https://osf.io/download/9m85x/?revision=1",
+    "version": "1",
+    "sha256": "064cd893182df02e3a102bbef7245cabbd73c6c95b08a9cc9e13b37a72078557",
+    "size": 17541
+  },
+  {
+    "path": "Figures/supplement.pdf",
+    "url": "https://osf.io/download/f284v/?revision=1",
+    "version": "1",
+    "sha256": "f7f6e8a5f8f5fa9a16a3ea7819d3c3291e10b1ced5fbf5183210259b74656de2",
+    "size": 19892
+  },
+  {
+    "path": "Figures/fig6.pdf",
+    "url": "https://osf.io/download/n4dws/?revision=1",
+    "version": "1",
+    "sha256": "50f485dc0e02d38339c9a2a874bc1fc74e94e2ced2b6b7e865559bd61c7af2e7",
+    "size": 8970
+  },
+  {
+    "path": "Data/RH_replication_dat.csv",
+    "url": "https://osf.io/download/2n9bc/?revision=1",
+    "version": "1",
+    "sha256": "cbae5afac5b3bcb76a9476583d70cf0c875a68b01cd919cc10881730c1d7c799",
+    "size": 147903
+  },
+  {
+    "path": "Data/IID_dat.csv",
+    "url": "https://osf.io/download/eshq6/?revision=1",
+    "version": "1",
+    "sha256": "0bfd1b0b6c1b2a7e5d935d92aa4d0a923bee3cfdc13b0e4729e47df27adccd5d",
+    "size": 574937
+  },
+  {
+    "path": "Data/RH2023_study2A.csv",
+    "url": "https://osf.io/download/cgxbn/?revision=1",
+    "version": "1",
+    "sha256": "2a2fd909231e944b50d345e4443a6db5fa0b8c9aaecec9cda9e499d141d6f499",
+    "size": 119118
+  }
+]

@@ -1,0 +1,84 @@
+{
+ "gold_id": "G-04",
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "printed precision (2 dp); no recomputed value given in report",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/zb642/ section 2: 'We successfully computationally reproduced all the main results from the raw data.'; Table 1 'Reproducible from analysis data X'; Conclusion: 'We confirm that the analysis was fully reproducible.'",
+   "rationale": "Report asserts all main results reproduced but prints no recomputed value for this coefficient. The report's introduction quotes this value as the paper's main finding.",
+   "reported_check": "confirmed in paper (OSF accepted manuscript, Results p.7: b = 2.18)"
+  },
+  {
+   "id": "C2",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "printed precision (2 dp); no recomputed value given in report",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/zb642/ section 2: 'We successfully computationally reproduced all the main results from the raw data.'; Table 1 'Reproducible from analysis data X'; Conclusion: 'We confirm that the analysis was fully reproducible.'",
+   "rationale": "Report asserts all main results reproduced but prints no recomputed value for this coefficient. The report's introduction quotes this value as the paper's main finding.",
+   "reported_check": "confirmed in paper (OSF accepted manuscript, Results p.7: b = 0.96)"
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "printed precision (2 dp); no recomputed value given in report",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/zb642/ section 2: 'We successfully computationally reproduced all the main results from the raw data.'; Table 1 'Reproducible from analysis data X'; Conclusion: 'We confirm that the analysis was fully reproducible.'",
+   "rationale": "Report asserts all main results reproduced but prints no recomputed value for this coefficient. ",
+   "reported_check": "confirmed in paper (OSF accepted manuscript, Results, ValenceDiff + Frame model: b = 1.04)"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "printed precision (2 dp); no recomputed value given in report",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/zb642/ section 2: 'We successfully computationally reproduced all the main results from the raw data.'; Table 1 'Reproducible from analysis data X'; Conclusion: 'We confirm that the analysis was fully reproducible.'",
+   "rationale": "Report asserts all main results reproduced but prints no recomputed value for this coefficient. ",
+   "reported_check": "confirmed in paper (OSF accepted manuscript, Results, ValenceDiff + Frame model: b = 0.68)"
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "printed precision (2 dp); no recomputed value given in report",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/zb642/ section 2: 'We successfully computationally reproduced all the main results from the raw data.'; Table 1 'Reproducible from analysis data X'; Conclusion: 'We confirm that the analysis was fully reproducible.'",
+   "rationale": "Report asserts all main results reproduced but prints no recomputed value for this coefficient. ",
+   "reported_check": "confirmed in paper (OSF accepted manuscript, Results, ValenceDiff + Frame model: b = 1.20)"
+  },
+  {
+   "id": "C6",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "printed precision (2 dp); no recomputed value given in report",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/zb642/ section 2: 'We successfully computationally reproduced all the main results from the raw data.'; Table 1 'Reproducible from analysis data X'; Conclusion: 'We confirm that the analysis was fully reproducible.'",
+   "rationale": "Report asserts all main results reproduced but prints no recomputed value for this coefficient. ",
+   "reported_check": "confirmed in paper (OSF accepted manuscript, Results, ValenceDiff + Frame model: b = 0.66)"
+  }
+ ],
+ "label_confidence": "high",
+ "notes": "v1.1: two independent agent executions (reruns/G-04.json; twins/T-03 base run) reproduce all six claims at printed precision; no human rerun. No paper-level alternative; verification was attempted, so 'computation not checked' does not apply. Evidence is a blanket reproduction statement only: references null, label_confidence low, requires_human_rerun (R9). The data files are now pinned. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "The report (Gourdon-Kanhukamwe, Elsherif & Ilchvoska; I4R x Psychological Science) is thin on the reproduction. It gives only a blanket verdict and quotes the paper's C1/C2 values from the paper itself. The only 'reproduced' number it reports is 'We observed framing effect (b = 1.64, SE = 0.332, t = 4.94)', which matches none of the claims and is not identified with a model. It may be a combined-sample model (BOTH_Analyses.R) or a linear model, given 't'. I found 1.64 nowhere in the accepted manuscript or Main Supplemental Material text. It should not be read as a discrepancy. The report's Table 2 'Original estimate' column (Frame 0.943, ValenceDiff 0.862) comes from the combined-sample model mlrMTurkSamp, not from the per-sample claims. If strict per-claim evidence is required, C1-C6 could be 'not_checkable' (no recomputed value) and the paper 'computation not checked'; hence the acceptable alternative. Paper values checked against the OSF accepted manuscript (osf.io/download/nemwv), not the publisher version. The version pin lists the scripts but none of the data CSVs in 'Data and R Code' (MTurk/REP/BOTH CleanData and RawData), which a checker needs. The report's section 2 also says: 'We find that the point estimates are strikingly similar, with the sign, magnitude and statistical significance being remarkably similar.' This says 'similar', not 'identical', and it comes right before the unexplained b = 1.64. I still label match because the report also says 'fully reproducible' and 'no coding errors'.",
+ "corrections": [
+  {
+   "version": "1.1",
+   "change": "All six claims confirmed by execution; confidence raised to high; rerun flag cleared",
+   "reason": "Agent reruns of the unchanged shipped scripts",
+   "evidence": "reruns/G-04.json; twins/T-03/run_original.log"
+  }
+ ]
+}

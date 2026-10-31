@@ -1,0 +1,76 @@
+{
+ "gold_id": "G-14",
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "discrepant",
+   "reference_recomputed": 132,
+   "tolerance": "exact count",
+   "severity": "P2",
+   "cause": "Printed descriptive bar-plot count does not match the shipped data; the shipped bar-plot code tabulates Task_Output_Cleaned over all 370 rows, giving Binary 132 (and Open 34 vs printed 35).",
+   "evidence": "Direct check: Data_Extraction.csv (SHA-256 9584f9a2...) has 370 rows; Counter(Task_Output_Cleaned) = Binary 132, Categoric 180, Open Response 34, Numeric 24. AnalysisScript_Final.Rmd (SHA-256 e66ec93f...) 'Descriptive Statistics, Bar Plots' chunk: counts <- table(df[,col_name]) with no row filtering. Reproduction report https://osf.io/download/m657k/ sec. 2.3: 'In Figure S2, the number of binary task outputs (N=131) does not align with the number in the replication package's dataset (N=132).' Supplement p. S9, Figure S2 'Task Ouput' panel: '131 (35%)'.",
+   "rationale": "The shipped code and data give 132 binary task outputs where Figure S2 prints 131; the source flags this exact mismatch. A wrong printed descriptive count is P2.",
+   "reported_check": "confirmed in paper"
+  },
+  {
+   "id": "C2",
+   "expected_status": "discrepant",
+   "reference_recomputed": 132,
+   "tolerance": "exact count",
+   "severity": "P2",
+   "cause": "Figure 2 subgroup n is higher than the count in the shipped data and the shipped moderator code's k_es; Figure 2 subgroup tallies sum to 378 rather than 370.",
+   "evidence": "Direct check: Data_Extraction.csv Task_Output_Cleaned == 'Binary' -> 132 rows. AnalysisScript_Final.Rmd moderator chunk: 'k_es_val <- sum(df[[mod]] == val)' over unfiltered df. Supplement S2.4 moderator table (shipped-code output) prints 'Binary 132'. Paper p. 2296 Fig. 2: 'Binary 136'. Report sec. 2.3: 'In Figure 2, the number of effect sizes (N=370) does not align with the number of observations in many subgroups (N=378).'",
+   "rationale": "The shipped data and moderator code give 132, while Figure 2 prints 136. The report flags that the Figure 2 tallies are inconsistent. A wrong printed count is P2.",
+   "reported_check": "confirmed in paper"
+  },
+  {
+   "id": "C3",
+   "expected_status": "discrepant",
+   "reference_recomputed": 336,
+   "tolerance": "exact count",
+   "severity": "P2",
+   "cause": "Figure 2 subgroup n exceeds the shipped data count; part of the Figure 2 over-tally (378 vs 370) flagged by the report.",
+   "evidence": "Direct check: Data_Extraction.csv Counter(Task_Type) = Decide 336, Create 34 (sum 370). Shipped moderator code k_es = sum(df$Task_Type == 'Decide'). Supplement S2.4 table: 'Decide 336'; supplement Fig. S2: '336 (91%)'. Paper p. 2296 Fig. 2: 'Decide 344'. Report sec. 2.3 on Figure 2 subgroup tallies summing to 378.",
+   "rationale": "The shipped data give 336 decision-task effect sizes, but Figure 2 prints 344. The report's 378-vs-370 note covers this subgroup inconsistency.",
+   "reported_check": "confirmed in paper"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": 370,
+   "tolerance": "exact count",
+   "severity": null,
+   "cause": "",
+   "evidence": "Direct check: Data_Extraction.csv has 370 data rows, with no row filtering in AnalysisScript_Final.Rmd before rma.mv. Report Table 3 reports k = 370 for all four models, and its abstract says '370 effect sizes'. Paper p. 2295 Fig. 1 caption: 'Forest plots of all effect sizes (k = 370)'; Fig. 2 'All effect sizes 370'.",
+   "rationale": "The meta-analysis is fitted on all 370 shipped rows, matching the printed k = 370. The script's printed n_es = length(unique(ES_ID)) would be 357 because 13 ES_IDs repeat, but this is not the printed claim.",
+   "reported_check": "confirmed in paper"
+  },
+  {
+   "id": "C5",
+   "expected_status": "discrepant",
+   "reference_recomputed": 180,
+   "tolerance": "exact count",
+   "severity": "P2",
+   "cause": "Figure 2 subgroup n exceeds the shipped data count; part of the Figure 2 over-tally (378 vs 370) flagged by the report.",
+   "evidence": "Direct check: Data_Extraction.csv Task_Output_Cleaned == 'Categoric' -> 180 rows. Supplement S2.4 table: 'Categoric 180'; Fig. S2: '180 (49%)'. Paper p. 2296 Fig. 2: 'Categoric 184'. Report sec. 2.3 on Figure 2 subgroup tallies (378 vs 370).",
+   "rationale": "The shipped data and moderator code give 180, while Figure 2 prints 184. A wrong printed count is P2.",
+   "reported_check": "confirmed in paper"
+  },
+  {
+   "id": "C6",
+   "expected_status": "match",
+   "reference_recomputed": 34,
+   "tolerance": "exact count",
+   "severity": null,
+   "cause": "",
+   "evidence": "Direct check: Data_Extraction.csv Task_Type == 'Create' -> 34 rows. Supplement S2.4 table: 'Create 34'. Paper p. 2296 Fig. 2: 'Create 34'.",
+   "rationale": "The shipped data give exactly the printed 34 creation-task effect sizes.",
+   "reported_check": "confirmed in paper"
+  }
+ ],
+ "label_confidence": "high",
+ "notes": "No paper alternative under R7: four printed counts are wrong (P2). Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "Shipped files verified against the pinned SHA-256 hashes (from the existing scratch download). All counts are direct static row counts of Data_Extraction.csv (370 rows, no missing Task_Type or Task_Output_Cleaned). The shipped script does not filter rows before the bar plots or moderator k_es, so these counts are what the shipped code produces. The supplement's own moderator table (S2.4) prints the shipped-data values (132/180/336/34), which shows that the Figure 2 n column in the main paper (136/184/344; also AI 251 and Human 127 vs 249/121) is inconsistent with the shipped code output. The report states that the Figure 2 plotting code was not shipped. Paper-level 'computational issues' follows from four P2 count discrepancies. 'computationally reproducible' is acceptable because the source report gives that overall verdict and treats these as minor tally inconsistencies; all main estimates reproduce. Side observation: 13 ES_ID values are duplicated in the shipped CSV (357 unique ES_IDs), which would affect the script's printed n_es but not k = 370."
+}

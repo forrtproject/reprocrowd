@@ -1,0 +1,71 @@
+{
+  "gold_id": "G-15",
+  "cand_id": "I4R-fpaxs",
+  "doi": "10.1177/09567976241266516",
+  "title": "People Place Larger Bets When Risky Choices Provide a Postbet Option to Cash Out",
+  "stratum_drawn": "computational issues",
+  "paper_url": "https://doi.org/10.1177/09567976241266516",
+  "package": {
+    "url": "https://osf.io/as8pw/",
+    "version_pin": "preregistration-document.pdf: OSF file 6487adc4c8611600ce252951 version 1, SHA-256 87f16d1924442e092d780bf6daaac388522ddb92e081e0800914c6a32ca4c7f3; avail-group-code.zip: OSF file 6487ace2dc523b00aadb600b version 1, SHA-256 275733e1514d5ee53fa23732633143995494789d4ff09d44c3b5989b4ec6d97b; unavail-group-code.zip: OSF file 6487ad14a31091006cd11c6f version 1, SHA-256 6fec9be4bceac34dcc4bec88aa5d6b04d041e77df9a0e86be8446a450ee94d1a; app.zip: OSF file 6512724c333aef008cd701e8 version 1, SHA-256 ff88e2adc9e41e59cc15ae7b4e292b9ac14ffe3c90c003b867bafae66cff165d; app.zip: OSF file 6512727443df32008db62464 version 1, SHA-256 c9b290234f06b5eb3e70723d513c6c1093edf04e4489daf3900a96939a4d032a; preprint.pdf: OSF file 656e876202fa9620547d2883 version 3, SHA-256 61ad056ed20e81190b3ad2dc35afb761fbd5381dc0e4148ed8097826bda16662; supplementary-material.pdf: OSF file 656e876502fa9620537d284f version 2, SHA-256 0af6b9c3dac1b814b8ea69e36687669199a3196b8e171c21b74839e8a7eb2bc5; cashout-prob-analyses.R: OSF file 66134c4ec053942cf8b4d878 version 1, SHA-256 72d3c824f82c9cfe5eed7e78242ce46a2013301e10169ea7f291ed8c778abedb; bet-amount-analyses.R: OSF file 66134cd3e65c6037007d9fc8 version 2, SHA-256 0c7f7b4e51b74949f1cfab1bfb84e68494adbb7571ac69d8ac145ae3d915453e; make-fig2.R: OSF file 6a88b5d2eb337a301cdf4dda version 1, SHA-256 3846d369883c0a190876bba0be1ab72295ac568df5f6d369d2f61d525bde06c4; make-fig3&4.R: OSF file 6a88b7c264371401266c5822 version 1, SHA-256 3b15a782fc519776aa005c70be5e2e675fbdec87a9f20dc9d54b49667465ba1d; Response to computational reproducibility and robustness report.pdf: OSF file 6a8e3414379b86c6933d8e34 version 1, SHA-256 f85969a05483eac3ced2538c6909f76a60d0d98df51239fb67c579e56ea0ec27",
+    "language": "R",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/6a985481a1d020921e2a9dc8/",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Experiment 1 linear probability-of-winning effect on cash-out frequency",
+      "exhibit": "Results, Cash-out frequency",
+      "page": null,
+      "quantity": "Linear coefficient",
+      "reported": "-0.05"
+    },
+    {
+      "id": "C2",
+      "claim": "Precision of the Experiment 1 linear probability-of-winning effect",
+      "exhibit": "Results, Cash-out frequency",
+      "page": null,
+      "quantity": "Standard error",
+      "reported": "0.06"
+    },
+    {
+      "id": "C3",
+      "claim": "Experiment 1 cash-out availability and bet amount",
+      "exhibit": "Results, Bet amount",
+      "page": null,
+      "quantity": "Within-participant Cohen d",
+      "reported": "0.75"
+    },
+    {
+      "id": "C4",
+      "claim": "Experiment 2 cash-out availability and bet amount",
+      "exhibit": "Results, Bet amount",
+      "page": null,
+      "quantity": "Between-groups Cohen d",
+      "reported": "0.46"
+    },
+    {
+      "id": "C5",
+      "claim": "Experiment 1 relative increase in mean bet size with cash-out",
+      "exhibit": "Discussion",
+      "page": null,
+      "quantity": "Percentage increase",
+      "reported": "35%"
+    },
+    {
+      "id": "C6",
+      "claim": "Experiment 2 relative increase in mean bet size with cash-out",
+      "exhibit": "Discussion",
+      "page": null,
+      "quantity": "Percentage increase",
+      "reported": "24%"
+    }
+  ],
+  "notes": ""
+}

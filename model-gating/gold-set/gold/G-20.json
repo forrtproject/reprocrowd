@@ -1,0 +1,142 @@
+{
+ "gold_id": "G-20",
+ "gold_version": "1.1",
+ "cand_id": "I4R-529en",
+ "doi": "10.1177/09567976231225094",
+ "title": "Racial Prejudice Affects Representations of Facial Trustworthiness",
+ "stratum_drawn": "computational issues",
+ "paper_url": "https://journals.sagepub.com/doi/pdf/10.1177/09567976231225094",
+ "package": {
+  "url": "https://osf.io/79c8j/",
+  "version_pin": "Psychopy Experimental Files.zip: OSF file 624dfa893dc4af017b5b8993 version 1, SHA-256 2f47d721ca1bb30abdf0bca13a607e6c5cd6e5e1e9e7f36fa9e9a786469f71a1; Pro Black Racial Preference Aggregate CIs.zip: OSF file 624e07ab3dc4af01a05b8bde version 1, SHA-256 4d46bcbe1603f4e89ac0689a2b9bc44ff8a3b0bab794070351c5f2c9ffd64233; White Preference Racial Preference Aggregate CIs.zip: OSF file 624e07b604d3d70217be4fe7 version 1, SHA-256 79e69a873071adcfc91ad3631c54985cbbe6a8718bddbd17e519ecf88fc8a6ca; No Preference Racial Preference Aggregate CIs.zip: OSF file 624e07a59fcdf4005d4fdbff version 1, SHA-256 b1347aac927008c89c06a82193f846292b95ceeed60ba0aa0f921f802134e1e1; High Bias Implicit Bias Aggregate Cls.zip: OSF file 6408935a52d061048dd23524 version 1, SHA-256 f9f531ebf0e74ab820822d8da258d1eae6fdee8013ed6622d4f808aa290d1aa2; Low Bias Implicit Bias CIs.zip: OSF file 6408937cc7472304db10b9e3 version 1, SHA-256 0abb33f1f376ab6da9766e7e896cd9ef517ad57c8c3b3c7b580627002a297fda; Middle Bias Implicit Bias CIs.zip: OSF file 640893ac28e5c504729384f3 version 1, SHA-256 5bade977ad407ece05db317927a7ecdb935534598e7909fe8889bb58d79de80c; Psychopy Experimental Files.zip: OSF file 64089deec7472304e310ba22 version 1, SHA-256 6d4b416c3354b3ddb93206fa2f4ca8e4885316878dce3ccdaad8ce58ccd714ad; No Preference Racial Preference Aggregate CIs.zip: OSF file 64089acfe2563604ca23264f version 1, SHA-256 1ac48e1ddc6d0ad0831d0284c32183ab1bea3759419ca99d8cba16c5db9a03d5; Pro Black Racial Preference Aggregate CIs.zip: OSF file 64089aef52d0610493d22f35 version 1, SHA-256 fab29daa119884f6c801dcde4097fd4c1898ffd847df89fb306275628d7af715; Pro White Racial Preference Aggregate CIs.zip: OSF file 64089b0d86049004de087400 version 1, SHA-256 8d2badfe41d3ec0cb1d8ef953e50c90c37c0a75309f4ec59b6a760d5bf394808; Black-White Morph Stimuli.zip: OSF file 64e3b574b11c8620ff073f1e version 1, SHA-256 97c9ccc187a155ae0ff951c3b38cf775a03362d7f95d5cdf7d6dc3a781770a02; Racial Preference Aggregate Classification Images Set Orthogonal to Gender.zip: OSF file 64e3b622a9601a1a019c9481 version 1, SHA-256 b6e2ce91c7006a09eb10efb0a07aa8b4a5e240c04b576199468a038f0dbbe032; Main Text Study 1 End Survey EFA Code.R: OSF file 640f42fe52d06109d5d22c98 version 1, SHA-256 1c02248afd48ab15d5c59c870ed61085562ccaa0235063c9c0ec744e7b48791a; Main Text Study 1 IAT Cleaning Code.R: OSF file 640b390252d06106e9d231ad version 1, SHA-256 e230662552c8af2350eda22330a161ead9ff453d92757c9807ccf7d4a342df74; Main Text Study 1 End Survey Cleaning Code.R: OSF file 640f2a3028e5c509859374b7 version 1, SHA-256 660002b722b3731850b5a247d354f65b344d777de17a58f1d80d3dbc447da1b3; Main Text Study 1 EFA-Based OLS Regressions.R: OSF file 640f331a52d06109b0d228b4 version 1, SHA-256 e2b0f50e9669504fcdd8a25abcc50ef9e5546423596b04a167be0cba1433b759; Main Text Study 1 Model Construction Analysis Code.R: OSF file 6408b575c74723050610bb6d version 1, SHA-256 fa5312d65afea3aaeeb3f81bb097df843cc5dc31068041a07ef0291ffb5eb8ac; Main Text Study 1 SOM OLS Regressions.R: OSF file 640f390ec747230a5010ad5d version 1, SHA-256 410467b6d3bc0bad092fd2c96dab814317b3836d0bea17631fc7e5a530f0ca46; Main Text Study 2 Racial Preference Model Construction.R: OSF file 640a47d328e5c505f4936f04 version 1, SHA-256 6d0548e74349d515533ca6f57c6f9b599cba923e52b993f8bf7becfbc605de97; Main Text Study 2 Main Analyses Code.R: OSF file 642323d0268ce5323cafd68d version 1, SHA-256 6d998ad97ae88358d41cb45d89f27c90db001382073d943a67090960ce5a5f66; SOM Ancillary Study 1 Analysis Code.R: OSF file 6409f47052d06105c5d22e12 version 1, SHA-256 0813f292e66e6b587303aad7fcc48bb5c84da680ea7b9f917a064e82de498813; osf-som-aux-study-1-model-construction-script.R: OSF file 6414c0fa52d0610f57d2458f version 1, SHA-256 0805e6219b2a42496d0ad8165df41a9b3361e8671374429c81d8d3157d538e32; Main Text Study 3 SOM OLS Regression.R: OSF file 6419bb5ce2563613e7231b6c version 1, SHA-256 9e45e8d891680c134379cfacb728e26cccc667f34adf5dc82b9c4d44c1baed0b; Main Text Study 3 EFA-Based OLS Regressions.R: OSF file 6419b617c7472313f310c7db version 1, SHA-256 96081e6d372628bb4d13dd734b1fecf5079513303c74ba9c27ee0aa68a779742; ind_model_gen.R: OSF file 64108411c747230b5f10ac9d version 1, SHA-256 024a4f4723b83405c3b71256ed952424b3ec4e6432aba686f9f728847338fa00; osf-main-text-study-3-model-construction-analysis-code.R: OSF file 64219de1268ce523a0afdaaf version 1, SHA-256 c8071050ddf6581cdf66d7a71979c937573365ed9e34a163ef2271d594064435; Main Text Study 3 End Survey Cleaning Code.R: OSF file 6410a4dc8604900b4808810c version 1, SHA-256 e4a2b0f6b5091d71d31e905b2ba73efeca49e2c649724317ee60e3c6806a18e2; Main Text Study 3 End Survey EFA Code.R: OSF file 6418a9a928e5c511689375ce version 1, SHA-256 29c0fa6c2c500dc3110b349f8416a4a36486c6e83ce630e83af73dfa21407e2a; osf-main-text-study-4-main-analysis-script.R: OSF file 6414705de256360ee82323fe version 1, SHA-256 0887edb72f8487436068226bf8461135534dc9053aeca41c0c0a1f27b0dd021e; modify_nexus_faces.R: OSF file 64147f8128e5c50e229379a5 version 1, SHA-256 d5b2f69ce9663ab1ede16a73b2ef3bcec8b0a4af4395d9493ee7cbe2cbf9f00c; agg_model_gen.R: OSF file 64147f8352d0610e9dd230f5 version 1, SHA-256 699f5e8f8ff740ad40557f59cc42658b0b57c5df1e21c93e5ae9c069456b5171; osf-main-text-study-4-racial-preference-model-construction-script.R: OSF file 64147fb928e5c50e1c937a06 version 1, SHA-256 e37808a2aeb064b20d813527183498f6f5c1d2e287144182bcc38f5684f8c994; SOM Ancillary Study 2 Main Analyses.R: OSF file 64e3c71362e5ee1aed3ab710 version 1, SHA-256 c2a2a7bb9cbb583bea236fa112e8f3ce1d35f99949473172934518036450f612; SOM Ancillary Study 2 Model Construction.R: OSF file 64e51fbebf727d02a1932a1b version 1, SHA-256 7c36bbbb5af981816ea18bcc5cbde0d1a99c98b628b282b9ea2c8b56276e5488; agg_model_gen.R: OSF file 64e52006bf727d02a0932a1e version 1, SHA-256 699f5e8f8ff740ad40557f59cc42658b0b57c5df1e21c93e5ae9c069456b5171; SOM Study 3 Main Analysis.R: OSF file 64e526d950640d003e69d9b5 version 1, SHA-256 1d84055d560247642d767c7c4936ecb9ce17a54d1b37dcd33cc2ad484cf745f1; SOM Ancillary Study 3 Model Construction.R: OSF file 64e54b774c0ee2011b433377 version 1, SHA-256 b52a51befcf500b99ff07c7175a2256a3fc4df9904cbfb2b2a922328194a0a9e; Psychopy Experimental Files.zip: OSF file 624dfa893dc4af017b5b8993 version 1, SHA-256 2f47d721ca1bb30abdf0bca13a607e6c5cd6e5e1e9e7f36fa9e9a786469f71a1; Pro Black Racial Preference Aggregate CIs.zip: OSF file 624e07ab3dc4af01a05b8bde version 1, SHA-256 4d46bcbe1603f4e89ac0689a2b9bc44ff8a3b0bab794070351c5f2c9ffd64233; White Preference Racial Preference Aggregate CIs.zip: OSF file 624e07b604d3d70217be4fe7 version 1, SHA-256 79e69a873071adcfc91ad3631c54985cbbe6a8718bddbd17e519ecf88fc8a6ca; No Preference Racial Preference Aggregate CIs.zip: OSF file 624e07a59fcdf4005d4fdbff version 1, SHA-256 b1347aac927008c89c06a82193f846292b95ceeed60ba0aa0f921f802134e1e1; High Bias Implicit Bias Aggregate Cls.zip: OSF file 6408935a52d061048dd23524 version 1, SHA-256 f9f531ebf0e74ab820822d8da258d1eae6fdee8013ed6622d4f808aa290d1aa2; Low Bias Implicit Bias CIs.zip: OSF file 6408937cc7472304db10b9e3 version 1, SHA-256 0abb33f1f376ab6da9766e7e896cd9ef517ad57c8c3b3c7b580627002a297fda; Middle Bias Implicit Bias CIs.zip: OSF file 640893ac28e5c504729384f3 version 1, SHA-256 5bade977ad407ece05db317927a7ecdb935534598e7909fe8889bb58d79de80c; Psychopy Experimental Files.zip: OSF file 64089deec7472304e310ba22 version 1, SHA-256 6d4b416c3354b3ddb93206fa2f4ca8e4885316878dce3ccdaad8ce58ccd714ad; No Preference Racial Preference Aggregate CIs.zip: OSF file 64089acfe2563604ca23264f version 1, SHA-256 1ac48e1ddc6d0ad0831d0284c32183ab1bea3759419ca99d8cba16c5db9a03d5; Pro Black Racial Preference Aggregate CIs.zip: OSF file 64089aef52d0610493d22f35 version 1, SHA-256 fab29daa119884f6c801dcde4097fd4c1898ffd847df89fb306275628d7af715; Pro White Racial Preference Aggregate CIs.zip: OSF file 64089b0d86049004de087400 version 1, SHA-256 8d2badfe41d3ec0cb1d8ef953e50c90c37c0a75309f4ec59b6a760d5bf394808; Black-White Morph Stimuli.zip: OSF file 64e3b574b11c8620ff073f1e version 1, SHA-256 97c9ccc187a155ae0ff951c3b38cf775a03362d7f95d5cdf7d6dc3a781770a02; Racial Preference Aggregate Classification Images Set Orthogonal to Gender.zip: OSF file 64e3b622a9601a1a019c9481 version 1, SHA-256 b6e2ce91c7006a09eb10efb0a07aa8b4a5e240c04b576199468a038f0dbbe032; Main Text Study 1 End Survey EFA Code.R: OSF file 640f42fe52d06109d5d22c98 version 1, SHA-256 1c02248afd48ab15d5c59c870ed61085562ccaa0235063c9c0ec744e7b48791a; Main Text Study 1 IAT Cleaning Code.R: OSF file 640b390252d06106e9d231ad version 1, SHA-256 e230662552c8af2350eda22330a161ead9ff453d92757c9807ccf7d4a342df74; Main Text Study 1 End Survey Cleaning Code.R: OSF file 640f2a3028e5c509859374b7 version 1, SHA-256 660002b722b3731850b5a247d354f65b344d777de17a58f1d80d3dbc447da1b3; Main Text Study 1 EFA-Based OLS Regressions.R: OSF file 640f331a52d06109b0d228b4 version 1, SHA-256 e2b0f50e9669504fcdd8a25abcc50ef9e5546423596b04a167be0cba1433b759; Main Text Study 1 Model Construction Analysis Code.R: OSF file 6408b575c74723050610bb6d version 1, SHA-256 fa5312d65afea3aaeeb3f81bb097df843cc5dc31068041a07ef0291ffb5eb8ac; Main Text Study 1 SOM OLS Regressions.R: OSF file 640f390ec747230a5010ad5d version 1, SHA-256 410467b6d3bc0bad092fd2c96dab814317b3836d0bea17631fc7e5a530f0ca46; Main Text Study 2 Racial Preference Model Construction.R: OSF file 640a47d328e5c505f4936f04 version 1, SHA-256 6d0548e74349d515533ca6f57c6f9b599cba923e52b993f8bf7becfbc605de97; Main Text Study 2 Main Analyses Code.R: OSF file 642323d0268ce5323cafd68d version 1, SHA-256 6d998ad97ae88358d41cb45d89f27c90db001382073d943a67090960ce5a5f66; SOM Ancillary Study 1 Analysis Code.R: OSF file 6409f47052d06105c5d22e12 version 1, SHA-256 0813f292e66e6b587303aad7fcc48bb5c84da680ea7b9f917a064e82de498813; osf-som-aux-study-1-model-construction-script.R: OSF file 6414c0fa52d0610f57d2458f version 1, SHA-256 0805e6219b2a42496d0ad8165df41a9b3361e8671374429c81d8d3157d538e32; Main Text Study 3 SOM OLS Regression.R: OSF file 6419bb5ce2563613e7231b6c version 1, SHA-256 9e45e8d891680c134379cfacb728e26cccc667f34adf5dc82b9c4d44c1baed0b; Main Text Study 3 EFA-Based OLS Regressions.R: OSF file 6419b617c7472313f310c7db version 1, SHA-256 96081e6d372628bb4d13dd734b1fecf5079513303c74ba9c27ee0aa68a779742; ind_model_gen.R: OSF file 64108411c747230b5f10ac9d version 1, SHA-256 024a4f4723b83405c3b71256ed952424b3ec4e6432aba686f9f728847338fa00; osf-main-text-study-3-model-construction-analysis-code.R: OSF file 64219de1268ce523a0afdaaf version 1, SHA-256 c8071050ddf6581cdf66d7a71979c937573365ed9e34a163ef2271d594064435; Main Text Study 3 End Survey Cleaning Code.R: OSF file 6410a4dc8604900b4808810c version 1, SHA-256 e4a2b0f6b5091d71d31e905b2ba73efeca49e2c649724317ee60e3c6806a18e2; Main Text Study 3 End Survey EFA Code.R: OSF file 6418a9a928e5c511689375ce version 1, SHA-256 29c0fa6c2c500dc3110b349f8416a4a36486c6e83ce630e83af73dfa21407e2a; osf-main-text-study-4-main-analysis-script.R: OSF file 6414705de256360ee82323fe version 1, SHA-256 0887edb72f8487436068226bf8461135534dc9053aeca41c0c0a1f27b0dd021e; modify_nexus_faces.R: OSF file 64147f8128e5c50e229379a5 version 1, SHA-256 d5b2f69ce9663ab1ede16a73b2ef3bcec8b0a4af4395d9493ee7cbe2cbf9f00c; agg_model_gen.R: OSF file 64147f8352d0610e9dd230f5 version 1, SHA-256 699f5e8f8ff740ad40557f59cc42658b0b57c5df1e21c93e5ae9c069456b5171; osf-main-text-study-4-racial-preference-model-construction-script.R: OSF file 64147fb928e5c50e1c937a06 version 1, SHA-256 e37808a2aeb064b20d813527183498f6f5c1d2e287144182bcc38f5684f8c994; SOM Ancillary Study 2 Main Analyses.R: OSF file 64e3c71362e5ee1aed3ab710 version 1, SHA-256 c2a2a7bb9cbb583bea236fa112e8f3ce1d35f99949473172934518036450f612; SOM Ancillary Study 2 Model Construction.R: OSF file 64e51fbebf727d02a1932a1b version 1, SHA-256 7c36bbbb5af981816ea18bcc5cbde0d1a99c98b628b282b9ea2c8b56276e5488; agg_model_gen.R: OSF file 64e52006bf727d02a0932a1e version 1, SHA-256 699f5e8f8ff740ad40557f59cc42658b0b57c5df1e21c93e5ae9c069456b5171; SOM Study 3 Main Analysis.R: OSF file 64e526d950640d003e69d9b5 version 1, SHA-256 1d84055d560247642d767c7c4936ecb9ce17a54d1b37dcd33cc2ad484cf745f1; SOM Ancillary Study 3 Model Construction.R: OSF file 64e54b774c0ee2011b433377 version 1, SHA-256 b52a51befcf500b99ff07c7175a2256a3fc4df9904cbfb2b2a922328194a0a9e",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/wqxbe/",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "label_confidence": "medium",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Study 1 participant age",
+   "exhibit": "Study 1 Method, Participants",
+   "page": 265,
+   "quantity": "Mean age",
+   "reported": "18.69",
+   "expected_status": "discrepant",
+   "reference_recomputed": 18.72,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P2",
+   "cause": "Study 1 descriptive mean age differs from the deposited analysis.",
+   "evidence": "https://osf.io/download/wqxbe/ — §2 Computation Reproducibility, PDF pp. 3–4: “provided data and code”.",
+   "rationale": "The source reports 18.72 from the supplied data/code against the paper’s 18.69.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/wqxbe/ — §2 Computation Reproducibility, PDF pp. 3–4: “provided data and code”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": "Sample descriptive does not recur from the shipped data/code; secondary."
+  },
+  {
+   "id": "C2",
+   "claim": "Study 1 variability in participant age",
+   "exhibit": "Study 1 Method, Participants",
+   "page": 265,
+   "quantity": "Standard deviation of age",
+   "reported": "1.84",
+   "expected_status": "discrepant",
+   "reference_recomputed": 1.83,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P2",
+   "cause": "Study 1 descriptive age SD differs from the deposited analysis.",
+   "evidence": "https://osf.io/download/wqxbe/ — §2 Computation Reproducibility, PDF pp. 3–4: “provided data and code”.",
+   "rationale": "The source reports 1.83 against the paper’s 1.84.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/wqxbe/ — §2 Computation Reproducibility, PDF pp. 3–4: “provided data and code”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": "Small, but same root cause as C1 rather than rounding/version noise, so discrepant rather than close."
+  },
+  {
+   "id": "C3",
+   "claim": "Study 1 exclusions for self-reported non-serious participation",
+   "exhibit": "Study 1 Method, Participants",
+   "page": 265,
+   "quantity": "Number of participants",
+   "reported": "five",
+   "expected_status": "discrepant",
+   "reference_recomputed": 7,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P2",
+   "cause": "Non-serious-participation exclusions differ from the printed count.",
+   "evidence": "https://osf.io/download/wqxbe/ — §2 Computation Reproducibility, PDF pp. 3–4: “provided data and code”.",
+   "rationale": "The paper says five exclusions; the source reports seven when executing the supplied exclusion code.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/wqxbe/ — §2 Computation Reproducibility, PDF pp. 3–4: “provided data and code”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "discrepant"
+   ],
+   "second_labeller_rationale": "Count differs as shipped."
+  },
+  {
+   "id": "C4",
+   "claim": "Study 1 prejudice and trust–race overlap",
+   "exhibit": "Study 1 Results",
+   "page": 266,
+   "quantity": "Anti-Black-prejudice coefficient",
+   "reported": "−0.07",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/wqxbe/ — §2 Computation Reproducibility, PDF pp. 3–4: “provided data and code”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report says main Study 1 regressions reproduced; the listed discrepancies concern only N, age and exclusions. No recomputed coefficient is printed."
+  },
+  {
+   "id": "C5",
+   "claim": "Study 1 intergroup contact and trust–race overlap",
+   "exhibit": "Study 1 Results",
+   "page": 266,
+   "quantity": "Intergroup-contact coefficient",
+   "reported": "0.04",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/wqxbe/ — §2 Computation Reproducibility, PDF pp. 3–4: “provided data and code”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Covered by the report's statement that main Study 1 results reproduced; no value printed."
+  }
+ ],
+ "notes": {
+  "claim_list": "Scope begins with the deposited face-model dependent-variable data.",
+  "sol": "The source assessed Studies 1 and 3, not all four studies. Scope starts from the supplied face-model dependent variable. Changes to composites, difference scores and outlier exclusions are robustness checks and are excluded.",
+  "claude": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "Could not access the paper: download attempt returned a different article (PLOS ONE 'Implicit race attitudes modulate visual information extraction for trustworthiness') under this DOI, so it was discarded. C1-C3 reported values match the report's quotes. Report also notes 4 extra outlier exclusions in the main analyses not stated in text/prereg (robustness-related, not scored). C4/C5 coefficients are never printed in the report, so 'match' rests on its general statement; a reconciler might prefer not_checkable if requiring a value. Report focused on Studies 1 and 3 only; face-model construction not reproduced (out of scope per claims-file note)."
+ }
+}

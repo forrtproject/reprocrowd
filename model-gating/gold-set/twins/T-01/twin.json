@@ -1,0 +1,267 @@
+{
+  "twin_id": "T-01",
+  "base_gold_id": "G-01",
+  "base_cand_id": "I4R-ejsb9",
+  "package": {
+    "url": "https://github.com/emoriebeck/loneliness-trajectories",
+    "version_pin": "Git commit 5abae4b94d995b4fd412780175c14b8080623592"
+  },
+  "perturbation": {
+    "file": "02-scripts/03-meta-analysis.Rmd",
+    "description": "Multiply the study-level standard errors by 1.001 in the meta-analysis.",
+    "type": "uncertainty_scale",
+    "why_plausible": "A small calibration or unit-conversion factor can accidentally be left in the standard-error argument.",
+    "original_sha256": "907c13278f1ffa691642ebfe6754dca850a68fb2a7b4d5a1f922b16a0df58eae",
+    "twin_sha256": "aa90fd564c34c39653df7281bd914a579e0c9d09d12a92b1a9d93973eead5d84"
+  },
+  "lossless_edits": [
+    "Load tidyverse and metafor, omitted from this Rmd's setup; set wd to the package root rather than the author's absolute path. Create the output directory 03-results/08-meta-models. These change no statistical expressions or inputs."
+  ],
+  "execution_scope": "03-meta-analysis.Rmd lines 155–181, 186–208, 464–500, 505–523, in original order. Load and pool the deposited study-level summaries, then run the authors' meta-analysis functions. Extract the imp / Quadratic / slope / Main / adj / age2 row. N is the sum of n.group from that same row's study inputs. Gold G-01 explicitly starts from these public study-level inputs; individual-level models, descriptive tables, plots and moderator tables are outside this execution scope.",
+  "original_run": {
+    "r_version": "R version 4.6.1 (2026-06-24)",
+    "packages": {
+      "base": "4.6.1",
+      "cli": "3.6.6",
+      "compiler": "4.6.1",
+      "datasets": "4.6.1",
+      "digest": "0.6.39",
+      "dplyr": "1.2.1",
+      "farver": "2.1.2",
+      "forcats": "1.0.1",
+      "generics": "0.1.4",
+      "ggplot2": "4.0.3",
+      "glue": "1.8.1",
+      "graphics": "4.6.1",
+      "grDevices": "4.6.1",
+      "grid": "4.6.1",
+      "gtable": "0.3.6",
+      "hms": "1.1.4",
+      "lattice": "0.22.9",
+      "lifecycle": "1.0.5",
+      "lubridate": "1.9.5",
+      "magrittr": "2.0.5",
+      "mathjaxr": "2.0.0",
+      "Matrix": "1.7.5",
+      "metadat": "1.6.0",
+      "metafor": "5.0.1",
+      "methods": "4.6.1",
+      "nlme": "3.1.169",
+      "numDeriv": "2016.8.1.1",
+      "pillar": "1.11.1",
+      "pkgconfig": "2.0.3",
+      "purrr": "1.2.2",
+      "R6": "2.6.1",
+      "RColorBrewer": "1.1.3",
+      "readr": "2.2.0",
+      "rlang": "1.3.0",
+      "S7": "0.2.2",
+      "scales": "1.4.0",
+      "stats": "4.6.1",
+      "stringi": "1.8.9",
+      "stringr": "1.6.0",
+      "tibble": "3.3.1",
+      "tidyr": "1.3.2",
+      "tidyselect": "1.2.1",
+      "tidyverse": "2.0.0",
+      "timechange": "0.4.0",
+      "tools": "4.6.1",
+      "tzdb": "0.5.0",
+      "utils": "4.6.1",
+      "vctrs": "0.7.3",
+      "withr": "3.0.3"
+    },
+    "runtime_seconds": 2.246,
+    "claims": [
+      {
+        "id": "C1",
+        "reported": "0.07",
+        "recomputed": 0.07179268912141064,
+        "recurs": true
+      },
+      {
+        "id": "C2",
+        "reported": "[0.02, 0.13]",
+        "recomputed": [
+          0.016718229322716473,
+          0.1268671489201048
+        ],
+        "recurs": true
+      },
+      {
+        "id": "C3",
+        "reported": "365.91",
+        "recomputed": 365.9122801490775,
+        "recurs": true
+      },
+      {
+        "id": "C4",
+        "reported": "98.74",
+        "recomputed": 98.73551306699258,
+        "recurs": true
+      },
+      {
+        "id": "C5",
+        "reported": "69732",
+        "recomputed": 69732,
+        "recurs": true
+      }
+    ]
+  },
+  "twin_run": {
+    "runtime_seconds": 2.278,
+    "packages": {
+      "base": "4.6.1",
+      "cli": "3.6.6",
+      "compiler": "4.6.1",
+      "datasets": "4.6.1",
+      "digest": "0.6.39",
+      "dplyr": "1.2.1",
+      "farver": "2.1.2",
+      "forcats": "1.0.1",
+      "generics": "0.1.4",
+      "ggplot2": "4.0.3",
+      "glue": "1.8.1",
+      "graphics": "4.6.1",
+      "grDevices": "4.6.1",
+      "grid": "4.6.1",
+      "gtable": "0.3.6",
+      "hms": "1.1.4",
+      "lattice": "0.22.9",
+      "lifecycle": "1.0.5",
+      "lubridate": "1.9.5",
+      "magrittr": "2.0.5",
+      "mathjaxr": "2.0.0",
+      "Matrix": "1.7.5",
+      "metadat": "1.6.0",
+      "metafor": "5.0.1",
+      "methods": "4.6.1",
+      "nlme": "3.1.169",
+      "numDeriv": "2016.8.1.1",
+      "pillar": "1.11.1",
+      "pkgconfig": "2.0.3",
+      "purrr": "1.2.2",
+      "R6": "2.6.1",
+      "RColorBrewer": "1.1.3",
+      "readr": "2.2.0",
+      "rlang": "1.3.0",
+      "S7": "0.2.2",
+      "scales": "1.4.0",
+      "stats": "4.6.1",
+      "stringi": "1.8.9",
+      "stringr": "1.6.0",
+      "tibble": "3.3.1",
+      "tidyr": "1.3.2",
+      "tidyselect": "1.2.1",
+      "tidyverse": "2.0.0",
+      "timechange": "0.4.0",
+      "tools": "4.6.1",
+      "tzdb": "0.5.0",
+      "utils": "4.6.1",
+      "vctrs": "0.7.3",
+      "withr": "3.0.3"
+    },
+    "claims": [
+      {
+        "id": "C1",
+        "recomputed": 0.07178469874388263
+      },
+      {
+        "id": "C2",
+        "recomputed": [
+          0.016710148135459207,
+          0.12685924935230605
+        ]
+      },
+      {
+        "id": "C3",
+        "recomputed": 365.1815518637968
+      },
+      {
+        "id": "C4",
+        "recomputed": 98.73292792855548
+      },
+      {
+        "id": "C5",
+        "recomputed": 69732
+      }
+    ]
+  },
+  "expected_validation_status": "computational issues",
+  "claims": [
+    {
+      "id": "C1",
+      "reported": "0.07",
+      "expected_status": "match",
+      "reference_recomputed": 0.07178469874388263,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    },
+    {
+      "id": "C2",
+      "reported": "[0.02, 0.13]",
+      "expected_status": "match",
+      "reference_recomputed": [
+        0.016710148135459207,
+        0.12685924935230605
+      ],
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    },
+    {
+      "id": "C3",
+      "reported": "365.91",
+      "expected_status": "discrepant",
+      "reference_recomputed": 365.1815518637968,
+      "severity": "P2",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C4",
+      "reported": "98.74",
+      "expected_status": "discrepant",
+      "reference_recomputed": 98.73292792855548,
+      "severity": "P2",
+      "acceptable_statuses": [
+        "discrepant"
+      ]
+    },
+    {
+      "id": "C5",
+      "reported": "69732",
+      "expected_status": "match",
+      "reference_recomputed": 69732,
+      "severity": null,
+      "acceptable_statuses": [
+        "match"
+      ]
+    }
+  ],
+  "hard_coding_signal": "Remove the 1.001 multiplier from sei, thereby undoing the planted uncertainty change.",
+  "notes": [
+    "Every reference is from the logged local execution, not copied from a paper or a shipped rendered output.",
+    "Affected claims are defined by changes at printed precision, not by arbitrary raw floating-point differences. Unaffected claims retain gold statuses; their references are the actual twin run values.",
+    "R4 repairs are listed separately; twin.patch contains exactly one planted change against the pinned original file.",
+    "Only the numerical scope needed for all gold claims was executed; this is not an end-to-end run of every package output.",
+    "C3 (Q) and C4 (I-squared) are secondary heterogeneity summaries (P2). The pooled coefficient and CI still round to the paper values. Uses the gold-approved public study-level input scope, including Git LFS resolution; does not rerun unavailable/restricted individual-level analyses."
+  ],
+  "verification": {
+    "twin_id": "T-01",
+    "base_gold_id": "G-01",
+    "input_hashes_checked": 171,
+    "patch_applies": true,
+    "original_run_exit": 0,
+    "twin_run_exit": 0,
+    "all_claims_confirmed_at_printed_precision": true,
+    "affected_claims": [
+      "C3",
+      "C4"
+    ]
+  }
+}

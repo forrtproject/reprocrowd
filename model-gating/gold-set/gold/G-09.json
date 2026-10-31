@@ -1,0 +1,148 @@
+{
+ "gold_id": "G-09",
+ "gold_version": "1.1",
+ "cand_id": "I4R-j65xf",
+ "doi": "10.1177/09567976251319038",
+ "title": "Deconfounding Sex and Sex of Partner in Mate-Preference Research",
+ "stratum_drawn": "computationally reproducible",
+ "paper_url": "https://journals.sagepub.com/doi/pdf/10.1177/09567976251319038",
+ "package": {
+  "url": "https://osf.io/amx5v/",
+  "version_pin": "bisexualitySensitivityAnalysisScript.R: OSF file 67919b0d65a31093137c2b60 version 1, SHA-256 3524cb5dac362e2bad0e3652a59fce11afec838b5f6224c06783b69af2278d2a; Bisexuality Processing Script.R: OSF file 67919b0d65a31093137c2b63 version 1, SHA-256 94b6f8766792ee1a54d1ae71b2ebed09b1781e24c9d033f1528e7c64e2cf3c27; PR Bisexuality Analysis Script.R: OSF file 67919b0d65a31093137c2b67 version 1, SHA-256 caca8606b4d4b0c777b50559cb5121e45270d3420442d7c7fbdc4e565989fe5e; bisexualityStudy2ProcessingScript.R: OSF file 67919b0d65a31093137c2b6b version 1, SHA-256 5215cd0c4498e4f07510cdf9fdc2fd447c0487b933977b720add77cf89467231; bisexualityStudy2 Analysis Script.R: OSF file 67919b0e65a31093137c2b6c version 1, SHA-256 63cca9f365fae009552c4bb169aeec176f9961c8059baf0d3fc8beb58aa123f8",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/s7wkt/",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "label_confidence": "high",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Study 1 participant sex and physical-attractiveness preference",
+   "exhibit": "Study 1 Results; Figure 2",
+   "page": 120,
+   "quantity": "Participant-sex coefficient",
+   "reported": "0.28",
+   "expected_status": "match",
+   "reference_recomputed": 0.279,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": ".279 rounds to the printed 0.28."
+  },
+  {
+   "id": "C2",
+   "claim": "Study 1 participant sex and preferred partner age",
+   "exhibit": "Study 1 Results; Figure 2",
+   "page": 120,
+   "quantity": "Participant-sex coefficient",
+   "reported": "−0.67",
+   "expected_status": "match",
+   "reference_recomputed": -0.665,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "−.665 rounds to the printed −0.67."
+  },
+  {
+   "id": "C3",
+   "claim": "Study 1 participant sex and kindness preference",
+   "exhibit": "Study 1 Results; Figure 2",
+   "page": 120,
+   "quantity": "Participant-sex coefficient",
+   "reported": "−0.26",
+   "expected_status": "match",
+   "reference_recomputed": -0.256,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "−.256 rounds to the printed −0.26."
+  },
+  {
+   "id": "C4",
+   "claim": "Study 1 participant sex and resource preference",
+   "exhibit": "Study 1 Results; Figure 2",
+   "page": 120,
+   "quantity": "Participant-sex coefficient",
+   "reported": "−0.08",
+   "expected_status": "match",
+   "reference_recomputed": -0.082,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "−.082 rounds to the printed −0.08."
+  },
+  {
+   "id": "C5",
+   "claim": "Study 1 female participants’ resource preference for opposite-sex targets",
+   "exhibit": "Study 1 Results",
+   "page": 120,
+   "quantity": "Mean resource preference",
+   "reported": "6.23",
+   "expected_status": "match",
+   "reference_recomputed": 6.23,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/s7wkt/ — §4.1 Study 1, p. 5: “successfully replicated”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Identical to printed mean."
+  }
+ ],
+ "notes": {
+  "claim_list": "",
+  "sol": "The selected per-trait regressions and resource mean come from supplied analyses. The source reconstructs missing backward-elimination steps for omnibus models; those omnibus claims are not selected. Age removal and heteroscedasticity checks are scientific alternatives and are excluded.",
+  "claude": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "All Study 1 claims reproduce. Outside the claim list the report found (a) a likely text swap of the Study 2 same-sex-target resource means (paper: male M = 6.19, 'should read' male M = 6.29, female M = 6.19) and (b) the manuscript describing five traits while the code uses six. Both are reporting issues outside C1-C5; a strict reading of 'all assessed outputs recur' could support 'computational issues' for the paper, but the report treats them as 'small inconsistencies in reporting' and concludes full reproduction. The report also notes the omnibus backward-elimination code was not shipped and was reconstructed from the description; this does not affect the per-trait models behind C1-C5. Report's Study 2 attractiveness p = 0.120 differs from the paper's p = .012 (apparently a typo in the report; not a claim). Residual/age analyses (robustness) ignored."
+ }
+}

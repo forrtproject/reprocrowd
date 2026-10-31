@@ -1,0 +1,63 @@
+{
+  "gold_id": "G-24",
+  "cand_id": "I4R-mepbv",
+  "doi": "10.1038/s41562-022-01517-1",
+  "title": "Insights into the accuracy of social scientists’ forecasts of societal change",
+  "stratum_drawn": "technical failure",
+  "paper_url": "https://doi.org/10.1038/s41562-022-01517-1",
+  "package": {
+    "url": "https://github.com/grossmania/Forecasting-Tournament/tree/32cfd57c635d08a54a2eff8f735382c3c16336ac",
+    "version_pin": "Git commit 32cfd57c635d08a54a2eff8f735382c3c16336ac",
+    "language": "R",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/bk3ag/",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Scientific versus lay forecasting accuracy for life satisfaction",
+      "exhibit": "Table 1",
+      "page": null,
+      "quantity": "Contrast t-ratio",
+      "reported": "4.321"
+    },
+    {
+      "id": "C2",
+      "claim": "Scientific versus lay forecasting accuracy for explicit gender–career bias",
+      "exhibit": "Table 1",
+      "page": null,
+      "quantity": "Contrast t-ratio",
+      "reported": "3.204"
+    },
+    {
+      "id": "C3",
+      "claim": "Scientific versus lay forecasting accuracy for implicit gender–career bias",
+      "exhibit": "Table 1",
+      "page": null,
+      "quantity": "Contrast t-ratio",
+      "reported": "3.161"
+    },
+    {
+      "id": "C4",
+      "claim": "Scientific versus lay forecasting accuracy for political polarization",
+      "exhibit": "Table 1",
+      "page": null,
+      "quantity": "Contrast t-ratio",
+      "reported": "2.819"
+    },
+    {
+      "id": "C5",
+      "claim": "Scientific versus lay forecasting accuracy for positive affect",
+      "exhibit": "Table 1",
+      "page": null,
+      "quantity": "Contrast t-ratio",
+      "reported": "2.128"
+    }
+  ],
+  "notes": ""
+}

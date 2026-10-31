@@ -1,0 +1,172 @@
+{
+ "gold_id": "G-11",
+ "gold_version": "1.1",
+ "cand_id": "RB-029",
+ "doi": "10.1017/s0003055421000691",
+ "title": "Flight to Safety: COVID-Induced Changes in the Intensity of Status Quo Preference and Voting Behavior",
+ "stratum_drawn": "computationally reproducible",
+ "paper_url": "https://doi.org/10.1017/s0003055421000691",
+ "package": {
+  "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/29/replication_package",
+  "version_pin": "REPRO-Bench snapshot commit 74958fba32daeacff51f2e1fd37be3916595648f",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [
+  "computational issues"
+ ],
+ "label_confidence": "medium",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "COVID exposure and Sanders two-way vote share, specification 1",
+   "exhibit": "Table 1, column 1",
+   "page": null,
+   "quantity": "Exposure dummy coefficient",
+   "reported": "−1.321",
+   "expected_status": "match",
+   "reference_recomputed": -1.321,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report's rerun of the unchanged code gives the printed coefficient exactly."
+  },
+  {
+   "id": "C2",
+   "claim": "COVID exposure and Sanders two-way vote share, specification 2",
+   "exhibit": "Table 1, column 2",
+   "page": null,
+   "quantity": "Exposure dummy coefficient",
+   "reported": "−1.064",
+   "expected_status": "close",
+   "reference_recomputed": -1.066,
+   "tolerance": "Absolute difference 0.002; relative difference below 1%; retain sign and substantive estimate.",
+   "severity": null,
+   "cause": "Small original-source rerun difference; the report treats the results as reproduced.",
+   "evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+   "rationale": "The source treats the result as reproduced; the stated difference is small and does not establish an original-analysis discrepancy.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "close"
+   ],
+   "second_labeller_rationale": "Report treats the result as perfectly replicated, but its own table differs by 0.002 at printed precision; the shipped log matches the paper, so the gap comes from the environment, not the code."
+  },
+  {
+   "id": "C3",
+   "claim": "COVID exposure and Sanders two-way vote share, specification 3",
+   "exhibit": "Table 1, column 3",
+   "page": null,
+   "quantity": "Exposure dummy coefficient",
+   "reported": "−1.348",
+   "expected_status": "match",
+   "reference_recomputed": -1.348,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Identical to printed value."
+  },
+  {
+   "id": "C4",
+   "claim": "COVID exposure and Sanders two-way vote share, specification 4",
+   "exhibit": "Table 1, column 4",
+   "page": null,
+   "quantity": "Exposure dummy coefficient",
+   "reported": "−0.885",
+   "expected_status": "match",
+   "reference_recomputed": -0.885,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Identical to printed value."
+  },
+  {
+   "id": "C5",
+   "claim": "COVID exposure and Sanders two-way vote share, specification 5",
+   "exhibit": "Table 1, column 5",
+   "page": null,
+   "quantity": "Exposure dummy coefficient",
+   "reported": "−0.569",
+   "expected_status": "close",
+   "reference_recomputed": -0.574,
+   "tolerance": "Absolute difference 0.005; relative difference below 1%; retain sign and substantive estimate.",
+   "severity": null,
+   "cause": "Small original-source rerun difference; the report treats the results as reproduced.",
+   "evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+   "rationale": "The source treats the result as reproduced; the stated difference is small and does not establish an original-analysis discrepancy.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "close"
+   ],
+   "second_labeller_rationale": "Small environment-driven difference that the report treats as perfectly replicated; significance stars unchanged."
+  },
+  {
+   "id": "C6",
+   "claim": "COVID exposure and Sanders two-way vote share, specification 6",
+   "exhibit": "Table 1, column 6",
+   "page": null,
+   "quantity": "Exposure dummy coefficient",
+   "reported": "−0.885",
+   "expected_status": "match",
+   "reference_recomputed": -0.885,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Identical to printed value."
+  }
+ ],
+ "notes": {
+  "claim_list": "",
+  "sol": "The original PDF prints -1.064 and -0.569 in columns 2 and 5, while the source rerun table prints -1.066 and -0.574. These are close rather than exact printed-precision matches. Alternative difference-in-differences estimators are excluded.",
+  "claude": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "The report says Table 1 replicates perfectly, but its recreated table differs in the two matched-sample columns (2) and (5): exposure −1.066 vs −1.064 and −0.574 vs −0.569. Other covariates in col 2 differ more (caucus switch 0.434 vs printed 0.897; caucus dummy 0.023 vs 0.337), so the matched sample itself changed in their environment. The shipped log (Code/LOG/log_Table 1, SI3, SI4, SI5, Figure SI13, SI14.txt in the REPRO-Bench snapshot) shows treatBin −1.063590 (0.476627) for col 2, matching the paper. So the code is correct but matching output depends on the version. That is why C2/C5 are 'close'; a strict reconciler could argue 'not_checkable' (version-dependent output) for those two claims, or 'computational issues' at paper level. The paper was checked via the REPRO-Bench snapshot's paper.pdf."
+ }
+}

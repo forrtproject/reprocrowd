@@ -1,0 +1,63 @@
+{
+  "gold_id": "G-09",
+  "cand_id": "I4R-j65xf",
+  "doi": "10.1177/09567976251319038",
+  "title": "Deconfounding Sex and Sex of Partner in Mate-Preference Research",
+  "stratum_drawn": "computationally reproducible",
+  "paper_url": "https://journals.sagepub.com/doi/pdf/10.1177/09567976251319038",
+  "package": {
+    "url": "https://osf.io/amx5v/",
+    "version_pin": "bisexualitySensitivityAnalysisScript.R: OSF file 67919b0d65a31093137c2b60 version 1, SHA-256 3524cb5dac362e2bad0e3652a59fce11afec838b5f6224c06783b69af2278d2a; Bisexuality Processing Script.R: OSF file 67919b0d65a31093137c2b63 version 1, SHA-256 94b6f8766792ee1a54d1ae71b2ebed09b1781e24c9d033f1528e7c64e2cf3c27; PR Bisexuality Analysis Script.R: OSF file 67919b0d65a31093137c2b67 version 1, SHA-256 caca8606b4d4b0c777b50559cb5121e45270d3420442d7c7fbdc4e565989fe5e; bisexualityStudy2ProcessingScript.R: OSF file 67919b0d65a31093137c2b6b version 1, SHA-256 5215cd0c4498e4f07510cdf9fdc2fd447c0487b933977b720add77cf89467231; bisexualityStudy2 Analysis Script.R: OSF file 67919b0e65a31093137c2b6c version 1, SHA-256 63cca9f365fae009552c4bb169aeec176f9961c8059baf0d3fc8beb58aa123f8",
+    "language": "R",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/s7wkt/",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Study 1 participant sex and physical-attractiveness preference",
+      "exhibit": "Study 1 Results; Figure 2",
+      "page": 120,
+      "quantity": "Participant-sex coefficient",
+      "reported": "0.28"
+    },
+    {
+      "id": "C2",
+      "claim": "Study 1 participant sex and preferred partner age",
+      "exhibit": "Study 1 Results; Figure 2",
+      "page": 120,
+      "quantity": "Participant-sex coefficient",
+      "reported": "−0.67"
+    },
+    {
+      "id": "C3",
+      "claim": "Study 1 participant sex and kindness preference",
+      "exhibit": "Study 1 Results; Figure 2",
+      "page": 120,
+      "quantity": "Participant-sex coefficient",
+      "reported": "−0.26"
+    },
+    {
+      "id": "C4",
+      "claim": "Study 1 participant sex and resource preference",
+      "exhibit": "Study 1 Results; Figure 2",
+      "page": 120,
+      "quantity": "Participant-sex coefficient",
+      "reported": "−0.08"
+    },
+    {
+      "id": "C5",
+      "claim": "Study 1 female participants’ resource preference for opposite-sex targets",
+      "exhibit": "Study 1 Results",
+      "page": 120,
+      "quantity": "Mean resource preference",
+      "reported": "6.23"
+    }
+  ],
+  "notes": ""
+}

@@ -1,0 +1,71 @@
+{
+  "gold_id": "G-11",
+  "cand_id": "RB-029",
+  "doi": "10.1017/s0003055421000691",
+  "title": "Flight to Safety: COVID-Induced Changes in the Intensity of Status Quo Preference and Voting Behavior",
+  "stratum_drawn": "computationally reproducible",
+  "paper_url": "https://doi.org/10.1017/s0003055421000691",
+  "package": {
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/29/replication_package",
+    "version_pin": "REPRO-Bench snapshot commit 74958fba32daeacff51f2e1fd37be3916595648f",
+    "language": "R",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "COVID exposure and Sanders two-way vote share, specification 1",
+      "exhibit": "Table 1, column 1",
+      "page": null,
+      "quantity": "Exposure dummy coefficient",
+      "reported": "−1.321"
+    },
+    {
+      "id": "C2",
+      "claim": "COVID exposure and Sanders two-way vote share, specification 2",
+      "exhibit": "Table 1, column 2",
+      "page": null,
+      "quantity": "Exposure dummy coefficient",
+      "reported": "−1.064"
+    },
+    {
+      "id": "C3",
+      "claim": "COVID exposure and Sanders two-way vote share, specification 3",
+      "exhibit": "Table 1, column 3",
+      "page": null,
+      "quantity": "Exposure dummy coefficient",
+      "reported": "−1.348"
+    },
+    {
+      "id": "C4",
+      "claim": "COVID exposure and Sanders two-way vote share, specification 4",
+      "exhibit": "Table 1, column 4",
+      "page": null,
+      "quantity": "Exposure dummy coefficient",
+      "reported": "−0.885"
+    },
+    {
+      "id": "C5",
+      "claim": "COVID exposure and Sanders two-way vote share, specification 5",
+      "exhibit": "Table 1, column 5",
+      "page": null,
+      "quantity": "Exposure dummy coefficient",
+      "reported": "−0.569"
+    },
+    {
+      "id": "C6",
+      "claim": "COVID exposure and Sanders two-way vote share, specification 6",
+      "exhibit": "Table 1, column 6",
+      "page": null,
+      "quantity": "Exposure dummy coefficient",
+      "reported": "−0.885"
+    }
+  ],
+  "notes": ""
+}

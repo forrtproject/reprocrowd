@@ -1,0 +1,7 @@
+config,target,certificate
+sol,G-08,model-gating/gold-set/pilot/sol/G-08-certificate.json
+sol,G-21,model-gating/gold-set/pilot/sol/G-21-certificate.json
+sol,G-23,model-gating/gold-set/pilot/sol/G-23-certificate.json
+claude,G-08,model-gating/gold-set/pilot/claude/G-08-certificate.json
+claude,G-21,model-gating/gold-set/pilot/claude/G-21-certificate.json
+claude,G-23,model-gating/gold-set/pilot/claude/G-23-certificate.json

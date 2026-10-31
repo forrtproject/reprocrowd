@@ -1,0 +1,11 @@
+--- a/AJPS_2021_Kim_Manuscript.R	
++++ b/AJPS_2021_Kim_Manuscript.R	
+@@ -110,7 +110,7 @@
+ 
+ load("mturk.rdata")
+ 
+-m1 <-lm(mperception_combined ~ condition2 +  rep + dem  + optimism_index  + sjs_index, data=msample)
++m1 <-lm(mperception_combined ~ condition2 +  rep + dem  + sjs_index, data=msample)
+ mr <-lm(mperception_combined ~ condition2  + optimism_index  + sjs_index, data=msample[msample$rep==1,])
+ md <- lm(mperception_combined ~ condition2  + optimism_index  + sjs_index, data=msample[msample$dem==1,])
+ # interaction model 

@@ -1,0 +1,82 @@
+[
+  {
+    "path": "acs.RData",
+    "sha256": "2f5dc507fd2ad95a56dd05a9a0544cf1d9d0708fe3350fb5d568f36f2f2a0494",
+    "bytes": 590945,
+    "git_blob_oid": "58401d3827bb7a76aa3b34f837100b77ada1dc7b",
+    "lfs_sha256": "2f5dc507fd2ad95a56dd05a9a0544cf1d9d0708fe3350fb5d568f36f2f2a0494",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/4/replication_package/acs.RData"
+  },
+  {
+    "path": "an_blacks.R",
+    "sha256": "be058f82a4c806d232965dbcce03cd347c16a2371543a6e79abe0a5708d8eda7",
+    "bytes": 6870,
+    "git_blob_oid": "6821d6e3c1d8f476471017bcf70211f2b6e9730a",
+    "lfs_sha256": null,
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/4/replication_package/an_blacks.R"
+  },
+  {
+    "path": "an_descriptives.R",
+    "sha256": "4ddbd5e9722444bbcb7f78370517d15b4c458222e79552308e4cc0629389a5dd",
+    "bytes": 2941,
+    "git_blob_oid": "baf7324c852d1c13a3c23d517b16c763a4c69408",
+    "lfs_sha256": null,
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/4/replication_package/an_descriptives.R"
+  },
+  {
+    "path": "an_main.R",
+    "sha256": "865050488ea275846008ca2d7d9330ac382380bd5dfa8e123775b7305456dc7e",
+    "bytes": 6922,
+    "git_blob_oid": "12e66435d6138475a822b92633098955c2eee134",
+    "lfs_sha256": null,
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/4/replication_package/an_main.R"
+  },
+  {
+    "path": "an_non_racial.R",
+    "sha256": "ebfa6b1ed83addcae6ae6e85a4f7a6e2de520e38e65e3192160ec4a7e18e3a8e",
+    "bytes": 5374,
+    "git_blob_oid": "599f93fef3ae4a8bccc3eda5a0990d1c25749687",
+    "lfs_sha256": null,
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/4/replication_package/an_non_racial.R"
+  },
+  {
+    "path": "an_retired.R",
+    "sha256": "95cfca9aaf455eb44550adaccd9c1f5cc47b156f87126f7327886b8fa109c17a",
+    "bytes": 7035,
+    "git_blob_oid": "cdea6ed697af7103dad32c5940d0e0cd04fbe55f",
+    "lfs_sha256": null,
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/4/replication_package/an_retired.R"
+  },
+  {
+    "path": "an_robust.R",
+    "sha256": "80923033c4a35e14607d0b4406ff83f968cd22bf1a9bf4f798eebf04dffc4772",
+    "bytes": 36418,
+    "git_blob_oid": "9a2a03bcc953f23c5441f5fa789b765eb6633bbe",
+    "lfs_sha256": null,
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/4/replication_package/an_robust.R"
+  },
+  {
+    "path": "dta.RData",
+    "sha256": "8e0162578ffce79c472e8f599bcbead101397fa93248c82b433b2124087ac8fe",
+    "bytes": 9079006,
+    "git_blob_oid": "752eb29abd5fe51648891fafc116ab5432319110",
+    "lfs_sha256": "8e0162578ffce79c472e8f599bcbead101397fa93248c82b433b2124087ac8fe",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/4/replication_package/dta.RData"
+  },
+  {
+    "path": "racial_flux.RData",
+    "sha256": "948c3dce81ba842ba3cd7292a8fb992391025a9a6861aab344c7bb4abfb7e707",
+    "bytes": 303333,
+    "git_blob_oid": "672c21a6e373da949107b3425be90059efe0465a",
+    "lfs_sha256": "948c3dce81ba842ba3cd7292a8fb992391025a9a6861aab344c7bb4abfb7e707",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/4/replication_package/racial_flux.RData"
+  },
+  {
+    "path": "readme.txt",
+    "sha256": "033cfb988cc7fd12f856475cc26669e5e7315bad4cf983b005ac13bffcd4eee0",
+    "bytes": 670,
+    "git_blob_oid": "d78e111ab3bc45e8abc2fa5838c5dd99ed4232f3",
+    "lfs_sha256": "033cfb988cc7fd12f856475cc26669e5e7315bad4cf983b005ac13bffcd4eee0",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/4/replication_package/readme.txt"
+  }
+]

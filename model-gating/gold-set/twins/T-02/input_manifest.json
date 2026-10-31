@@ -1,0 +1,170 @@
+[
+  {
+    "path": "AJPS_2021_Kim_Appendix.R",
+    "sha256": "99f3bcb42bf12938c6e42aa2a81560a19ef293dbb761e7c67f6dc5078f086ce9",
+    "bytes": 38746,
+    "git_blob_oid": "1e68ef3daa528bd264ad6396217497a8103c8f23",
+    "lfs_sha256": null,
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/AJPS_2021_Kim_Appendix.R"
+  },
+  {
+    "path": "AJPS_2021_Kim_Appendix_RMarkdown.Rmd",
+    "sha256": "bd97c00109699237361841e4bf2c9fb5a6f58fa20ce7da47959b0b88f334f8d2",
+    "bytes": 37937,
+    "git_blob_oid": "f93cabcfebefd7cf7012c936ebcd22a1a792ab54",
+    "lfs_sha256": null,
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/AJPS_2021_Kim_Appendix_RMarkdown.Rmd"
+  },
+  {
+    "path": "AJPS_2021_Kim_Appendix_RMarkdown.html",
+    "sha256": "8066d7fe2d574eac311493e3c86593c07fafc9b6c57e7b89206becd0e44738f7",
+    "bytes": 1317719,
+    "git_blob_oid": "aa483f8e10d758a0121e83bd493cfe1553fa156c",
+    "lfs_sha256": null,
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/AJPS_2021_Kim_Appendix_RMarkdown.html"
+  },
+  {
+    "path": "AJPS_2021_Kim_Manuscript.R",
+    "sha256": "7785eb79bf617960cb5e4b69781025438ed67bea5aa451d38ff4bd54aca87e47",
+    "bytes": 14218,
+    "git_blob_oid": "549cd040327d7d047f860c326e623e4ee6dd0aef",
+    "lfs_sha256": null,
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/AJPS_2021_Kim_Manuscript.R"
+  },
+  {
+    "path": "AJPS_2021_Kim_Manuscript_RMarkdown.Rmd",
+    "sha256": "5457ed64ecc1d6475e13fee264a4b03ddc599cca7c442c9621c45bd03177f498",
+    "bytes": 13151,
+    "git_blob_oid": "2c0d910b5c9caf5d01517b4528276a187341b073",
+    "lfs_sha256": null,
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/AJPS_2021_Kim_Manuscript_RMarkdown.Rmd"
+  },
+  {
+    "path": "AJPS_2021_Kim_Manuscript_RMarkdown.html",
+    "sha256": "bff50ebb6b349bca8e8b06231eea2409e70d01b6bd2deae98a653307f222eb88",
+    "bytes": 1014323,
+    "git_blob_oid": "ce5c7d8c2710465b7c18d316f7fa61c4d4d48198",
+    "lfs_sha256": null,
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/AJPS_2021_Kim_Manuscript_RMarkdown.html"
+  },
+  {
+    "path": "AJPS_Kim_readme.txt",
+    "sha256": "59fcaa336d3894ee7bbadccc254d726277c9bfbe006960a39806847875f6d343",
+    "bytes": 4931,
+    "git_blob_oid": "59b053f49b49f9a410dee0a9cca654fc04c444a6",
+    "lfs_sha256": "59fcaa336d3894ee7bbadccc254d726277c9bfbe006960a39806847875f6d343",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/AJPS_Kim_readme.txt"
+  },
+  {
+    "path": "AJPS_Replication_Data_Codebook.pdf",
+    "sha256": "c0f44cac9343bc5ffedf0150d96e600c2ea125c4f5a95981a1394cae8ee17ab8",
+    "bytes": 1483030,
+    "git_blob_oid": "debc85e2b0f1345dd45d7d4818c8074f9d3e5c92",
+    "lfs_sha256": "c0f44cac9343bc5ffedf0150d96e600c2ea125c4f5a95981a1394cae8ee17ab8",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/AJPS_Replication_Data_Codebook.pdf"
+  },
+  {
+    "path": "anes2016.rdata",
+    "sha256": "527002be31f18aecc082c6b46b8f667f53a8f9f452606a3cc9f44adc39283163",
+    "bytes": 50379,
+    "git_blob_oid": "ebc2ec5cbc58b187b609f1a852d36578c20f355f",
+    "lfs_sha256": "527002be31f18aecc082c6b46b8f667f53a8f9f452606a3cc9f44adc39283163",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/anes2016.rdata"
+  },
+  {
+    "path": "appendix_table_b1.xlsx",
+    "sha256": "76e4261715fd02b82f4c33dc9c65eeccf75094e661a4e88ce5eac61c9b80a16e",
+    "bytes": 12553,
+    "git_blob_oid": "a710cf15a601546c078d263e2eb471a3b128b321",
+    "lfs_sha256": "76e4261715fd02b82f4c33dc9c65eeccf75094e661a4e88ce5eac61c9b80a16e",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/appendix_table_b1.xlsx"
+  },
+  {
+    "path": "combined.rdata",
+    "sha256": "95b17c3f0d0b724aa36ce88122d669fc2d7079027c8acc411137a13d64ca0e64",
+    "bytes": 7288,
+    "git_blob_oid": "b4fcdc462a30df73d3de9489fcb9315867b1a722",
+    "lfs_sha256": "95b17c3f0d0b724aa36ce88122d669fc2d7079027c8acc411137a13d64ca0e64",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/combined.rdata"
+  },
+  {
+    "path": "contentanalysis.rdata",
+    "sha256": "6be49781fc57db1417df505aa3675d25f4a72d1afb2fc075e34e9005b8f61c7e",
+    "bytes": 4346,
+    "git_blob_oid": "0561fc12c119a3ac6162da29f748ef4f21b8a46b",
+    "lfs_sha256": "6be49781fc57db1417df505aa3675d25f4a72d1afb2fc075e34e9005b8f61c7e",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/contentanalysis.rdata"
+  },
+  {
+    "path": "gss.rdata",
+    "sha256": "f6ebc4959e5be7c2fe588f1853bc0e9992693cac6b564110a88c31c92f02e91c",
+    "bytes": 145668,
+    "git_blob_oid": "843d06e392cae60f59af7b328fdcf8cfaba48655",
+    "lfs_sha256": "f6ebc4959e5be7c2fe588f1853bc0e9992693cac6b564110a88c31c92f02e91c",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/gss.rdata"
+  },
+  {
+    "path": "imdb.rdata",
+    "sha256": "f8641366e2ee47eefad649d3c61b301129c1c80390196c599d271494a7e022dc",
+    "bytes": 1258,
+    "git_blob_oid": "344b21f81357c83b38a4d6455a17269992458f5e",
+    "lfs_sha256": "f8641366e2ee47eefad649d3c61b301129c1c80390196c599d271494a7e022dc",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/imdb.rdata"
+  },
+  {
+    "path": "iscap.rdata",
+    "sha256": "ff4d27b1320cd201b95400ea567cd726ed9dd384e2962fcfba59c1e0e4a9903d",
+    "bytes": 15198,
+    "git_blob_oid": "f12f862a7c6a6c6b5bb09305cec9af8a0b82e719",
+    "lfs_sha256": "ff4d27b1320cd201b95400ea567cd726ed9dd384e2962fcfba59c1e0e4a9903d",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/iscap.rdata"
+  },
+  {
+    "path": "labinthefield.rdata",
+    "sha256": "4aead9f14ee03615362c08a8e77ed3b6196397524e2f830860fa1f4b13595e7c",
+    "bytes": 1508,
+    "git_blob_oid": "c27fe8304158c593b5c147a5e7736cb5b8824cf3",
+    "lfs_sha256": "4aead9f14ee03615362c08a8e77ed3b6196397524e2f830860fa1f4b13595e7c",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/labinthefield.rdata"
+  },
+  {
+    "path": "merit.rdata",
+    "sha256": "81786d5a31141c3bcea13225c2f30ac5dd47764f9516ba7764d1568d514fc82d",
+    "bytes": 1260,
+    "git_blob_oid": "ec10a94abebbd11b27de26fd7cdd36b32df48222",
+    "lfs_sha256": "81786d5a31141c3bcea13225c2f30ac5dd47764f9516ba7764d1568d514fc82d",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/merit.rdata"
+  },
+  {
+    "path": "mturk.rdata",
+    "sha256": "452f6296b8caf93fd2c8b6f76b186933380db580d6df906edbf536dea7f01d93",
+    "bytes": 4073,
+    "git_blob_oid": "a2998b3624869af0a0e92dcd0ebaa1f80f8b182d",
+    "lfs_sha256": "452f6296b8caf93fd2c8b6f76b186933380db580d6df906edbf536dea7f01d93",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/mturk.rdata"
+  },
+  {
+    "path": "nyt.RData",
+    "sha256": "73cf20cef2cec54a7e2686a53a3e9a20b04593b2d95959d1bf6d8548bc4ee1f1",
+    "bytes": 50906696,
+    "git_blob_oid": "ec76c89797fd08ea7bacf95fc2428539dd9710f5",
+    "lfs_sha256": "73cf20cef2cec54a7e2686a53a3e9a20b04593b2d95959d1bf6d8548bc4ee1f1",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/nyt.RData"
+  },
+  {
+    "path": "ssi.rdata",
+    "sha256": "9a1356fb9edd45adf04c88a81a2317da28bef588f3ba3eb9d97793c6c6ca5b27",
+    "bytes": 78485,
+    "git_blob_oid": "8f2559e361b990c2138308b69a5a44bff30c05fb",
+    "lfs_sha256": "9a1356fb9edd45adf04c88a81a2317da28bef588f3ba3eb9d97793c6c6ca5b27",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/ssi.rdata"
+  },
+  {
+    "path": "tvcoding.rdata",
+    "sha256": "ddf108c30868be42c3ef500e4bd64ae76164528f77d47a3a3c12213761e27cd2",
+    "bytes": 1900,
+    "git_blob_oid": "055062ed6cd2f03f8baff5444d8ceed1bb5bb0fd",
+    "lfs_sha256": "ddf108c30868be42c3ef500e4bd64ae76164528f77d47a3a3c12213761e27cd2",
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package/tvcoding.rdata"
+  }
+]

@@ -1,0 +1,63 @@
+{
+  "gold_id": "G-01",
+  "cand_id": "I4R-ejsb9",
+  "doi": "10.1177/09567976241242037",
+  "title": "Do We Become More Lonely With Age? A Coordinated Data Analysis of Nine Longitudinal Studies",
+  "stratum_drawn": "computationally reproducible",
+  "paper_url": "https://pscresearch.faculty.ucdavis.edu/wp-content/uploads/sites/112/2024/11/beck-yoneda-2024-loneliness-coordinated-data.pdf",
+  "package": {
+    "url": "https://github.com/emoriebeck/loneliness-trajectories",
+    "version_pin": "Git commit 5abae4b94d995b4fd412780175c14b8080623592",
+    "language": "R",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/9ht7y/",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Pooled quadratic age effect on loneliness",
+      "exhibit": "Figure 1a, Meta-Analytic row",
+      "page": 8,
+      "quantity": "Pooled quadratic age coefficient",
+      "reported": "0.07"
+    },
+    {
+      "id": "C2",
+      "claim": "Uncertainty in the pooled quadratic age effect",
+      "exhibit": "Figure 1a, Meta-Analytic row",
+      "page": 8,
+      "quantity": "95% confidence interval",
+      "reported": "[0.02, 0.13]"
+    },
+    {
+      "id": "C3",
+      "claim": "Heterogeneity in quadratic age effects",
+      "exhibit": "Figure 1a, RE Model",
+      "page": 8,
+      "quantity": "Cochran Q",
+      "reported": "365.91"
+    },
+    {
+      "id": "C4",
+      "claim": "Proportion of heterogeneity in quadratic age effects",
+      "exhibit": "Figure 1a, RE Model",
+      "page": 8,
+      "quantity": "I-squared",
+      "reported": "98.74"
+    },
+    {
+      "id": "C5",
+      "claim": "Participants contributing to the quadratic-age meta-analysis",
+      "exhibit": "Figure 1a, Meta-Analytic row",
+      "page": 8,
+      "quantity": "Meta-analytic sample size",
+      "reported": "69732"
+    }
+  ],
+  "notes": "replaces I4R-qe3fx: reason in REPLACE file. Scope begins with the deposited study-level meta-analysis inputs."
+}

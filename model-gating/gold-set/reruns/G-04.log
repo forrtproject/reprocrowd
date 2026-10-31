@@ -1,0 +1,186 @@
+# G-04 rerun log (trimmed). Executed by claude agent (not a human), 2026-10-30, R 4.6.1, macOS.
+# Full logs were kept outside the repo; this file keeps the claim-relevant output only.
+
+## Input verification (SHA-256 against gold package.version_pin)
+BOTH_Analyses.R 50556 OK
+MTurk_Analyses.R 48627 OK
+MTurk_Cleaning.html 1081725 OK
+MTurk_Cleaning.Rmd 49832 OK
+REP_Analyses.R 48435 OK
+Power_Analyses.R 8485 OK
+REP_Cleaning.Rmd 45406 OK
+REP_Cleaning.html 1054145 OK
+README.pdf 79766 OK
+/Data and R Code/MTurk_RawData.csv 2005842 OK
+/Data and R Code/REP_RawData.csv 1330828 OK
+/Data and R Code/BOTH_CleanData.csv 585553 OK
+/Data and R Code/MTurk_CleanData.csv 435229 OK
+/Data and R Code/REP_CleanData.csv 251085 OK
+/EVA and FTT Predictions for 18 Cells.xlsx 15482 OK
+
+## Run A: MTurk_Analyses.R, unchanged, on deposited MTurk_CleanData.csv
+584:> StdFE <- glmer(Choice ~ Frame + (1 | ID), family = binomial, 
+585-+     data = filter(MTurk, Cell == "G4" | Cell == "L6"))
+Formula: Choice ~ Frame + (1 | ID)
+   Data: filter(MTurk, Cell == "G4" | Cell == "L6")
+Number of obs: 375, groups:  ID, 94
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -0.9194     0.2576  -3.570 0.000358 ***
+Frame         2.1775     0.5254   4.144 3.41e-05 ***
+Formula: Choice ~ VDA + Frame + VDA:Frame + (1 | ID)
+   Data: MTurk
+Number of obs: 3615, groups:  ID, 906
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -1.02663    0.08124 -12.638  < 2e-16 ***
+VDA          1.03865    0.06289  16.517  < 2e-16 ***
+Frame        1.19940    0.15743   7.618 2.57e-14 ***
+VDA:Frame    0.12624    0.11184   1.129    0.259    
+### RESULT MTurk OK 
+### RUNTIME_SECONDS MTurk 35.0034 
+### FULLPREC MTurk StdFE 
+       (Intercept)              Frame 
+-0.919372858016483  2.177492530832682 
+                        2.5 %             97.5 %
+(Intercept) -1.42417297962277 -0.414572736410193
+Frame        1.14764463347920  3.207340428186166
+### FULLPREC MTurk mlr1 
+       (Intercept)                VDA              Frame          VDA:Frame 
+-1.026634605054677  1.038648712680527  1.199396784123377  0.126242725612546 
+                          2.5 %             97.5 %
+(Intercept) -1.1858554622096635 -0.867413747899690
+VDA          0.9153959553756745  1.161901469985380
+Frame        0.8908325256453453  1.507961042601409
+VDA:Frame   -0.0929670009620555  0.345452452187148
+### NOBS StdFE 375  mlr1 3615 
+### PKGVERS lme4 2.1.0 Matrix 1.7.5 dplyr 1.2.1 lmerTest 3.2.1 
+
+## Run A: REP_Analyses.R, unchanged, on deposited REP_CleanData.csv
+492:> StdFE <- glmer(Choice ~ Frame + (1 | ID), family = binomial, 
+493-+     data = filter(REP, Cell == "G4" | Cell == "L6"))
+Formula: Choice ~ Frame + (1 | ID)
+   Data: filter(REP, Cell == "G4" | Cell == "L6")
+Number of obs: 236, groups:  ID, 59
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -0.9078     0.1932  -4.698 2.62e-06 ***
+Frame         0.9576     0.3682   2.601   0.0093 ** 
+Formula: Choice ~ VDA + Frame + VDA:Frame + (1 | ID)
+   Data: REP
+Number of obs: 2080, groups:  ID, 521
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -0.85134    0.07573 -11.241  < 2e-16 ***
+VDA          0.67954    0.05620  12.092  < 2e-16 ***
+Frame        0.66311    0.14595   4.543 5.53e-06 ***
+VDA:Frame    0.06105    0.10606   0.576    0.565    
+### RESULT REP OK 
+### RUNTIME_SECONDS REP 18.908 
+### FULLPREC REP StdFE 
+       (Intercept)              Frame 
+-0.907779797157212  0.957617777650171 
+                         2.5 %             97.5 %
+(Intercept) -1.286475291069221 -0.529084303245203
+Frame        0.236005859886378  1.679229695413965
+### FULLPREC REP mlr1 
+        (Intercept)                 VDA               Frame           VDA:Frame 
+-0.8513395204517341  0.6795394929910186  0.6631139770796413  0.0610531566868828 
+                         2.5 %             97.5 %
+(Intercept) -0.999776569736269 -0.702902471167199
+VDA          0.569392994915631  0.789685991066406
+Frame        0.377060177916422  0.949167776242861
+VDA:Frame   -0.146812615719335  0.268918929093100
+### NOBS StdFE 236  mlr1 2080 
+### PKGVERS lme4 2.1.0 Matrix 1.7.5 dplyr 1.2.1 lmerTest 3.2.1 
+
+## Run B: cleaning Rmds rendered from raw data, then analyses on regenerated CleanData
+MTurk_Cleaning.Rmd: real 5.52   REP_Cleaning.Rmd: real 3.50
+--- compare regenerated vs deposited MTurk_CleanData.csv
+dims 3624 23 | 3624 23  same names: TRUE 
+[1] "Component “t_duration”: Mean relative difference: 3.618711e-15"
+diff col t_duration : 9 10 11 12 13 14 
+--- compare regenerated vs deposited REP_CleanData.csv
+dims 2084 23 | 2084 23  same names: TRUE 
+[1] "Component “t_duration”: Mean relative difference: 4.529425e-15"
+diff col t_duration : 61 62 63 64 73 74 
+### RESULT MTurk OK 
+### RUNTIME_SECONDS MTurk 35.34867 
+### FULLPREC MTurk StdFE 
+       (Intercept)              Frame 
+-0.919372858016483  2.177492530832682 
+                        2.5 %             97.5 %
+(Intercept) -1.42417297962277 -0.414572736410193
+Frame        1.14764463347920  3.207340428186166
+### FULLPREC MTurk mlr1 
+       (Intercept)                VDA              Frame          VDA:Frame 
+-1.026634605054677  1.038648712680527  1.199396784123377  0.126242725612546 
+                          2.5 %             97.5 %
+(Intercept) -1.1858554622096635 -0.867413747899690
+VDA          0.9153959553756745  1.161901469985380
+Frame        0.8908325256453453  1.507961042601409
+VDA:Frame   -0.0929670009620555  0.345452452187148
+### NOBS StdFE 375  mlr1 3615 
+### RESULT REP OK 
+### RUNTIME_SECONDS REP 17.78365 
+### FULLPREC REP StdFE 
+       (Intercept)              Frame 
+-0.907779797157212  0.957617777650171 
+                         2.5 %             97.5 %
+(Intercept) -1.286475291069221 -0.529084303245203
+Frame        0.236005859886378  1.679229695413965
+### FULLPREC REP mlr1 
+        (Intercept)                 VDA               Frame           VDA:Frame 
+-0.8513395204517341  0.6795394929910186  0.6631139770796413  0.0610531566868828 
+                         2.5 %             97.5 %
+(Intercept) -0.999776569736269 -0.702902471167199
+VDA          0.569392994915631  0.789685991066406
+Frame        0.377060177916422  0.949167776242861
+VDA:Frame   -0.146812615719335  0.268918929093100
+### NOBS StdFE 236  mlr1 2080 
+
+## Diagnostic: BOTH_Analyses.R (combined sample), standard FE model (report's b = 1.64)
+Formula: Choice ~ Frame + (1 | ID)
+   Data: filter(BOTH, Cell == "G4" | Cell == "L6")
+Number of obs: 611, groups:  ID, 153
+            Estimate Std. Error z value Pr(>|z|)    
+Frame         1.6384     0.3316   4.940 7.80e-07 ***
+real 82.61
+
+## sessionInfo (Run A, MTurk)
+R version 4.6.1 (2026-06-24)
+Platform: aarch64-apple-darwin23
+Running under: macOS Tahoe 26.7
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
+locale:
+[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8
+time zone: Europe/London
+tzcode source: internal
+attached base packages:
+[1] grid      stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+other attached packages:
+ [1] lmerTest_3.2-1   gmodels_2.19.1   psych_2.6.9      ggforce_0.5.0   
+ [5] lattice_0.22-9   gridExtra_2.3.1  lsmeans_2.30-2   emmeans_2.0.4   
+ [9] lme4_2.1-0       Matrix_1.7-5     ggplot2_4.0.3    sjmisc_2.8.11   
+[13] sjlabelled_1.2.0 sjPlot_2.9.0     gtools_3.9.5     MASS_7.3-65     
+[17] rcompanion_2.5.4 tidyr_1.3.2      dplyr_1.2.1      readr_2.2.0     
+loaded via a namespace (and not attached):
+ [1] tidyselect_1.2.1    Exact_3.3           rootSolve_1.8.2.4  
+ [4] libcoin_1.0-13      farver_2.1.2        S7_0.2.2           
+ [7] TH.data_1.1-5       tweenr_2.0.3        estimability_2.0.0 
+[10] lifecycle_1.0.5     multcompView_0.1-12 survival_3.8-6     
+[13] gdata_3.0.1         lmom_3.3            magrittr_2.0.5     
+[16] compiler_4.6.1      rlang_1.3.0         tools_4.6.1        
+[19] data.table_1.18.4   knitr_1.51          labeling_0.4.3     
+[22] mnormt_2.1.2        plyr_1.8.9          RColorBrewer_1.1-3 
+[25] multcomp_1.4-32     expm_1.0-1          numDeriv_2016.8-1.1
+[28] withr_3.0.3         purrr_1.2.2         polyclip_1.10-7    
+[31] stats4_4.6.1        e1071_1.7-17        scales_1.4.0       
+[34] insight_1.6.0       cli_3.6.6           mvtnorm_1.4-2      
+[37] reformulas_0.4.4    generics_0.1.4      otel_0.2.0         
+[40] rstudioapi_0.19.0   httr_1.4.8          tzdb_0.5.0         
+[43] readxl_1.5.0        gld_2.6.8           minqa_1.2.8        
+[46] proxy_0.4-29        modeltools_0.2-25   splines_4.6.1      
+[49] parallel_4.6.1      cellranger_1.1.0    matrixStats_1.5.0  
+[52] vctrs_0.7.3         boot_1.3-32         sandwich_3.1-3     
+[55] hms_1.1.4           nortest_1.0-4       glue_1.8.1         
+[58] nloptr_2.2.1        codetools_0.2-20    gtable_0.3.6       

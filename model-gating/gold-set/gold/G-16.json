@@ -1,0 +1,147 @@
+{
+ "gold_id": "G-16",
+ "gold_version": "1.1",
+ "cand_id": "I4R-axj5y",
+ "doi": "10.1038/s41562-023-01810-7",
+ "title": "Battling the coronavirus ‘infodemic’ among social media users in Kenya and Nigeria",
+ "stratum_drawn": "computational issues",
+ "paper_url": "https://doi.org/10.1038/s41562-023-01810-7",
+ "package": {
+  "url": "https://github.com/gsbDBI/infodemic-replication/tree/b675f90f133882f8e5aa6b8fc01f9e07a05485bf",
+  "version_pin": "Git commit b675f90f133882f8e5aa6b8fc01f9e07a05485bf",
+  "language": "R; Python",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/shk6u/",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "label_confidence": "low",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Men versus women in false-sharing intentions",
+   "exhibit": "Results, individual characteristics; Table 1",
+   "page": null,
+   "quantity": "Difference in percentage points",
+   "reported": "−8.0",
+   "expected_status": "close",
+   "reference_recomputed": -8.2,
+   "tolerance": "Absolute difference 0.2 percentage points; source treats this as reproduced.",
+   "severity": null,
+   "cause": "Small source-reported environment/Monte Carlo difference.",
+   "evidence": "https://osf.io/download/shk6u/ — §2.3 Table1 comparison: “estimate = −8.2 pp”.",
+   "rationale": "The source treats the result as reproduced; the stated difference is small and does not establish an original-analysis discrepancy.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/shk6u/ — §2.3 Table1 comparison: “estimate = −8.2 pp”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "close"
+   ],
+   "second_labeller_rationale": "A 0.2 pp shift that the report treats as a minor, reproduced difference; close is the only accepted status."
+  },
+  {
+   "id": "C2",
+   "claim": "Low digital literacy and false-sharing intentions",
+   "exhibit": "Results, individual characteristics; Table 1",
+   "page": null,
+   "quantity": "Difference in percentage points",
+   "reported": "10.1",
+   "expected_status": "close",
+   "reference_recomputed": 10.3,
+   "tolerance": "Absolute difference 0.2 percentage points; source treats this as reproduced.",
+   "severity": null,
+   "cause": "Small source-reported environment/Monte Carlo difference.",
+   "evidence": "https://osf.io/download/shk6u/ — §2.3 Table1 comparison: “estimate = 10.3 pp”.",
+   "rationale": "The source treats the result as reproduced; the stated difference is small and does not establish an original-analysis discrepancy.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/shk6u/ — §2.3 Table1 comparison: “estimate = 10.3 pp”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "close"
+   ],
+   "second_labeller_rationale": "Same as C1: a minor difference the report treats as reproduced; close only."
+  },
+  {
+   "id": "C3",
+   "claim": "Facebook-tips assignment group: restricted policy contrast",
+   "exhibit": "Results, restricted targeted policy; Table 3",
+   "page": null,
+   "quantity": "Difference in percentage points",
+   "reported": "6.5",
+   "expected_status": "discrepant",
+   "reference_recomputed": 4.9,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": "P2",
+   "cause": "Printed main-text policy contrast differs from the source-report R rerun; the shipped table matches the main text, and exact input-version correspondence remains unresolved.",
+   "evidence": "https://osf.io/download/shk6u/ — §2.3 Table3 comparison: “estimate = 4.9 pp”.",
+   "rationale": "The source reports 4.9 pp versus the printed text’s 6.5 pp after running the R analysis with supplied contextual probabilities. Exact input correspondence remains unresolved because the shipped script selects cleaned RDS inputs by filesystem modification time. The article explicitly says estimation of the Restricted Targeted Policy was not preregistered; this is a secondary policy analysis, so P2.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/shk6u/ — §2.3 Table3 comparison: “estimate = 4.9 pp”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "discrepant",
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "6.5 vs 4.9 pp is beyond rounding/seed noise and the report labels Table 3 only a partial match; exploratory, non-preregistered analysis so P2."
+  },
+  {
+   "id": "C4",
+   "claim": "Accuracy-nudge assignment group: restricted policy contrast",
+   "exhibit": "Results, restricted targeted policy; Table 3",
+   "page": null,
+   "quantity": "Difference in percentage points",
+   "reported": "−2.1",
+   "expected_status": "close",
+   "reference_recomputed": -1.9,
+   "tolerance": "Absolute difference 0.2 percentage points; source attributes small differences to computation/Monte Carlo variation.",
+   "severity": null,
+   "cause": "Small source-reported policy-contrast difference.",
+   "evidence": "https://osf.io/download/shk6u/ — §2.3 Table3 comparison: “estimate = −1.9 pp”.",
+   "rationale": "The source treats the result as reproduced; the stated difference is small and does not establish an original-analysis discrepancy.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/shk6u/ — §2.3 Table3 comparison: “estimate = −1.9 pp”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "close"
+   ],
+   "second_labeller_rationale": "Same 0.2 pp shift as C1/C2 with sign and inference unchanged; close only."
+  },
+  {
+   "id": "C5",
+   "claim": "Accuracy nudge relative to control on misinformation sharing",
+   "exhibit": "Abstract; Results",
+   "page": null,
+   "quantity": "Difference in percentage points",
+   "reported": "−2.3",
+   "expected_status": "close",
+   "reference_recomputed": null,
+   "tolerance": "Use the original 1-decimal percentage-point estimate; no exact source reference was supplied.",
+   "severity": null,
+   "cause": "Source reports only small Figure 2 differences without a separate exact scalar.",
+   "evidence": "https://osf.io/download/shk6u/ — §2.3 Figure 2 comparison: “largely similar”.",
+   "rationale": "The source treats the result as reproduced; the stated difference is small and does not establish an original-analysis discrepancy.",
+   "acceptable_statuses": [
+    "close",
+    "not_checkable"
+   ],
+   "second_labeller_rationale": "The report covers Fig. 2 only qualitatively ('smaller differences in decimals'); close is the expected status, with not_checkable accepted because no recomputed scalar is given."
+  }
+ ],
+ "notes": {
+  "claim_list": "Scope is the R analysis stage using the contextual probabilities supplied at the pinned commit.",
+  "sol": "Only the R analysis stage with supplied contextual probabilities is in scope. The report finds small Figure 2 differences but supplies no exact scalar for C5 (close; acceptable not_checkable). C3 is a secondary, explicitly non-preregistered restricted-policy analysis (article Results), so P2. Latest-file RDS selection leaves a live input-version concern; C3 accepts not_checkable. The report's optimized Python simulation is excluded. Computation not checked is removed as a paper alternative under R1.",
+  "claude": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "Scope: R Rmd using author-provided contextual_probabilities.RDS (as in claims-file note); replicators edited gsub(xx[1]) -> gsub(xx) for LaTeX table formatting only (display, no numeric effect). I checked the shipped outputs at the pinned commit: tables/table1.tex (gender any-false diff -0.080; digital-literacy 0.101), tables/table2.tex (Accuracy any-false -0.023), tables/table3.tex (FB-tips group diff 0.065; accuracy group -0.021) all match the printed text, so the report's remark 'original numbers for Facebook tips don't match table 3' does not hold for the shipped table; it likely refers to their own rerun. The rerun differences (also fact-check 0.4 vs -0.6, related articles 0.1 vs 0.8, Figure 3 covariate significance flips) were consistent across Windows/Linux/macOS, suggesting grf/package-version dependence (main Rmd sets set.seed(60637) but no package versions are pinned). Paper-level 'computational issues' rests on Table 3 and Figure 3; C1/C2/C4 close-vs-discrepant is the main boundary to reconcile. Report also uses 'reduction ... 4.9%' framing; claim C5 value -2.3 confirmed in preprint abstract."
+ }
+}

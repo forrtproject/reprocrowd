@@ -1,0 +1,2621 @@
+{
+  "$schema": "https://lukasroeseler.github.io/reprocrowd/schemas/certificate.schema.json",
+  "id": "RC-2026-923",
+  "certificate_id": "RC-2026-923",
+  "title": "Computational reproducibility certificate: Does spatial thinking ability relate to performance when using web-mapping services? A survey with digital natives",
+  "created_at": "2026-10-30T20:44:01.706497+00:00",
+  "study_type": "Reproduction Study",
+  "validation_status": "PartiallySupported",
+  "confidence_level": "HighConfidence",
+  "status": "partial_certification_with_unresolved_requirements",
+  "prompt_version": "0.1.0",
+  "rules_version": "v1.0.0 requested; unavailable (HTTP 404); prompt fallback applied",
+  "rulepack": {
+    "url": "https://lukasroeseler.github.io/reprocrowd/crowd-repro/RULEPACK-v1.0.0.md",
+    "http_status": 404,
+    "applied": false,
+    "fallback": "Artifact list and instructions in the supplied prompt"
+  },
+  "schema_validation": {
+    "status": "schema_unavailable",
+    "valid": null,
+    "http_status": 404,
+    "url": "https://lukasroeseler.github.io/reprocrowd/schemas/certificate.schema.json",
+    "details_file": "results/schema-validation.json"
+  },
+  "paper": {
+    "doi": "10.5194/agile-giss-4-13-2023",
+    "url": "https://doi.org/10.5194/agile-giss-4-13-2023",
+    "title": "Does spatial thinking ability relate to performance when using web-mapping services? A survey with digital natives",
+    "year": 2023
+  },
+  "source_materials": {
+    "repository": "https://figshare.com/articles/dataset/22132940/1",
+    "doi": "10.6084/m9.figshare.22132940.v1",
+    "version": 1,
+    "api": "https://api.figshare.com/v2/articles/22132940/versions/1",
+    "license": "CC BY 4.0",
+    "manifest": "results/source-manifest.json",
+    "original_code_and_data_uploaded": false
+  },
+  "agent": {
+    "engine": "Codex harness through T3 Code",
+    "model": "gpt-6.1-sol",
+    "provider": "OpenAI",
+    "reasoning_effort": "high",
+    "human_sign_off": false
+  },
+  "supplementary_runtime_check": {
+    "R": "4.2.2",
+    "scope": "Three base-R Wilcoxon test calls only, using the same shipped columns and original arguments",
+    "log": "logs/historical-R-check.log",
+    "current_R_control": "logs/current-R-version-control.log",
+    "lock": "historical-R-check/pixi.lock",
+    "finding": "C22 and C35 confidence intervals match the paper in R 4.2.2; C37 statistic mismatch persists in both R versions",
+    "original_runtime_confirmed": false
+  },
+  "scope": {
+    "type": "numerical computational reproduction",
+    "data": "Same seven shipped CSVs, unchanged on disk",
+    "tools": "R 4.6.1, original R statistical/plotting tools; Python and Snakemake orchestrate downloads and execution",
+    "exclusions": [
+      "scientific conclusion correctness",
+      "methodological appropriateness",
+      "alternative-method robustness",
+      "new-data replication"
+    ],
+    "prior_reports_consulted": false,
+    "claim_approval": "Enumerated list treated as approved under pilot instruction 4"
+  },
+  "execution": {
+    "unmodified_script": {
+      "status": "failed",
+      "exit_code": 1,
+      "first_error": "X11 library is missing: install XQuartz from www.xquartz.org",
+      "log": "logs/original-strict.log"
+    },
+    "headless_only": {
+      "status": "failed",
+      "exit_code": 1,
+      "first_error": "object 'GMHWG' not found",
+      "log": "logs/original-headless.log"
+    },
+    "diagnostic_continue_on_error": {
+      "expressions": 419,
+      "error_count": 87,
+      "skipped_View_calls": 2,
+      "details": "results/diagnostic/execution.json",
+      "note": "87 errors include propagation from missing objects, not 87 independent defects."
+    },
+    "reconstructed_workflow": {
+      "status": "executed",
+      "exit_code": 0,
+      "log": "logs/repaired.log",
+      "figures": 7
+    },
+    "shipped_test_invariance": {
+      "compared": 28,
+      "identical": 28,
+      "evidence": "results/shipped-htest-comparison.json"
+    },
+    "repeatability": {
+      "all_51_primary_value_groups_identical_after_fresh_library_restore": true,
+      "baseline": "results/claim-values.before-fresh-library.json",
+      "log": "logs/snakemake-fresh-r-library.log"
+    },
+    "clean_R_library_restore": {
+      "status": "completed",
+      "package_count": 148,
+      "log": "logs/r-restore-fresh.log"
+    },
+    "reproduction_command": "tools/pixi run snakemake --cores 1",
+    "bootstrap_command": "./bootstrap.sh",
+    "workflow": "Snakefile"
+  },
+  "deviations": [
+    {
+      "id": "D1",
+      "kind": "execution_adaptation",
+      "description": "Omit the two interactive View() calls for headless execution; retain all original files unchanged."
+    },
+    {
+      "id": "D2",
+      "kind": "missing_code_reconstruction",
+      "description": "Copy source lines 272–758 (Group 1 analysis), substituting BM→HWG, Group1→Group2 and group1→group2, to supply the explicitly omitted Group 2 block."
+    },
+    {
+      "id": "D3",
+      "kind": "explicit_missing_data_assumption",
+      "description": "Treat the five blank Group 2 binary task responses as unsuccessful (0): Task5_GM 1, Task4_HWG 1, Task5_HWG 3. This is consistent with the paper scoring description and the shipped STAT NA→0 step, but is not executable shipped Group 2 code. Preserve minimal-repair outputs without this assumption for comparison."
+    },
+    {
+      "id": "D4",
+      "kind": "dependency_order_repair",
+      "description": "Evaluate the original SUS input/scoring definitions (source lines 1045–1084) before the cross-group analysis that consumes those objects at lines 774 onward. Original later definitions remain unchanged."
+    },
+    {
+      "id": "D5",
+      "kind": "missing_result_reconstruction",
+      "description": "Compute the omitted four HWG Kendall correlations using the paper-described test and the same R cor.test(method=\"kendall\",exact=FALSE) pattern. Match rows by participant ID; audit confirms existing file order is aligned."
+    },
+    {
+      "id": "D6",
+      "kind": "result_export_only",
+      "description": "Capture the original Google Maps SUS–task correlation before the final source lines overwrite SUS_GMCorrelation with a STAT correlation; export full-precision test fields separately from rounded display matrices."
+    }
+  ],
+  "tolerance_policy": {
+    "ordinary_numbers": "Half a unit in the last reported decimal (means/SD/statistics/tau 2 decimals; alpha/p 3; integer counts exact).",
+    "confidence_intervals": "Paper display precision (Table 4/5 one decimal; Table 8 GM-HWG one decimal and other limits two decimals), plus 0.001 for the numerical interval solver.",
+    "p_inequalities": "A reported p < .001 is checked literally.",
+    "claim_group_rule": "A claim group is reproduced only when every compared field matches. Matching p-values or signs alone does not erase a mismatched statistic or interval.",
+    "figures": "Figures recreated using the original plotting calls (Group 2 reconstructed). Data aggregates and selected rendered plots inspected; no pixel-perfect comparison claimed."
+  },
+  "claim_count": 51,
+  "result_count": 51,
+  "summary": {
+    "fully_matching_claim_groups": 48,
+    "partly_matching_claim_groups": 3,
+    "nonmatching_claim_groups": 0,
+    "primary_runtime": "R 4.6.1",
+    "additional_full_matches_under_R_4_2_2": 2,
+    "fully_matching_under_at_least_one_recorded_runtime": 50,
+    "execution_basis_counts": {
+      "source_data_audit": 1,
+      "shipped_code_headless_diagnostic": 29,
+      "mixed_shipped_and_reconstructed": 2,
+      "reconstructed_code": 19
+    }
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Sample composition and group sizes",
+      "paper_location": "§3.2, §3.5.1",
+      "expected": {
+        "n": 74,
+        "male": 40,
+        "age_19_24": 73,
+        "group1": 37,
+        "group2": 37
+      },
+      "kind": "sample"
+    },
+    {
+      "id": "C02",
+      "claim": "Reasons for computer and smart-device use: education, entertainment and social media predominate",
+      "paper_location": "Figure 1; §4.2",
+      "expected": {
+        "top_three": [
+          "Reason_Education",
+          "Reason_Entertainment",
+          "Reason_SocialMedia"
+        ]
+      },
+      "kind": "reasons"
+    },
+    {
+      "id": "C03",
+      "claim": "Familiarity: GM highest, HWG lowest; about 7% moderately familiar with Boston",
+      "paper_location": "Figure 2; §4.2",
+      "expected": {
+        "order": [
+          "GM",
+          "BM",
+          "HWG"
+        ],
+        "boston_moderate_percent": 7
+      },
+      "kind": "familiarity"
+    },
+    {
+      "id": "C04",
+      "claim": "DNAS descriptive statistics and internal consistency",
+      "paper_location": "§4.2; Figure 3",
+      "expected": {
+        "mean": 105.51,
+        "sd": 13.98,
+        "alpha": 0.802
+      },
+      "kind": "dnas"
+    },
+    {
+      "id": "C05",
+      "claim": "STAT descriptive statistics, internal consistency, and no boxplot outliers",
+      "paper_location": "§4.3; Figures 4–5",
+      "expected": {
+        "mean": 10.62,
+        "sd": 2.45,
+        "alpha": 0.549,
+        "outliers": 0
+      },
+      "kind": "stat"
+    },
+    {
+      "id": "C06",
+      "claim": "Task score means by group and service",
+      "paper_location": "Figures 6–7",
+      "expected": {
+        "GM1": 2.54,
+        "BM": 3.19,
+        "GM2": 2.54,
+        "HWG": 2.11
+      },
+      "kind": "taskmeans"
+    },
+    {
+      "id": "C07",
+      "claim": "Group 1 Task 1: success rates and McNemar test",
+      "paper_location": "Table 1",
+      "expected": {
+        "task": 1,
+        "GM": 35.14,
+        "BM": 86.49,
+        "statistic": 15.43,
+        "p": "<.001"
+      },
+      "kind": "table1"
+    },
+    {
+      "id": "C08",
+      "claim": "Group 1 Task 2: success rates and McNemar test",
+      "paper_location": "Table 1",
+      "expected": {
+        "task": 2,
+        "GM": 67.57,
+        "BM": 78.38,
+        "statistic": 1.5,
+        "p": 0.221
+      },
+      "kind": "table1"
+    },
+    {
+      "id": "C09",
+      "claim": "Group 1 Task 3: success rates and McNemar test",
+      "paper_location": "Table 1",
+      "expected": {
+        "task": 3,
+        "GM": 56.76,
+        "BM": 21.62,
+        "statistic": 7.58,
+        "p": 0.006
+      },
+      "kind": "table1"
+    },
+    {
+      "id": "C10",
+      "claim": "Group 1 Task 4: success rates and McNemar test",
+      "paper_location": "Table 1",
+      "expected": {
+        "task": 4,
+        "GM": 51.35,
+        "BM": 64.86,
+        "statistic": 1.45,
+        "p": 0.228
+      },
+      "kind": "table1"
+    },
+    {
+      "id": "C11",
+      "claim": "Group 1 Task 5: success rates and McNemar test",
+      "paper_location": "Table 1",
+      "expected": {
+        "task": 5,
+        "GM": 43.24,
+        "BM": 67.57,
+        "statistic": 2.78,
+        "p": 0.095
+      },
+      "kind": "table1"
+    },
+    {
+      "id": "C12",
+      "claim": "Group 2 Task 1: success rates and McNemar test",
+      "paper_location": "Table 2",
+      "expected": {
+        "task": 1,
+        "GM": 37.84,
+        "HWG": 51.35,
+        "statistic": 0.84,
+        "p": 0.359
+      },
+      "kind": "table2"
+    },
+    {
+      "id": "C13",
+      "claim": "Group 2 Task 2: success rates and McNemar test",
+      "paper_location": "Table 2",
+      "expected": {
+        "task": 2,
+        "GM": 72.97,
+        "HWG": 64.86,
+        "statistic": 0.57,
+        "p": 0.45
+      },
+      "kind": "table2"
+    },
+    {
+      "id": "C14",
+      "claim": "Group 2 Task 3: success rates and McNemar test",
+      "paper_location": "Table 2",
+      "expected": {
+        "task": 3,
+        "GM": 62.16,
+        "HWG": 29.73,
+        "statistic": 7.56,
+        "p": 0.006
+      },
+      "kind": "table2"
+    },
+    {
+      "id": "C15",
+      "claim": "Group 2 Task 4: success rates and McNemar test",
+      "paper_location": "Table 2",
+      "expected": {
+        "task": 4,
+        "GM": 45.95,
+        "HWG": 37.84,
+        "statistic": 0.8,
+        "p": 0.371
+      },
+      "kind": "table2"
+    },
+    {
+      "id": "C16",
+      "claim": "Group 2 Task 5: success rates and McNemar test",
+      "paper_location": "Table 2",
+      "expected": {
+        "task": 5,
+        "GM": 35.14,
+        "HWG": 27.03,
+        "statistic": 0.27,
+        "p": 0.606
+      },
+      "kind": "table2"
+    },
+    {
+      "id": "C17",
+      "claim": "BM versus HWG Task 1: success rates and Fisher test",
+      "paper_location": "Table 3",
+      "expected": {
+        "task": 1,
+        "BM": 86.49,
+        "HWG": 51.35,
+        "statistic": 5.91,
+        "p": 0.002
+      },
+      "kind": "table3"
+    },
+    {
+      "id": "C18",
+      "claim": "BM versus HWG Task 2: success rates and Fisher test",
+      "paper_location": "Table 3",
+      "expected": {
+        "task": 2,
+        "BM": 78.38,
+        "HWG": 64.86,
+        "statistic": 1.95,
+        "p": 0.302
+      },
+      "kind": "table3"
+    },
+    {
+      "id": "C19",
+      "claim": "BM versus HWG Task 3: success rates and Fisher test",
+      "paper_location": "Table 3",
+      "expected": {
+        "task": 3,
+        "BM": 21.62,
+        "HWG": 29.73,
+        "statistic": 0.66,
+        "p": 0.595
+      },
+      "kind": "table3"
+    },
+    {
+      "id": "C20",
+      "claim": "BM versus HWG Task 4: success rates and Fisher test",
+      "paper_location": "Table 3",
+      "expected": {
+        "task": 4,
+        "BM": 64.86,
+        "HWG": 37.84,
+        "statistic": 2.99,
+        "p": 0.036
+      },
+      "kind": "table3"
+    },
+    {
+      "id": "C21",
+      "claim": "BM versus HWG Task 5: success rates and Fisher test",
+      "paper_location": "Table 3",
+      "expected": {
+        "task": 5,
+        "BM": 67.57,
+        "HWG": 27.03,
+        "statistic": 5.48,
+        "p": 0.001
+      },
+      "kind": "table3"
+    },
+    {
+      "id": "C22",
+      "claim": "All-task score comparison: GM1-BM",
+      "paper_location": "Table 4",
+      "expected": {
+        "pair": "GM1-BM",
+        "statistic": 78,
+        "p": 0.012,
+        "ci": [
+          -1.5,
+          0
+        ]
+      },
+      "kind": "table4"
+    },
+    {
+      "id": "C23",
+      "claim": "All-task score comparison: GM2-HWG",
+      "paper_location": "Table 4",
+      "expected": {
+        "pair": "GM2-HWG",
+        "statistic": 281,
+        "p": 0.066,
+        "ci": [
+          0,
+          1
+        ]
+      },
+      "kind": "table4"
+    },
+    {
+      "id": "C24",
+      "claim": "All-task score comparison: BM-HWG",
+      "paper_location": "Table 4",
+      "expected": {
+        "pair": "BM-HWG",
+        "statistic": 1036,
+        "p": "<.001",
+        "ci": [
+          1,
+          2
+        ]
+      },
+      "kind": "table4"
+    },
+    {
+      "id": "C25",
+      "claim": "Successful Task 4 completion time: BM versus HWG",
+      "paper_location": "Table 5",
+      "expected": {
+        "task": 4,
+        "n": [
+          24,
+          14
+        ],
+        "statistic": 96.5,
+        "p": 0.032,
+        "ci": [
+          -96,
+          -4
+        ],
+        "medians": [
+          84.5,
+          138.5
+        ]
+      },
+      "kind": "table5"
+    },
+    {
+      "id": "C26",
+      "claim": "Successful Task 5 completion time: BM versus HWG",
+      "paper_location": "Table 5",
+      "expected": {
+        "task": 5,
+        "n": [
+          25,
+          10
+        ],
+        "statistic": 51,
+        "p": 0.007,
+        "ci": [
+          -164,
+          -46
+        ],
+        "medians": [
+          97,
+          213
+        ]
+      },
+      "kind": "table5"
+    },
+    {
+      "id": "C27",
+      "claim": "SUS descriptive statistics: GM1",
+      "paper_location": "Table 6",
+      "expected": {
+        "service": "GM1",
+        "mean": 85.47,
+        "median": 85,
+        "sd": 9.91
+      },
+      "kind": "table6"
+    },
+    {
+      "id": "C28",
+      "claim": "SUS descriptive statistics: BM",
+      "paper_location": "Table 6",
+      "expected": {
+        "service": "BM",
+        "mean": 77.43,
+        "median": 77.5,
+        "sd": 14.71
+      },
+      "kind": "table6"
+    },
+    {
+      "id": "C29",
+      "claim": "SUS descriptive statistics: GM2",
+      "paper_location": "Table 6",
+      "expected": {
+        "service": "GM2",
+        "mean": 86.89,
+        "median": 87.5,
+        "sd": 8.17
+      },
+      "kind": "table6"
+    },
+    {
+      "id": "C30",
+      "claim": "SUS descriptive statistics: HWG",
+      "paper_location": "Table 6",
+      "expected": {
+        "service": "HWG",
+        "mean": 55.68,
+        "median": 57.5,
+        "sd": 18.33
+      },
+      "kind": "table6"
+    },
+    {
+      "id": "C31",
+      "claim": "SUS internal consistency: GM1",
+      "paper_location": "Table 7",
+      "expected": {
+        "service": "GM1",
+        "alpha": 0.778
+      },
+      "kind": "table7"
+    },
+    {
+      "id": "C32",
+      "claim": "SUS internal consistency: BM",
+      "paper_location": "Table 7",
+      "expected": {
+        "service": "BM",
+        "alpha": 0.869
+      },
+      "kind": "table7"
+    },
+    {
+      "id": "C33",
+      "claim": "SUS internal consistency: GM2",
+      "paper_location": "Table 7",
+      "expected": {
+        "service": "GM2",
+        "alpha": 0.734
+      },
+      "kind": "table7"
+    },
+    {
+      "id": "C34",
+      "claim": "SUS internal consistency: HWG",
+      "paper_location": "Table 7",
+      "expected": {
+        "service": "HWG",
+        "alpha": 0.91
+      },
+      "kind": "table7"
+    },
+    {
+      "id": "C35",
+      "claim": "SUS score comparison: GM1-BM",
+      "paper_location": "Table 8",
+      "expected": {
+        "pair": "GM1-BM",
+        "statistic": 382.5,
+        "p": "<.001",
+        "ci": [
+          5,
+          13.75
+        ]
+      },
+      "kind": "table8"
+    },
+    {
+      "id": "C36",
+      "claim": "SUS score comparison: GM2-HWG",
+      "paper_location": "Table 8",
+      "expected": {
+        "pair": "GM2-HWG",
+        "statistic": 9.45,
+        "p": "<.001",
+        "ci": [
+          24.5,
+          37.9
+        ]
+      },
+      "kind": "table8"
+    },
+    {
+      "id": "C37",
+      "claim": "SUS score comparison: BM-HWG",
+      "paper_location": "Table 8",
+      "expected": {
+        "pair": "BM-HWG",
+        "statistic": 1037.5,
+        "p": "<.001",
+        "ci": [
+          12.5,
+          30
+        ]
+      },
+      "kind": "table8"
+    },
+    {
+      "id": "C38",
+      "claim": "Kendall correlation: STAT with task score on GM",
+      "paper_location": "Table 9",
+      "expected": {
+        "predictor": "STAT",
+        "service": "GM",
+        "n": 74,
+        "statistic": 3.19,
+        "tau": 0.29,
+        "p": 0.001
+      },
+      "kind": "table9"
+    },
+    {
+      "id": "C39",
+      "claim": "Kendall correlation: STAT with task score on BM",
+      "paper_location": "Table 9",
+      "expected": {
+        "predictor": "STAT",
+        "service": "BM",
+        "n": 37,
+        "statistic": 0.73,
+        "tau": 0.1,
+        "p": 0.462
+      },
+      "kind": "table9"
+    },
+    {
+      "id": "C40",
+      "claim": "Kendall correlation: STAT with task score on HWG",
+      "paper_location": "Table 9",
+      "expected": {
+        "predictor": "STAT",
+        "service": "HWG",
+        "n": 37,
+        "statistic": 1.67,
+        "tau": 0.22,
+        "p": 0.095
+      },
+      "kind": "table9"
+    },
+    {
+      "id": "C41",
+      "claim": "Kendall correlation: FAM with task score on GM",
+      "paper_location": "Table 9",
+      "expected": {
+        "predictor": "FAM",
+        "service": "GM",
+        "n": 74,
+        "statistic": 0.86,
+        "tau": 0.09,
+        "p": 0.393
+      },
+      "kind": "table9"
+    },
+    {
+      "id": "C42",
+      "claim": "Kendall correlation: FAM with task score on BM",
+      "paper_location": "Table 9",
+      "expected": {
+        "predictor": "FAM",
+        "service": "BM",
+        "n": 37,
+        "statistic": 2.07,
+        "tau": 0.3,
+        "p": 0.038
+      },
+      "kind": "table9"
+    },
+    {
+      "id": "C43",
+      "claim": "Kendall correlation: FAM with task score on HWG",
+      "paper_location": "Table 9",
+      "expected": {
+        "predictor": "FAM",
+        "service": "HWG",
+        "n": 37,
+        "statistic": -1.43,
+        "tau": -0.21,
+        "p": 0.151
+      },
+      "kind": "table9"
+    },
+    {
+      "id": "C44",
+      "claim": "Kendall correlation: DNAS with task score on GM",
+      "paper_location": "Table 9",
+      "expected": {
+        "predictor": "DNAS",
+        "service": "GM",
+        "n": 74,
+        "statistic": 0.66,
+        "tau": 0.06,
+        "p": 0.509
+      },
+      "kind": "table9"
+    },
+    {
+      "id": "C45",
+      "claim": "Kendall correlation: DNAS with task score on BM",
+      "paper_location": "Table 9",
+      "expected": {
+        "predictor": "DNAS",
+        "service": "BM",
+        "n": 37,
+        "statistic": 1.91,
+        "tau": 0.25,
+        "p": 0.056
+      },
+      "kind": "table9"
+    },
+    {
+      "id": "C46",
+      "claim": "Kendall correlation: DNAS with task score on HWG",
+      "paper_location": "Table 9",
+      "expected": {
+        "predictor": "DNAS",
+        "service": "HWG",
+        "n": 37,
+        "statistic": 1.64,
+        "tau": 0.21,
+        "p": 0.101
+      },
+      "kind": "table9"
+    },
+    {
+      "id": "C47",
+      "claim": "Kendall correlation: SUS with task score on GM",
+      "paper_location": "Table 9",
+      "expected": {
+        "predictor": "SUS",
+        "service": "GM",
+        "n": 74,
+        "statistic": 0.21,
+        "tau": 0.02,
+        "p": 0.831
+      },
+      "kind": "table9"
+    },
+    {
+      "id": "C48",
+      "claim": "Kendall correlation: SUS with task score on BM",
+      "paper_location": "Table 9",
+      "expected": {
+        "predictor": "SUS",
+        "service": "BM",
+        "n": 37,
+        "statistic": 1.62,
+        "tau": 0.21,
+        "p": 0.105
+      },
+      "kind": "table9"
+    },
+    {
+      "id": "C49",
+      "claim": "Kendall correlation: SUS with task score on HWG",
+      "paper_location": "Table 9",
+      "expected": {
+        "predictor": "SUS",
+        "service": "HWG",
+        "n": 37,
+        "statistic": -0.18,
+        "tau": -0.02,
+        "p": 0.86
+      },
+      "kind": "table9"
+    },
+    {
+      "id": "C50",
+      "claim": "Google Maps task-score homogeneity between groups",
+      "paper_location": "§4.5",
+      "expected": {
+        "statistic": 3.15,
+        "df": 4,
+        "p": 0.533
+      },
+      "kind": "fligner"
+    },
+    {
+      "id": "C51",
+      "claim": "Google Maps SUS scores similar between groups",
+      "paper_location": "§4.5",
+      "expected": {
+        "statistic": 644.5,
+        "p": 0.668
+      },
+      "kind": "susbetween"
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C01",
+      "status": "reproduced",
+      "execution_basis": "source_data_audit",
+      "expected": {
+        "n": 74,
+        "male": 40,
+        "age_19_24": 73,
+        "group1": 37,
+        "group2": 37
+      },
+      "observed": {
+        "n": 74,
+        "male": 40,
+        "age_groups": {
+          "19-24": 73,
+          "25-30": 1
+        },
+        "group1": 37,
+        "group2": 37,
+        "age_19_24": 73
+      },
+      "field_checks": {
+        "n": true,
+        "male": true,
+        "age_19_24": true,
+        "group1": true,
+        "group2": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C02",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "top_three": [
+          "Reason_Education",
+          "Reason_Entertainment",
+          "Reason_SocialMedia"
+        ]
+      },
+      "observed": {
+        "counts": {
+          "Reason_Work": 36,
+          "Reason_Education": 72,
+          "Reason_Entertainment": 68,
+          "Reason_SocialMedia": 63,
+          "Reason_Other": 3
+        },
+        "top_three": [
+          "Reason_Education",
+          "Reason_Entertainment",
+          "Reason_SocialMedia"
+        ]
+      },
+      "field_checks": {
+        "top_three": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C03",
+      "status": "reproduced",
+      "execution_basis": "mixed_shipped_and_reconstructed",
+      "expected": {
+        "order": [
+          "GM",
+          "BM",
+          "HWG"
+        ],
+        "boston_moderate_percent": 7
+      },
+      "observed": {
+        "familiarity": [
+          {
+            "1": 26,
+            "2": 20,
+            "3": 24,
+            "4": 4,
+            "5": 0,
+            "_row": "BM"
+          },
+          {
+            "1": 0,
+            "2": 0,
+            "3": 5,
+            "4": 32,
+            "5": 37,
+            "_row": "GM"
+          },
+          {
+            "1": 59,
+            "2": 11,
+            "3": 3,
+            "4": 1,
+            "5": 0,
+            "_row": "HWG"
+          }
+        ],
+        "means": {
+          "GM": 4.4324324324324325,
+          "BM": 2.081081081081081,
+          "HWG": 1.2702702702702702
+        },
+        "boston": {
+          "1": 51,
+          "2": 18,
+          "3": 5
+        },
+        "boston_moderate_percent": 6.756756756756757
+      },
+      "field_checks": {
+        "order": true,
+        "boston_moderate_percent": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C04",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "mean": 105.51,
+        "sd": 13.98,
+        "alpha": 0.802
+      },
+      "observed": {
+        "mean": 105.51351351351352,
+        "sd": 13.97869537805362,
+        "alpha": 0.8016618477943713
+      },
+      "field_checks": {
+        "mean": true,
+        "sd": true,
+        "alpha": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C05",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "mean": 10.62,
+        "sd": 2.45,
+        "alpha": 0.549,
+        "outliers": 0
+      },
+      "observed": {
+        "mean": 10.621621621621621,
+        "sd": 2.447826560148247,
+        "alpha": 0.5485582468281429,
+        "outliers": 0,
+        "item_correct": {
+          "Q1": 53,
+          "Q2": 53,
+          "Q3": 67,
+          "Q4": 38,
+          "Q5": 64,
+          "Q6": 59,
+          "Q7": 20,
+          "Q8": 37,
+          "Q9": 53,
+          "Q10": 63,
+          "Q11": 57,
+          "Q12": 21,
+          "Q13": 56,
+          "Q14": 46,
+          "Q15": 71,
+          "Q16": 28
+        }
+      },
+      "field_checks": {
+        "mean": true,
+        "sd": true,
+        "alpha": true,
+        "outliers": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C06",
+      "status": "reproduced",
+      "execution_basis": "mixed_shipped_and_reconstructed",
+      "expected": {
+        "GM1": 2.54,
+        "BM": 3.19,
+        "GM2": 2.54,
+        "HWG": 2.11
+      },
+      "observed": {
+        "GM1": 2.5405405405405403,
+        "BM": 3.189189189189189,
+        "GM2": 2.5405405405405403,
+        "HWG": 2.108108108108108
+      },
+      "field_checks": {
+        "GM1": true,
+        "BM": true,
+        "GM2": true,
+        "HWG": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C07",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "task": 1,
+        "GM": 35.14,
+        "BM": 86.49,
+        "statistic": 15.43,
+        "p": "<.001"
+      },
+      "observed": {
+        "task": 1,
+        "GM": 35.135135135135144,
+        "BM": 86.48648648648648,
+        "statistic": 15.428571428571429,
+        "p": 8.568298010910462e-05
+      },
+      "field_checks": {
+        "GM": true,
+        "BM": true,
+        "statistic": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C08",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "task": 2,
+        "GM": 67.57,
+        "BM": 78.38,
+        "statistic": 1.5,
+        "p": 0.221
+      },
+      "observed": {
+        "task": 2,
+        "GM": 67.56756756756756,
+        "BM": 78.37837837837837,
+        "statistic": 1.5,
+        "p": 0.22067136191984676
+      },
+      "field_checks": {
+        "GM": true,
+        "BM": true,
+        "statistic": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C09",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "task": 3,
+        "GM": 56.76,
+        "BM": 21.62,
+        "statistic": 7.58,
+        "p": 0.006
+      },
+      "observed": {
+        "task": 3,
+        "GM": 56.75675675675676,
+        "BM": 21.62162162162162,
+        "statistic": 7.578947368421052,
+        "p": 0.005905391532593254
+      },
+      "field_checks": {
+        "GM": true,
+        "BM": true,
+        "statistic": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C10",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "task": 4,
+        "GM": 51.35,
+        "BM": 64.86,
+        "statistic": 1.45,
+        "p": 0.228
+      },
+      "observed": {
+        "task": 4,
+        "GM": 51.35135135135135,
+        "BM": 64.86486486486487,
+        "statistic": 1.4545454545454546,
+        "p": 0.227799993988229
+      },
+      "field_checks": {
+        "GM": true,
+        "BM": true,
+        "statistic": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C11",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "task": 5,
+        "GM": 43.24,
+        "BM": 67.57,
+        "statistic": 2.78,
+        "p": 0.095
+      },
+      "observed": {
+        "task": 5,
+        "GM": 43.24324324324324,
+        "BM": 67.56756756756756,
+        "statistic": 2.782608695652174,
+        "p": 0.09529283802345646
+      },
+      "field_checks": {
+        "GM": true,
+        "BM": true,
+        "statistic": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C12",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "task": 1,
+        "GM": 37.84,
+        "HWG": 51.35,
+        "statistic": 0.84,
+        "p": 0.359
+      },
+      "observed": {
+        "task": 1,
+        "GM": 37.83783783783783,
+        "HWG": 51.35135135135135,
+        "statistic": 0.8421052631578947,
+        "p": 0.35879535788694167
+      },
+      "field_checks": {
+        "GM": true,
+        "HWG": true,
+        "statistic": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C13",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "task": 2,
+        "GM": 72.97,
+        "HWG": 64.86,
+        "statistic": 0.57,
+        "p": 0.45
+      },
+      "observed": {
+        "task": 2,
+        "GM": 72.97297297297297,
+        "HWG": 64.86486486486487,
+        "statistic": 0.5714285714285714,
+        "p": 0.44969179796889097
+      },
+      "field_checks": {
+        "GM": true,
+        "HWG": true,
+        "statistic": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C14",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "task": 3,
+        "GM": 62.16,
+        "HWG": 29.73,
+        "statistic": 7.56,
+        "p": 0.006
+      },
+      "observed": {
+        "task": 3,
+        "GM": 62.16216216216216,
+        "HWG": 29.729729729729726,
+        "statistic": 7.5625,
+        "p": 0.005959526470109109
+      },
+      "field_checks": {
+        "GM": true,
+        "HWG": true,
+        "statistic": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C15",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "task": 4,
+        "GM": 45.95,
+        "HWG": 37.84,
+        "statistic": 0.8,
+        "p": 0.371
+      },
+      "observed": {
+        "task": 4,
+        "GM": 45.94594594594595,
+        "HWG": 37.83783783783783,
+        "statistic": 0.8,
+        "p": 0.3710933695226976
+      },
+      "field_checks": {
+        "GM": true,
+        "HWG": true,
+        "statistic": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C16",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "task": 5,
+        "GM": 35.14,
+        "HWG": 27.03,
+        "statistic": 0.27,
+        "p": 0.606
+      },
+      "observed": {
+        "task": 5,
+        "GM": 35.13513513513514,
+        "HWG": 27.027027027027028,
+        "statistic": 0.26666666666666666,
+        "p": 0.6055766163353463
+      },
+      "field_checks": {
+        "GM": true,
+        "HWG": true,
+        "statistic": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C17",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "task": 1,
+        "BM": 86.49,
+        "HWG": 51.35,
+        "statistic": 5.91,
+        "p": 0.002
+      },
+      "observed": {
+        "task": 1,
+        "BM": 86.48648648648648,
+        "HWG": 51.35135135135135,
+        "statistic": 5.908544379743102,
+        "p": 0.002182797452807396
+      },
+      "field_checks": {
+        "BM": true,
+        "HWG": true,
+        "statistic": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C18",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "task": 2,
+        "BM": 78.38,
+        "HWG": 64.86,
+        "statistic": 1.95,
+        "p": 0.302
+      },
+      "observed": {
+        "task": 2,
+        "BM": 78.37837837837837,
+        "HWG": 64.86486486486487,
+        "statistic": 1.9456065841446823,
+        "p": 0.3023977568025473
+      },
+      "field_checks": {
+        "BM": true,
+        "HWG": true,
+        "statistic": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C19",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "task": 3,
+        "BM": 21.62,
+        "HWG": 29.73,
+        "statistic": 0.66,
+        "p": 0.595
+      },
+      "observed": {
+        "task": 3,
+        "BM": 21.62162162162162,
+        "HWG": 29.729729729729726,
+        "statistic": 0.6558350772779368,
+        "p": 0.5953505684233376
+      },
+      "field_checks": {
+        "BM": true,
+        "HWG": true,
+        "statistic": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C20",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "task": 4,
+        "BM": 64.86,
+        "HWG": 37.84,
+        "statistic": 2.99,
+        "p": 0.036
+      },
+      "observed": {
+        "task": 4,
+        "BM": 64.86486486486487,
+        "HWG": 37.83783783783783,
+        "statistic": 2.985491370214516,
+        "p": 0.035626755195031695
+      },
+      "field_checks": {
+        "BM": true,
+        "HWG": true,
+        "statistic": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C21",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "task": 5,
+        "BM": 67.57,
+        "HWG": 27.03,
+        "statistic": 5.48,
+        "p": 0.001
+      },
+      "observed": {
+        "task": 5,
+        "BM": 67.56756756756756,
+        "HWG": 27.027027027027028,
+        "statistic": 5.478907562045183,
+        "p": 0.0009767617108487844
+      },
+      "field_checks": {
+        "BM": true,
+        "HWG": true,
+        "statistic": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C22",
+      "status": "partially_reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "pair": "GM1-BM",
+        "statistic": 78,
+        "p": 0.012,
+        "ci": [
+          -1.5,
+          0
+        ]
+      },
+      "observed": {
+        "statistic": 78,
+        "p": 0.011735087858617321,
+        "ci": [
+          -1.0000355234707958,
+          -7.705433374023327e-05
+        ]
+      },
+      "field_checks": {
+        "statistic": true,
+        "p": true,
+        "ci": false
+      },
+      "failed_fields": [
+        "ci"
+      ],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": [
+        "Both published confidence limits are recovered under R 4.2.2."
+      ],
+      "supplementary_runtime_check": {
+        "R": "4.2.2",
+        "scope": "Same three base R wilcox.test calls only; not a rerun of the full shipped package stack",
+        "observed": {
+          "statistic": 78.0,
+          "p": 0.0117350878586173,
+          "ci": [
+            -1.5000227967502,
+            -4.4420775855538e-05
+          ]
+        },
+        "field_checks": {
+          "statistic": true,
+          "p": true,
+          "ci": true
+        },
+        "status": "reproduced",
+        "evidence": [
+          "results/version-check-R-4.2.2.csv",
+          "logs/historical-R-check.log",
+          "historical-R-check/pixi.lock"
+        ]
+      }
+    },
+    {
+      "claim_id": "C23",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "pair": "GM2-HWG",
+        "statistic": 281,
+        "p": 0.066,
+        "ci": [
+          0,
+          1
+        ]
+      },
+      "observed": {
+        "statistic": 281,
+        "p": 0.06630650714572761,
+        "ci": [
+          -1.3499168791436029e-05,
+          0.9999931587440104
+        ]
+      },
+      "field_checks": {
+        "statistic": true,
+        "p": true,
+        "ci": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C24",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "pair": "BM-HWG",
+        "statistic": 1036,
+        "p": "<.001",
+        "ci": [
+          1,
+          2
+        ]
+      },
+      "observed": {
+        "statistic": 1036,
+        "p": 9.332509029946756e-05,
+        "ci": [
+          0.9999088660432599,
+          1.9999561767762994
+        ]
+      },
+      "field_checks": {
+        "statistic": true,
+        "p": true,
+        "ci": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C25",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "task": 4,
+        "n": [
+          24,
+          14
+        ],
+        "statistic": 96.5,
+        "p": 0.032,
+        "ci": [
+          -96,
+          -4
+        ],
+        "medians": [
+          84.5,
+          138.5
+        ]
+      },
+      "observed": {
+        "n": [
+          24,
+          14
+        ],
+        "statistic": 96.5,
+        "p": 0.03154829353052205,
+        "ci": [
+          -95.999981563925,
+          -3.9999939745787136
+        ],
+        "medians": [
+          84.5,
+          138.5
+        ]
+      },
+      "field_checks": {
+        "n": true,
+        "statistic": true,
+        "p": true,
+        "ci": true,
+        "medians": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C26",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "task": 5,
+        "n": [
+          25,
+          10
+        ],
+        "statistic": 51,
+        "p": 0.007,
+        "ci": [
+          -164,
+          -46
+        ],
+        "medians": [
+          97,
+          213
+        ]
+      },
+      "observed": {
+        "n": [
+          25,
+          10
+        ],
+        "statistic": 51,
+        "p": 0.007270001157586957,
+        "ci": [
+          -163.9999545488787,
+          -46.00005997836614
+        ],
+        "medians": [
+          97,
+          213
+        ]
+      },
+      "field_checks": {
+        "n": true,
+        "statistic": true,
+        "p": true,
+        "ci": true,
+        "medians": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C27",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "service": "GM1",
+        "mean": 85.47,
+        "median": 85,
+        "sd": 9.91
+      },
+      "observed": {
+        "mean": 85.47297297297297,
+        "median": 85,
+        "sd": 9.909973894142334
+      },
+      "field_checks": {
+        "mean": true,
+        "median": true,
+        "sd": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C28",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "service": "BM",
+        "mean": 77.43,
+        "median": 77.5,
+        "sd": 14.71
+      },
+      "observed": {
+        "mean": 77.43243243243244,
+        "median": 77.5,
+        "sd": 14.71354353523866
+      },
+      "field_checks": {
+        "mean": true,
+        "median": true,
+        "sd": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C29",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "service": "GM2",
+        "mean": 86.89,
+        "median": 87.5,
+        "sd": 8.17
+      },
+      "observed": {
+        "mean": 86.89189189189189,
+        "median": 87.5,
+        "sd": 8.17358137124923
+      },
+      "field_checks": {
+        "mean": true,
+        "median": true,
+        "sd": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C30",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "service": "HWG",
+        "mean": 55.68,
+        "median": 57.5,
+        "sd": 18.33
+      },
+      "observed": {
+        "mean": 55.67567567567568,
+        "median": 57.5,
+        "sd": 18.330005840536828
+      },
+      "field_checks": {
+        "mean": true,
+        "median": true,
+        "sd": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C31",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "service": "GM1",
+        "alpha": 0.778
+      },
+      "observed": {
+        "alpha": 0.7775123427297342
+      },
+      "field_checks": {
+        "alpha": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C32",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "service": "BM",
+        "alpha": 0.869
+      },
+      "observed": {
+        "alpha": 0.8694688880219246
+      },
+      "field_checks": {
+        "alpha": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C33",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "service": "GM2",
+        "alpha": 0.734
+      },
+      "observed": {
+        "alpha": 0.734185512946575
+      },
+      "field_checks": {
+        "alpha": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C34",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "service": "HWG",
+        "alpha": 0.91
+      },
+      "observed": {
+        "alpha": 0.9100727127149495
+      },
+      "field_checks": {
+        "alpha": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C35",
+      "status": "partially_reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "pair": "GM1-BM",
+        "statistic": 382.5,
+        "p": "<.001",
+        "ci": [
+          5,
+          13.75
+        ]
+      },
+      "observed": {
+        "statistic": 382.5,
+        "p": 4.3831690402340584e-05,
+        "ci": [
+          3.7499837137024956,
+          9.999986269747506
+        ]
+      },
+      "field_checks": {
+        "statistic": true,
+        "p": true,
+        "ci": false
+      },
+      "failed_fields": [
+        "ci"
+      ],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": [
+        "Both published confidence limits are recovered under R 4.2.2."
+      ],
+      "supplementary_runtime_check": {
+        "R": "4.2.2",
+        "scope": "Same three base R wilcox.test calls only; not a rerun of the full shipped package stack",
+        "observed": {
+          "statistic": 382.5,
+          "p": 4.38316904024176e-05,
+          "ci": [
+            5.00000352591655,
+            13.7499631913757
+          ]
+        },
+        "field_checks": {
+          "statistic": true,
+          "p": true,
+          "ci": true
+        },
+        "status": "reproduced",
+        "evidence": [
+          "results/version-check-R-4.2.2.csv",
+          "logs/historical-R-check.log",
+          "historical-R-check/pixi.lock"
+        ]
+      }
+    },
+    {
+      "claim_id": "C36",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "pair": "GM2-HWG",
+        "statistic": 9.45,
+        "p": "<.001",
+        "ci": [
+          24.5,
+          37.9
+        ]
+      },
+      "observed": {
+        "statistic": 9.446511875404669,
+        "p": 2.7806718894937407e-11,
+        "ci": [
+          24.514332846307813,
+          37.91809958612462
+        ]
+      },
+      "field_checks": {
+        "statistic": true,
+        "p": true,
+        "ci": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C37",
+      "status": "partially_reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "pair": "BM-HWG",
+        "statistic": 1037.5,
+        "p": "<.001",
+        "ci": [
+          12.5,
+          30
+        ]
+      },
+      "observed": {
+        "statistic": 1137.5,
+        "p": 9.680468961992261e-07,
+        "ci": [
+          12.500051172865001,
+          29.999955116704943
+        ]
+      },
+      "field_checks": {
+        "statistic": false,
+        "p": true,
+        "ci": true
+      },
+      "failed_fields": [
+        "statistic"
+      ],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": [
+        "The published W discrepancy persists under R 4.2.2."
+      ],
+      "supplementary_runtime_check": {
+        "R": "4.2.2",
+        "scope": "Same three base R wilcox.test calls only; not a rerun of the full shipped package stack",
+        "observed": {
+          "statistic": 1137.5,
+          "p": 9.68046896256201e-07,
+          "ci": [
+            12.500051172865,
+            29.9999551167049
+          ]
+        },
+        "field_checks": {
+          "statistic": false,
+          "p": true,
+          "ci": true
+        },
+        "status": "partially_reproduced",
+        "evidence": [
+          "results/version-check-R-4.2.2.csv",
+          "logs/historical-R-check.log",
+          "historical-R-check/pixi.lock"
+        ]
+      }
+    },
+    {
+      "claim_id": "C38",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "predictor": "STAT",
+        "service": "GM",
+        "n": 74,
+        "statistic": 3.19,
+        "tau": 0.29,
+        "p": 0.001
+      },
+      "observed": {
+        "n": 74,
+        "statistic": 3.188178449808336,
+        "tau": 0.2925999046750921,
+        "p": 0.0014317214908019852
+      },
+      "field_checks": {
+        "n": true,
+        "statistic": true,
+        "tau": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C39",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "predictor": "STAT",
+        "service": "BM",
+        "n": 37,
+        "statistic": 0.73,
+        "tau": 0.1,
+        "p": 0.462
+      },
+      "observed": {
+        "n": 37,
+        "statistic": 0.7347579235352687,
+        "tau": 0.09992556396264833,
+        "p": 0.4624869366919478
+      },
+      "field_checks": {
+        "n": true,
+        "statistic": true,
+        "tau": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C40",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "predictor": "STAT",
+        "service": "HWG",
+        "n": 37,
+        "statistic": 1.67,
+        "tau": 0.22,
+        "p": 0.095
+      },
+      "observed": {
+        "n": 37,
+        "statistic": 1.671651666380455,
+        "tau": 0.21888488054596977,
+        "p": 0.09459303027271591
+      },
+      "field_checks": {
+        "n": true,
+        "statistic": true,
+        "tau": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C41",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "predictor": "FAM",
+        "service": "GM",
+        "n": 74,
+        "statistic": 0.86,
+        "tau": 0.09,
+        "p": 0.393
+      },
+      "observed": {
+        "n": 74,
+        "statistic": 0.8550734021189212,
+        "tau": 0.0876957097170023,
+        "p": 0.3925105132445747
+      },
+      "field_checks": {
+        "n": true,
+        "statistic": true,
+        "tau": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C42",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "predictor": "FAM",
+        "service": "BM",
+        "n": 37,
+        "statistic": 2.07,
+        "tau": 0.3,
+        "p": 0.038
+      },
+      "observed": {
+        "n": 37,
+        "statistic": 2.0699687093913863,
+        "tau": 0.29739018794163646,
+        "p": 0.038455274767443
+      },
+      "field_checks": {
+        "n": true,
+        "statistic": true,
+        "tau": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C43",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "predictor": "FAM",
+        "service": "HWG",
+        "n": 37,
+        "statistic": -1.43,
+        "tau": -0.21,
+        "p": 0.151
+      },
+      "observed": {
+        "n": 37,
+        "statistic": -1.4343467239154826,
+        "tau": -0.21140760985634835,
+        "p": 0.15147334290713818
+      },
+      "field_checks": {
+        "n": true,
+        "statistic": true,
+        "tau": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C44",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "predictor": "DNAS",
+        "service": "GM",
+        "n": 74,
+        "statistic": 0.66,
+        "tau": 0.06,
+        "p": 0.509
+      },
+      "observed": {
+        "n": 74,
+        "statistic": 0.6602547269231253,
+        "tau": 0.05784677655925596,
+        "p": 0.5090903777855902
+      },
+      "field_checks": {
+        "n": true,
+        "statistic": true,
+        "tau": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C45",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "predictor": "DNAS",
+        "service": "BM",
+        "n": 37,
+        "statistic": 1.91,
+        "tau": 0.25,
+        "p": 0.056
+      },
+      "observed": {
+        "n": 37,
+        "statistic": 1.9082808438020535,
+        "tau": 0.24661304973960171,
+        "p": 0.05635492754161409
+      },
+      "field_checks": {
+        "n": true,
+        "statistic": true,
+        "tau": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C46",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "predictor": "DNAS",
+        "service": "HWG",
+        "n": 37,
+        "statistic": 1.64,
+        "tau": 0.21,
+        "p": 0.101
+      },
+      "observed": {
+        "n": 37,
+        "statistic": 1.6415009577199555,
+        "tau": 0.20689293077529272,
+        "p": 0.1006934684394406
+      },
+      "field_checks": {
+        "n": true,
+        "statistic": true,
+        "tau": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C47",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "predictor": "SUS",
+        "service": "GM",
+        "n": 74,
+        "statistic": 0.21,
+        "tau": 0.02,
+        "p": 0.831
+      },
+      "observed": {
+        "n": 74,
+        "statistic": 0.21299950772622872,
+        "tau": 0.01913718282412577,
+        "p": 0.8313273466504907
+      },
+      "field_checks": {
+        "n": true,
+        "statistic": true,
+        "tau": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C48",
+      "status": "reproduced",
+      "execution_basis": "shipped_code_headless_diagnostic",
+      "expected": {
+        "predictor": "SUS",
+        "service": "BM",
+        "n": 37,
+        "statistic": 1.62,
+        "tau": 0.21,
+        "p": 0.105
+      },
+      "observed": {
+        "n": 37,
+        "statistic": 1.6217156683541982,
+        "tau": 0.21203691092525068,
+        "p": 0.1048642423722795
+      },
+      "field_checks": {
+        "n": true,
+        "statistic": true,
+        "tau": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C49",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "predictor": "SUS",
+        "service": "HWG",
+        "n": 37,
+        "statistic": -0.18,
+        "tau": -0.02,
+        "p": 0.86
+      },
+      "observed": {
+        "n": 37,
+        "statistic": -0.17645670639185687,
+        "tau": -0.022330837175945507,
+        "p": 0.8599351582305477
+      },
+      "field_checks": {
+        "n": true,
+        "statistic": true,
+        "tau": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C50",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "statistic": 3.15,
+        "df": 4,
+        "p": 0.533
+      },
+      "observed": {
+        "statistic": 3.1476248341452235,
+        "df": 4,
+        "p": 0.5334317279168542,
+        "method": "Fligner-Killeen test of homogeneity of variances"
+      },
+      "field_checks": {
+        "statistic": true,
+        "df": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    },
+    {
+      "claim_id": "C51",
+      "status": "reproduced",
+      "execution_basis": "reconstructed_code",
+      "expected": {
+        "statistic": 644.5,
+        "p": 0.668
+      },
+      "observed": {
+        "statistic": 644.5,
+        "p": 0.6678290826440763
+      },
+      "field_checks": {
+        "statistic": true,
+        "p": true
+      },
+      "failed_fields": [],
+      "evidence": [
+        "results/claim-values.json",
+        "logs/repaired.log"
+      ],
+      "notes": []
+    }
+  ],
+  "environment": {
+    "file": "environment.json",
+    "R": "4.6.1",
+    "python": "3.14.4",
+    "platform": {
+      "system": "Darwin",
+      "release": "25.6.0",
+      "version": "Darwin Kernel Version 25.6.0: Tue Aug 18 17:49:54 PDT 2026; root:xnu-12377.161.15.700.19~2/RELEASE_ARM64_T8142",
+      "machine": "arm64",
+      "mac_ver": "26.7"
+    },
+    "pixi_lock": "pixi.lock",
+    "R_package_lock": "r-packages.lock.json",
+    "R_package_count": 148,
+    "lock_sha256": {
+      "pixi.toml": "056987a6920605a9ceaede833df3d6d22e72e8f31dc9f6d5cf67e38c38c11691",
+      "pixi.lock": "dd9f1cec30d65f4671f2760ee3d5a4eb88e7344c62bc8266a8f00d8905af35a0",
+      "r-packages.lock.json": "0be0a7a2ea727564a0ec658bda70585809ae867ab3a48e642be471c7541746f7",
+      "historical-R-check/pixi.lock": "23a96fc504b75a4b66f9998b69136962c5c9d61fa5dc3aef5195e05eb593bd51",
+      "source-lock.json": "1c3ccbb1e85cfe7088158e7db31a76a57ee263d6296c865948a97284e427cdae",
+      "tools/tools-lock.json": "cdc663e45237b899fdebf3631dc223e1de9894768b9151532c4f18e35ade93b1"
+    }
+  },
+  "nanopublications": {
+    "draft_scope": "Representative C22 chain only; all 51 claims/results remain in the certificate ledger",
+    "status": "not_published",
+    "chain_vocabulary": [
+      "Quote-with-comment",
+      "AIDA",
+      "FORRT Claim",
+      "Reproduction Study",
+      "Replication Outcome",
+      "CiTO Citation"
+    ],
+    "outcome": "PartiallySupported",
+    "citation_intention": "cito:qualifies",
+    "published_uris": [],
+    "published_manifest": "nanopubs/PUBLISHED.md",
+    "drafts": "nanopubs/drafts",
+    "vocabulary_source": "https://github.com/ScienceLiveHub/forrt-replication-template/blob/main/docs/forrt-form-fields.md"
+  },
+  "environment_compatibility": {
+    "framework_R": "Supplied R 4.6.1 executes successfully",
+    "conda_R": "Same-version conda R probe segfaulted when loading framework-linked binaries; it is not used for the analysis",
+    "evidence": "logs/pixi-R-full-library-probe.log"
+  },
+  "limitations": [
+    "The required public rule pack and certificate schema returned HTTP 404. The prompt artifact list is the fallback specification. Official JSON-schema conformance cannot be established; syntactically valid JSON and local integrity checks are not schema validation.",
+    "The unmodified shipped script is not executable end to end in the headless environment; it stops at View(), and a headless-only adaptation stops at the omitted GMHWG object. Numerical reproduction after transparent repairs must not be read as execution success of the unmodified archive.",
+    "Three numerical claim groups only partly match under primary R 4.6.1. A targeted same-data, same-call check under R 4.2.2 recovers both discrepant confidence intervals; the W=1037.5 versus 1137.5 discrepancy persists. The original exact runtime was not shipped, so R 4.2.2 is not asserted to be the authors’ actual version.",
+    "No signed nanopublications or public report repository were published. nanopubs/PUBLISHED.md explicitly records that no result URIs exist; a field-by-field draft chain is supplied. Human identity, ORCID, signing credentials, and public repository URL were not supplied or transmitted.",
+    "This certifies numerical computational agreement only. Scientific validity, the suitability of statistical tests, robustness under alternative methods, and independent replication with new data were not assessed.",
+    "The locked Pixi environment was created locally and all 148 R packages were restored into an empty library, followed by a full workflow rerun. A rebuild on a second host has not been tested; macOS framework R 4.6.1 and Apple build tools remain host prerequisites."
+  ],
+  "required_artifact_status": {
+    "all_named_files_present": true,
+    "official_certificate_schema_validation": "blocked_http_404",
+    "published_FORRT_chain_URIs": "not_created",
+    "human_sign_off": "not_provided"
+  },
+  "pilot_constraints": {
+    "workspace": "/tmp/scratch_pilot/sol/G-23",
+    "original_data_or_code_uploaded": false,
+    "external_personal_identifiers_sent": false,
+    "existing_target_paper_reproduction_reports_used": false,
+    "local_files_outside_workspace_opened_for_research": false,
+    "system_executables_used": true,
+    "note": "Host R, Python, compilers, and PDF utility were invoked; no existing local study, report, skill file, or instruction file outside the pilot directory was opened."
+  }
+}

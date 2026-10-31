@@ -1,0 +1,59 @@
+{
+  "gold_id": "G-12",
+  "expected_validation_status": "computationally reproducible",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/6ruqx/ — §2 Computational Reproducibility, p. 6: “without deviation”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    },
+    {
+      "id": "C2",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/6ruqx/ — §2 Computational Reproducibility, p. 6: “without deviation”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/6ruqx/ — §2 Computational Reproducibility, p. 6: “without deviation”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/6ruqx/ — §2 Computational Reproducibility, p. 6: “without deviation”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/6ruqx/ — §2 Computational Reproducibility, p. 6: “without deviation”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "The selected Wilcoxon tests are among the comparative analyses explicitly reported as reproduced without deviation. The Bayesian mixed-model MCMC summaries have small environment-dependent differences and are not selected. Raw-data cleaning is outside the deposited processed-data scope."
+}

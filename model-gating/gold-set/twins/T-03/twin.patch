@@ -1,0 +1,10 @@
+--- a/Data and R Code/MTurk_Analyses.R	
++++ b/Data and R Code/MTurk_Analyses.R	
+@@ -163,6 +163,7 @@
+   #Change values of Choice = -Inf and Rate = -Inf to NA (some are -Inf in Excel)
+   #This just undoes a step from an earlier data-preparation process.
+   Choice[Choice == "-Inf"] <- NA
++  Choice <- 1 - as.numeric(Choice)
+   Rate[Rate == "-Inf"] <- NA
+   
+   #Code demographic variables to test interactions

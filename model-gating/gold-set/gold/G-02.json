@@ -1,0 +1,148 @@
+{
+ "gold_id": "G-02",
+ "gold_version": "1.1",
+ "cand_id": "RB-025",
+ "doi": "10.1111/ajps.12702",
+ "title": "Entertaining Beliefs in Economic Mobility",
+ "stratum_drawn": "computationally reproducible",
+ "paper_url": "https://doi.org/10.1111/ajps.12702",
+ "package": {
+  "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/25/replication_package",
+  "version_pin": "REPRO-Bench snapshot commit 74958fba32daeacff51f2e1fd37be3916595648f",
+  "language": "R",
+  "code_format": "files"
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/dzrk9/",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "label_confidence": "high",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "MTurk treatment effect on belief in economic mobility",
+   "exhibit": "Table 1, column 1",
+   "page": 46,
+   "quantity": "OLS treatment coefficient",
+   "reported": "0.055",
+   "expected_status": "match",
+   "reference_recomputed": "0.055",
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/dzrk9/ — §2 Code, PDF p. 1: “runs without issue”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/dzrk9/ p.1 section 2 'Code': 'We checked the code for the paper and found that it runs without issue and the results match with those presented in the paper.'; report 'Table 2' (MTurk Sample col 1): 'Rags-to-Riches TV Treatment 0.055*** (0.011)', N=763",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report states code runs and matches; its re-estimated MTurk column gives 0.055 with N=763 as in the paper."
+  },
+  {
+   "id": "C2",
+   "claim": "Lab-in-the-field treatment effect on belief in economic mobility",
+   "exhibit": "Table 1, column 5",
+   "page": 46,
+   "quantity": "OLS treatment coefficient",
+   "reported": "0.068",
+   "expected_status": "match",
+   "reference_recomputed": "0.068",
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/dzrk9/ — §2 Code, PDF p. 1: “results match”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/dzrk9/ p.1 section 2 'Code': 'We checked the code for the paper and found that it runs without issue and the results match with those presented in the paper.'; report 'Table 2' (Lab-in-the-Field col 3): 'Rags-to-Riches TV Treatment ... 0.068** (0.025)', N=203",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report's lab-in-the-field column (its col 3, which corresponds to paper Table 1 col 5, N=203) gives 0.068."
+  },
+  {
+   "id": "C3",
+   "claim": "Frequent viewing and belief in upward mobility",
+   "exhibit": "Table 2, column 2",
+   "page": 48,
+   "quantity": "OLS frequent-viewer coefficient",
+   "reported": "0.032",
+   "expected_status": "match",
+   "reference_recomputed": 0.032,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/dzrk9/ — §4 original baseline specification and comparison table: “0.032”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/dzrk9/ — §4 original baseline specification and comparison table: “0.032”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Report's baseline model reproduces paper Table 2 col 2 frequent-viewer coefficient."
+  },
+  {
+   "id": "C4",
+   "claim": "Heavy viewing and belief in upward mobility",
+   "exhibit": "Table 2, column 2",
+   "page": 48,
+   "quantity": "OLS heavy-viewer coefficient",
+   "reported": "0.040",
+   "expected_status": "match",
+   "reference_recomputed": 0.04,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/dzrk9/ — §4 original baseline specification and comparison table: “0.040”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/dzrk9/ — §4 original baseline specification and comparison table: “0.040”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Baseline model reproduces 0.040."
+  },
+  {
+   "id": "C5",
+   "claim": "Occasional viewing and belief in upward mobility",
+   "exhibit": "Table 2, column 2",
+   "page": 48,
+   "quantity": "OLS occasional-viewer coefficient",
+   "reported": "0.013",
+   "expected_status": "match",
+   "reference_recomputed": 0.013,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/dzrk9/ — §4 original baseline specification and comparison table: “0.013”.",
+   "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/dzrk9/ — §4 original baseline specification and comparison table: “0.013”.",
+   "reference_scope": "authors_workflow",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Baseline model reproduces 0.013."
+  }
+ ],
+ "notes": {
+  "claim_list": "Scope begins with the deposited transformed analysis data.",
+  "sol": "Use the original baseline columns, not the merged experimental samples, recoded regressors or new interactions. The source’s prose drops a decimal for some observational coefficients; the source comparison table and original Table 2 retain 0.032 and 0.040.",
+  "claude": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "Paper accessed via REPRO-Bench snapshot paper.pdf (25/paper.pdf). Report's own tables are titled 'Table 1'/'Table 2' with column numbering differing from the paper: the report's lab-in-the-field column is col 3 (MTurk cols 1-2), whereas paper Table 1 has MTurk cols 1-4 and lab cols 5-8; values and N match paper col 5. The report's tables mix original and robustness models; the relevant 'Baseline' column is the original specification. Report text has a typo ('frequentviewer is 0.32', i.e. 0.032) with no bearing on the label. Only transformed analysis data were shipped (scope begins there, as the claims file notes). REPRO-Bench should_reproduce.txt for item 25 lists 'Figure 3 / Table 1' (I did not use it for the label). The report's prose column references are garbled, but its t-statistics settle the mapping. 'column 4 [t=2.73]' = 0.068/0.025, which is paper col 5 (claim C2). 'column 5 [t=0.67]' is about 0.011/0.017, which is paper col 3. 'column 8 [t=1.89]' = 0.066/0.035, which is paper col 8."
+ }
+}

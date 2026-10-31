@@ -1,0 +1,80 @@
+{
+  "gold_id": "G-08",
+  "cand_id": "RB-019",
+  "doi": "10.1086/714765",
+  "title": "Do Transitional Justice Museums Persuade Visitors? Evidence from a Field Experiment",
+  "stratum_drawn": "computationally reproducible",
+  "paper_url": "https://doi.org/10.1086/714765",
+  "package": {
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/19/replication_package",
+    "version_pin": "REPRO-Bench snapshot commit 74958fba32daeacff51f2e1fd37be3916595648f",
+    "language": "R",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/tj2w8/",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Museum visit and satisfaction with the government",
+      "exhibit": "Figure 1 and results text",
+      "page": 504,
+      "quantity": "Treatment coefficient",
+      "reported": "0.15"
+    },
+    {
+      "id": "C2",
+      "claim": "Museum visit and satisfaction with democracy",
+      "exhibit": "Figure 1 and results text",
+      "page": 504,
+      "quantity": "Treatment coefficient",
+      "reported": "0.14"
+    },
+    {
+      "id": "C3",
+      "claim": "Museum visit and belief that dwelling on the past prevents progress",
+      "exhibit": "Figure 2 and results text",
+      "page": 504,
+      "quantity": "Treatment coefficient",
+      "reported": "−0.32"
+    },
+    {
+      "id": "C4",
+      "claim": "Museum visit and support for victim compensation",
+      "exhibit": "Figure 2 and results text",
+      "page": 504,
+      "quantity": "Treatment coefficient",
+      "reported": "0.19"
+    },
+    {
+      "id": "C5",
+      "claim": "Museum visit and support for a public military apology",
+      "exhibit": "Figure 2 and results text",
+      "page": 504,
+      "quantity": "Treatment coefficient",
+      "reported": "0.18"
+    },
+    {
+      "id": "C6",
+      "claim": "Museum visit and support for pardoning perpetrators at the one-week follow-up described in the durability paragraph",
+      "exhibit": "Durability of effects, first paragraph; refers to Figure 4 (Figure 4B appears on printed p. 507)",
+      "page": 506,
+      "quantity": "Treatment coefficient (and associated p value)",
+      "reported": "0.20",
+      "reported_p": "0.16"
+    },
+    {
+      "id": "C7",
+      "claim": "Museum visitors who indicated that the information in the museum was new to them",
+      "exhibit": "Mechanisms, first paragraph, right column",
+      "page": 505,
+      "quantity": "Percentage (printed count n = 18)",
+      "reported": "13.14"
+    }
+  ],
+  "notes": "C6/C7 transcribed from the published Journal of Politics article, volume 84(1), DOI 10.1086/714765. Printed p. 506 (PDF page 11), Durability of effects, first paragraph introduces diminishing significance after one week and then gives b = 0.20, p = .16 for pardoning; the coefficient sentence does not independently name the wave. Figure 4B is on printed p. 507. C7 is printed p. 505 (PDF page 10), Mechanisms, first paragraph, with 13.14% (n = 18). The accepted-manuscript layout has different pagination."
+}

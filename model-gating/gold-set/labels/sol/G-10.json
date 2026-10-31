@@ -1,0 +1,65 @@
+{
+  "gold_id": "G-10",
+  "expected_validation_status": "computationally reproducible",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/dc6bm/ — §2 Computational Reproducibility, pp. 3–4: “all of the results”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    },
+    {
+      "id": "C2",
+      "expected_status": "match",
+      "reference_recomputed": 18.905,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/dc6bm/ — §2 Computational Reproducibility, pp. 3–4: “all of the results”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/dc6bm/ — §2 Computational Reproducibility, pp. 3–4: “all of the results”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": 0.056,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/dc6bm/ — §2 Computational Reproducibility, pp. 3–4: “all of the results”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/dc6bm/ — §2 Computational Reproducibility, pp. 3–4: “all of the results”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/dc6bm/ — §2 Computational Reproducibility, pp. 3–4: “all of the results”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/dc6bm/ — §2 Computational Reproducibility, pp. 3–4: “all of the results”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision."
+    }
+  ],
+  "label_confidence": "medium",
+  "notes": "Lossless extraction of the embedded R code is allowed by the settled design. The source reports one transcription detail about rounds 7–8 that does not change the results. Use its original-R reproduction; the Stata implementation and aggregation/model-selection changes are excluded. The sign of the social-comparison coefficient depends on coding, so the selected target is the invariant test statistic and its SE."
+}

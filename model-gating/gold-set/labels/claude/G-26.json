@@ -1,0 +1,92 @@
+{
+ "gold_id": "G-26",
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [
+  "computational issues"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "match",
+   "reference_recomputed": 11018,
+   "tolerance": "exact count",
+   "severity": null,
+   "cause": "Shipped cleaning script fails as shipped (misspecified path: read_html(sEpisode) without directory); after the fix, the 'gender' package assigns gender differently under R 4.2.2 vs 4.2.1, giving 11,018 rows instead of 11,016.",
+   "evidence": "https://www.econstor.eu/bitstream/10419/306278/1/I4R-DP151rev.pdf Section 2, p.6: 'a minor coding error in the data cleaning script resulted in the inability to extract data from the previously scraped HTML files' ... 'The discrepancies can be attributed to the differing results obtained when the \"gender\" package ... is used with different versions of R ... This results in 11,018 observations for the main data set employed in the analysis, in comparison to 11,016'",
+   "rationale": "The raw cleaning reproduces 11,016 with gender 0.6.0 and genderdata at the commit named in the authors' code comment (lossless dependency setup under R4); not_checkable is accepted because genderdata is not deposited.",
+   "reported_check": "confirmed in paper (REPRO-Bench paper.pdf: 'we focus on the subset of 11,016 One Bid rounds'; Table 1 Observations 11,016)",
+   "rationale_blind_original": "The raw-HTML-to-sample pipeline cannot run unchanged, and once patched its row count depends on the R/gender-package version, an unstated environment choice; the deposited Data_cleaned.csv does give 11,016. Live alternative: discrepant P2 (11,018 vs 11,016).",
+   "acceptable_statuses": [
+    "match",
+    "not_checkable"
+   ]
+  },
+  {
+   "id": "C2",
+   "expected_status": "match",
+   "reference_recomputed": 0.051,
+   "tolerance": "3 dp",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://www.econstor.eu/bitstream/10419/306278/1/I4R-DP151rev.pdf Appendix D, Table A10 (Original vs Ind. Clustering vs Robust): 'We run the same regressions with the original data provided in the .csv'; Male Model 1 0.051 / 0.051 / 0.051",
+   "rationale": "I4R re-estimated Table 1 on the deposited analysis csv and got identical coefficients. They re-implemented the analysis in Stata and did not execute the shipped R analysis script, but OLS is deterministic. v1.1: the shipped R analysis reproduces this value exactly (reruns/G-26.json).",
+   "reported_check": "confirmed in paper (Table 1, Model 1 Male 0.051)",
+   "acceptable_statuses": [
+    "match"
+   ]
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": -0.045,
+   "tolerance": "3 dp",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://www.econstor.eu/bitstream/10419/306278/1/I4R-DP151rev.pdf Appendix D, Table A10: Gender match Model 1 Original -0.045*** / Ind. Clustering -0.045*** / Robust -0.045***",
+   "rationale": "Identical coefficient from the deposited csv (Stata re-implementation of the R analysis). v1.1: the shipped R analysis reproduces this value exactly (reruns/G-26.json).",
+   "reported_check": "confirmed in paper (Table 1, Model 1 Gender match -0.045)",
+   "acceptable_statuses": [
+    "match"
+   ]
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": 0.051,
+   "tolerance": "3 dp",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://www.econstor.eu/bitstream/10419/306278/1/I4R-DP151rev.pdf Appendix D, Table A10: Male Model 2 Original 0.051*** / Ind. Clustering 0.051*** / Robust 0.051***",
+   "rationale": "Identical coefficient from the deposited csv. Do not use main-text Table 2 (0.052): its Replication columns use the re-cleaned 11,018-row data. v1.1: the shipped R analysis reproduces this value exactly (reruns/G-26.json).",
+   "reported_check": "confirmed in paper (Table 1, Model 2 Male 0.051)",
+   "acceptable_statuses": [
+    "match"
+   ]
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": -0.049,
+   "tolerance": "3 dp",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://www.econstor.eu/bitstream/10419/306278/1/I4R-DP151rev.pdf Appendix D, Table A10: Gender match Model 2 Original -0.049*** / Ind. Clustering -0.049*** / Robust -0.049***",
+   "rationale": "Identical coefficient from the deposited csv (Stata re-implementation). v1.1: the shipped R analysis reproduces this value exactly (reruns/G-26.json).",
+   "reported_check": "confirmed in paper (Table 1, Model 2 Gender match -0.049)",
+   "acceptable_statuses": [
+    "match"
+   ]
+  }
+ ],
+ "label_confidence": "medium",
+ "notes": "v1.1: an agent rerun of the shipped R code (path-only edits) reproduces all five claims; the script later halts at stargazer() on current R, hence the computational-issues alternative. Paper computationally reproducible, alternative computational issues; label_confidence low; requires_human_rerun because the report re-implemented the analysis in Stata (R9). C2-C5 accept not_checkable under the strict shipped-R reading. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "I4R reproduced with Stata, not the shipped R analysis script; the report's Table 1 marks 'Reproducible from raw data' and 'from analysis data' as Fully. The 2-row difference (C1) is attributed to the gender package version, and the cleaning script needed a path fix. I treat C1 as not_checkable rather than discrepant; the paper-level alternative 'computational issues' covers a reconciler who treats C1 as a non-recurring output. Main-text Table 2 uses the re-cleaned data (Model 2 Male 0.052), so use Appendix D Table A10 for C2-C5. The REPRO-Bench folder contains should_reproduce.txt; I did not open it.",
+ "corrections": [
+  {
+   "version": "1.1",
+   "change": "C1 match (accepted not_checkable); C2-C5 match without not_checkable alternative; rerun flag cleared",
+   "reason": "Agent rerun of the shipped R code",
+   "evidence": "reruns/G-26.json"
+  }
+ ]
+}

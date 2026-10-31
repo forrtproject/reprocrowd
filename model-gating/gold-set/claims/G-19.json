@@ -1,0 +1,122 @@
+{
+  "gold_id": "G-19",
+  "cand_id": "I4R-9c8p6",
+  "doi": "10.1177/09567976241251766",
+  "title": "Proenvironmental Behavior Increases Subjective Well-Being: Evidence From an Experience-Sampling Study and a Randomized Experiment",
+  "stratum_drawn": "computational issues",
+  "paper_url": "https://doi.org/10.1177/09567976241251766",
+  "package": {
+    "url": "https://osf.io/hpvsu/files/osfstorage/645e5cac9f8fa621544dae79?revision=6",
+    "version_pin": "OSF s2_analysis.R file 645e5cac9f8fa621544dae79 revision 6 (2024-03-27), SHA-256 ecedfe3161827b762c787a4e6b066e67d64eda8c348ff2672d6a00f307214f0d; /Study 1/s1_analysis.R: OSF file 645e5ca91a368819ec5481e6 version 5, SHA-256 e51b140bc4e399faf4823f665f8408147e6d01aab6528b3bdfd1a196b53de79b; /Study 1/s1_data.csv: OSF file 645e5cb560fc5d18dcca0a9e version 3, SHA-256 3b3be5118deb2bebd2f36ad5d5fb49a9fa3cb0561402ad6061682ac290d28ecb; /Study 2/s2_data_actions.csv: OSF file 659c057d5e925a0bdc45b93e version 1 (2024-01-08), SHA-256 89e1deb53407bd4b6aebc27c51e04c9b8627e8ec7203147410addd017103bd48",
+    "language": "R",
+    "code_format": "files",
+    "data_files": [
+      {
+        "path": "/Study 1/s1_analysis.R",
+        "osf_file_id": "645e5ca91a368819ec5481e6",
+        "version": 5,
+        "sha256": "e51b140bc4e399faf4823f665f8408147e6d01aab6528b3bdfd1a196b53de79b",
+        "url": "https://osf.io/download/b6ewx/"
+      },
+      {
+        "path": "/Study 1/s1_data.csv",
+        "osf_file_id": "645e5cb560fc5d18dcca0a9e",
+        "version": 3,
+        "sha256": "3b3be5118deb2bebd2f36ad5d5fb49a9fa3cb0561402ad6061682ac290d28ecb",
+        "url": "https://osf.io/download/36tbc/"
+      },
+      {
+        "path": "/Study 2/s2_data_actions.csv",
+        "osf_file_id": "659c057d5e925a0bdc45b93e",
+        "version": 1,
+        "sha256": "89e1deb53407bd4b6aebc27c51e04c9b8627e8ec7203147410addd017103bd48",
+        "url": "https://osf.io/download/crwsk/",
+        "date_created": "2024-01-08T14:23:57.287755Z"
+      }
+    ]
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/nqx74/",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Study 2 number of proenvironmental behaviors reported in the PEB condition",
+      "exhibit": "Study 2 Results; Figure 2",
+      "page": null,
+      "quantity": "Mean number of behaviors",
+      "reported": "2.11"
+    },
+    {
+      "id": "C2",
+      "claim": "Study 2 variability in reported proenvironmental behaviors",
+      "exhibit": "Study 2 Results; Figure 2",
+      "page": null,
+      "quantity": "Standard deviation of number of behaviors",
+      "reported": "0.98"
+    },
+    {
+      "id": "C3",
+      "claim": "Study 2 number of fun activities reported in the Fun condition",
+      "exhibit": "Study 2 Results; Figure 2",
+      "page": null,
+      "quantity": "Mean number of activities",
+      "reported": "2.30"
+    },
+    {
+      "id": "C4",
+      "claim": "Study 1 between-person association between PEB and well-being",
+      "exhibit": "Study 1 Results, model 1",
+      "page": null,
+      "quantity": "Unstandardized coefficient",
+      "reported": "1.64"
+    },
+    {
+      "id": "C5",
+      "claim": "Study 1 within-person association between PEB and well-being",
+      "exhibit": "Study 1 Results, model 1",
+      "page": null,
+      "quantity": "Unstandardized coefficient",
+      "reported": "0.77"
+    },
+    {
+      "id": "C6",
+      "claim": "Study 1 between-person PEB association with covariates",
+      "exhibit": "Study 1 Results, model controlling for social desirability bias (code Model 2)",
+      "page": null,
+      "quantity": "Unstandardized coefficient",
+      "reported": "1.48"
+    }
+  ],
+  "notes": "Historical Study 2 s2_analysis.R revision 6 remains the code target. Study 1 script/data and the deposited Study 2 activity-count data are additionally pinned. The activity-data path is /Study 2/s2_data_actions.csv; the script calls it Data/S2 text.csv.",
+  "corrections": [
+    {
+      "round": 1,
+      "claim_ids": [
+        "C6"
+      ],
+      "reason": "The 1.48 value is printed in the social-desirability-controlled model; Model 3 includes environmental-value moderation."
+    },
+    {
+      "round": 1,
+      "claim_ids": [
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "reason": "Pinned the Study 1 script and data used in the targeted check, supplementing the unchanged historical Study 2 revision 6 pin."
+    },
+    {
+      "round": 1,
+      "claim_ids": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "reason": "Pinned the deposited activity data, created 2024-01-08, before the 2024-03-27 script revision. The called name Data/S2 text.csv differs from the deposited filename; no data content is changed."
+    }
+  ]
+}

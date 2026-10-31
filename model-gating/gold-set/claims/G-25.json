@@ -1,0 +1,77 @@
+{
+  "gold_id": "G-25",
+  "cand_id": "I4R-eb89k",
+  "doi": "10.1038/s41562-023-01530-y",
+  "title": "A meta-analysis of genetic effects associated with neurodevelopmental disorders and co-occurring conditions",
+  "stratum_drawn": "technical failure",
+  "paper_url": "https://doi.org/10.1038/s41562-023-01530-y",
+  "package": {
+    "url": "https://github.com/CoDEresearchlab/Meta_analysis_NDDs_DICCs/tree/c4fac61e75db0b0106dd8051900d522a3c6ba274",
+    "version_pin": "Git commit c4fac61e75db0b0106dd8051900d522a3c6ba274",
+    "language": "R",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/6a7b4277f7487ac8ac692ab9/",
+      "description": "Human computational reproduction report."
+    },
+    {
+      "url": "https://www.nature.com/articles/s41562-025-02299-y",
+      "description": "Author Correction documents the later change from original grand family-based correlation 0.36 to 0.47; the original article remains the benchmark target."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Family-based heritability across neurodevelopmental disorders",
+      "exhibit": "Abstract; Figure 3",
+      "page": 642,
+      "quantity": "Grand family-based heritability",
+      "reported": "0.66"
+    },
+    {
+      "id": "C2",
+      "claim": "SNP-based heritability across neurodevelopmental disorders",
+      "exhibit": "Abstract; Figure 3",
+      "page": 642,
+      "quantity": "Grand SNP heritability",
+      "reported": "0.19"
+    },
+    {
+      "id": "C3",
+      "claim": "Family-based genetic overlap among neurodevelopmental disorders",
+      "exhibit": "Abstract; Figure 4",
+      "page": 642,
+      "quantity": "Grand family-based genetic correlation",
+      "reported": "0.36"
+    },
+    {
+      "id": "C4",
+      "claim": "SNP-based genetic overlap among neurodevelopmental disorders",
+      "exhibit": "Abstract; Figure 4",
+      "page": 642,
+      "quantity": "Grand SNP-based genetic correlation",
+      "reported": "0.39"
+    },
+    {
+      "id": "C5",
+      "claim": "Family-based genetic overlap between NDDs and DICCs",
+      "exhibit": "Abstract; Figure 5",
+      "page": 642,
+      "quantity": "Grand family-based genetic correlation",
+      "reported": "0.62"
+    }
+  ],
+  "notes": " Article target is the original 2023 version corresponding to Git commit c4fac61. The 2025 Author Correction (10.1038/s41562-025-02299-y, published 2025-08-11) changes the grand family-based correlation from 0.36 to 0.47; that later version is not the target.",
+  "corrections": [
+    {
+      "round": 1,
+      "claim_ids": [
+        "C3"
+      ],
+      "reason": "Use the original article estimate 0.36 corresponding to the pinned pre-correction package; record the later Author Correction separately."
+    }
+  ],
+  "article_version": "Original 2023 article, before the Author Correction published 2025-08-11"
+}

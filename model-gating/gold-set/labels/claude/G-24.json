@@ -1,0 +1,65 @@
+{
+ "gold_id": "G-24",
+ "expected_validation_status": "technical failure",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "3 dp as printed",
+   "severity": "P0",
+   "cause": "Pinned 'Wave 1+2 Analyses FINAL FOR MANUSCRIPT.Rmd' fails R parse() (unclosed cauchy( in stan_lmer call, Rmd lines 1194-1195) inside the chunk that computes Table 1; no values produced by reproducers",
+   "evidence": "https://osf.io/download/bk3ag/ p.1 (Summary): 'The results were not computationally reproducible within the planned time. ... we were unable to reproduce the results'; p.2: 'The file cannot be knit without error ... Quitting from lines 1149-1372 [Phases 1 and 2 along with sims] ... A parenthesis is missing'",
+   "rationale": "The reproducers could not run the manuscript Rmd and report no Table 1 values. I confirmed the syntax fault statically in the pinned commit.",
+   "reported_check": "confirmed in paper (PMC10192018 HTML, Table 1): Life satisfaction t.ratio 4.321"
+  },
+  {
+   "id": "C2",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "3 dp as printed",
+   "severity": "P0",
+   "cause": "Pinned 'Wave 1+2 Analyses FINAL FOR MANUSCRIPT.Rmd' fails R parse() (unclosed cauchy( in stan_lmer call, Rmd lines 1194-1195) inside the chunk that computes Table 1; no values produced by reproducers",
+   "evidence": "https://osf.io/download/bk3ag/ p.1 (Summary): 'The results were not computationally reproducible within the planned time. ... we were unable to reproduce the results'; p.2: 'The file cannot be knit without error ... Quitting from lines 1149-1372 [Phases 1 and 2 along with sims] ... A parenthesis is missing'",
+   "rationale": "The reproducers could not run the manuscript Rmd and report no Table 1 values. I confirmed the syntax fault statically in the pinned commit.",
+   "reported_check": "confirmed in paper (PMC10192018 HTML, Table 1): Explicit gender–career bias 3.204"
+  },
+  {
+   "id": "C3",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "3 dp as printed",
+   "severity": "P0",
+   "cause": "Pinned 'Wave 1+2 Analyses FINAL FOR MANUSCRIPT.Rmd' fails R parse() (unclosed cauchy( in stan_lmer call, Rmd lines 1194-1195) inside the chunk that computes Table 1; no values produced by reproducers",
+   "evidence": "https://osf.io/download/bk3ag/ p.1 (Summary): 'The results were not computationally reproducible within the planned time. ... we were unable to reproduce the results'; p.2: 'The file cannot be knit without error ... Quitting from lines 1149-1372 [Phases 1 and 2 along with sims] ... A parenthesis is missing'",
+   "rationale": "The reproducers could not run the manuscript Rmd and report no Table 1 values. I confirmed the syntax fault statically in the pinned commit.",
+   "reported_check": "confirmed in paper (PMC10192018 HTML, Table 1): Implicit gender–career bias 3.161"
+  },
+  {
+   "id": "C4",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "3 dp as printed",
+   "severity": "P0",
+   "cause": "Pinned 'Wave 1+2 Analyses FINAL FOR MANUSCRIPT.Rmd' fails R parse() (unclosed cauchy( in stan_lmer call, Rmd lines 1194-1195) inside the chunk that computes Table 1; no values produced by reproducers",
+   "evidence": "https://osf.io/download/bk3ag/ p.1 (Summary): 'The results were not computationally reproducible within the planned time. ... we were unable to reproduce the results'; p.2: 'The file cannot be knit without error ... Quitting from lines 1149-1372 [Phases 1 and 2 along with sims] ... A parenthesis is missing'",
+   "rationale": "The reproducers could not run the manuscript Rmd and report no Table 1 values. I confirmed the syntax fault statically in the pinned commit.",
+   "reported_check": "confirmed in paper (PMC10192018 HTML, Table 1): Political polarization 2.819"
+  },
+  {
+   "id": "C5",
+   "expected_status": "not_checkable",
+   "reference_recomputed": null,
+   "tolerance": "3 dp as printed",
+   "severity": "P0",
+   "cause": "Pinned 'Wave 1+2 Analyses FINAL FOR MANUSCRIPT.Rmd' fails R parse() (unclosed cauchy( in stan_lmer call, Rmd lines 1194-1195) inside the chunk that computes Table 1; no values produced by reproducers",
+   "evidence": "https://osf.io/download/bk3ag/ p.1 (Summary): 'The results were not computationally reproducible within the planned time. ... we were unable to reproduce the results'; p.2: 'The file cannot be knit without error ... Quitting from lines 1149-1372 [Phases 1 and 2 along with sims] ... A parenthesis is missing'",
+   "rationale": "The reproducers could not run the manuscript Rmd and report no Table 1 values. I confirmed the syntax fault statically in the pinned commit.",
+   "reported_check": "confirmed in paper (PMC10192018 HTML, Table 1): Positive affect 2.128"
+  }
+ ],
+ "label_confidence": "medium",
+ "notes": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "This case is disputed. The authors' response (https://osf.io/download/698cea243fa4fc8652e24ac1/, Dec 2025) says everything reproduces when chunks are run in the console following the README. They say the stan_lmer error comes from rstanarm 2.32's stricter ellipsis handling. My static check contradicts that explanation. At pinned commit 32cfd57, knitr::purl + parse() of the FINAL Rmd fails with 'unexpected symbol' at em_expert_simple, because 'prior = cauchy(0,c(0.707,0.707,0.5),' is never closed. That is a syntax fault independent of package versions. The README links the Rmd at commit 8db528c, and that version has the identical parse failure. 'Wave 1+2 Analyses update.Rmd' fails parse on 'dplyr::dplyr::select'. Mitigating facts for the reconciler: the Table 1 lay-vs-scientist contrasts (lmer + emmeans revpairwise ~isExpert.factor|domain, Rmd lines ~1182-1187) come before the faulty stan_lmer call in the same chunk and read dat_for_analyses.csv. So line-by-line interactive execution could plausibly produce them, and the dat_long V1/V2 ambiguity does not bear directly on Table 1. The two unreproduced files (contrast1.csv/contrast2.csv) are supplement method contrasts, not Table 1. Nobody has produced Table 1 values from the shipped code. The report did attempt the computation and failed, so the dispute is about who is at fault, not about whether computation was checked. 'Technical failure' is therefore kept with no alternative. Confidence is medium because of the author dispute and the possibility of interactive execution."
+}

@@ -1,0 +1,280 @@
+{
+  "gold_id": "G-22",
+  "cand_id": "I4R-bz8pf",
+  "doi": "10.1177/09567976231217410",
+  "title": "Attitudes and Laws About Abortion Are Linked to Extrinsic Mortality Risk: A Life-History Perspective on Variability in Reproductive Rights",
+  "stratum_drawn": "computational issues",
+  "paper_url": "https://static1.squarespace.com/static/56cf3dd4b6aa60904403973f/t/65b84ceafffdf86761fa614f/1706577136242/attitudes-and-laws-about-abortion-are-linked-to-extrinsic-mortality-risk.pdf",
+  "package": {
+    "url": "https://osf.io/7tsq2/",
+    "version_pin": "EVS_WVS_Joint_CodeBook.pdf: OSF file 6397972a4cc86c0723114e0b version 1, SHA-256 d3d317d9472a98ef928f6ad4e7b113e5500cec9674ab3e984ff7d0f16e94fbeb; CIP - Competitive Industrial Performance Index.zip: OSF file 6397972b6647da06bdd34e8c version 1, SHA-256 b470e614992fcd7f2a74f6c08d1760c56f0f1ac9f8a4151ef4ba90f35fbab44c; WVS_7_Codebook_Variables_report.pdf: OSF file 63979736e4687406de9b4bb5 version 1, SHA-256 14e3cada6fd592c8d2cac4bba341beaece07bfe78ce98e6c30757f29bd106222; F00012155-EVS_WVS_Joint_rData_v3_0.zip: OSF file 6397973a4cc86c071b116702 version 1, SHA-256 4313fe0af648b784fc8ad3f30ac055d2d847ffefb5da11f9cd6c2396a83b4ca2; Worlds Abortion Laws Map.pdf: OSF file 6397973a58abfd074672fa3f version 1, SHA-256 a5e62d02985970ebe93500b1f9255235a97479ea5a0a1e2a914f8132efcdfa7d; 1_Revised-Analyses-_-Abortion-Laws-and-Attitudes.html: OSF file 64346e4e48245637d5b4883b version 1, SHA-256 40176b49fb99af3d979529937a81b58993d64299de0fb4b9a1a6aa5d5fe294d5; 2022_Reported-Analyses-Abortion-Laws-and-Attitudes.html: OSF file 6781ca4615357f0341e24759 version 1, SHA-256 e165bbf8d5fac785f24d4e9fc01367493c252cda85e2fa20ee67b5e43dc022a6; 2024-Brandt---Maner-Replication-Guide-Part-3-National-Level.html: OSF file 6781cac68feb794727428e59 version 1, SHA-256 c002da630e1a0d6f9180baf4d524b05cf33569ec70bde76a3156c5c3e2fd53bb; 2024-Brandt---Maner-Replication-Guide-Part-2-Individual-Level.html: OSF file 6781cac87907829aaee24ad9 version 1, SHA-256 17119996b227cc74d63578bdf426d56cb053f2e2eb118634b878f15352585ff9; 2024-Brandt---Maner-Replication-Guide-Part-1-State-Level.html: OSF file 6781cac855693c5aaf2f440a version 1, SHA-256 36caba141b4500e764e05fd3b4649a156335c0ec71693e7f5ab1914d5ce1017d; /1 State-level data/Life_expectancy_by_state_2019-2021.xlsx: OSF file 67460af8e3046afa547a4aa5 version 1, SHA-256 fae1bd07ace2bcbe2adb7d99af5800a0624cc17a974d0f7821bb645ed4409103; /1 State-level data/1_Preprocessed State Level Data.xlsx: OSF file 67460d94232051461e96bf44 version 1, SHA-256 058549235ff17c0ca015caf70b59f81ba887d3fb020bff6ab3f9a559ba104beb; /1 State-level data/Abortion_rates_and_laws_by_state.xlsx: OSF file 6781c92f658872b4a9341d9f version 1, SHA-256 08c79e64e30275a9b3ea5145c86cce04f8a7a6bba99969c9f57cc616664ff960; /2 Individual-level data/Infant mortality by county.xlsx: OSF file 6781c9eb15357f0341e2474f version 1, SHA-256 a5cac60ff9bfb61568eec21afd46dd5e6d66fd0819a565955c62b7a9ff46572d; /2 Individual-level data/Life expectancy and age-specific mortality risk by county.XLSX: OSF file 6781c9eef31a8b8000e24365 version 1, SHA-256 05e5fc78e394a35f85881aedb8e60e14b1284923fe81bacd778b28c518e86692; /2 Individual-level data/2_Preprocessed Individual Level Dataset.xlsx: OSF file 6781c9ee55693c5aaf2f43a2 version 1, SHA-256 f837c78529c63d1ad02ed5a1fec5481042ac269a378a3c1e3874f5c73cab34f2; /2 Individual-level data/US cities and zip codes.xlsx: OSF file 6781c9ee9018230f0a2f4423 version 1, SHA-256 963fc22d69d0f85ba5b3a0a98cff339743e356ea4d0b8dd29aba6cea6630c594; /2 Individual-level data/1_Preprocessed State Level Data.xlsx: OSF file 6781c9ef15357f0341e24751 version 1, SHA-256 96a998b7a822151952438cf22a3efe9f545008a10000b4a3bcba2811c80707b0; /2 Individual-level data/WVS town codes.xlsx: OSF file 6781c9efae37eb9e43e24df2 version 1, SHA-256 a9082d0ccf7c572f11241c125cc9736b69d896742f34fcb843575be093566795; /2 Individual-level data/WVS_Cross-National_Wave_7_rData_v4_0.rdata: OSF file 6781c9f3168d2b756a858633 version 1, SHA-256 011d402e1ca63da14294881ae95a91ea000c02f524f772f6f587faa4ce122fc3; /Original files/Abortion_rates_and_laws_by_state.xlsx: OSF file 63979729084e0f0754cdb1cd version 1, SHA-256 86f5bd997351bc4caf1099d28c257bf845bce5821cfa5b3d35a3d2f370f2a16c; /Original files/Data_Extract_Education_World_Development_Indicators.xlsx: OSF file 6397972a58abfd074672fa2f version 1, SHA-256 c32d5b70c7c1f2cb8a1e7ddf034cf47f9624b20237dd55de7146c28641cee91a; /Original files/Educational Attainment by State.xlsx: OSF file 6397972ae4687406eb9b3cd9 version 1, SHA-256 c79c81ef20b340dc9e63ef511de3a560b79dd45f2a3643b2fc4bfb7756860272; /Original files/Infant mortality by county.xlsx: OSF file 6397972c084e0f074ccdb2a9 version 1, SHA-256 a5cac60ff9bfb61568eec21afd46dd5e6d66fd0819a565955c62b7a9ff46572d; /Original files/EVS_WVS_Joint_VariableCorrespondence.xlsx: OSF file 6397972de4687406eb9b3cdf version 1, SHA-256 822f1b1202539d64db42cbdb177697ce72c1da2efb7c704fd4fabd7952908227; /Original files/UNIDO Competitive Industrial Performance Score.xlsx: OSF file 6397972f6647da06bdd34e95 version 1, SHA-256 083a7da6f28af618ea224a57a91c445ef4ce4fd585f218912ac6850208883e5f; /Original files/World_Bank_Development_Indicators_2011-2021.xlsx: OSF file 6397972f084e0f074ecdba4b version 1, SHA-256 6368882fdb294c0693857613038cd562556525ed4d11e768d5c3c6e3c361bfda; /Original files/WVS_Cross-National_Wave_7_rData_v4_0.rdata: OSF file 63979742084e0f0754cdb1fc version 1, SHA-256 011d402e1ca63da14294881ae95a91ea000c02f524f772f6f587faa4ce122fc3; /Original files/EVS_WVS_Joint_rData_v3_0.rdata: OSF file 6397975e084e0f0753cdad9e version 1, SHA-256 f39ff574302300fb38e1b5e6d0b5b4211f6711465bfe213bb2c7903b48e7195e; /3 Nation-level data/UNIDO Competitive Industrial Performance Score.xlsx: OSF file 6781ca7dd442944bd9428b0f version 1, SHA-256 083a7da6f28af618ea224a57a91c445ef4ce4fd585f218912ac6850208883e5f; /3 Nation-level data/World_Bank_Development_Indicators_2011-2021.xlsx: OSF file 6781ca7d5d526627542f4507 version 1, SHA-256 6368882fdb294c0693857613038cd562556525ed4d11e768d5c3c6e3c361bfda; /3 Nation-level data/Data_Extract_Education_World_Development_Indicators.xlsx: OSF file 6781ca7d55693c5aaf2f43e2 version 1, SHA-256 c32d5b70c7c1f2cb8a1e7ddf034cf47f9624b20237dd55de7146c28641cee91a; /3 Nation-level data/UN Stats Division List of countries codes regions continents.xlsx: OSF file 6781ca7ef31a8b8000e24373 version 1, SHA-256 922dab0a8e5aa7ac0cbee1183b737c201576bac4c2da97f3f341a60659417774; /3 Nation-level data/World's Abortion Laws by Category.xlsx: OSF file 6781ca7fce112c313b34201e version 1, SHA-256 9a0156992ec37de2bd17452019d09d0e1c0b679b1a8fc25409271954e9ab2a24; /3 Nation-level data/EVS_WVS_Joint_rData_v3_0.rdata: OSF file 6781caa141fa7a8edc85880a version 1, SHA-256 f39ff574302300fb38e1b5e6d0b5b4211f6711465bfe213bb2c7903b48e7195e; /3 Nation-level data/3_Preprocessed Nation Level Data.xlsx: OSF file 6781cbb29018230f0a2f449a version 1, SHA-256 a16c522156ef17ae5be284f96fbdacda0f3b93b761e778a1707261d793b36e3f",
+    "language": "R",
+    "code_format": "embedded",
+    "data_files": [
+      {
+        "path": "/1 State-level data/Life_expectancy_by_state_2019-2021.xlsx",
+        "osf_file_id": "67460af8e3046afa547a4aa5",
+        "version": 1,
+        "sha256": "fae1bd07ace2bcbe2adb7d99af5800a0624cc17a974d0f7821bb645ed4409103",
+        "url": "https://osf.io/download/jkh3e/"
+      },
+      {
+        "path": "/1 State-level data/1_Preprocessed State Level Data.xlsx",
+        "osf_file_id": "67460d94232051461e96bf44",
+        "version": 1,
+        "sha256": "058549235ff17c0ca015caf70b59f81ba887d3fb020bff6ab3f9a559ba104beb",
+        "url": "https://osf.io/download/h4f8m/"
+      },
+      {
+        "path": "/1 State-level data/Abortion_rates_and_laws_by_state.xlsx",
+        "osf_file_id": "6781c92f658872b4a9341d9f",
+        "version": 1,
+        "sha256": "08c79e64e30275a9b3ea5145c86cce04f8a7a6bba99969c9f57cc616664ff960",
+        "url": "https://osf.io/download/yub2c/"
+      },
+      {
+        "path": "/2 Individual-level data/Infant mortality by county.xlsx",
+        "osf_file_id": "6781c9eb15357f0341e2474f",
+        "version": 1,
+        "sha256": "a5cac60ff9bfb61568eec21afd46dd5e6d66fd0819a565955c62b7a9ff46572d",
+        "url": "https://osf.io/download/hwdnc/"
+      },
+      {
+        "path": "/2 Individual-level data/Life expectancy and age-specific mortality risk by county.XLSX",
+        "osf_file_id": "6781c9eef31a8b8000e24365",
+        "version": 1,
+        "sha256": "05e5fc78e394a35f85881aedb8e60e14b1284923fe81bacd778b28c518e86692",
+        "url": "https://osf.io/download/uc7nj/"
+      },
+      {
+        "path": "/2 Individual-level data/2_Preprocessed Individual Level Dataset.xlsx",
+        "osf_file_id": "6781c9ee55693c5aaf2f43a2",
+        "version": 1,
+        "sha256": "f837c78529c63d1ad02ed5a1fec5481042ac269a378a3c1e3874f5c73cab34f2",
+        "url": "https://osf.io/download/xj3bf/"
+      },
+      {
+        "path": "/2 Individual-level data/US cities and zip codes.xlsx",
+        "osf_file_id": "6781c9ee9018230f0a2f4423",
+        "version": 1,
+        "sha256": "963fc22d69d0f85ba5b3a0a98cff339743e356ea4d0b8dd29aba6cea6630c594",
+        "url": "https://osf.io/download/pnr7e/"
+      },
+      {
+        "path": "/2 Individual-level data/1_Preprocessed State Level Data.xlsx",
+        "osf_file_id": "6781c9ef15357f0341e24751",
+        "version": 1,
+        "sha256": "96a998b7a822151952438cf22a3efe9f545008a10000b4a3bcba2811c80707b0",
+        "url": "https://osf.io/download/trgp5/"
+      },
+      {
+        "path": "/2 Individual-level data/WVS town codes.xlsx",
+        "osf_file_id": "6781c9efae37eb9e43e24df2",
+        "version": 1,
+        "sha256": "a9082d0ccf7c572f11241c125cc9736b69d896742f34fcb843575be093566795",
+        "url": "https://osf.io/download/t6s2v/"
+      },
+      {
+        "path": "/2 Individual-level data/WVS_Cross-National_Wave_7_rData_v4_0.rdata",
+        "osf_file_id": "6781c9f3168d2b756a858633",
+        "version": 1,
+        "sha256": "011d402e1ca63da14294881ae95a91ea000c02f524f772f6f587faa4ce122fc3",
+        "url": "https://osf.io/download/agtn6/"
+      },
+      {
+        "path": "/Original files/Abortion_rates_and_laws_by_state.xlsx",
+        "osf_file_id": "63979729084e0f0754cdb1cd",
+        "version": 1,
+        "sha256": "86f5bd997351bc4caf1099d28c257bf845bce5821cfa5b3d35a3d2f370f2a16c",
+        "url": "https://osf.io/download/t5hg6/"
+      },
+      {
+        "path": "/Original files/Data_Extract_Education_World_Development_Indicators.xlsx",
+        "osf_file_id": "6397972a58abfd074672fa2f",
+        "version": 1,
+        "sha256": "c32d5b70c7c1f2cb8a1e7ddf034cf47f9624b20237dd55de7146c28641cee91a",
+        "url": "https://osf.io/download/qah3s/"
+      },
+      {
+        "path": "/Original files/Educational Attainment by State.xlsx",
+        "osf_file_id": "6397972ae4687406eb9b3cd9",
+        "version": 1,
+        "sha256": "c79c81ef20b340dc9e63ef511de3a560b79dd45f2a3643b2fc4bfb7756860272",
+        "url": "https://osf.io/download/a4yhx/"
+      },
+      {
+        "path": "/Original files/CIP - Competitive Industrial Performance Index.zip",
+        "osf_file_id": "6397972b6647da06bdd34e8c",
+        "version": 1,
+        "sha256": "b470e614992fcd7f2a74f6c08d1760c56f0f1ac9f8a4151ef4ba90f35fbab44c",
+        "url": "https://osf.io/download/x8ajt/"
+      },
+      {
+        "path": "/Original files/Infant mortality by county.xlsx",
+        "osf_file_id": "6397972c084e0f074ccdb2a9",
+        "version": 1,
+        "sha256": "a5cac60ff9bfb61568eec21afd46dd5e6d66fd0819a565955c62b7a9ff46572d",
+        "url": "https://osf.io/download/5r2xu/"
+      },
+      {
+        "path": "/Original files/EVS_WVS_Joint_VariableCorrespondence.xlsx",
+        "osf_file_id": "6397972de4687406eb9b3cdf",
+        "version": 1,
+        "sha256": "822f1b1202539d64db42cbdb177697ce72c1da2efb7c704fd4fabd7952908227",
+        "url": "https://osf.io/download/z5rs4/"
+      },
+      {
+        "path": "/Original files/UNIDO Competitive Industrial Performance Score.xlsx",
+        "osf_file_id": "6397972f6647da06bdd34e95",
+        "version": 1,
+        "sha256": "083a7da6f28af618ea224a57a91c445ef4ce4fd585f218912ac6850208883e5f",
+        "url": "https://osf.io/download/8wrve/"
+      },
+      {
+        "path": "/Original files/World_Bank_Development_Indicators_2011-2021.xlsx",
+        "osf_file_id": "6397972f084e0f074ecdba4b",
+        "version": 1,
+        "sha256": "6368882fdb294c0693857613038cd562556525ed4d11e768d5c3c6e3c361bfda",
+        "url": "https://osf.io/download/nu5x4/"
+      },
+      {
+        "path": "/Original files/F00012155-EVS_WVS_Joint_rData_v3_0.zip",
+        "osf_file_id": "6397973a4cc86c071b116702",
+        "version": 1,
+        "sha256": "4313fe0af648b784fc8ad3f30ac055d2d847ffefb5da11f9cd6c2396a83b4ca2",
+        "url": "https://osf.io/download/gsu4w/"
+      },
+      {
+        "path": "/Original files/WVS_Cross-National_Wave_7_rData_v4_0.rdata",
+        "osf_file_id": "63979742084e0f0754cdb1fc",
+        "version": 1,
+        "sha256": "011d402e1ca63da14294881ae95a91ea000c02f524f772f6f587faa4ce122fc3",
+        "url": "https://osf.io/download/kmeu2/"
+      },
+      {
+        "path": "/Original files/EVS_WVS_Joint_rData_v3_0.rdata",
+        "osf_file_id": "6397975e084e0f0753cdad9e",
+        "version": 1,
+        "sha256": "f39ff574302300fb38e1b5e6d0b5b4211f6711465bfe213bb2c7903b48e7195e",
+        "url": "https://osf.io/download/a4etz/"
+      },
+      {
+        "path": "/3 Nation-level data/UNIDO Competitive Industrial Performance Score.xlsx",
+        "osf_file_id": "6781ca7dd442944bd9428b0f",
+        "version": 1,
+        "sha256": "083a7da6f28af618ea224a57a91c445ef4ce4fd585f218912ac6850208883e5f",
+        "url": "https://osf.io/download/d3a6e/"
+      },
+      {
+        "path": "/3 Nation-level data/World_Bank_Development_Indicators_2011-2021.xlsx",
+        "osf_file_id": "6781ca7d5d526627542f4507",
+        "version": 1,
+        "sha256": "6368882fdb294c0693857613038cd562556525ed4d11e768d5c3c6e3c361bfda",
+        "url": "https://osf.io/download/jfq65/"
+      },
+      {
+        "path": "/3 Nation-level data/Data_Extract_Education_World_Development_Indicators.xlsx",
+        "osf_file_id": "6781ca7d55693c5aaf2f43e2",
+        "version": 1,
+        "sha256": "c32d5b70c7c1f2cb8a1e7ddf034cf47f9624b20237dd55de7146c28641cee91a",
+        "url": "https://osf.io/download/2mh9d/"
+      },
+      {
+        "path": "/3 Nation-level data/UN Stats Division List of countries codes regions continents.xlsx",
+        "osf_file_id": "6781ca7ef31a8b8000e24373",
+        "version": 1,
+        "sha256": "922dab0a8e5aa7ac0cbee1183b737c201576bac4c2da97f3f341a60659417774",
+        "url": "https://osf.io/download/rqsg2/"
+      },
+      {
+        "path": "/3 Nation-level data/World's Abortion Laws by Category.xlsx",
+        "osf_file_id": "6781ca7fce112c313b34201e",
+        "version": 1,
+        "sha256": "9a0156992ec37de2bd17452019d09d0e1c0b679b1a8fc25409271954e9ab2a24",
+        "url": "https://osf.io/download/8nxuf/"
+      },
+      {
+        "path": "/3 Nation-level data/EVS_WVS_Joint_rData_v3_0.rdata",
+        "osf_file_id": "6781caa141fa7a8edc85880a",
+        "version": 1,
+        "sha256": "f39ff574302300fb38e1b5e6d0b5b4211f6711465bfe213bb2c7903b48e7195e",
+        "url": "https://osf.io/download/76nkb/"
+      },
+      {
+        "path": "/3 Nation-level data/3_Preprocessed Nation Level Data.xlsx",
+        "osf_file_id": "6781cbb29018230f0a2f449a",
+        "version": 1,
+        "sha256": "a16c522156ef17ae5be284f96fbdacda0f3b93b761e778a1707261d793b36e3f",
+        "url": "https://osf.io/download/35xky/"
+      }
+    ]
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/6a8dab91bef1626ff08e0770/",
+      "description": "Human computational reproduction report."
+    },
+    {
+      "url": "https://osf.io/download/8wpgv/",
+      "description": "Original individual-level analysis HTML, containing embedded R and rendered results."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "State life-expectancy association, first adjusted model",
+      "exhibit": "Table 2, Adjusted model 1",
+      "page": null,
+      "quantity": "Standard error of life-expectancy coefficient",
+      "reported": "0.07"
+    },
+    {
+      "id": "C2",
+      "claim": "Individual abortion attitudes: model intercept",
+      "exhibit": "Table 3",
+      "page": null,
+      "quantity": "Intercept estimate",
+      "reported": "5.25"
+    },
+    {
+      "id": "C3",
+      "claim": "Individual abortion attitudes: uncertainty in the intercept",
+      "exhibit": "Table 3",
+      "page": null,
+      "quantity": "95% confidence interval",
+      "reported": "[5.08, 5.43]"
+    },
+    {
+      "id": "C4",
+      "claim": "Individual abortion attitudes: life-expectancy association",
+      "exhibit": "Table 3",
+      "page": null,
+      "quantity": "95% confidence interval",
+      "reported": "[−0.09, −0.40]"
+    },
+    {
+      "id": "C5",
+      "claim": "Individual abortion attitudes: income-group association",
+      "exhibit": "Table 3",
+      "page": null,
+      "quantity": "95% confidence interval",
+      "reported": "[−0.03, 0.36]"
+    },
+    {
+      "id": "C6",
+      "claim": "Individual abortion attitudes: life-expectancy point estimate",
+      "exhibit": "Table 3",
+      "page": null,
+      "quantity": "Life-expectancy coefficient",
+      "reported": "0.24"
+    }
+  ],
+  "notes": "",
+  "corrections": [
+    {
+      "round": 1,
+      "claim_ids": [],
+      "reason": "Added exact data-file IDs, versions, and SHA-256 hashes from the archived OSF inventory; these augment the existing code pins."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "gold_id": "G-26",
+  "cand_id": "RB-111",
+  "doi": "10.1093/ej/uead087",
+  "title": "Taste-Based Gender Favouritism in High-Stake Decisions: Evidence from The Price is Right",
+  "stratum_drawn": "ambiguous",
+  "paper_url": "https://doi.org/10.1093/ej/uead087",
+  "package": {
+    "url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/111/replication_package",
+    "version_pin": "REPRO-Bench snapshot commit 74958fba32daeacff51f2e1fd37be3916595648f",
+    "language": "R",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://www.econstor.eu/bitstream/10419/306278/1/I4R-DP151rev.pdf",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "One Bid rounds in the main analysis sample",
+      "exhibit": "Data; Table 1, Model 1",
+      "page": null,
+      "quantity": "Number of rounds",
+      "reported": "11,016"
+    },
+    {
+      "id": "C2",
+      "claim": "Male fourth bidder and probability of cutting off the leader, Model 1",
+      "exhibit": "Table 1, Model 1",
+      "page": null,
+      "quantity": "Male coefficient",
+      "reported": "0.051"
+    },
+    {
+      "id": "C3",
+      "claim": "Gender match and probability of cutting off the leader, Model 1",
+      "exhibit": "Table 1, Model 1",
+      "page": null,
+      "quantity": "Gender-match coefficient",
+      "reported": "−0.045"
+    },
+    {
+      "id": "C4",
+      "claim": "Male fourth bidder and probability of cutting off the leader, Model 2",
+      "exhibit": "Table 1, Model 2",
+      "page": null,
+      "quantity": "Male coefficient",
+      "reported": "0.051"
+    },
+    {
+      "id": "C5",
+      "claim": "Gender match and probability of cutting off the leader, Model 2",
+      "exhibit": "Table 1, Model 2",
+      "page": null,
+      "quantity": "Gender-match coefficient",
+      "reported": "−0.049"
+    }
+  ],
+  "notes": "C1 covers sample construction from archived raw HTML. C2–C5 cover regressions using the deposited processed main-analysis data."
+}

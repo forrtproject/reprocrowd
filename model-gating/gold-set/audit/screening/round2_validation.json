@@ -1,0 +1,5 @@
+{
+  "checks": "PASS: 111 unique rows; all 90 original IDs retained; unique nonblank DOIs; round labels and evidence URLs valid; 49 eligible; no new success rows; settled exclusions retained.",
+  "candidates_sha256": "7001528b9345f830046f43cc2cc3d99433db0048b9be7096fee57230438d4c31",
+  "notes_sha256": "83e301b9feedc97ace5366bb2a05fd3398ab131551c27079390d14dd965bc1b5"
+}

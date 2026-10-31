@@ -1,0 +1,63 @@
+{
+  "gold_id": "G-10",
+  "cand_id": "I4R-mgy45",
+  "doi": "10.1177/09567976241267854",
+  "title": "Children Sustain Cooperation in a Threshold Public-Goods Game Even When Seeing Others’ Outcomes",
+  "stratum_drawn": "computationally reproducible",
+  "paper_url": "https://doi.org/10.1177/09567976241267854",
+  "package": {
+    "url": "https://osf.io/xzfce/",
+    "version_pin": "WaterGame_SUPPLEMENT_Materials and Methods.pdf: OSF file 662faa52f49cdf4b8dd25588 version 2, SHA-256 41638f6d27b7994d5d02b58f42a4c1aaa04d727299ee14f821465ee53625177f; WaterGame_RcodeResults_V2.pdf: OSF file 662fcb0d80d25c3b9af9194f version 1, SHA-256 58c11bb40f9588645954a3eae586f26bcdd26751ba623b5ea2a336d4cf44d289",
+    "language": "R",
+    "code_format": "embedded"
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/dc6bm/",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Condition-by-round effect on reaching the threshold",
+      "exhibit": "Results, Reaching the threshold",
+      "page": 1099,
+      "quantity": "Likelihood-ratio chi-squared",
+      "reported": "10.71"
+    },
+    {
+      "id": "C2",
+      "claim": "Condition effect on social-comparison utterances",
+      "exhibit": "Results, Social comparisons",
+      "page": 1102,
+      "quantity": "Likelihood-ratio chi-squared",
+      "reported": "18.91"
+    },
+    {
+      "id": "C3",
+      "claim": "Precision of the condition effect on social-comparison utterances",
+      "exhibit": "Results, Social comparisons",
+      "page": 1102,
+      "quantity": "Standard error",
+      "reported": "0.06"
+    },
+    {
+      "id": "C4",
+      "claim": "Full-model test for references to giving water",
+      "exhibit": "Results, Verbal coordination; Figure 5",
+      "page": 1102,
+      "quantity": "Likelihood-ratio chi-squared",
+      "reported": "2,082.76"
+    },
+    {
+      "id": "C5",
+      "claim": "Condition-by-location-by-subcategory interaction for giving-water utterances",
+      "exhibit": "Results, Verbal coordination; Figure 5",
+      "page": 1102,
+      "quantity": "Likelihood-ratio chi-squared",
+      "reported": "8.00"
+    }
+  ],
+  "notes": "R code is embedded in the deposited WaterGame_RcodeResults_V2.pdf. Scope begins with the supplied coded utterance data."
+}

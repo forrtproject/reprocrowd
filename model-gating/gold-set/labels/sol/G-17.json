@@ -1,0 +1,87 @@
+{
+  "gold_id": "G-17",
+  "expected_validation_status": "computational issues",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.91,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "Secondary predicted prevalence differs under the original analysis.",
+      "evidence": "https://osf.io/download/vrbtz/ — §3 comparison table, p. 7: “Mnatural = 0.91”.",
+      "rationale": "The source’s reproduction comparison gives this predicted mean from the deposited workflow, differing from the main-text value. Later non-phylogenetic specifications and alternative social-complexity measures are excluded.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/vrbtz/ — §3 comparison table, p. 7: “Mnatural = 0.91”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C2",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.44,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "Secondary predicted prevalence differs under the original analysis.",
+      "evidence": "https://osf.io/download/vrbtz/ — §3 comparison table, p. 7: “Msocial = 0.44”.",
+      "rationale": "The source’s reproduction comparison gives this predicted mean from the deposited workflow, differing from the main-text value. Later non-phylogenetic specifications and alternative social-complexity measures are excluded.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/vrbtz/ — §3 comparison table, p. 7: “Msocial = 0.44”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C3",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.88,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "Secondary predicted prevalence differs under the original analysis.",
+      "evidence": "https://osf.io/download/vrbtz/ — §3 comparison table, p. 7: “Mnatural = 0.88”.",
+      "rationale": "The source’s reproduction comparison gives this predicted mean from the deposited workflow, differing from the main-text value. Later non-phylogenetic specifications and alternative social-complexity measures are excluded.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/vrbtz/ — §3 comparison table, p. 7: “Mnatural = 0.88”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C4",
+      "expected_status": "discrepant",
+      "reference_recomputed": 0.68,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": "P2",
+      "cause": "Secondary predicted prevalence differs under the original analysis.",
+      "evidence": "https://osf.io/download/vrbtz/ — §3 comparison table, p. 7: “Msocial = 0.68”.",
+      "rationale": "The source’s reproduction comparison gives this predicted mean from the deposited workflow, differing from the main-text value. Later non-phylogenetic specifications and alternative social-complexity measures are excluded.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/vrbtz/ — §3 comparison table, p. 7: “Msocial = 0.68”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": "10.20",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/vrbtz/ — §3 comparison table, Prevalence row: reproduced checkmark.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/vrbtz/ p.7, Table 4: 'Paired t-test: t(104) = 10.20, P < 0.001, Mean difference= 0.32, 95% CIs [0.26, 0.38]' ✓; Appendix Table 5: 'Natural vs. social phenomena 0.32 10.20'",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C6",
+      "expected_status": "match",
+      "reference_recomputed": "0.174",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/vrbtz/ — §3 comparison table and Appendix Table 7: reproduced checkmark.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/vrbtz/ p.8, Table 4: 'Social complexity → social phenomena: b = 0.17 ...' ✓ 'Rounding error in upper-bound of reported CIs'; Appendix Table 7: 'Social complexity 0.174 0.066 0.010'",
+      "reference_scope": "authors_workflow"
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "The source’s reproduced confidence intervals are [0.82,1.00], [0.32,0.55], [0.73,1.02] and [0.52,0.84] for C1–C4, respectively. These support the numerical differences but are not added as extra gold claims."
+}

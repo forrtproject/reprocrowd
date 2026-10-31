@@ -1,0 +1,30 @@
+[
+  {
+    "path": "Study 2/s2_analysis.R",
+    "url": "https://osf.io/download/mfvzc/?revision=6",
+    "version": "6",
+    "sha256": "ecedfe3161827b762c787a4e6b066e67d64eda8c348ff2672d6a00f307214f0d",
+    "size": 14571
+  },
+  {
+    "path": "Study 1/s1_analysis.R",
+    "url": "https://osf.io/download/b6ewx/?revision=5",
+    "version": "5",
+    "sha256": "e51b140bc4e399faf4823f665f8408147e6d01aab6528b3bdfd1a196b53de79b",
+    "size": 8524
+  },
+  {
+    "path": "Study 1/s1_data.csv",
+    "url": "https://osf.io/download/36tbc/?revision=3",
+    "version": "3",
+    "sha256": "3b3be5118deb2bebd2f36ad5d5fb49a9fa3cb0561402ad6061682ac290d28ecb",
+    "size": 687231
+  },
+  {
+    "path": "Study 2/s2_data_actions.csv",
+    "url": "https://osf.io/download/crwsk/?revision=1",
+    "version": "1",
+    "sha256": "89e1deb53407bd4b6aebc27c51e04c9b8627e8ec7203147410addd017103bd48",
+    "size": 126445
+  }
+]

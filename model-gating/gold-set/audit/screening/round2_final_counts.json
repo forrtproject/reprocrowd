@@ -1,0 +1,28 @@
+{
+  "total": 111,
+  "eligible": 49,
+  "excluded": 62,
+  "new_rows": 21,
+  "new_eligible_rows": 6,
+  "round2_eligibility_gains": [
+    "I4R-9c8p6",
+    "I4R-82c6v",
+    "I4R-axj5y",
+    "I4R-cyb24",
+    "I4R-u6gea",
+    "RB-111",
+    "CC-2023-004"
+  ],
+  "eligible_by_stratum": {
+    "computationally reproducible": 26,
+    "ambiguous": 8,
+    "computational issues": 12,
+    "technical failure": 3
+  },
+  "eligible_by_source": {
+    "I4R": 37,
+    "REPRO-Bench": 10,
+    "SCORE": 1,
+    "CODECHECK": 1
+  }
+}

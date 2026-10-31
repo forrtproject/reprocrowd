@@ -1,0 +1,63 @@
+{
+  "gold_id": "G-16",
+  "cand_id": "I4R-axj5y",
+  "doi": "10.1038/s41562-023-01810-7",
+  "title": "Battling the coronavirus ‘infodemic’ among social media users in Kenya and Nigeria",
+  "stratum_drawn": "computational issues",
+  "paper_url": "https://doi.org/10.1038/s41562-023-01810-7",
+  "package": {
+    "url": "https://github.com/gsbDBI/infodemic-replication/tree/b675f90f133882f8e5aa6b8fc01f9e07a05485bf",
+    "version_pin": "Git commit b675f90f133882f8e5aa6b8fc01f9e07a05485bf",
+    "language": "R; Python",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/shk6u/",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Men versus women in false-sharing intentions",
+      "exhibit": "Results, individual characteristics; Table 1",
+      "page": null,
+      "quantity": "Difference in percentage points",
+      "reported": "−8.0"
+    },
+    {
+      "id": "C2",
+      "claim": "Low digital literacy and false-sharing intentions",
+      "exhibit": "Results, individual characteristics; Table 1",
+      "page": null,
+      "quantity": "Difference in percentage points",
+      "reported": "10.1"
+    },
+    {
+      "id": "C3",
+      "claim": "Facebook-tips assignment group: restricted policy contrast",
+      "exhibit": "Results, restricted targeted policy; Table 3",
+      "page": null,
+      "quantity": "Difference in percentage points",
+      "reported": "6.5"
+    },
+    {
+      "id": "C4",
+      "claim": "Accuracy-nudge assignment group: restricted policy contrast",
+      "exhibit": "Results, restricted targeted policy; Table 3",
+      "page": null,
+      "quantity": "Difference in percentage points",
+      "reported": "−2.1"
+    },
+    {
+      "id": "C5",
+      "claim": "Accuracy nudge relative to control on misinformation sharing",
+      "exhibit": "Abstract; Results",
+      "page": null,
+      "quantity": "Difference in percentage points",
+      "reported": "−2.3"
+    }
+  ],
+  "notes": "Scope is the R analysis stage using the contextual probabilities supplied at the pinned commit."
+}

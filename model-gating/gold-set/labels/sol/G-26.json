@@ -1,0 +1,146 @@
+{
+  "gold_id": "G-26",
+  "expected_validation_status": "computationally reproducible",
+  "acceptable_alternatives": [
+    "computational issues"
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "match",
+      "reference_recomputed": 11016,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "reruns/G-26.json and reruns/G-26.log, C1; reproduction recipe reruns/G-26.sh.",
+      "rationale": "The raw-cleaning agent run yields 11,016 and regenerates the deposited CSV identically after CRLF/LF normalization. The original cleaning script line 233 names lmullen-genderdata-df16017 in a commented source path, so installing that dependency at the identified commit is intended-environment setup under R4, not a fitted-data or analytical repair. not_checkable is accepted only for the stricter package-contained-dependency boundary. The report's version-dependent 11,018 remains diagnostic; its attribution to R/gender version is not confirmed by this run.",
+      "acceptable_statuses": [
+        "match",
+        "not_checkable"
+      ],
+      "diagnostic_results": [
+        {
+          "value": 11018,
+          "provenance": "source_report",
+          "evidence": "https://www.econstor.eu/bitstream/10419/306278/1/I4R-DP151rev.pdf Section 2, p.6: 'a minor coding error in the data cleaning script resulted in the inability to extract data from the previously scraped HTML files' ... 'The discrepancies can be attributed to the differing results obtained when the \"gender\" package ... is used with different versions of R ... This results in 11,018 observations for the main data set employed in the analysis, in comparison to 11,016'; reruns/G-26.json records that 11,018 did not recur with gender 0.6.0 / genderdata df16017 under R 4.6.1.",
+          "scope": "Re-cleaned/version-dependent sample",
+          "is_scoring_reference": false
+        }
+      ],
+      "reference_provenance": "agent_rerun",
+      "reference_evidence": "reruns/G-26.json and reruns/G-26.log, C1; reproduction recipe reruns/G-26.sh.",
+      "reference_scope": "Raw pinned episode HTML -> shipped cleaning with lossless paths/name aliases -> shipped analysis; gender 0.6.0, genderdata df16017149a8adb9a75a2dcf734007cab12dd5da named by authors' dependency-path comment."
+    },
+    {
+      "id": "C2",
+      "expected_status": "match",
+      "reference_recomputed": 0.051068341927935,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "reruns/G-26.json and reruns/G-26.log, C2; reproduction recipe reruns/G-26.sh.",
+      "rationale": "The shipped R model estimates this coefficient before the table-formatting failure, and it recurs at printed precision on both deposited and regenerated data. The source report's Stata corroboration remains a non-scoring diagnostic; the R-execution evidence removes the previous not_checkable alternative. reg_perlead_1 (felm, Table 1 Model 1), Male coefficient, N = 11,016, deposited Data_cleaned.csv. Identical to 15 digits on the regenerated data. Extracted from the fitted model object: the script stops at the following stargazer() call (see notes).",
+      "diagnostic_results": [
+        {
+          "value": 0.051,
+          "provenance": "source_report",
+          "evidence": "https://www.econstor.eu/bitstream/10419/306278/1/I4R-DP151rev.pdf Appendix D, Table A10 (Original vs Ind. Clustering vs Robust): 'We run the same regressions with the original data provided in the .csv'; Male Model 1 0.051 / 0.051 / 0.051",
+          "scope": "Stata reimplementation on deposited CSV; not an executed shipped-R reference",
+          "is_scoring_reference": false
+        }
+      ],
+      "acceptable_statuses": [
+        "match"
+      ],
+      "reference_provenance": "agent_rerun",
+      "reference_evidence": "reruns/G-26.json and reruns/G-26.log, C2; reproduction recipe reruns/G-26.sh.",
+      "reference_scope": "Shipped R felm models on pinned deposited Data_cleaned.csv, with a lossless working-directory edit; independently equal to 15 digits on regenerated data; values extracted before the later stargazer error."
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": -0.0446586950649433,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "reruns/G-26.json and reruns/G-26.log, C3; reproduction recipe reruns/G-26.sh.",
+      "rationale": "The shipped R model estimates this coefficient before the table-formatting failure, and it recurs at printed precision on both deposited and regenerated data. The source report's Stata corroboration remains a non-scoring diagnostic; the R-execution evidence removes the previous not_checkable alternative. reg_perlead_1, Same_gender_perceivedlead (gender match) coefficient. Identical on regenerated data.",
+      "diagnostic_results": [
+        {
+          "value": -0.045,
+          "provenance": "source_report",
+          "evidence": "https://www.econstor.eu/bitstream/10419/306278/1/I4R-DP151rev.pdf Appendix D, Table A10: Gender match Model 1 Original -0.045*** / Ind. Clustering -0.045*** / Robust -0.045***",
+          "scope": "Stata reimplementation on deposited CSV; not an executed shipped-R reference",
+          "is_scoring_reference": false
+        }
+      ],
+      "acceptable_statuses": [
+        "match"
+      ],
+      "reference_provenance": "agent_rerun",
+      "reference_evidence": "reruns/G-26.json and reruns/G-26.log, C3; reproduction recipe reruns/G-26.sh.",
+      "reference_scope": "Shipped R felm models on pinned deposited Data_cleaned.csv, with a lossless working-directory edit; independently equal to 15 digits on regenerated data; values extracted before the later stargazer error."
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": 0.0511822718637803,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "reruns/G-26.json and reruns/G-26.log, C4; reproduction recipe reruns/G-26.sh.",
+      "rationale": "The shipped R model estimates this coefficient before the table-formatting failure, and it recurs at printed precision on both deposited and regenerated data. The source report's Stata corroboration remains a non-scoring diagnostic; the R-execution evidence removes the previous not_checkable alternative. reg_perlead_2 (felm with Bidding_round fixed effects, Table 1 Model 2), Male coefficient, N = 11,016. Identical on regenerated data.",
+      "diagnostic_results": [
+        {
+          "value": 0.051,
+          "provenance": "source_report",
+          "evidence": "https://www.econstor.eu/bitstream/10419/306278/1/I4R-DP151rev.pdf Appendix D, Table A10: Male Model 2 Original 0.051*** / Ind. Clustering 0.051*** / Robust 0.051***",
+          "scope": "Stata reimplementation on deposited CSV; not an executed shipped-R reference",
+          "is_scoring_reference": false
+        }
+      ],
+      "acceptable_statuses": [
+        "match"
+      ],
+      "reference_provenance": "agent_rerun",
+      "reference_evidence": "reruns/G-26.json and reruns/G-26.log, C4; reproduction recipe reruns/G-26.sh.",
+      "reference_scope": "Shipped R felm models on pinned deposited Data_cleaned.csv, with a lossless working-directory edit; independently equal to 15 digits on regenerated data; values extracted before the later stargazer error."
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": -0.0490539101789201,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "reruns/G-26.json and reruns/G-26.log, C5; reproduction recipe reruns/G-26.sh.",
+      "rationale": "The shipped R model estimates this coefficient before the table-formatting failure, and it recurs at printed precision on both deposited and regenerated data. The source report's Stata corroboration remains a non-scoring diagnostic; the R-execution evidence removes the previous not_checkable alternative. reg_perlead_2, gender-match coefficient. Identical on regenerated data.",
+      "diagnostic_results": [
+        {
+          "value": -0.049,
+          "provenance": "source_report",
+          "evidence": "https://www.econstor.eu/bitstream/10419/306278/1/I4R-DP151rev.pdf Appendix D, Table A10: Gender match Model 2 Original -0.049*** / Ind. Clustering -0.049*** / Robust -0.049***",
+          "scope": "Stata reimplementation on deposited CSV; not an executed shipped-R reference",
+          "is_scoring_reference": false
+        }
+      ],
+      "acceptable_statuses": [
+        "match"
+      ],
+      "reference_provenance": "agent_rerun",
+      "reference_evidence": "reruns/G-26.json and reruns/G-26.log, C5; reproduction recipe reruns/G-26.sh.",
+      "reference_scope": "Shipped R felm models on pinned deposited Data_cleaned.csv, with a lossless working-directory edit; independently equal to 15 digits on regenerated data; values extracted before the later stargazer error."
+    }
+  ],
+  "label_confidence": "medium",
+  "notes": "One Claude agent raw-cleaning execution (not a human rerun) confirms C1-C5. Sol checked the dependency-path comment in the pinned cleaning script, verified the source/data files against the saved pinned manifest, and independently confirmed that regenerated versus deposited Data_cleaned.csv differs only in line endings. Installing genderdata at the authors' named df16017 commit counts as environment setup. The report's 11,018 is retained only as an unconfirmed environment-dependent diagnostic, not an R-version effect established here. Paper status remains computationally reproducible for these five claims; computational issues remains accepted for the partial output blocker: stargazer 5.2.3 stops after all Table 1 models are fitted. Later script sections were not executed. C1 retains the strict external-dependency not_checkable boundary; C2-C5 do not.",
+  "requires_human_rerun": false,
+  "corrections": [
+    {
+      "version": "1.1",
+      "change": "C1 becomes match (not_checkable accepted); fill C1-C5 agent_rerun references, remove C2-C5 not_checkable alternatives, raise confidence to medium and clear human-rerun requirement.",
+      "reason": "Pinned raw cleaning with lossless path/name fixes and the dependency commit identified in the original code gives 11,016; shipped R estimates reproduce all four coefficients before the table-formatting error.",
+      "evidence": "reruns/G-26.json; reruns/G-26.log; reruns/G-26.sh; pinned Cleaning scraped data.R line 233; Sol CRLF-normalized CSV comparison 2026-10-30"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+ "gold_id": "G-10",
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "2 dp as printed",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/dc6bm/ p. 3: 'we were able to completely reproduce all of KSHW's results after adapting the pdf containing R code in their replication package.' Corroboration only (authors' own rendered output, not a rerun): shipped WaterGame_RcodeResults_V2.pdf (OSF file 662fcb0d80d25c3b9af9194f) Table 6, condition:round LRT 10.708, Pr(Chi) 0.001",
+   "rationale": "Report states complete reproduction but gives no number for this test; the shipped rendered output matches the printed 10.71.",
+   "reported_check": "confirmed in paper (verified PDF of 10.1177/09567976241267854): 'significant Condition × Round interaction, Estimate ( Est ) = 0.43, SE = 0.14 , χ2 (1) = 10.71'"
+  },
+  {
+   "id": "C2",
+   "expected_status": "match",
+   "reference_recomputed": 18.905,
+   "tolerance": "rounding to 2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/dc6bm/ p. 2: 'Est = −0.243, SE = 0.056, χ2 (1) = 18.905, p < 0.001' with footnote 1 'Original reported to 2 d.p., this output is from the original R code modified to report 3 d.p.'",
+   "rationale": "18.905 rounds to the printed 18.91.",
+   "reported_check": "confirmed in paper (verified PDF of 10.1177/09567976241267854): 'Est = 0.24 , SE = 0.06 , χ2 (1) = 18.91, p < .001'"
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": 0.056,
+   "tolerance": "rounding to 2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/dc6bm/ p. 2: 'Est = −0.243, SE = 0.056, χ2 (1) = 18.905' (footnote 1: from the original R code modified to report 3 d.p.)",
+   "rationale": "0.056 rounds to the printed 0.06.",
+   "reported_check": "confirmed in paper (verified PDF of 10.1177/09567976241267854): 'SE = 0.06 , χ2 (1) = 18.91'"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "2 dp as printed",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/dc6bm/ p. 3: 'we were able to completely reproduce all of KSHW's results'. Corroboration only: shipped WaterGame_RcodeResults_V2.pdf (OSF file 662fcb0d80d25c3b9af9194f) Table 39, GiveModelFull vs Null Chisq 2082.757, Df 13",
+   "rationale": "Report states complete reproduction but gives no number for this test; shipped output matches the printed 2,082.76.",
+   "reported_check": "confirmed in paper (verified PDF of 10.1177/09567976241267854): 'versus null: χ2 (13) = 2, 082.76, p < .001'"
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": null,
+   "tolerance": "2 dp as printed",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/dc6bm/ p. 3: 'we were able to completely reproduce all of KSHW's results'. Corroboration only: shipped WaterGame_RcodeResults_V2.pdf (OSF file 662fcb0d80d25c3b9af9194f) Table 42, location:condition:sub_category LRT 7.995, Pr(Chi) 0.018",
+   "rationale": "Report states complete reproduction but gives no number for this test; shipped output matches the printed 8.00.",
+   "reported_check": "confirmed in paper (verified PDF of 10.1177/09567976241267854): 'three-way interaction of Location × Condition × Subcategory, χ2 (2) = 8.00, p = .018'"
+  }
+ ],
+ "label_confidence": "medium",
+ "notes": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "Do not use the Stata values in the report's Tables 2-4 (e.g. 18.719, 19.014, 10.793) as recomputed references: they are Wald joint tests on marginal effects from the replicators' independent Stata reproduction and robustness checks, not the paper's LR tests. Code ships only inside a PDF (code_format 'embedded'); the replicators transcribed it ('the conversion is a substantial amount of work') and fixed one omission on PDF p. 36 (rounds 7 and 8 need adding) that 'does not appear to affect any results' (P3). Their transcribed code is at https://osf.io/4zhuq. Report rates the package as only partially providing raw data and cleaning code (conversation transcripts on request); claims begin from the coded utterance data, so this is in scope. For C1, C4 and C5 the label relies on the report's blanket statement plus the authors' rendered output, hence medium confidence; the paper sign convention for C2 (Est = 0.24) differs from the report's −0.243 (reference level), which does not affect C2/C3. Robustness findings (Result 1 sensitive) ignored."
+}

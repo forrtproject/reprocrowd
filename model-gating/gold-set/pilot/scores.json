@@ -1,0 +1,423 @@
+{
+ "sol": {
+  "metrics": {
+   "paper status correct": {
+    "num": 1,
+    "den": 3,
+    "ci95": [
+     0.0,
+     1.0
+    ]
+   },
+   "specificity (gold match/close not flagged discrepant)": {
+    "num": 10,
+    "den": 10,
+    "ci95": [
+     1.0,
+     1.0
+    ]
+   },
+   "claim status correct (incl. accepted alternatives)": {
+    "num": 11,
+    "den": 17,
+    "ci95": [
+     0.0,
+     1.0
+    ]
+   },
+   "gold claims missed by the certificate": {
+    "num": 5,
+    "den": 17,
+    "ci95": [
+     0.0,
+     1.0
+    ]
+   },
+   "sensitivity P1+P2 (flagged discrepant)": {
+    "num": 2,
+    "den": 4,
+    "ci95": [
+     0.0,
+     1.0
+    ]
+   },
+   "abstention (gold not_checkable reported not_checkable)": {
+    "num": 0,
+    "den": 3,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "hard_gate_violations": [],
+  "papers": [
+   {
+    "paper_status": "technical failure",
+    "paper_correct": false,
+    "schema_errors": [],
+    "claims": [
+     {
+      "id": "C1",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "correct": true
+     },
+     {
+      "id": "C2",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "correct": true
+     },
+     {
+      "id": "C3",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "correct": true
+     },
+     {
+      "id": "C4",
+      "gold": "close",
+      "severity": null,
+      "model": "close",
+      "correct": true
+     },
+     {
+      "id": "C5",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "correct": true
+     },
+     {
+      "id": "C6",
+      "gold": "discrepant",
+      "severity": "P2",
+      "model": "discrepant",
+      "correct": true
+     },
+     {
+      "id": "C7",
+      "gold": "discrepant",
+      "severity": "P2",
+      "model": "discrepant",
+      "correct": true
+     }
+    ],
+    "hard_gate_violations": [],
+    "target": "G-08"
+   },
+   {
+    "paper_status": "computational issues",
+    "paper_correct": true,
+    "schema_errors": [],
+    "claims": [
+     {
+      "id": "C1",
+      "gold": "discrepant",
+      "severity": "P2",
+      "model": "close",
+      "correct": false
+     },
+     {
+      "id": "C2",
+      "gold": "match",
+      "severity": null,
+      "model": "close",
+      "correct": true
+     },
+     {
+      "id": "C3",
+      "gold": "match",
+      "severity": null,
+      "model": "close",
+      "correct": true
+     },
+     {
+      "id": "C4",
+      "gold": "match",
+      "severity": null,
+      "model": "close",
+      "correct": true
+     },
+     {
+      "id": "C5",
+      "gold": "match",
+      "severity": null,
+      "model": "close",
+      "correct": true
+     }
+    ],
+    "hard_gate_violations": [],
+    "target": "G-21"
+   },
+   {
+    "paper_status": "PartiallySupported",
+    "paper_correct": false,
+    "schema_errors": [
+     "(root): 'schema_version' is a required property",
+     "(root): 'certification_id' is a required property",
+     "(root): 'procedure' is a required property",
+     "(root): 'repro_standard_version' is a required property",
+     "(root): 'engine' is a required property",
+     "(root): 'model' is a required property",
+     "(root): 'date' is a required property",
+     "(root): 'findings' is a required property",
+     "(root): 'ai_generated' is a required property",
+     "(root): 'github_url' is a required property"
+    ],
+    "claims": [
+     {
+      "id": "C1",
+      "gold": "not_checkable",
+      "severity": "P0",
+      "model": "missed",
+      "correct": false
+     },
+     {
+      "id": "C2",
+      "gold": "not_checkable",
+      "severity": "P0",
+      "model": "missed",
+      "correct": false
+     },
+     {
+      "id": "C3",
+      "gold": "match",
+      "severity": null,
+      "model": "missed",
+      "correct": false
+     },
+     {
+      "id": "C4",
+      "gold": "discrepant",
+      "severity": "P2",
+      "model": "missed",
+      "correct": false
+     },
+     {
+      "id": "C5",
+      "gold": "not_checkable",
+      "severity": "P0",
+      "model": "missed",
+      "correct": false
+     }
+    ],
+    "hard_gate_violations": [],
+    "target": "G-23"
+   }
+  ]
+ },
+ "claude": {
+  "metrics": {
+   "paper status correct": {
+    "num": 3,
+    "den": 3,
+    "ci95": [
+     1.0,
+     1.0
+    ]
+   },
+   "specificity (gold match/close not flagged discrepant)": {
+    "num": 10,
+    "den": 10,
+    "ci95": [
+     1.0,
+     1.0
+    ]
+   },
+   "claim status correct (incl. accepted alternatives)": {
+    "num": 14,
+    "den": 17,
+    "ci95": [
+     0.4,
+     1.0
+    ]
+   },
+   "gold claims missed by the certificate": {
+    "num": 0,
+    "den": 17,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "sensitivity P1+P2 (flagged discrepant)": {
+    "num": 4,
+    "den": 4,
+    "ci95": [
+     1.0,
+     1.0
+    ]
+   },
+   "abstention (gold not_checkable reported not_checkable)": {
+    "num": 0,
+    "den": 3,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "hard_gate_violations": [
+   "G-23: C1: match/close claimed on a blocked (P0) claim",
+   "G-23: C2: match/close claimed on a blocked (P0) claim",
+   "G-23: C5: match/close claimed on a blocked (P0) claim"
+  ],
+  "papers": [
+   {
+    "paper_status": "computational issues",
+    "paper_correct": true,
+    "schema_errors": [],
+    "claims": [
+     {
+      "id": "C1",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "correct": true
+     },
+     {
+      "id": "C2",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "correct": true
+     },
+     {
+      "id": "C3",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "correct": true
+     },
+     {
+      "id": "C4",
+      "gold": "close",
+      "severity": null,
+      "model": "close",
+      "correct": true
+     },
+     {
+      "id": "C5",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "correct": true
+     },
+     {
+      "id": "C6",
+      "gold": "discrepant",
+      "severity": "P2",
+      "model": "discrepant",
+      "correct": true
+     },
+     {
+      "id": "C7",
+      "gold": "discrepant",
+      "severity": "P2",
+      "model": "discrepant",
+      "correct": true
+     }
+    ],
+    "hard_gate_violations": [],
+    "target": "G-08"
+   },
+   {
+    "paper_status": "computational issues",
+    "paper_correct": true,
+    "schema_errors": [],
+    "claims": [
+     {
+      "id": "C1",
+      "gold": "discrepant",
+      "severity": "P2",
+      "model": "discrepant",
+      "correct": true
+     },
+     {
+      "id": "C2",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "correct": true
+     },
+     {
+      "id": "C3",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "correct": true
+     },
+     {
+      "id": "C4",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "correct": true
+     },
+     {
+      "id": "C5",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "correct": true
+     }
+    ],
+    "hard_gate_violations": [],
+    "target": "G-21"
+   },
+   {
+    "paper_status": "technical failure",
+    "paper_correct": true,
+    "schema_errors": [],
+    "claims": [
+     {
+      "id": "C1",
+      "gold": "not_checkable",
+      "severity": "P0",
+      "model": "match",
+      "correct": false
+     },
+     {
+      "id": "C2",
+      "gold": "not_checkable",
+      "severity": "P0",
+      "model": "match",
+      "correct": false
+     },
+     {
+      "id": "C3",
+      "gold": "match",
+      "severity": null,
+      "model": "match",
+      "correct": true
+     },
+     {
+      "id": "C4",
+      "gold": "discrepant",
+      "severity": "P2",
+      "model": "discrepant",
+      "correct": true
+     },
+     {
+      "id": "C5",
+      "gold": "not_checkable",
+      "severity": "P0",
+      "model": "match",
+      "correct": false
+     }
+    ],
+    "hard_gate_violations": [
+     "C1: match/close claimed on a blocked (P0) claim",
+     "C2: match/close claimed on a blocked (P0) claim",
+     "C5: match/close claimed on a blocked (P0) claim"
+    ],
+    "target": "G-23"
+   }
+  ]
+ }
+}

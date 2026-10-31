@@ -1,0 +1,89 @@
+{
+  "gold_id": "G-11",
+  "expected_validation_status": "computationally reproducible",
+  "acceptable_alternatives": [
+    "computational issues"
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "match",
+      "reference_recomputed": -1.321,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C2",
+      "expected_status": "close",
+      "reference_recomputed": -1.066,
+      "tolerance": "Absolute difference 0.002; relative difference below 1%; retain sign and substantive estimate.",
+      "severity": null,
+      "cause": "Small original-source rerun difference; the report treats the results as reproduced.",
+      "evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+      "rationale": "The source treats the result as reproduced; the stated difference is small and does not establish an original-analysis discrepancy.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": -1.348,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": -0.885,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C5",
+      "expected_status": "close",
+      "reference_recomputed": -0.574,
+      "tolerance": "Absolute difference 0.005; relative difference below 1%; retain sign and substantive estimate.",
+      "severity": null,
+      "cause": "Small original-source rerun difference; the report treats the results as reproduced.",
+      "evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+      "rationale": "The source treats the result as reproduced; the stated difference is small and does not establish an original-analysis discrepancy.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C6",
+      "expected_status": "match",
+      "reference_recomputed": -0.885,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/271676/1/I4R-DP036.pdf — §2 and Table 1, pp. 5–6: “replicate perfectly”.",
+      "reference_scope": "authors_workflow"
+    }
+  ],
+  "label_confidence": "medium",
+  "notes": "The original PDF prints -1.064 and -0.569 in columns 2 and 5, while the source rerun table prints -1.066 and -0.574. These are close rather than exact printed-precision matches. Alternative difference-in-differences estimators are excluded."
+}

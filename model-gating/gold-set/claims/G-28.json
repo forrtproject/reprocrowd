@@ -1,0 +1,75 @@
+{
+  "gold_id": "G-28",
+  "cand_id": "I4R-vdm68",
+  "doi": "10.1038/s41562-023-01791-7",
+  "title": "Effects of calibrated blue–yellow changes in light on the human circadian clock",
+  "stratum_drawn": "ambiguous",
+  "paper_url": "https://doi.org/10.1038/s41562-023-01791-7",
+  "package": {
+    "url": "https://github.com/ChristineBlume/Effects-of-calibrated-blue-yellow-changes-in-light-on-the-human-circadian-clock/",
+    "version_pin": "Git commit e9bc03f89244b7b00e1cd9ec63b3091b09d75018",
+    "language": "R",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/6a83037a1926ed8280bb6617/",
+      "description": "Human computational reproduction report."
+    },
+    {
+      "url": "https://doi.org/10.6084/m9.figshare.23578698",
+      "description": "Original data deposit."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Time-by-condition effect on subjective sleepiness",
+      "exhibit": "Subjective sleepiness (S2); Figure 3d",
+      "page": null,
+      "quantity": "Bayes factor BF10",
+      "reported": "0.27"
+    },
+    {
+      "id": "C2",
+      "claim": "Time-by-condition effect on rank-transformed subjective sleepiness",
+      "exhibit": "Subjective sleepiness (S2); Figure 3d",
+      "page": null,
+      "quantity": "Rank-based Bayes factor BF10",
+      "reported": "0.14"
+    },
+    {
+      "id": "C3",
+      "claim": "Condition effect on circadian melatonin phase shift",
+      "exhibit": "Primary outcome (C1); Figure 3a",
+      "page": null,
+      "quantity": "Bayes factor BF10",
+      "reported": "0.3"
+    },
+    {
+      "id": "C4",
+      "claim": "Condition effect on melatonin suppression during light exposure",
+      "exhibit": "Melatonin secretion (S1)",
+      "page": null,
+      "quantity": "Bayes factor BF10",
+      "reported": "0.09"
+    },
+    {
+      "id": "C5",
+      "claim": "Condition effect on subjective sleepiness",
+      "exhibit": "Subjective sleepiness (S2)",
+      "page": null,
+      "quantity": "Bayes factor BF10",
+      "reported": "0.62"
+    },
+    {
+      "id": "C6",
+      "claim": "Condition effect on visual comfort",
+      "exhibit": "Visual comfort (S4)",
+      "page": null,
+      "quantity": "Bayes factor BF10",
+      "reported": "0.16"
+    }
+  ],
+  "notes": ""
+}

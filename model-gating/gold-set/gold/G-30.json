@@ -1,0 +1,179 @@
+{
+ "gold_id": "G-30",
+ "gold_version": "1.1",
+ "cand_id": "I4R-4wxms",
+ "doi": "10.1038/s41562-023-01769-5",
+ "title": "The motivating effect of monetary over psychological incentives is stronger in WEIRD cultures",
+ "stratum_drawn": "ambiguous",
+ "paper_url": "https://doi.org/10.1038/s41562-023-01769-5",
+ "package": {
+  "url": "https://osf.io/8yu95/",
+  "version_pin": "Study1_OSF_deidentified.Rmd: OSF file 652ee05387852d085ca58f6d version 1, SHA-256 fca2c602a74eb0f8c61f80b928f014bb7dd755c2180e3be1ed9d9b5b5efec190; Study2_OSF_deidentified.Rmd: OSF file 652ee0ff87852d085ca59003 version 1, SHA-256 485b8cc4adc0698e5640721262bc0b172d7c3f5aeb127d6a207c3b011544a80f; Study3_OSF_deidentified.Rmd: OSF file 652ee16013d27b07b994cbbc version 1, SHA-256 f7676361486ba3d6b80a040d091db9f8656364b4321e9285be48370e870512cf; Study4_OSF_deidentified.Rmd: OSF file 652ee1e2164d3207b4a5e176 version 1, SHA-256 a0e091594389c478b0ca6673e90358c74471f1896d9beba6c124e3c15c601207; /Study 2/Study2A_RAW_UK_deidentified.xlsx: OSF file 64b3b20f6f8ad002d5bc2145 version 1, SHA-256 6e09e707d43c9393202e691ce437b3bdaf67adac4214028bd1d8ffc9e1fa68a1",
+  "language": "R",
+  "code_format": "files",
+  "data_files": [
+   {
+    "path": "/Study 2/Study2A_RAW_UK_deidentified.xlsx",
+    "osf_file_id": "64b3b20f6f8ad002d5bc2145",
+    "version": 1,
+    "sha256": "6e09e707d43c9393202e691ce437b3bdaf67adac4214028bd1d8ffc9e1fa68a1",
+    "url": "https://osf.io/download/uhye7/"
+   }
+  ]
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/uvf8k/",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "label_confidence": "medium",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C3",
+   "claim": "Study 2A incentive-by-culture interaction",
+   "exhibit": "Study 2A Results; Figure 2a",
+   "page": null,
+   "quantity": "Regression coefficient",
+   "reported": "38.40",
+   "expected_status": "match",
+   "reference_recomputed": 38.4,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A computational reproducibility, read with Table 2 Original outcome column.",
+   "rationale": "The report explicitly confirms original-workflow reproduction and gives the printed original value in its comparison table. Reference is sourced to that statement, with no claim of an independent original-run log.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A explicitly states that the original analyses, regression models and t tests reproduce. Section 3 Table 2 Original outcome column prints this article value; its recalculated-data column is not used as a direct original-run measurement.",
+   "reference_scope": "Original-workflow recurrence asserted by report; numerical precision from Original outcome column, not a separately printed original-run log",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Regression coefficient reproduced exactly with the shipped Rmd."
+  },
+  {
+   "id": "C4",
+   "claim": "Study 2A incentive-by-culture interaction test",
+   "exhibit": "Study 2A Results; Figure 2a",
+   "page": null,
+   "quantity": "t statistic",
+   "reported": "9.65",
+   "expected_status": "match",
+   "reference_recomputed": 9.65,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A computational reproducibility, read with Table 2 Original outcome column.",
+   "rationale": "The report explicitly confirms original-workflow reproduction and gives the printed original value in its comparison table. Reference is sourced to that statement, with no claim of an independent original-run log.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A explicitly states that the original analyses, regression models and t tests reproduce. Section 3 Table 2 Original outcome column prints this article value; its recalculated-data column is not used as a direct original-run measurement.",
+   "reference_scope": "Original-workflow recurrence asserted by report; numerical precision from Original outcome column, not a separately printed original-run log",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Reproduced exactly."
+  },
+  {
+   "id": "C5",
+   "claim": "Study 2A effect of extra pay on effort in the UK",
+   "exhibit": "Study 2A Results; Figure 2b",
+   "page": null,
+   "quantity": "Percentage increase",
+   "reported": "109.5%",
+   "expected_status": "match",
+   "reference_recomputed": "109.5%",
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A computational reproducibility, read with Table 2 Original outcome column.",
+   "rationale": "The report explicitly confirms original-workflow reproduction and gives the printed original value in its comparison table. Reference is sourced to that statement, with no claim of an independent original-run log.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A explicitly states that the original analyses, regression models and t tests reproduce. Section 3 Table 2 Original outcome column prints this article value; its recalculated-data column is not used as a direct original-run measurement.",
+   "reference_scope": "Original-workflow recurrence asserted by report; numerical precision from Original outcome column, not a separately printed original-run log",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Reproduced exactly (Table 2 is the robustness rerun on recomputed columns, but the computational section states that all analyses were reproducible)."
+  },
+  {
+   "id": "C6",
+   "claim": "Study 2A effect of extra pay on effort in China",
+   "exhibit": "Study 2A Results; Figure 2b",
+   "page": null,
+   "quantity": "Percentage increase",
+   "reported": "19.9%",
+   "expected_status": "match",
+   "reference_recomputed": "19.9%",
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A computational reproducibility, read with Table 2 Original outcome column.",
+   "rationale": "The report explicitly confirms original-workflow reproduction and gives the printed original value in its comparison table. Reference is sourced to that statement, with no claim of an independent original-run log.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A explicitly states that the original analyses, regression models and t tests reproduce. Section 3 Table 2 Original outcome column prints this article value; its recalculated-data column is not used as a direct original-run measurement.",
+   "reference_scope": "Original-workflow recurrence asserted by report; numerical precision from Original outcome column, not a separately printed original-run log",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Reproduced exactly."
+  },
+  {
+   "id": "C7",
+   "claim": "Study 2A incentive-by-culture interaction for monetary versus flat-fee incentives",
+   "exhibit": "Study 2A Results; Extended Data Figure 2a; Supplementary Table 7",
+   "page": null,
+   "quantity": "Regression coefficient for flat-fee incentive × UK",
+   "reported": "−44.88",
+   "expected_status": "match",
+   "reference_recomputed": -44.88,
+   "tolerance": "Equality at two decimal places as printed in the original article.",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A states original regression models and t tests exactly reproduce; Table 2 Analysis 3, flat-fee comparison; article Supplementary Table 7.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/uvf8k/ — section 2 original-workflow reproduction statement and Table 2 Analysis 3, flat-fee comparison; article Supplementary Table 7 Original outcome column. The later recomputed-input analysis is corroboration, not treated as an original-code log.",
+   "reference_scope": "Original-workflow recurrence asserted by report; printed original value independently checked in article",
+   "rationale": "A printed original numerical test with explicit report-level support for recurrence; original and recalculated-data evidence kept distinct.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "The OLS interaction coefficient (deterministic) recurred exactly. Table 2 is the rerun on recomputed response counts (one participant differs by one response), and the computational section states that the regression models reproduced exactly with the shipped Rmd."
+  },
+  {
+   "id": "C8",
+   "claim": "Study 2A UK cost-effectiveness comparison of monetary and norm incentives",
+   "exhibit": "Study 2A Results; Extended Data Figure 2c",
+   "page": null,
+   "quantity": "Two-sided Welch t statistic (df = 574.32)",
+   "reported": "2.70",
+   "expected_status": "match",
+   "reference_recomputed": 2.7,
+   "tolerance": "Equality at two decimal places as printed in the original article.",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/uvf8k/ — section 2 Study 2A states original regression models and t tests exactly reproduce; Table 2 Analysis 4, UK monetary versus norm comparison.",
+   "reference_provenance": "source_report",
+   "reference_evidence": "https://osf.io/download/uvf8k/ — section 2 original-workflow reproduction statement and Table 2 Analysis 4, UK monetary versus norm comparison Original outcome column. The later recomputed-input analysis is corroboration, not treated as an original-code log.",
+   "reference_scope": "Original-workflow recurrence asserted by report; printed original value independently checked in article",
+   "rationale": "A printed original numerical test with explicit report-level support for recurrence; original and recalculated-data evidence kept distinct.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "The Welch t-test on EffortPerDollar (compare_means, method = 't.test' in Study2_OSF_deidentified.Rmd) is deterministic, and the report reproduced the same t, df, p and d."
+  }
+ ],
+ "notes": {
+  "claim_list": "Study 2A scope. C1/C2 (graphical bootstrap intervals without printed numeric endpoints) are retired, not reassigned; replacement claim IDs are C7/C8.",
+  "sol": "Original Study 2A numerical analyses are reported reproduced; unprinted graphical CI endpoints C1/C2 are retired under R6. New C7/C8 use report section 2 plus its explicitly labelled original-outcome cells, not an assertion that the later reconstructed-input run was the shipped workflow. The report's seven-versus-six exclusion criticism has a denominator mismatch: direct evaluation of the pinned UK data finds 7 duplicate rows removed overall, of which 6 have positive num_total_answers (the other has 0). Supplement p.22 describes 6 exclusions among completers; final UK N is 1067. This does not establish a P2 count discrepancy or P3 typo. Audit: model-gating/gold-set/audit/check_g30.R, check_g30_completed.log. C3-C8 references are report-supported, not a new full Study 2A rerun.",
+  "claude": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "Claim list revised: C1/C2 (graphical bootstrap CIs with no printed numbers) were retired, and C7/C8 added. All remaining claims are deterministic (OLS, Welch t, percentage differences) and the report reproduced them exactly ('All analyses were reproducible'). The shipped Study 2 Rmd (SHA matches the pin) has no set.seed for its bootstraps, but that affects only the figure error bars, which are no longer claims. The report's Table 2 is a robustness rerun on recomputed response counts whose values equal the originals; the computational-reproducibility prose is the primary evidence."
+ }
+}

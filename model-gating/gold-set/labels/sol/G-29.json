@@ -1,0 +1,99 @@
+{
+  "gold_id": "G-29",
+  "expected_validation_status": "computational issues",
+  "acceptable_alternatives": [
+    "computationally reproducible"
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": null,
+      "cause": "A seed is set once at the top; bootstrap CI endpoints remain dependent on execution/RNG state.",
+      "evidence": "https://osf.io/download/af2ks/ — §Computational Reproducibility, pp. 5–6 and response-time subsection: “±0.2”.",
+      "rationale": "The report finds identical point estimates and CI deviations up to 0.2 percentage points despite set.seed(999). Exact endpoint targets remain unresolved; not_checkable is primary and close is accepted for the report's near-reproduction interpretation.",
+      "acceptable_statuses": [
+        "not_checkable",
+        "close"
+      ]
+    },
+    {
+      "id": "C2",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": null,
+      "cause": "A seed is set once at the top; bootstrap CI endpoints remain dependent on execution/RNG state.",
+      "evidence": "https://osf.io/download/af2ks/ — §Computational Reproducibility, pp. 5–6 and response-time subsection: “±0.2”.",
+      "rationale": "The report finds identical point estimates and CI deviations up to 0.2 percentage points despite set.seed(999). Exact endpoint targets remain unresolved; not_checkable is primary and close is accepted for the report's near-reproduction interpretation.",
+      "acceptable_statuses": [
+        "not_checkable",
+        "close"
+      ]
+    },
+    {
+      "id": "C3",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": null,
+      "cause": "A seed is set once at the top; bootstrap CI endpoints remain dependent on execution/RNG state.",
+      "evidence": "https://osf.io/download/af2ks/ — §Computational Reproducibility, pp. 5–6 and response-time subsection: “±0.2”.",
+      "rationale": "The report finds identical point estimates and CI deviations up to 0.2 percentage points despite set.seed(999). Exact endpoint targets remain unresolved; not_checkable is primary and close is accepted for the report's near-reproduction interpretation.",
+      "acceptable_statuses": [
+        "not_checkable",
+        "close"
+      ]
+    },
+    {
+      "id": "C4",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": null,
+      "cause": "The rule for identifying the critical sentence and timing interval is unstated.",
+      "evidence": "https://osf.io/download/af2ks/ — §Computational Reproducibility, pp. 5–6 and response-time subsection: “±0.2”.",
+      "rationale": "The source could not identify the intended critical-sentence observations, so it could not verify the printed median; no reconstruction is adopted as ground truth."
+    },
+    {
+      "id": "C5",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": null,
+      "cause": "The rule for identifying the critical sentence and timing interval is unstated.",
+      "evidence": "https://osf.io/download/af2ks/ — §Computational Reproducibility, pp. 5–6 and response-time subsection: “±0.2”.",
+      "rationale": "The source could not identify the intended critical-sentence observations, so it could not verify the printed median; no reconstruction is adopted as ground truth."
+    },
+    {
+      "id": "C6",
+      "expected_status": "match",
+      "reference_recomputed": 0.16,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/af2ks/ — §Computational Reproducibility, pp. 5–6 and response-time subsection: “±0.2”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/af2ks/ — §Computational Reproducibility, pp. 5–6 and response-time subsection: “±0.2”.",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C7",
+      "expected_status": "match",
+      "reference_recomputed": 0.02,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/af2ks/ — §Computational Reproducibility, pp. 5–6 and response-time subsection: “±0.2”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://osf.io/download/af2ks/ — §Computational Reproducibility, pp. 5–6 and response-time subsection: “±0.2”.",
+      "reference_scope": "authors_workflow"
+    }
+  ],
+  "label_confidence": "medium",
+  "notes": "Paper status is computational issues because the report documents a 0.65 versus 2.4272 chi-squared difference and Study 4 TrialType preprocessing failure; the report's favourable aggregate summary supports the alternative computationally reproducible. C1-C3 retain abstention with close accepted, accounting for seeded but state-dependent bootstrap intervals. C4/C5 are underspecified critical-sentence timings, severity null. C6 is the race-trials analysis across Experiments 1-4. C7 uses the deposited processed-data scope; no regenerated raw-data claim is made."
+}

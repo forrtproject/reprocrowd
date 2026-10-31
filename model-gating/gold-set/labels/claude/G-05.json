@@ -1,0 +1,76 @@
+{
+ "gold_id": "G-05",
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "match",
+   "reference_recomputed": "-0.010",
+   "tolerance": "printed precision (3 dp)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf section 3.1 (report p.6): 'with those materials execute the authors' R code. We obtain the same results as reported in Mangonnet et al. (2022) without any modifications to the code.'; Tables 1-3 (fixest/Stata re-estimations, report p.14-15) also give Coalition Alignment col (1) = -0.010",
+   "rationale": "Original lfe-based R code reproduced Table 1 without modification; alternative software gives the same coefficient.",
+   "reported_check": "confirmed in paper (Table 1 col 1, p.1462: −0.010)"
+  },
+  {
+   "id": "C2",
+   "expected_status": "match",
+   "reference_recomputed": "-0.011",
+   "tolerance": "printed precision (3 dp)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf section 3.1 (report p.6): 'with those materials execute the authors' R code. We obtain the same results as reported in Mangonnet et al. (2022) without any modifications to the code.'; Tables 1-3 (fixest/Stata re-estimations, report p.14-15) also give Coalition Alignment col (2) = -0.011",
+   "rationale": "Original lfe-based R code reproduced Table 1 without modification; alternative software gives the same coefficient.",
+   "reported_check": "confirmed in paper (Table 1 col 2, p.1462: −0.011)"
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": "-0.012",
+   "tolerance": "printed precision (3 dp)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf section 3.1 (report p.6): 'with those materials execute the authors' R code. We obtain the same results as reported in Mangonnet et al. (2022) without any modifications to the code.'; Tables 1-3 (fixest/Stata re-estimations, report p.14-15) also give Coalition Alignment col (3) = -0.012",
+   "rationale": "Original lfe-based R code reproduced Table 1 without modification; alternative software gives the same coefficient.",
+   "reported_check": "confirmed in paper (Table 1 col 3, p.1462: −0.012)"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": "-0.011",
+   "tolerance": "printed precision (3 dp)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf section 3.1 (report p.6): 'with those materials execute the authors' R code. We obtain the same results as reported in Mangonnet et al. (2022) without any modifications to the code.'; Tables 1-3 (fixest/Stata re-estimations, report p.14-15) also give Party Alignment col (4) = -0.011",
+   "rationale": "Original lfe-based R code reproduced Table 1 without modification; alternative software gives the same coefficient.",
+   "reported_check": "confirmed in paper (Table 1 col 4, p.1462: −0.011)"
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": "-0.007",
+   "tolerance": "printed precision (3 dp)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf section 3.1 (report p.6): 'with those materials execute the authors' R code. We obtain the same results as reported in Mangonnet et al. (2022) without any modifications to the code.'; Tables 1-3 (fixest/Stata re-estimations, report p.14-15) also give Party Alignment col (5) = -0.007",
+   "rationale": "Original lfe-based R code reproduced Table 1 without modification; alternative software gives the same coefficient.",
+   "reported_check": "confirmed in paper (Table 1 col 5, p.1462: −0.007)"
+  },
+  {
+   "id": "C6",
+   "expected_status": "match",
+   "reference_recomputed": "-0.011",
+   "tolerance": "printed precision (3 dp)",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf section 3.1 (report p.6): 'with those materials execute the authors' R code. We obtain the same results as reported in Mangonnet et al. (2022) without any modifications to the code.'; Tables 1-3 (fixest/Stata re-estimations, report p.14-15) also give Party Alignment col (6) = -0.011",
+   "rationale": "Original lfe-based R code reproduced Table 1 without modification; alternative software gives the same coefficient.",
+   "reported_check": "confirmed in paper (Table 1 col 6, p.1462: −0.011)"
+  }
+ ],
+ "label_confidence": "high",
+ "notes": "Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "Paper accessed via REPRO-Bench snapshot 53/paper.pdf (minus signs extract as '2.0xx'). Small differences reported by I4R (SEs in cols 5-6: fixest/Stata .011/.009 vs printed .009/.008; adjusted R2 cols 2 and 5: .643/.811 vs printed .644/.812) arise only with alternative software (fixest, Stata reghdfe), not with the authors' lfe code, which reproduced the paper exactly. None of these affect the claimed coefficients. Robustness findings (party alignment sensitive to unit of analysis) are out of scope. The I4R team used the Dataverse deposit (doi:10.7910/DVN/N6LIMH); the version pin is the REPRO-Bench mirror, and I did not verify that the two are identical."
+}

@@ -1,0 +1,59 @@
+{
+  "gold_id": "G-24",
+  "expected_validation_status": "technical failure",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The pinned manuscript/update R Markdown files contain fatal syntax errors.",
+      "evidence": "https://osf.io/download/bk3ag/ — Computational-reproducibility notes, PDF pp. 3–5: “A parenthesis is missing”.",
+      "rationale": "The human report documents manuscript-code parse failures, and the retained static parse audit confirms them at the pinned commit. No repaired numerical output is assigned as an original-code result."
+    },
+    {
+      "id": "C2",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The pinned manuscript/update R Markdown files contain fatal syntax errors.",
+      "evidence": "https://osf.io/download/bk3ag/ — Computational-reproducibility notes, PDF pp. 3–5: “A parenthesis is missing”.",
+      "rationale": "The human report documents manuscript-code parse failures, and the retained static parse audit confirms them at the pinned commit. No repaired numerical output is assigned as an original-code result."
+    },
+    {
+      "id": "C3",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The pinned manuscript/update R Markdown files contain fatal syntax errors.",
+      "evidence": "https://osf.io/download/bk3ag/ — Computational-reproducibility notes, PDF pp. 3–5: “A parenthesis is missing”.",
+      "rationale": "The human report documents manuscript-code parse failures, and the retained static parse audit confirms them at the pinned commit. No repaired numerical output is assigned as an original-code result."
+    },
+    {
+      "id": "C4",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The pinned manuscript/update R Markdown files contain fatal syntax errors.",
+      "evidence": "https://osf.io/download/bk3ag/ — Computational-reproducibility notes, PDF pp. 3–5: “A parenthesis is missing”.",
+      "rationale": "The human report documents manuscript-code parse failures, and the retained static parse audit confirms them at the pinned commit. No repaired numerical output is assigned as an original-code result."
+    },
+    {
+      "id": "C5",
+      "expected_status": "not_checkable",
+      "reference_recomputed": null,
+      "tolerance": "No fixed numerical comparison is justified for the specified original workflow.",
+      "severity": "P0",
+      "cause": "The pinned manuscript/update R Markdown files contain fatal syntax errors.",
+      "evidence": "https://osf.io/download/bk3ag/ — Computational-reproducibility notes, PDF pp. 3–5: “A parenthesis is missing”.",
+      "rationale": "The human report documents manuscript-code parse failures, and the retained static parse audit confirms them at the pinned commit. No repaired numerical output is assigned as an original-code result."
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "Gold is the retained 32cfd57 commit, not later repaired analysis. Both manuscript and update R scripts fail the static parse check. The source spent more than twenty hours repairing/reconstructing material; none of those numbers is treated as shipped-code output."
+}

@@ -1,0 +1,63 @@
+{
+  "gold_id": "G-18",
+  "cand_id": "I4R-82c6v",
+  "doi": "10.1177/09567976251355594",
+  "title": "“Stop the Count!”—How Reporting Partial Election Results Fuels Beliefs in Election Fraud",
+  "stratum_drawn": "computational issues",
+  "paper_url": "https://journals.sagepub.com/doi/pdf/10.1177/09567976251355594",
+  "package": {
+    "url": "https://osf.io/vcb53/",
+    "version_pin": "OSF file 6823545b03c183ef6aeadf6f version 3, 2025 03 CRB Elections Revision All Analyses.Rmd, SHA-256 db0b296a0e1b31b1d278f5648dcb3bdc54343cdf1ebf19b5ac189143c480f4a7; rendered HTML file 6823545b03c183ef6aeadf70 version 3, SHA-256 a2b7131e470fbb14fab2693fb90aecf08356015e30ab61bda00824323628f9ca",
+    "language": "R",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/kqneu/",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Study 5 lead main effect on fraud judgments",
+      "exhibit": "Study 5 Results",
+      "page": 684,
+      "quantity": "Partial eta-squared",
+      "reported": ".01"
+    },
+    {
+      "id": "C2",
+      "claim": "Study 5 candidate main effect on fraud judgments",
+      "exhibit": "Study 5 Results",
+      "page": 684,
+      "quantity": "Partial eta-squared",
+      "reported": "< .01"
+    },
+    {
+      "id": "C3",
+      "claim": "Study 5 lead-by-candidate interaction",
+      "exhibit": "Study 5 Results",
+      "page": 684,
+      "quantity": "F statistic",
+      "reported": "41.57"
+    },
+    {
+      "id": "C4",
+      "claim": "Study 5 late-lead winning-versus-losing candidate contrast",
+      "exhibit": "Study 5 Results",
+      "page": 684,
+      "quantity": "t statistic",
+      "reported": "5.32"
+    },
+    {
+      "id": "C5",
+      "claim": "Study 5 early-lead winning-versus-losing candidate contrast",
+      "exhibit": "Study 5 Results",
+      "page": 684,
+      "quantity": "t statistic",
+      "reported": "−3.73"
+    }
+  ],
+  "notes": ""
+}

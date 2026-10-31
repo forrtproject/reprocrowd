@@ -1,0 +1,196 @@
+{
+ "gold_id": "G-19",
+ "gold_version": "1.1",
+ "cand_id": "I4R-9c8p6",
+ "doi": "10.1177/09567976241251766",
+ "title": "Proenvironmental Behavior Increases Subjective Well-Being: Evidence From an Experience-Sampling Study and a Randomized Experiment",
+ "stratum_drawn": "computational issues",
+ "paper_url": "https://doi.org/10.1177/09567976241251766",
+ "package": {
+  "url": "https://osf.io/hpvsu/files/osfstorage/645e5cac9f8fa621544dae79?revision=6",
+  "version_pin": "OSF s2_analysis.R file 645e5cac9f8fa621544dae79 revision 6 (2024-03-27), SHA-256 ecedfe3161827b762c787a4e6b066e67d64eda8c348ff2672d6a00f307214f0d; /Study 1/s1_analysis.R: OSF file 645e5ca91a368819ec5481e6 version 5, SHA-256 e51b140bc4e399faf4823f665f8408147e6d01aab6528b3bdfd1a196b53de79b; /Study 1/s1_data.csv: OSF file 645e5cb560fc5d18dcca0a9e version 3, SHA-256 3b3be5118deb2bebd2f36ad5d5fb49a9fa3cb0561402ad6061682ac290d28ecb; /Study 2/s2_data_actions.csv: OSF file 659c057d5e925a0bdc45b93e version 1 (2024-01-08), SHA-256 89e1deb53407bd4b6aebc27c51e04c9b8627e8ec7203147410addd017103bd48",
+  "language": "R",
+  "code_format": "files",
+  "data_files": [
+   {
+    "path": "/Study 1/s1_analysis.R",
+    "osf_file_id": "645e5ca91a368819ec5481e6",
+    "version": 5,
+    "sha256": "e51b140bc4e399faf4823f665f8408147e6d01aab6528b3bdfd1a196b53de79b",
+    "url": "https://osf.io/download/b6ewx/"
+   },
+   {
+    "path": "/Study 1/s1_data.csv",
+    "osf_file_id": "645e5cb560fc5d18dcca0a9e",
+    "version": 3,
+    "sha256": "3b3be5118deb2bebd2f36ad5d5fb49a9fa3cb0561402ad6061682ac290d28ecb",
+    "url": "https://osf.io/download/36tbc/"
+   },
+   {
+    "path": "/Study 2/s2_data_actions.csv",
+    "osf_file_id": "659c057d5e925a0bdc45b93e",
+    "version": 1,
+    "sha256": "89e1deb53407bd4b6aebc27c51e04c9b8627e8ec7203147410addd017103bd48",
+    "url": "https://osf.io/download/crwsk/",
+    "date_created": "2024-01-08T14:23:57.287755Z"
+   }
+  ]
+ },
+ "source_evidence": [
+  {
+   "url": "https://osf.io/download/nqx74/",
+   "description": "Human computational reproduction report."
+  }
+ ],
+ "expected_validation_status": "computationally reproducible",
+ "acceptable_alternatives": [
+  "computational issues"
+ ],
+ "label_confidence": "high",
+ "requires_human_rerun": null,
+ "corrections": [],
+ "labelled_by": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "claims": [
+  {
+   "id": "C1",
+   "claim": "Study 2 number of proenvironmental behaviors reported in the PEB condition",
+   "exhibit": "Study 2 Results; Figure 2",
+   "page": null,
+   "quantity": "Mean number of behaviors",
+   "reported": "2.11",
+   "expected_status": "match",
+   "reference_recomputed": 2.110497237569,
+   "tolerance": "Equality at two decimal places as printed in the article.",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/nqx74/ Study 2 and Conclusion state the author fixed the called filename. OSF inventory dates the deposited s2_data_actions.csv to 2024-01-08, before revision 6. Direct local evaluation reproduces the printed activity summaries.",
+   "rationale": "The purported missing primary input exists under another filename and predates the pinned script revision. Pointing the original read_csv call to that deposited file is a lossless path repair under R4. The original expressions reproduce this summary; no later script, recoding, or replacement data are used.",
+   "reference_provenance": "direct_check",
+   "reference_scope": "Authors revision-6 activity-count expressions; deposited s2_data_actions.csv; lossless input path correction only; R 4.6.1",
+   "reference_evidence": "OSF file 659c057d5e925a0bdc45b93e v1, https://osf.io/download/crwsk/, SHA-256 89e1deb53407bd4b6aebc27c51e04c9b8627e8ec7203147410addd017103bd48. Original revision 6 formulas evaluated verbatim; model-gating/gold-set/audit/check_g19_actions.R and check_g19_actions.log.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "The deposited pre-revision-6 activity data and the second labeller's direct checks establish a lossless filename repair; the printed mean matches, severity null."
+  },
+  {
+   "id": "C2",
+   "claim": "Study 2 variability in reported proenvironmental behaviors",
+   "exhibit": "Study 2 Results; Figure 2",
+   "page": null,
+   "quantity": "Standard deviation of number of behaviors",
+   "reported": "0.98",
+   "expected_status": "match",
+   "reference_recomputed": 0.976928449696,
+   "tolerance": "Equality at two decimal places as printed in the article.",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/nqx74/ Study 2 and Conclusion state the author fixed the called filename. OSF inventory dates the deposited s2_data_actions.csv to 2024-01-08, before revision 6. Direct local evaluation reproduces the printed activity summaries.",
+   "rationale": "The purported missing primary input exists under another filename and predates the pinned script revision. Pointing the original read_csv call to that deposited file is a lossless path repair under R4. The original expressions reproduce this summary; no later script, recoding, or replacement data are used.",
+   "reference_provenance": "direct_check",
+   "reference_scope": "Authors revision-6 activity-count expressions; deposited s2_data_actions.csv; lossless input path correction only; R 4.6.1",
+   "reference_evidence": "OSF file 659c057d5e925a0bdc45b93e v1, https://osf.io/download/crwsk/, SHA-256 89e1deb53407bd4b6aebc27c51e04c9b8627e8ec7203147410addd017103bd48. Original revision 6 formulas evaluated verbatim; model-gating/gold-set/audit/check_g19_actions.R and check_g19_actions.log.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "As C1: lossless filename repair; the printed SD matches, severity null."
+  },
+  {
+   "id": "C3",
+   "claim": "Study 2 number of fun activities reported in the Fun condition",
+   "exhibit": "Study 2 Results; Figure 2",
+   "page": null,
+   "quantity": "Mean number of activities",
+   "reported": "2.30",
+   "expected_status": "match",
+   "reference_recomputed": 2.301136363636,
+   "tolerance": "Equality at two decimal places as printed in the article.",
+   "severity": null,
+   "cause": null,
+   "evidence": "https://osf.io/download/nqx74/ Study 2 and Conclusion state the author fixed the called filename. OSF inventory dates the deposited s2_data_actions.csv to 2024-01-08, before revision 6. Direct local evaluation reproduces the printed activity summaries.",
+   "rationale": "The purported missing primary input exists under another filename and predates the pinned script revision. Pointing the original read_csv call to that deposited file is a lossless path repair under R4. The original expressions reproduce this summary; no later script, recoding, or replacement data are used.",
+   "reference_provenance": "direct_check",
+   "reference_scope": "Authors revision-6 activity-count expressions; deposited s2_data_actions.csv; lossless input path correction only; R 4.6.1",
+   "reference_evidence": "OSF file 659c057d5e925a0bdc45b93e v1, https://osf.io/download/crwsk/, SHA-256 89e1deb53407bd4b6aebc27c51e04c9b8627e8ec7203147410addd017103bd48. Original revision 6 formulas evaluated verbatim; model-gating/gold-set/audit/check_g19_actions.R and check_g19_actions.log.",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "As C1: lossless filename repair; the printed mean matches, severity null."
+  },
+  {
+   "id": "C4",
+   "claim": "Study 1 between-person association between PEB and well-being",
+   "exhibit": "Study 1 Results, model 1",
+   "page": null,
+   "quantity": "Unstandardized coefficient",
+   "reported": "1.64",
+   "expected_status": "match",
+   "reference_recomputed": 1.6412610274,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "Authors' s1_analysis.R variable preparation and Model 1 (C4/C5) or Model 2 (C6), evaluated verbatim on deposited s1_data.csv; local audit model-gating/gold-set/audit/check_g19.R and check_g19.log; original report https://osf.io/download/nqx74/.",
+   "rationale": "A targeted local evaluation of the author's original variable-preparation and model expressions reproduces this value. Models warn of singular fits; the estimates recur at printed precision.",
+   "reference_provenance": "direct_check",
+   "reference_evidence": "Authors' s1_analysis.R variable preparation and Model 1 (C4/C5) or Model 2 (C6), evaluated verbatim on deposited s1_data.csv; local audit model-gating/gold-set/audit/check_g19.R and check_g19.log; original report https://osf.io/download/nqx74/.",
+   "reference_scope": "authors model expressions; R 4.6.1, lme4 2.0-1; inputs unchanged, local path only",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Study 1 fully reproduced per report; confirmed by running the shipped code."
+  },
+  {
+   "id": "C5",
+   "claim": "Study 1 within-person association between PEB and well-being",
+   "exhibit": "Study 1 Results, model 1",
+   "page": null,
+   "quantity": "Unstandardized coefficient",
+   "reported": "0.77",
+   "expected_status": "match",
+   "reference_recomputed": 0.7729283248,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "Authors' s1_analysis.R variable preparation and Model 1 (C4/C5) or Model 2 (C6), evaluated verbatim on deposited s1_data.csv; local audit model-gating/gold-set/audit/check_g19.R and check_g19.log; original report https://osf.io/download/nqx74/.",
+   "rationale": "A targeted local evaluation of the author's original variable-preparation and model expressions reproduces this value. Models warn of singular fits; the estimates recur at printed precision.",
+   "reference_provenance": "direct_check",
+   "reference_evidence": "Authors' s1_analysis.R variable preparation and Model 1 (C4/C5) or Model 2 (C6), evaluated verbatim on deposited s1_data.csv; local audit model-gating/gold-set/audit/check_g19.R and check_g19.log; original report https://osf.io/download/nqx74/.",
+   "reference_scope": "authors model expressions; R 4.6.1, lme4 2.0-1; inputs unchanged, local path only",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "Reproduced."
+  },
+  {
+   "id": "C6",
+   "claim": "Study 1 between-person PEB association with covariates",
+   "exhibit": "Study 1 Results, model controlling for social desirability bias (code Model 2)",
+   "page": null,
+   "quantity": "Unstandardized coefficient",
+   "reported": "1.48",
+   "expected_status": "match",
+   "reference_recomputed": 1.47641713313,
+   "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+   "severity": null,
+   "cause": "",
+   "evidence": "Authors' s1_analysis.R variable preparation and Model 1 (C4/C5) or Model 2 (C6), evaluated verbatim on deposited s1_data.csv; local audit model-gating/gold-set/audit/check_g19.R and check_g19.log; original report https://osf.io/download/nqx74/.",
+   "rationale": "A targeted local evaluation of the author's original variable-preparation and model expressions reproduces this value. Models warn of singular fits; the estimates recur at printed precision.",
+   "reference_provenance": "direct_check",
+   "reference_evidence": "Authors' s1_analysis.R variable preparation and Model 1 (C4/C5) or Model 2 (C6), evaluated verbatim on deposited s1_data.csv; local audit model-gating/gold-set/audit/check_g19.R and check_g19.log; original report https://osf.io/download/nqx74/.",
+   "reference_scope": "authors model expressions; R 4.6.1, lme4 2.0-1; inputs unchanged, local path only",
+   "acceptable_statuses": [
+    "match"
+   ],
+   "second_labeller_rationale": "1.48 is the social-desirability-controlled model (code Model 2), as the corrected exhibit states, and reproduces at printed precision."
+  }
+ ],
+ "notes": {
+  "claim_list": "Historical Study 2 s2_analysis.R revision 6 remains the code target. Study 1 script/data and the deposited Study 2 activity-count data are additionally pinned. The activity-data path is /Study 2/s2_data_actions.csv; the script calls it Data/S2 text.csv.",
+  "sol": "Round 1 direct checks reproduce all six selected quantities. Study 2 activity data exist in OSF file 659c057d5e925a0bdc45b93e v1 (created 2024-01-08); revision 6 (2024-03-27) calls the wrong filename. A documented path correction from Data/S2 text.csv to deposited s2_data_actions.csv yields C1=2.110497237569, C2=0.976928449696, C3=2.301136363636 using the original expressions. The report independently says the author later fixed the called filename. Thus the historical P0 claim was false under R4: the input is present and no content changes are needed. Targeted Study 1 Model 1/2 checks also reproduce C4-C6 (singular-fit warnings recorded). Paper status is computationally reproducible within this source-supported scope. This is not a claim of a full end-to-end rerun of all analyses; other models remain supported by the human report. Audit scripts/logs are in model-gating/gold-set/audit/.",
+  "claude": "C1-C3 match, severity null: the deposited pre-revision-6 activity data file exists and the second labeller's direct checks establish that correcting the input filename is a lossless repair (R4 as amended). Paper computationally reproducible, alternative computational issues (R7); no technical-failure alternative. The C6 exhibit has been corrected to the social-desirability-controlled model; Study 1 inputs are now pinned. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+  "claude_blind_original_historical": "Claim-list problem: C6 exhibit says 'model 3' but 1.48 is the model with social desirability bias added (code Model 2); the report's Table 1 (p.10) lists model 3 between-person b = 1.45, which I also get from model 3 (1.452473). Value itself reproduces. Study 1 has no version pin; I ran the current s1_analysis.R and s1_data.csv from osf.io/hpvsu (my edits: data path, dropped effectsize/interactions calls and the figure block; did not touch models). Study 2: no 'S2 text.csv' anywhere in the project; s2_data_actions.csv is probably the intended file, but renaming is not 'as shipped'. Sourcing the whole s2 script would halt at line 31, which is why 'technical failure' is an acceptable alternative, though the gold primary claims (Study 1, Study 2 main ANCOVA) run. Report does not give values for C1-C3, only that Figure 2/S4 content was irreproducible."
+ }
+}

@@ -1,0 +1,123 @@
+{
+  "gold_id": "G-03",
+  "expected_validation_status": "computationally reproducible",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/vmjf4/ — §2.1 Overall Computational Reproducibility, PDF pp. 3–4 and Table 1 Original columns: “all key results”.",
+      "rationale": "The report section 2.1 supports the match judgement through a general original-analysis reproduction statement. Its Original column quotes article values, and the shipped CSV only corroborates at two significant figures. No independent rerun at the full printed precision is established; reference_recomputed remains null.",
+      "diagnostic_results": [
+        {
+          "value": "2.1e-04",
+          "provenance": "shipped_output",
+          "evidence": "Author package Pyramids_analysis_NHB_revision/Study 1a/tableS3.csv, pattern X021D, p.adj; report https://osf.io/download/vmjf4/ section 2.1 confirms reproduction generally.",
+          "scope": "CSV rounded to two significant figures; corroboration only, not a recomputation at the full printed precision of Supplementary Table 2",
+          "is_scoring_reference": false
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/vmjf4/ — §2.1 Overall Computational Reproducibility, PDF pp. 3–4 and Table 1 Original columns: “all key results”.",
+      "rationale": "The report section 2.1 supports the match judgement through a general original-analysis reproduction statement. Its Original column quotes article values, and the shipped CSV only corroborates at two significant figures. No independent rerun at the full printed precision is established; reference_recomputed remains null.",
+      "diagnostic_results": [
+        {
+          "value": "6.8e-09",
+          "provenance": "shipped_output",
+          "evidence": "Author package Pyramids_analysis_NHB_revision/Study 1a/tableS3.csv, pattern X021D, p.adj; report https://osf.io/download/vmjf4/ section 2.1 confirms reproduction generally.",
+          "scope": "CSV rounded to two significant figures; corroboration only, not a recomputation at the full printed precision of Supplementary Table 2",
+          "is_scoring_reference": false
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/vmjf4/ — §2.1 Overall Computational Reproducibility, PDF pp. 3–4 and Table 1 Original columns: “all key results”.",
+      "rationale": "The report section 2.1 supports the match judgement through a general original-analysis reproduction statement. Its Original column quotes article values, and the shipped CSV only corroborates at two significant figures. No independent rerun at the full printed precision is established; reference_recomputed remains null.",
+      "diagnostic_results": [
+        {
+          "value": "4.3e-05",
+          "provenance": "shipped_output",
+          "evidence": "Author package Pyramids_analysis_NHB_revision/Study 1a/tableS3.csv, pattern X021D, p.adj; report https://osf.io/download/vmjf4/ section 2.1 confirms reproduction generally.",
+          "scope": "CSV rounded to two significant figures; corroboration only, not a recomputation at the full printed precision of Supplementary Table 2",
+          "is_scoring_reference": false
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/vmjf4/ — §2.1 Overall Computational Reproducibility, PDF pp. 3–4 and Table 1 Original columns: “all key results”.",
+      "rationale": "The report section 2.1 supports the match judgement through a general original-analysis reproduction statement. Its Original column quotes article values, and the shipped CSV only corroborates at two significant figures. No independent rerun at the full printed precision is established; reference_recomputed remains null.",
+      "diagnostic_results": [
+        {
+          "value": "3.1e-06",
+          "provenance": "shipped_output",
+          "evidence": "Author package Pyramids_analysis_NHB_revision/Study 1a/tableS3.csv, pattern X021D, p.adj; report https://osf.io/download/vmjf4/ section 2.1 confirms reproduction generally.",
+          "scope": "CSV rounded to two significant figures; corroboration only, not a recomputation at the full printed precision of Supplementary Table 2",
+          "is_scoring_reference": false
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/vmjf4/ — §2.1 Overall Computational Reproducibility, PDF pp. 3–4 and Table 1 Original columns: “all key results”.",
+      "rationale": "The report section 2.1 supports the match judgement through a general original-analysis reproduction statement. Its Original column quotes article values, and the shipped CSV only corroborates at two significant figures. No independent rerun at the full printed precision is established; reference_recomputed remains null.",
+      "diagnostic_results": [
+        {
+          "value": "3.3e-08",
+          "provenance": "shipped_output",
+          "evidence": "Author package Pyramids_analysis_NHB_revision/Study 1a/tableS3.csv, pattern X021D, p.adj; report https://osf.io/download/vmjf4/ section 2.1 confirms reproduction generally.",
+          "scope": "CSV rounded to two significant figures; corroboration only, not a recomputation at the full printed precision of Supplementary Table 2",
+          "is_scoring_reference": false
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "expected_status": "match",
+      "reference_recomputed": null,
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://osf.io/download/vmjf4/ — §2.1 Overall Computational Reproducibility, PDF pp. 3–4 and Table 1 Original columns: “all key results”.",
+      "rationale": "The report section 2.1 supports the match judgement through a general original-analysis reproduction statement. Its Original column quotes article values, and the shipped CSV only corroborates at two significant figures. No independent rerun at the full printed precision is established; reference_recomputed remains null.",
+      "diagnostic_results": [
+        {
+          "value": "4.5e-05",
+          "provenance": "shipped_output",
+          "evidence": "Author package Pyramids_analysis_NHB_revision/Study 1a/tableS3.csv, pattern X021D, p.adj; report https://osf.io/download/vmjf4/ section 2.1 confirms reproduction generally.",
+          "scope": "CSV rounded to two significant figures; corroboration only, not a recomputation at the full printed precision of Supplementary Table 2",
+          "is_scoring_reference": false
+        }
+      ]
+    }
+  ],
+  "label_confidence": "medium",
+  "notes": "The source reproduces the original normalization and its reported outputs. Its Correctly Normalized column is a changed analysis and is excluded. Source comparison p-values are rounded more coarsely than original Supplementary Table 2; no invented high-precision reference values are supplied. Round 1: the report Table 1 Original column is a quotation of article values. The shipped tableS3.csv has only two significant figures, recorded as diagnostic_results; no extra precision is imputed to reference_recomputed."
+}

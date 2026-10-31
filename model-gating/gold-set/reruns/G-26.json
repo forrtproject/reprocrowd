@@ -1,0 +1,78 @@
+{
+  "gold_id": "G-26",
+  "executed_by": "claude agent (not a human)",
+  "date": "2026-10-30",
+  "r_version": "4.6.1 (2026-06-24), aarch64-apple-darwin, macOS",
+  "packages": {
+    "gender": "0.6.0",
+    "genderdata": "0.6.0 (GitHub lmullen/genderdata commit df16017149a8adb9a75a2dcf734007cab12dd5da)",
+    "predictrace": "2.0.1",
+    "rvest": "1.0.5",
+    "xml2": "1.6.0",
+    "XML": "3.99-0.25",
+    "data.table": "1.18.4",
+    "dplyr": "1.2.1",
+    "spatstat": "3.6-3",
+    "RPushbullet": "0.3.5",
+    "lfe": "3.1.1",
+    "stargazer": "5.2.3",
+    "PropCIs": "0.3-0",
+    "ggplot2": "4.0.3"
+  },
+  "inputs": "All 5,853 files of REPRO-Bench commit 74958fba32daeacff51f2e1fd37be3916595648f, 111/replication_package, verified against the pinned git blob SHA-1 (or LFS SHA-256): 0 mismatches. 1,388 files came from Hugging Face; 4,465 HTML files that HF refused (HTTP 429 rate limit) were copied from the authors' own Zenodo deposit (10.5281/zenodo.8372384) and passed the same pinned-hash check. The pin includes 'rating of 10886 prizes v03.csv' (needed by the analysis script).",
+  "lossless_edits": [
+    "Analysis script line 14: setwd() to the authors' Windows folder replaced by the local run folder (path).",
+    "Cleaning script line 14: setwd() replaced by the local run folder (path).",
+    "Cleaning script line 15: list.files() on the authors' absolute Scraping_2021 path replaced by list.files(\"Scraping_2021\") (path).",
+    "Cleaning script line 38: read_html(sEpisode) changed to read_html(paste0(\"Scraping_2021/\",sEpisode)), the same prefix the preceding line 32 uses (path). Unedited, read_html('Episode_100') from the run folder errors ('does not exist in current working directory', logged), the error is swallowed by tryCatch and the episode yields no data; this is the 'minor coding error' the I4R report describes.",
+    "HTML file names: the pinned snapshot names the files Episode_N.html; the authors' deposit and the Episode_name values in Data_cleaned.csv use Episode_N. The original names were restored via symlinks to the pinned files (contents unchanged).",
+    "Created empty Graphs/ and Tables/ folders listed in the authors' Readme (output locations)."
+  ],
+  "runtime_seconds": 1270.4,
+  "runtime_breakdown_seconds": {
+    "cleaning_raw_html": 1266.1,
+    "analysis_deposited_data_until_stop": 1.9,
+    "analysis_regenerated_data_until_stop": 2.4,
+    "note": "runtime_seconds = raw cleaning + analysis on regenerated data (C1 path)"
+  },
+  "exit_ok": false,
+  "claims": [
+    {
+      "id": "C1",
+      "reported": "11,016",
+      "recomputed": "11016",
+      "recurs_at_printed_precision": true,
+      "note": "Run 2: authors' raw-HTML cleaning script (Cleaning scraped data.R, three path edits) on all 5,834 pinned episode HTML files, then the analysis script: reg_perlead_1$N = 11016 (nrow(fData_c4_perceivedlead) = 11016). The regenerated Data_cleaned.csv (63,320 rows x 51 columns) is identical in content to the deposited file; the only byte difference is line endings (deposited CRLF, regenerated LF). gender 0.6.0 with genderdata at commit df16017 (the commit named in the authors' script comment). The report's 11,018 did not recur in this environment."
+    },
+    {
+      "id": "C2",
+      "reported": "0.051",
+      "recomputed": "0.0510683419279350",
+      "recurs_at_printed_precision": true,
+      "note": "reg_perlead_1 (felm, Table 1 Model 1), Male coefficient, N = 11,016, deposited Data_cleaned.csv. Identical to 15 digits on the regenerated data. Extracted from the fitted model object: the script stops at the following stargazer() call (see notes)."
+    },
+    {
+      "id": "C3",
+      "reported": "−0.045",
+      "recomputed": "-0.0446586950649433",
+      "recurs_at_printed_precision": true,
+      "note": "reg_perlead_1, Same_gender_perceivedlead (gender match) coefficient. Identical on regenerated data."
+    },
+    {
+      "id": "C4",
+      "reported": "0.051",
+      "recomputed": "0.0511822718637803",
+      "recurs_at_printed_precision": true,
+      "note": "reg_perlead_2 (felm with Bidding_round fixed effects, Table 1 Model 2), Male coefficient, N = 11,016. Identical on regenerated data."
+    },
+    {
+      "id": "C5",
+      "reported": "−0.049",
+      "recomputed": "-0.0490539101789201",
+      "recurs_at_printed_precision": true,
+      "note": "reg_perlead_2, gender-match coefficient. Identical on regenerated data."
+    }
+  ],
+  "implications_for_gold": "C2-C5: supports 'match'. This is the first execution of the shipped R analysis; reference_recomputed can be filled with the values above (provenance: direct execution of shipped R with one path edit, scope: original analysis on deposited data), and the not_checkable alternative is no longer needed on evidence grounds. C1: contradicts the current cause text. The shipped cleaning script, with three lossless path edits (R4), regenerates the deposited Data_cleaned.csv exactly and yields 11,016, the printed value, under R 4.6.1. So R version does not explain the report's 11,018. The remaining dependency question is genderdata: it is not on CRAN and not in the deposit; it was installed from GitHub at commit df16017, the commit the authors' script comment names. Two readings for the gold owner: (a) if installing a named non-CRAN dependency at the authors' stated commit counts as dependency installation, C1 -> 'match', reference_recomputed 11016, cause cleared; (b) if only what is inside the pinned package counts, C1 stays not_checkable but the cause should read 'gender-inference data (genderdata) not deposited; with the commit named in the authors' code the printed 11,016 recurs'. In either case, keep the report's 11,018 as a non-scoring source_report diagnostic and note that it did not recur with gender 0.6.0 and genderdata df16017 under R 4.6.1, so the report's attribution to R/gender version is unconfirmed here. Paper level: 'computationally reproducible' is supported for all five claims, including from raw data. The existing 'computational issues' alternative now rests only on the script stopping at the Table 1 stargazer() call under current R. That error occurs after estimation and affects no printed number, and whether it warrants the alternative is the gold owner's call. requires_human_rerun can be cleared or reworded (this run was by an agent, not a human); label_confidence can rise.",
+  "notes": "Both analysis runs stop with 'the condition has length > 1' at the Table 1 stargazer() call (line ~200). Traced to stargazer 5.2.3's internal .inside.bracket(), which fails under R >= 4.2 when a multi-model call deparses to several lines; a single-model or two-model call works. This is a dependency/R-version incompatibility in table formatting, not in estimation: all six Table 1 models are fitted before the error, and the claim values come from the fitted felm objects. Script content after Table 1 (later tables and figures) was not executed; no edit was made to get past the stargazer call because that would go beyond R4. The cleaning script ran to completion (exit 0; 5,834/5,834 episodes parsed; 63,320 rows written). Full logs and downloads stay in /tmp/scratch_gold2/claude/G-26 (not in the repo)."
+}

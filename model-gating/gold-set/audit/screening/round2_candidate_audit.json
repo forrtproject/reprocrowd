@@ -1,0 +1,107 @@
+{
+  "I4R-82c6v": {
+    "evidence_url": "https://osf.io/download/kqneu/",
+    "textpath": "/tmp/scratch_gold/sol/round2_reports/82c6v/6a85fc32510f37c02008e7d2.pdf.txt",
+    "source_sha256": "71aa662b7bff90c609ce63ce2a052efa592383c9fd7124f99e6b791102e14705"
+  },
+  "I4R-axj5y": {
+    "evidence_url": "https://osf.io/download/shk6u/",
+    "textpath": "/tmp/scratch_gold/sol/osf/axj5y/6a919da448da93737b1364b8.pdf.txt",
+    "source_sha256": "3e89943afbe4291bfed082f1cf684d4857c2596cec5e9cfb5e52e63ef49ecc05"
+  },
+  "I4R-cyb24": {
+    "evidence_url": "https://osf.io/download/5384c/",
+    "textpath": "/tmp/scratch_gold/sol/osf/cyb24/6818fae120bff64c88159648.pdf.txt",
+    "source_sha256": "7c6a9ff06e01377dc2663a200045d52f0d55b49f18c5422e5d6fb902a434f943"
+  },
+  "I4R-u6gea": {
+    "evidence_url": "https://osf.io/download/m657k/",
+    "textpath": "/tmp/scratch_gold/sol/round2_reports/u6gea/6a280a42a8c3c60a506d8389.pdf.txt",
+    "source_sha256": "b38d1786fa0be555c89ffe765885e01ee0e7852fe9aec7b037fa30aef9f71c62"
+  },
+  "I4R-xfc2m": {
+    "evidence_url": "https://osf.io/download/eurw5/",
+    "textpath": "/tmp/scratch_gold/sol/osf/xfc2m/66f2da93ff457e5b3f3cbaa9.pdf.txt",
+    "source_sha256": "33513fe8294cc72a80bdaa4dc5f8b37918ab351490d8962993d121eefbc2fc9b"
+  },
+  "I4R-rvynd": {
+    "evidence_url": "https://osf.io/download/6a9048db674ca895f3e39f8f/",
+    "textpath": "/tmp/scratch_gold/sol/round2_reports/rvynd/6a9048db674ca895f3e39f8f.pdf.txt",
+    "source_sha256": "afdeb6177ee508829919dff13b443406af556c1369db566e07b93515f14b5ad6"
+  },
+  "I4R-a8kp5": {
+    "evidence_url": "https://osf.io/download/w295u/",
+    "textpath": "/tmp/scratch_gold/sol/round2_reports/a8kp5/69d90a1759c51eef72895c94.pdf.txt",
+    "source_sha256": "319c08f7e5c47db74b433b5109871a03cb595b18b0bc0a61ed74b62067d81877"
+  },
+  "I4R-td79f": {
+    "evidence_url": "https://osf.io/download/6a7b40d096a32d9a236a5dd1/",
+    "textpath": "/tmp/scratch_gold/sol/osf/td79f/6a7b40d096a32d9a236a5dd1.pdf.txt",
+    "source_sha256": "c6e402f9d6f50542108416fd5cec27ec9d0de3808f47fa41217a00369e44df1c"
+  },
+  "I4R-wz6hc": {
+    "evidence_url": "https://osf.io/download/6a847c5870c5102b59effee8/",
+    "textpath": "/tmp/scratch_gold/sol/osf/wz6hc/6a847c5870c5102b59effee8.pdf.txt",
+    "source_sha256": "32b7abf56dad98decd9bbe393de57b317332f65f2f5b57aea7102ebc71895aa9"
+  },
+  "I4R-jeskd": {
+    "evidence_url": "https://osf.io/download/2mcxk/",
+    "textpath": "/tmp/scratch_gold/sol/osf/jeskd/6a7a1ed5eee6a966776a5aab.pdf.txt",
+    "source_sha256": "46ecbb89cf68757be9f19e981287555ed5a42a7bda4210a3d5d297f0342e7d26"
+  },
+  "I4R-vkgtf": {
+    "evidence_url": "https://osf.io/download/6ac7cbbe1e5e99e2dcc0ad43/",
+    "textpath": "/tmp/scratch_gold/sol/osf/vkgtf/6ac7cbbe1e5e99e2dcc0ad43.pdf.txt",
+    "source_sha256": "8102e7f420cdbf25cecce801ebb66d3ec027101502cdd1187f6205646df2f37b"
+  },
+  "I4R-nh568": {
+    "evidence_url": "https://osf.io/download/8f3e6/",
+    "textpath": "/tmp/scratch_gold/sol/round2_reports/nh568/6a2068a2e41c670dd0db2902.pdf.txt",
+    "source_sha256": "90a3b204d0469df2c96895820e9f23c53be3e61e91a42e92532018dbcbd00c37"
+  },
+  "I4R-63qe2": {
+    "evidence_url": "https://osf.io/download/qptwb/",
+    "textpath": "/tmp/scratch_gold/sol/round2_reports/63qe2/6711083c5f4d75fd5b2ebecb.pdf.txt",
+    "source_sha256": "645d0e0c5b2ca3813a240434ad7b66e11f07affa3023f3e9c161bffd56d226e3"
+  },
+  "RB-111": {
+    "evidence_url": "https://www.econstor.eu/bitstream/10419/306278/1/I4R-DP151rev.pdf",
+    "textpath": "/tmp/scratch_gold/sol/dp/151.pdf.txt",
+    "source_sha256": "f83688475a22cea4fdd3fede8bf124b0d0f6b4175351b5462f16767d03d564d9"
+  },
+  "CC-2023-004": {
+    "evidence_url": "https://osf.io/download/3c2rx/",
+    "textpath": "/tmp/scratch_gold/sol/round2_packages/cc_spatial.pdf.txt",
+    "source_sha256": "267c82f0697ac58719bfb24964797226b3d1c4d98246f79ad739b7818d6164a8"
+  },
+  "CC-2024-018": {
+    "evidence_url": "https://raw.githubusercontent.com/codecheckers/ZaunerEtAl_PLoS_ONE_2024/main/codecheck/codecheck.Rmd",
+    "textpath": "/tmp/scratch_gold/sol/round2_packages/cc_power.Rmd",
+    "source_sha256": "6d62814052af1d59408dcf87c39e3cf42bb2642f2762125662c6b7f6532e99b9"
+  },
+  "CC-2024-019": {
+    "evidence_url": "https://raw.githubusercontent.com/codecheckers/wearable-hrv/master/codecheck/codecheck.Rmd",
+    "textpath": "/tmp/scratch_gold/sol/round2_packages/cc_hrv.Rmd",
+    "source_sha256": "272fbd63af1c0ef4a7c6031aefda0b681ff8919d8efd2d9a365c60c6d00581ee"
+  },
+  "CC-2026-023": {
+    "evidence_url": "https://raw.githubusercontent.com/codecheckers/HeinrichsEtAl_JVis_2026/main/codecheck/codecheck.Rmd",
+    "textpath": "/tmp/scratch_gold/sol/round2_packages/cc_circadian.Rmd",
+    "source_sha256": "d31c8eaa87263f3a2a1ae13c3bd1e750184a98f0b9a1a73b56b8be21488c6d7a"
+  },
+  "CC-2026-026": {
+    "evidence_url": "https://raw.githubusercontent.com/codecheckers/funders/main/codecheck.yml",
+    "textpath": "/tmp/scratch_gold/sol/round2_packages/cc_funders.yml",
+    "source_sha256": "996b4ab6a89eb37aba26c50a69f0652e22b3ed250e75eb0771923a648653b48d"
+  },
+  "RB-001": {
+    "evidence_url": "https://eprints.whiterose.ac.uk/id/eprint/240013/1/I4R-DP287.pdf",
+    "textpath": "/tmp/scratch_gold/sol/round2_DP287.pdf.txt",
+    "source_sha256": "269eb94ff28b584c2ac3a4548d408b3178d7f93e4fbacebdb0c6ce0122fbcfe1"
+  },
+  "RB-010": {
+    "evidence_url": "https://eprints.whiterose.ac.uk/id/eprint/240013/1/I4R-DP287.pdf",
+    "textpath": "/tmp/scratch_gold/sol/round2_DP287.pdf.txt",
+    "source_sha256": "269eb94ff28b584c2ac3a4548d408b3178d7f93e4fbacebdb0c6ce0122fbcfe1"
+  }
+}

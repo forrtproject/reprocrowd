@@ -1,0 +1,87 @@
+{
+  "gold_id": "G-05",
+  "expected_validation_status": "computationally reproducible",
+  "acceptable_alternatives": [],
+  "claims": [
+    {
+      "id": "C1",
+      "expected_status": "match",
+      "reference_recomputed": "-0.010",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf — §3.1 Computational reproducibility, p. 7: “same results”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf section 3.1 (report p.6): 'with those materials execute the authors' R code. We obtain the same results as reported in Mangonnet et al. (2022) without any modifications to the code.'; Tables 1-3 (fixest/Stata re-estimations, report p.14-15) also give Coalition Alignment col (1) = -0.010",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C2",
+      "expected_status": "match",
+      "reference_recomputed": "-0.011",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf — §3.1 Computational reproducibility, p. 7: “same results”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf section 3.1 (report p.6): 'with those materials execute the authors' R code. We obtain the same results as reported in Mangonnet et al. (2022) without any modifications to the code.'; Tables 1-3 (fixest/Stata re-estimations, report p.14-15) also give Coalition Alignment col (2) = -0.011",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C3",
+      "expected_status": "match",
+      "reference_recomputed": "-0.012",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf — §3.1 Computational reproducibility, p. 7: “same results”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf section 3.1 (report p.6): 'with those materials execute the authors' R code. We obtain the same results as reported in Mangonnet et al. (2022) without any modifications to the code.'; Tables 1-3 (fixest/Stata re-estimations, report p.14-15) also give Coalition Alignment col (3) = -0.012",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C4",
+      "expected_status": "match",
+      "reference_recomputed": "-0.011",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf — §3.1 Computational reproducibility, p. 7: “same results”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf section 3.1 (report p.6): 'with those materials execute the authors' R code. We obtain the same results as reported in Mangonnet et al. (2022) without any modifications to the code.'; Tables 1-3 (fixest/Stata re-estimations, report p.14-15) also give Party Alignment col (4) = -0.011",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C5",
+      "expected_status": "match",
+      "reference_recomputed": "-0.007",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf — §3.1 Computational reproducibility, p. 7: “same results”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf section 3.1 (report p.6): 'with those materials execute the authors' R code. We obtain the same results as reported in Mangonnet et al. (2022) without any modifications to the code.'; Tables 1-3 (fixest/Stata re-estimations, report p.14-15) also give Party Alignment col (5) = -0.007",
+      "reference_scope": "authors_workflow"
+    },
+    {
+      "id": "C6",
+      "expected_status": "match",
+      "reference_recomputed": "-0.011",
+      "tolerance": "Equality at the precision printed in the article; conventional rounding.",
+      "severity": null,
+      "cause": "",
+      "evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf — §3.1 Computational reproducibility, p. 7: “same results”.",
+      "rationale": "The source assesses this result using the original analysis and reports reproduction at the article’s precision.",
+      "reference_provenance": "source_report",
+      "reference_evidence": "https://www.econstor.eu/bitstream/10419/278026/1/I4R-DP073.pdf section 3.1 (report p.6): 'with those materials execute the authors' R code. We obtain the same results as reported in Mangonnet et al. (2022) without any modifications to the code.'; Tables 1-3 (fixest/Stata re-estimations, report p.14-15) also give Party Alignment col (6) = -0.011",
+      "reference_scope": "authors_workflow"
+    }
+  ],
+  "label_confidence": "high",
+  "notes": "The unchanged original lfe workflow reproduces Table 1 columns 1–6. The numerical comparisons from fixest and Stata are different implementations and are excluded."
+}

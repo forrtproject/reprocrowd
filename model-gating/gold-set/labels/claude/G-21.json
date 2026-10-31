@@ -1,0 +1,65 @@
+{
+ "gold_id": "G-21",
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "discrepant",
+   "reference_recomputed": 1766.298,
+   "tolerance": "integer AIC (printed with ≈)",
+   "severity": "P2",
+   "cause": "Likelihood-only (proportion) model AIC differs: 1766.3 recomputed vs ≈1722 printed",
+   "evidence": "https://osf.io/download/6a216eefee84266e775b8113/ p.8 Table 3 (Experiment 3 performance measures, Original vs Reproduction): 'Likelihood-only AIC = 1722 AIC = 1766.298'; p.7: 'the results matched those reported by the original authors, except for a small discrepancy in the AIC of the likelihood-only model (see Table 3)'",
+   "rationale": "Shipped E3_analysis.R line 240 computes this AIC (AIC(lmer(post_j ~ (t / (t + f)) + (1|Subject) + (1|lab)))) and the reproducer's script uses the identical formula, so unchanged code gives 1766.3, not ≈1722. A 44-point gap is not rounding.",
+   "reported_check": "confirmed in paper (Psychological Science 35(9), p. 1021 text: 'The proportion heuristic ( AIC ≈ 1722 ) and the prior heuristic ( AIC ≈ 922) ... Bayesian model ( AIC ≈ 410 ) ... UPCO ( AIC ≈ 497 ) and Competence ( AIC ≈ 507 )')"
+  },
+  {
+   "id": "C2",
+   "expected_status": "match",
+   "reference_recomputed": 922.169,
+   "tolerance": "integer AIC (printed with ≈)",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/6a216eefee84266e775b8113/ p.8 Table 3 (Experiment 3 performance measures, Original vs Reproduction): 'Prior only AIC =922 AIC = 922.169'",
+   "rationale": "Computed by shipped E3_analysis.R line 239. The reproduced value rounds to the printed 922.",
+   "reported_check": "confirmed in paper (Psychological Science 35(9), p. 1021 text: 'The proportion heuristic ( AIC ≈ 1722 ) and the prior heuristic ( AIC ≈ 922) ... Bayesian model ( AIC ≈ 410 ) ... UPCO ( AIC ≈ 497 ) and Competence ( AIC ≈ 507 )')"
+  },
+  {
+   "id": "C3",
+   "expected_status": "match",
+   "reference_recomputed": 410.086,
+   "tolerance": "integer AIC (printed with ≈)",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/6a216eefee84266e775b8113/ p.8 Table 3 (Experiment 3 performance measures, Original vs Reproduction): 'Bayes AIC = 410.1 AIC = 410.086'",
+   "rationale": "The reproduced value rounds to the printed ≈410.",
+   "reported_check": "confirmed in paper (Psychological Science 35(9), p. 1021 text: 'The proportion heuristic ( AIC ≈ 1722 ) and the prior heuristic ( AIC ≈ 922) ... Bayesian model ( AIC ≈ 410 ) ... UPCO ( AIC ≈ 497 ) and Competence ( AIC ≈ 507 )')"
+  },
+  {
+   "id": "C4",
+   "expected_status": "match",
+   "reference_recomputed": 497.267,
+   "tolerance": "integer AIC (printed with ≈)",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/6a216eefee84266e775b8113/ p.8 Table 3 (Experiment 3 performance measures, Original vs Reproduction): 'UPCO AIC = 497.3 AIC = 497.267'",
+   "rationale": "The reproduced value rounds to the printed ≈497.",
+   "reported_check": "confirmed in paper (Psychological Science 35(9), p. 1021 text: 'The proportion heuristic ( AIC ≈ 1722 ) and the prior heuristic ( AIC ≈ 922) ... Bayesian model ( AIC ≈ 410 ) ... UPCO ( AIC ≈ 497 ) and Competence ( AIC ≈ 507 )')"
+  },
+  {
+   "id": "C5",
+   "expected_status": "match",
+   "reference_recomputed": 506.928,
+   "tolerance": "integer AIC (printed with ≈)",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/6a216eefee84266e775b8113/ p.8 Table 3 (Experiment 3 performance measures, Original vs Reproduction): 'Competence AIC = 506.9 AIC = 506.928'",
+   "rationale": "The reproduced value rounds to the printed ≈507.",
+   "reported_check": "confirmed in paper (Psychological Science 35(9), p. 1021 text: 'The proportion heuristic ( AIC ≈ 1722 ) and the prior heuristic ( AIC ≈ 922) ... Bayesian model ( AIC ≈ 410 ) ... UPCO ( AIC ≈ 497 ) and Competence ( AIC ≈ 507 )')"
+  }
+ ],
+ "label_confidence": "medium",
+ "notes": "No paper alternative under R7. The exhibit now points to the Results paragraph after Fig. 8; references follow the authors' documented mixed-effects procedure. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "Claim list: the exhibit is given as 'Figure 6', but in the published paper the Experiment 3 AIC comparison is Fig. 8 (p. 1021). Provenance: the shipped E3_analysis.R (SHA matches pin) computes fixed-effects lm AICs for Bayes/UPCO/Competence via MuMIn::dredge, with a comment saying to switch to lmer with (1|lab)+(1|Subject) for the mixed models. Prior-only and proportion AICs are computed with lmer at lines 239-240. The report's Table 3 values for Bayes/UPCO/Competence (410.086/497.267/506.928) come from lmer models the reproducer added (E3_analysis_FD.R on https://osf.io/uyrq8/), following that comment. The report says this AIC table (supplementary Figure 12) 'was not included in the provided code'. So C3-C5 match only via a trivial reproducer addition. The paper is also internally inconsistent here: it says Fig. 8's AICs are fixed-effects estimates, yet the printed values coincide with the mixed-model numbers. C1 severity: I chose P2 rather than P1 because it is a baseline heuristic comparison and the ranking and conclusion are unchanged. P1 is arguable, since beating the heuristics is a stated Exp 3 hypothesis. My own hypothesis, not the report's: inside an R formula, t/(t+f) is nesting syntax, not a proportion (no I()). That could explain why the code's value differs from whatever produced 1722. The report's headline is that results 'reproduce almost perfectly'. Some scripts (E1, parts of E3 after the AIC section) needed minor fixes to run. Hence 'computationally reproducible' is an acceptable alternative."
+}

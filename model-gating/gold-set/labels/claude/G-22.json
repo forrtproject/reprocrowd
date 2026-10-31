@@ -1,0 +1,76 @@
+{
+ "gold_id": "G-22",
+ "expected_validation_status": "computational issues",
+ "acceptable_alternatives": [],
+ "claims": [
+  {
+   "id": "C1",
+   "expected_status": "discrepant",
+   "reference_recomputed": 0.07849,
+   "tolerance": "rounding to 2 dp (correct rounding gives 0.08)",
+   "severity": "P2",
+   "cause": "SE truncated rather than rounded (0.07849 printed as 0.07)",
+   "evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ p.4: 'the standard error of the beta in the first adjusted model is reported as .07, while the corresponding value in their Pandoc analysis output files is .07849'; confirmed in shipped 2022_Reported-Analyses HTML: 'Life_expectancy -0.58415 0.07849 -7.442 1.55e-09'",
+   "rationale": "Code output is 0.07849, which rounds to 0.08, so the printed 0.07 is wrong at printed precision. It is a truncation error with no inferential consequence.",
+   "reported_check": "confirmed in paper (author-posted proof PDF from paper_url, header 'Psychological Science XX(X)', not the version of record): Table 2 first block, 'Life expectancy in years −0.58 0.07 −7.442 < .001'"
+  },
+  {
+   "id": "C2",
+   "expected_status": "discrepant",
+   "reference_recomputed": 5.28,
+   "tolerance": "rounding to 2 dp",
+   "severity": "P2",
+   "cause": "Printed intercept does not match code output (typo or stale table)",
+   "evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ p.4: 'The intercept and its confidence interval are reported in the table as 5.25 (CI: 5.08, 5.43); in the corresponding analysis file, these values are 5.28 (CI: 5.11, 5.44)'; shipped HTML output 2024-Brandt---Maner-Replication-Guide-Part-2-Individual-Level.html (OSF file 6781cac87907829aaee24ad9, https://osf.io/download/6781cac87907829aaee24ad9/), tab_model(lmer_abortion_LE_cont): '(Intercept) 5.28 5.11 – 5.44'",
+   "rationale": "Shipped output gives 5.28 (raw 5.27565). The printed 5.25 differs beyond rounding. The intercept is not the focal estimate.",
+   "reported_check": "confirmed in paper (author-posted proof PDF from paper_url, header 'Psychological Science XX(X)', not the version of record): Table 3 '(Intercept) 5.25 [5.08, 5.43]'"
+  },
+  {
+   "id": "C3",
+   "expected_status": "discrepant",
+   "reference_recomputed": "[5.11, 5.44]",
+   "tolerance": "rounding to 2 dp",
+   "severity": "P2",
+   "cause": "Printed intercept CI does not match code output",
+   "evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ p.4: 'reported in the table as 5.25 (CI: 5.08, 5.43); in the corresponding analysis file, these values are 5.28 (CI: 5.11, 5.44)'",
+   "rationale": "Both bounds differ from shipped output by more than rounding.",
+   "reported_check": "confirmed in paper (author-posted proof PDF from paper_url, header 'Psychological Science XX(X)', not the version of record): Table 3 '[5.08, 5.43]'"
+  },
+  {
+   "id": "C4",
+   "expected_status": "discrepant",
+   "reference_recomputed": "[0.09, 0.40]",
+   "tolerance": "rounding to 2 dp",
+   "severity": "P2",
+   "cause": "Minus signs erroneously added to both CI bounds of the focal predictor",
+   "evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ p.4: 'Negative signs were erroneously added to both values of the confidence interval for “Life expectancy,”'; shipped HTML output 2024-Brandt---Maner-Replication-Guide-Part-2-Individual-Level.html (OSF file 6781cac87907829aaee24ad9, https://osf.io/download/6781cac87907829aaee24ad9/), tab_model(lmer_abortion_LE_cont): 'sc life expectancy 0.24 0.09 – 0.40 0.002'",
+   "rationale": "Code gives [0.09, 0.40]. The printed [−0.09, −0.40] has the wrong sign. The point estimate and p-value are printed correctly, so this is a sign typo on a printed number.",
+   "reported_check": "confirmed in paper (author-posted proof PDF from paper_url, header 'Psychological Science XX(X)', not the version of record): Table 3 'Life expectancy (county-level in years) 0.24 [−0.09, −0.40] .002'"
+  },
+  {
+   "id": "C5",
+   "expected_status": "discrepant",
+   "reference_recomputed": "[0.03, 0.36]",
+   "tolerance": "rounding to 2 dp",
+   "severity": "P2",
+   "cause": "Minus sign erroneously added to lower CI bound",
+   "evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ p.4: '[Negative signs were erroneously added] ... to the low end of the confidence interval for “Income group.”'; shipped HTML output 2024-Brandt---Maner-Replication-Guide-Part-2-Individual-Level.html (OSF file 6781cac87907829aaee24ad9, https://osf.io/download/6781cac87907829aaee24ad9/), tab_model(lmer_abortion_LE_cont): 'sc income group 0.19 0.03 – 0.36 0.023'",
+   "rationale": "Code gives [0.03, 0.36], which excludes zero and is consistent with p = .023. The printed lower bound has the wrong sign. This is a control variable.",
+   "reported_check": "confirmed in paper (author-posted proof PDF from paper_url, header 'Psychological Science XX(X)', not the version of record): Table 3 'Income group (self-reported) 0.19 [−0.03, 0.36] .023'"
+  },
+  {
+   "id": "C6",
+   "expected_status": "match",
+   "reference_recomputed": 0.24,
+   "tolerance": "rounding to 2 dp",
+   "severity": null,
+   "cause": "",
+   "evidence": "https://osf.io/download/6a8dab91bef1626ff08e0770/ p.5-6: 'The regression slope of life expectancy slightly increases from 0.24 to 0.26 after the ethnicity controls' (0.24 = reproduced baseline); shipped HTML output 2024-Brandt---Maner-Replication-Guide-Part-2-Individual-Level.html (OSF file 6781cac87907829aaee24ad9, https://osf.io/download/6781cac87907829aaee24ad9/), tab_model(lmer_abortion_LE_cont): 'sc life expectancy 0.24'",
+   "rationale": "The main individual-level estimate reproduces exactly at printed precision.",
+   "reported_check": "confirmed in paper (author-posted proof PDF from paper_url, header 'Psychological Science XX(X)', not the version of record): Table 3 'Life expectancy ... 0.24'"
+  }
+ ],
+ "label_confidence": "high",
+ "notes": "C1 and C4 are P2 under R2. No paper alternative under R7. The input files are now pinned. Reconciled with the second labeller (see reconciliation.md). The final judgement is the structured label; notes_blind_original keeps the pre-reconciliation blind notes, which are historical and superseded wherever they conflict with the final label.",
+ "notes_blind_original": "The package has no R scripts. Code is embedded in rendered HTML (R Markdown output), and values were checked against that output. The report notes that the preprocessed individual-level xlsx has misnamed columns that cause an error when subsetting. The reproducers bypassed this by rebuilding the data from the code, so it was not a blocker for the numbers. The report calls the paper reproducible 'with the exception of a few minor typos'. Under the ReproCrowd rule the printed numbers differ from the code output, so I labelled them discrepant and the paper 'computational issues'. 'Computationally reproducible' is an acceptable alternative if the reconciler treats printed typos against correct code output as reporting rather than computational issues. C1: 'close' is a defensible alternative (truncation, difference < 0.01). C4 severity: P1 is arguable, since this is the CI of the focal predictor on the primary DV. I chose P2 because the estimate and p-value are correct and the error is an obvious sign typo. Supplement issues (Table S-4 infant mortality 0.45/2.75 vs code 0.41/2.58; S-6 analysis absent) are outside the claim list. Pin completeness: the version pin lists codebooks, raw-data zips and HTML outputs only. The preprocessed data the report refers to sit in OSF folders ('1 State-level data', '2 Individual-level data', '3 Nation-level data') that are not pinned."
+}

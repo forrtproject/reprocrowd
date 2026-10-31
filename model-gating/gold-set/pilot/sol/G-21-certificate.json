@@ -1,0 +1,1777 @@
+{
+  "schema_version": "1.0",
+  "certification_id": "RC-2026-921",
+  "paper": {
+    "doi": "10.1177/09567976241251741",
+    "title": "Learning From Aggregated Opinion",
+    "authors": [
+      "Kerem Oktar",
+      "Tania Lombrozo",
+      "Thomas L. Griffiths"
+    ],
+    "year": 2024
+  },
+  "procedure": {
+    "version": "0.1.0",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.0.0.md"
+  },
+  "repro_standard_version": "crowd-repro v1.0.0",
+  "engine": "T3 Code / Codex harness",
+  "model": {
+    "name": "gpt-6.1-sol",
+    "provider": "OpenAI",
+    "reasoning_effort": "high"
+  },
+  "rules_version": "1.0.0",
+  "date": "2026-10-30",
+  "environment": {
+    "os": "macOS-26.7-arm64-arm-64bit",
+    "architecture": "arm64",
+    "language": "R (authors analyses); Python (workflow and reporting)",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "abind": "1.4-8",
+          "archive": "1.1.14",
+          "askpass": "1.2.1",
+          "backports": "1.5.1",
+          "base64enc": "0.1-6",
+          "bayestestR": "0.20.0",
+          "bit": "4.6.0",
+          "bit64": "4.8.6",
+          "broom": "1.0.13",
+          "bslib": "0.12.0",
+          "cachem": "1.1.0",
+          "car": "3.1-5",
+          "carData": "3.0-6",
+          "checkmate": "2.3.4",
+          "classInt": "0.4-11",
+          "cli": "3.6.6",
+          "clipr": "0.8.1",
+          "colorspace": "2.1-4",
+          "corrplot": "0.95",
+          "cowplot": "1.2.0",
+          "cpp11": "0.5.5",
+          "crayon": "1.5.3",
+          "curl": "8.1.0",
+          "data.table": "1.18.6.1",
+          "datawizard": "1.4.1",
+          "DBI": "1.3.0",
+          "Deriv": "4.3.6",
+          "digest": "0.6.39",
+          "doBy": "4.7.2",
+          "dplyr": "1.2.1",
+          "e1071": "1.7-17",
+          "effectsize": "1.0.3",
+          "evaluate": "1.0.5",
+          "farver": "2.1.2",
+          "fastmap": "1.2.0",
+          "fontawesome": "0.5.3",
+          "forecast": "9.0.2",
+          "Formula": "1.2-6",
+          "formula.tools": "1.7.1",
+          "fracdiff": "1.5-4",
+          "fs": "2.1.0",
+          "generics": "0.1.4",
+          "ggeffects": "2.3.2",
+          "ggplot2": "4.0.3",
+          "ggpubr": "1.0.0",
+          "ggrepel": "0.9.8",
+          "ggsci": "5.2.0",
+          "ggsignif": "0.6.4",
+          "gld": "2.6.8",
+          "glue": "1.8.1",
+          "gmp": "0.7-5.1",
+          "GPArotation": "2026.8-2",
+          "gridExtra": "2.3.1",
+          "gtable": "0.3.6",
+          "highr": "0.12",
+          "Hmisc": "5.3-0",
+          "hms": "1.1.4",
+          "htmlTable": "2.5.0",
+          "htmltools": "0.5.9",
+          "htmlwidgets": "1.6.4",
+          "httr": "1.4.9",
+          "insight": "1.6.0",
+          "isoband": "0.3.0",
+          "jquerylib": "0.1.4",
+          "jsonlite": "2.0.0",
+          "knitr": "1.52",
+          "labeling": "0.4.3",
+          "lifecycle": "1.0.5",
+          "lme4": "2.1-0",
+          "lmom": "3.3",
+          "lmtest": "0.9-40",
+          "lubridate": "1.9.5",
+          "magrittr": "2.0.5",
+          "MatrixModels": "0.5-4",
+          "memoise": "2.0.1",
+          "metR": "0.19.0",
+          "mime": "0.13",
+          "minqa": "1.2.8",
+          "mnormt": "2.1.2",
+          "modelr": "0.1.11",
+          "MuMIn": "1.48.19",
+          "mvtnorm": "1.4-2",
+          "nloptr": "2.2.1",
+          "numDeriv": "2016.8-1.1",
+          "openssl": "2.4.2",
+          "operator.tools": "1.6.3.1",
+          "PairedData": "1.1.1",
+          "parameters": "0.30.0",
+          "pbkrtest": "0.5.5",
+          "pdftools": "3.9.1",
+          "performance": "0.19.0",
+          "pillar": "1.11.1",
+          "pkgconfig": "2.0.3",
+          "plyr": "1.8.9",
+          "polynom": "1.4-1",
+          "prettyunits": "1.2.0",
+          "progress": "1.2.3",
+          "proxy": "0.4-29",
+          "psych": "2.6.9",
+          "purrr": "1.2.2",
+          "pwr": "1.3-0",
+          "qpdf": "1.4.1",
+          "qualtRics": "3.3.0",
+          "quantreg": "6.1",
+          "R6": "2.6.1",
+          "rappdirs": "0.3.4",
+          "rbibutils": "2.4.1",
+          "RColorBrewer": "1.1-3",
+          "Rcpp": "1.1.2",
+          "RcppArmadillo": "15.6.2-1",
+          "RcppEigen": "0.3.4.0.2",
+          "Rdpack": "2.6.6",
+          "readr": "2.2.0",
+          "reformulas": "0.4.4",
+          "reshape2": "1.4.5",
+          "rlang": "1.3.0",
+          "rmarkdown": "2.32",
+          "rstatix": "1.1.0",
+          "rstudioapi": "0.19.0",
+          "s2": "1.1.13",
+          "S7": "0.2.2",
+          "sass": "0.4.10",
+          "scales": "1.4.0",
+          "sf": "1.1-3",
+          "sjlabelled": "1.2.0",
+          "sjmisc": "2.8.11",
+          "sjPlot": "2.9.0",
+          "sjstats": "0.19.1",
+          "SparseM": "1.84-2",
+          "stringi": "1.8.9",
+          "stringr": "1.6.0",
+          "sys": "3.4.3",
+          "tibble": "3.3.1",
+          "tidyr": "1.3.2",
+          "tidyselect": "1.2.1",
+          "timechange": "0.4.0",
+          "timeDate": "4052.112",
+          "tinytex": "0.61",
+          "tzdb": "0.5.0",
+          "units": "1.0-1",
+          "urca": "1.3-4",
+          "utf8": "1.2.6",
+          "vctrs": "0.7.3",
+          "viridisLite": "0.4.3",
+          "vroom": "1.7.1",
+          "withr": "3.0.3",
+          "wk": "0.9.5",
+          "xfun": "0.62",
+          "yaml": "2.3.12",
+          "zoo": "1.9-1",
+          "base": "4.6.1",
+          "blob": "1.3.0",
+          "boot": "1.3-32",
+          "callr": "3.8.0",
+          "cellranger": "1.1.0",
+          "class": "7.3-23",
+          "cluster": "2.1.8.2",
+          "codetools": "0.2-20",
+          "compiler": "4.6.1",
+          "conflicted": "1.2.0",
+          "datasets": "4.6.1",
+          "dbplyr": "2.6.0",
+          "dtplyr": "1.3.3",
+          "forcats": "1.0.1",
+          "foreign": "0.8-91",
+          "gargle": "1.6.1",
+          "googledrive": "2.1.2",
+          "googlesheets4": "1.1.2",
+          "graphics": "4.6.1",
+          "grDevices": "4.6.1",
+          "grid": "4.6.1",
+          "haven": "2.5.5",
+          "here": "1.0.2",
+          "ids": "1.0.1",
+          "KernSmooth": "2.23-26",
+          "lattice": "0.22-9",
+          "MASS": "7.3-65",
+          "mathjaxr": "2.0-0",
+          "Matrix": "1.7-5",
+          "metadat": "1.6-0",
+          "metafor": "5.0-1",
+          "methods": "4.6.1",
+          "mgcv": "1.9-4",
+          "nlme": "3.1-169",
+          "nnet": "7.3-20",
+          "openalexR": "3.1.0",
+          "otel": "0.2.0",
+          "parallel": "4.6.1",
+          "pbapply": "1.7-4",
+          "processx": "3.9.0",
+          "ps": "1.9.3",
+          "ragg": "1.5.2",
+          "readxl": "1.5.0",
+          "rematch": "2.0.0",
+          "rematch2": "2.1.2",
+          "reprex": "2.1.1",
+          "rpart": "4.1.27",
+          "rprojroot": "2.1.1",
+          "rvest": "1.0.5",
+          "selectr": "0.6-0",
+          "spatial": "7.3-18",
+          "splines": "4.6.1",
+          "stats": "4.6.1",
+          "stats4": "4.6.1",
+          "survival": "3.8-6",
+          "systemfonts": "1.3.2",
+          "tcltk": "4.6.1",
+          "textshaping": "1.0.5",
+          "tidyverse": "2.0.0",
+          "tools": "4.6.1",
+          "utils": "4.6.1",
+          "uuid": "1.2-2",
+          "writexl": "1.5.4",
+          "xml2": "1.6.0"
+        },
+        "lockfile": "R-environment.lock.json"
+      },
+      {
+        "name": "Python",
+        "version": "3.12.12",
+        "packages": {
+          "amply": "0.1.7",
+          "appdirs": "1.4.4",
+          "argparse_dataclass": "2.0.0",
+          "attrs": "26.1.0",
+          "backports.zstd": "1.8.0",
+          "Brotli": "1.2.1",
+          "certifi": "2026.10.23",
+          "charset-normalizer": "3.5.1",
+          "conda-inject": "1.3.2",
+          "ConfigArgParse": "1.9.0",
+          "connection-pool": "0.0.3",
+          "docutils": "0.23",
+          "dpath": "2.2.0",
+          "fastjsonschema": "2.22.2",
+          "gitdb": "4.0.12",
+          "GitPython": "3.2.1",
+          "h2": "4.4.1",
+          "hpack": "4.2.0",
+          "humanfriendly": "10.0",
+          "hyperframe": "6.1.0",
+          "idna": "3.20",
+          "immutables": "0.21",
+          "Jinja2": "3.1.6",
+          "jsonschema": "4.25.1",
+          "jsonschema-specifications": "2025.9.1",
+          "jupyter_core": "5.9.1",
+          "MarkupSafe": "3.0.4",
+          "nbformat": "5.11.1",
+          "packaging": "26.3",
+          "pip": "25.3",
+          "platformdirs": "4.14.0",
+          "psutil": "7.2.2",
+          "PuLP": "3.3.2",
+          "pyparsing": "3.3.3",
+          "PySocks": "1.7.1",
+          "PyYAML": "6.0.3",
+          "referencing": "0.37.0",
+          "requests": "2.34.2",
+          "reretry": "0.11.8",
+          "rpds-py": "2026.9.1",
+          "setuptools": "84.2.1",
+          "smart_open": "7.7.1",
+          "smmap": "5.0.3",
+          "snakemake": "0.0.0",
+          "snakemake-interface-common": "1.24.0",
+          "snakemake-interface-executor-plugins": "9.4.0",
+          "snakemake-interface-logger-plugins": "2.1.0",
+          "snakemake-interface-report-plugins": "1.3.0",
+          "snakemake-interface-scheduler-plugins": "2.0.2",
+          "snakemake-interface-storage-plugins": "4.4.1",
+          "tabulate": "0.10.0",
+          "tenacity": "9.2.1",
+          "throttler": "1.2.2",
+          "toml": "0.10.2",
+          "traitlets": "5.16.1",
+          "typing_extensions": "4.16.0",
+          "urllib3": "2.8.0",
+          "wheel": "0.48.0",
+          "wrapt": "1.17.3",
+          "yte": "1.9.4"
+        },
+        "lockfile": "pixi.lock"
+      },
+      {
+        "name": "Python bootstrap (initial pilot acquisition)",
+        "version": "3.14.6",
+        "packages": {},
+        "lockfile": "host interpreter; standard library only"
+      },
+      {
+        "name": "Pixi",
+        "version": "0.83.0",
+        "lockfile": "pixi.lock"
+      },
+      {
+        "name": "Snakemake",
+        "version": "9.13.7",
+        "lockfile": "pixi.lock"
+      },
+      {
+        "name": "curl",
+        "version": "curl 8.7.1 (x86_64-apple-darwin25.0) libcurl/8.7.1 (SecureTransport) LibreSSL/3.3.6 zlib/1.2.12 nghttp2/1.68.1",
+        "lockfile": "host utility; original downloads verified by SHA256"
+      }
+    ],
+    "lockfile": "pixi.lock",
+    "lockfile_sha256": "76e96a7c588e740274db5588e2e66e8cde9fc6ffe33b7c3d9e5500a22feb04a2",
+    "R_lockfile_sha256": "7ea0fb6858e5f30676fc0f7de38b4c750858efbbbcc05a68a62e5e5a63b0b23c",
+    "R_binary_archives": 150,
+    "R_library": ".Rlib",
+    "python_environment": ".pixi/envs/default",
+    "original_environment": "No package lockfile or R version was shipped on OSF. Version drift cannot be quantified.",
+    "scope": "Pinned Python/Conda tools and all 150 contained R packages; R 4.6.1 and its bundled/core packages remain host-provided. Host and bootstrap inventory recorded.",
+    "engine": "T3 Code / Codex harness",
+    "model": {
+      "name": "gpt-6.1-sol",
+      "provider": "OpenAI",
+      "reasoning_effort": "high"
+    },
+    "procedure_version": "0.1.0",
+    "rules_version": "1.0.0"
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Experiment 1 reports N=133 and 17 exclusions",
+      "exhibit": "p.1012",
+      "reported_details": {
+        "N": 133,
+        "excluded": 17
+      },
+      "comparison_rule": "compare reported N with retained sample; also report raw enrollment and wording ambiguity",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C02",
+      "claim": "Experiment 2 reports N=458 and 108 exclusions, broken down as 33 + 72",
+      "exhibit": "p.1014",
+      "reported_details": {
+        "N": 458,
+        "excluded": 108,
+        "duration_excluded": 33,
+        "attention_excluded": 72
+      },
+      "comparison_rule": "compare retained N and explicit exclusion counts; report arithmetic inconsistency",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C03",
+      "claim": "Participant counts",
+      "exhibit": "p.1017",
+      "reported_details": {
+        "recruited": 295,
+        "excluded": 60,
+        "analyzed": 235
+      },
+      "comparison_rule": "exact counts",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C04",
+      "claim": "Bayes correlation with the 18 mean judgments",
+      "exhibit": "p.1014; Fig.3",
+      "reported_details": {
+        "r": 0.92,
+        "p_upper": 0.001
+      },
+      "comparison_rule": "r rounds to two decimals; p < .001",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C05",
+      "claim": "UPCO correlation with the 18 mean judgments",
+      "exhibit": "p.1014; Fig.3",
+      "reported_details": {
+        "r": -0.08,
+        "p": 0.75,
+        "figure_p": 0.74
+      },
+      "comparison_rule": "r rounds to two decimals; flag text/figure p-value disagreement",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C06",
+      "claim": "Competence correlation with the 18 mean judgments",
+      "exhibit": "p.1014; Fig.3",
+      "reported_details": {
+        "r": 0.79,
+        "p_upper": 0.001
+      },
+      "comparison_rule": "r rounds to two decimals; p < .001",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C07",
+      "claim": "Bayes versus UPCO aggregate correlation comparison",
+      "exhibit": "p.1014",
+      "reported_details": {
+        "t": 4.51,
+        "p_upper": 0.001
+      },
+      "comparison_rule": "t rounds to two decimals; p < .001",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C08",
+      "claim": "Bayes versus Competence aggregate correlation comparison",
+      "exhibit": "p.1014",
+      "reported_details": {
+        "t": 1.35,
+        "p": 0.18
+      },
+      "comparison_rule": "t and p round to two decimals",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C09",
+      "claim": "Bayes has the largest mean participant-level correlation",
+      "exhibit": "p.1015; Fig.3b",
+      "reported_details": {
+        "Bayes_gt_UPCO": true,
+        "Bayes_gt_Competence": true,
+        "paired_p_upper": 0.001,
+        "t_Bayes_UPCO": 13.68,
+        "t_Bayes_Competence": 4.19,
+        "df": 132
+      },
+      "comparison_rule": "paired t-test t rounds to two decimals, df=132, p<.001",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C10",
+      "claim": "Bayes best captures about 75% of participants by correlation",
+      "exhibit": "p.1014",
+      "reported_details": {
+        "Bayes_percent": 75
+      },
+      "comparison_rule": "approximation: within 5 percentage points",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C11",
+      "claim": "Bayes best captures about 80% of participants by absolute deviation",
+      "exhibit": "p.1014",
+      "reported_details": {
+        "Bayes_percent": 80
+      },
+      "comparison_rule": "approximation: within 5 percentage points",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C12",
+      "claim": "Bayes correlation with mean judgments across 225 stimuli",
+      "exhibit": "Fig.4a, p.1017",
+      "reported_details": {
+        "r": 0.99,
+        "p_upper": 0.001
+      },
+      "comparison_rule": "r rounds to two decimals; p < .001",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C13",
+      "claim": "UPCO correlation with mean judgments across 225 stimuli",
+      "exhibit": "Fig.4a, p.1017",
+      "reported_details": {
+        "r": 0.97,
+        "p_upper": 0.001
+      },
+      "comparison_rule": "r rounds to two decimals; p < .001",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C14",
+      "claim": "Competence correlation with mean judgments across 225 stimuli",
+      "exhibit": "Fig.4a, p.1017",
+      "reported_details": {
+        "r": 0.96,
+        "p_upper": 0.001
+      },
+      "comparison_rule": "r rounds to two decimals; p < .001",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C15",
+      "claim": "Bayes has the lowest AIC among individual models",
+      "exhibit": "Fig.6a, p.1019",
+      "reported_details": {
+        "lowest_individual": "Bayes"
+      },
+      "comparison_rule": "same AIC ordering",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C16",
+      "claim": "Ensembles outperform individual models; Competence adds more to Bayes than UPCO",
+      "exhibit": "pp.1016-1017; Fig.6a",
+      "reported_details": {
+        "ensembles_better": true,
+        "B+C_better_than_B+U": true
+      },
+      "comparison_rule": "AIC comparisons",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C17",
+      "claim": "Alternative models best capture about one quarter of participants by correlation",
+      "exhibit": "p.1017; Fig.6b",
+      "reported_details": {
+        "alternative_percent": 25
+      },
+      "comparison_rule": "approximation: within 5 percentage points",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C18",
+      "claim": "Alternative models best capture about one quarter of participants by deviation",
+      "exhibit": "p.1017; Fig.6b",
+      "reported_details": {
+        "alternative_percent": 25
+      },
+      "comparison_rule": "approximation: within 5 percentage points",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C19",
+      "claim": "Bayes has the lowest AIC among individual models",
+      "exhibit": "p.1020; Fig.8a",
+      "reported_details": {
+        "lowest_individual": "Bayes"
+      },
+      "comparison_rule": "same fixed-effect AIC ordering",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C20",
+      "claim": "Ensembles improve on Bayes and Bayes+Competence has the best AIC",
+      "exhibit": "pp.1020-1021; Fig.8a",
+      "reported_details": {
+        "best": "Bayes+Competence"
+      },
+      "comparison_rule": "same fixed-effect AIC ordering",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C21",
+      "claim": "AIC for a proportion-only predictor is approximately 1722",
+      "exhibit": "p.1021",
+      "reported_details": {
+        "AIC": 1722
+      },
+      "comparison_rule": "absolute difference <= 1; compare regression specification",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C22",
+      "claim": "AIC for a prior-only predictor is approximately 922",
+      "exhibit": "p.1021",
+      "reported_details": {
+        "AIC": 922
+      },
+      "comparison_rule": "absolute difference <= 1; compare regression specification",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C23",
+      "claim": "AIC for Bayes is approximately 410",
+      "exhibit": "p.1021",
+      "reported_details": {
+        "AIC": 410
+      },
+      "comparison_rule": "absolute difference <= 1; compare regression specification",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C24",
+      "claim": "AIC for UPCO is approximately 497",
+      "exhibit": "p.1021",
+      "reported_details": {
+        "AIC": 497
+      },
+      "comparison_rule": "absolute difference <= 1; compare regression specification",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C25",
+      "claim": "AIC for Competence is approximately 507",
+      "exhibit": "p.1021",
+      "reported_details": {
+        "AIC": 507
+      },
+      "comparison_rule": "absolute difference <= 1; compare regression specification",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C26",
+      "claim": "Bayes best captures 43% of participants by correlation",
+      "exhibit": "p.1021",
+      "reported_details": {
+        "Bayes_percent": 43
+      },
+      "comparison_rule": "round percentage to nearest integer",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C27",
+      "claim": "Bayes best captures 48% of participants by absolute deviation",
+      "exhibit": "p.1021",
+      "reported_details": {
+        "Bayes_percent": 48
+      },
+      "comparison_rule": "round percentage to nearest integer",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C28",
+      "claim": "Adding participant and item random intercepts preserves the main model ordering",
+      "exhibit": "p.1020; Figs.S12-S13",
+      "reported_details": {
+        "same_ordering": true
+      },
+      "comparison_rule": "run the mixed-model substitution described by shipped script; compare ML and REML explicitly",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C29",
+      "claim": "The UPCO grid-search optimum is .51",
+      "exhibit": "Supplement A p.4; pilot1_analysis.R",
+      "reported_details": {
+        "opt_upco": 0.51
+      },
+      "comparison_rule": "same shipped grid minimum",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C30",
+      "claim": "The UPCO grid-search optimum is .52",
+      "exhibit": "Supplement A p.4; E3_analysis.R",
+      "reported_details": {
+        "opt_upco": 0.52
+      },
+      "comparison_rule": "same shipped grid minimum",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C31",
+      "claim": "Total sample size in the abstract",
+      "exhibit": "p.1010",
+      "reported_details": {
+        "N": 886
+      },
+      "comparison_rule": "report whether total is recruited or analyzed and compare like with like",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C32",
+      "claim": "The Experiment 3 pilot script executes its model comparison and power analysis",
+      "exhibit": "E3pilot_analysis.R lines 238-260",
+      "reported_details": {
+        "script_completion": true
+      },
+      "comparison_rule": "execute without changing statistical specification",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C33",
+      "claim": "E1 demographic counts and mean age",
+      "exhibit": "p.1012",
+      "reported_details": {
+        "N": 133,
+        "male_female_other": [
+          46,
+          84,
+          3
+        ],
+        "mean_age": 34
+      },
+      "comparison_rule": "sex counts exact, combining nonbinary/other categories where the paper does; mean age rounds to integer; identify raw versus retained cohort",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C34",
+      "claim": "E2 demographic counts and mean age",
+      "exhibit": "p.1014",
+      "reported_details": {
+        "N": 458,
+        "male_female_other": [
+          204,
+          242,
+          12
+        ],
+        "mean_age": 38
+      },
+      "comparison_rule": "sex counts exact, combining nonbinary/other categories where the paper does; mean age rounds to integer; identify raw versus retained cohort",
+      "approval": "approved by pilot instruction"
+    },
+    {
+      "id": "C35",
+      "claim": "E3 demographic counts and mean age",
+      "exhibit": "p.1017",
+      "reported_details": {
+        "N": 295,
+        "male_female_other": [
+          163,
+          126,
+          6
+        ],
+        "mean_age": 42
+      },
+      "comparison_rule": "sex counts exact, combining nonbinary/other categories where the paper does; mean age rounds to integer; identify raw versus retained cohort",
+      "approval": "approved by pilot instruction"
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C01",
+      "quantity": "Experiment 1 reports N=133 and 17 exclusions",
+      "reported": "{\"N\": 133, \"excluded\": 17}",
+      "recomputed": "{\"excluded\": 17, \"raw\": 150, \"retained\": 133}",
+      "status": "close",
+      "note": "Reported N=133 and exclusions=17 recur as retained N and exclusions. The wording describes 133 as recruited; the shipped file has 150 completed responses. No further exclusions were applied.",
+      "reported_details": {
+        "N": 133,
+        "excluded": 17
+      },
+      "recomputed_details": {
+        "raw": 150,
+        "retained": 133,
+        "excluded": 17
+      },
+      "comparison_rule": "compare reported N with retained sample; also report raw enrollment and wording ambiguity",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C02",
+      "quantity": "Experiment 2 reports N=458 and 108 exclusions, broken down as 33 + 72",
+      "reported": "{\"N\": 458, \"attention_excluded\": 72, \"duration_excluded\": 33, \"excluded\": 108}",
+      "recomputed": "{\"attention_excluded\": 72, \"duration_excluded\": 33, \"duration_pass\": 530, \"final\": 458, \"good_explanation_count\": 14, \"raw\": 563}",
+      "status": "discrepant",
+      "note": "Retained N=458 matches, but the script excludes 105=33+72 rather than 108: a gap of -3. The raw file contains 563 completed responses. Cause: participant-count documentation/arithmetic, not a changed exclusion algorithm.",
+      "reported_details": {
+        "N": 458,
+        "excluded": 108,
+        "duration_excluded": 33,
+        "attention_excluded": 72
+      },
+      "recomputed_details": {
+        "raw": 563,
+        "duration_pass": 530,
+        "duration_excluded": 33,
+        "attention_excluded": 72,
+        "final": 458,
+        "good_explanation_count": 14
+      },
+      "comparison_rule": "compare retained N and explicit exclusion counts; report arithmetic inconsistency",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C03",
+      "quantity": "Participant counts",
+      "reported": "{\"analyzed\": 235, \"excluded\": 60, \"recruited\": 295}",
+      "recomputed": "{\"excluded\": 60, \"raw\": 295, \"retained\": 235}",
+      "status": "match",
+      "note": "Recruitment and exclusions match: 295-60=235; 4,230 judgments analyzed.",
+      "reported_details": {
+        "recruited": 295,
+        "excluded": 60,
+        "analyzed": 235
+      },
+      "recomputed_details": {
+        "raw": 295,
+        "retained": 235,
+        "excluded": 60
+      },
+      "comparison_rule": "exact counts",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C04",
+      "quantity": "Bayes correlation with the 18 mean judgments",
+      "reported": "{\"p_upper\": 0.001, \"r\": 0.92}",
+      "recomputed": "{\"p\": 9.591833530359258e-08, \"r\": 0.9159543437218227}",
+      "status": "match",
+      "note": "Pearson cor.test on 18 stimulus means. Reported rounding and p-value threshold match.",
+      "reported_details": {
+        "r": 0.92,
+        "p_upper": 0.001
+      },
+      "recomputed_details": {
+        "r": 0.9159543437218227,
+        "p": 9.591833530359258e-08
+      },
+      "comparison_rule": "r rounds to two decimals; p < .001",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C05",
+      "quantity": "UPCO correlation with the 18 mean judgments",
+      "reported": "{\"figure_p\": 0.74, \"p\": 0.75, \"r\": -0.08}",
+      "recomputed": "{\"p\": 0.7459512940505012, \"r\": -0.0821305275386007}",
+      "status": "close",
+      "note": "Pearson cor.test on 18 stimulus means. p=0.745951 rounds to .75 as in the text; Fig.3 displays .74 (gap +.005951 from the figure). No numerical algorithm was changed.",
+      "reported_details": {
+        "r": -0.08,
+        "p": 0.75,
+        "figure_p": 0.74
+      },
+      "recomputed_details": {
+        "r": -0.0821305275386007,
+        "p": 0.7459512940505012
+      },
+      "comparison_rule": "r rounds to two decimals; flag text/figure p-value disagreement",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C06",
+      "quantity": "Competence correlation with the 18 mean judgments",
+      "reported": "{\"p_upper\": 0.001, \"r\": 0.79}",
+      "recomputed": "{\"p\": 9.84642273325191e-05, \"r\": 0.7892811189902977}",
+      "status": "match",
+      "note": "Pearson cor.test on 18 stimulus means. Reported rounding and p-value threshold match.",
+      "reported_details": {
+        "r": 0.79,
+        "p_upper": 0.001
+      },
+      "recomputed_details": {
+        "r": 0.7892811189902977,
+        "p": 9.84642273325191e-05
+      },
+      "comparison_rule": "r rounds to two decimals; p < .001",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C07",
+      "quantity": "Bayes versus UPCO aggregate correlation comparison",
+      "reported": "{\"p_upper\": 0.001, \"t\": 4.51}",
+      "recomputed": "{\"p\": 6.583745958188558e-06, \"z\": 4.506719870945912}",
+      "status": "close",
+      "note": "The numerical statistic and p-value recur using psych::paired.r with r23 omitted, exactly as shipped. The function identifies an independent-correlation Fisher z test; the paper calls this statistic t. Numerical gap at reported precision is zero, but the statistic label differs.",
+      "reported_details": {
+        "t": 4.51,
+        "p_upper": 0.001
+      },
+      "recomputed_details": {
+        "z": 4.506719870945912,
+        "p": 6.583745958188558e-06
+      },
+      "comparison_rule": "t rounds to two decimals; p < .001",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C08",
+      "quantity": "Bayes versus Competence aggregate correlation comparison",
+      "reported": "{\"p\": 0.18, \"t\": 1.35}",
+      "recomputed": "{\"p\": 0.17628532647216177, \"z\": 1.3522813554728836}",
+      "status": "close",
+      "note": "The numerical statistic and p-value recur using psych::paired.r with r23 omitted, exactly as shipped. The function identifies an independent-correlation Fisher z test; the paper calls this statistic t. Numerical gap at reported precision is zero, but the statistic label differs.",
+      "reported_details": {
+        "t": 1.35,
+        "p": 0.18
+      },
+      "recomputed_details": {
+        "z": 1.3522813554728836,
+        "p": 0.17628532647216177
+      },
+      "comparison_rule": "t and p round to two decimals",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C09",
+      "quantity": "Bayes has the largest mean participant-level correlation",
+      "reported": "{\"Bayes_gt_Competence\": true, \"Bayes_gt_UPCO\": true, \"df\": 132, \"paired_p_upper\": 0.001, \"t_Bayes_Competence\": 4.19, \"t_Bayes_UPCO\": 13.68}",
+      "recomputed": "{\"Bayes_Competence\": {\"df\": 132, \"estimate\": 0.08798589475506444, \"p\": 5.032246880489113e-05, \"statistic\": 4.192007529165968}, \"Bayes_UPCO\": {\"df\": 132, \"estimate\": 0.6589024593271363, \"p\": 4.426410526749857e-27, \"statistic\": 13.681348075057544}}",
+      "status": "match",
+      "note": "Paired participant-correlation tests give t(132)=13.681348 and 4.192008; both p<.001, matching the figure-caption rounding.",
+      "reported_details": {
+        "Bayes_gt_UPCO": true,
+        "Bayes_gt_Competence": true,
+        "paired_p_upper": 0.001,
+        "t_Bayes_UPCO": 13.68,
+        "t_Bayes_Competence": 4.19,
+        "df": 132
+      },
+      "recomputed_details": {
+        "Bayes_UPCO": {
+          "estimate": 0.6589024593271363,
+          "statistic": 13.681348075057544,
+          "p": 4.426410526749857e-27,
+          "df": 132
+        },
+        "Bayes_Competence": {
+          "estimate": 0.08798589475506444,
+          "statistic": 4.192007529165968,
+          "p": 5.032246880489113e-05,
+          "df": 132
+        }
+      },
+      "comparison_rule": "paired t-test t rounds to two decimals, df=132, p<.001",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Bayes best captures about 75% of participants by correlation",
+      "reported": "{\"Bayes_percent\": 75}",
+      "recomputed": "{\"Bayes_percent\": 72.93233082706767, \"N\": 133, \"count\": 97}",
+      "status": "close",
+      "note": "Computed using the named model predictions; difference from approximate report is -2.067669 percentage points, within the predeclared 5-point band. Ties select the first model.",
+      "reported_details": {
+        "Bayes_percent": 75
+      },
+      "recomputed_details": {
+        "Bayes_percent": 72.93233082706767,
+        "count": 97,
+        "N": 133
+      },
+      "comparison_rule": "approximation: within 5 percentage points",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Bayes best captures about 80% of participants by absolute deviation",
+      "reported": "{\"Bayes_percent\": 80}",
+      "recomputed": "{\"Bayes_percent\": 83.45864661654136, \"N\": 133, \"count\": 111}",
+      "status": "close",
+      "note": "Computed using the named model predictions; difference from approximate report is +3.458647 percentage points, within the predeclared 5-point band. Ties select the first model.",
+      "reported_details": {
+        "Bayes_percent": 80
+      },
+      "recomputed_details": {
+        "Bayes_percent": 83.45864661654136,
+        "count": 111,
+        "N": 133
+      },
+      "comparison_rule": "approximation: within 5 percentage points",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "Bayes correlation with mean judgments across 225 stimuli",
+      "reported": "{\"p_upper\": 0.001, \"r\": 0.99}",
+      "recomputed": "{\"p\": 4.653984763248637e-197, \"r\": 0.9910572882992905}",
+      "status": "match",
+      "note": "Pearson correlation on 225 mean judgments. Stimulus-key alignment was checked explicitly and is true.",
+      "reported_details": {
+        "r": 0.99,
+        "p_upper": 0.001
+      },
+      "recomputed_details": {
+        "r": 0.9910572882992905,
+        "p": 4.653984763248637e-197
+      },
+      "comparison_rule": "r rounds to two decimals; p < .001",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "UPCO correlation with mean judgments across 225 stimuli",
+      "reported": "{\"p_upper\": 0.001, \"r\": 0.97}",
+      "recomputed": "{\"p\": 9.114180114835931e-142, \"r\": 0.9717171128512814}",
+      "status": "match",
+      "note": "Pearson correlation on 225 mean judgments. Stimulus-key alignment was checked explicitly and is true.",
+      "reported_details": {
+        "r": 0.97,
+        "p_upper": 0.001
+      },
+      "recomputed_details": {
+        "r": 0.9717171128512814,
+        "p": 9.114180114835931e-142
+      },
+      "comparison_rule": "r rounds to two decimals; p < .001",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "Competence correlation with mean judgments across 225 stimuli",
+      "reported": "{\"p_upper\": 0.001, \"r\": 0.96}",
+      "recomputed": "{\"p\": 5.1048756503046e-128, \"r\": 0.9622533550867227}",
+      "status": "match",
+      "note": "Pearson correlation on 225 mean judgments. Stimulus-key alignment was checked explicitly and is true.",
+      "reported_details": {
+        "r": 0.96,
+        "p_upper": 0.001
+      },
+      "recomputed_details": {
+        "r": 0.9622533550867227,
+        "p": 5.1048756503046e-128
+      },
+      "comparison_rule": "r rounds to two decimals; p < .001",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "Bayes has the lowest AIC among individual models",
+      "reported": "{\"lowest_individual\": \"Bayes\"}",
+      "recomputed": "{\"Bayes\": -890.3928416614689, \"Competence\": -569.6586231972518, \"UPCO\": -633.5200036954445}",
+      "status": "match",
+      "note": "AIC from the three shipped lm fits; all individual model ordering recurs.",
+      "reported_details": {
+        "lowest_individual": "Bayes"
+      },
+      "recomputed_details": {
+        "Bayes": -890.3928416614689,
+        "UPCO": -633.5200036954445,
+        "Competence": -569.6586231972518
+      },
+      "comparison_rule": "same AIC ordering",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Ensembles outperform individual models; Competence adds more to Bayes than UPCO",
+      "reported": "{\"B+C_better_than_B+U\": true, \"ensembles_better\": true}",
+      "recomputed": "{\"Bayes\": -890.3928416614689, \"Bayes+Competence\": -1139.6465971390128, \"Bayes+Competence+UPCO\": -1149.1071602435036, \"Bayes+UPCO\": -1039.4048128573738, \"Competence\": -569.6586231972518, \"Competence+UPCO\": -659.9793755309789, \"UPCO\": -633.5200036954445}",
+      "status": "match",
+      "note": "Both Bayes-containing two-model ensembles improve AIC; adding Competence improves it more than adding UPCO. This does not assert that the C+U ensemble beats Bayes.",
+      "reported_details": {
+        "ensembles_better": true,
+        "B+C_better_than_B+U": true
+      },
+      "recomputed_details": {
+        "Bayes": -890.3928416614689,
+        "Competence": -569.6586231972518,
+        "UPCO": -633.5200036954445,
+        "Competence+UPCO": -659.9793755309789,
+        "Bayes+UPCO": -1039.4048128573738,
+        "Bayes+Competence": -1139.6465971390128,
+        "Bayes+Competence+UPCO": -1149.1071602435036
+      },
+      "comparison_rule": "AIC comparisons",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "Alternative models best capture about one quarter of participants by correlation",
+      "reported": "{\"alternative_percent\": 25}",
+      "recomputed": "{\"N\": 458, \"alternative_percent\": 30.786026200873362, \"model_counts\": {\"Bayes\": 317, \"Competence\": 67, \"UPCO\": 74}}",
+      "status": "discrepant",
+      "note": "Group each participant by the named model with maximal correlation/minimal mean absolute error, as shipped. Difference is +5.786026 percentage points, outside the predeclared 5-point band. No ties were reallocated. Cause cannot be resolved from shipped files; manuscript summary differs from its code/data. The alternative model labels in the shipped E2 bar-chart constructor are also swapped.",
+      "reported_details": {
+        "alternative_percent": 25
+      },
+      "recomputed_details": {
+        "alternative_percent": 30.786026200873362,
+        "model_counts": {
+          "Bayes": 317,
+          "Competence": 67,
+          "UPCO": 74
+        },
+        "N": 458
+      },
+      "comparison_rule": "approximation: within 5 percentage points",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C18",
+      "quantity": "Alternative models best capture about one quarter of participants by deviation",
+      "reported": "{\"alternative_percent\": 25}",
+      "recomputed": "{\"N\": 458, \"alternative_percent\": 38.209606986899566, \"model_counts\": {\"Bayes\": 283, \"Competence\": 21, \"UPCO\": 154}}",
+      "status": "discrepant",
+      "note": "Group each participant by the named model with maximal correlation/minimal mean absolute error, as shipped. Difference is +13.209607 percentage points, outside the predeclared 5-point band. No ties were reallocated. Cause cannot be resolved from shipped files; manuscript summary differs from its code/data. The alternative model labels in the shipped E2 bar-chart constructor are also swapped.",
+      "reported_details": {
+        "alternative_percent": 25
+      },
+      "recomputed_details": {
+        "alternative_percent": 38.209606986899566,
+        "model_counts": {
+          "Bayes": 283,
+          "Competence": 21,
+          "UPCO": 154
+        },
+        "N": 458
+      },
+      "comparison_rule": "approximation: within 5 percentage points",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C19",
+      "quantity": "Bayes has the lowest AIC among individual models",
+      "reported": "{\"lowest_individual\": \"Bayes\"}",
+      "recomputed": "{\"Bayes\": 463.1475118260882, \"Competence\": 785.1300343900697, \"UPCO\": 569.7551127026637}",
+      "status": "match",
+      "note": "Fixed-effects lm is the default shipped main analysis and Bayes is the best individual predictor.",
+      "reported_details": {
+        "lowest_individual": "Bayes"
+      },
+      "recomputed_details": {
+        "Bayes": 463.1475118260882,
+        "UPCO": 569.7551127026637,
+        "Competence": 785.1300343900697
+      },
+      "comparison_rule": "same fixed-effect AIC ordering",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C20",
+      "quantity": "Ensembles improve on Bayes and Bayes+Competence has the best AIC",
+      "reported": "{\"best\": \"Bayes+Competence\"}",
+      "recomputed": "{\"Bayes\": 463.1475118260882, \"Bayes+Competence\": 322.7108441328596, \"Bayes+Competence+UPCO\": 323.7970165242868, \"Bayes+UPCO\": 418.8797447594345, \"Competence\": 785.1300343900697, \"Competence+UPCO\": 505.3969354914326, \"Prior\": 1013.7541088057948, \"Proportion\": 3299.089276221288, \"UPCO\": 569.7551127026637}",
+      "status": "match",
+      "note": "The B+C ensemble has the lowest fixed-effects AIC; B+U+C is next. The ordering recurs under the documented mixed-model recipe too.",
+      "reported_details": {
+        "best": "Bayes+Competence"
+      },
+      "recomputed_details": {
+        "Bayes": 463.1475118260882,
+        "UPCO": 569.7551127026637,
+        "Competence": 785.1300343900697,
+        "Prior": 1013.7541088057948,
+        "Proportion": 3299.089276221288,
+        "Bayes+UPCO": 418.8797447594345,
+        "Bayes+Competence": 322.7108441328596,
+        "Competence+UPCO": 505.3969354914326,
+        "Bayes+Competence+UPCO": 323.7970165242868
+      },
+      "comparison_rule": "same fixed-effect AIC ordering",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C21",
+      "quantity": "AIC for a proportion-only predictor is approximately 1722",
+      "reported": "{\"AIC\": 1722}",
+      "recomputed": "{\"AIC_documented_mixed_REML\": 1721.9814554340073, \"AIC_fixed\": 3299.089276221288, \"fixed_minus_reported\": 1577.089276221288, \"mixed_minus_reported\": -0.01854456599266996}",
+      "status": "close",
+      "note": "The reported approximate value recurs using the script-documented lmer substitution with participant/item random intercepts and default REML. The default fixed-effects lm value differs by +1577.089276; mixed-effects value differs by -0.018545. This is an algorithm/specification difference, not a change to data or fitted cognitive-model parameters. Main Figure 8 is described as fixed-effects; the paragraph should identify its mixed-effects specification.",
+      "reported_details": {
+        "AIC": 1722
+      },
+      "recomputed_details": {
+        "AIC_fixed": 3299.089276221288,
+        "AIC_documented_mixed_REML": 1721.9814554340073,
+        "fixed_minus_reported": 1577.089276221288,
+        "mixed_minus_reported": -0.01854456599266996
+      },
+      "comparison_rule": "absolute difference <= 1; compare regression specification",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C22",
+      "quantity": "AIC for a prior-only predictor is approximately 922",
+      "reported": "{\"AIC\": 922}",
+      "recomputed": "{\"AIC_documented_mixed_REML\": 922.1692071204617, \"AIC_fixed\": 1013.7541088057948, \"fixed_minus_reported\": 91.75410880579477, \"mixed_minus_reported\": 0.16920712046169228}",
+      "status": "close",
+      "note": "The reported approximate value recurs using the script-documented lmer substitution with participant/item random intercepts and default REML. The default fixed-effects lm value differs by +91.754109; mixed-effects value differs by +0.169207. This is an algorithm/specification difference, not a change to data or fitted cognitive-model parameters. Main Figure 8 is described as fixed-effects; the paragraph should identify its mixed-effects specification.",
+      "reported_details": {
+        "AIC": 922
+      },
+      "recomputed_details": {
+        "AIC_fixed": 1013.7541088057948,
+        "AIC_documented_mixed_REML": 922.1692071204617,
+        "fixed_minus_reported": 91.75410880579477,
+        "mixed_minus_reported": 0.16920712046169228
+      },
+      "comparison_rule": "absolute difference <= 1; compare regression specification",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C23",
+      "quantity": "AIC for Bayes is approximately 410",
+      "reported": "{\"AIC\": 410}",
+      "recomputed": "{\"AIC_documented_mixed_REML\": 410.08580311396634, \"AIC_fixed\": 463.1475118260882, \"fixed_minus_reported\": 53.14751182608819, \"mixed_minus_reported\": 0.08580311396633533}",
+      "status": "close",
+      "note": "The reported approximate value recurs using the script-documented lmer substitution with participant/item random intercepts and default REML. The default fixed-effects lm value differs by +53.147512; mixed-effects value differs by +0.085803. This is an algorithm/specification difference, not a change to data or fitted cognitive-model parameters. Main Figure 8 is described as fixed-effects; the paragraph should identify its mixed-effects specification.",
+      "reported_details": {
+        "AIC": 410
+      },
+      "recomputed_details": {
+        "AIC_fixed": 463.1475118260882,
+        "AIC_documented_mixed_REML": 410.08580311396634,
+        "fixed_minus_reported": 53.14751182608819,
+        "mixed_minus_reported": 0.08580311396633533
+      },
+      "comparison_rule": "absolute difference <= 1; compare regression specification",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C24",
+      "quantity": "AIC for UPCO is approximately 497",
+      "reported": "{\"AIC\": 497}",
+      "recomputed": "{\"AIC_documented_mixed_REML\": 497.26691126229923, \"AIC_fixed\": 569.7551127026637, \"fixed_minus_reported\": 72.75511270266372, \"mixed_minus_reported\": 0.26691126229923157}",
+      "status": "close",
+      "note": "The reported approximate value recurs using the script-documented lmer substitution with participant/item random intercepts and default REML. The default fixed-effects lm value differs by +72.755113; mixed-effects value differs by +0.266911. This is an algorithm/specification difference, not a change to data or fitted cognitive-model parameters. Main Figure 8 is described as fixed-effects; the paragraph should identify its mixed-effects specification.",
+      "reported_details": {
+        "AIC": 497
+      },
+      "recomputed_details": {
+        "AIC_fixed": 569.7551127026637,
+        "AIC_documented_mixed_REML": 497.26691126229923,
+        "fixed_minus_reported": 72.75511270266372,
+        "mixed_minus_reported": 0.26691126229923157
+      },
+      "comparison_rule": "absolute difference <= 1; compare regression specification",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C25",
+      "quantity": "AIC for Competence is approximately 507",
+      "reported": "{\"AIC\": 507}",
+      "recomputed": "{\"AIC_documented_mixed_REML\": 506.9276986324089, \"AIC_fixed\": 785.1300343900697, \"fixed_minus_reported\": 278.1300343900697, \"mixed_minus_reported\": -0.07230136759108063}",
+      "status": "close",
+      "note": "The reported approximate value recurs using the script-documented lmer substitution with participant/item random intercepts and default REML. The default fixed-effects lm value differs by +278.130034; mixed-effects value differs by -0.072301. This is an algorithm/specification difference, not a change to data or fitted cognitive-model parameters. Main Figure 8 is described as fixed-effects; the paragraph should identify its mixed-effects specification.",
+      "reported_details": {
+        "AIC": 507
+      },
+      "recomputed_details": {
+        "AIC_fixed": 785.1300343900697,
+        "AIC_documented_mixed_REML": 506.9276986324089,
+        "fixed_minus_reported": 278.1300343900697,
+        "mixed_minus_reported": -0.07230136759108063
+      },
+      "comparison_rule": "absolute difference <= 1; compare regression specification",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C26",
+      "quantity": "Bayes best captures 43% of participants by correlation",
+      "reported": "{\"Bayes_percent\": 43}",
+      "recomputed": "{\"Bayes_percent\": 42.5531914893617, \"N\": 235, \"count\": 100}",
+      "status": "match",
+      "note": "Best model is selected by named predictions for each retained participant; reported whole-percent rounding matches.",
+      "reported_details": {
+        "Bayes_percent": 43
+      },
+      "recomputed_details": {
+        "Bayes_percent": 42.5531914893617,
+        "count": 100,
+        "N": 235
+      },
+      "comparison_rule": "round percentage to nearest integer",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C27",
+      "quantity": "Bayes best captures 48% of participants by absolute deviation",
+      "reported": "{\"Bayes_percent\": 48}",
+      "recomputed": "{\"Bayes_percent\": 48.08510638297872, \"N\": 235, \"count\": 113}",
+      "status": "match",
+      "note": "Best model is selected by named predictions for each retained participant; reported whole-percent rounding matches.",
+      "reported_details": {
+        "Bayes_percent": 48
+      },
+      "recomputed_details": {
+        "Bayes_percent": 48.08510638297872,
+        "count": 113,
+        "N": 235
+      },
+      "comparison_rule": "round percentage to nearest integer",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C28",
+      "quantity": "Adding participant and item random intercepts preserves the main model ordering",
+      "reported": "{\"same_ordering\": true}",
+      "recomputed": "{\"documented_mixed_REML_order\": [\"Bayes+Competence\", \"Bayes+Competence+UPCO\", \"Bayes+UPCO\", \"Competence+UPCO\", \"Bayes\", \"UPCO\", \"Competence\", \"Prior\", \"Proportion\"], \"fixed_order\": [\"Bayes+Competence\", \"Bayes+Competence+UPCO\", \"Bayes+UPCO\", \"Bayes\", \"Competence+UPCO\", \"UPCO\", \"Competence\", \"Prior\", \"Proportion\"]}",
+      "status": "discrepant",
+      "note": "Executed the exact random-intercept substitution described in E3_analysis.R, with lmer defaults. Individual-model rankings and the top Bayes-containing ensembles agree, but C+U changes from worse than Bayes (fixed AIC difference +42.249424) to better (mixed REML difference -10.788043). The full reported ordering-invariance statement therefore does not recur. This is a rerun of the reported supplementary computation, not an added robustness analysis.",
+      "reported_details": {
+        "same_ordering": true
+      },
+      "recomputed_details": {
+        "fixed_order": [
+          "Bayes+Competence",
+          "Bayes+Competence+UPCO",
+          "Bayes+UPCO",
+          "Bayes",
+          "Competence+UPCO",
+          "UPCO",
+          "Competence",
+          "Prior",
+          "Proportion"
+        ],
+        "documented_mixed_REML_order": [
+          "Bayes+Competence",
+          "Bayes+Competence+UPCO",
+          "Bayes+UPCO",
+          "Competence+UPCO",
+          "Bayes",
+          "UPCO",
+          "Competence",
+          "Prior",
+          "Proportion"
+        ]
+      },
+      "comparison_rule": "run the mixed-model substitution described by shipped script; compare ML and REML explicitly",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C29",
+      "quantity": "The UPCO grid-search optimum is .51",
+      "reported": "{\"opt_upco\": 0.51}",
+      "recomputed": "{\"analyzed_n\": 59, \"coding_equivalence_max_error\": 1.1102230246251565e-16, \"execution\": {\"completed\": true, \"error\": null}, \"upco_false_coded\": 0.49, \"upco_true_coded\": 0.51}",
+      "status": "close",
+      "note": "The shipped pilot1 grid search returns .49 with false-vote count as its first argument. Swapping the vote labels gives true-opinion mapping 1-.49=.51; prediction equality is checked to floating-point precision. This is a coding convention, not a fitted-parameter discrepancy. The first pilot completes after adding its missing psych import and lossless reshape/API fixes.",
+      "reported_details": {
+        "opt_upco": 0.51
+      },
+      "recomputed_details": {
+        "analyzed_n": 59,
+        "upco_false_coded": 0.49,
+        "upco_true_coded": 0.51,
+        "coding_equivalence_max_error": 1.1102230246251565e-16,
+        "execution": {
+          "completed": true,
+          "error": null
+        }
+      },
+      "comparison_rule": "same shipped grid minimum",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C30",
+      "quantity": "The UPCO grid-search optimum is .52",
+      "reported": "{\"opt_upco\": 0.52}",
+      "recomputed": "{\"gap\": -0.010000000000000009, \"opt_upco\": 0.51}",
+      "status": "discrepant",
+      "note": "Exact shipped mean-absolute-error grid search from .1 through .9 by .01 selects .51, a gap of -.01 from Supplement A. No parameter was changed to force a match. Cause: manuscript/code parameter discrepancy; original software versions are not supplied, so version drift cannot be excluded.",
+      "reported_details": {
+        "opt_upco": 0.52
+      },
+      "recomputed_details": {
+        "opt_upco": 0.51,
+        "gap": -0.010000000000000009
+      },
+      "comparison_rule": "same shipped grid minimum",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C31",
+      "quantity": "Total sample size in the abstract",
+      "reported": "{\"N\": 886}",
+      "recomputed": "{\"mixed_basis_sum_133_458_295\": 886, \"raw_completed_responses\": 1008, \"retained\": 826}",
+      "status": "discrepant",
+      "note": "Abstract N=886 is neither total raw completed responses (1008; gap +122) nor retained participants (826; gap -60). It equals retained E1+retained E2+raw E3. Cause: inconsistent sample-count basis in reporting; no additional participant exclusions were invented.",
+      "reported_details": {
+        "N": 886
+      },
+      "recomputed_details": {
+        "raw_completed_responses": 1008,
+        "retained": 826,
+        "mixed_basis_sum_133_458_295": 886
+      },
+      "comparison_rule": "report whether total is recruited or analyzed and compare like with like",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C32",
+      "quantity": "The Experiment 3 pilot script executes its model comparison and power analysis",
+      "reported": "{\"script_completion\": true}",
+      "recomputed": "{\"completed\": false, \"error\": \"No random effects terms specified in formula\"}",
+      "status": "discrepant",
+      "note": "The source run stops at line 239: lmer(post_j ~ Bayes + Competence + UPCO) has no random-effect term and raises \"No random effects terms specified in formula\". Pilot data cleaning and cognitive-model fits were reached; the following dredge and power-simulation block was not executed. Replacing lmer with lm or choosing random effects would require a statistical specification decision, so it was not done.",
+      "reported_details": {
+        "script_completion": true
+      },
+      "recomputed_details": {
+        "completed": false,
+        "error": "No random effects terms specified in formula"
+      },
+      "comparison_rule": "execute without changing statistical specification",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C33",
+      "quantity": "E1 demographic counts and mean age",
+      "reported": "{\"N\": 133, \"male_female_other\": [46, 84, 3], \"mean_age\": 34}",
+      "recomputed": "{\"N\": 133, \"cohort\": \"retained\", \"male_female_other\": [46, 84, 3], \"mean_age\": 33.56390977443609}",
+      "status": "match",
+      "note": "Demographic counts and rounded mean age match on the cohort specified here. E1/E2 describe retained cohorts while E3 describes the raw cohort; this is explicit rather than silently pooling different count bases.",
+      "reported_details": {
+        "N": 133,
+        "male_female_other": [
+          46,
+          84,
+          3
+        ],
+        "mean_age": 34
+      },
+      "recomputed_details": {
+        "cohort": "retained",
+        "N": 133,
+        "male_female_other": [
+          46,
+          84,
+          3
+        ],
+        "mean_age": 33.56390977443609
+      },
+      "comparison_rule": "sex counts exact, combining nonbinary/other categories where the paper does; mean age rounds to integer; identify raw versus retained cohort",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C34",
+      "quantity": "E2 demographic counts and mean age",
+      "reported": "{\"N\": 458, \"male_female_other\": [204, 242, 12], \"mean_age\": 38}",
+      "recomputed": "{\"N\": 458, \"cohort\": \"retained\", \"male_female_other\": [204, 242, 12], \"mean_age\": 37.62227074235808}",
+      "status": "match",
+      "note": "Demographic counts and rounded mean age match on the cohort specified here. E1/E2 describe retained cohorts while E3 describes the raw cohort; this is explicit rather than silently pooling different count bases.",
+      "reported_details": {
+        "N": 458,
+        "male_female_other": [
+          204,
+          242,
+          12
+        ],
+        "mean_age": 38
+      },
+      "recomputed_details": {
+        "cohort": "retained",
+        "N": 458,
+        "male_female_other": [
+          204,
+          242,
+          12
+        ],
+        "mean_age": 37.62227074235808
+      },
+      "comparison_rule": "sex counts exact, combining nonbinary/other categories where the paper does; mean age rounds to integer; identify raw versus retained cohort",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    },
+    {
+      "claim_id": "C35",
+      "quantity": "E3 demographic counts and mean age",
+      "reported": "{\"N\": 295, \"male_female_other\": [163, 126, 6], \"mean_age\": 42}",
+      "recomputed": "{\"N\": 295, \"cohort\": \"raw\", \"male_female_other\": [163, 126, 6], \"mean_age\": 41.88775510204081}",
+      "status": "match",
+      "note": "Demographic counts and rounded mean age match on the cohort specified here. E1/E2 describe retained cohorts while E3 describes the raw cohort; this is explicit rather than silently pooling different count bases.",
+      "reported_details": {
+        "N": 295,
+        "male_female_other": [
+          163,
+          126,
+          6
+        ],
+        "mean_age": 42
+      },
+      "recomputed_details": {
+        "cohort": "raw",
+        "N": 295,
+        "male_female_other": [
+          163,
+          126,
+          6
+        ],
+        "mean_age": 41.88775510204081
+      },
+      "comparison_rule": "sex counts exact, combining nonbinary/other categories where the paper does; mean age rounds to integer; identify raw versus retained cohort",
+      "evidence": [
+        "outputs/recomputed.json",
+        "outputs/input-audit.json"
+      ]
+    }
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "HighConfidence",
+  "findings": [
+    {
+      "id": "NORM-001",
+      "severity": "P3",
+      "type": "normalization",
+      "description": "Hard-coded Windows or placeholder working directories prevent direct execution. Portable copies point to the untouched downloaded data directory.",
+      "evidence": "extracted/analysis_scripts; logs/*-unmodified.log; working/*/*/changes.diff",
+      "suggested_fix": "Use project-relative data paths. No source data or statistical constants changed."
+    },
+    {
+      "id": "NORM-002",
+      "severity": "P0",
+      "type": "normalization",
+      "description": "E1 and pilot1 create a named melt measure column but later request value and original trial names. Flattening the single measure family restores the expected schema losslessly.",
+      "evidence": "logs/E1-portable.log; working/E1/normalized/changes.diff; outputs/input-audit.json proves exact equality for all 2,394 E1 observations.",
+      "suggested_fix": "Use a character measure.vars vector and the intended value column explicitly."
+    },
+    {
+      "id": "NORM-003",
+      "severity": "P0",
+      "type": "normalization",
+      "description": "Current data.table rejects forwarding melt(data.frame(...)) to reshape2. E1/pilot1 compatibility copies explicitly namespace that same reshape2 method.",
+      "evidence": "logs/E1-forwarding-check.log; working/E1/normalized/changes.diff",
+      "suggested_fix": "Use reshape2::melt for data.frame objects. No values or calculations changed."
+    },
+    {
+      "id": "NORM-004",
+      "severity": "P0",
+      "type": "normalization",
+      "description": "pilot1 calls paired.r without importing psych. Its compatibility copy adds library(psych).",
+      "evidence": "logs/pilot1-import-check.log; working/pilot1/normalized/changes.diff",
+      "suggested_fix": "Import psych explicitly. This restores the original called function, without changing its arguments."
+    },
+    {
+      "id": "NORM-005",
+      "severity": "P3",
+      "type": "normalization",
+      "description": "Missing packages were installed locally. Hmisc was additionally required for the shipped bootstrap confidence-interval plotting functions. In-script package installation was moved into setup.",
+      "evidence": "logs/R-restore.log; R-environment.lock.json; outputs/figures.complete.json",
+      "suggested_fix": "Ship an environment lock and explicit plotting dependencies. Pinned archives are retained locally; original environment versions were not supplied."
+    },
+    {
+      "id": "DOC-001",
+      "severity": "P2",
+      "type": "defect",
+      "description": "E2 reports 108 exclusions, but the stated breakdown and shipped code both give 33+72=105.",
+      "evidence": "C02; outputs/recomputed.json: E2.exclusion_audit",
+      "suggested_fix": "Correct the total to 105 and distinguish raw N=563 from retained N=458."
+    },
+    {
+      "id": "NUM-001",
+      "severity": "P1",
+      "type": "defect",
+      "description": "E2 alternative models best capture 30.7860% by correlation and 38.2096% by deviation, versus about 25% reported.",
+      "evidence": "C17-C18; outputs/recomputed.json: E2.best_*_counts",
+      "suggested_fix": "Regenerate the participant-share description from the named-model count table, or identify the input/version that produced the reported percentages."
+    },
+    {
+      "id": "PLOT-001",
+      "severity": "P2",
+      "type": "defect",
+      "description": "E2 labels UPCO and Competence in the opposite order from the underlying melted model columns when constructing percplotd; its original chart remains unchanged in the reproduction.",
+      "evidence": "extracted/analysis_scripts/E2_analysis.R:199 and 258-264; outputs/E2/portable/objects.RData",
+      "suggested_fix": "Use mods, whose order is Competence, UPCO, Bayes, as the plotting label order. Do not change the stored model predictions."
+    },
+    {
+      "id": "DOC-002",
+      "severity": "P2",
+      "type": "defect",
+      "description": "Five E3 paragraph AICs recur under the documented mixed-effects REML recipe, while the default main analysis is fixed-effects lm and yields different AICs.",
+      "evidence": "C21-C25; outputs/recomputed.json: E3.aic_fixed and E3.aic_mixed_REML",
+      "suggested_fix": "Identify the regression specification and REML setting beside every reported AIC, and export both documented analyses explicitly."
+    },
+    {
+      "id": "NUM-003",
+      "severity": "P2",
+      "type": "defect",
+      "description": "E3 full model ordering changes under the documented mixed-model recipe: C+U moves from worse than Bayes to better than Bayes, although individual rankings and best Bayes-containing ensembles agree.",
+      "evidence": "C28; outputs/recomputed.json: E3.aic_fixed and E3.aic_mixed_REML",
+      "suggested_fix": "Qualify the ordering-invariance statement and show both complete AIC tables. No statistical model was changed beyond the script-documented substitution."
+    },
+    {
+      "id": "NUM-002",
+      "severity": "P1",
+      "type": "defect",
+      "description": "E3 shipped UPCO search selects .51, while Supplement A reports .52.",
+      "evidence": "C30; extracted/analysis_scripts/E3_analysis.R:172-182; outputs/recomputed.json",
+      "suggested_fix": "State .51 for the shipped dataset/code, or provide the precise original data/software version that yields .52."
+    },
+    {
+      "id": "RUN-001",
+      "severity": "P0",
+      "type": "defect",
+      "description": "The E3 pilot cannot execute its model-comparison/power tail because lmer is called without any random effects.",
+      "evidence": "C32; logs/E3pilot-portable.log; outputs/E3pilot/portable/status.json",
+      "suggested_fix": "Authors should specify the intended model (lm or an explicit mixed formula). The reproduction does not guess a statistical correction."
+    },
+    {
+      "id": "DOC-003",
+      "severity": "P2",
+      "type": "defect",
+      "description": "E1 aggregate comparison numbers recur as Fisher z statistics, although the text calls them t. Its UPCO p-value rounds to .75 as in the text but Fig.3 prints .74.",
+      "evidence": "C05, C07-C08; outputs/recomputed.json: E1.aggregate_comparisons",
+      "suggested_fix": "Correct the statistic label and use consistent p-value rounding; retain the original test specification explicitly."
+    },
+    {
+      "id": "DOC-004",
+      "severity": "P2",
+      "type": "defect",
+      "description": "The abstract N=886 combines retained E1/E2 cohorts with the raw E3 cohort. Shipped files contain 1,008 raw completed responses and 826 retained participants.",
+      "evidence": "C31, C33-C35; outputs/input-audit.json",
+      "suggested_fix": "Use a consistent raw or analyzed sample basis and report per-study enrollment/exclusions/retained counts."
+    }
+  ],
+  "ai_generated": true,
+  "github_url": "urn:reprocrowd:unpublished:RC-2026-921",
+  "limitations": [
+    "No robustness or sensitivity analysis was performed; scientific correctness was not assessed. outcome_robustness is not checked.",
+    "The main reported statistics and selected pilot/execution checks are enumerated in 35 grouped claims. This is not an exhaustive numerical audit of all supplementary figures, simulation outputs or preregistrations. No approval wait was needed under the pilot instruction.",
+    "The publisher supplement was initially visible through web retrieval, including Supplement A model-implementation details, but direct local PDF download returned HTTP 403 and later web retrievals failed. No local supplement PDF is bundled. Only its inspected .51/.52 implementation statements were used.",
+    "No original R/package version or lockfile was shipped. All used versions are recorded; source-era version drift cannot be measured. No alternative cognitive-model parameters were substituted.",
+    "R 4.6.1 and bundled/core R packages are host-provided. Pixi pins Python/workflow dependencies; R-environment.lock.json pins 150 locally installed CRAN binaries with SHA256. A same-host rebuild from empty input, package-library, Pixi-environment and download-cache directories was tested where documented in outputs/fresh-rebuild-check.json. Future CRAN/OSF availability and other hosts are not guaranteed.",
+    "Original data/code and local RData snapshots remain private local inputs. No original data/code or participant identifiers were uploaded. Download scripts link to and hash-check the original sources.",
+    "The pilot is local-only: no GitHub repository, release DOI, FLoRA submission or signed nanopublications were published. Required URI fields use an explicit urn:reprocrowd:unpublished identifier rather than a fictitious public URL. The FLoRA record is a schema-valid local draft, not ready for import until its publication URL exists.",
+    "Human review/signature is pending in SIGN-OFF.md. Nanopublication drafts use verified FORRT vocabulary but have no signed/published chain URIs.",
+    "The prompt originally supplied broken lukasroeseler.github.io URLs (HTTP 404). The user supplied live forrtproject.github.io replacements; those rule pack/schema bytes and hashes are preserved locally.",
+    "Bootstrap/jitter plotting is seeded for reruns. No exact-pixel or exact-bootstrap-CI equivalence to the paper is claimed. The MyST configuration is supplied; a MyST site build was not performed."
+  ],
+  "artifacts": {
+    "pipeline": "file:///private/tmp/scratch_pilot/sol/G-21/learning-from-aggregated-opinion-certification",
+    "chain_uris": [],
+    "console_log": "logs/; outputs/execution-summary.json"
+  },
+  "signatories": [
+    {
+      "name": "ReproCrowd pilot agent (Codex / OpenAI gpt-6.1-sol)",
+      "role": "codechecker"
+    }
+  ],
+  "provenance": {
+    "raw_data": "https://osf.io/dexuy/; source/osf-manifest.json; local untouched extracted/",
+    "processed_data": "outputs/*/*/objects.RData (local only, contains original-derived participant data)",
+    "analysis_script": "extracted/analysis_scripts/ (originals); working/ (documented portability/compatibility copies)"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  },
+  "study_type": "Reproduction Study",
+  "forrt_claim_type": "model performance",
+  "forrt_outcome_status": "PartiallySupported",
+  "cito_intention": "http://purl.org/spar/cito/qualifies",
+  "publication_status": "not published",
+  "schema_source": "https://forrtproject.github.io/reprocrowd/schemas/certificate.schema.json",
+  "schema_validation": "passed (Draft 2020-12, format checking enabled)",
+  "result_counts": {
+    "close": 12,
+    "discrepant": 7,
+    "match": 16
+  },
+  "rerun_verification": {
+    "directory": "/private/tmp/scratch_pilot/sol/G-21/fresh-rebuild/learning-from-aggregated-opinion-certification",
+    "initial_original_inputs": false,
+    "initial_R_library": false,
+    "initial_pixi_environment": false,
+    "initial_download_cache": false,
+    "pixi_bootstrap_binary_copied": true,
+    "workflow_exit_code": 0,
+    "all_8_rules_completed": true,
+    "fresh_schema_validation_passed": true,
+    "recomputed_values_identical": true,
+    "numeric_scalars_compared": 222,
+    "differences": [],
+    "recomputed_sha256_primary": "6352e4624a5a4dd996a03e9efed57713dedeccf4697f721b8e1013cd278ed2cb",
+    "recomputed_sha256_fresh": "6352e4624a5a4dd996a03e9efed57713dedeccf4697f721b8e1013cd278ed2cb",
+    "fresh_result_counts": {
+      "close": 12,
+      "discrepant": 7,
+      "match": 16
+    },
+    "verified_at_utc": "2026-10-30T20:43:34.699040+00:00",
+    "log": "logs/fresh-rebuild.log"
+  }
+}

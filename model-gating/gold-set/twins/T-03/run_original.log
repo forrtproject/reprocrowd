@@ -1,0 +1,52 @@
+T-03 / G-04 / original
+Executed 2026-10-30, Rscript --vanilla; no statistical repairs.
+Scope: In MTurk_Analyses.R and then REP_Analyses.R, evaluate the original top-level assignments to the sample (read.csv and within preprocessing), StdFE, and mlr1 in their original order. StdFE Frame supplies C1/C2; primary-model mlr1 VDA supplies C3/C4 and Frame supplies C5/C6. Other analyses, plots and redundant model fits are outside scope. StdFE (standard framing, G4/L6 cells) must not be confused with mlr0 (all cells).
+Lossless setup: ["Load dplyr and lme4 for the selected numeric sections; set the working directory to Data and R Code. No statistical, data or formula edits."]
+Command (from repo root, after preparing pinned inputs):
+Rscript --vanilla model-gating/gold-set/twins/reproduce.R G-04 /absolute/path/to/package
+
+$C1
+[1] 2.17749253083
+
+$C2
+[1] 0.95761777765
+
+$C3
+[1] 1.03864871268
+
+$C4
+[1] 0.679539492991
+
+$C5
+[1] 1.19939678412
+
+$C6
+[1] 0.66311397708
+
+RUN_RESULT_JSON {"r_version":"R version 4.6.1 (2026-06-24)","packages":{"base":"4.6.1","boot":"1.3.32","cli":"3.6.6","compiler":"4.6.1","datasets":"4.6.1","dplyr":"1.2.1","generics":"0.1.4","glue":"1.8.1","graphics":"4.6.1","grDevices":"4.6.1","grid":"4.6.1","lattice":"0.22.9","lifecycle":"1.0.5","lme4":"2.1.0","magrittr":"2.0.5","MASS":"7.3.66","Matrix":"1.7.5","methods":"4.6.1","minqa":"1.2.8","nlme":"3.1.169","nloptr":"2.2.1","pillar":"1.11.1","pkgconfig":"2.0.3","R6":"2.6.1","rbibutils":"2.4.1","Rcpp":"1.1.2","Rdpack":"2.6.6","reformulas":"0.4.4","rlang":"1.3.0","splines":"4.6.1","stats":"4.6.1","tibble":"3.3.1","tidyselect":"1.2.1","tools":"4.6.1","utils":"4.6.1","vctrs":"0.7.3"},"runtime_seconds":0.97700000000000009,"claims":{"C1":2.1774925308326818,"C2":0.95761777765017131,"C3":1.0386487126805271,"C4":0.67953949299101857,"C5":1.199396784123377,"C6":0.66311397707964126}}
+SESSION
+R version 4.6.1 (2026-06-24)
+Platform: aarch64-apple-darwin23
+Running under: macOS Tahoe 26.7
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
+
+locale:
+[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8
+
+time zone: Europe/London
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] lme4_2.1-0   Matrix_1.7-5 dplyr_1.2.1 
+
+loaded via a namespace (and not attached):
+ [1] vctrs_0.7.3      nlme_3.1-169     cli_3.6.6        rlang_1.3.0      reformulas_0.4.4 generics_0.1.4   jsonlite_2.0.0   minqa_1.2.8     
+ [9] glue_1.8.1       grid_4.6.1       tibble_3.3.1     MASS_7.3-66      lifecycle_1.0.5  compiler_4.6.1   Rcpp_1.1.2       pkgconfig_2.0.3 
+[17] lattice_0.22-9   nloptr_2.2.1     R6_2.6.1         tidyselect_1.2.1 pillar_1.11.1    Rdpack_2.6.6     splines_4.6.1    rbibutils_2.4.1 
+[25] magrittr_2.0.5   tools_4.6.1      boot_1.3-32     

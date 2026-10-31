@@ -1,0 +1,1370 @@
+[
+  {
+    "path": "02-scripts/03-meta-analysis.Rmd",
+    "sha256": "907c13278f1ffa691642ebfe6754dca850a68fb2a7b4d5a1f922b16a0df58eae",
+    "git_blob_oid": "4f8141213693354c1067f1a562235e72d406b04b",
+    "bytes": 54170,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/02-scripts/03-meta-analysis.Rmd",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/02-scripts/03-meta-analysis.Rmd"
+  },
+  {
+    "path": "03-results/04-summary/imp_ELSA_Linear_slope_AllInteraction_adj.RData",
+    "sha256": "649b32c83f61cf4712fc6dd3ecd208085ab33871b5add5b14c68a13bbf944842",
+    "git_blob_oid": "afeb0bdf10851abeb63a936ceb38e56352485b9a",
+    "bytes": 2891,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_ELSA_Linear_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_ELSA_Linear_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_ELSA_Linear_slope_Interaction_adj.RData",
+    "sha256": "48d8f6e4e1264378ca8121f438f17b448bc822f618374336972617fd8df5631c",
+    "git_blob_oid": "280e167b8dcd393bbd445b0476368c0c4cce5408",
+    "bytes": 601066,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_ELSA_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_ELSA_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_ELSA_Linear_slope_Main_adj.RData",
+    "sha256": "ce2e3db96ead5e31ee119f364a2cc5b8825c4546aec04e8d09dcaa82b08a5ca4",
+    "git_blob_oid": "5983c4f31254b24bd549dda48114b9e5bbe221f1",
+    "bytes": 6987,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_ELSA_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_ELSA_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_ELSA_Linear_slope_b.age_adj.RData",
+    "sha256": "9745bd8b8b65f3b6f749314c8a851aa4918e62ae6308c0b4c7ac7d825ec49e31",
+    "git_blob_oid": "059f8fa418ccffa9aa22c547e313a70a9ef416c6",
+    "bytes": 24244,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_ELSA_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_ELSA_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_ELSA_Quadratic_slope_AllInteraction_adj.RData",
+    "sha256": "34e74751eb3a4cb0957f0e8cb396ee047326a299d16fc81144a561bb4d2f25b7",
+    "git_blob_oid": "ba19f8fd63c52dee21b2b6700e6fb72b5032685c",
+    "bytes": 4261,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_ELSA_Quadratic_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_ELSA_Quadratic_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_ELSA_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "5649b4412bd3294c2b9df702a3350eeb417f33b0c2f6d0c8a264c2f01447413d",
+    "git_blob_oid": "4da212546d04bfb94a8d0a382c483680cab654a8",
+    "bytes": 608133,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_ELSA_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_ELSA_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_ELSA_Quadratic_slope_Main_adj.RData",
+    "sha256": "de85c9b6e1ade6625933dd01976d7ca9c58f1fc5e550df9d1ac255ad1f3fc95c",
+    "git_blob_oid": "93a5f0b2dee534398d807f5c7e2a67447b90e8bc",
+    "bytes": 7522,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_ELSA_Quadratic_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_ELSA_Quadratic_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_ELSA_Quadratic_slope_b.age_adj.RData",
+    "sha256": "e229b938b68e502ae048e320aa612f400d0a9600a3416d5faf30e5a3ea7a0c78",
+    "git_blob_oid": "6c9191e4b9b478ccf12c66006993bd78cd1c596e",
+    "bytes": 25372,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_ELSA_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_ELSA_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_GSOEP_Linear_slope_AllInteraction_adj.RData",
+    "sha256": "9eb1be7aae32b4276f3d155bb179e3622bf5bb95e8282725d9509860bebb930e",
+    "git_blob_oid": "855441f27e9e602d7192cd4e2fa6ff4aebabe1e1",
+    "bytes": 2599,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_GSOEP_Linear_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_GSOEP_Linear_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_GSOEP_Linear_slope_Interaction_adj.RData",
+    "sha256": "f993fecab1366c9dc780df918c93b86e3beedc011fc82263436feada1a658dc0",
+    "git_blob_oid": "fa8c549ac1112e24560a7783e4bfe1fbb99afb11",
+    "bytes": 304452,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_GSOEP_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_GSOEP_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_GSOEP_Linear_slope_Main_adj.RData",
+    "sha256": "02fae181a0d9dbc8bc39e30488ac98d692c0b863dfe6629c0abcdb0e9df739bb",
+    "git_blob_oid": "77d71e9d9e0c52a7433da6640dca3ba2412551b3",
+    "bytes": 6698,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_GSOEP_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_GSOEP_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_GSOEP_Linear_slope_b.age_adj.RData",
+    "sha256": "d19de2e5ce0ecd0f1610f296fe1543b5016a794034275230e8fed4ed6bfd0d82",
+    "git_blob_oid": "830c412ec5a2c2e017a6a93f9054baae1e472d48",
+    "bytes": 13071,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_GSOEP_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_GSOEP_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_GSOEP_Quadratic_slope_AllInteraction_adj.RData",
+    "sha256": "cfff828518b9752d837fbaf417c02f70356a74816e1b03440089de143c8d764a",
+    "git_blob_oid": "1b1bc350d28759a82961886d8c6c214151098d6d",
+    "bytes": 3663,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_GSOEP_Quadratic_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_GSOEP_Quadratic_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_GSOEP_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "2dfcc20e9f129ba4d4c333524d3e568fb98d364d344ad0acc36a68e14045885e",
+    "git_blob_oid": "fedf431bd5a420cb378539bdb3e3fe002d8a7801",
+    "bytes": 306405,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_GSOEP_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_GSOEP_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_GSOEP_Quadratic_slope_Main_adj.RData",
+    "sha256": "d394c1fa1c627a84c973068dcc63fa9849ed94559ba5cd877e0854268badcb97",
+    "git_blob_oid": "67ff5b1b5031abb0572944bc4b53bd378d0721af",
+    "bytes": 7143,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_GSOEP_Quadratic_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_GSOEP_Quadratic_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_GSOEP_Quadratic_slope_b.age_adj.RData",
+    "sha256": "14785306853041e5e6490b3e071418e85845fa50fdcb697bea86310dda16eefe",
+    "git_blob_oid": "39d21114c687932d58935cdeadf67aa1c6a65e58",
+    "bytes": 13891,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_GSOEP_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_GSOEP_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_HILDA_Linear_slope_AllInteraction_adj.RData",
+    "sha256": "adaa68bae53ea3f8d28f25e39135d54b2201b164ac1103dcf09dbd34330788ca",
+    "git_blob_oid": "32bbbe8650e6e5da5f1d5c4b7bcc201fb422e36b",
+    "bytes": 2800,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HILDA_Linear_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HILDA_Linear_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_HILDA_Linear_slope_Interaction_adj.RData",
+    "sha256": "42024b100e573121e8a465d951382b8ef3ea6f2bc694c2c9ded6dce1ec4a1e80",
+    "git_blob_oid": "2ca3090bf22dc1b92e3682ba8b9d87b58c7c20f2",
+    "bytes": 305533,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HILDA_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HILDA_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_HILDA_Linear_slope_Main_adj.RData",
+    "sha256": "f4f2bacd8e900fa577129a7c915ea584afac338643a2fd2558cb574605283a24",
+    "git_blob_oid": "df7d13882b940cc66bc043179502bc471ce51f59",
+    "bytes": 6870,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HILDA_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HILDA_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_HILDA_Linear_slope_b.age_adj.RData",
+    "sha256": "52e27ea582279ce7a9e2afac8e0f88fdcc33ae3ee4292e4a0f7fe1958ad2ffa8",
+    "git_blob_oid": "dd8c5073cd755b208ca4fda6c927a9d8a89a7285",
+    "bytes": 13496,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HILDA_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HILDA_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_HILDA_Quadratic_slope_AllInteraction_adj.RData",
+    "sha256": "07076c4d066622ba213aac096ce0604dee7bb1b0dfef9164d329e9fa29d17498",
+    "git_blob_oid": "b40a82c7adc01ce7346b27c9722cd8c7c1e3e10d",
+    "bytes": 4120,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HILDA_Quadratic_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HILDA_Quadratic_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_HILDA_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "289ffd1af0e79f1e62fc59ec8a7e6d9d57e2cf033bf6f8e0030bbb7251ff8a08",
+    "git_blob_oid": "2025c2a2e834546fc86154455eea7149480cdb27",
+    "bytes": 307592,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HILDA_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HILDA_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_HILDA_Quadratic_slope_Main_adj.RData",
+    "sha256": "8cac3438b82a6214664b06bc135e58faffabeaa53d60bcc013affff9abaffe0b",
+    "git_blob_oid": "d69f450bbc9aaea992260ec3425e43c45200132b",
+    "bytes": 7386,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HILDA_Quadratic_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HILDA_Quadratic_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_HILDA_Quadratic_slope_b.age_adj.RData",
+    "sha256": "c756af798bf0d82c61806e196688c9eede5081f337bacb3b537f845fe6475e42",
+    "git_blob_oid": "377c73cd56d273bd8bb0d24fc02a067284005360",
+    "bytes": 14351,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HILDA_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HILDA_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_HRS_Linear_slope_AllInteraction_adj.RData",
+    "sha256": "9b829609868ad70c9010752ebfd62c00c1c4a3b77fbcb990075b8529ab4978fd",
+    "git_blob_oid": "54256e4e92c46d0311140edb52bcf07f5ed36a5f",
+    "bytes": 2929,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HRS_Linear_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HRS_Linear_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_HRS_Linear_slope_Interaction_adj.RData",
+    "sha256": "c71324f8124db128adf27fa40561f98e017b3a2fd613fa5937fefc08c9f73fcd",
+    "git_blob_oid": "3aad938019a029f80dd707d87ac3ec6ad6cef273",
+    "bytes": 598900,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HRS_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HRS_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_HRS_Linear_slope_Main_adj.RData",
+    "sha256": "f89890414632034b3340cb07610062afb8f182311a203aa64499e1810186d8c6",
+    "git_blob_oid": "67d2948b3795cf64394c63546c18ef2b6c623f78",
+    "bytes": 7064,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HRS_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HRS_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_HRS_Linear_slope_b.age_adj.RData",
+    "sha256": "d38ec779920f2b4a21ca6adaa4e86d79651649bab5cff002473432c243d4fa5d",
+    "git_blob_oid": "daf25830b56aa4e491f62133ca4de61e881c4acf",
+    "bytes": 24259,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HRS_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HRS_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_HRS_Quadratic_slope_AllInteraction_adj.RData",
+    "sha256": "c4c1d6392feb862e7ae86b113b3c703601bfd42947ced9ed7f522edc1e084504",
+    "git_blob_oid": "f1a964e1a403873ec1b5043685669a4409bfd544",
+    "bytes": 4301,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HRS_Quadratic_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HRS_Quadratic_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_HRS_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "b62c9a9aeb879dd36ae2d57dc893ac8d80d500fae9bfdb1c5619b80b33ce1bc6",
+    "git_blob_oid": "324c5f1d7024a926bb4afd78e57e151c2e99e9f1",
+    "bytes": 603694,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HRS_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HRS_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_HRS_Quadratic_slope_Main_adj.RData",
+    "sha256": "c2bcefa939df272a973f3e1b3f56275618ca560128295db1969d7fa12d8a0706",
+    "git_blob_oid": "56fab01666128b4eee1646bc345e173d46006a1d",
+    "bytes": 7575,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HRS_Quadratic_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HRS_Quadratic_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_HRS_Quadratic_slope_b.age_adj.RData",
+    "sha256": "8572e4c1de6992e5385920ee2435054c66102fc9ee0d9363008112ecad859eba",
+    "git_blob_oid": "ae3119df4d895baf46897a7c55e53f7559856d1d",
+    "bytes": 25406,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HRS_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_HRS_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_LISS_Linear_slope_AllInteraction_adj.RData",
+    "sha256": "16c9fc667976fd74fd912b0cd1a770cad51a5011b9656104110ea5b4892bba8b",
+    "git_blob_oid": "83e0479c3bb37819f47a6197da968e999a8a5fa7",
+    "bytes": 2809,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_LISS_Linear_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_LISS_Linear_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_LISS_Linear_slope_Interaction_adj.RData",
+    "sha256": "0423d33529779547159bbd0e6aff4eea3110238c1b2463fa6e069e0064d8578a",
+    "git_blob_oid": "95d346761e2e601c799354f559628284deb0126f",
+    "bytes": 306992,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_LISS_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_LISS_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_LISS_Linear_slope_Main_adj.RData",
+    "sha256": "4878f2361dc4cc532da3203388ca894c8cca636d351bbcf311cc74285f301396",
+    "git_blob_oid": "be5fdad36119db314458e7dd45ef5f5dde685755",
+    "bytes": 6900,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_LISS_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_LISS_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_LISS_Linear_slope_b.age_adj.RData",
+    "sha256": "51a8a06dcad1f3098d010ebca8ac524ab21ae0b42500c0d2c183a9be01aa0aae",
+    "git_blob_oid": "3f0d8de0ca646eda08f9d0683c2c4a7c02a30482",
+    "bytes": 13507,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_LISS_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_LISS_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_LISS_Quadratic_slope_AllInteraction_adj.RData",
+    "sha256": "1bf9e091406ee5de341359c6ed1978d15887f6459d945744f69630504bb8a3b4",
+    "git_blob_oid": "75e7f7d67f591e504db34bc577c66f9bea6d3f1c",
+    "bytes": 4120,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_LISS_Quadratic_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_LISS_Quadratic_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_LISS_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "aae798557fe5a2d04e854904647c065f02144f0cebc8d6d5909076695d65e741",
+    "git_blob_oid": "1c1dbf5e0ac0551cf22d5ed50332be1ccedab276",
+    "bytes": 308332,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_LISS_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_LISS_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_LISS_Quadratic_slope_Main_adj.RData",
+    "sha256": "2a314958ce7ad8b73888af93b959ee247d057fe5a1735f584b69dfa667efc99f",
+    "git_blob_oid": "b7114c835890adf637fdff116cf03763afbeb5d6",
+    "bytes": 7417,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_LISS_Quadratic_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_LISS_Quadratic_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_LISS_Quadratic_slope_b.age_adj.RData",
+    "sha256": "4267010a953da01a1f596aaf6509b194ab1ed12a5bf926d51e36cb42bbacbb98",
+    "git_blob_oid": "8d8423672b351472794ae006d969ccdd7b474d5d",
+    "bytes": 14379,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_LISS_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_LISS_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_OCTOTWIN_Linear_slope_AllInteraction_adj.RData",
+    "sha256": "272c52864acbdb7002bf518f214abf682352eb858ce3f71e47a99b3e5784cd8c",
+    "git_blob_oid": "7c9cfde764ea2474954af62fcb8f2de8c97b020c",
+    "bytes": 2949,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_OCTOTWIN_Linear_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_OCTOTWIN_Linear_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_OCTOTWIN_Linear_slope_Interaction_adj.RData",
+    "sha256": "37a38bed82f006221dda6a9609feb48288bcd8f61cb01f7205034fcc1458fa3d",
+    "git_blob_oid": "ce211ce5be8ab1632722b3d36d92307ccdf0f041",
+    "bytes": 596783,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_OCTOTWIN_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_OCTOTWIN_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_OCTOTWIN_Linear_slope_Main_adj.RData",
+    "sha256": "3e1dc5d9a4f31d2f449c3722353f2609c0f79ad4e112ce01c8aeef7be0c9fe1b",
+    "git_blob_oid": "c08d8df7f475fd35d66e1dd3aced12f79b30aaa1",
+    "bytes": 7030,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_OCTOTWIN_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_OCTOTWIN_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_OCTOTWIN_Linear_slope_b.age_adj.RData",
+    "sha256": "4633a2f3aba32fe188740c50a21bfcedcfe888875fef370d504bba9eb43e7e9c",
+    "git_blob_oid": "304c6e7e8c8d87b6301b949c940f9f7873d2eab0",
+    "bytes": 24268,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_OCTOTWIN_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_OCTOTWIN_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_OCTOTWIN_Quadratic_slope_AllInteraction_adj.RData",
+    "sha256": "a48dc20bcff3912fe408dea9e75fbd117d06d9d4e74c8de85bd7e61bed6f94e4",
+    "git_blob_oid": "3e0ccd0b766c12c7a5181c4babcdbc5a0326d6c2",
+    "bytes": 4286,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_OCTOTWIN_Quadratic_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_OCTOTWIN_Quadratic_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_OCTOTWIN_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "480a57677ea54c4b9a4cc365c017bf05dfa9c5f79246d2871fc4040b62880414",
+    "git_blob_oid": "7f26bb286c77fc482ca90e98dc9c1d42fca7f201",
+    "bytes": 598162,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_OCTOTWIN_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_OCTOTWIN_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_OCTOTWIN_Quadratic_slope_Main_adj.RData",
+    "sha256": "79317b83d4c675d03d41726450fe11b226806b570a435ebe64097e9544df90bf",
+    "git_blob_oid": "7d81e71041ec4f493cf04d3e2b77ad05541a4999",
+    "bytes": 7551,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_OCTOTWIN_Quadratic_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_OCTOTWIN_Quadratic_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_OCTOTWIN_Quadratic_slope_b.age_adj.RData",
+    "sha256": "6802d536e7c907904d1890639c6f4674f4932ab6209572e59f905dba1bdaf6f3",
+    "git_blob_oid": "e20e7e8eadac73c864ac5b7d75f6038fd5eed30d",
+    "bytes": 25371,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_OCTOTWIN_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_OCTOTWIN_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SATSA_Linear_slope_AllInteraction_adj.RData",
+    "sha256": "38a4aaf7dafe534c07c1f5691646321ea2b5d14a11738c6680beeb4b6e9cf28f",
+    "git_blob_oid": "fb1b3aab9c926209ef403adfb0e10a40471722af",
+    "bytes": 2848,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SATSA_Linear_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SATSA_Linear_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SATSA_Linear_slope_Interaction_adj.RData",
+    "sha256": "f2748cbcb6366f28002dc91398a256ba741c1e5ad55a25d22908286718b99d3c",
+    "git_blob_oid": "bdfc954df74fce0cdd95f97100455d1d6b08e69a",
+    "bytes": 602298,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SATSA_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SATSA_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SATSA_Linear_slope_Main_adj.RData",
+    "sha256": "9e66f499baa07dce7d8941131835574a753043914ebd86bb11e13bee6205e211",
+    "git_blob_oid": "e93b754a4094004b493d54286208375f0f770bd1",
+    "bytes": 7014,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SATSA_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SATSA_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SATSA_Linear_slope_b.age_adj.RData",
+    "sha256": "15ddc865f3274fabda48d58e18932f414bb6e6f43a19792e393f7cafc8fb3ed7",
+    "git_blob_oid": "91749bc2c820e4e4211e598e7a7700bc63c63a5f",
+    "bytes": 23705,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SATSA_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SATSA_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SATSA_Quadratic_slope_AllInteraction_adj.RData",
+    "sha256": "ff554c94946a1131f9d1c668c4c361468f9146ae89ad7bfe309e24819f6a4d9a",
+    "git_blob_oid": "81f813d8873b5e7aa9057eae2d87f7867a6fb5ef",
+    "bytes": 4157,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SATSA_Quadratic_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SATSA_Quadratic_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SATSA_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "d1b2f05acc83dd8716da3135ffb556d9d42540db4232fabe9f7d2671230c55a6",
+    "git_blob_oid": "9c23fe08a6afd6be8d89b5d5bc5df4b53a846cb5",
+    "bytes": 605337,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SATSA_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SATSA_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SATSA_Quadratic_slope_Main_adj.RData",
+    "sha256": "558744cea851a68b18666192cac8849f0a9d7f669ed465cdfd20486c2347d030",
+    "git_blob_oid": "292444f887075d2ddf9e5d96952aef3ae8a0ec79",
+    "bytes": 7537,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SATSA_Quadratic_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SATSA_Quadratic_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SATSA_Quadratic_slope_b.age_adj.RData",
+    "sha256": "f120f930d3c73edc428b38119c4c2922fcfc7aa1193012cfe4764b2f6818b66f",
+    "git_blob_oid": "6498ca870fe5663a83c2ea0d8e4bc26cbb8edc93",
+    "bytes": 24850,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SATSA_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SATSA_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SHARE_Linear_slope_AllInteraction_adj.RData",
+    "sha256": "5b0f6ed0afdd04228abed345f2b35121bc38a0f06e7a03bc4a4927bbbe8f3314",
+    "git_blob_oid": "482e59c9f58cebb3f88d92ce856d39c657894037",
+    "bytes": 2892,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHARE_Linear_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHARE_Linear_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SHARE_Linear_slope_Interaction_adj.RData",
+    "sha256": "53967519418f8d5bd049f412569fefc09e4422ef79c2c4fb47c6294a866d2fdb",
+    "git_blob_oid": "99625a19a18f7cb70bd475dee0f96a1a68efdfb9",
+    "bytes": 600606,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHARE_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHARE_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SHARE_Linear_slope_Main_adj.RData",
+    "sha256": "3b5b66c1ab383ec33b0167e9e279c148d7e26061875788838a18853c65ed9d9c",
+    "git_blob_oid": "93f603dd8bf1fabd1115f1de59a400bbba5edc6a",
+    "bytes": 7011,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHARE_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHARE_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SHARE_Linear_slope_b.age_adj.RData",
+    "sha256": "0865e0ae904aecbff286d8a9cab4209cf211efcdf02341c532ef79bb3c2680be",
+    "git_blob_oid": "05072c5e5a72bb71c46501659e1421f5d70932fa",
+    "bytes": 24246,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHARE_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHARE_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SHARE_Quadratic_slope_AllInteraction_adj.RData",
+    "sha256": "1c43202346a449d81eaf78b9c835e207152de0a9abf0f2dda55f858cc17de7f2",
+    "git_blob_oid": "e26b3efb4916fc3ced2d513b7152940123f1375c",
+    "bytes": 4295,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHARE_Quadratic_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHARE_Quadratic_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SHARE_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "aebf4a273d20b53c90dc57de6ff93a16bb59782cbfbed6266f0e7030550175b5",
+    "git_blob_oid": "eac36d2685d039273bc0beeabe0c6464c627ddc6",
+    "bytes": 603894,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHARE_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHARE_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SHARE_Quadratic_slope_Main_adj.RData",
+    "sha256": "9274331f531ee64f41d851961387906ef20975ab4f6a967b78d0bba6bf396d8e",
+    "git_blob_oid": "d59c17c508574f515f244fac0f8c6550f89c9fe2",
+    "bytes": 7557,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHARE_Quadratic_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHARE_Quadratic_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SHARE_Quadratic_slope_b.age_adj.RData",
+    "sha256": "abb1a53fce0b03a4848569a88d3a79105bfe3fca2c8c0da79a2378fd6a3856fc",
+    "git_blob_oid": "66ce8031b158b5f25e832d01b91f114cd58a90b1",
+    "bytes": 25399,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHARE_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHARE_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SHP_Linear_slope_AllInteraction_adj.RData",
+    "sha256": "01d53c61d5988b2fab6d21ec15dd1713d4440d11045be37399576c3db7dcfb13",
+    "git_blob_oid": "a6d1ac4aaf1371f580550705d2dbd7a5610088ca",
+    "bytes": 2411,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHP_Linear_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHP_Linear_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SHP_Linear_slope_Interaction_adj.RData",
+    "sha256": "c8b99f123f3a8f7e47feb14c7f0e794400296f94fde57744b6a06bf719186ffb",
+    "git_blob_oid": "289e8b38b7d05b66daf8af6adafacfd25aaf2e15",
+    "bytes": 152504,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHP_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHP_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SHP_Linear_slope_Main_adj.RData",
+    "sha256": "1013bd3fd407b27a03300e18d769186734d9dc0bca9a757692baaa522688a7ce",
+    "git_blob_oid": "259d5b8184019d55acc3dd7ac5854a0b6d4181f9",
+    "bytes": 6599,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHP_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHP_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SHP_Linear_slope_b.age_adj.RData",
+    "sha256": "d41dabdfdcb12b950b559870af987e8220eb5d30a7853161e0baf744b1f427f1",
+    "git_blob_oid": "9642cba9c00770eeb922dc21d89a2ba657749ba3",
+    "bytes": 7738,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHP_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHP_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SHP_Quadratic_slope_AllInteraction_adj.RData",
+    "sha256": "4d9803448d9e37a2443f7b78908d4b38ff2cb311cfd8466a34df2ef715aaa87e",
+    "git_blob_oid": "414ceb411afee4ada94c1038ba949305f890a85a",
+    "bytes": 70,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHP_Quadratic_slope_AllInteraction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHP_Quadratic_slope_AllInteraction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SHP_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "001e2639eb985c5b70ef283685937f5ad4dc805000818ac031876d60a4ec915b",
+    "git_blob_oid": "a7d52f1bc10eca6c984cd5bd7faac1cdefaa8edd",
+    "bytes": 73,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHP_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHP_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SHP_Quadratic_slope_Main_adj.RData",
+    "sha256": "001e2639eb985c5b70ef283685937f5ad4dc805000818ac031876d60a4ec915b",
+    "git_blob_oid": "a7d52f1bc10eca6c984cd5bd7faac1cdefaa8edd",
+    "bytes": 73,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHP_Quadratic_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHP_Quadratic_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/imp_SHP_Quadratic_slope_b.age_adj.RData",
+    "sha256": "4d9803448d9e37a2443f7b78908d4b38ff2cb311cfd8466a34df2ef715aaa87e",
+    "git_blob_oid": "414ceb411afee4ada94c1038ba949305f890a85a",
+    "bytes": 70,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHP_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/imp_SHP_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_BHPS_Linear_intercept_Main_none.RData",
+    "sha256": "ade46baa1403d174084d9953db8b69a3a1ed6986b8c20e84fada64ec7ceeb692",
+    "git_blob_oid": "ffb56c9811f8bcd6cd04799845dc026963a84ebc",
+    "bytes": 535,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_BHPS_Linear_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_BHPS_Linear_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_BHPS_Linear_slope_Interaction_adj.RData",
+    "sha256": "001e2639eb985c5b70ef283685937f5ad4dc805000818ac031876d60a4ec915b",
+    "git_blob_oid": "a7d52f1bc10eca6c984cd5bd7faac1cdefaa8edd",
+    "bytes": 73,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_BHPS_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_BHPS_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_BHPS_Linear_slope_Main_adj.RData",
+    "sha256": "001e2639eb985c5b70ef283685937f5ad4dc805000818ac031876d60a4ec915b",
+    "git_blob_oid": "a7d52f1bc10eca6c984cd5bd7faac1cdefaa8edd",
+    "bytes": 73,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_BHPS_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_BHPS_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_BHPS_Linear_slope_Main_none.RData",
+    "sha256": "e354f99be4722cf84b7ef8a0304fd46d52ee22a5eb349267f7623e5d1dc5fb9d",
+    "git_blob_oid": "60d0c0aa6c715649e7844c7f6dabfe31a075fde8",
+    "bytes": 586,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_BHPS_Linear_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_BHPS_Linear_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_BHPS_Quadratic_intercept_Main_none.RData",
+    "sha256": "e3d65eb20faa30dbd4898605ea3f7e562e37aaef924387abc29813a729f6bea1",
+    "git_blob_oid": "9c06e3023d866ed43d47fcaeb735e1e6de1f3dac",
+    "bytes": 574,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_BHPS_Quadratic_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_BHPS_Quadratic_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_BHPS_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "001e2639eb985c5b70ef283685937f5ad4dc805000818ac031876d60a4ec915b",
+    "git_blob_oid": "a7d52f1bc10eca6c984cd5bd7faac1cdefaa8edd",
+    "bytes": 73,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_BHPS_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_BHPS_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_BHPS_Quadratic_slope_Main_none.RData",
+    "sha256": "c1e82b5a98e3706de10f52dc8f44c7e27bd2d7be706e92a1c7ab213abd160d83",
+    "git_blob_oid": "44e620e8761a02323c3fc540f3c5c87e175c2522",
+    "bytes": 673,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_BHPS_Quadratic_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_BHPS_Quadratic_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_BHPS_unconditional_intercept_Main_none.RData",
+    "sha256": "8411e9c2b6607018baf2bed0f8d5dc499601836a20de1de3bd6012858800e7d9",
+    "git_blob_oid": "e6d6aaa149abf9bce62d1367c1df8d26f58c6d99",
+    "bytes": 497,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_BHPS_unconditional_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_BHPS_unconditional_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_ELSA_Linear_intercept_Main_none.RData",
+    "sha256": "5ad10845c8bfbcc55eadce713519447d6d496bd62d8ae12a70eb84845308b9b2",
+    "git_blob_oid": "f68dc71da6a323941e2d1b21a35599bcd75a0af4",
+    "bytes": 538,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Linear_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Linear_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_ELSA_Linear_slope_Interaction_adj.RData",
+    "sha256": "e5ec04081fbab14869363e5374eb10852670b0b25ff747319c1bf33e48059576",
+    "git_blob_oid": "ab3e6e82ddf282b180263161d72f1ba088868adb",
+    "bytes": 1088,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_ELSA_Linear_slope_Main_adj.RData",
+    "sha256": "97041e4cb98959dc83157591465407f9b93e0fde7ea11e1bdc54b352901f80de",
+    "git_blob_oid": "c8863891a316939852ad4b290fccf14a60cf25bc",
+    "bytes": 843,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_ELSA_Linear_slope_Main_none.RData",
+    "sha256": "bd873d9bb6b898c01107f3537b789a94f8bdb6412dd06c100a98053301b2d4b3",
+    "git_blob_oid": "88c9880936aa4c90c84a94ade77a499552a9ec74",
+    "bytes": 589,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Linear_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Linear_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_ELSA_Linear_slope_b.age_adj.RData",
+    "sha256": "e8e941b5f857289d16a56c5c9fcbe498aa42c2e3019f894ec1a7f2d0112c6443",
+    "git_blob_oid": "af3a18f135aec5ce2ae0ff6e39ac0bc32aa3a05b",
+    "bytes": 1060,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_ELSA_Quadratic_intercept_Main_none.RData",
+    "sha256": "d5553250af35c63862e0cad0114e8bbe30826fbbb72d0394eabd2eb65af92038",
+    "git_blob_oid": "9bcc4b46c9703978b9474f7503583dc8c59087f8",
+    "bytes": 577,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Quadratic_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Quadratic_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_ELSA_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "305bebfc11202bba2cdf0f79c4b1040dfd948ab8f01db8e905e7a055e2c514a5",
+    "git_blob_oid": "ea19657c819a632ccaa5460422e8cc1450190788",
+    "bytes": 1350,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_ELSA_Quadratic_slope_Main_none.RData",
+    "sha256": "1383ec1cdc24871939a82be46fa2c4754d8c5c7195aa0da4edd4fc715ff4a2d8",
+    "git_blob_oid": "b18c371af1cb88f7321da50f810d18b621b38bc9",
+    "bytes": 677,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Quadratic_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Quadratic_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_ELSA_Quadratic_slope_b.age_adj.RData",
+    "sha256": "cfb1e5dde1c25b93119f5679f179ede97c32f31731902c864f8e3b0e27b9a7d0",
+    "git_blob_oid": "e77af7028c1d53fa0ec7c12252c672b873780604",
+    "bytes": 1093,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_ELSA_unconditional_intercept_Main_none.RData",
+    "sha256": "1881faf8590595d6a3723d4fba756c9bc72da858a4143d5bf8ba142630b8f3eb",
+    "git_blob_oid": "ec03d039edd1331885c6e575c273e9481aab9f67",
+    "bytes": 500,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_unconditional_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_ELSA_unconditional_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_GSOEP_Linear_intercept_Main_none.RData",
+    "sha256": "24bbf8f86b22ea049a84b27cf3ad669c42488dc1bfe824c92286dc825ebcc85a",
+    "git_blob_oid": "b94acf74cedcb16b519e6e6d8425154938702cd3",
+    "bytes": 537,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Linear_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Linear_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_GSOEP_Linear_slope_Interaction_adj.RData",
+    "sha256": "ad85cacfd7362ecae323b724fd51ae04810c6d41e960ed53b56d033a733f776c",
+    "git_blob_oid": "5aef1160b4877edc0bb072927280f811c8f8cea1",
+    "bytes": 1087,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_GSOEP_Linear_slope_Main_adj.RData",
+    "sha256": "e0f639448f698a2b88d1ac1f90601019d2f663a11bb6b7a7025732f72e6d27a2",
+    "git_blob_oid": "0a56c8e3a890a8dad70bbd6d1548c29c27a831d6",
+    "bytes": 843,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_GSOEP_Linear_slope_Main_none.RData",
+    "sha256": "822d919d69bc430b8e97dd5f8f0c381399b18b517322addb8d93d08c5242b1e5",
+    "git_blob_oid": "00a88060919d4938172bda98a38546fb3fba8b78",
+    "bytes": 588,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Linear_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Linear_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_GSOEP_Linear_slope_b.age_adj.RData",
+    "sha256": "7cbcdf63b8a5be4d494158412926a2174acf3f1153080032fcfd7055102c3de5",
+    "git_blob_oid": "040cbb5fe46ec7caa36c042f8acca0a140d8d445",
+    "bytes": 1061,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_GSOEP_Quadratic_intercept_Main_none.RData",
+    "sha256": "0f3979b6dba5c477aeb6367dc7944df3115ab24e6149cc1c5d20cdb95b29f636",
+    "git_blob_oid": "d934511561a572abffcdbe540f77c2f1e7b025e3",
+    "bytes": 577,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Quadratic_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Quadratic_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_GSOEP_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "495357d05da523e4e1c00091e64fd511942b538e42be0f4faff759c69faa24e6",
+    "git_blob_oid": "25a755a8f3a624e6131482c4dd5ab0d69742a38a",
+    "bytes": 1351,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_GSOEP_Quadratic_slope_Main_none.RData",
+    "sha256": "9c8d1a71fbc08769539004546dc1b4dd57297777144f8423f97c6ce89db0a575",
+    "git_blob_oid": "aec6fd70d6446e1d3e614e818fb3371123032887",
+    "bytes": 678,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Quadratic_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Quadratic_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_GSOEP_Quadratic_slope_b.age_adj.RData",
+    "sha256": "e144dad060525b11bb3aab4a837fbc5cd8a46578679c66ea975c4cc8737e94ba",
+    "git_blob_oid": "4d8defc3e522add1bb38a035cbfc05599cf88e99",
+    "bytes": 1092,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_GSOEP_unconditional_intercept_Main_none.RData",
+    "sha256": "d45a474f644381bdd068a5f449f8d4bf158efcff0ce933315b3fa54e14dd298d",
+    "git_blob_oid": "bd6956206bd4582a0e9bfae4efd9ace9a8223b25",
+    "bytes": 501,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_unconditional_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_GSOEP_unconditional_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HILDA_Linear_intercept_Main_none.RData",
+    "sha256": "5729c61d960c8a6e3cc5f075751a21972bb7699c7a5c0a050bcfa5cea2ad6d87",
+    "git_blob_oid": "af193608b06ce124f3ad23e0400509b8034cdf98",
+    "bytes": 537,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Linear_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Linear_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HILDA_Linear_slope_Interaction_adj.RData",
+    "sha256": "c005b7815a91675452c2ab32efcba9b68f922793591bd37e6e6832962bd88a76",
+    "git_blob_oid": "fe510a100154c8956ba320112a746bd22a0ee6fa",
+    "bytes": 1087,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HILDA_Linear_slope_Main_adj.RData",
+    "sha256": "3555fe8e8b9c7fbb344ef57f1787d30a6f2f64011938b6aa49baf1b8957b9aee",
+    "git_blob_oid": "ce3cdc753d809d6b6ad11c1fab6ffa433caf20a6",
+    "bytes": 843,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HILDA_Linear_slope_Main_none.RData",
+    "sha256": "2a0b8b59d4e3f421e92f3e4dafee6e951923aea4f68d76f2b4b9d3924d26c968",
+    "git_blob_oid": "b62100897606feebeff0bccf937f76cba4a19371",
+    "bytes": 585,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Linear_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Linear_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HILDA_Linear_slope_b.age_adj.RData",
+    "sha256": "8a2b77505015d5fd685e32e895b970ed4ece8ab03d883c31b46538a9b8f245ac",
+    "git_blob_oid": "75ad0e7d19d294a53a383109e6ceb6faa551f67f",
+    "bytes": 1060,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HILDA_Quadratic_intercept_Main_none.RData",
+    "sha256": "155fd30308a044c152fcc85b82aa27c56c83ab0c416c21bd87f392c273621799",
+    "git_blob_oid": "b8c9632f54ab3d2211a55ed10e5da54aeb33668a",
+    "bytes": 576,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Quadratic_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Quadratic_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HILDA_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "0b32ce247a9ba8bf9f8b3723c95d6022392eb3bac5821c99c6d036af6dada7d2",
+    "git_blob_oid": "9eecca02a7c8cf7ba4d4d32a989cec8ab583c0fc",
+    "bytes": 1356,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HILDA_Quadratic_slope_Main_none.RData",
+    "sha256": "41c91e3d2469965fa6c0d86344a5a5db23907265429f43a9c21a059e9aa39113",
+    "git_blob_oid": "ffcb32f4a7efe569374cd82df4f06beb156b5985",
+    "bytes": 676,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Quadratic_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Quadratic_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HILDA_Quadratic_slope_b.age_adj.RData",
+    "sha256": "2f3a8d0b7e6b442e98490b365dcd5d1b752485d7da65ba888ae34c2082aee7dd",
+    "git_blob_oid": "abd88320b490598a164d415abf6b707482ff0521",
+    "bytes": 1092,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HILDA_unconditional_intercept_Main_none.RData",
+    "sha256": "48365f47541beb908fe0a0f45cc804d5f2925f3d818d7674301ef45497613dc5",
+    "git_blob_oid": "8a74532fa9bbaeab91ed6164ec1d0f30e7fded82",
+    "bytes": 500,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_unconditional_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HILDA_unconditional_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HRS_Linear_intercept_Main_none.RData",
+    "sha256": "ef9ad4abaf3b48778fac8933c12a38397245215e6fecf24aa08ff53e6d711d71",
+    "git_blob_oid": "864827aa65a3de00f463c1ca1f82f2b95bcfc596",
+    "bytes": 537,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Linear_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Linear_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HRS_Linear_slope_Interaction_adj.RData",
+    "sha256": "9dcaabb1be9fb4e4af57ea64c9371b51511850a89775093d97259b6cf34cb863",
+    "git_blob_oid": "8776ec960e353d263822f38a0ef2ce568c31236e",
+    "bytes": 1084,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HRS_Linear_slope_Main_adj.RData",
+    "sha256": "5ceb50b9c15904e7137ded391f1d608686b74f34e5728f8c198f05d5904a1921",
+    "git_blob_oid": "ceb36b55bdae006b909ca3a49f8bed5e3ed6c947",
+    "bytes": 842,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HRS_Linear_slope_Main_none.RData",
+    "sha256": "350091856aadca56f84608abef4e17d31c4547c58fe231e61b0e6215f95de87b",
+    "git_blob_oid": "73d223badf6f52e3b2534951278b05a1eb820c4f",
+    "bytes": 588,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Linear_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Linear_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HRS_Linear_slope_b.age_adj.RData",
+    "sha256": "bf44af654524712312c61f30c3b19d01ac1998d8c5a24530c07d01cac14bdbda",
+    "git_blob_oid": "cd212c63119f3cc8d8eb6d29e48fe49201fa84a8",
+    "bytes": 1062,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HRS_Quadratic_intercept_Main_none.RData",
+    "sha256": "e46e2ea2c2635927b642a7784cb929f099dde457574e9cef25605f90aa75e008",
+    "git_blob_oid": "c2925c3fcfed0094d7b03bc5a7c15b59f1cfdf98",
+    "bytes": 576,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Quadratic_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Quadratic_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HRS_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "dabd054627ad95fc53f9e8c1af2a21846fc83424c8e9155664b7add6a35f5023",
+    "git_blob_oid": "44a73413c4cfe26462ab80a1ca9087cd964c7042",
+    "bytes": 1352,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HRS_Quadratic_slope_Main_none.RData",
+    "sha256": "15e7fad3ef38f50bf0cb3d45b54c02e18f44513691570aa6cc273636fd6237bb",
+    "git_blob_oid": "98e07d67aeb35298a1d0f60ea420334ca755ef27",
+    "bytes": 624,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Quadratic_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Quadratic_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HRS_Quadratic_slope_b.age_adj.RData",
+    "sha256": "9eeeaab6f4bbd44e374842654844cf3276e95ce883dd6d4f27352031a50e8bda",
+    "git_blob_oid": "bf8a46086211d46de335c722d55c8a5002efab88",
+    "bytes": 1091,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_HRS_unconditional_intercept_Main_none.RData",
+    "sha256": "01d8fcedf34764c62d9296a3fe8869bcecf4697ad4b85ddb91eec8fd4d88ab5f",
+    "git_blob_oid": "d133dbbfc97a423c9ebac31161b2c9b8ef143cb8",
+    "bytes": 500,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_unconditional_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_HRS_unconditional_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_LISS_Linear_intercept_Main_none.RData",
+    "sha256": "fe5ca759775302a61e28dead6d2bf4cdfe9598032e8a9f5aec36ccc5e4c8362d",
+    "git_blob_oid": "3e3a4cb69790a113b8fd2aa946b7c568d6f95854",
+    "bytes": 535,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Linear_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Linear_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_LISS_Linear_slope_Interaction_adj.RData",
+    "sha256": "53c3056122206a1ab825bb790dc7c5b38046aa33c408144893dc183ddc8278e5",
+    "git_blob_oid": "4769a22106eaa11521fbf296b477ff47cee3642e",
+    "bytes": 1087,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_LISS_Linear_slope_Main_adj.RData",
+    "sha256": "e216ad5247ea73d65055c50a84f278a4d1395eb253c02329fd091d46255191b3",
+    "git_blob_oid": "01878dd911f08deb2640e3461525941b6eea285d",
+    "bytes": 844,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_LISS_Linear_slope_Main_none.RData",
+    "sha256": "ce35314dad54e9d1e3747fdacf5eb67bc5582f7ac0cd7b8ab0f13ba17e72d562",
+    "git_blob_oid": "1d0928970896b10bbd1d37f440fc22104018d673",
+    "bytes": 588,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Linear_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Linear_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_LISS_Linear_slope_b.age_adj.RData",
+    "sha256": "4ec1d3e17d40bb75678a52930c943d6d4908f9ca5507c646a405108ef5aead24",
+    "git_blob_oid": "c2cb936bd5331334c81174a88dce861e9b448114",
+    "bytes": 1061,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_LISS_Quadratic_intercept_Main_none.RData",
+    "sha256": "9a9975a86d7f00dce6b7247c6643ade1389ff7c90c1bcff184a7dee7c4647f3f",
+    "git_blob_oid": "43b6ced4761f08e8498b597a4dca670ffff2d77a",
+    "bytes": 577,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Quadratic_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Quadratic_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_LISS_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "805e97aebf546a7135eab7ab662cca9f18ecfed3425dadd2cf61baa1a04d733b",
+    "git_blob_oid": "e0f7c727a1888e1435a0c16ff20d2c4063b4e985",
+    "bytes": 1343,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_LISS_Quadratic_slope_Main_none.RData",
+    "sha256": "53aaf1587eda46c5a2c211d61d8af33fd6e459d04fadab4aaf0b02fc0565e80e",
+    "git_blob_oid": "97a1e339cd4d14f54e385235b7d89c2772489f4c",
+    "bytes": 625,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Quadratic_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Quadratic_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_LISS_Quadratic_slope_b.age_adj.RData",
+    "sha256": "83b2df886bf4ae0ef463f98932654c541170e4e81cba2287e64ffa5bba235c94",
+    "git_blob_oid": "dd89063844225ce16eca7493294c1c6059f992be",
+    "bytes": 1092,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_LISS_unconditional_intercept_Main_none.RData",
+    "sha256": "b35f46d9c5d67067e0431d4914a49216d782b969c7bdeacd48d072eee486282f",
+    "git_blob_oid": "6aa19cd4156dff22553a20b9dc7f9d7afe2f94f9",
+    "bytes": 500,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_unconditional_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_LISS_unconditional_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_OCTOTWIN_Linear_intercept_Main_none.RData",
+    "sha256": "198d2f046d91d3f126fb1b8bbb8e2df33dd59b03cc1a14076117439aae021f15",
+    "git_blob_oid": "c41887543a1c537600d5a73137ae8e2bbcfd9bb7",
+    "bytes": 536,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Linear_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Linear_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_OCTOTWIN_Linear_slope_Interaction_adj.RData",
+    "sha256": "6b987af312948455bed084428546f1e4160d0a5eeb8c8f57778526b96e0118e1",
+    "git_blob_oid": "a824378a0b5f77f6f524c5ed2fdf1f71f1df2880",
+    "bytes": 1084,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_OCTOTWIN_Linear_slope_Main_adj.RData",
+    "sha256": "19552b8473a1a27ca2ef8a1f6966da2dba199497ee83834d9b12d7e5b01e743f",
+    "git_blob_oid": "2c0d856b1324d3ff8526663c58e5138400041c58",
+    "bytes": 764,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_OCTOTWIN_Linear_slope_Main_none.RData",
+    "sha256": "f819cf750a58687c0a979a1bd4363a4198d7fc26c9ae5960d4bdf2e22295aeb8",
+    "git_blob_oid": "fb22db2944970aa59677f8a68ba1e7be22831260",
+    "bytes": 505,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Linear_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Linear_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_OCTOTWIN_Linear_slope_b.age_adj.RData",
+    "sha256": "129f61b58f23ac913696616fb477579719fb0114aa79d29cbc46dbe75085e607",
+    "git_blob_oid": "bd788abc11f32ecbaa9ceb56dbc20a6c9523514e",
+    "bytes": 1058,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_OCTOTWIN_Quadratic_intercept_Main_none.RData",
+    "sha256": "55fa42adc19931f45f9a24e3e4c1f42bae33b7c6a38213ce8e65893063d40174",
+    "git_blob_oid": "1217e6b1652f30108ccbd91ab8060897f260d887",
+    "bytes": 574,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Quadratic_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Quadratic_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_OCTOTWIN_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "b37af3de489f01c6abb03c615057f8653a7a6ef00fca2c0ecd2c9e52503c4e2a",
+    "git_blob_oid": "a174209bfec16625cc75cc022f17e06e4fa97183",
+    "bytes": 1282,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_OCTOTWIN_Quadratic_slope_Main_none.RData",
+    "sha256": "dd5f8f895d5def18109e993577c6790a3e01af50b12b54ff295be8ae0405039c",
+    "git_blob_oid": "705e2c4c2f820283611d210c14717988e2cdc6db",
+    "bytes": 583,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Quadratic_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Quadratic_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_OCTOTWIN_Quadratic_slope_b.age_adj.RData",
+    "sha256": "f9565eb2dee861403a83ac4537f617f0f5dd857ebc347e3dab50d0d1c897a658",
+    "git_blob_oid": "67f88285a5ca8e7bdb047ee5a540b05fcfe0e8e0",
+    "bytes": 1088,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_OCTOTWIN_unconditional_intercept_Main_none.RData",
+    "sha256": "8ac11b35edc25c9a4c8f544f5749ed1aeba06f1b497c8f97ed952a79b86555a8",
+    "git_blob_oid": "f01cf2a15502060c2938cd7238b745e497aa5ab6",
+    "bytes": 499,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_unconditional_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_OCTOTWIN_unconditional_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SATSA_Linear_intercept_Main_none.RData",
+    "sha256": "9e56045052c2b6b5a675342d6170570c449425e1d739f067c45bc6d1ea8576a8",
+    "git_blob_oid": "26093f247bbe4aefbd5adf72d3b0ecedc08678a0",
+    "bytes": 539,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Linear_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Linear_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SATSA_Linear_slope_Interaction_adj.RData",
+    "sha256": "de9a8ea77e0fd9dfdc3d357b2c07c5ed28f63607457b141f70b668a12778883b",
+    "git_blob_oid": "249c75913f8e310a3b52ee19e80c29bf4988944c",
+    "bytes": 1087,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SATSA_Linear_slope_Main_adj.RData",
+    "sha256": "a2f87dc7f33ad0a0cfdfc68784fe9fa43f1acf531cbb52bd9f29a5e4ccddc080",
+    "git_blob_oid": "734330fbc590428b842afc2fe953e8fc6a045c9e",
+    "bytes": 842,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SATSA_Linear_slope_Main_none.RData",
+    "sha256": "7f63520a693a922e33b0a201261879c20d3d7c0d0cfbbbc0e5379339a986573a",
+    "git_blob_oid": "d63f6f942463136613fad999d3568616afef775e",
+    "bytes": 588,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Linear_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Linear_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SATSA_Linear_slope_b.age_adj.RData",
+    "sha256": "52751939801b55f7a48d7592b961e3a926247d3cdd8548e57776766ba6b5ed54",
+    "git_blob_oid": "d3b52567005bfeaa8640ec4eacc4d67901dd7038",
+    "bytes": 1059,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SATSA_Quadratic_intercept_Main_none.RData",
+    "sha256": "b67c1b696d6664dddbeb80ec593f69396a3d9457e78c76766ee23e7801fd035b",
+    "git_blob_oid": "0a545887f38a125c364b21d8d88904fee38ce870",
+    "bytes": 577,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Quadratic_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Quadratic_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SATSA_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "e510ad8661f28e3b3bff204f78a943049cf58aa9cbed45528ac83f78904f92e2",
+    "git_blob_oid": "8fea84185af5ea52347acdda1061e730a5567734",
+    "bytes": 1348,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SATSA_Quadratic_slope_Main_none.RData",
+    "sha256": "88233c586e7f0b8b6e6dfe92df035e49d982c4464ba7864ba59e0f17562cc7be",
+    "git_blob_oid": "a475e2f2e1253549460a604ba8d24a15f9326151",
+    "bytes": 677,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Quadratic_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Quadratic_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SATSA_Quadratic_slope_b.age_adj.RData",
+    "sha256": "539066990c3bd455b78fabed6932eb091a320d5cd8705df17932db6378c65172",
+    "git_blob_oid": "b034aeb374aabf840394b463870b858e12abad38",
+    "bytes": 1090,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SATSA_unconditional_intercept_Main_none.RData",
+    "sha256": "dcf17dcfa8a6859af43dea4790aaf371edac5ec83619b10063a0c9023e3f274f",
+    "git_blob_oid": "254a9d85b93ff56bd48891f5f9f9ed7359ebbfbd",
+    "bytes": 499,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_unconditional_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SATSA_unconditional_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHARE_Linear_intercept_Main_none.RData",
+    "sha256": "ec41398d5f3d5c05667464a4d54547c7cb2804ee7dcb8ed588b9c9f0674792c5",
+    "git_blob_oid": "876f3a506ab5c66b357d1390a8f5e9a90bd65e40",
+    "bytes": 538,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Linear_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Linear_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHARE_Linear_slope_Interaction_adj.RData",
+    "sha256": "e51168bff7d6bf26cfd5de8997205e1af01a553f0a378c05d39aa86491cc15a2",
+    "git_blob_oid": "27aa088c30062f847d859bfb364c4ff46d5183f8",
+    "bytes": 1087,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHARE_Linear_slope_Main_adj.RData",
+    "sha256": "38bf3e1dd5e8d948ae89c355e87e4c55af7639278e7b1ad17130b972ae19848e",
+    "git_blob_oid": "08ecc69cdeb7c37bf39c4097057d204ba8b80570",
+    "bytes": 841,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHARE_Linear_slope_Main_none.RData",
+    "sha256": "e09a5e708a2ff686dca93f9e1f2b117ba176c617ebb731f4a2062d98c8fa2cbe",
+    "git_blob_oid": "05ae9d545b249feba9524c9384152762d83538a3",
+    "bytes": 587,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Linear_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Linear_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHARE_Linear_slope_b.age_adj.RData",
+    "sha256": "27f6a835f387bdabf3a954194263abaeb32bb68f6cdcd7d7ceaccb7de62d00a6",
+    "git_blob_oid": "8e0cc2f10c54e3927776e11300a24e6b0bdf1a9f",
+    "bytes": 1061,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHARE_Quadratic_intercept_Main_none.RData",
+    "sha256": "a1f22f2aea8e19f3c2232d6c76b15488455319e6ae0e686d167e572ce8096b8a",
+    "git_blob_oid": "a0e98676653ad0417362959f15db866b1787f3b2",
+    "bytes": 577,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Quadratic_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Quadratic_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHARE_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "f9334e60a05b55dc0e8581a74e88692cb44ce145f6ebefa9249cd67911ea0195",
+    "git_blob_oid": "9082c4c9d2babba15c00ba140a8716a2a6ec4adf",
+    "bytes": 1352,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHARE_Quadratic_slope_Main_none.RData",
+    "sha256": "e84b7dafa4af845b64eb5ba4b35685ba5993e64e1b0399d0baaf5a66917537b1",
+    "git_blob_oid": "bf93b5806c681d9ea194f0c9cf49c4f7148543bf",
+    "bytes": 677,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Quadratic_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Quadratic_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHARE_Quadratic_slope_b.age_adj.RData",
+    "sha256": "6b1922ced0857def77bd03f9fbffa0d11911bc4a805ec5e1fa99ff1f25008b0f",
+    "git_blob_oid": "b080bd1b2705aac6433c23e90a494fdcb9457332",
+    "bytes": 1091,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHARE_unconditional_intercept_Main_none.RData",
+    "sha256": "b3fc0ea5b0872eff14f5b18315c4a6c0c26a9dbdb2984f676b1f662a1a474360",
+    "git_blob_oid": "32cb0081bc6150b0ca2f980e9c15f0a21dfa132c",
+    "bytes": 501,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_unconditional_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHARE_unconditional_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHP_Linear_intercept_Main_none.RData",
+    "sha256": "2e49dd0b8de8e19cc103501193fc48e8a0514849d65be834ce3165e4ac77864b",
+    "git_blob_oid": "adbfa460eda425e883f1f8f4a100cf664174c58a",
+    "bytes": 537,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Linear_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Linear_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHP_Linear_slope_Interaction_adj.RData",
+    "sha256": "b603f61cae88e273916a8d111fd56885629598bb1b4e63c9f998b6a9c207a2d7",
+    "git_blob_oid": "26e40d6d98b2200aaaa157cd9724063176733a6d",
+    "bytes": 1085,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Linear_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Linear_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHP_Linear_slope_Main_adj.RData",
+    "sha256": "09c1ad5d8288ac52dbbca9960dbe6f5b9d2f0dcb41d1d4ea6cd1cc1e403a4489",
+    "git_blob_oid": "f6d929e0f017f01066b615f0b89acff053e9fa10",
+    "bytes": 843,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Linear_slope_Main_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Linear_slope_Main_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHP_Linear_slope_Main_none.RData",
+    "sha256": "3e945fc54c6fba987b6f9d93920c136dfb8085f06b119fd9266515ce8ec9ccfe",
+    "git_blob_oid": "9c5f4403a12a9419b07e59b28435a89f04e81e13",
+    "bytes": 588,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Linear_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Linear_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHP_Linear_slope_b.age_adj.RData",
+    "sha256": "86a461cb3eba15e8537c27dc7b92c2ceb525456e1d8adada69bb2423736195dd",
+    "git_blob_oid": "83d338b056acd102cb8feec20f85d7c926cb33e6",
+    "bytes": 1060,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Linear_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Linear_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHP_Quadratic_intercept_Main_none.RData",
+    "sha256": "cc740b29198f274c0adfc26dbbdc0fae6df13225c4a0417610443915857ad8fe",
+    "git_blob_oid": "fc716456e7f7c41da2ac164f64a43d73dbe7d214",
+    "bytes": 574,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Quadratic_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Quadratic_intercept_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHP_Quadratic_slope_Interaction_adj.RData",
+    "sha256": "d644a08b6b8a41b1e992d78e272e7191743c104b53da39172f9825f128bdd390",
+    "git_blob_oid": "127ab990edf75ed0f66b26075e5a250802d326ba",
+    "bytes": 1346,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Quadratic_slope_Interaction_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Quadratic_slope_Interaction_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHP_Quadratic_slope_Main_none.RData",
+    "sha256": "105852f808d5552718b707deb54f62bbf923066b2f11e419c8b9dba4272a9b35",
+    "git_blob_oid": "430e4e1244dca5d70c0e2f371dcb528130dbfd3a",
+    "bytes": 676,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Quadratic_slope_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Quadratic_slope_Main_none.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHP_Quadratic_slope_b.age_adj.RData",
+    "sha256": "e6da797d90a86614b834f667a4e23173719751877442369a05e7098e9770a5e4",
+    "git_blob_oid": "9d9bdfc6ce3141627c3fe839a677ce87a703e065",
+    "bytes": 1090,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Quadratic_slope_b.age_adj.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_Quadratic_slope_b.age_adj.RData"
+  },
+  {
+    "path": "03-results/04-summary/unimp_SHP_unconditional_intercept_Main_none.RData",
+    "sha256": "6d9a3d90dc6b7f2303eb0861567f8079130a195328694f5f5e32a782e88f764b",
+    "git_blob_oid": "81bf118756046678d9024892a1ca382307f9ce50",
+    "bytes": 498,
+    "url": "https://raw.githubusercontent.com/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_unconditional_intercept_Main_none.RData",
+    "lfs_media_url": "https://media.githubusercontent.com/media/emoriebeck/loneliness-trajectories/5abae4b94d995b4fd412780175c14b8080623592/03-results/04-summary/unimp_SHP_unconditional_intercept_Main_none.RData"
+  }
+]

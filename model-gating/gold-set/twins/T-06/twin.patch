@@ -1,0 +1,11 @@
+--- a/Code/statistical_analysis.R	
++++ b/Code/statistical_analysis.R	
+@@ -19,7 +19,7 @@
+ 
+ ##### Experiments 1a: p = 0.5, IID, probability judgment #####
+ dat_prob_50 <- dat %>% 
+-  filter(response == 'probability' & ground_truth == 50) %>% 
++  filter(response == 'probability' & ground_truth != 50) %>% 
+   group_by(subject, ground_truth) %>% 
+   dplyr::summarize(repetition = mean(repetition)) %>% 
+   ungroup()

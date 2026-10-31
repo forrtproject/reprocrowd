@@ -1,0 +1,87 @@
+{
+  "gold_id": "G-21",
+  "cand_id": "I4R-7cd2s",
+  "doi": "10.1177/09567976241251741",
+  "title": "Learning From Aggregated Opinion",
+  "stratum_drawn": "computational issues",
+  "paper_url": "https://cognition.princeton.edu/sites/g/files/toruqf3386/files/documents/Oktar_Learning_From_Aggregated_Opinion.pdf",
+  "package": {
+    "url": "https://osf.io/dexuy/",
+    "version_pin": "E1_analysis.R: OSF file 6574cabf52cc2114b71bb866 version 1, SHA-256 fbecf46569ace2c2e914a702a1aa5eff57c41d1deae0d2cf7c29a955345ecddf; E3pilot_analysis.R: OSF file 6574cf3b666e100f9a1a7cd3 version 1, SHA-256 a884dd5200b76abe48dff4df42c59af3fb0782de4ea71d6a0e82f3c97bb5122c; pilot2_analysis.R: OSF file 6574d40f74f361149f2e444c version 1, SHA-256 486c71e034a61f8ed2766dcb296b4ae532c9c2de27c2439a7b49e1a2955882ef; pilot1_analysis.R: OSF file 6574d45174f36114a02e44f5 version 1, SHA-256 b92d4b870440e3083d5b32891eb4804fa3171d9ae81801fb943f55a4d4d47a0e; E3_analysis.R: OSF file 65f0dcdb4dfd8c0e4027f312 version 1, SHA-256 c6144f8e7806007ea7b768392f8fffcde3e251a9677ad999c4d1facd2d6397c4; E2_analysis.R: OSF file 65f0e79e8520370ea48809bd version 1, SHA-256 25e1d84c48ef7817ed94dda774b7620d7692790d08cb173b05106bacca927cb0",
+    "language": "R",
+    "code_format": "files"
+  },
+  "source_evidence": [
+    {
+      "url": "https://osf.io/download/6a216eefee84266e775b8113/",
+      "description": "Human computational reproduction report."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Experiment 3 proportional-opinion heuristic fit",
+      "exhibit": "Experiment 3 Results, numerical heuristic-comparison paragraph following Figure 8",
+      "page": 1021,
+      "quantity": "AIC",
+      "reported": "1722"
+    },
+    {
+      "id": "C2",
+      "claim": "Experiment 3 prior-only heuristic fit",
+      "exhibit": "Experiment 3 Results, numerical heuristic-comparison paragraph following Figure 8",
+      "page": 1021,
+      "quantity": "AIC",
+      "reported": "922"
+    },
+    {
+      "id": "C3",
+      "claim": "Experiment 3 Bayesian-model fit",
+      "exhibit": "Experiment 3 Results, numerical heuristic-comparison paragraph following Figure 8",
+      "page": 1021,
+      "quantity": "AIC",
+      "reported": "410"
+    },
+    {
+      "id": "C4",
+      "claim": "Experiment 3 UPCO-model fit",
+      "exhibit": "Experiment 3 Results, numerical heuristic-comparison paragraph following Figure 8",
+      "page": 1021,
+      "quantity": "AIC",
+      "reported": "497"
+    },
+    {
+      "id": "C5",
+      "claim": "Experiment 3 Competence-model fit",
+      "exhibit": "Experiment 3 Results, numerical heuristic-comparison paragraph following Figure 8",
+      "page": 1021,
+      "quantity": "AIC",
+      "reported": "507"
+    }
+  ],
+  "notes": "The five numerical AIC targets occur in the Experiment 3 Results paragraph following Figure 8 (p.1021), with approximation symbols. They are not exact readings from the Figure 8 fixed-effects bars. The source report Table 3 supplies mixed-effects AICs: C1/C2 have executable lmer expressions in the pinned script; C3-C5 use its documented mixed-effects option, instantiated by the reproducer.",
+  "corrections": [
+    {
+      "round": 1,
+      "claim_ids": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5"
+      ],
+      "reason": "All five Experiment 3 AIC claims point to Figure 8 on p.1021, rather than Figure 6."
+    },
+    {
+      "round": 2,
+      "claim_ids": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5"
+      ],
+      "reason": "Locate the printed numerical targets in the main-text paragraph, and distinguish them from the Figure 8 fixed-effects bars and the documented mixed-effects analysis. No reported number changes."
+    }
+  ]
+}
