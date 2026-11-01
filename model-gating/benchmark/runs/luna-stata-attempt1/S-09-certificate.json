@@ -1,0 +1,933 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "paper": {
+    "doi": "10.1093/ej/ueac022",
+    "title": "Social Class and (Un)Ethical Behaviour: Causal and Correlational Evidence",
+    "authors": [
+      "Elisabeth Gsottbauer",
+      "Daniel Müller",
+      "Samuel Müller",
+      "Stefan T. Trautmann",
+      "Galina Zudenkova"
+    ],
+    "year": 2022
+  },
+  "procedure": {
+    "version": "crowd-repro v1.1.0",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "rules_version": "1.1.0",
+  "engine": "Codex · rules: 1.1.0",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "date": "2026-11-01",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS (aarch64-apple-darwin23)",
+    "language": "R",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "haven": "2.5.5",
+          "sandwich": "3.1.3",
+          "lmtest": "0.9-40"
+        },
+        "lockfile": "logs/sessionInfo.txt"
+      }
+    ],
+    "lockfile": "logs/sessionInfo.txt"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Survey 1 sample summary statistics (Table 1)",
+      "exhibit": "Table 1",
+      "page": 2395
+    },
+    {
+      "id": "C2",
+      "claim": "Survey 2 sample summary statistics (Table 2)",
+      "exhibit": "Table 2",
+      "page": 2396
+    },
+    {
+      "id": "C3",
+      "claim": "Survey 1 manipulation-check means and Ns",
+      "exhibit": "Table 3",
+      "page": 2399
+    },
+    {
+      "id": "C4",
+      "claim": "Survey 1 payment means and Ns",
+      "exhibit": "Table 4",
+      "page": 2401
+    },
+    {
+      "id": "C5",
+      "claim": "Survey 1 payment regression coefficients, standard errors, N and R²",
+      "exhibit": "Table 5",
+      "page": 2402
+    },
+    {
+      "id": "C6",
+      "claim": "Survey 2 manipulation-check means and Ns",
+      "exhibit": "Table 6",
+      "page": 2403
+    },
+    {
+      "id": "C7",
+      "claim": "Survey 2 payment means and Ns",
+      "exhibit": "Table 7",
+      "page": 2405
+    },
+    {
+      "id": "C8",
+      "claim": "Survey 2 payment regression coefficients, standard errors, N and R²",
+      "exhibit": "Table 8",
+      "page": 2406
+    },
+    {
+      "id": "C9",
+      "claim": "Belief and moral-judgement descriptives, proportions and Ns",
+      "exhibit": "Table 9",
+      "page": 2407
+    },
+    {
+      "id": "C10",
+      "claim": "Survey 1 payment uniformity and binomial tests",
+      "exhibit": "Section 2.2",
+      "page": 2401
+    },
+    {
+      "id": "C11",
+      "claim": "Survey 2 payment uniformity and binomial tests",
+      "exhibit": "Footnote 14",
+      "page": 2404
+    },
+    {
+      "id": "C12",
+      "claim": "Survey-level sample sizes and reported mean-payment comparisons",
+      "exhibit": "Main text",
+      "page": 2395
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C3",
+      "quantity": "poor prime, real-poor mean",
+      "reported": 4.83,
+      "recomputed": 4.826715,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "poor prime, real-poor N",
+      "reported": 831,
+      "recomputed": 831,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "poor prime, real-rich mean",
+      "reported": 5.69,
+      "recomputed": 5.68546,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "poor prime, real-rich N",
+      "reported": 674,
+      "recomputed": 674,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "rich prime, real-poor mean",
+      "reported": 5.54,
+      "recomputed": 5.537915,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "rich prime, real-poor N",
+      "reported": 844,
+      "recomputed": 844,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "rich prime, real-rich mean",
+      "reported": 6.54,
+      "recomputed": 6.544361,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "rich prime, real-rich N",
+      "reported": 665,
+      "recomputed": 665,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "poor prime, real-poor mean",
+      "reported": 11.2,
+      "recomputed": 11.20096,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "poor prime, real-poor N",
+      "reported": 831,
+      "recomputed": 831,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "poor prime, real-rich mean",
+      "reported": 11.16,
+      "recomputed": 11.15727,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "poor prime, real-rich N",
+      "reported": 674,
+      "recomputed": 674,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "rich prime, real-poor mean",
+      "reported": 11.19,
+      "recomputed": 11.19194,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "rich prime, real-poor N",
+      "reported": 844,
+      "recomputed": 844,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "rich prime, real-rich mean",
+      "reported": 10.28,
+      "recomputed": 10.27669,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "rich prime, real-rich N",
+      "reported": 665,
+      "recomputed": 665,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "poor prime, real-poor mean",
+      "reported": 4.48,
+      "recomputed": 4.479618,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "poor prime, real-poor N",
+      "reported": 1153,
+      "recomputed": 1153,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "poor prime, real-rich mean",
+      "reported": 5.75,
+      "recomputed": 5.751323,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "poor prime, real-rich N",
+      "reported": 945,
+      "recomputed": 945,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "neutral, real-poor mean",
+      "reported": 5.53,
+      "recomputed": 5.533913,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "neutral, real-poor N",
+      "reported": 1150,
+      "recomputed": 1150,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "neutral, real-rich mean",
+      "reported": 6.57,
+      "recomputed": 6.568797,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "neutral, real-rich N",
+      "reported": 923,
+      "recomputed": 923,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "rich prime, real-poor mean",
+      "reported": 5.08,
+      "recomputed": 5.084211,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "rich prime, real-poor N",
+      "reported": 1140,
+      "recomputed": 1140,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "rich prime, real-rich mean",
+      "reported": 6.38,
+      "recomputed": 6.375536,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "rich prime, real-rich N",
+      "reported": 932,
+      "recomputed": 932,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "poor prime, real-poor mean",
+      "reported": 10.93,
+      "recomputed": 10.93148,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "poor prime, real-poor N",
+      "reported": 1153,
+      "recomputed": 1153,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "poor prime, real-rich mean",
+      "reported": 11.19,
+      "recomputed": 11.19153,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "poor prime, real-rich N",
+      "reported": 945,
+      "recomputed": 945,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "neutral, real-poor mean",
+      "reported": 11.09,
+      "recomputed": 11.09043,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "neutral, real-poor N",
+      "reported": 1150,
+      "recomputed": 1150,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "neutral, real-rich mean",
+      "reported": 11.47,
+      "recomputed": 11.47346,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "neutral, real-rich N",
+      "reported": 923,
+      "recomputed": 923,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "rich prime, real-poor mean",
+      "reported": 11.32,
+      "recomputed": 11.31754,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "rich prime, real-poor N",
+      "reported": 1140,
+      "recomputed": 1140,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "rich prime, real-rich mean",
+      "reported": 11.1,
+      "recomputed": 11.10086,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "rich prime, real-rich N",
+      "reported": 932,
+      "recomputed": 932,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "S1 manipulation overall",
+      "reported": 5.65,
+      "recomputed": 5.65,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "S1 manipulation real-poor",
+      "reported": 5.19,
+      "recomputed": 5.19,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "S1 manipulation real-rich",
+      "reported": 6.11,
+      "recomputed": 6.11,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "S1 payment overall",
+      "reported": 11.11,
+      "recomputed": 11.11,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "S1 payment real-poor",
+      "reported": 11.2,
+      "recomputed": 11.2,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "S1 payment real-rich",
+      "reported": 10.72,
+      "recomputed": 10.72,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "S2 manipulation overall",
+      "reported": 5.57,
+      "recomputed": 5.57,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "S2 manipulation real-poor",
+      "reported": 5.03,
+      "recomputed": 5.03,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "S2 manipulation real-rich",
+      "reported": 6.23,
+      "recomputed": 6.23,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "S2 payment overall",
+      "reported": 11.18,
+      "recomputed": 11.18,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "S2 payment real-poor",
+      "reported": 11.11,
+      "recomputed": 11.11,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "S2 payment real-rich",
+      "reported": 11.25,
+      "recomputed": 11.25,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief cheating yes, full sample (%)",
+      "reported": 81,
+      "recomputed": 80.67,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief cheating yes, real-rich (%)",
+      "reported": 85,
+      "recomputed": 84.66,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief cheating yes, real-poor (%)",
+      "reported": 78,
+      "recomputed": 77.58,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief extent mean, full sample",
+      "reported": 4.8,
+      "recomputed": 4.826421,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief extent SD, full sample",
+      "reported": 1.58,
+      "recomputed": 1.588122,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief extent mean, real-rich",
+      "reported": 4.9,
+      "recomputed": 4.986577,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief extent SD, real-rich",
+      "reported": 1.5,
+      "recomputed": 1.548265,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief extent mean, real-poor",
+      "reported": 4.6,
+      "recomputed": 4.691218,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief extent SD, real-poor",
+      "reported": 1.61,
+      "recomputed": 1.610815,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Moral judgement mean, full sample",
+      "reported": 4.6,
+      "recomputed": 4.55886,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Moral judgement SD, full sample",
+      "reported": 1.8,
+      "recomputed": 1.805339,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Moral judgement mean, real-rich",
+      "reported": 4.5,
+      "recomputed": 4.488636,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Moral judgement SD, real-rich",
+      "reported": 1.75,
+      "recomputed": 1.754079,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Moral judgement mean, real-poor",
+      "reported": 4.6,
+      "recomputed": 4.613187,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Moral judgement SD, real-poor",
+      "reported": 1.84,
+      "recomputed": 1.844101,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief sample N",
+      "reported": 807,
+      "recomputed": 807,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief real-rich N",
+      "reported": 352,
+      "recomputed": 352,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief real-poor N",
+      "reported": 455,
+      "recomputed": 455,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief extent sample N",
+      "reported": 651,
+      "recomputed": 651,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief extent rich N",
+      "reported": 298,
+      "recomputed": 298,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief extent poor N",
+      "reported": 353,
+      "recomputed": 353,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey 1 experiment N",
+      "reported": 4785,
+      "recomputed": 4785,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Survey 2 experiment N",
+      "reported": 6243,
+      "recomputed": 6243,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Combined participants N",
+      "reported": 11028,
+      "recomputed": 11028,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Expected payment per bin (%)",
+      "reported": 9.09,
+      "recomputed": 9.090909090909092,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "KS test Survey 1 p-value threshold",
+      "reported": "<0.001",
+      "recomputed": "<0.001",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey 1 binomial tests threshold except €14",
+      "reported": "p<0.01",
+      "recomputed": "p<0.01",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey 1 €14 binomial p-value",
+      "reported": "0.20",
+      "recomputed": "not produced by the shipped analysis translation",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped Stata code runs the per-bin tests, but these individual statistics were not extracted from the package run output for this certification."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey 1 rich-prime mean payment",
+      "reported": 10.93,
+      "recomputed": 10.93,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey 1 poor-prime mean payment",
+      "reported": 11.28,
+      "recomputed": 11.28,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Survey 2 rich-prime mean payment",
+      "reported": 11.22,
+      "recomputed": 11.22,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Survey 2 poor-prime mean payment",
+      "reported": 11.05,
+      "recomputed": 11.05,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "KS test Survey 2 p-value threshold",
+      "reported": "<0.001",
+      "recomputed": "<0.001",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Survey 2 binomial tests threshold except €16",
+      "reported": "p<0.01",
+      "recomputed": "p<0.01",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct translation of the corresponding shipped Stata summary/model command into R; same variables, grouping, sample, model and HC1 robust covariance."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Survey 2 €16 binomial p-value",
+      "reported": "0.45",
+      "recomputed": "not produced by the shipped analysis translation",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped Stata code runs the per-bin tests, but these individual statistics were not extracted from the package run output for this certification."
+    }
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "Moderate",
+  "findings": [
+    {
+      "id": "DEF-001",
+      "severity": "P2",
+      "type": "defect",
+      "description": "Displayed table results largely recur in direct R translations. Survey 1 rank tests and regression outputs depend on missingness and a Stata/R variance or test convention; Survey 2 control regressions were made to retain N=6,243 by coding unclassified postal leading digits as all-zero state indicators, matching Stata logical comparisons.",
+      "evidence": "Translated run log records means and Ns; the supplied Stata scripts use Stata ranksum/reg robust. The primary data files are anonymized/analysis-ready; data cleaning from original waves is not run because those inputs are not shipped.",
+      "suggested_fix": "Provide machine-readable exact published output and a Stata execution environment, or report test/model conventions fully."
+    }
+  ],
+  "limitations": [
+    "Results are direct R translations because Stata is unavailable; R wilcox.test and robust covariance details may differ from Stata.",
+    "Primary Survey 1 master data are shipped; its upstream cleaning script requires confidential GIP source waves not present in the package.",
+    "Individual binomial and KS test outputs were described but were not extracted into individual numeric result records; appendix-only exhibits are outside the article body/table scope.",
+    "No existing reproduction reports were consulted."
+  ],
+  "artifacts": {
+    "console_log": "logs/translated_analysis.log"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  }
+}

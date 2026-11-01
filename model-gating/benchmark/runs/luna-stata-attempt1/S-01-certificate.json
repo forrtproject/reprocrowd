@@ -1,0 +1,779 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "paper": {
+    "doi": "10.1017/S0003055422000466",
+    "title": "Campaign Contributions and Roll-Call Voting in the U.S. House of Representatives: The Case of the Sugar Industry",
+    "authors": [
+      "Kevin Grier",
+      "Robin Grier",
+      "Gor Mkrtchian"
+    ],
+    "year": 2023
+  },
+  "procedure": {
+    "version": "crowd-repro v1.1.0",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "repro_standard_version": "ReproCrowd crowd-repro v1.1.0",
+  "engine": "Codex · rules: 1.1.0",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "rules_version": "1.1.0",
+  "date": "2026-11-01",
+  "environment": {
+    "os": "macOS Darwin 25.6.0 arm64",
+    "language": "R",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "haven": "2.5.5",
+          "sandwich": "3.1.3",
+          "lmtest": "0.9.40"
+        },
+        "lockfile": "session.txt"
+      }
+    ],
+    "lockfile": "session.txt"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Table 1 district fixed effects model: sugar",
+      "exhibit": "Table 1"
+    },
+    {
+      "id": "C2",
+      "claim": "Table 1 incumbent fixed effects model: sugar",
+      "exhibit": "Table 1"
+    },
+    {
+      "id": "C3",
+      "claim": "Table 3 window 1 district fixed effects sugar contribution",
+      "exhibit": "Table 3"
+    },
+    {
+      "id": "C4",
+      "claim": "Table 3 window 2 district fixed effects sugar contribution",
+      "exhibit": "Table 3"
+    },
+    {
+      "id": "C5",
+      "claim": "Counts of vote-changing districts and cases",
+      "exhibit": "Table 2 / Results"
+    },
+    {
+      "id": "C6",
+      "claim": "Narrative marginal probability values associated with Figures 1–3",
+      "exhibit": "Figures 1–3 and Results"
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "sugar coefficient",
+      "reported": -0.0006,
+      "recomputed": -0.00063072742,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R estimate; model has 187 observations versus 186 reported."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "sugar p value",
+      "reported": 0.001,
+      "recomputed": 9.76535e-07,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Printed p is compared with R HC1 Wald p; exact Stata robust inference may differ."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "ACU coefficient",
+      "reported": 0.2,
+      "recomputed": 0.20225316,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R estimate; model has 187 observations versus 186 reported."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "ACU p value",
+      "reported": 0.001,
+      "recomputed": 0.00313583,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Printed p is compared with R HC1 Wald p; exact Stata robust inference may differ."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "tenure coefficient",
+      "reported": -0.3,
+      "recomputed": -0.29687581,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R estimate; model has 187 observations versus 186 reported."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "tenure p value",
+      "reported": 0.001,
+      "recomputed": 0.000851612,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Printed p is compared with R HC1 Wald p; exact Stata robust inference may differ."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "poverty coefficient",
+      "reported": 2.19,
+      "recomputed": 2.1899724,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R estimate; model has 187 observations versus 186 reported."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "poverty p value",
+      "reported": 0.001,
+      "recomputed": 0.00834214,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Printed p is compared with R HC1 Wald p; exact Stata robust inference may differ."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "bachelor coefficient",
+      "reported": 1.2,
+      "recomputed": 1.2057954,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R estimate; model has 187 observations versus 186 reported."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "bachelor p value",
+      "reported": 0.1,
+      "recomputed": 0.206675,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Printed p is compared with R HC1 Wald p; exact Stata robust inference may differ."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "median income coefficient",
+      "reported": 0.0001,
+      "recomputed": 0.00012171234,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R estimate; model has 187 observations versus 186 reported."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "median income p value",
+      "reported": 0.67,
+      "recomputed": 0.772388,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Printed p is compared with R HC1 Wald p; exact Stata robust inference may differ."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "over65 coefficient",
+      "reported": -1.88,
+      "recomputed": -1.8861388,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R estimate; model has 187 observations versus 186 reported."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "over65 p value",
+      "reported": 0.04,
+      "recomputed": 0.155624,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Printed p is compared with R HC1 Wald p; exact Stata robust inference may differ."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "ag committee coefficient",
+      "reported": -36.3,
+      "recomputed": -38.721933,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R estimate; model has 187 observations versus 186 reported."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "ag committee p value",
+      "reported": 0.001,
+      "recomputed": 3.2128e-53,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Printed p is compared with R HC1 Wald p; exact Stata robust inference may differ."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "constant coefficient",
+      "reported": -20.9,
+      "recomputed": -44.631402,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R estimate; model has 187 observations versus 186 reported."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "constant p value",
+      "reported": 0.23,
+      "recomputed": 0.116394,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Printed p is compared with R HC1 Wald p; exact Stata robust inference may differ."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "sugar coefficient",
+      "reported": -0.0004,
+      "recomputed": -0.00039234014,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "R output rounded and sample size 106 as reported."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "sugar p value",
+      "reported": 0.001,
+      "recomputed": 0.0203774,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R HC1 Wald p value does not equal printed p value."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "ACU coefficient",
+      "reported": 0.06,
+      "recomputed": 0.059872757,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "R output rounded and sample size 106 as reported."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "ACU p value",
+      "reported": 0.53,
+      "recomputed": 0.677913,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R HC1 Wald p value does not equal printed p value."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "tenure coefficient",
+      "reported": -1.43,
+      "recomputed": -1.4327461,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "R output rounded and sample size 106 as reported."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "tenure p value",
+      "reported": 0.001,
+      "recomputed": 0.00737195,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R HC1 Wald p value does not equal printed p value."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "poverty coefficient",
+      "reported": 2.24,
+      "recomputed": 2.2458126,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "R output rounded and sample size 106 as reported."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "poverty p value",
+      "reported": 0.02,
+      "recomputed": 0.130649,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R HC1 Wald p value does not equal printed p value."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "bachelor coefficient",
+      "reported": 0.59,
+      "recomputed": 0.59175648,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "R output rounded and sample size 106 as reported."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "bachelor p value",
+      "reported": 0.2,
+      "recomputed": 0.403149,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R HC1 Wald p value does not equal printed p value."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "median income coefficient",
+      "reported": 0.0006,
+      "recomputed": 0.00065137853,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "R output rounded and sample size 106 as reported."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "median income p value",
+      "reported": 0.19,
+      "recomputed": 0.393865,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R HC1 Wald p value does not equal printed p value."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "over65 coefficient",
+      "reported": -0.38,
+      "recomputed": -0.38218816,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "R output rounded and sample size 106 as reported."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "over65 p value",
+      "reported": 0.83,
+      "recomputed": 0.891176,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R HC1 Wald p value does not equal printed p value."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "ag committee coefficient",
+      "reported": -39.3,
+      "recomputed": -42.105322,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "R output rounded and sample size 106 as reported."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "ag committee p value",
+      "reported": 0.001,
+      "recomputed": 2.28127e-11,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R HC1 Wald p value does not equal printed p value."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "constant coefficient",
+      "reported": -63.1,
+      "recomputed": -76.837606,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "R output rounded and sample size 106 as reported."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "constant p value",
+      "reported": 0.01,
+      "recomputed": 0.0599953,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Translated R HC1 Wald p value does not equal printed p value."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Pseudo R2",
+      "reported": 0.745,
+      "recomputed": 0.746,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Observation mismatch for district model."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Observations",
+      "reported": 186,
+      "recomputed": 187,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Observation mismatch for district model."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Pseudo R2",
+      "reported": 0.721,
+      "recomputed": 0.721,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Observation mismatch for district model."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Observations",
+      "reported": 106,
+      "recomputed": 106,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Observation mismatch for district model."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "coefficient window 1 district",
+      "reported": -0.0006,
+      "recomputed": -0.00057495895,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "R models use 187 observations; paper reports 186."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "p value window 1 district",
+      "reported": 0.001,
+      "recomputed": 0.000820756,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "coefficient window 1 incumbent",
+      "reported": -0.0005,
+      "recomputed": -0.00056473245,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "p value window 1 incumbent",
+      "reported": 0.001,
+      "recomputed": 0.02076,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "observations window 1 district and incumbent",
+      "reported": [
+        186,
+        106
+      ],
+      "recomputed": [
+        187,
+        106
+      ],
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Reported as 186 and 106 for both windows."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "coefficient window 2 district",
+      "reported": -0.0006,
+      "recomputed": -0.00059647427,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "R models use 187 observations; paper reports 186."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "p value window 2 district",
+      "reported": 0.001,
+      "recomputed": 0.000131921,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "coefficient window 2 incumbent",
+      "reported": -0.0003,
+      "recomputed": -0.0003179807,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "p value window 2 incumbent",
+      "reported": 0.003,
+      "recomputed": 0.0500758,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "observations window 2 district and incumbent",
+      "reported": [
+        186,
+        106
+      ],
+      "recomputed": [
+        187,
+        106
+      ],
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Reported as 186 and 106 for both windows."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "changing-vote districts",
+      "reported": 93,
+      "recomputed": "not recomputed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Counts confirmed by the shipped data structure; no inferential calculation. No separate reproduction computation was run for this entry."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "same-incumbent districts",
+      "reported": 53,
+      "recomputed": "not recomputed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Counts confirmed by the shipped data structure; no inferential calculation. No separate reproduction computation was run for this entry."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "different-incumbent districts",
+      "reported": 40,
+      "recomputed": "not recomputed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Counts confirmed by the shipped data structure; no inferential calculation. No separate reproduction computation was run for this entry."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Aye-to-No same incumbent cases",
+      "reported": 47,
+      "recomputed": "not recomputed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Counts confirmed by the shipped data structure; no inferential calculation. No separate reproduction computation was run for this entry."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "No-to-Aye same incumbent cases",
+      "reported": 6,
+      "recomputed": "not recomputed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Counts confirmed by the shipped data structure; no inferential calculation. No separate reproduction computation was run for this entry."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Aye-to-No new incumbent cases",
+      "reported": 32,
+      "recomputed": "not recomputed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Counts confirmed by the shipped data structure; no inferential calculation. No separate reproduction computation was run for this entry."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "No-to-Aye new incumbent cases",
+      "reported": 8,
+      "recomputed": "not recomputed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Counts confirmed by the shipped data structure; no inferential calculation. No separate reproduction computation was run for this entry."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "same-party transitions among 32",
+      "reported": 29,
+      "recomputed": "not recomputed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Counts confirmed by the shipped data structure; no inferential calculation. No separate reproduction computation was run for this entry."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "contribution change same incumbent Aye-to-No (%)",
+      "reported": 67,
+      "recomputed": "not recomputed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied analysis script does not compute Table 2 contribution summaries. No separate reproduction computation was run for this entry."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "contribution change same incumbent No-to-Aye (%)",
+      "reported": -80,
+      "recomputed": "not recomputed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied analysis script does not compute Table 2 contribution summaries. No separate reproduction computation was run for this entry."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "contribution change new incumbent Aye-to-No (%)",
+      "reported": 348,
+      "recomputed": "not recomputed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied analysis script does not compute Table 2 contribution summaries. No separate reproduction computation was run for this entry."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "contribution change new incumbent No-to-Aye (%)",
+      "reported": -38,
+      "recomputed": "not recomputed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied analysis script does not compute Table 2 contribution summaries. No separate reproduction computation was run for this entry."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "probability at zero sugar contributions",
+      "reported": 0.75,
+      "recomputed": 0.7296866,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Marhis is a Stata-only user-written package. The R translation calculated average predictions for the available 50-point range; the paper says observed covariates are held at observed values, but its exact marhis interval and histogram procedure is unavailable."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "probability at $15,500 sugar contributions",
+      "reported": 0.2,
+      "recomputed": 0.0006749502,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Marhis is a Stata-only user-written package. The R translation calculated average predictions for the available 50-point range; the paper says observed covariates are held at observed values, but its exact marhis interval and histogram procedure is unavailable."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "probability at ACU score 20",
+      "reported": 0.25,
+      "recomputed": "not directly evaluated",
+      "status": "not_checkable",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Marhis is a Stata-only user-written package. The R translation calculated average predictions for the available 50-point range; the paper says observed covariates are held at observed values, but its exact marhis interval and histogram procedure is unavailable."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "probability at ACU score 70",
+      "reported": 0.65,
+      "recomputed": "not directly evaluated",
+      "status": "not_checkable",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Marhis is a Stata-only user-written package. The R translation calculated average predictions for the available 50-point range; the paper says observed covariates are held at observed values, but its exact marhis interval and histogram procedure is unavailable."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "probability at tenure 9",
+      "reported": 0.35,
+      "recomputed": "not directly evaluated",
+      "status": "not_checkable",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata statements directly to R; fixed effects logit uses district indicators and HC1 sandwich standard errors. Stata automatic perfect-prediction exclusions are not matched exactly in the R implementation.",
+      "note": "Marhis is a Stata-only user-written package. The R translation calculated average predictions for the available 50-point range; the paper says observed covariates are held at observed values, but its exact marhis interval and histogram procedure is unavailable."
+    }
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "Moderate",
+  "findings": [
+    {
+      "id": "TRANS-001",
+      "severity": "P1",
+      "type": "defect",
+      "description": "The R translation gives different district fixed effects sample size, selected coefficients and reported p values from the article.",
+      "evidence": "Table 1 district model: R n=187 (paper n=186); agriculture committee coefficient -38.72 (paper -36.3); contribution coefficient -0.000631 (paper -0.0006).",
+      "suggested_fix": "Reconcile the Stata perfect-prediction and robust variance behavior against a Stata 15 run."
+    },
+    {
+      "id": "TRANS-002",
+      "severity": "P2",
+      "type": "normalization",
+      "description": "Figures 1–3 use the Stata marhis package, which is unavailable in the R environment; the figures were approximated from the article’s stated method.",
+      "evidence": "R average predicted probability endpoints differ from narrative approximations, notably sugar contribution high-end prediction.",
+      "suggested_fix": "Provide the exact marhis algorithm or run the original package in Stata."
+    }
+  ],
+  "limitations": [
+    "No Stata installation was available; all reported computations use a direct R translation.",
+    "The supplied code does not calculate Table 2 contribution-change percentages.",
+    "Appendix Table A2 is referenced by the README but not reproduced in the shipped do-file; its numerical entries cannot be checked.",
+    "Appendix Table A1 summary statistics and full numerical data claims in the article are not all generated by the shipped analysis script.",
+    "The benchmark scope excludes publication of original code and data; local inputs remain at the supplied package path."
+  ],
+  "artifacts": {
+    "pipeline": "https://forrtproject.github.io/reprocrowd/",
+    "console_log": "logs/run3.txt"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  },
+  "ai_generated": true
+}

@@ -8,8 +8,11 @@ of every kept and stripped file, with SHA-256, is written to ../gold-set/stata/p
 Sources:
 - REPRO-Bench tasks: the replication_package folder at the pinned Hugging Face commit;
 - I4R-243: the GitHub repository at the pinned commit plus the author-linked Dropbox data archive;
-- SC-a2Yx: the original (version 1) do-files from OSF node zxdca and the data from node my6bg, not
-  the SCORE reproduction project that also holds the human report.
+- SC-a2Yx (drawn, then replaced because its article was unobtainable): the original (version 1)
+  do-files from OSF node zxdca and the data from node my6bg, not the SCORE reproduction project
+  that also holds the human report;
+- I4R-85: every file of Harvard Dataverse dataset doi:10.7910/DVN/EIEQIS, version 1.1, in original
+  format.
 
 Usage: python3 model-gating/benchmark/build_stata_packages.py [S-01 S-02 ...]
 """
@@ -33,10 +36,11 @@ HF_FILE = "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/{rev}/{pa
 HF_REV = "74958fba32daeacff51f2e1fd37be3916595648f"
 # Outputs that shipped code renders: logs, Stata graphs, figures, knitted documents, LaTeX tables.
 STRIP_EXT = {".log", ".smcl", ".gph", ".png", ".jpg", ".jpeg", ".eps", ".svg", ".html", ".htm",
-             ".tex"}
+             ".tex", ".tif", ".tiff"}
 I4R243 = {"repo": "stevebholt/waiting-time", "commit": "95e2eaec985dfbd7f2dfd5e05ebe768195e4e613",
           "data": "https://www.dropbox.com/sh/5z2pornijzv0bn8/AAABc-y5Rx8u8O7SRccTqtsda?dl=1"}
 A2YX = {"code": "zxdca", "data": "my6bg"}
+I4R85 = {"doi": "doi:10.7910/DVN/EIEQIS", "version": "1.1"}
 
 
 def opaque(stata_id, seed):
@@ -94,6 +98,7 @@ def fetch_i4r243(out):
         for name in z.namelist():
             if not name.endswith("/") and not name.startswith("__MACOSX"):
                 dest = out / "data" / Path(name).name
+                dest.parent.mkdir(parents=True, exist_ok=True)
                 if not dest.exists():
                     with z.open(name) as src, open(dest, "wb") as fh:
                         shutil.copyfileobj(src, fh, 1 << 20)
@@ -119,7 +124,30 @@ def fetch_a2yx(out):
     return f"OSF nodes {A2YX['code']} (do-files, version 1) and {A2YX['data']} (data)"
 
 
+def fetch_article(entry, seed):
+    """REPRO-Bench tasks ship the article as paper.pdf; other articles are added by hand to
+    WORK/articles/<opaque>/article.pdf (for example with the download-paper skill)."""
+    dest = WORK / "articles" / opaque(entry["stata_id"], seed) / "article.pdf"
+    if entry["cand_id"].startswith("RB-") and not dest.exists():
+        save(HF_FILE.format(rev=HF_REV, path=f"{int(entry['cand_id'][3:])}/paper.pdf"), dest)
+    return dest if dest.exists() else None
+
+
+def fetch_dataverse(spec, out):
+    base = "https://dataverse.harvard.edu/api"
+    meta = json.load(get(f"{base}/datasets/:persistentId/versions/{spec['version']}"
+                         f"?persistentId={spec['doi']}"))["data"]
+    for f in meta["files"]:
+        df = f["dataFile"]
+        name = df.get("originalFileName") or df["filename"]
+        dest = out / (f.get("directoryLabel") or "") / name
+        if not dest.exists():
+            save(f"{base}/access/datafile/{df['id']}?format=original", dest)
+    return f"Harvard Dataverse {spec['doi']}, version {spec['version']} (original file formats)"
+
+
 def build(entry, seed):
+    fetch_article(entry, seed)
     out = WORK / "packages" / opaque(entry["stata_id"], seed)
     out.mkdir(parents=True, exist_ok=True)
     cid = entry["cand_id"]
@@ -129,6 +157,8 @@ def build(entry, seed):
         source = fetch_i4r243(out)
     elif cid == "SC-a2Yx":
         source = fetch_a2yx(out)
+    elif cid == "I4R-85":
+        source = fetch_dataverse(I4R85, out)
     else:
         raise SystemExit(f"no fetcher for {cid}")
     kept, stripped = [], []
@@ -151,7 +181,10 @@ def main(ids):
     draw = json.loads((STATA / "draw-stata.json").read_text())
     for entry in draw["drawn"]:
         if not ids or entry["stata_id"] in ids:
-            build(entry, draw["seed"])
+            if ids == ["articles"] or "--articles" in sys.argv:
+                print(entry["stata_id"], fetch_article(entry, draw["seed"]))
+            else:
+                build(entry, draw["seed"])
 
 
 if __name__ == "__main__":

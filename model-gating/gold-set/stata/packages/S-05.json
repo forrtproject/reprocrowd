@@ -1,0 +1,1792 @@
+{
+ "stata_id": "S-05",
+ "cand_id": "RB-105",
+ "package_dir": "pkg-93cd12",
+ "source": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/105/replication_package (Hugging Face commit 74958fba32daeacff51f2e1fd37be3916595648f)",
+ "strip_rule": [
+  ".eps",
+  ".gph",
+  ".htm",
+  ".html",
+  ".jpeg",
+  ".jpg",
+  ".log",
+  ".png",
+  ".smcl",
+  ".svg",
+  ".tex"
+ ],
+ "kept": [
+  {
+   "path": "Financial balance sheets non consolidated SNA 2008/CentralBank_gov_bonds.csv",
+   "sha256": "847836042b8c20655ccefa8b019995882e1407948b594372a66b0056aadea271",
+   "bytes": 502130
+  },
+  {
+   "path": "Financial balance sheets non consolidated SNA 2008/CentralBank_liabilities.csv",
+   "sha256": "e64747220749fe3eae333298ff678591438ae19a9f08a1aa651c306bc9158853",
+   "bytes": 1153426
+  },
+  {
+   "path": "Financial balance sheets non consolidated SNA 2008/Financial_Asset_Details.csv",
+   "sha256": "447da03cd373c357bdca599308266247fbe3a3115951d965cb6679dcce8a2df5",
+   "bytes": 1092238
+  },
+  {
+   "path": "Financial balance sheets non consolidated SNA 2008/Financial_Safe_Liabilities.csv",
+   "sha256": "8df4d6cfbfc9415b11754089a1e9a6278d0da1dbeb76ab85e09e8ddfda1572ac",
+   "bytes": 1996412
+  },
+  {
+   "path": "Financial balance sheets non consolidated SNA 2008/Government_Safe_Liabilities.csv",
+   "sha256": "f230d212c89375d7252466681a17d53e570673cd976d3e36dfc755d65ff4c431",
+   "bytes": 1268435
+  },
+  {
+   "path": "Financial balance sheets non consolidated SNA 2008/Total liabilities.csv",
+   "sha256": "ea484dee1a87689447c1987f5b337acc86f23a02197c833105c8aa49ffe96393",
+   "bytes": 6614345
+  },
+  {
+   "path": "GDP/GDP_current_prices.csv",
+   "sha256": "cea81d95092d1b07bfa92d0b08aa4c802192558d27c10848f3fc24b9cc9ae6d1",
+   "bytes": 803870
+  },
+  {
+   "path": "GENERAL_IES/Parameters.m",
+   "sha256": "e794b5f7babf712083dce2e3e9e2ae4767b34061e8f089dd45bc17099e77d371",
+   "bytes": 489
+  },
+  {
+   "path": "GENERAL_IES/Table_6_theta_half.m",
+   "sha256": "98d1a48bc445e85d22326fb14265a3cc81ec7ecc54e645d5fa11a1da3e71715f",
+   "bytes": 3001
+  },
+  {
+   "path": "GENERAL_IES/Table_6_theta_two.m",
+   "sha256": "6af687b3aaedbaa21532c48ae36d1825a069b4d173a7291fedce3b45aa35308d",
+   "bytes": 2998
+  },
+  {
+   "path": "GENERAL_IES/correct_params.m",
+   "sha256": "f2e9420b08a80d511d3a710f0b5a3c14418272aeca888cdb782ac9fdf200d4ad",
+   "bytes": 1295
+  },
+  {
+   "path": "GENERAL_IES/define_model.m",
+   "sha256": "21bc86d1d2a7964ad7b9e1659f08ea41a9089b7f3ae7e4c679e9dc7f325beea0",
+   "bytes": 3560
+  },
+  {
+   "path": "GENERAL_IES/make_Table_6_part_1.m",
+   "sha256": "854c4b80e3a07c9dec5655336d733871fc8ad3eb6a0310d79e9166ba5c25c725",
+   "bytes": 986
+  },
+  {
+   "path": "GENERAL_IES/simulate_with_disasters.m",
+   "sha256": "a7fc480c352c418b01871d707e43921ce99f66747d7d0e75e9a379eb03c2fa7a",
+   "bytes": 404
+  },
+  {
+   "path": "GENERAL_IES/solve_and_simulate.m",
+   "sha256": "c77ae6b45ab90be5d57305b9eb194c733466543961d38c28a9e13125ec52e8f3",
+   "bytes": 2343
+  },
+  {
+   "path": "GENERAL_IES/summarize_results.m",
+   "sha256": "209813f12e9e40e6e7c8e776dbf7e1bff1d5198a773e77af8cb248035b2eca2b",
+   "bytes": 2412
+  },
+  {
+   "path": "Make_OECD_data.do",
+   "sha256": "b7526cee1bac063e47d02082e78fc82f88e2f307f72a033e35fd05d19fe77d07",
+   "bytes": 18756
+  },
+  {
+   "path": "ReadMe.pdf",
+   "sha256": "9068400c5ca91682b0dd81943ea676402c4cd3e4a0083709b46a65c0d502af1f",
+   "bytes": 42724
+  },
+  {
+   "path": "Replicate_Empirical_Results.do",
+   "sha256": "06e33a13ac57c1cc1e1b8d451fb0fd090699eb4473fba572569bf01e5a088190",
+   "bytes": 502
+  },
+  {
+   "path": "Replicate_Simulation_Results.m",
+   "sha256": "51ee89bfbd71c9de2061fd5598c84e072a7e71417e3d0bd4cfdef2674d509357",
+   "bytes": 1074
+  },
+  {
+   "path": "UNIT_IES/Disaster_IRF.m",
+   "sha256": "140d12f2324049de5ed0fcd644f99b965c14557158c35e65c9552023306d62f0",
+   "bytes": 837
+  },
+  {
+   "path": "UNIT_IES/Parameters.m",
+   "sha256": "e794b5f7babf712083dce2e3e9e2ae4767b34061e8f089dd45bc17099e77d371",
+   "bytes": 489
+  },
+  {
+   "path": "UNIT_IES/Table_6_MU.m",
+   "sha256": "06e6106ede7bf8e316b5890a13369598a2742aab9c6e1bf7b15ab6b6ecbfd733",
+   "bytes": 2939
+  },
+  {
+   "path": "UNIT_IES/Table_6_NU.m",
+   "sha256": "9071c94e11a85dccd9142be5008c1999e2b6bc87b51721821372014ae2600686",
+   "bytes": 2940
+  },
+  {
+   "path": "UNIT_IES/Table_6_P.m",
+   "sha256": "004e655ac06385f382afc5453177b0640cecc8850f4052a0ce8b28d2588f7e10",
+   "bytes": 2952
+  },
+  {
+   "path": "UNIT_IES/Tranquility.m",
+   "sha256": "f6598c374aa346dff46f80998c11c85377104004d532bc228542b1b473e8e7ac",
+   "bytes": 959
+  },
+  {
+   "path": "UNIT_IES/correct_params.m",
+   "sha256": "f2e9420b08a80d511d3a710f0b5a3c14418272aeca888cdb782ac9fdf200d4ad",
+   "bytes": 1295
+  },
+  {
+   "path": "UNIT_IES/define_model.m",
+   "sha256": "e1f9ebb41fb59aacd3b974c56aa1967507a9f818dd1445b5a8968929979c6194",
+   "bytes": 3465
+  },
+  {
+   "path": "UNIT_IES/make_Table_5.m",
+   "sha256": "2d507af5131f7806dcaf7dcc3495a09d5a4a54d08bb24622a802f35196860d17",
+   "bytes": 6632
+  },
+  {
+   "path": "UNIT_IES/make_Table_6_part_2.m",
+   "sha256": "81b5e553b870088a937f164a174fe433025a10752d1dbab861c7a6beb65a2711",
+   "bytes": 1370
+  },
+  {
+   "path": "UNIT_IES/rep_agent.m",
+   "sha256": "e680ace849b2625289961cf8979a9d98aff4ce180919dc87e6899262c186926c",
+   "bytes": 1878
+  },
+  {
+   "path": "UNIT_IES/simulate_with_disasters.m",
+   "sha256": "a7fc480c352c418b01871d707e43921ce99f66747d7d0e75e9a379eb03c2fa7a",
+   "bytes": 404
+  },
+  {
+   "path": "UNIT_IES/solve_and_simulate.m",
+   "sha256": "86b1aa25d670f771412590c24bd18906ec07089b5935c2e7e2a836e30971f34b",
+   "bytes": 2337
+  },
+  {
+   "path": "UNIT_IES/summarize_results.m",
+   "sha256": "6a052d3820b5678a245b5b61488426357e64800a49de84677095438200f9a5ee",
+   "bytes": 2290
+  },
+  {
+   "path": "User Guide.pdf",
+   "sha256": "4ae3ea65d6ead2e1e273aabe94a8a1f913ec926e7b77f7f75784b25d6db4748f",
+   "bytes": 161394
+  },
+  {
+   "path": "Variable_Disaster_Size/Parameters.m",
+   "sha256": "5ea88d1d210db58fa726d2c06220cada2576d9cf7722d1666c0f7ae0e99f5373",
+   "bytes": 932
+  },
+  {
+   "path": "Variable_Disaster_Size/correct_params.m",
+   "sha256": "f2e9420b08a80d511d3a710f0b5a3c14418272aeca888cdb782ac9fdf200d4ad",
+   "bytes": 1295
+  },
+  {
+   "path": "Variable_Disaster_Size/define_model.m",
+   "sha256": "6959564a8b981ed1419fffc092a4df9dc5411ac5a6e5832118cef9fbc855d41d",
+   "bytes": 3615
+  },
+  {
+   "path": "Variable_Disaster_Size/make_Table_7.m",
+   "sha256": "5c88c1c285227dc92e34c49d42aa9ba2f18d5642bed3bba6f824bb0777d037e6",
+   "bytes": 5575
+  },
+  {
+   "path": "Variable_Disaster_Size/simulate_with_disasters.m",
+   "sha256": "a7fc480c352c418b01871d707e43921ce99f66747d7d0e75e9a379eb03c2fa7a",
+   "bytes": 404
+  },
+  {
+   "path": "Variable_Disaster_Size/solve_and_simulate.m",
+   "sha256": "97fb5ada4a8b50c13f728b44e781490ef31e1be437ab9f90ced207ed2bf2c974",
+   "bytes": 2338
+  },
+  {
+   "path": "Variable_Disaster_Size/summarize_results.m",
+   "sha256": "458f3fbcd9b0a923e94b4ed7b7e148c15385ce936c2e53eb2319efb2f231ad71",
+   "bytes": 2225
+  },
+  {
+   "path": "examples/rbc/prepare_model.m",
+   "sha256": "3a78ff701a636d97e5590033c783e42474c07ac12f47df74629d4ef0a87cdb2e",
+   "bytes": 1739
+  },
+  {
+   "path": "examples/rbc/prepare_model_auxiliary_functions.m",
+   "sha256": "d1762be4718b9864a9c257e47c337c505a85b518490b9f3b24efab2564ac73e1",
+   "bytes": 3309
+  },
+  {
+   "path": "examples/rbc/solve_continuation.m",
+   "sha256": "1a8eddf1c80c7a83b0656279e1adae4b2434c8544fba0290066e4d85ec8f5bd2",
+   "bytes": 3445
+  },
+  {
+   "path": "examples/rbc/solve_model.m",
+   "sha256": "a0683b76d0d9dbbcf7505f6ce6a44f17bc1b98d99da9d5c268151e1ea632059e",
+   "bytes": 5644
+  },
+  {
+   "path": "examples/rbc_EZ/prepare_model.m",
+   "sha256": "95b0143255102bfb7c78ece408c35ab1ab1d46a3d66a04bb660f4461d8b79fb5",
+   "bytes": 2151
+  },
+  {
+   "path": "examples/rbc_EZ/prepare_model_auxiliary_functions.m",
+   "sha256": "ea990f731abf9e4c21b1e12c46f9e7b7ebd2d5656a48841e3572664d6e2923fa",
+   "bytes": 2763
+  },
+  {
+   "path": "examples/rbc_EZ/solve_model.m",
+   "sha256": "819c158c905602ee17cad54df754fd896ecf920badd11add2e665a8f45ea794a",
+   "bytes": 3645
+  },
+  {
+   "path": "examples/rbc_MS_parameters/prepare_model.m",
+   "sha256": "15a1fb91b6a77842b5d79639cf7f2235452389f5c8615b819c9ba8695ccb111a",
+   "bytes": 2274
+  },
+  {
+   "path": "examples/rbc_MS_parameters/solve_model.m",
+   "sha256": "bc3fee4c39f20388502922f40415d4a06cb22230104158f44001045db6533644",
+   "bytes": 6429
+  },
+  {
+   "path": "examples/rbc_disasters/prepare_model.m",
+   "sha256": "630f5ca07e032f157fd2b948ca53b4f6b1cd81cf8c7b81b222f1aef521aee296",
+   "bytes": 2906
+  },
+  {
+   "path": "examples/rbc_disasters/solve_model.m",
+   "sha256": "9dda07b805fe5589ec742cded6af249fd04b3a3554234ee2650cd63cb7f9933b",
+   "bytes": 4279
+  },
+  {
+   "path": "make_Table_4.do",
+   "sha256": "9848f5536d412cc55495ba7f15fc2746e542d5f5279829f93b155cf2c85ce371",
+   "bytes": 2454
+  },
+  {
+   "path": "make_Tables_1_to_3_Figures_1_and_2.do",
+   "sha256": "ef3f2b7c5b7ddef8dfbdae07ee45d77dc9a002f79872d707d5dd7418eb71c6eb",
+   "bytes": 6993
+  },
+  {
+   "path": "scfp2019excel.zip",
+   "sha256": "87766da9024f7b6742d277c955234cf6bee439248fbc5f689c81d91880fd1b05",
+   "bytes": 2635565
+  },
+  {
+   "path": "scfp2019s.zip",
+   "sha256": "e4a2ffd493eeb6388766b5f828edf9409d900168d91677c5bd25e4648007baa0",
+   "bytes": 3437486
+  },
+  {
+   "path": "solution_methods/Perturbation/AU_fifth_order.m",
+   "sha256": "2ebfd82cce265a4a1e741c07e75d83f46df4e19e0736bc279307c2304bb18688",
+   "bytes": 1188
+  },
+  {
+   "path": "solution_methods/Perturbation/A_fifth_order.m",
+   "sha256": "b779bfc6f0f7ed426c3da21faa7ba4b8d006a15123d723ef80800ba7578cbd3b",
+   "bytes": 1173
+  },
+  {
+   "path": "solution_methods/Perturbation/A_fourth_order.m",
+   "sha256": "8f0b6a37ac5a51592abb27712a092213b695e894dfc0ba3a02c4c500b23efd4e",
+   "bytes": 363
+  },
+  {
+   "path": "solution_methods/Perturbation/A_third_order.m",
+   "sha256": "b9fa7bc1b226438bf9009253accffe9e32f98605cf5ee75a71db0dd99551df10",
+   "bytes": 158
+  },
+  {
+   "path": "solution_methods/Perturbation/AkronkC.m",
+   "sha256": "7b68b814fbdb044144f9fc576bc90ff04d5e51261b186c5225f3437419cb7462",
+   "bytes": 293
+  },
+  {
+   "path": "solution_methods/Perturbation/LICENSE.txt",
+   "sha256": "fb9263af0dd9125a9f518d09c39d28dd177728acc9ac56a0f3c7fdb2594c00d0",
+   "bytes": 1019
+  },
+  {
+   "path": "solution_methods/Perturbation/Treshape.m",
+   "sha256": "410ec0086a389fa728da8d39c0df1f9620f1e1f21801d35aac6563ef8cb0e0f9",
+   "bytes": 302
+  },
+  {
+   "path": "solution_methods/Perturbation/WBU_fifth_order.m",
+   "sha256": "8065a790f77596847ddefc71e032223e1fab6666da9436378d74a104379d1d63",
+   "bytes": 868
+  },
+  {
+   "path": "solution_methods/Perturbation/WBU_fourth_order.m",
+   "sha256": "1cd0b5222b4afe46e47062226091f7866971a0e12f66f238dce0cd6769e65ff9",
+   "bytes": 559
+  },
+  {
+   "path": "solution_methods/Perturbation/WBU_third_order.m",
+   "sha256": "183501b8563c7f5690778f89700a6424add7b41b7d94d9c7155dab46fc03dd3c",
+   "bytes": 500
+  },
+  {
+   "path": "solution_methods/Perturbation/bigprod.m",
+   "sha256": "8c35d941bbd93b72b79f0cacd51e69050b73c33018cf88dbafb6e4256022971c",
+   "bytes": 850
+  },
+  {
+   "path": "solution_methods/Perturbation/chain2.m",
+   "sha256": "b6443cb5070ef91a3fe14748f05605985ead7620ea36d184a58637631c64ffef",
+   "bytes": 971
+  },
+  {
+   "path": "solution_methods/Perturbation/chain3.m",
+   "sha256": "e838d681c02e4cd3939b0b9e3b1b1ec27b21ce9796c62dcf164969923c10b13a",
+   "bytes": 1763
+  },
+  {
+   "path": "solution_methods/Perturbation/chain4.m",
+   "sha256": "d9f5547cc2a447126ab3b831f75b03796beb23412af05bfca28056fd5021a8dc",
+   "bytes": 2646
+  },
+  {
+   "path": "solution_methods/Perturbation/chain5.m",
+   "sha256": "f53a73243b059a3ffe74a840e805f52518b3212c67e65cf13e526eca79e9b3b2",
+   "bytes": 4834
+  },
+  {
+   "path": "solution_methods/Perturbation/compderivs.m",
+   "sha256": "33e8736dc3dcb103903b61cca13cc0282e7dad56927e00cb7c19e7432deed02d",
+   "bytes": 5333
+  },
+  {
+   "path": "solution_methods/Perturbation/create_OMEGA.m",
+   "sha256": "a0da68220234da9f376a0e0faa80f3a3d2753fc4e58a6a77328d58c3e2191f10",
+   "bytes": 3161
+  },
+  {
+   "path": "solution_methods/Perturbation/create_OMEGA_x.m",
+   "sha256": "019d01be49035f60d172e6be19981d99326c435aebcc82128e40863a4a0199d9",
+   "bytes": 585
+  },
+  {
+   "path": "solution_methods/Perturbation/create_UW.m",
+   "sha256": "3d0ff1df9a0e19071eab9aafb26d55cdb9d811ae86a61b23ccc962d69dc26463",
+   "bytes": 1611
+  },
+  {
+   "path": "solution_methods/Perturbation/create_compression_matrices_nonzero.m",
+   "sha256": "826c67f491753becd8321c5607c382e825a9e65859f912713058199118bfe58e",
+   "bytes": 2036
+  },
+  {
+   "path": "solution_methods/Perturbation/differentiate_dsge.m",
+   "sha256": "6a16166d033b2428ea20279290cad7315d61d4e7d6c8a9785d6ea08c53541ec5",
+   "bytes": 1577
+  },
+  {
+   "path": "solution_methods/Perturbation/disp_deriv.m",
+   "sha256": "4287ca74d9ba1390a33c0773abef8d7201b54047b31ad90a8b222f432350d440",
+   "bytes": 1245
+  },
+  {
+   "path": "solution_methods/Perturbation/disp_fun.m",
+   "sha256": "f3c53c015784ef767cda713a1b832001bb49f538654611951e1670b408aac1fd",
+   "bytes": 1398
+  },
+  {
+   "path": "solution_methods/Perturbation/disp_fun_row.m",
+   "sha256": "46bf61db67a355a4b2d06ce9901946db2693ffe12e2afbd5f4ce967e2d46e31b",
+   "bytes": 1402
+  },
+  {
+   "path": "solution_methods/Perturbation/fvvEvx_vxx.m",
+   "sha256": "cea3e482e334a674c509397921caf19e1cfe2db645decf85184cb3cee5eacd95",
+   "bytes": 735
+  },
+  {
+   "path": "solution_methods/Perturbation/fvvEvx_vxxx.m",
+   "sha256": "4c36fe910718f431f80f27f86035d735fab273577012263c98b1808248f97e54",
+   "bytes": 1643
+  },
+  {
+   "path": "solution_methods/Perturbation/fvvEvx_vxxxx.m",
+   "sha256": "076c0f989734eebe76669c567667cf986c6642f7b40820241363416cb247aac9",
+   "bytes": 2864
+  },
+  {
+   "path": "solution_methods/Perturbation/fvvEvxx2.m",
+   "sha256": "85ec260eb19c4ac6faeca9efe3bc3d7acd6b6f6c7f981f239f37d17442514146",
+   "bytes": 998
+  },
+  {
+   "path": "solution_methods/Perturbation/fvvEvxx_vxxx.m",
+   "sha256": "8429caa52a7d5fb4d071ad9eff9b11771f909d1b5699922cd4a59462b824c357",
+   "bytes": 2926
+  },
+  {
+   "path": "solution_methods/Perturbation/fvvEvxx_vxxxU5.m",
+   "sha256": "13624f5033fe95114c8bdd9a3df670fbfc7c0a2d53b52ac80dd4c1c6c10272bc",
+   "bytes": 2970
+  },
+  {
+   "path": "solution_methods/Perturbation/fvvvEvx2_vxx.m",
+   "sha256": "cec96174d5a4d96eba813965295311e0586799b2a92a42b89126dadb5081e7ba",
+   "bytes": 1453
+  },
+  {
+   "path": "solution_methods/Perturbation/fvvvEvx2_vxxx.m",
+   "sha256": "5d9c5429cfb3725cfbd694056c86fd6b3e423d0b3792d1c7683a8a2cfad9b0e6",
+   "bytes": 3375
+  },
+  {
+   "path": "solution_methods/Perturbation/fvvvEvx3.m",
+   "sha256": "605278ce96fa7508894cd174490bb0c4106da0d5eddb4cb64f1d313eb5eef9eb",
+   "bytes": 582
+  },
+  {
+   "path": "solution_methods/Perturbation/fvvvEvx_vxx2.m",
+   "sha256": "aa171461598c50e288c8562d9fd505204448fefa8cc0e6dcb66ff2679bcb2f4a",
+   "bytes": 2616
+  },
+  {
+   "path": "solution_methods/Perturbation/fvvvvEvx3_vxx.m",
+   "sha256": "2f760762d3b94a7913d45c6f204f3b7d67f4f3ee105290913c88075b18be7edd",
+   "bytes": 2617
+  },
+  {
+   "path": "solution_methods/Perturbation/fvvvvEvx3_vxxU5.m",
+   "sha256": "e5e6c2db993c8968bc86ca1edb246bd65b6fcadcd12e53c67b33cf1f9376e3c7",
+   "bytes": 2647
+  },
+  {
+   "path": "solution_methods/Perturbation/fvvvvEvx4.m",
+   "sha256": "bbaaa6f4ee9339f5bc574b25683ac0c15225748e89abf2d2e515952affd5ec1c",
+   "bytes": 830
+  },
+  {
+   "path": "solution_methods/Perturbation/fvvvvvEvx5.m",
+   "sha256": "aa72f293a14b80ac123f5f64dd997fa259e39145304be0b30902a0bd8f1dd052",
+   "bytes": 1198
+  },
+  {
+   "path": "solution_methods/Perturbation/fvvvvvEvx5U5.m",
+   "sha256": "136df4711c016a4098cff87e5fd5ae3821d3cd26c694337f54265bcf5a9b2d3f",
+   "bytes": 1213
+  },
+  {
+   "path": "solution_methods/Perturbation/gaussian_moments.m",
+   "sha256": "21d22563095d1be4a947e3688f0460b2439f075ba791d6b95e15f1839664fbea",
+   "bytes": 741
+  },
+  {
+   "path": "solution_methods/Perturbation/gen_fun.m",
+   "sha256": "a5d8fb73470584f1cfe7b2ef5c5c369d6ca34b405db5f20080cbb7117e082eab",
+   "bytes": 1740
+  },
+  {
+   "path": "solution_methods/Perturbation/getderivs.m",
+   "sha256": "4589b3de3bfaf02bd6ad8180cc22b3baa6e5724845ba38cc60940d109ac3ca9a",
+   "bytes": 4246
+  },
+  {
+   "path": "solution_methods/Perturbation/getderivs_vector.m",
+   "sha256": "f7df0d87c0df8d41a1e62b70c500446b3d2e8141af9b632a02a1aca34e38d780",
+   "bytes": 4075
+  },
+  {
+   "path": "solution_methods/Perturbation/innerkron.m",
+   "sha256": "f7cb1e9110b4c49191856e684da18179093d6606416e82d1fa2d0dee9dcc0a4d",
+   "bytes": 732
+  },
+  {
+   "path": "solution_methods/Perturbation/permutekron2.m",
+   "sha256": "20a2f11c6e1d4fd1888a002b4d7ccd2e79cd8ddb8ab32da8ad9119c225c2a021",
+   "bytes": 5148
+  },
+  {
+   "path": "solution_methods/Perturbation/permutekronB2.m",
+   "sha256": "c568d2bdc5fcba37bb0f82af771fa25346f231b23c9748c1ca34c1e41440d959",
+   "bytes": 1022
+  },
+  {
+   "path": "solution_methods/Perturbation/policy.m",
+   "sha256": "6ccb277802b82e84982cd43125edec3f6ca4b8b4d4f438275f4a8191129ba1ea",
+   "bytes": 1440
+  },
+  {
+   "path": "solution_methods/Perturbation/simul.m",
+   "sha256": "fbfdaf078f869ff44be27b3fb56b092d1997cf4eb5ca097f1875cd2690dc634a",
+   "bytes": 5736
+  },
+  {
+   "path": "solution_methods/Perturbation/solve_dsge.m",
+   "sha256": "b8a3e6b4a39434facdfa4592f580199fc09375f301ffd2a704a133af0671b104",
+   "bytes": 37622
+  },
+  {
+   "path": "solution_methods/extrenal files/First order solution/gx_hx.m",
+   "sha256": "5f223c8e75701be165b468602d62b06bd4d54e86c2de9cab731882ed69135029",
+   "bytes": 2211
+  },
+  {
+   "path": "solution_methods/extrenal files/Maliar codes/LICENSE_AGREEMENT.txt",
+   "sha256": "bfc10c759ed937818530e50314702a527d1a2e14c64083228a0f5b91b8d3f5dd",
+   "bytes": 2160
+  },
+  {
+   "path": "solution_methods/extrenal files/Maliar codes/Monomials_1.m",
+   "sha256": "c059e5ee26c2f14c86de106f53152ebd2716ff25427eb2f4b466566939beeafb",
+   "bytes": 3024
+  },
+  {
+   "path": "solution_methods/extrenal files/Maliar codes/Monomials_2.m",
+   "sha256": "6308bcec26b73f4800792066bca513432271cb4277543471959c6b3bad3cdf04",
+   "bytes": 4427
+  },
+  {
+   "path": "solution_methods/extrenal files/gensylv/gensylv.mexw64",
+   "sha256": "1fefabf36a6423d4c05093477a66de19a4243d20ee4aad1584d5632b180afefd",
+   "bytes": 233984
+  },
+  {
+   "path": "solution_methods/extrenal files/gensylv/license.txt",
+   "sha256": "bfaf86e8f67a59725bc688982e2aae5db5bad761d9cd72c921b4716f6e689060",
+   "bytes": 13778
+  },
+  {
+   "path": "solution_methods/taylor_projection/GetInitial.m",
+   "sha256": "41bd495897823b07872ccecc3e3cc19bd5e929a6f3e3bba3a2eec693b9272e09",
+   "bytes": 3974
+  },
+  {
+   "path": "solution_methods/taylor_projection/LICENSE.txt",
+   "sha256": "55dad499f94ec1db4229ecb667529e5ed4b118e5d5fc96a70ff4ecb5d5652e3a",
+   "bytes": 1043
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/AkronBU2IC_mex.F",
+   "sha256": "8c9d6effb2e4f332e8085694d2e8646c739216a4f4f7db84096993c6df9fb8af",
+   "bytes": 5287
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/AkronBU2JC_mex.F",
+   "sha256": "e5a7d0e20a996c1f00b823c8b6345b517f7449e86e54d940eb923d5649215d91",
+   "bytes": 5874
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/AkronBU2vecI_mex.F",
+   "sha256": "f8a81a92d0690db8e8a06dfef7670eaa22a20de525efe9acaa190c7540bdb1a7",
+   "bytes": 10973
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/AkronBU2vec_mex.F",
+   "sha256": "0532c795675025de8699305b50d6363b4c7bdad7ef49ad0dfbcb97e4f722ac8d",
+   "bytes": 10160
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/AkronBU3IC_mex.F",
+   "sha256": "c7f492dc794513ab21eac45f6b8b3e1a3eb5fd21d9909e8664b483d29d25458b",
+   "bytes": 7444
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/AkronBU3JC_mex.F",
+   "sha256": "2cf509be212c238922a68da52b16a39303b101ab4d187a7eb1b5cc5a5ec4749a",
+   "bytes": 7726
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/AkronBU3vecI_mex.F",
+   "sha256": "2ef348bbcf318aa70c3d8113340f22da59fda505b9df93cad887b572a993804d",
+   "bytes": 14088
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/AkronBU3vec_mex.F",
+   "sha256": "cf1b9c46bb6c657a169d33b71f53dfde6d75a2406037a1072bf3b97361bb2eed",
+   "bytes": 13066
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/AkronBU4IC_mex.F",
+   "sha256": "6bc6fdc0df461e14773ae080a181dc3c31e35e45c9706a3025fc6b25b0286cd0",
+   "bytes": 9731
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/AkronBU4JC_mex.F",
+   "sha256": "5f0ad320ae3e6585e5009fe3ccb34bd74b97ef9d32ca2d6feaba9387be91f940",
+   "bytes": 9555
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/AkronBU4iIC_mex.F",
+   "sha256": "4c0be36747db3b0e9171d9d5d05519806b9dc11253df23f7434497e69f8d0d85",
+   "bytes": 10257
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/AkronBU4iJC_mex.F",
+   "sha256": "8c667ff12d4c7b6ab0626abcfa62e8388653b379d36c91dfb62ea1c15d6ec26b",
+   "bytes": 10004
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/AkronBU4ivecI_mex.F",
+   "sha256": "9c377c954597aacb33fcfc24ce7fca45c66d075a926f270b426d7905e2239d62",
+   "bytes": 17825
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/AkronBU4ivec_mex.F",
+   "sha256": "c29485bc20f2d11649aff945569c8664f674d7cd53c77a92b9eacd66c54be293",
+   "bytes": 16548
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/AkronBU4vecI_mex.F",
+   "sha256": "7e9948c538efeb97f4297e194abfe2446fcc5c164aed80a426fddc1d0b831a2f",
+   "bytes": 17262
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/AkronBU4vec_mex.F",
+   "sha256": "cda2cbf80599c6d80d8667e07f793ff2047ec45e0cf2d0624c4c1087bf31af33",
+   "bytes": 16027
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/col2ptr_mex.F",
+   "sha256": "d5db18882fcfd483b47d2b529ce1f88c93e01936302c5d0713225c6161a6fd85",
+   "bytes": 5549
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU2IC_mex.mexw64",
+   "sha256": "e72d1113a458650bd33923403c4b4d05eb07ca7846bbfd7c5f8ce1ff922631a7",
+   "bytes": 31232
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU2JC_mex.mexw64",
+   "sha256": "7f639fadcc055e3c00ba8aaf53b8d0bf1f7cb014a02ab4f6f8c1c4c7121b02a8",
+   "bytes": 27648
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU2vecI_mex.mexw64",
+   "sha256": "6a304883adb0a0b2d8a081b42e4a1800846e8625b54dee11cb54a188e8e88046",
+   "bytes": 40960
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU2vec_mex.mexw64",
+   "sha256": "be9898fd33f879fcaef4949b7d572113b0fdfeb85c4647036cbbadecbc78888f",
+   "bytes": 38912
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU3IC_mex.mexw64",
+   "sha256": "efddf6cae21e9117b0995c880ab21ef6294d9d4c4ed7197bac562434b34ddb63",
+   "bytes": 32768
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU3JC_mex.mexw64",
+   "sha256": "fbd46140e8193d97360cf6db1931090074435c22385db43656d95aa84075eb1e",
+   "bytes": 27648
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU3vecI_mex.mexw64",
+   "sha256": "13603ec5b126d99cea4deb35b60e07fe10d0902361568d7f44d0e5ab40695b4c",
+   "bytes": 52224
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU3vec_mex.mexw64",
+   "sha256": "a23878575ddb32032f754a851bb19ce3e462dda05f01e22a63cc81c47316a349",
+   "bytes": 49152
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU4IC_mex.mexw64",
+   "sha256": "f094fd6f0c09ceed495ed53c090cb596eab337e688e372904f4e9018afb8baed",
+   "bytes": 39936
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU4JC_mex.mexw64",
+   "sha256": "a7a521665d564ee948828d006cb74dd971a2b677666713a4acc87855005afa69",
+   "bytes": 31744
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU4iIC_mex.mexw64",
+   "sha256": "cdda84a7d5cb4c754e36936c3e7bc715d55b10c83db2094b366fc2b25b8b6f83",
+   "bytes": 40448
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU4iJC_mex.mexw64",
+   "sha256": "68d550c6cd85b62029019f34b3b19902d0fabdfd5ab09e58376e86eae0295215",
+   "bytes": 32256
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU4ivecI_mex.mexw64",
+   "sha256": "d3fe0fac3ad71542a5b3eb833292913140d7009f46fe1ed6c8d70ef89b6cb4ce",
+   "bytes": 65536
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU4ivec_mex.mexw64",
+   "sha256": "70ef488f4f92b64f914881574db3087056a799c7e77f8a63ab78d155eff3ef98",
+   "bytes": 60416
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU4vecI_mex.mexw64",
+   "sha256": "a78abb0ca4d5d4057d44eb18cab32eed69331101b18f6ac2c3c21e1197370244",
+   "bytes": 65024
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU4vec_mex.mexw64",
+   "sha256": "e1c1e13f4a2d633aa58a05768b42d88d9ee95e6d0489938c7827b3b16b4ce6bb",
+   "bytes": 60416
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU5iIC_mex.mexw64",
+   "sha256": "ac92b6f66ab57fd1dc80b9357eb5822cbbd6fd9652d3cfc9dbd82957c7329318",
+   "bytes": 52224
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/AkronBU5ivecI_mex.mexw64",
+   "sha256": "56ad3840adaf8f552201b90a3d5ca44428d3083fbc10d8d2c49cbd2149f3bdf8",
+   "bytes": 79872
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/col2ptr_mex.mexw64",
+   "sha256": "31fe3ad00bceb9b66959f80ff7401764adea595ed60a53d7bd75aec83154dbb2",
+   "bytes": 40448
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/compress_mex.mexw64",
+   "sha256": "ce4650cc906c7c645bf9450737d4c46798bda59b6ed2f425602e7ca126f3179a",
+   "bytes": 35328
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction1IC2D_mex.mexw64",
+   "sha256": "294c4bfcd7a3cf529eba397ae419d992d5a2f06bc8127e1bcad2cbabc33df499",
+   "bytes": 23040
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction1IC_mex.mexw64",
+   "sha256": "87a5a287c19775c5543ff9278e08de1d866905ca847eefaedceca83f9ea7f3ab",
+   "bytes": 21504
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction1JC2D_mex.mexw64",
+   "sha256": "6381abaf7695ac6517d65d99afdc09c407f6d344e82b4074a11eea1449e4be7c",
+   "bytes": 23040
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction1JC_mex.mexw64",
+   "sha256": "739029fb76d871e152a0c9fc33246c27699b211ff77c96df49996790b8e3fb4e",
+   "bytes": 21504
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction1vec2D_mex.mexw64",
+   "sha256": "f77efaa89342a1fe4e75f420ea78b633d88ed45eeca37f5ac6a8b5651096b451",
+   "bytes": 38912
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction1vecI2D_mex.mexw64",
+   "sha256": "84e2d3c96d4ccf9ffeaefe67a4c48b42f221ee1e7635a362d0d64ada755b7a5a",
+   "bytes": 37376
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction1vecIW_mex.mexw64",
+   "sha256": "352f706be64403cdc5b5c5d2dbcfa60ae50e0b46434c092b3622106a22b2da86",
+   "bytes": 17920
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction1vecI_mex.mexw64",
+   "sha256": "e7d3e71c2292e61ff7d2ed11f37fdd7709de22d261e0f782f75a602addd3f054",
+   "bytes": 38400
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction1vecW_mex.mexw64",
+   "sha256": "5bc01ba5e5db80e964f279a9f533868f66d2bcda4fb85143ae4cff60c44f9f80",
+   "bytes": 16384
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction1vec_mex.mexw64",
+   "sha256": "050e6f1c70b6ece0041c89aba46dd180f44b36fe6e612660c2e08924d21a613d",
+   "bytes": 37888
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction2IC_mex.mexw64",
+   "sha256": "bfcca9e6dfc88d2e74e22560a6c2f55fff43d02bfd0734aa108509cc4029ca7d",
+   "bytes": 30720
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction2JC_mex.mexw64",
+   "sha256": "294ccbe00a82764e95fa022916f36235e380d844e395d05617549248a2bc882a",
+   "bytes": 26624
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction2vecI_mex.mexw64",
+   "sha256": "5719e5826bbef023706ed6866d5e9eb5950200ca51fc21c09f71d64c65ab1329",
+   "bytes": 40960
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction2vec_mex.mexw64",
+   "sha256": "80bb81ea716b0d9e5455368acea2e302d7010daadf17805e901e4e7de3f8e0c4",
+   "bytes": 39424
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction3IC_mex.mexw64",
+   "sha256": "059d1f76e636b4d6346a3e75f20a9e61cf9f9fec69662ef73815e7eacb38c9b0",
+   "bytes": 32256
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction3JC_mex.mexw64",
+   "sha256": "65a2badea32ddbbf59d1b959104d0d40bdc78f894cb3ed4386c48511c1152d88",
+   "bytes": 33792
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction3vecI_mex.mexw64",
+   "sha256": "61b87e7c37cdeea33a85692196b4bc7ee55aab92e2aca330987d0db2a1417cac",
+   "bytes": 51712
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction3vec_mex.mexw64",
+   "sha256": "0b83666f6abc88183626f85c1c1b52493853897ede1bffc6fed3c6f05dc77494",
+   "bytes": 51200
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction4IC_mex.mexw64",
+   "sha256": "21a1490bffd6e19c4fec9774d1a3d7c20420e6c05eba41703e398c4c855656d5",
+   "bytes": 39936
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction4JC_mex.mexw64",
+   "sha256": "8f8e349f3cfdf658ac7f2fd3da929fa956471d8c26849332ce15649c484a1c30",
+   "bytes": 31232
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction4vecI_mex.mexw64",
+   "sha256": "fde933a1703ed0fc448828d21ed916d21186c7b84fe63930f9a5735c1bcbbf44",
+   "bytes": 62464
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/contraction4vec_mex.mexw64",
+   "sha256": "b13edc69f2826b79e47109cb559016782e94a52087dbf98d3d89ebd3c048effe",
+   "bytes": 62976
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/multcol.mexw64",
+   "sha256": "d328df90a7aa57ab88671077a418f5b41e7d4c64dbe56be32037cd0917bd4b30",
+   "bytes": 10752
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/multrow.mexw64",
+   "sha256": "0fe234b1805afc859635d591ed27be2236cb600af01c7337bb46f56980fc2169",
+   "bytes": 9728
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/perm_rows.mexw64",
+   "sha256": "c594429cc93799ba42a61affac05b3d1348d66b0c4eb1f95607aff5fd5e18c22",
+   "bytes": 11776
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/ptr2col_mex.mexw64",
+   "sha256": "d78a56475a408be6bf535664b70c2b8bae84020861ae5ad978f31e05ffd4d77d",
+   "bytes": 8704
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/sortcol_mex.mexw64",
+   "sha256": "847ef4ad09438a278fbe3f044fd7c44e698ae14310046af2b732f30fd635d266",
+   "bytes": 38400
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/takerows_mex.mexw64",
+   "sha256": "ed5f2e4a4cd5fd4b8b193980f1c8f57f0940b42bd92f99d85f163d4b1f7acdf4",
+   "bytes": 23552
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/tplus1_2D_mex.mexw64",
+   "sha256": "5f136f70554f19dcb1e7694763053d6c6bf403b9075d32587583512b889f0d17",
+   "bytes": 36864
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/tplus1_mex.mexw64",
+   "sha256": "a5b3ca00996be8c188901493b95ae9cdba0cf1b89b552091e81cf3bb6182d4d5",
+   "bytes": 35840
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/tplus2_mex.mexw64",
+   "sha256": "ac4e822cebf5f7020f4b8acd077c2538770255eaa64700c12bd901625cfa6b09",
+   "bytes": 39424
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/tplus3_mex.mexw64",
+   "sha256": "6a6d62cce9d7b3b2cc99b6be0a9d502e25105dc9bfab116d2adbb270b80e030c",
+   "bytes": 42496
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compiled_on_Windows10/tplus4_mex.mexw64",
+   "sha256": "47eb48e02135afc13649478ea678626bfcc95f3878887dd9ad366295c8b3cdaf",
+   "bytes": 32768
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/compress_mex.F",
+   "sha256": "e1055a1f3dc98e398d17759c6822921f5e8b2d4f0fff7a6ad15b75b120101f8f",
+   "bytes": 4962
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction1IC2D_mex.F",
+   "sha256": "3381d6c41c5f2dbe87b01681916987407a175856a2d0aa0c34b0f1d087c3312e",
+   "bytes": 3607
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction1IC_mex.F",
+   "sha256": "cfef8b714d9e77c4962e607694dfffedd3a898ba89f16190c0147589ea9cf2d3",
+   "bytes": 3407
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction1JC2D_mex.F",
+   "sha256": "8f5798c16b8f53e312a13c07ae38918b7dbf6c1d63047a2efd437caea7449068",
+   "bytes": 3682
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction1JC_mex.F",
+   "sha256": "e124543e32d74db7ef1b2bcf480fecaa0127a18faf9e49075a5cfc15f6b2427e",
+   "bytes": 3544
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction1vec2D_mex.F",
+   "sha256": "0c9ee07e261eced327cfe2703335f28aab46e1786f3e908677178b995eda1356",
+   "bytes": 7484
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction1vecI2D_mex.F",
+   "sha256": "97f808981f7cf7ad14dcd180a010b0b6c47efaa5cf9755a84fe6a8ef6cbee9cc",
+   "bytes": 10252
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction1vecIW_mex.F",
+   "sha256": "0c65350666071672edfc5e67b19e7446974db50a680e2dd47ca79b0e07e06666",
+   "bytes": 7573
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction1vecI_mex.F",
+   "sha256": "4c32233f147c673dd5c87b1666d73bc2dca753cca1b957b7c5adc00fede2f124",
+   "bytes": 7886
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction1vecW_mex.F",
+   "sha256": "4b4290acf9dbf037b1a9a7c8758b3abddd4e95a14259e819d50bea4cd9039f9d",
+   "bytes": 6979
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction1vec_mex.F",
+   "sha256": "3631cf686995eeb1d6201d72e11984a57f0482dc50814213effe5e91f3b69e04",
+   "bytes": 7253
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction2IC_mex.F",
+   "sha256": "fa1e1905e77c88195e59339b21710ee3dc74b6d6c462a3dcb23ec9611053d541",
+   "bytes": 5501
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction2JC_mex.F",
+   "sha256": "ca7a03628606d489376793fe40ccadc68aaa1c398a6d2a72da831e5930dd365c",
+   "bytes": 5585
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction2vecI_mex.F",
+   "sha256": "f62194a5cdf6bddeadb87fb0571074b3ab3c8fa490bb0540f0ba2f81049bdce0",
+   "bytes": 10956
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction2vec_mex.F",
+   "sha256": "066f4cc0d40ed25313cb697277ada412ca361935043ccb73b2e634b51d56fab8",
+   "bytes": 10409
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction3IC_mex.F",
+   "sha256": "750c1465dc6e18136b5bf247fe342ea27fa00348f2a9118d34c284bfc7019b7a",
+   "bytes": 7787
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction3JC_mex.F",
+   "sha256": "abe3ed75b988a1020691e947f77c631a515b06817fa6e550aa8dd5dcbbd8a21f",
+   "bytes": 7557
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction3vecI_mex.F",
+   "sha256": "21b81fd9acf451f69aa9bd8f6ef4266a4f87f3b3195c721007ec459a852b00f7",
+   "bytes": 14327
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction3vec_mex.F",
+   "sha256": "9c4c79cc391060b2d18703c03284ddbdd4b39569b30ddb68e2242e45963c5d71",
+   "bytes": 13753
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction4IC_mex.F",
+   "sha256": "6ff0445740779ddf45ff7862e69acd4f75708abb0c9d9e040994379f5a27de0c",
+   "bytes": 10145
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction4JC_mex.F",
+   "sha256": "f4eb92a4e494a31141b54705daec6cc7299a029f875902ecc76eda19950448f6",
+   "bytes": 9484
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction4vecI_mex.F",
+   "sha256": "c6116186f09571d27f4f8115a405f62d246ac1c5853c61ee5fe7e4d91e5f3892",
+   "bytes": 17886
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/contraction4vec_mex.F",
+   "sha256": "9804536ac635fa2df2cf4c614b2f1b5bb26654277566e135f241623eb457f121",
+   "bytes": 17155
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/do_mex.m",
+   "sha256": "a6a1f028422eb00c6803106ceed9faac5c75fafb12b084ac35522d8ce38913a6",
+   "bytes": 157
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/multcol.F",
+   "sha256": "5db7d13d0dbb7853413c56175267b585af998cfa40ccff5e77124560e5f7a762",
+   "bytes": 2634
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/multrow.F",
+   "sha256": "5705b3da7689be136ee8009030149589fc3e89efbba08f70a26a3400fd8d559b",
+   "bytes": 2632
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/perm_rows.F",
+   "sha256": "208ee2b2b8e22d5fff06d02cb746cc034e26c87374725782bbc7482de4d01ade",
+   "bytes": 4393
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/ptr2col_mex.F",
+   "sha256": "d46eef62b01a0005e83628e7d3dd55b0920a049439387a29b82eae845d63a6e9",
+   "bytes": 2099
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/sortcol_mex.F",
+   "sha256": "f6c1840ce25d3dab26075fa7d9034d9a36ed0600448e0fae732f1710995e4407",
+   "bytes": 4650
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/takerows_mex.F",
+   "sha256": "bb903a836f0f9192164b2b0f705fbbf5aadb839098248c504818bc3a5023152e",
+   "bytes": 3306
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/tplus1_2D_mex.F",
+   "sha256": "e5cfbd3f35d8e4cbb2392201dd3c94d711b547ae5c3e3b792b179f6a13a3afe6",
+   "bytes": 7811
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/tplus1_mex.F",
+   "sha256": "fda65a6b044523c7726bf084058213d75bdf974fee5cf17b1b78b7552b7b5550",
+   "bytes": 7686
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/tplus2_mex.F",
+   "sha256": "5097bb128539d15fb1c289b4a73f309572399d7945579dd7985f586deac0417a",
+   "bytes": 8030
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/tplus3_mex.F",
+   "sha256": "41504eeca60f68c81b9d166c188de2ef01092118a391cf8ba4959552dec0885b",
+   "bytes": 8294
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files/tplus4_mex.F",
+   "sha256": "1d03fea3baf2f1a6cd0d63f0136b67dca25e77223da94c18d18e855c909cd7fc",
+   "bytes": 8573
+  },
+  {
+   "path": "solution_methods/taylor_projection/MEX_files_for_non_intel_compilers/do_mex.m",
+   "sha256": "66e769c769a71f7087e6c45580a2c620e9cf28c3d284c1c15277abf23e9ae0d3",
+   "bytes": 625
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/AkronB1U2B2.m",
+   "sha256": "0ed88dc6b1314a9102d3da1d1942ae855ad64f9fc3b0a8640ae6bd355e8f3a26",
+   "bytes": 866
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/AkronB1U3B2.m",
+   "sha256": "c5f8305d0a93b29b220365ca72c86dc9c6423cdb0b2a1ebb37d6957023be7247",
+   "bytes": 911
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/AkronBU2.m",
+   "sha256": "c379c13f469ba7fc0060fc743e4188750beb2af9517956b06d5803d0356096cb",
+   "bytes": 5476
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/AkronBU3.m",
+   "sha256": "2b8773a6ef55a81b22cffde55a27d2e09ed4fa56433b00480c28fc71a71ba9ec",
+   "bytes": 5745
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/AkronBU4.m",
+   "sha256": "be989497797c30afc37f80726b8fc30bcc4b2f338d3e73a21b57ddcdef9bca16",
+   "bytes": 6553
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/AkronBU4i.m",
+   "sha256": "531a0a37a864bfb1e002cba38021d6735d418f7e59e341f2581624167254dc66",
+   "bytes": 3906
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/changecols.m",
+   "sha256": "063ecfb25ef4bec84391e23bdf66481a08e6eef1214f50c976d99004170ada76",
+   "bytes": 238
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/changerows.m",
+   "sha256": "dcff4ece3758d4d1fda659b7d5f95cc2c89439468b48c24f51d656fd179b40ed",
+   "bytes": 326
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/col2ptr.m",
+   "sha256": "8d10b7d727c357962237024c337410dd6c0a05d882a6093a6966e1018ba31ef5",
+   "bytes": 793
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/colsort.m",
+   "sha256": "92b60acbabfd35e0a24bad9cb46339a2d1b397b21991e8adba03b25dc84247d6",
+   "bytes": 973
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/contraction1.m",
+   "sha256": "1933bccfc788f785ddd69b850231e959048fc242ed338b0054df7329f9b0fc5d",
+   "bytes": 6368
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/contraction2.m",
+   "sha256": "6cf96b7daeec6840b8ec430fab1c6f314e701f4b0ecf2b03706d7a15b1729947",
+   "bytes": 5444
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/contraction3.m",
+   "sha256": "5cfc63acb0ace1858503e6f208914df90d1d6657532fec5d82a8d62ae570cb5d",
+   "bytes": 6272
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/contraction4.m",
+   "sha256": "86bb631f0b9a5f015e4c1790d277405e714c2ae76ad8138ba54c20e66be0b4ea",
+   "bytes": 6854
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/extract.m",
+   "sha256": "7a45f4d5bcda627d5829c1beb3212d601e3d91e43ebdd3379e78d16c4b394b53",
+   "bytes": 729
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/fold.m",
+   "sha256": "76e130a6795e623b03768591ec43b3744da7c05573fd6896d4ef783c0eb60b86",
+   "bytes": 1253
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/foldj.m",
+   "sha256": "0e3122ea0cc9e80126d75a2f59bd280a65bae51c333bfb30719741aea46ad116",
+   "bytes": 1095
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/intarray.m",
+   "sha256": "a38c021a3baa964b953fe9c471941fa5fa2b679be6a8107521ce7d9cb5a464ef",
+   "bytes": 383
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/multscalar.m",
+   "sha256": "cf143b693ad583087e4e08034061944ea67d14ef9ff6ee8d5df7202f41822151",
+   "bytes": 156
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/permutecols.m",
+   "sha256": "eff7acaa10e8ad40b29b88126ed6ecfcabbecd336045e1bfa809ed7274b4f652",
+   "bytes": 207
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/permuterows.m",
+   "sha256": "544bbe8887cc1330eecb9206734235c7ebaa19473663fd6111f57a833bf2340e",
+   "bytes": 311
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/ptr1d.m",
+   "sha256": "460c76db1e4fc37a3f3260f7a7e4363e7dbcfa79e036e5eda89dc3affc290513",
+   "bytes": 287
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/ptr2col.m",
+   "sha256": "42b52cf301dfece12170cea95bf10b64f9ec78aba5064ecb9cb7fffe95e3ac79",
+   "bytes": 505
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/ptr2d.m",
+   "sha256": "05ebd499dbce2c4b474e01252c812139f93ac4f45efbb0af70644bb196dddd10",
+   "bytes": 1047
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/spmat2sptensor.m",
+   "sha256": "986168cc18de8ea675e9aad6769780db33490c7ce7c7df9b400b94df50481bbf",
+   "bytes": 345
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/sptensor.m",
+   "sha256": "27319a6cd0fc6f98ce5aabd03c54f2c62944cd77c9f8366698f0b7180fafa8a5",
+   "bytes": 5089
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/sptensor2spmat.m",
+   "sha256": "b405d1493ce6c014d5f20f95b4558c12081edd85bb9acf35d4f4711a8b4db90a",
+   "bytes": 924
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/spteye.m",
+   "sha256": "2deb0f1f40193474d97308b78a85e8090567473c137bd358ec40b82fb32dacce",
+   "bytes": 338
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/takecols.m",
+   "sha256": "f83a5e55465b0a62dc2429b2f09b17666aacea04ed16c0cd22ddb7e834ae7ae1",
+   "bytes": 717
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/takerows.m",
+   "sha256": "dbc35fab2b2fcc3d17fa37d2db55cbb2a7c67f32596bcbd572c7ea01615c6eda",
+   "bytes": 1292
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/takeunique.m",
+   "sha256": "5910f4370fb6a89e41cd8f18bce1330483a6b62dd0bcb865848c1b9b233d6f11",
+   "bytes": 595
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/tfind.m",
+   "sha256": "7ffc8bd412fb7aec0cef577c0c55a7f5a68e2b0d76526ff913636d3f2749106f",
+   "bytes": 968
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/tkron.m",
+   "sha256": "ca701b13a6f4d29804c31218759158db86a900a9d0a218e0a43e973fcbad1477",
+   "bytes": 634
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/tkron3.m",
+   "sha256": "4109d7ddd5385af1d2e9d43837ac9b3c27602e3879c3e59548095a6933c68775",
+   "bytes": 979
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/tkron3_d1.m",
+   "sha256": "e3b8d0bcab1dc8dc871e986838d499312106c7ecdbb00877e809b11a81cc9e1e",
+   "bytes": 980
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/tkron3_d2.m",
+   "sha256": "a3c95096f550b03491387b08cfe8287e2db9a7f8e4f5ce1b3f62f85ac90dbc26",
+   "bytes": 1680
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/tkron3_x.m",
+   "sha256": "c2f1e11216541f5703bbd09a4b539f05f9836f6cea124fc1b7dd87cae7b4b8de",
+   "bytes": 979
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/tplus.m",
+   "sha256": "2619ff327810c59a3430335d3be95320736b95a8ad10facd0e17119da4f11625",
+   "bytes": 2021
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/tplus2d.m",
+   "sha256": "0d65c24783ab06c47e180488ced54e0b4758a8daebffc9fd5bcca10d026c1819",
+   "bytes": 1993
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/tscalar.m",
+   "sha256": "cc6683a2f011408d65abf2f290d032afd2a87e183b488a4212fa60b28b19c6c8",
+   "bytes": 247
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/ttranspose.m",
+   "sha256": "85ff61c3aa129251783c230e0066d5ed96239c0db3724f9509c68b546bb73f31",
+   "bytes": 364
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/tvec.m",
+   "sha256": "740dd6aebdac475bc7e52a5639c1c11e7ba5a4d2d94482fca80f8c7ea05cf6b4",
+   "bytes": 305
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/u2c.m",
+   "sha256": "106e0458d4d99da12351ffec3ebd4786fe62267250802d58abddaccc121dbd1d",
+   "bytes": 891
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/unfold.m",
+   "sha256": "eb335456e4d1d39b1c82c47905d8e5439e2305620617213a791a453585b31e38",
+   "bytes": 1040
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/uniquecols2ind.m",
+   "sha256": "ddcefcf73f072cac74318f0c39a478d27bac32caebc313cd7e15335045e03183",
+   "bytes": 813
+  },
+  {
+   "path": "solution_methods/taylor_projection/Tensors/vconcat.m",
+   "sha256": "4864bb5ee2749711403f33ba9b3063c0effd093b7ad0fb9249f32b0fcb6b0a81",
+   "bytes": 559
+  },
+  {
+   "path": "solution_methods/taylor_projection/chain0_theta_tensor.m",
+   "sha256": "9bd5f8981ff11f848988612ca0b6d93d4a8401aeee6c62e62846dda676add661",
+   "bytes": 195
+  },
+  {
+   "path": "solution_methods/taylor_projection/chain1_tensor.m",
+   "sha256": "9aee9c33881cd85ad099b66a3f857309ad7ec460eb1eebec856bb7f0eaf24fa7",
+   "bytes": 201
+  },
+  {
+   "path": "solution_methods/taylor_projection/chain1_theta_tensor.m",
+   "sha256": "3503f306cab863120b031b1a1f813feea44866520322b80020cd6af9806ff92b",
+   "bytes": 650
+  },
+  {
+   "path": "solution_methods/taylor_projection/chain2c_tensor.m",
+   "sha256": "97e93efda04f509d28d1f4ff80e8c6accd980151766a76abe014aa06a13e43a5",
+   "bytes": 456
+  },
+  {
+   "path": "solution_methods/taylor_projection/chain2c_theta_tensor.m",
+   "sha256": "1e9e245097c53ac0596722c9778ca288fa2402e7ec812f5e1fbc3f204e8c10cc",
+   "bytes": 1351
+  },
+  {
+   "path": "solution_methods/taylor_projection/chain3c_tensor.m",
+   "sha256": "dfb7420ade86d70b750fad24d104acff2c958af34b1c0124c1ccf454a43e43a6",
+   "bytes": 677
+  },
+  {
+   "path": "solution_methods/taylor_projection/chain3c_theta_tensor.m",
+   "sha256": "51cf20292117f20e4fa5d7cdbc32ceef7b5b0f664a5c2420df9b42ed46e52479",
+   "bytes": 4581
+  },
+  {
+   "path": "solution_methods/taylor_projection/chain4c_tensor.m",
+   "sha256": "d0320687e2468ce12f1677d0fcdb2baa24db4a9e4c61d8b13501627e5e136b97",
+   "bytes": 1424
+  },
+  {
+   "path": "solution_methods/taylor_projection/chain4c_theta_tensor.m",
+   "sha256": "cef5cc7dabefb5bb50dc5437aa2dade29016dbc5ba433851875f14d6931b1f5a",
+   "bytes": 6616
+  },
+  {
+   "path": "solution_methods/taylor_projection/chain5c_tensor.m",
+   "sha256": "ede2a41faaa7ef717a3c4d2a94942603bc69cc0fc7f3a28834f82eea207a0a97",
+   "bytes": 5775
+  },
+  {
+   "path": "solution_methods/taylor_projection/chainsM.m",
+   "sha256": "d25453ba4edb6c3b571497c757c82da6c092f8dbf33300146e27ea8bcef19303",
+   "bytes": 2402
+  },
+  {
+   "path": "solution_methods/taylor_projection/coeffs2derivs.m",
+   "sha256": "6fa499ab453413cec930267175eca6985852569c3b62150fc03006698bfb58af",
+   "bytes": 2355
+  },
+  {
+   "path": "solution_methods/taylor_projection/compderivs.m",
+   "sha256": "cc3ecf5ee2cafe48f363819a99ee3163a81530790a62951a49568528091492a0",
+   "bytes": 5392
+  },
+  {
+   "path": "solution_methods/taylor_projection/compderivs_u.m",
+   "sha256": "d22b56eadf351ad366d735884a83263112cfa7c17c148ace04f28b726d812cf9",
+   "bytes": 3836
+  },
+  {
+   "path": "solution_methods/taylor_projection/convert_to_matrices.m",
+   "sha256": "3ce029d6483d3912bc62d74ff2012a7eaaca54d97af4f4595349f999576c1b48",
+   "bytes": 12617
+  },
+  {
+   "path": "solution_methods/taylor_projection/convert_to_matrices_i.m",
+   "sha256": "dbeee01fe352f685923a0f384dca6b2cc9b7b1a283226d309c97c5b96d02fe52",
+   "bytes": 15507
+  },
+  {
+   "path": "solution_methods/taylor_projection/create_GAMMA.m",
+   "sha256": "463618923fa56f68505a2eebcde65dc3ea60c8aaf4315899fdacb665fecb5c7d",
+   "bytes": 2165
+  },
+  {
+   "path": "solution_methods/taylor_projection/create_OMEGA.m",
+   "sha256": "a0da68220234da9f376a0e0faa80f3a3d2753fc4e58a6a77328d58c3e2191f10",
+   "bytes": 3161
+  },
+  {
+   "path": "solution_methods/taylor_projection/create_OMEGA_x.m",
+   "sha256": "2d6903eb84c79c50d4851fea2430ada4b238abe98c635d58f6af4dbfbe0ebb83",
+   "bytes": 583
+  },
+  {
+   "path": "solution_methods/taylor_projection/create_UW.m",
+   "sha256": "3d0ff1df9a0e19071eab9aafb26d55cdb9d811ae86a61b23ccc962d69dc26463",
+   "bytes": 1611
+  },
+  {
+   "path": "solution_methods/taylor_projection/create_X.m",
+   "sha256": "824910f255b6811c75b906b0c8722bf57ea02a67eae3133274400178821426e5",
+   "bytes": 1523
+  },
+  {
+   "path": "solution_methods/taylor_projection/create_X_no_derivs.m",
+   "sha256": "8c7ef92d1c5bdfc370858e5b7a57114560b6f023323fe900d7efc97d61ed6895",
+   "bytes": 806
+  },
+  {
+   "path": "solution_methods/taylor_projection/create_X_tensor.m",
+   "sha256": "1255b9bbfbaa78e5be725e0484babb8d87f7f826908e8ca2281356877be3f307",
+   "bytes": 2328
+  },
+  {
+   "path": "solution_methods/taylor_projection/create_X_tensor_no_derivs.m",
+   "sha256": "51f53d67d957e93d46327fcb63682c954857b4b53a5ba1f5c77154b863571334",
+   "bytes": 701
+  },
+  {
+   "path": "solution_methods/taylor_projection/create_compression_matrices_nonzero2.m",
+   "sha256": "0b53297305e6c09a6ef1a250d68dc2fc52530bfc5e8bbd3a43cf8c9bac62b688",
+   "bytes": 2103
+  },
+  {
+   "path": "solution_methods/taylor_projection/derivs2coeffs.m",
+   "sha256": "350903f017460bb6d34de9d9b920cb35ff5639dcb9fb0d7221a2a97e7cf8f21d",
+   "bytes": 514
+  },
+  {
+   "path": "solution_methods/taylor_projection/diff_fun.m",
+   "sha256": "7a5c921ff06a27eb829c0864c98cfb4b1e2ebae586a372c55e4c931dc4153710",
+   "bytes": 4882
+  },
+  {
+   "path": "solution_methods/taylor_projection/diff_fun2.m",
+   "sha256": "cc4bd072dcf1408013076c555c1765318c6633b571eb5df3d20603fea599e199",
+   "bytes": 9985
+  },
+  {
+   "path": "solution_methods/taylor_projection/disp_fun_vec.m",
+   "sha256": "302a95e237d9eda3678fcc8625584fd01a654c48290d54878e68c42bda070366",
+   "bytes": 1402
+  },
+  {
+   "path": "solution_methods/taylor_projection/disp_fun_vec_row.m",
+   "sha256": "16cfb88a03848bdc829f8bbf66ead1ee7b088265ff13baf744367603f6c82c5a",
+   "bytes": 1406
+  },
+  {
+   "path": "solution_methods/taylor_projection/eval_model.m",
+   "sha256": "0d49d65f66aa794e569be09d07e1e8717df08669abd4249f7228f9fc0e9800b5",
+   "bytes": 3234
+  },
+  {
+   "path": "solution_methods/taylor_projection/eval_modelMS.m",
+   "sha256": "42463809851989abf166f9a80c4b903ab79a72e0800cfe2465f96e7ac92fbff1",
+   "bytes": 3576
+  },
+  {
+   "path": "solution_methods/taylor_projection/eval_modelMS_vec.m",
+   "sha256": "76a3b582775c23a5142e08d2ae89b22da1e13ef2365806a4aab83a74ac23a567",
+   "bytes": 6875
+  },
+  {
+   "path": "solution_methods/taylor_projection/eval_model_vec.m",
+   "sha256": "c42e8078a1f3e21611a0344faad2c7e0b6e9316fe0405ec680ae3ac23b3ea016",
+   "bytes": 10139
+  },
+  {
+   "path": "solution_methods/taylor_projection/find_n.m",
+   "sha256": "6e6da7bc2d28705bbf2f058026c824bfb80bf58b15a1a0f9e1fb12f129a14be1",
+   "bytes": 517
+  },
+  {
+   "path": "solution_methods/taylor_projection/find_n_new.m",
+   "sha256": "0c6fe7320adf8fa559489fa66f5345244e1a3448b07ae1b6886cdfee7e07ce1c",
+   "bytes": 688
+  },
+  {
+   "path": "solution_methods/taylor_projection/gen_chainderivs_tensor.m",
+   "sha256": "253f48fa2468e02d206350ab59c287889224e2e73cbc37be67dd04754df9a61e",
+   "bytes": 406
+  },
+  {
+   "path": "solution_methods/taylor_projection/gen_fun_vec.m",
+   "sha256": "4e889f5cf9345ba7955c6801554e2118c0adb88a27795b1faed0e2dfde97791c",
+   "bytes": 2196
+  },
+  {
+   "path": "solution_methods/taylor_projection/gen_fun_vec_subs.m",
+   "sha256": "d86e5344c8b38238f1e1e3678f2e050586eda3c41cd67e31e22c6544cc62f443",
+   "bytes": 3866
+  },
+  {
+   "path": "solution_methods/taylor_projection/get_Phi_derivs.m",
+   "sha256": "1054f16c6dc5c58088da8bca54135659989bf8fc5b82d3bd83ad7f6fb1dab8c7",
+   "bytes": 1532
+  },
+  {
+   "path": "solution_methods/taylor_projection/get_f_derivs.m",
+   "sha256": "5c269e1d1133e2ca8385bb6d4f85ef93ea32d27efeb2bf7517b1babaaf939cf6",
+   "bytes": 23317
+  },
+  {
+   "path": "solution_methods/taylor_projection/get_f_derivs_fname.m",
+   "sha256": "075c3e10d846725b276f7f7fa0c780051fda13da4626c7c40b4e61915ad7c4f4",
+   "bytes": 31767
+  },
+  {
+   "path": "solution_methods/taylor_projection/get_hybridPhi_derivs_v.m",
+   "sha256": "7b320cbe81a27978755f7e53e19106047b8e6b79f443969c1e9e28c33306af2c",
+   "bytes": 13905
+  },
+  {
+   "path": "solution_methods/taylor_projection/get_hybridPhi_derivs_x_theta.m",
+   "sha256": "be84e1aca18684d8a935ffe830a2a5f84ab7cda2735676e851121286bd3aa636",
+   "bytes": 4149
+  },
+  {
+   "path": "solution_methods/taylor_projection/get_initial.m",
+   "sha256": "8d4a82b4d89066d8f49833d25284819437da402786d696f6385abc7686459232",
+   "bytes": 4343
+  },
+  {
+   "path": "solution_methods/taylor_projection/get_moments.m",
+   "sha256": "2f36ec67016345236f35e490d6601a7361ef0a6c631afdbbf828b4d400cc1470",
+   "bytes": 817
+  },
+  {
+   "path": "solution_methods/taylor_projection/get_pert.m",
+   "sha256": "a246c8378c0e36b2c08668bfdf89b62c4e2b5f616c4a99311e46aa613727f8d4",
+   "bytes": 26476
+  },
+  {
+   "path": "solution_methods/taylor_projection/get_pertMS.m",
+   "sha256": "bd009014b36d53d8e8efcc93af0bdba0989e30000ecf4cec9867e63a9c2b31e6",
+   "bytes": 293
+  },
+  {
+   "path": "solution_methods/taylor_projection/get_perti.m",
+   "sha256": "0a364feb46f24303ebc88b2cb6f3fe8c63ba49462dcd341f3460ba70beb98531",
+   "bytes": 26302
+  },
+  {
+   "path": "solution_methods/taylor_projection/getderivs_c.m",
+   "sha256": "9fb0bb460c634e29a153fd820ba23687fc3eeecbd5b2413ad55ab22ca6b6dd0f",
+   "bytes": 4202
+  },
+  {
+   "path": "solution_methods/taylor_projection/getderivs_tensor.m",
+   "sha256": "1db117c9fe13bb196d432acea1a956c7a8d0d17e0ae26b234c0958e0835cd631",
+   "bytes": 3992
+  },
+  {
+   "path": "solution_methods/taylor_projection/make_residual.m",
+   "sha256": "52750da1c6c8fc6c088c90cf82be2da2ce6840bc498c0f5b868b70b70794e590",
+   "bytes": 9065
+  },
+  {
+   "path": "solution_methods/taylor_projection/make_residual2.m",
+   "sha256": "32f82a6cf0c874c375c5b70d5372d2a0ce4074a1d46b46ae4dbf8890c711b988",
+   "bytes": 9431
+  },
+  {
+   "path": "solution_methods/taylor_projection/make_residual3.m",
+   "sha256": "43fff69ab560e4269aeeaf61f994788d3237ef95bf2176d8d40c7f5311914d36",
+   "bytes": 15468
+  },
+  {
+   "path": "solution_methods/taylor_projection/make_residualMS.m",
+   "sha256": "6b023308ffd08be8c4594b82d9d2c87cbb4b63b7b61fbea54091cb87a76e2d1e",
+   "bytes": 525
+  },
+  {
+   "path": "solution_methods/taylor_projection/make_residualMS2.m",
+   "sha256": "5a48d30bd9b6784cc204160614c8037f24c67a706615773c68dafce30fc9626e",
+   "bytes": 541
+  },
+  {
+   "path": "solution_methods/taylor_projection/make_residualMS3.m",
+   "sha256": "b8143f13a580ca894cb56ed7108aba6a2cabc5ec9cba81e3582a6de50e73aea2",
+   "bytes": 533
+  },
+  {
+   "path": "solution_methods/taylor_projection/model.mat",
+   "sha256": "1469c4c06487492bf34246fd60d98d6bc2334d86a41cee57f81e1732b1ea5871",
+   "bytes": 24377
+  },
+  {
+   "path": "solution_methods/taylor_projection/nnz_UW.m",
+   "sha256": "23a40003c8c3a93d811af2c3a83a30751d9246df6a163a444d9dedf3f270f6ca",
+   "bytes": 2738
+  },
+  {
+   "path": "solution_methods/taylor_projection/precompute.m",
+   "sha256": "d7cddb93fc7d4893e1ca1f02e2d9d72dd70dd914190429c956650523bf741d71",
+   "bytes": 3292
+  },
+  {
+   "path": "solution_methods/taylor_projection/precompute_no_shift.m",
+   "sha256": "4ec2c3cd8763fe0a842bc7f4823f0364a5f26d60159b4b0b4c0f7717f7f1728e",
+   "bytes": 2480
+  },
+  {
+   "path": "solution_methods/taylor_projection/precomputevec.m",
+   "sha256": "213b013dfb4601731d6ccd53e08d84280e73ace95662da42a9e0700e3e8eec84",
+   "bytes": 3531
+  },
+  {
+   "path": "solution_methods/taylor_projection/prepare_tp.m",
+   "sha256": "6a968c48b003b18543a634304396fe6532e71457e86ab297e1bf71151e053559",
+   "bytes": 4236
+  },
+  {
+   "path": "solution_methods/taylor_projection/prepare_tp3.m",
+   "sha256": "7bae6d877c2cc09bffc46aca8d93095ce77d560cc40ba7515b04bed817960b03",
+   "bytes": 3530
+  },
+  {
+   "path": "solution_methods/taylor_projection/prepare_tp3i.m",
+   "sha256": "62e448ae763ce461cb44cea5c5eb46f8d235a9c7b2095fa5aff567b4bd63ca9c",
+   "bytes": 3818
+  },
+  {
+   "path": "solution_methods/taylor_projection/prepare_tpMS.m",
+   "sha256": "8ed82d35962d5510df0da8c8ec5771f58c2e320a6d297d4ed86ee28b426a374d",
+   "bytes": 1404
+  },
+  {
+   "path": "solution_methods/taylor_projection/prepare_tpMS2.m",
+   "sha256": "0f386d270987f1ad26fe7236c5809b4b28663d3bad1f70d060bc8662c26cfadc",
+   "bytes": 1429
+  },
+  {
+   "path": "solution_methods/taylor_projection/prepare_tpMS3.m",
+   "sha256": "3234ce61c9ef7a70bb55f741da47603585c0ebde9aece1726aa78805aef72e1d",
+   "bytes": 1378
+  },
+  {
+   "path": "solution_methods/taylor_projection/prepare_tpvec.m",
+   "sha256": "a096b13553a3aa7803b8b2a8aa20415a2095719644a29b0859f8a62b7e432971",
+   "bytes": 15524
+  },
+  {
+   "path": "solution_methods/taylor_projection/prepare_tpvec2.m",
+   "sha256": "3216ceefc3f56a5599ffc7010d8166199f3d033b6137379b9e0fc9d8f27bf3cd",
+   "bytes": 19034
+  },
+  {
+   "path": "solution_methods/taylor_projection/prepare_tpvec3.m",
+   "sha256": "00fef6cabc8158cfa6231cf2f63e7e38363d097e1540bae525692a539f550620",
+   "bytes": 20320
+  },
+  {
+   "path": "solution_methods/taylor_projection/shift_center.m",
+   "sha256": "711d30b31bbe6de950b349b7d050408146295fa4d65ef5f47cff469bb3fea092",
+   "bytes": 2937
+  },
+  {
+   "path": "solution_methods/taylor_projection/shiftpoly.m",
+   "sha256": "ae62ad0ac07d9a8f2337d0b2fec1e8cc27976e20878429cec832a1ca7148102b",
+   "bytes": 1872
+  },
+  {
+   "path": "solution_methods/taylor_projection/subsf.m",
+   "sha256": "5883fd2bb1d818b06df90f1a2fa3bed3175dd75efbe4c07aa2c14d997893fb7a",
+   "bytes": 256
+  },
+  {
+   "path": "solution_methods/taylor_projection/tp.m",
+   "sha256": "28c8cc113df172a9f9032c9594ce589bc69415b4e8f221e3c7ddd220a94d7f5b",
+   "bytes": 45175
+  },
+  {
+   "path": "solution_methods/taylor_projection/tpMS.m",
+   "sha256": "e3d9f8b0b24d47a32c77ebb1b634cd3a056dfb9f038a0f7083b2fce9fcf04a79",
+   "bytes": 2867
+  },
+  {
+   "path": "solution_methods/taylor_projection/tpMSvec.m",
+   "sha256": "fea9b49ab30e0226fc9b116353a22611628942b7701590fd29528782e2e5112b",
+   "bytes": 4847
+  },
+  {
+   "path": "solution_methods/taylor_projection/tpscale.m",
+   "sha256": "140c42526765dc063620ee24aa454b19504baf015097e443f311766a824c3a09",
+   "bytes": 1456
+  },
+  {
+   "path": "solution_methods/taylor_projection/tpscaleMS.m",
+   "sha256": "a45165e87d9d6a30d6d6d8c3bfa5a66b9338714e71793d5f0d4ef8082bb35ce6",
+   "bytes": 1340
+  },
+  {
+   "path": "solution_methods/taylor_projection/tpscaleMSi.m",
+   "sha256": "5aa5a88de5c8259aca831eb4f72762563004f8886ea156dbfb7252245effbdb7",
+   "bytes": 2722
+  },
+  {
+   "path": "solution_methods/taylor_projection/tpsolve.m",
+   "sha256": "ffe5861d50c41274edd840fad50980541a084773e540846bea52da832e02bf93",
+   "bytes": 6564
+  },
+  {
+   "path": "solution_methods/taylor_projection/tpsolve2.m",
+   "sha256": "20e4a012af9457b7e8f0b7f206d625e568bbd3a99f793036cb90b5e142a6b4c5",
+   "bytes": 6509
+  },
+  {
+   "path": "solution_methods/taylor_projection/tpsolveMS.m",
+   "sha256": "834114a57b5d440126356b8e5db6b67385f9cdc6724a09668e8ac59c6054eb07",
+   "bytes": 4717
+  },
+  {
+   "path": "solution_methods/taylor_projection/tpsolveMS2.m",
+   "sha256": "a77bffc3028e428ba9936e66c1dcc000355e272393fe36fd0ae5e1e2ba1bc3e4",
+   "bytes": 4666
+  },
+  {
+   "path": "solution_methods/taylor_projection/tpsolveMSi.m",
+   "sha256": "70f77115a9914ea9a78a7396fb547cc0806ce80530550b0f4a6943e4ad08dfce",
+   "bytes": 5927
+  },
+  {
+   "path": "solution_methods/taylor_projection/tpsolvei.m",
+   "sha256": "0a5c88897ed156a8ff85e0e3168458a42f2e5117f48e3d27744d8a274a795c26",
+   "bytes": 7272
+  },
+  {
+   "path": "solution_methods/taylor_projection/tpvec.m",
+   "sha256": "70cb4510965b65ea8f25448aad8bd468f2c38454d659eea55730b5ed09a270dc",
+   "bytes": 115570
+  },
+  {
+   "path": "solution_methods/taylor_projection/uncompressderivs.m",
+   "sha256": "be14b087cb0c90200a99a3f5162695e9150c9e72f012ccde952bbbc77fe0b0b3",
+   "bytes": 3305
+  }
+ ],
+ "stripped": []
+}

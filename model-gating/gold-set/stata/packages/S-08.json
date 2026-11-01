@@ -1,0 +1,297 @@
+{
+ "stata_id": "S-08",
+ "cand_id": "RB-060",
+ "package_dir": "pkg-983292",
+ "source": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/60/replication_package (Hugging Face commit 74958fba32daeacff51f2e1fd37be3916595648f)",
+ "strip_rule": [
+  ".eps",
+  ".gph",
+  ".htm",
+  ".html",
+  ".jpeg",
+  ".jpg",
+  ".log",
+  ".png",
+  ".smcl",
+  ".svg",
+  ".tex"
+ ],
+ "kept": [
+  {
+   "path": "Analysis/01_Master_Analysis_File.do",
+   "sha256": "804939bd49b04abd21437c66862c8c877e8dcde98dda28f5d588c97e8bc1518e",
+   "bytes": 4730
+  },
+  {
+   "path": "Analysis/AppendixA.do",
+   "sha256": "93e1384e1d0c461783a465580861ab701a63a8f26c6724d444b44e294ac86300",
+   "bytes": 4746
+  },
+  {
+   "path": "Analysis/AppendixB2.do",
+   "sha256": "d17211b10a9e6286db5c130db073d748500f448f44a0b1e72757719f919c7475",
+   "bytes": 3023
+  },
+  {
+   "path": "Analysis/AppendixB3.do",
+   "sha256": "8e8bf9756032eca1a0ef3a3391d2720edee5845568f1a2fe528d0a2e539e6a94",
+   "bytes": 6520
+  },
+  {
+   "path": "Analysis/AppendixD1.do",
+   "sha256": "160f7dca36fd715e59a196eb449f3ba21cd8ab9171e782204d287ff640474c0a",
+   "bytes": 9231
+  },
+  {
+   "path": "Analysis/AppendixD2.do",
+   "sha256": "d28a35857b9e1707b2e0007931480d6c3589d2a406ac8017fa851ed7174afea2",
+   "bytes": 6320
+  },
+  {
+   "path": "Analysis/AppendixD3.do",
+   "sha256": "b9a6e4ea0bf3c05f97b998044e26dc0464ba5b21a79d150c43948b85a71d7de6",
+   "bytes": 14241
+  },
+  {
+   "path": "Analysis/AppendixD4.do",
+   "sha256": "8ffb27cbdc77ad1cc4a6a47455350052d947e459141170be157b9e93e973d0ad",
+   "bytes": 1387
+  },
+  {
+   "path": "Analysis/Figure1_Maps.do",
+   "sha256": "65f97986ff5c1b857950229a943dc41370e1466d32b30b1c41c30990f33390cf",
+   "bytes": 2275
+  },
+  {
+   "path": "Analysis/Figure2_Cotton_Consumption.do",
+   "sha256": "4f226116b69878335b31b81e42aa97dfd50d8573ea8672fae8c4676240480acd",
+   "bytes": 1100
+  },
+  {
+   "path": "Analysis/Figure3_PoorLaw.do",
+   "sha256": "8ab4ef7583a1bd3c3d07635af5b34d1f3dfefefbd16dd75eee6883c3806d4735",
+   "bytes": 1239
+  },
+  {
+   "path": "Analysis/Figure4_PopTrends.do",
+   "sha256": "f4d7424785663d7505b2712c49af4c89f0833c01e7cbd098af1b9ec69e61c22c",
+   "bytes": 3701
+  },
+  {
+   "path": "Analysis/Processing/Gen_age_weights.do",
+   "sha256": "2aee9bf14cf8cbf021d37e34f773bd64038c9a39c466c3a1f0e8bbaa72848717",
+   "bytes": 1997
+  },
+  {
+   "path": "Analysis/Processing/Linking_Code/01_Master_Linking_Code.do",
+   "sha256": "d1a5136f024844d0183e5169ff19d91af6ec4f6baa9511d02f9b649298358ab7",
+   "bytes": 1179
+  },
+  {
+   "path": "Analysis/Processing/Linking_Code/Link_BMD_to_Census.do",
+   "sha256": "cf78a048dec629a81e863141369e2abf435e3a16ea5aea5917cb36c60a4d3e10",
+   "bytes": 8845
+  },
+  {
+   "path": "Analysis/Processing/Linking_Code/Link_GRO_to_Census.do",
+   "sha256": "94fc21e04e63b11933ba14afe5ae8330025469de68bc3fc8b180734e1b92044b",
+   "bytes": 12725
+  },
+  {
+   "path": "Analysis/Processing/Linking_Code/Standardize_Census_Names.do",
+   "sha256": "060b9a37f8bbb2a07450fab33179fadf7e368a0226638151ea5f524e8e2bca35",
+   "bytes": 8204
+  },
+  {
+   "path": "Analysis/Processing/Main_Results_Prep_File.do",
+   "sha256": "7b8a2c4d43d43dcdfff46dd0e6fa40584b08e21ffae75332b5eb7fc82347c0fc",
+   "bytes": 3526
+  },
+  {
+   "path": "Analysis/Processing/Main_Results_Prep_File_Occ_Bins.do",
+   "sha256": "a11e99a04031fc75d2a4ebb54b7d700ef85154b1eefc14ddd8b96a985c985510",
+   "bytes": 2661
+  },
+  {
+   "path": "Analysis/Processing/Prep_District_by_Period_counts.do",
+   "sha256": "73dccb1ded6276cf28c4a2b32c5773cb55a4235faeab91f0404222f0cdf6f1d1",
+   "bytes": 2806
+  },
+  {
+   "path": "Analysis/Processing/Prep_Industry_by_District_counts.do",
+   "sha256": "31b1894770241b4ccd3a18a9dcd559ab4713d2425263bf7d146cbae24c1d30d5",
+   "bytes": 1987
+  },
+  {
+   "path": "Analysis/Table1_SummaryStats.do",
+   "sha256": "5239dc42a7b842f3af907a48fc18ec0db746ca862751b5b75703a40ad3a666f9",
+   "bytes": 828
+  },
+  {
+   "path": "Analysis/Table2_Baseline.do",
+   "sha256": "6a48597ca971eae922e70226e9c0f26b41e6d984e39c078a01b686c3dee6ee2b",
+   "bytes": 7472
+  },
+  {
+   "path": "Analysis/Table3_ByAge.do",
+   "sha256": "0d341b0eb2ea5f1dc67bd67f03e68cd981e33f73ea2b335bfdb7fda426fdfe0e",
+   "bytes": 3820
+  },
+  {
+   "path": "Analysis/Table4_Occ_Results.do",
+   "sha256": "c8c8535260d52fa833f35382661d59a6aa0ea45d260abb0e8d26d305c683a9b2",
+   "bytes": 1516
+  },
+  {
+   "path": "Analysis/Table5_Agg_Comparison.do",
+   "sha256": "dc68c59d398c5d138522d0222059c329464ee3c73c052bad99d889d603ddd8df",
+   "bytes": 2704
+  },
+  {
+   "path": "Data/AppendixB2_51-61_Links.dta",
+   "sha256": "2ccf6ebbf1211fc780727946c64d2844154ef5eafd5bf56a01a6d28e66ca24fb",
+   "bytes": 27420799
+  },
+  {
+   "path": "Data/AppendixB2_Random_Links.dta",
+   "sha256": "e948922fd920866025a15c448d04594eebc8bef88874083d3d4adc290cbd52c4",
+   "bytes": 35182575
+  },
+  {
+   "path": "Data/AppendixD4_BirthsXyear.dta",
+   "sha256": "457cb40f52ad6f6404671fd27302af2f291487c54e15dd906dd37a695e953b6e",
+   "bytes": 214999
+  },
+  {
+   "path": "Data/BMD_linkable_namesXmasterXageXperiod.dta",
+   "sha256": "7a53eed082c04216291f17827f157d636aec9cc08fbc1b6c903675ba98b0228a",
+   "bytes": 55014
+  },
+  {
+   "path": "Data/Cotton_price_imp_by_year_1850_1870.dta",
+   "sha256": "ccb1796bb1627bea2f312ff6abf0e57f6bd2ae9ec6fb3b7ba96a628feb667d9b",
+   "bytes": 2643
+  },
+  {
+   "path": "Data/District_Shapefiles/EW1851_regdistricts.dbf",
+   "sha256": "9a2feefa5ae8f10ad14a5f477070e2a5cf030f4f4c8d9391b8c1dac64e411138",
+   "bytes": 60465
+  },
+  {
+   "path": "Data/District_Shapefiles/EW1851_regdistricts.prj",
+   "sha256": "98aaf3d1c0ecadf1a424a4536de261c3daf4e373697cb86c40c43b989daf52eb",
+   "bytes": 143
+  },
+  {
+   "path": "Data/District_Shapefiles/EW1851_regdistricts.qpj",
+   "sha256": "1de411dcdeedce3219242306fc29bfa1d7fa08883e4ff6779baf798ec50d1657",
+   "bytes": 257
+  },
+  {
+   "path": "Data/District_Shapefiles/EW1851_regdistricts.shp",
+   "sha256": "d17648b28aec14cf15801879c15ba1c739220abe0283e76b7842af1b72424f72",
+   "bytes": 4280532
+  },
+  {
+   "path": "Data/District_Shapefiles/EW1851_regdistricts.shx",
+   "sha256": "883a7c3ed187644160e36702df39654cf07c53033a00453b730d7ee8c315c639",
+   "bytes": 4412
+  },
+  {
+   "path": "Data/Emigration_PP_45515.dta",
+   "sha256": "74502b7c4985b65dc0b92fab81088824fdabe1ec2254fa36e93c3487e19b9f0b",
+   "bytes": 1925
+  },
+  {
+   "path": "Data/Linked_BMD_and_Census_10yr.dta",
+   "sha256": "65e8ca70f03511c0cde7124856ff7b5956803345801029f54a39855f93c087c6",
+   "bytes": 13297153
+  },
+  {
+   "path": "Data/Linked_BMD_and_Census_5yr.dta",
+   "sha256": "420e07ae6556d776508bf2455389cf1cc7f9519d5f887f1e66fd2eb9c1352945",
+   "bytes": 7464003
+  },
+  {
+   "path": "Data/Linked_GRO_and_Census_5yr.dta",
+   "sha256": "f0c3fc8b3b4d93c79e1b5b8e63ffb04f3175eb114330ed5005d5f3caa2849730",
+   "bytes": 31668248
+  },
+  {
+   "path": "Data/Master_Dist_pop_by_cens.dta",
+   "sha256": "88534d4a1c75a66142e336f4bca79ad05222856c04673b0b67a4691290ce509b",
+   "bytes": 257843
+  },
+  {
+   "path": "Data/Mitchell_1988_imports_and_exports.dta",
+   "sha256": "b4876237259c5a35bf352b321db6d1877e01243ee2d6f171327cd8461c3b1db9",
+   "bytes": 6859
+  },
+  {
+   "path": "Data/Poor_Law_Exp_1850_1870.dta",
+   "sha256": "1bde7725685a3bdcebfc06b68ca6fc2701c557b41172c69a097ef37dcf37d038",
+   "bytes": 4911
+  },
+  {
+   "path": "Data/Registrar_mort_by_age_1851_1870.dta",
+   "sha256": "523a52fb6ed531a6503d2c21f1f8ed6e4545d6e9c90ae0b667ca1d084ebc58e7",
+   "bytes": 778095
+  },
+  {
+   "path": "Data/TT_Census_to_master.dta",
+   "sha256": "e949ea7305304fe6c24e60b86f7e7c39c36177fc2fdec3d158adb259f1d361b3",
+   "bytes": 92401
+  },
+  {
+   "path": "Data/TT_GRO_to_master.dta",
+   "sha256": "b5dcb88227d9a84e6b937e7b20c46ced36ec7b6789ae34e604abb45bf8b499d6",
+   "bytes": 249113
+  },
+  {
+   "path": "Data/TT_Industry_abreviated.dta",
+   "sha256": "b5715b658961f089e64fbda996aea83491422f1c69880dba923cc6ade6463ed4",
+   "bytes": 4139
+  },
+  {
+   "path": "Data/TT_Master_w_county_latlon_area.dta",
+   "sha256": "f6fd34b49cc20d81ea4c23764abf29f63a968289ee0ad9ea28bad93fb32af88b",
+   "bytes": 84074
+  },
+  {
+   "path": "Data/TT_Occode_to_Industry.dta",
+   "sha256": "b21a51163d885c3992550beef283b68bb178f7625a57b19472373dc5681b4982",
+   "bytes": 33558
+  },
+  {
+   "path": "Data/cotton_district_indicators.dta",
+   "sha256": "b8bfb0c0abd2569887ce86497472acc6460f6c371ebf850f62985ecd28d5603e",
+   "bytes": 92712
+  },
+  {
+   "path": "Data/linkable_namesXmasterXageXperiod.dta",
+   "sha256": "82adb55ca190f713da17394d634bc18f5563b1bfdf03040b31acff75a30fae3b",
+   "bytes": 73932
+  },
+  {
+   "path": "Data/pop_by_headocc_age_dist_period.dta",
+   "sha256": "357bb435468a4b422c178b0dbc69d0ba6b5c5089b22d87883405472b8539f42c",
+   "bytes": 2621355
+  },
+  {
+   "path": "Data/pop_by_ownocc_dist_period.dta",
+   "sha256": "902baeb97d8039d8c0b3df1bbeb4ae571eeb57986e5d872d7d50291ae3c2eba4",
+   "bytes": 2480413
+  },
+  {
+   "path": "Data/pop_by_source_group_and_period.dta",
+   "sha256": "7a14a53a5b52f35281507d68665ce93475cb36d8a3ffa4afbdfafe8b9b78279a",
+   "bytes": 144249
+  },
+  {
+   "path": "ReadMe.pdf",
+   "sha256": "b93959a0801ef6c53ed9c458461cf8f7abf3ef48a3a4e4e4fc6ad8e751506ae2",
+   "bytes": 196443
+  }
+ ],
+ "stripped": []
+}

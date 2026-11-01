@@ -1,0 +1,77 @@
+{
+ "stata_id": "S-04",
+ "cand_id": "RB-020",
+ "package_dir": "pkg-984353",
+ "source": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/20/replication_package (Hugging Face commit 74958fba32daeacff51f2e1fd37be3916595648f)",
+ "strip_rule": [
+  ".eps",
+  ".gph",
+  ".htm",
+  ".html",
+  ".jpeg",
+  ".jpg",
+  ".log",
+  ".png",
+  ".smcl",
+  ".svg",
+  ".tex"
+ ],
+ "kept": [
+  {
+   "path": "Analysis.do",
+   "sha256": "d6519a3ae4479ac4db392a92438547362d9b4829f383a35d5d291fbaf1bdb328",
+   "bytes": 161336
+  },
+  {
+   "path": "Data_prep.do",
+   "sha256": "024c1c5612ad447fbc456921e4bd947f7ec1d0ddae8633914dfc659eea6fc8b4",
+   "bytes": 153246
+  },
+  {
+   "path": "Dataverse_Appendix.pdf",
+   "sha256": "de3747693795842902b788c9edbae054880a04fb5fdce3ab99215041b7d5224e",
+   "bytes": 2097891
+  },
+  {
+   "path": "Power.R",
+   "sha256": "893a71de4e1e434f4e38edc8198bfafdcc8c79872ffa47daa2916dcac1c479b6",
+   "bytes": 1080
+  },
+  {
+   "path": "Quest_main_CZ.pdf",
+   "sha256": "f3df1e6d8dc656c9aa52a5891bb7d14877a53a6580a89cfda8caec8714ffb714",
+   "bytes": 324746
+  },
+  {
+   "path": "Quest_main_Kor.pdf",
+   "sha256": "6abead35375ecf25fbd178ec8c9b482579df45898eb90882fd248d2dfa9b641f",
+   "bytes": 347359
+  },
+  {
+   "path": "Quest_main_Mex.pdf",
+   "sha256": "547fed02489311107ec1adf205ea667c1dd6e488fea3f4aed5cc57ad7cf4a805",
+   "bytes": 381756
+  },
+  {
+   "path": "Quest_main_UK.pdf",
+   "sha256": "70bc2050df84e2919c3094dc9d6f693d19eeded3bd6a6480cc1177ef8c43da41",
+   "bytes": 314686
+  },
+  {
+   "path": "Quest_main_US.pdf",
+   "sha256": "03adaceade8d6cbef17676d1e278a6db611dec4e8367f0a23e1ed6591a8176b5",
+   "bytes": 345458
+  },
+  {
+   "path": "ReadMe.txt",
+   "sha256": "71420a75609bcfc29b7c0e9f4c3e12791fd696d771d4fe996cf776a52eb146a3",
+   "bytes": 1056
+  },
+  {
+   "path": "dataset.dta",
+   "sha256": "e8106046ea793fda5638e74c6113c02860f43ba0abddb0ca5d296d16f7dae80b",
+   "bytes": 1320312031
+  }
+ ],
+ "stripped": []
+}

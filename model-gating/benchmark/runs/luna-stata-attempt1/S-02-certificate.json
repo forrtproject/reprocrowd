@@ -1,0 +1,187 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "paper": {
+    "doi": "10.1257/pol.20210037",
+    "title": "Checking and Sharing Alt-Facts",
+    "authors": [
+      "Emeric Henry",
+      "Ekaterina Zhuravskaya",
+      "Sergei Guriev"
+    ],
+    "year": 2022
+  },
+  "procedure": {
+    "version": "crowd-repro v1.1.0",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "rules_version": "1.1.0",
+  "engine": "Codex",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "date": "2026-11-01",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS Tahoe 26.7 (aarch64-apple-darwin23)",
+    "language": "R",
+    "versions": {
+      "R": "4.6.1",
+      "haven": "2.5.5"
+    },
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "haven": "2.5.5"
+        },
+        "lockfile": "sessionInfo.txt"
+      }
+    ],
+    "lockfile": "sessionInfo.txt"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Figure 2 / Section II.A reports a cumulative maximum of 749 Facebook shares of Alt-Facts.",
+      "exhibit": "Figure 2; article Section II.A; README Table B #10"
+    },
+    {
+      "id": "C2",
+      "claim": "The text reports a maximum of 612 Alt-Facts shares through 72 hours after the median response time.",
+      "exhibit": "Article Section II.A; README Table B #10"
+    },
+    {
+      "id": "C3",
+      "claim": "The text reports a cumulative maximum of 52 fact-check shares.",
+      "exhibit": "Figure 2; article Section II.A; README Table B #10"
+    },
+    {
+      "id": "C4",
+      "claim": "The abstract reports that imposed and voluntary fact-checking reduce false-statement sharing by about 45%.",
+      "exhibit": "Abstract; Table 2 Panel A"
+    },
+    {
+      "id": "C5",
+      "claim": "The text reports 2,537 participants, including 302, 82, and 21 participants in the listed sharing categories.",
+      "exhibit": "Introduction; README Table B #1"
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "Maximum cumulative Alt-Facts shares",
+      "reported": 749,
+      "recomputed": 749,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata Figure 2 data transformations into R using haven to read the supplied share_facebook.dta: period = day*24 + hour - 493, survey_id < 4, category-specific zeroing, period sums, period_med = period - 22, and exclusion of period_med < 0."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Maximum Alt-Facts shares when period_med <= 72",
+      "reported": 612,
+      "recomputed": 612,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata Figure 2 and numbers_in_text.do transformations into R; same supplied dataset, filter, grouping, and arithmetic."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Maximum cumulative fact-check shares",
+      "reported": 52,
+      "recomputed": 52,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Stata Figure 2 data transformations into R using haven; same supplied dataset, filter, grouping, and arithmetic."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Reduction in false-statement sharing",
+      "reported": "about 45%",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Requires Table 2 regression estimates and the generated analysis dataset; the Stata analysis was not translated or executed."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Participant count 2537",
+      "reported": 2537,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Requires the full data import/cleaning/merging pipeline and generated analysis dataset; those Stata commands were not translated or executed."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Participant count 302",
+      "reported": 302,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Requires the full data import/cleaning/merging pipeline and generated analysis dataset; those Stata commands were not translated or executed."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Participant count 82",
+      "reported": 82,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Requires the full data import/cleaning/merging pipeline and generated analysis dataset; those Stata commands were not translated or executed."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Participant count 21",
+      "reported": 21,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Requires the full data import/cleaning/merging pipeline and generated analysis dataset; those Stata commands were not translated or executed."
+    }
+  ],
+  "validation_status": "technical failure",
+  "confidence_level": "LowConfidence",
+  "findings": [
+    {
+      "id": "RUN-001",
+      "severity": "P0",
+      "type": "defect",
+      "description": "The complete shipped Stata reproduction was not executed; Stata is unavailable, and only the Figure 2 transformations were translated and run.",
+      "evidence": "The package requires Stata 16.1; no Stata executable is present. The shipped data preparation and analysis scripts total 2,610 lines across three do-files. The translated R code covers the Figure 2 calculations only.",
+      "suggested_fix": "Translate the remaining shipped data preparation, analysis, and text-number commands command by command into R, then run them and check every result in the article."
+    },
+    {
+      "id": "SCOPE-001",
+      "severity": "P0",
+      "type": "defect",
+      "description": "An exhaustive enumeration and check of all data-derived numbers in the article abstract, main text, and tables was not completed.",
+      "evidence": "Only the abstract reduction claim and selected article claims explicitly mapped in the package README are listed here; other tables and numeric statements have not been audited.",
+      "suggested_fix": "Audit the full article and map every printed data-derived value to its shipped analysis command before treating this as a complete certification."
+    }
+  ],
+  "limitations": [
+    "The complete article PDF could not be retrieved from the publisher in this environment; publisher PDF access returned HTTP 403. The article abstract and package README were accessible.",
+    "The package includes the full Stata source and original input data, but no generated analysis dataset. Stata 16.1 is unavailable.",
+    "Only the Figure 2 cumulative-sharing calculations were directly translated and run. No result is reported as if the unexecuted full analysis had reproduced it.",
+    "Original code and data remain in their supplied package location and were not copied into this certification directory."
+  ],
+  "artifacts": {
+    "console_log": "logs/figure2_translation.log"
+  },
+  "provenance": {
+    "raw_data": "Local package original_data/share_facebook.dta; public data DOI: https://doi.org/10.3886/E140161V1",
+    "analysis_script": "Master_replication_HZG.do and dofiles/ in local package pkg-9c83b5; translated excerpt: code/figure2_translation.R"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "technical failure",
+    "outcome_robustness": "not checked"
+  }
+}

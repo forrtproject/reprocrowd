@@ -125,13 +125,17 @@
   },
   {
    "stata_id": "S-07",
-   "cand_id": "SC-a2Yx",
+   "cand_id": "I4R-85",
    "stratum": "computational issues",
-   "title": "Organizing The Global Value Chain",
-   "doi": "10.3982/ecta10813",
-   "package_url": "https://osf.io/qk9v3/",
-   "translatability": "straightforward",
-   "source_file": "candidates-stata-r2-score-rb.csv"
+   "title": "Reshaping Global Trade: The Immediate and Long-Run Effects of Bank Failures",
+   "doi": "10.1093/qje/qjac016",
+   "package_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/EIEQIS",
+   "translatability": "needs care",
+   "source_file": "candidates-stata-r2-i4r.csv",
+   "replaced": {
+    "replaced_cand_id": "SC-a2Yx",
+    "reason": "The published Econometrica article could not be obtained: no open-access copy, the author page returns 403, and the publisher PDF was not served through the signed-in Chrome route; the only open PDF is the online supplement. Without the article the printed numbers cannot be extracted. Replaced with the first reserve of the issues stratum (reserve_order, seed + 1)."
+   }
   },
   {
    "stata_id": "S-08",
@@ -184,6 +188,24 @@
    "RB-089",
    "RB-071",
    "RB-085"
+  ],
+  "computational issues": [
+   "I4R-85",
+   "RB-067",
+   "RB-106",
+   "SC-9wya",
+   "SC-LyWB",
+   "I4R-289",
+   "SC-L22B",
+   "I4R-175",
+   "I4R-db26h",
+   "RB-104",
+   "RB-077",
+   "RB-037",
+   "RB-054",
+   "RB-082",
+   "RB-109",
+   "SC-0P4r"
   ]
  },
  "reserve_method": "random.Random(seed + 1).sample(undrawn eligible cand_ids of the stratum, all); take the first that passes a pre-run check"

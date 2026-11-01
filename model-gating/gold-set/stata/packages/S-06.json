@@ -1,0 +1,62 @@
+{
+ "stata_id": "S-06",
+ "cand_id": "I4R-243",
+ "package_dir": "pkg-3189d3",
+ "source": "https://github.com/stevebholt/waiting-time at 95e2eaec985dfbd7f2dfd5e05ebe768195e4e613; data from the author-linked Dropbox archive named in the README",
+ "strip_rule": [
+  ".eps",
+  ".gph",
+  ".htm",
+  ".html",
+  ".jpeg",
+  ".jpg",
+  ".log",
+  ".png",
+  ".smcl",
+  ".svg",
+  ".tex"
+ ],
+ "kept": [
+  {
+   "path": "01_master.do",
+   "sha256": "cfa3a0b1ea563e9ce955c40182bab733dcddd44d3f1189c1f09ede2d21f4a5cf",
+   "bytes": 155
+  },
+  {
+   "path": "02_cleaning.do",
+   "sha256": "97d86b52f5c26572f6ff5adfc5dd1c6f775fbf408eab20281a3ba8c6b33259c6",
+   "bytes": 19671
+  },
+  {
+   "path": "03_tables.do",
+   "sha256": "e5d9cf912d3f06a6d77029d45e232131f0f6c557f1ff248d27194c1c66ad2648",
+   "bytes": 18025
+  },
+  {
+   "path": "04_figures.do",
+   "sha256": "1485384a4468430473c47ef07a01fea34765c39fd44be79b4cf4ca5e3f041202",
+   "bytes": 17206
+  },
+  {
+   "path": "05_imputation.do",
+   "sha256": "5b629be4dbfe4b34859a8751ab53d2c6500f4ceb80bb79be282092ee7e2fb4e8",
+   "bytes": 7148
+  },
+  {
+   "path": "README.md",
+   "sha256": "7cfc81536682c911ab698cdfafe1b09ac53b9d5d4c09900fe00dd924440d64d7",
+   "bytes": 977
+  },
+  {
+   "path": "data/CPS_ASEC_selectvars_timeinequality.dta",
+   "sha256": "b383b5ea7b7611dfb12a76229d15bec25daf5a2e260736a8ce57862cac742da9",
+   "bytes": 540229519
+  },
+  {
+   "path": "data/atusall0319.dta",
+   "sha256": "12d3d011feb4177fed3e06017cb80eec177c910c450a94ed294f457f17e69dea",
+   "bytes": 427620870
+  }
+ ],
+ "stripped": []
+}

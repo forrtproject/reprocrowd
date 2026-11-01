@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "paper": {
+    "doi": "10.3982/ecta10813",
+    "title": "Organizing the Global Value Chain",
+    "authors": ["Pol Antràs", "Davin Chor"],
+    "year": 2013
+  },
+  "procedure": {
+    "version": "0.1.2",
+    "uri": "https://forrtproject.github.io/reprocrowd/"
+  },
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "engine": "Codex",
+  "model": {"name": "GPT-6.1", "provider": "OpenAI"},
+  "rules_version": "1.1.0",
+  "date": "2026-11-01",
+  "environment": {
+    "os": "macOS Tahoe 26.7 (aarch64-apple-darwin23)",
+    "language": "R",
+    "versions": {"R": "4.6.1", "Stata": "not installed"},
+    "programs": [{"name": "R", "version": "4.6.1", "packages": {"base": "4.6.1"}, "lockfile": "logs/sessionInfo.txt"}],
+    "lockfile": "logs/sessionInfo.txt"
+  },
+  "claims": [],
+  "results": [],
+  "validation_status": "technical failure",
+  "confidence_level": "VeryHighConfidence",
+  "findings": [{
+    "id": "EXEC-001",
+    "severity": "P0",
+    "type": "defect",
+    "description": "No shipped analysis was executed: Stata is unavailable and the required direct R translation was not completed. The paper's result claims were not exhaustively enumerated or checked.",
+    "evidence": "The package contains Stata .do files; command lookup found no Stata executable. The publisher PDF endpoint returned HTML, preventing full text claim extraction.",
+    "suggested_fix": "Translate the supplied Stata scripts command by command into R, run them on the supplied package data, and compare every data-derived number in the article abstract, main text, and tables."
+  }],
+  "limitations": [
+    "This benchmark run is incomplete: it has no command-by-command R translation, numerical results, or exhaustive claim list.",
+    "No robustness assessment was performed; outcome_robustness is not checked.",
+    "The original package remains local at /tmp/scratch_bench_luna/packages/pkg-6165a5 and was not copied or uploaded."
+  ],
+  "artifacts": {"console_log": "logs/sessionInfo.txt"},
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "technical failure",
+    "outcome_robustness": "not checked"
+  }
+}

@@ -1,0 +1,407 @@
+{
+ "stata_id": "S-10",
+ "cand_id": "RB-075",
+ "package_dir": "pkg-775f66",
+ "source": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/75/replication_package (Hugging Face commit 74958fba32daeacff51f2e1fd37be3916595648f)",
+ "strip_rule": [
+  ".eps",
+  ".gph",
+  ".htm",
+  ".html",
+  ".jpeg",
+  ".jpg",
+  ".log",
+  ".png",
+  ".smcl",
+  ".svg",
+  ".tex"
+ ],
+ "kept": [
+  {
+   "path": "JPE-2020-0781_descriptions.pdf",
+   "sha256": "67625a2e45c414192eb6c1c503e0b996d48d5334252f2091354a02bb3c1d5620",
+   "bytes": 74620
+  },
+  {
+   "path": "datasets/app_main_outcomes_yearly.dta",
+   "sha256": "27dac2f570230e382db112492e430ca10feb2bcb8418691dbaaa7f78eb8b14f2",
+   "bytes": 81584496
+  },
+  {
+   "path": "datasets/app_main_outcomes_yearly_alttime.dta",
+   "sha256": "0b1ff4670d2d07d91bce4ead49c248fccdb45481d93cb6be0869ce550733253a",
+   "bytes": 20965603
+  },
+  {
+   "path": "datasets/app_other_outcomes_yearly.dta",
+   "sha256": "1a97b1e17e0f9248c41f8fa81b138f135804940e489d4908ec0f6d32bcdbeb0f",
+   "bytes": 47472200
+  },
+  {
+   "path": "datasets/complementarity_alt1.dta",
+   "sha256": "803d846b59dfb21f3f5b7c5b5e6bc791b942fc351668edc817dbb59dca3f5e69",
+   "bytes": 20037683
+  },
+  {
+   "path": "datasets/complementarity_alt2.dta",
+   "sha256": "692d550a2fa4a5d233b9d40098517cb49024534fe5f300c910b5db70bea0e40e",
+   "bytes": 21520563
+  },
+  {
+   "path": "datasets/complementarity_main.dta",
+   "sha256": "2b498dd8a73ed4c44e7f48fdfc8a688253a69dbe5d84afd78a6e4896c67db7f8",
+   "bytes": 20409320
+  },
+  {
+   "path": "datasets/correlations.dta",
+   "sha256": "3c67c3f4e54fa3077ba3d24679c609def61f581a57ba141f69949c82a3a04b5d",
+   "bytes": 1736968
+  },
+  {
+   "path": "datasets/correlations_county.dta",
+   "sha256": "03ba2c037f1a79250f0920f58be09f7c76e8715e467b40d26bf3c05657d6c201",
+   "bytes": 3062719
+  },
+  {
+   "path": "datasets/exit.dta",
+   "sha256": "4b46636a585117bde65c7c5f0fafe7239e92d63f391725d8e737503c341a8cf1",
+   "bytes": 597553
+  },
+  {
+   "path": "datasets/firms_maps.dta",
+   "sha256": "db2b516fc9efd575483a01a1c30c93739a4ba732d1df1a1eb85fa78c317e34c2",
+   "bytes": 673261
+  },
+  {
+   "path": "datasets/first_stage.dta",
+   "sha256": "ac4ca37ba113230ec9b4ea2a07f4d92e50d5c55ecf13775602c4902009393f09",
+   "bytes": 996863
+  },
+  {
+   "path": "datasets/histograms.dta",
+   "sha256": "8bccd5144220c518be31a1c1a342a679cbfe47f6bcbc19d52be6f0f788a3d715",
+   "bytes": 127951
+  },
+  {
+   "path": "datasets/horizontal_main.dta",
+   "sha256": "1c3a7c8511376654cb47ec656cdde67ff2f156aa6bc89046a07347e99e4ec2ca",
+   "bytes": 132121079
+  },
+  {
+   "path": "datasets/iv.dta",
+   "sha256": "8229c87f473aeefb0a3bc9d3b41a36e604a1eb38b96f50af32fadcdb214db32d",
+   "bytes": 17071283
+  },
+  {
+   "path": "datasets/lee_bounds.dta",
+   "sha256": "388aad338e0ec7f62d0f13cf629cd228af591da58e7375e9a7f5b92b57aa4711",
+   "bytes": 14745
+  },
+  {
+   "path": "datasets/practices_managers.dta",
+   "sha256": "612d5037214232e3ffbd3262b983b2c37bcc16a8f5cee77b17b84fe759500c20",
+   "bytes": 21891603
+  },
+  {
+   "path": "datasets/pre_trends.dta",
+   "sha256": "415069022edb5aaef00f6c86069f5b3fee31aa641952525e1bcd5ec46365c0c2",
+   "bytes": 10923623
+  },
+  {
+   "path": "datasets/subdistricts_1.dta",
+   "sha256": "be120db82dfaf39a319e0df49ad2df7bbc7ea56143caa4bd93bfb9011d5b3c1a",
+   "bytes": 148850
+  },
+  {
+   "path": "datasets/subdistricts_2.dta",
+   "sha256": "24391e94e4cd012bf92f2b6e6f750d8b279b88484eb81bcabe1430fb3ed9805d",
+   "bytes": 174445
+  },
+  {
+   "path": "datasets/subdistricts_coord.dta",
+   "sha256": "e1e29b3ddbe02dcaf2001976660b18bb8bfb8c341792a2b4d866426622fdae9e",
+   "bytes": 1138923
+  },
+  {
+   "path": "datasets/subdistricts_maps.dta",
+   "sha256": "a46a8960e67a7dd72896573eaaf144b1f067518df101852298df971e09d01057",
+   "bytes": 4295
+  },
+  {
+   "path": "datasets/summary_stats.dta",
+   "sha256": "53116ac028821760b974250faeec62fe20a15cb3fbba2a37b69af89c70217240",
+   "bytes": 6187239
+  },
+  {
+   "path": "datasets/summary_stats_nonapp.dta",
+   "sha256": "0e72fa2c91f0690392fd0910d83a8721c6df2efb3a12ee58e53a67f80c9389c9",
+   "bytes": 112982360
+  },
+  {
+   "path": "datasets/survey_data.dta",
+   "sha256": "11bf03e55ca0c6ea13a720aada028804d24ec0f5caf130a2b34aa37e21d9636a",
+   "bytes": 10297133
+  },
+  {
+   "path": "datasets/tfpr_het.dta",
+   "sha256": "37e547046c9fb6195d7fbbb2f5371ad2928f65270d004d6fb6f6bd73687609ce",
+   "bytes": 19481443
+  },
+  {
+   "path": "datasets/vertical_geo.dta",
+   "sha256": "2f24a25a081ed1530835b888243226029c541b8f5b87f887cf28cb8f9f0801b2",
+   "bytes": 5219571
+  },
+  {
+   "path": "datasets/vertical_main.dta",
+   "sha256": "da29d709d8127ded9c859dce1970f5f166af2684b2f6bca97513374535982029",
+   "bytes": 5395784
+  },
+  {
+   "path": "datasets/vertical_sector.dta",
+   "sha256": "ce2d7ba172c701e5b9ba9e689b642578d35b11eb791e92b51d50ef04f0c02ae0",
+   "bytes": 3321971
+  },
+  {
+   "path": "datasets/vertical_selection.dta",
+   "sha256": "6dc2a825dba0418c878870475004369e8c6a4b6304ee7a7c826dc9f87ca1e77a",
+   "bytes": 56623
+  },
+  {
+   "path": "datasets/vertical_size.dta",
+   "sha256": "781ed6d6cb4ad84266e987aacbd5546ad7223fa598b4242d5d0d499446e65af9",
+   "bytes": 3349747
+  },
+  {
+   "path": "datasets/war_variables.dta",
+   "sha256": "01609c04e7214feaa5bf3e472cec8d5c65e6b60791926d672f6155f46f335f7a",
+   "bytes": 110290120
+  },
+  {
+   "path": "datasets/war_variables_2.dta",
+   "sha256": "21fe135884c454a1dcf88e5cdf1adcded126250b00140be8b7755632e56c5b8c",
+   "bytes": 10472893
+  },
+  {
+   "path": "datasets.zip",
+   "sha256": "38c65fe3e767599e73ce694ede3005ed9f2386c06fc3c7ad4c5c293d89f2e9cc",
+   "bytes": 689733162
+  },
+  {
+   "path": "do_files/JPE-2020-0781_figure1.do",
+   "sha256": "3721b02528a513a17b83b5a499e1d7a232ac5d6ef3048091fc27b9639e8f66b4",
+   "bytes": 2661
+  },
+  {
+   "path": "do_files/JPE-2020-0781_figure2.do",
+   "sha256": "edab7e9f1ea01240e4a4970f308294961057185bb674d4098b17a5154f2e6a38",
+   "bytes": 1219
+  },
+  {
+   "path": "do_files/JPE-2020-0781_figure3.do",
+   "sha256": "dc5a5cd526e7f18aedad102bb1fd81f28245c5fb234d91bf66ae229f034e5551",
+   "bytes": 5735
+  },
+  {
+   "path": "do_files/JPE-2020-0781_figureA10.do",
+   "sha256": "91b2ab42b70f76a1a4df30aec9dee8e4766133a8d38b452e81f491c1b1c2e803",
+   "bytes": 6920
+  },
+  {
+   "path": "do_files/JPE-2020-0781_figureA11.do",
+   "sha256": "135275e0d62ec99b9b8dbba59b381e929981ff722d21bf5c12facba9e059d22f",
+   "bytes": 4067
+  },
+  {
+   "path": "do_files/JPE-2020-0781_figureA12.do",
+   "sha256": "8f7c0073e5543d27ef7572fdaf631bd12ef749fd6f17de40e837357d47bda99a",
+   "bytes": 20916
+  },
+  {
+   "path": "do_files/JPE-2020-0781_figureA2.do",
+   "sha256": "3f7eea0844ed577ea7587d036842672763ba4422112ca09dc54aa1385ec1c188",
+   "bytes": 6723
+  },
+  {
+   "path": "do_files/JPE-2020-0781_figureA3.do",
+   "sha256": "e33b5f82bd43d5a101324d8c2e4986c0a0e0fdae69f49bf1a6739a73b6ccc7a9",
+   "bytes": 19386
+  },
+  {
+   "path": "do_files/JPE-2020-0781_figureA4.do",
+   "sha256": "940738291f46d80cd83f43b45eebbcdd34f0455553dd3ecdea0bd66babd9071a",
+   "bytes": 10872
+  },
+  {
+   "path": "do_files/JPE-2020-0781_figureA5.do",
+   "sha256": "45472da05908cf72a095a3afc4221928aacd8f4e5c0b748fcd0b00b9bcb382a4",
+   "bytes": 13519
+  },
+  {
+   "path": "do_files/JPE-2020-0781_figureA6.do",
+   "sha256": "9bce8d6dda7eb6ae8318ef63cedb4c9e6118ababd4b27ae545954e4f648c7aad",
+   "bytes": 7564
+  },
+  {
+   "path": "do_files/JPE-2020-0781_figureA7.do",
+   "sha256": "01f24067bbc66561cb021aa7dc36b190b874bd08b660e8d076da64870de11a67",
+   "bytes": 9910
+  },
+  {
+   "path": "do_files/JPE-2020-0781_figureA8.do",
+   "sha256": "ca21bc5fffb92e520e380d6318426a81e1dc123a3592243d0bf768a3766bcdb2",
+   "bytes": 3666
+  },
+  {
+   "path": "do_files/JPE-2020-0781_figureA9.do",
+   "sha256": "34206e03a3c22081e491ed74e0176ddb77d293fe46136b5d48b47b8a1ffc165d",
+   "bytes": 3456
+  },
+  {
+   "path": "do_files/JPE-2020-0781_figureB1.do",
+   "sha256": "abcbfeedafba83ce0bc3d4f0e45d8e8b0b2628a2dcdc7822558dac52020b6112",
+   "bytes": 5101
+  },
+  {
+   "path": "do_files/JPE-2020-0781_read_me.do",
+   "sha256": "d55963df07d89612aa033befb088adadb495bec6195d1907a5ee22213d884161",
+   "bytes": 2905
+  },
+  {
+   "path": "do_files/JPE-2020-0781_table1.do",
+   "sha256": "6f780b3c7bdb17ee0b0467a36bd8edfee44b033ff827664a243c2749fe2af317",
+   "bytes": 5092
+  },
+  {
+   "path": "do_files/JPE-2020-0781_table2.do",
+   "sha256": "27cbafeee3c089d90ff88db1d0f8c8a6564e2c8639c2b4261012b188801c7fed",
+   "bytes": 4259
+  },
+  {
+   "path": "do_files/JPE-2020-0781_table3.do",
+   "sha256": "b6d9e9042271adf88657d38abd91d91b8024d750aa8df15820e785d024d0a66a",
+   "bytes": 2339
+  },
+  {
+   "path": "do_files/JPE-2020-0781_table4.do",
+   "sha256": "6c873f7ef2c09e6c60cc55e8e9126419f56d221130ec50684bc3a1f921909917",
+   "bytes": 1593
+  },
+  {
+   "path": "do_files/JPE-2020-0781_table5.do",
+   "sha256": "5b99ca1d00b02ddc8fc6af243c891797864774a2ab806c323d6f25030a6484ac",
+   "bytes": 3660
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA10.do",
+   "sha256": "411e9ac00267679b7f86991eed2199a8eda9c90afcd007fb9edd40c6def8ebc4",
+   "bytes": 7176
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA11.do",
+   "sha256": "67adf861044cc7335f5b879683630df411987e6b3ffa3b1c4c4426174c716385",
+   "bytes": 2512
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA12.do",
+   "sha256": "26edad7b3cc3d0f9f7bc2acfaf0f0c53109334eadfebd5d61a5d6466a35e64ee",
+   "bytes": 1572
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA13.do",
+   "sha256": "dce868db26948cda42a57a7d3f28a72e71778a2457780b995f9e2e4d7e1f32ea",
+   "bytes": 5822
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA14.do",
+   "sha256": "bb0b1320426c9207af83e5c76819f5c8427ce8ff665ef1957236d363a4ae55a9",
+   "bytes": 1186
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA15.do",
+   "sha256": "5d4e1e667a03a274d4d7a508a3bef7e205a187aea2d7a444ee43d884fcd3fbdd",
+   "bytes": 7655
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA16.do",
+   "sha256": "2061976980bbb6c52e89d460add028d6831e2ecd76817904f941d117c2dec1e1",
+   "bytes": 9702
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA17.do",
+   "sha256": "12f9e353f16cd528ca474f934e37328de0e075c39a7e64ab14271cab9046db01",
+   "bytes": 1878
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA18.do",
+   "sha256": "29aead5f39509f883b36fce5ebaea5989d352774e53d105f351293382669ad8d",
+   "bytes": 7520
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA2.do",
+   "sha256": "2f69e5d2fb217edd94bd178c55cd1a05034df0420b479545fcd19261b4258d6e",
+   "bytes": 4860
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA3.do",
+   "sha256": "ffdca8fed2f8f4284685c23b555b75d808b702b6a037132506f2b35f3ddb00d7",
+   "bytes": 954
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA4.do",
+   "sha256": "44c02945ba8eca54db845ef78468e0305c41901d280ebe6f50817b4fe52fcb3e",
+   "bytes": 3362
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA5.do",
+   "sha256": "3a2734ff20c653499d520f218dc11be35c2c5f5fd81cd17a34d0877d877cc44b",
+   "bytes": 1322
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA6.do",
+   "sha256": "ceaca5736dbc71b440f4618bc47009795769222ee7cbdc2c00a069225cd841dd",
+   "bytes": 1736
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA7_tableB3.do",
+   "sha256": "1fac4dab79d9d8dafbc923d1730518cc6b987bdfe98c16b82a73c2096c77a91e",
+   "bytes": 12897
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA8.do",
+   "sha256": "4764a7a4de449d259e21d895c38c464b1d2cce9dcad5e37926eb6bf33bba21cb",
+   "bytes": 2793
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableA9.do",
+   "sha256": "339dd0789d2fa0b312b8a96a90ded3206ca2e39461141be433a07ddd242108cf",
+   "bytes": 5164
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableC1.do",
+   "sha256": "5d568fc0352c340d88bb67daeefc6afa40572614eb0c67b8267fdcc3135e4379",
+   "bytes": 1390
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableC2.do",
+   "sha256": "54b06770a9d95ba7b7bf2de0731e6e150d12584ad62c34810ffbc4d1f4174a93",
+   "bytes": 4305
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableC3.do",
+   "sha256": "e8caad73d2d0fa3f2e582f7fae980e7c6b077d4b130e1ad90549c94a89fce5a2",
+   "bytes": 924
+  },
+  {
+   "path": "do_files/JPE-2020-0781_tableC4.do",
+   "sha256": "0944f2b87c8dcc2224ebf712e595f637b1635a30815e4cf6b3c6862c492bf0ab",
+   "bytes": 2972
+  },
+  {
+   "path": "do_files.zip",
+   "sha256": "5c579166df186e60fc3c93d385e57e26e74c503d25ee050efa32012fbb495d27",
+   "bytes": 236939
+  }
+ ],
+ "stripped": []
+}

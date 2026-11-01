@@ -39,8 +39,11 @@ STATA_CLAIMS = (
     "every number in the article's abstract, main text and tables that reports a result computed "
     "from the data (estimates, standard errors, test statistics, p values, intervals, sample sizes, "
     "descriptive statistics), and check each one. The analysis code is in Stata, and Stata is not "
-    "installed: translate the code you need command by command into R, keep the translation under "
-    "code/, and mark those results basis: translated.")
+    "installed: translate it command by command into R, keep the translation under code/, and mark "
+    "those results basis: translated. Translate the whole shipped pipeline, data preparation as well "
+    "as analysis, not only the parts behind one table or figure. Nothing requires you to stop early: "
+    "report a result as not_checkable only when the shipped code or data cannot produce it, never "
+    "because translating it would take long.")
 
 
 def claim_block(gold_id):
@@ -65,7 +68,10 @@ def target_info(target):
         pkg = WORK / "packages" / opaque(target, draw["seed"])
         if not pkg.exists():
             raise SystemExit(f"{target}: build the package first (build_stata_packages.py)")
-        return entry["doi"], f"{pkg} {LOCAL_NOTE}", STATA_CLAIMS
+        article = WORK / "articles" / pkg.name / "article.pdf"
+        doi = entry["doi"] + (f" (a copy of the published article is at {article}; read the printed "
+                              "values from it)" if article.exists() else "")
+        return doi, f"{pkg} {LOCAL_NOTE}", STATA_CLAIMS
     if target.startswith("T-"):
         twin = json.loads((GOLD / "twins" / target / "twin.json").read_text())
         gold = json.loads((GOLD / "gold" / f"{twin['base_gold_id']}.json").read_text())

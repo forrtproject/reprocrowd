@@ -1,0 +1,5 @@
+config,target,certificate
+luna-stata-attempt1,S-01,model-gating/benchmark/runs/luna-stata-attempt1/S-01-certificate.json
+luna-stata-attempt1,S-02,model-gating/benchmark/runs/luna-stata-attempt1/S-02-certificate.json
+luna-stata-attempt1,S-07,model-gating/benchmark/runs/luna-stata-attempt1/S-07-certificate.json
+luna-stata-attempt1,S-09,model-gating/benchmark/runs/luna-stata-attempt1/S-09-certificate.json
