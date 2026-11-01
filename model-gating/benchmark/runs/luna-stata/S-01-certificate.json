@@ -1,0 +1,966 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "paper": {
+    "doi": "10.1017/S0003055422000466",
+    "title": "Campaign Contributions and Roll-Call Voting in the U.S. House of Representatives: The Case of the Sugar Industry",
+    "authors": [
+      "Kevin Grier",
+      "Robin Grier",
+      "Gor Mkrtchian"
+    ],
+    "year": 2023
+  },
+  "procedure": {
+    "version": "crowd-repro v1.1.0",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "rules_version": "1.1.0",
+  "engine": "Codex \u00b7 GPT-6 \u00b7 OpenAI",
+  "model": {
+    "name": "GPT-6 (Codex)",
+    "provider": "OpenAI"
+  },
+  "date": "2026-11-01",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS-26.7-arm64-arm-64bit-Mach-O",
+    "language": "R",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "haven": "2.5.5",
+          "sandwich": "3.1-3",
+          "lmtest": "0.9-40"
+        },
+        "lockfile": "sessionInfo.txt"
+      },
+      {
+        "name": "Python",
+        "version": "3.14.6",
+        "packages": {},
+        "lockfile": "sessionInfo.txt"
+      }
+    ]
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Table 1 reports Inflation-adjusted sugar contributions coefficient and p-value in district and incumbent fixed-effect logit models.",
+      "exhibit": "Table 1"
+    },
+    {
+      "id": "C2",
+      "claim": "Table 1 reports ACU coefficient and p-value in district and incumbent fixed-effect logit models.",
+      "exhibit": "Table 1"
+    },
+    {
+      "id": "C3",
+      "claim": "Table 1 reports Tenure coefficient and p-value in district and incumbent fixed-effect logit models.",
+      "exhibit": "Table 1"
+    },
+    {
+      "id": "C4",
+      "claim": "Table 1 reports Poverty rate coefficient and p-value in district and incumbent fixed-effect logit models.",
+      "exhibit": "Table 1"
+    },
+    {
+      "id": "C5",
+      "claim": "Table 1 reports % with bachelor degree coefficient and p-value in district and incumbent fixed-effect logit models.",
+      "exhibit": "Table 1"
+    },
+    {
+      "id": "C6",
+      "claim": "Table 1 reports Median income coefficient and p-value in district and incumbent fixed-effect logit models.",
+      "exhibit": "Table 1"
+    },
+    {
+      "id": "C7",
+      "claim": "Table 1 reports % population >65 coefficient and p-value in district and incumbent fixed-effect logit models.",
+      "exhibit": "Table 1"
+    },
+    {
+      "id": "C8",
+      "claim": "Table 1 reports Agriculture committee coefficient and p-value in district and incumbent fixed-effect logit models.",
+      "exhibit": "Table 1"
+    },
+    {
+      "id": "C9",
+      "claim": "Table 1 reports Constant coefficient and p-value in district and incumbent fixed-effect logit models.",
+      "exhibit": "Table 1"
+    },
+    {
+      "id": "C10",
+      "claim": "Table 1 McFadden pseudo-R-squared values.",
+      "exhibit": "Table 1"
+    },
+    {
+      "id": "C11",
+      "claim": "Table 1 model observation counts.",
+      "exhibit": "Table 1"
+    },
+    {
+      "id": "C12",
+      "claim": "Table 3 sugar contribution coefficients and p-values for the calendar year 2013/2018 window.",
+      "exhibit": "Table 3"
+    },
+    {
+      "id": "C13",
+      "claim": "Table 3 sugar contribution coefficients and p-values for the 12 months before votes window.",
+      "exhibit": "Table 3"
+    },
+    {
+      "id": "C14",
+      "claim": "Table 3 model observation counts.",
+      "exhibit": "Table 3"
+    },
+    {
+      "id": "C15",
+      "claim": "Districts whose vote changed between periods: 93 (reported from data).",
+      "exhibit": "Abstract and Results"
+    },
+    {
+      "id": "C16",
+      "claim": "Cases with the same incumbent switching votes: 53 (reported from data).",
+      "exhibit": "Abstract and Results"
+    },
+    {
+      "id": "C17",
+      "claim": "Same-incumbent Aye-to-No cases: 47 (reported from data).",
+      "exhibit": "Table 2"
+    },
+    {
+      "id": "C18",
+      "claim": "Same-incumbent No-to-Aye cases: 6 (reported from data).",
+      "exhibit": "Table 2"
+    },
+    {
+      "id": "C19",
+      "claim": "Different-incumbent Aye-to-No cases: 32 (reported from data).",
+      "exhibit": "Table 2"
+    },
+    {
+      "id": "C20",
+      "claim": "Different-incumbent No-to-Aye cases: 8 (reported from data).",
+      "exhibit": "Table 2"
+    },
+    {
+      "id": "C21",
+      "claim": "Contribution change, same-incumbent Aye-to-No: 67 (reported from data).",
+      "exhibit": "Table 2"
+    },
+    {
+      "id": "C22",
+      "claim": "Contribution change, same-incumbent No-to-Aye: -80 (reported from data).",
+      "exhibit": "Table 2"
+    },
+    {
+      "id": "C23",
+      "claim": "Contribution change, different-incumbent Aye-to-No: 348 (reported from data).",
+      "exhibit": "Table 2"
+    },
+    {
+      "id": "C24",
+      "claim": "Contribution change, different-incumbent No-to-Aye: -38 (reported from data).",
+      "exhibit": "Table 2"
+    },
+    {
+      "id": "C25",
+      "claim": "Results prose reports Sugar contributions to incumbents rose by more than (%): 50.",
+      "exhibit": "Abstract / Results / Figures 1\u20133"
+    },
+    {
+      "id": "C26",
+      "claim": "Results prose reports Probability at zero contributions: 0.75.",
+      "exhibit": "Abstract / Results / Figures 1\u20133"
+    },
+    {
+      "id": "C27",
+      "claim": "Results prose reports Probability at $15,500 contributions: 0.2.",
+      "exhibit": "Abstract / Results / Figures 1\u20133"
+    },
+    {
+      "id": "C28",
+      "claim": "Results prose reports Probability at ACU score 20: 0.25.",
+      "exhibit": "Abstract / Results / Figures 1\u20133"
+    },
+    {
+      "id": "C29",
+      "claim": "Results prose reports Probability at ACU score 70: 0.65.",
+      "exhibit": "Abstract / Results / Figures 1\u20133"
+    },
+    {
+      "id": "C30",
+      "claim": "Results prose reports Probability for a nine-term legislator: 0.35.",
+      "exhibit": "Abstract / Results / Figures 1\u20133"
+    },
+    {
+      "id": "C31",
+      "claim": "2013 amendment vote count (against reform / for reform): 206\u2013221.",
+      "exhibit": "Introduction"
+    },
+    {
+      "id": "C32",
+      "claim": "Estimated annual consumer loss from sugar program, lower bound (billion dollars): 3.",
+      "exhibit": "Introduction"
+    },
+    {
+      "id": "C33",
+      "claim": "Estimated annual consumer loss from sugar program, upper bound (billion dollars): 3.5.",
+      "exhibit": "Introduction"
+    },
+    {
+      "id": "C34",
+      "claim": "Candy company contributions to House incumbents in 2018 (dollars): 152900.",
+      "exhibit": "Results"
+    },
+    {
+      "id": "C35",
+      "claim": "Sugar industry contributions to House incumbents in 2018 (dollars): 5239896.",
+      "exhibit": "Results"
+    },
+    {
+      "id": "C36",
+      "claim": "Estimated annual consumer cost per person (dollars): 10.",
+      "exhibit": "Results"
+    },
+    {
+      "id": "C37",
+      "claim": "Same-party incumbents among 32 districts with different members: 29.",
+      "exhibit": "Table 2 note"
+    },
+    {
+      "id": "C38",
+      "claim": "Contribution increase for 32 replacement-member districts (%): 300.",
+      "exhibit": "Results"
+    },
+    {
+      "id": "C39",
+      "claim": "Contribution increase among 53 same-incumbent switchers (%): 67.",
+      "exhibit": "Results"
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "Inflation-adjusted sugar contributions coefficient (district FE)",
+      "reported": -0.0006,
+      "recomputed": -0.0006307274,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Inflation-adjusted sugar contributions p-value (district FE)",
+      "reported": "0.001",
+      "recomputed": "9.765347e-07",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Inflation-adjusted sugar contributions coefficient (incumbent FE)",
+      "reported": -0.0004,
+      "recomputed": -0.0003923401,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Inflation-adjusted sugar contributions p-value (incumbent FE)",
+      "reported": "0.001",
+      "recomputed": "0.02037739",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "ACU coefficient (district FE)",
+      "reported": 0.2,
+      "recomputed": 0.2022532,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "ACU p-value (district FE)",
+      "reported": "0.001",
+      "recomputed": "0.003135835",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "ACU coefficient (incumbent FE)",
+      "reported": 0.06,
+      "recomputed": 0.05987276,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "ACU p-value (incumbent FE)",
+      "reported": "0.53",
+      "recomputed": "0.677894",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Tenure coefficient (district FE)",
+      "reported": -0.3,
+      "recomputed": -0.2968758,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Tenure p-value (district FE)",
+      "reported": "0.001",
+      "recomputed": "0.0008516121",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Tenure coefficient (incumbent FE)",
+      "reported": -1.43,
+      "recomputed": -1.432746,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Tenure p-value (incumbent FE)",
+      "reported": "0.001",
+      "recomputed": "0.007371946",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Poverty rate coefficient (district FE)",
+      "reported": 2.19,
+      "recomputed": 2.189972,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Poverty rate p-value (district FE)",
+      "reported": "0.001",
+      "recomputed": "0.008342142",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Poverty rate coefficient (incumbent FE)",
+      "reported": 2.24,
+      "recomputed": 2.245813,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Poverty rate p-value (incumbent FE)",
+      "reported": "0.02",
+      "recomputed": "0.1306487",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "% with bachelor degree coefficient (district FE)",
+      "reported": 1.2,
+      "recomputed": 1.205795,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "% with bachelor degree p-value (district FE)",
+      "reported": "0.10",
+      "recomputed": "0.2066753",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "% with bachelor degree coefficient (incumbent FE)",
+      "reported": 0.59,
+      "recomputed": 0.5917565,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "% with bachelor degree p-value (incumbent FE)",
+      "reported": "0.20",
+      "recomputed": "0.4031486",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Median income coefficient (district FE)",
+      "reported": 0.0001,
+      "recomputed": 0.0001217123,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Median income p-value (district FE)",
+      "reported": "0.67",
+      "recomputed": "0.7723878",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Median income coefficient (incumbent FE)",
+      "reported": 0.0006,
+      "recomputed": 0.0006513785,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Median income p-value (incumbent FE)",
+      "reported": "0.19",
+      "recomputed": "0.3938646",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "% population >65 coefficient (district FE)",
+      "reported": -1.88,
+      "recomputed": -1.886139,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "% population >65 p-value (district FE)",
+      "reported": "0.04",
+      "recomputed": "0.1556238",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "% population >65 coefficient (incumbent FE)",
+      "reported": -0.38,
+      "recomputed": -0.3821882,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "% population >65 p-value (incumbent FE)",
+      "reported": "0.83",
+      "recomputed": "0.8911765",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Agriculture committee coefficient (district FE)",
+      "reported": -36.3,
+      "recomputed": -38.72193,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Agriculture committee p-value (district FE)",
+      "reported": "0.001",
+      "recomputed": "3.212804e-53",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Agriculture committee coefficient (incumbent FE)",
+      "reported": -39.3,
+      "recomputed": -42.10532,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Agriculture committee p-value (incumbent FE)",
+      "reported": "0.001",
+      "recomputed": "2.281273e-11",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Constant coefficient (district FE)",
+      "reported": -20.9,
+      "recomputed": -44.6314,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Constant p-value (district FE)",
+      "reported": ".23",
+      "recomputed": "0.1163938",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Constant coefficient (incumbent FE)",
+      "reported": -63.1,
+      "recomputed": -76.83761,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Constant p-value (incumbent FE)",
+      "reported": ".01",
+      "recomputed": "0.05999526",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Pseudo R-squared (district FE)",
+      "reported": 0.745,
+      "recomputed": 0.747437,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Pseudo R-squared (incumbent FE)",
+      "reported": 0.721,
+      "recomputed": 0.7207586,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Observations (district FE)",
+      "reported": 186,
+      "recomputed": 187,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations.",
+      "note": "R translated model retains one additional observation relative to the printed sample size."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Observations (incumbent FE)",
+      "reported": 106,
+      "recomputed": 106,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "Sugar contribution coefficient (calendar year 2013/2018; district FE)",
+      "reported": -0.0006,
+      "recomputed": -0.000574959,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "Sugar contribution p-value (calendar year 2013/2018; district FE)",
+      "reported": "0.001",
+      "recomputed": "0.0008207564",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "Sugar contribution coefficient (calendar year 2013/2018; incumbent FE)",
+      "reported": -0.0005,
+      "recomputed": -0.0005647325,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "Sugar contribution p-value (calendar year 2013/2018; incumbent FE)",
+      "reported": "0.001",
+      "recomputed": "0.02076005",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "Sugar contribution coefficient (12 months before votes; district FE)",
+      "reported": -0.0006,
+      "recomputed": -0.0005964743,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "Sugar contribution p-value (12 months before votes; district FE)",
+      "reported": "0.001",
+      "recomputed": "0.0001319210",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "Sugar contribution coefficient (12 months before votes; incumbent FE)",
+      "reported": -0.0003,
+      "recomputed": -0.0003179807,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "Sugar contribution p-value (12 months before votes; incumbent FE)",
+      "reported": "0.003",
+      "recomputed": "0.05007581",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "Observations (district FE)",
+      "reported": 186,
+      "recomputed": 187,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "Observations (incumbent FE)",
+      "reported": 106,
+      "recomputed": 106,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata logit with district indicators and robust covariance to R glm with HC1 covariance; Stata perfect-prediction omissions were represented by retaining only IDs with outcome variation. `marhis` was translated to 50 equally spaced focal-variable values and average predicted probabilities. The translation uses R\u2019s robust covariance implementation and can differ from Stata\u2019s finite-sample calculations."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "Districts whose vote changed between periods",
+      "reported": 93,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped do-file does not compute this descriptive summary; no additional analysis code was written."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Cases with the same incumbent switching votes",
+      "reported": 53,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped do-file does not compute this descriptive summary; no additional analysis code was written."
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "Same-incumbent Aye-to-No cases",
+      "reported": 47,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped do-file does not compute this descriptive summary; no additional analysis code was written."
+    },
+    {
+      "claim_id": "C18",
+      "quantity": "Same-incumbent No-to-Aye cases",
+      "reported": 6,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped do-file does not compute this descriptive summary; no additional analysis code was written."
+    },
+    {
+      "claim_id": "C19",
+      "quantity": "Different-incumbent Aye-to-No cases",
+      "reported": 32,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped do-file does not compute this descriptive summary; no additional analysis code was written."
+    },
+    {
+      "claim_id": "C20",
+      "quantity": "Different-incumbent No-to-Aye cases",
+      "reported": 8,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped do-file does not compute this descriptive summary; no additional analysis code was written."
+    },
+    {
+      "claim_id": "C21",
+      "quantity": "Contribution change, same-incumbent Aye-to-No",
+      "reported": 67,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped do-file does not compute this descriptive summary; no additional analysis code was written."
+    },
+    {
+      "claim_id": "C22",
+      "quantity": "Contribution change, same-incumbent No-to-Aye",
+      "reported": -80,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped do-file does not compute this descriptive summary; no additional analysis code was written."
+    },
+    {
+      "claim_id": "C23",
+      "quantity": "Contribution change, different-incumbent Aye-to-No",
+      "reported": 348,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped do-file does not compute this descriptive summary; no additional analysis code was written."
+    },
+    {
+      "claim_id": "C24",
+      "quantity": "Contribution change, different-incumbent No-to-Aye",
+      "reported": -38,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped do-file does not compute this descriptive summary; no additional analysis code was written."
+    },
+    {
+      "claim_id": "C25",
+      "quantity": "Sugar contributions to incumbents rose by more than (%)",
+      "reported": 50,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The prose value is approximate and the shipped script\u2019s marhis output does not report this scalar. Margins data generated by the direct translation are included in logs; no estimate was reverse-engineered from an approximate prose statement."
+    },
+    {
+      "claim_id": "C26",
+      "quantity": "Probability at zero contributions",
+      "reported": 0.75,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The prose value is approximate and the shipped script\u2019s marhis output does not report this scalar. Margins data generated by the direct translation are included in logs; no estimate was reverse-engineered from an approximate prose statement."
+    },
+    {
+      "claim_id": "C27",
+      "quantity": "Probability at $15,500 contributions",
+      "reported": 0.2,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The prose value is approximate and the shipped script\u2019s marhis output does not report this scalar. Margins data generated by the direct translation are included in logs; no estimate was reverse-engineered from an approximate prose statement."
+    },
+    {
+      "claim_id": "C28",
+      "quantity": "Probability at ACU score 20",
+      "reported": 0.25,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The prose value is approximate and the shipped script\u2019s marhis output does not report this scalar. Margins data generated by the direct translation are included in logs; no estimate was reverse-engineered from an approximate prose statement."
+    },
+    {
+      "claim_id": "C29",
+      "quantity": "Probability at ACU score 70",
+      "reported": 0.65,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The prose value is approximate and the shipped script\u2019s marhis output does not report this scalar. Margins data generated by the direct translation are included in logs; no estimate was reverse-engineered from an approximate prose statement."
+    },
+    {
+      "claim_id": "C30",
+      "quantity": "Probability for a nine-term legislator",
+      "reported": 0.35,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The prose value is approximate and the shipped script\u2019s marhis output does not report this scalar. Margins data generated by the direct translation are included in logs; no estimate was reverse-engineered from an approximate prose statement."
+    },
+    {
+      "claim_id": "C31",
+      "quantity": "2013 amendment vote count (against reform / for reform)",
+      "reported": "206\u2013221",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This number is reported in the article but is not produced by the shipped do-file; no new analysis was added."
+    },
+    {
+      "claim_id": "C32",
+      "quantity": "Estimated annual consumer loss from sugar program, lower bound (billion dollars)",
+      "reported": 3,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This number is reported in the article but is not produced by the shipped do-file; no new analysis was added."
+    },
+    {
+      "claim_id": "C33",
+      "quantity": "Estimated annual consumer loss from sugar program, upper bound (billion dollars)",
+      "reported": 3.5,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This number is reported in the article but is not produced by the shipped do-file; no new analysis was added."
+    },
+    {
+      "claim_id": "C34",
+      "quantity": "Candy company contributions to House incumbents in 2018 (dollars)",
+      "reported": 152900,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This number is reported in the article but is not produced by the shipped do-file; no new analysis was added."
+    },
+    {
+      "claim_id": "C35",
+      "quantity": "Sugar industry contributions to House incumbents in 2018 (dollars)",
+      "reported": 5239896,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This number is reported in the article but is not produced by the shipped do-file; no new analysis was added."
+    },
+    {
+      "claim_id": "C36",
+      "quantity": "Estimated annual consumer cost per person (dollars)",
+      "reported": 10,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This number is reported in the article but is not produced by the shipped do-file; no new analysis was added."
+    },
+    {
+      "claim_id": "C37",
+      "quantity": "Same-party incumbents among 32 districts with different members",
+      "reported": 29,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This number is reported in the article but is not produced by the shipped do-file; no new analysis was added."
+    },
+    {
+      "claim_id": "C38",
+      "quantity": "Contribution increase for 32 replacement-member districts (%)",
+      "reported": 300,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This number is reported in the article but is not produced by the shipped do-file; no new analysis was added."
+    },
+    {
+      "claim_id": "C39",
+      "quantity": "Contribution increase among 53 same-incumbent switchers (%)",
+      "reported": 67,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This number is reported in the article but is not produced by the shipped do-file; no new analysis was added."
+    }
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "Moderate",
+  "findings": [
+    {
+      "id": "REP-001",
+      "severity": "P1",
+      "type": "defect",
+      "description": "Translated district fixed-effect models retain 187 observations where the article reports 186, and translated robust p-values differ for several Table 1 terms.",
+      "evidence": "R console output in logs/run-3.txt; printed Table 1 in article PDF.",
+      "suggested_fix": "Check the Stata 15 estimation sample and robust variance calculation to identify the one-observation sample discrepancy and p-value differences."
+    },
+    {
+      "id": "REP-002",
+      "severity": "P2",
+      "type": "defect",
+      "description": "The shipped do-file does not compute Table 2 contribution-change counts or percentages, nor the approximate marginal probabilities stated in the prose.",
+      "evidence": "Complete shipped do-file runs only Table 1, Figures 1\u20133 and Table 3 models.",
+      "suggested_fix": "Provide the original analysis code that generated these outputs if they are to be computationally checked."
+    }
+  ],
+  "limitations": [
+    "Stata 15 was unavailable; all shipped commands were translated to R.",
+    "Table 2 descriptive figures and prose approximations are not produced by the shipped script and were not reconstructed.",
+    "The `marhis` visualization was translated as 50 grid values with average predicted probabilities; Stata package output was unavailable for exact figure comparison.",
+    "No claim is made about scientific correctness."
+  ],
+  "artifacts": {
+    "console_log": "logs/run-3.txt"
+  },
+  "signatories": [
+    {
+      "name": "OpenAI Codex GPT-6",
+      "role": "codechecker"
+    }
+  ],
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  }
+}

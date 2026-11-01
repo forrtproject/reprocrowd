@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "paper": {
+    "doi": "10.1086/719277",
+    "title": "The Dynamics and Spillovers of Management Interventions: Evidence from the Training within Industry Program",
+    "authors": ["Nicola Bianchi", "Michela Giorcelli"],
+    "year": 2022
+  },
+  "procedure": {
+    "version": "crowd-repro v1.1.0",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "rules_version": "1.1.0",
+  "engine": "Codex",
+  "model": {"name": "GPT-6.1 Luna", "provider": "OpenAI"},
+  "date": "2026-11-01",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS (Darwin)",
+    "language": "R",
+    "programs": [
+      {"name": "R", "version": "4.6.1", "packages": {"haven": "2.5.5", "dplyr": "1.1.4", "ggplot2": "4.0.0"}, "lockfile": "sessionInfo.txt"}
+    ],
+    "lockfile": "sessionInfo.txt"
+  },
+  "claims": [],
+  "results": [],
+  "validation_status": "computation not checked",
+  "confidence_level": "VeryLowConfidence",
+  "findings": [
+    {"id": "TECH-001", "severity": "P0", "type": "defect", "description": "No analysis values were recomputed. The package contains a Stata master pipeline, but Stata is absent and the required complete direct R translation was not produced or run. This is an incomplete benchmark attempt, not a completed reproduction check.", "evidence": "The master script invokes 3 main figures, 5 main tables, 11 appendix figures and 21 appendix tables. `code/` contains copies of the shipped .do scripts only; `logs/run.log` records that no analysis run occurred.", "suggested_fix": "Complete and execute a command-by-command R translation of the full master pipeline, then enumerate every data-derived printed result in the article and enter one result per printed number."}
+  ],
+  "limitations": [
+    "No computation was checked. Accordingly, no claims or result-level judgments are asserted.",
+    "The printed values in the abstract, main text and tables were not exhaustively enumerated, and the full pipeline was not translated. This certificate does not satisfy the requested complete benchmark deliverable.",
+    "The original code and data were not copied into the certification directory and were not uploaded. The supplied local package is at /tmp/scratch_bench_luna/packages/pkg-775f66."
+  ],
+  "artifacts": {"console_log": "logs/run.log"},
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computation not checked",
+    "outcome_robustness": "not checked"
+  }
+}

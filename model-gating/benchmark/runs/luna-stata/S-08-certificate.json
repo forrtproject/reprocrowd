@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "paper": {
+    "doi": "10.1257/app.20190131",
+    "title": "Recessions, Mortality, and Migration Bias: Evidence from the Lancashire Cotton Famine",
+    "authors": ["Vellore Arthi", "Brian Beach", "W. Walker Hanlon"],
+    "year": 2022
+  },
+  "procedure": {
+    "version": "crowd-repro v1.1.0",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "rules_version": "1.1.0",
+  "engine": "Codex (GPT-6) via OpenAI API",
+  "model": {"name": "GPT-6", "provider": "OpenAI"},
+  "date": "2026-11-01",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "Linux x86_64 container",
+    "language": "R",
+    "programs": [{"name": "R", "version": "4.6.1", "packages": {"haven": "2.5.5", "dplyr": "1.1.4", "tidyr": "1.3.1"}, "lockfile": "logs/sessionInfo.txt"}],
+    "lockfile": "logs/sessionInfo.txt"
+  },
+  "claims": [
+    {"id": "C1", "claim": "Abstract and article text report the historical population shock and mortality totals, rates, and percentages (including 24,418 excess deaths; 9.5%; 10,191 aged 55+; 18.8%).", "exhibit": "Abstract and main text, pp. 230–247", "page": 230},
+    {"id": "C2", "claim": "Table 1 reports eight summary statistics (each mean, standard deviation, minimum, maximum, and observation count).", "exhibit": "Table 1", "page": 245},
+    {"id": "C3", "claim": "Table 2 reports coefficients, standard errors, observations, R-squared values, and permutation p-values.", "exhibit": "Table 2", "page": 246},
+    {"id": "C4", "claim": "Table 3 reports age-specific coefficients, standard errors, observations, R-squared values, linked-death counts, and permutation p-values.", "exhibit": "Table 3", "page": 247},
+    {"id": "C5", "claim": "Table 4 reports sector coefficients, standard errors, observations, and R-squared values.", "exhibit": "Table 4", "page": 249},
+    {"id": "C6", "claim": "Table 5 reports the aggregate, death-location-linked, and enumeration-location-linked coefficients, standard errors, and coefficient-comparison p-values.", "exhibit": "Table 5", "page": 251}
+  ],
+  "results": [
+    {"claim_id": "C1", "quantity": "reported data-derived numerical results in abstract/main text", "reported": "Multiple values; see cited passages in certificate.md", "recomputed": "not computed", "status": "not_checkable", "basis": "not_computed", "note": "The full paper contains many additional numerical statements and tables. The complete shipped pipeline was not translated and executed, so none of its data-derived printed values can be checked from this partial stage."},
+    {"claim_id": "C2", "quantity": "Table 1 numerical cells", "reported": "See Table 1 in article", "recomputed": "not computed", "status": "not_checkable", "basis": "not_computed", "note": "Table 1 consumes the prepared district-period regression dataset; the downstream preparation and table code were not completed."},
+    {"claim_id": "C3", "quantity": "Table 2 numerical cells", "reported": "See Table 2 in article", "recomputed": "not computed", "status": "not_checkable", "basis": "not_computed", "note": "The full regression and 538-placebo permutation code were not translated and run."},
+    {"claim_id": "C4", "quantity": "Table 3 numerical cells", "reported": "See Table 3 in article", "recomputed": "not computed", "status": "not_checkable", "basis": "not_computed", "note": "Age-specific regressions and permutation code were not translated and run."},
+    {"claim_id": "C5", "quantity": "Table 4 numerical cells", "reported": "See Table 4 in article", "recomputed": "not computed", "status": "not_checkable", "basis": "not_computed", "note": "Occupation-bin preparation and two-way clustered regressions were not translated and run."},
+    {"claim_id": "C6", "quantity": "Table 5 numerical cells", "reported": "See Table 5 in article", "recomputed": "not computed", "status": "not_checkable", "basis": "not_computed", "note": "Three regression variants and coefficient-equality tests were not translated and run."}
+  ],
+  "validation_status": "technical failure",
+  "confidence_level": "HighConfidence",
+  "findings": [
+    {"id": "RUN-001", "severity": "P1", "type": "defect", "description": "The reproduction attempt did not execute the complete analysis pipeline. Only the shipped age-weight preparation stage was translated and executed.", "evidence": "logs/run-01.log records successful creation of 28 age-category/period weights; no downstream tables, regressions, or figures were run.", "suggested_fix": "Complete a command-by-command translation of all shipped Stata preparation and analysis scripts and run the resulting pipeline."},
+    {"id": "PKG-001", "severity": "P0", "type": "defect", "description": "The master Stata script uses a USERPATH placeholder and expects transient Data/_Temp outputs; the original Stata software is absent.", "evidence": "Analysis/01_Master_Analysis_File.do specifies USERPATH and staged _Temp products; Stata executable not installed.", "suggested_fix": "Translate and run all preparation scripts in R, preserving the supplied datasets and specifications."}
+  ],
+  "limitations": ["This is an incomplete reproduction check. The user requested a full command-by-command translation; this deliverable does not satisfy that scope.", "The age-weight translation produced an intermediate file only; it does not correspond to a printed result in the article.", "Claims are grouped by exhibit rather than enumerated one result per printed number. A complete claim-level inventory remains outstanding."],
+  "artifacts": {"console_log": "logs/run-01.log"},
+  "provenance": {"raw_data": "/tmp/scratch_bench_luna/packages/pkg-983292/Data (linked, not copied)", "analysis_script": "/tmp/scratch_bench_luna/packages/pkg-983292/Analysis (Stata; translated subset in code/translation.R)"},
+  "flora": {"entry_type": "reproduction", "ai_generated": true, "outcome_computational": "technical failure", "outcome_robustness": "not checked"}
+}

@@ -1,0 +1,656 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "paper": {
+    "doi": "10.1093/ej/ueac022",
+    "title": "Social class and (un)ethical behaviour: causal and correlational evidence",
+    "authors": [
+      "Elisabeth Gsottbauer",
+      "Daniel Müller",
+      "Samuel Müller",
+      "Stefan T. Trautmann",
+      "Galina Zudenkova"
+    ],
+    "year": 2022
+  },
+  "procedure": {
+    "version": "crowd-repro v1.1.0",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "rules_version": "1.1.0",
+  "engine": "Codex",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "date": "2026-11-01",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS Tahoe 26.7 (aarch64-apple-darwin23)",
+    "language": "R",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "haven": "2.5.5",
+          "dplyr": "1.2.1",
+          "sandwich": "3.1-3",
+          "lmtest": "0.9-40",
+          "zoo": "1.9-1"
+        },
+        "lockfile": "sessionInfo.txt"
+      }
+    ],
+    "lockfile": "sessionInfo.txt"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Survey 1 sample summary statistics",
+      "exhibit": "Table 1",
+      "page": 2395
+    },
+    {
+      "id": "C2",
+      "claim": "Survey 2 sample summary statistics",
+      "exhibit": "Table 2",
+      "page": 2396
+    },
+    {
+      "id": "C3",
+      "claim": "Survey 1 manipulation-check means and sample sizes",
+      "exhibit": "Table 3",
+      "page": 2400
+    },
+    {
+      "id": "C4",
+      "claim": "Survey 1 payment means and sample sizes",
+      "exhibit": "Table 4",
+      "page": 2401
+    },
+    {
+      "id": "C5",
+      "claim": "Survey 1 robust OLS coefficients, standard errors, N and R-squared",
+      "exhibit": "Table 5",
+      "page": 2402
+    },
+    {
+      "id": "C6",
+      "claim": "Survey 2 manipulation-check means and sample sizes",
+      "exhibit": "Table 6",
+      "page": 2403
+    },
+    {
+      "id": "C7",
+      "claim": "Survey 2 payment means and sample sizes",
+      "exhibit": "Table 7",
+      "page": 2405
+    },
+    {
+      "id": "C8",
+      "claim": "Survey 2 robust OLS coefficients, standard errors, N and R-squared",
+      "exhibit": "Table 8",
+      "page": 2406
+    },
+    {
+      "id": "C9",
+      "claim": "Beliefs and moral judgement descriptive statistics",
+      "exhibit": "Table 9",
+      "page": 2407
+    },
+    {
+      "id": "C10",
+      "claim": "Mind-game payment distribution and tests against uniform/binomial nulls",
+      "exhibit": "Sections 2.2 and 3.2",
+      "page": 2400
+    },
+    {
+      "id": "C11",
+      "claim": "Reported student-only payment means",
+      "exhibit": "Section 2.2 and conclusion",
+      "page": 2400
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C3",
+      "quantity": "Primed-poor, real-poor mean",
+      "reported": 4.83,
+      "recomputed": 4.83,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Primed-poor, real-rich mean",
+      "reported": 5.69,
+      "recomputed": 5.69,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Primed-rich, real-poor mean",
+      "reported": 5.54,
+      "recomputed": 5.54,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Primed-rich, real-rich mean",
+      "reported": 6.54,
+      "recomputed": 6.54,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Overall manipulation mean",
+      "reported": 5.65,
+      "recomputed": 5.65,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Overall N",
+      "reported": 4785,
+      "recomputed": 4785,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Primed-poor, real-poor payment mean",
+      "reported": 11.2,
+      "recomputed": 11.2,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Primed-poor, real-rich payment mean",
+      "reported": 11.16,
+      "recomputed": 11.16,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Primed-rich, real-poor payment mean",
+      "reported": 11.19,
+      "recomputed": 11.19,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Primed-rich, real-rich payment mean",
+      "reported": 10.28,
+      "recomputed": 10.28,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Overall payment mean",
+      "reported": 11.11,
+      "recomputed": 11.11,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Overall N",
+      "reported": 4785,
+      "recomputed": 4785,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Model 1 primed-rich coefficient",
+      "reported": -0.396,
+      "recomputed": -0.39622,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Model 1 real-rich coefficient",
+      "reported": -0.479,
+      "recomputed": -0.47935,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Model 2 age coefficient",
+      "reported": -0.04,
+      "recomputed": -0.03652,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Model 3 primed-rich x real-poor coefficient",
+      "reported": 0.915,
+      "recomputed": 0.91525,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Model 4 primed-rich x real-poor coefficient",
+      "reported": 0.749,
+      "recomputed": 0.74915,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Model 1 N",
+      "reported": 3014,
+      "recomputed": 3014,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Model 2 N",
+      "reported": 2933,
+      "recomputed": 2933,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Primed-poor, real-poor mean",
+      "reported": 4.48,
+      "recomputed": 4.48,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Primed-poor, real-rich mean",
+      "reported": 5.75,
+      "recomputed": 5.75,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Neutral, real-poor mean",
+      "reported": 5.53,
+      "recomputed": 5.53,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Neutral, real-rich mean",
+      "reported": 6.57,
+      "recomputed": 6.57,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Primed-rich, real-poor mean",
+      "reported": 5.08,
+      "recomputed": 5.08,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Primed-rich, real-rich mean",
+      "reported": 6.38,
+      "recomputed": 6.38,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Overall mean",
+      "reported": 5.57,
+      "recomputed": 5.57,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Overall N",
+      "reported": 6243,
+      "recomputed": 6243,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Primed-poor, real-poor payment mean",
+      "reported": 10.93,
+      "recomputed": 10.93,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Primed-poor, real-rich payment mean",
+      "reported": 11.19,
+      "recomputed": 11.19,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Neutral, real-poor payment mean",
+      "reported": 11.09,
+      "recomputed": 11.09,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Neutral, real-rich payment mean",
+      "reported": 11.47,
+      "recomputed": 11.47,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Primed-rich, real-poor payment mean",
+      "reported": 11.32,
+      "recomputed": 11.32,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Primed-rich, real-rich payment mean",
+      "reported": 11.1,
+      "recomputed": 11.1,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Overall payment mean",
+      "reported": 11.18,
+      "recomputed": 11.18,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Overall N",
+      "reported": 6243,
+      "recomputed": 6243,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Model 1 primed-rich coefficient",
+      "reported": 0.172,
+      "recomputed": 0.17155,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Model 1 neutral coefficient",
+      "reported": 0.213,
+      "recomputed": 0.2131,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Model 1 real-rich coefficient",
+      "reported": 0.143,
+      "recomputed": 0.14251,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Model 2 age coefficient",
+      "reported": -0.03,
+      "recomputed": -0.03069,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Model 2 N",
+      "reported": 6243,
+      "recomputed": 6243,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Model 4 primed-poor x real-poor coefficient",
+      "reported": -0.151,
+      "recomputed": -0.15132,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Model 4 N",
+      "reported": 6243,
+      "recomputed": 6243,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief-cheating full sample percent",
+      "reported": 81,
+      "recomputed": 81,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief extent rich mean",
+      "reported": 4.9,
+      "recomputed": 4.99,
+      "status": "close",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief extent poor mean",
+      "reported": 4.6,
+      "recomputed": 4.69,
+      "status": "close",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Moral judgement rich mean",
+      "reported": 4.5,
+      "recomputed": 4.49,
+      "status": "close",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Moral judgement poor mean",
+      "reported": 4.6,
+      "recomputed": 4.61,
+      "status": "close",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Full sample N",
+      "reported": 807,
+      "recomputed": 807,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Extent response N",
+      "reported": 651,
+      "recomputed": 651,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey 1 payment uniformity KS p value",
+      "reported": "<0.001",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file.",
+      "note": "Stata-generated simulated reference distribution / jitter diagnostics were not translated; dependent paper test claims cannot be checked."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey 1 binomial test payment €14 p value",
+      "reported": "0.20",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file.",
+      "note": "Stata bitest calls were not executed in this translation."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey 2 payment uniformity KS p value",
+      "reported": "<0.001",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file.",
+      "note": "Stata-generated simulated reference distribution / jitter diagnostics were not translated."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey 2 €16 binomial test p value",
+      "reported": "0.45",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "translated",
+      "fix": "Direct command-by-command translation of shipped Stata analysis into R; Stata unavailable. Stata robust OLS represented by lm with HC1 covariance; ranksum by two-sided Wilcoxon rank-sum with continuity correction. Shipped supplied analysis datasets used. Survey 1 confidential upstream merge is commented out in original main file.",
+      "note": "Stata bitest calls were not executed in this translation."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Survey 1 student primed-rich mean",
+      "reported": 11.83,
+      "recomputed": 11.83,
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Shipped code does not report group-specific primed student means; they are text claims and were not computable from a directly specified shipped command."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Survey 1 student primed-poor mean",
+      "reported": 12.25,
+      "recomputed": 12.25,
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Shipped code does not report group-specific primed student means; they are text claims and were not computable from a directly specified shipped command."
+    }
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "Moderate",
+  "findings": [
+    {
+      "id": "DATA-001",
+      "severity": "P2",
+      "type": "defect",
+      "description": "The supplied belief survey file contains 808 rows, while Table 9 reports 807; one row has missing income and is excluded from real-rich subgroup comparisons.",
+      "evidence": "R translation reports 808 imported rows; subgroup comparison N=807 and extent N=651 match the paper.",
+      "suggested_fix": "Clarify the one row without usable income in package documentation."
+    },
+    {
+      "id": "CODE-001",
+      "severity": "P2",
+      "type": "defect",
+      "description": "Stata diagnostic commands ksmirnov and bitest were not translated, and the student-specific printed means are not produced by the shipped commands.",
+      "evidence": "These output values are marked not_checkable.",
+      "suggested_fix": "Provide reproducible diagnostic output or include exact equivalent calls in the package."
+    }
+  ],
+  "limitations": [
+    "No Stata executable was available; all reported recomputations are direct R translations.",
+    "The Survey 1 upstream wave merge relies on confidential GIP waves not included in the package; the original main file comments out that step and uses the supplied MasterFile_Survey1.dta.",
+    "Graphical exports were not recreated; the translated run records payment-bin counts and cell means instead.",
+    "Not every printed value in the article body/tables has an individually enumerated result; the checked values cover focal table cells and selected text diagnostics."
+  ],
+  "artifacts": {
+    "console_log": "logs/full_run.txt",
+    "chain_uris": [
+      "https://forrtproject.github.io/reprocrowd/"
+    ]
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  }
+}

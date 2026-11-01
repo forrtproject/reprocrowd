@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "paper": {
+    "doi": "10.1093/ej/ueac017",
+    "title": "Safe Assets",
+    "authors": ["Robert J. Barro", "Jesús Fernández-Villaverde", "Oren Levintal", "Andrew Mollerus"],
+    "year": 2022
+  },
+  "procedure": {
+    "version": "0.1.2",
+    "uri": "https://forrtproject.github.io/reprocrowd/"
+  },
+  "engine": "Codex · GPT-6 · OpenAI",
+  "model": {"name": "GPT-6", "provider": "OpenAI"},
+  "rules_version": "crowd-repro v1.1.0",
+  "date": "2026-11-01",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS Tahoe 26.7, aarch64-apple-darwin23",
+    "programs": [
+      {"name": "R", "version": "4.6.1", "packages": {}, "lockfile": "sessionInfo.txt"},
+      {"name": "Stata", "version": "not installed"},
+      {"name": "MATLAB", "version": "not installed"},
+      {"name": "GNU Octave", "version": "not installed"}
+    ],
+    "language": "R for environment check only",
+    "versions": {"R": "4.6.1", "Stata": "not installed", "MATLAB": "not installed", "GNU Octave": "not installed"},
+    "lockfile": "sessionInfo.txt"
+  },
+  "claims": [
+    {"id":"C1","claim":"OECD safe-asset ratio in 2015: 37% across 34 countries.","exhibit":"Abstract; Table 1","page":1},
+    {"id":"C2","claim":"Mean safe-asset ratio in Table 1 is 0.37.","exhibit":"Table 1","page":4},
+    {"id":"C3","claim":"Model generates a risk-free rate of 1.0% per year.","exhibit":"Abstract; Table 5","page":1},
+    {"id":"C4","claim":"Empirical unlevered equity premium is 4.2%.","exhibit":"Abstract; Table 5","page":1},
+    {"id":"C5","claim":"Top 5% hold 60% of wealth and 90% of equity in model.","exhibit":"Abstract; Table 5 and Table 4","page":1},
+    {"id":"C6","claim":"Crowding-out coefficient is around -0.5.","exhibit":"Abstract; Table 3","page":1},
+    {"id":"C7","claim":"US crowding-out coefficient -0.70, standard error 0.09.","exhibit":"Table 3, row 1","page":8},
+    {"id":"C8","claim":"Non-US crowding-out coefficient -0.77, standard error 0.19.","exhibit":"Table 3, row 2","page":8},
+    {"id":"C9","claim":"OECD crowding-out coefficient -0.70, standard error 0.24.","exhibit":"Table 3, row 3","page":8},
+    {"id":"C10","claim":"Balanced-panel fixed-effects coefficient -0.31, standard error 0.04.","exhibit":"Table 3, row 4","page":8},
+    {"id":"C11","claim":"Unbalanced-panel fixed-effects coefficient -0.34, standard error 0.03.","exhibit":"Table 3, row 5","page":8},
+    {"id":"C12","claim":"SCF top 5% own 64.9% of net worth and 79.0% of equity claims.","exhibit":"Table 4","page":14},
+    {"id":"C13","claim":"Baseline model calibration reports equity return 0.052 and risk-free return 0.010.","exhibit":"Table 5","page":18},
+    {"id":"C14","claim":"Alternative-parameter and variable-disaster/default/long-term-bond values reported in Tables 6 and 7.","exhibit":"Tables 6–7","page":21},
+    {"id":"C15","claim":"Figure 3 reports simulated dynamics following a disaster shock.","exhibit":"Figure 3","page":32}
+  ],
+  "results": [
+    {"claim_id":"C1","quantity":"safe-asset ratio; country count","reported":"37%; 34","recomputed":"not computed","status":"not_checkable","basis":"not_computed","note":"No Stata or MATLAB/Octave run was possible, and no direct R translation was completed. The numbers are extracted from the article, not recomputed."},
+    {"claim_id":"C2","quantity":"mean ratio","reported":0.37,"recomputed":"not computed","status":"not_checkable","basis":"not_computed","note":"OECD data preparation and Table 1 code were not executed."},
+    {"claim_id":"C3","quantity":"risk-free rate","reported":"1.0%","recomputed":"not computed","status":"not_checkable","basis":"not_computed","note":"Requires MATLAB model pipeline; no model computation was run."},
+    {"claim_id":"C4","quantity":"equity premium","reported":"4.2%","recomputed":"not computed","status":"not_checkable","basis":"not_computed","note":"Requires MATLAB model pipeline; no model computation was run."},
+    {"claim_id":"C5","quantity":"top 5% wealth share; equity share","reported":"60%; 90%","recomputed":"not computed","status":"not_checkable","basis":"not_computed","note":"The model statistics require MATLAB; the SCF comparison requires Table 4 Stata processing. Neither was run."},
+    {"claim_id":"C6","quantity":"crowding-out coefficient","reported":-0.5,"recomputed":"not computed","status":"not_checkable","basis":"not_computed","note":"The abstract's approximate coefficient is not a separate code output; its empirical regression source was not executed."},
+    {"claim_id":"C7","quantity":"coefficient; standard error","reported":"-0.70; 0.09","recomputed":"not computed","status":"not_checkable","basis":"not_computed","note":"Stata regression not translated or run."},
+    {"claim_id":"C8","quantity":"coefficient; standard error","reported":"-0.77; 0.19","recomputed":"not computed","status":"not_checkable","basis":"not_computed","note":"Stata regression not translated or run."},
+    {"claim_id":"C9","quantity":"coefficient; standard error","reported":"-0.70; 0.24","recomputed":"not computed","status":"not_checkable","basis":"not_computed","note":"Stata regression not translated or run."},
+    {"claim_id":"C10","quantity":"coefficient; standard error","reported":"-0.31; 0.04","recomputed":"not computed","status":"not_checkable","basis":"not_computed","note":"Stata panel regression not translated or run."},
+    {"claim_id":"C11","quantity":"coefficient; standard error","reported":"-0.34; 0.03","recomputed":"not computed","status":"not_checkable","basis":"not_computed","note":"Stata panel regression not translated or run."},
+    {"claim_id":"C12","quantity":"net worth share; equity share","reported":"64.9%; 79.0%","recomputed":"not computed","status":"not_checkable","basis":"not_computed","note":"Requires SCF Stata processing; no R translation or run was completed."},
+    {"claim_id":"C13","quantity":"equity return; risk-free return","reported":"0.052; 0.010","recomputed":"not computed","status":"not_checkable","basis":"not_computed","note":"Requires MATLAB model pipeline; no model computation was run."},
+    {"claim_id":"C14","quantity":"Tables 6–7 data-derived entries","reported":"see article Tables 6–7","recomputed":"not computed","status":"not_checkable","basis":"not_computed","note":"The individual table entries were not separately enumerated or recomputed; this coverage is incomplete."},
+    {"claim_id":"C15","quantity":"Figure 3 plotted values","reported":"see article Figure 3 and accompanying text","recomputed":"not computed","status":"not_checkable","basis":"not_computed","note":"No simulation output was generated; plotted coordinates were not digitized."}
+  ],
+  "validation_status": "technical failure",
+  "confidence_level": "VeryHighConfidence",
+  "findings": [
+    {"id":"RUN-001","severity":"P0","type":"defect","description":"The empirical Stata and simulation MATLAB pipelines could not be executed because the required interpreters are absent. This report does not establish whether any reported output recurs.","evidence":"Runtime check in logs/runtime_check.txt found no Stata, MATLAB, or Octave executable. The R script was only an environment check.","suggested_fix":"Run a command-by-command direct translation of the full Stata and MATLAB workflows in a supported R environment, preserving the shipped analysis and inputs, then report each printed result separately."},
+    {"id":"COV-001","severity":"P1","type":"defect","description":"This benchmark bundle does not enumerate every numeric result in the article. Table 6, Table 7, the full Table 1 and Table 2 entries, and figure coordinates are not individually represented.","evidence":"Claims C14 and C15 aggregate multiple printed numbers; result records for those exhibits are not one-per-number.","suggested_fix":"Expand the claim and result inventory to one result per printed data-derived number after the pipeline can be translated and run."}
+  ],
+  "limitations": [
+    "The user required translation of the full shipped Stata pipeline and specified that reported data-derived numbers must be checked individually. That translation was not completed; this is a partial benchmark record, not a completed reproduction study.",
+    "The package includes MATLAB model code and custom solver dependencies, including compiled or platform-specific components. No MATLAB or Octave runtime was installed.",
+    "No original code or data were copied into this bundle. The local package is at /tmp/scratch_bench_luna/packages/pkg-93cd12; the article PDF is at /tmp/scratch_bench_luna/articles/pkg-93cd12/article.pdf. The paper identifies the replication package as https://zenodo.org/records/5979683.",
+    "No scientific conclusion is assessed. outcome_robustness is not checked."
+  ],
+  "artifacts": {
+    "pipeline":"https://zenodo.org/records/5979683",
+    "console_log":"logs/runtime_check.txt"
+  },
+  "signatories": [{"name":"Codex (AI-generated benchmark report)","role":"codechecker"}],
+  "provenance": {
+    "raw_data":"Local package /tmp/scratch_bench_luna/packages/pkg-93cd12 (not copied)",
+    "processed_data":"No processed data generated",
+    "analysis_script":"code/runtime_check.R (environment check only; not analysis translation)"
+  },
+  "flora": {
+    "entry_type":"reproduction",
+    "ai_generated":true,
+    "outcome_computational":"technical failure",
+    "outcome_robustness":"not checked"
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "paper": {
+    "doi": "10.1257/pol.20210037",
+    "title": "Checking and Sharing Alt-Facts",
+    "authors": [
+      "Emeric Henry",
+      "Ekaterina Zhuravskaya",
+      "Sergei Guriev"
+    ],
+    "year": 2022
+  },
+  "procedure": {
+    "version": "0.1.2",
+    "uri": "https://forrtproject.github.io/reprocrowd/"
+  },
+  "engine": "Codex",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "rules_version": "crowd-repro v1.1.0",
+  "date": "2026-11-01",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS-26.7-arm64-arm-64bit",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "readr": "2.2.0"
+        },
+        "lockfile": "sessionInfo.txt"
+      }
+    ],
+    "language": "R",
+    "versions": {
+      "Stata": "not installed"
+    },
+    "lockfile": "sessionInfo.txt"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Participants expressing intention to share alt-facts by treatment",
+      "exhibit": "Abstract; Figure 4; Table 2, Panel A",
+      "page": 58
+    },
+    {
+      "id": "C2",
+      "claim": "Main-experiment sample size",
+      "exhibit": "Abstract; data description",
+      "page": 56
+    },
+    {
+      "id": "C3",
+      "claim": "Participants taking an alt-facts sharing action by treatment",
+      "exhibit": "Abstract; Figure 4; Table 2, Panel A",
+      "page": 58
+    },
+    {
+      "id": "C4",
+      "claim": "Fact-check sharing intention and action by treatment",
+      "exhibit": "Abstract; Figure 4; Table 2, Panel B",
+      "page": 58
+    },
+    {
+      "id": "C5",
+      "claim": "Sharing intent and action by click stage",
+      "exhibit": "Abstract; Figure 3",
+      "page": 57
+    },
+    {
+      "id": "C6",
+      "claim": "Predicted propensity reductions among voluntary-treatment viewers and nonviewers",
+      "exhibit": "Abstract; Figure 5; Table 2, Panel C",
+      "page": 59
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "Sharing intention, Alt-Facts (%)",
+      "reported": 14.7,
+      "recomputed": 14.69194313,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped import, first-four-row removal, preview-channel exclusion, numeric conversion, duration >=250 seconds filter, gc==1 filter, and unweighted mean of binary q34 into R. This mean does not depend on later merges."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Sharing intention, Imposed Fact-Check (%)",
+      "reported": 10.2,
+      "recomputed": 10.17751479,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped import, first-four-row removal, preview-channel exclusion, numeric conversion, duration >=250 seconds filter, gc==1 filter, and unweighted mean of binary q34 into R. This mean does not depend on later merges."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Sharing intention, Voluntary Fact-Check (%)",
+      "reported": 10.8,
+      "recomputed": 10.90047393,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped import, first-four-row removal, preview-channel exclusion, numeric conversion, duration >=250 seconds filter, gc==1 filter, and unweighted mean of binary q34 into R. This mean does not depend on later merges."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Filtered main-experiment N",
+      "reported": 2537,
+      "recomputed": 2533,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated shipped CSV import and filters (rows after 4, non-preview, duration >=250 seconds, gc==1).",
+      "note": "The shipped files retain 844, 845, and 844 rows, four fewer than the article\u2019s 2,537 participants."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Sharing action, Alt-Facts (%)",
+      "reported": 4.6,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Depends on GA/Facebook hour-level merges and later outcome construction in untranslated code."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Sharing action, Imposed Fact-Check (%)",
+      "reported": 2.6,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Depends on GA/Facebook hour-level merges and later outcome construction in untranslated code."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Sharing action, Voluntary Fact-Check (%)",
+      "reported": 2.5,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Depends on GA/Facebook hour-level merges and later outcome construction in untranslated code."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Fact-check sharing intention (%), Imposed Fact-Check",
+      "reported": 14.3,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Depends on untranslated merge and outcome-generation commands."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Fact-check sharing action (%), Imposed Fact-Check",
+      "reported": 3.15,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Depends on untranslated merge and outcome-generation commands."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Fact-check sharing intention (%), Voluntary Fact-Check",
+      "reported": 11.5,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Depends on untranslated merge and outcome-generation commands."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Fact-check sharing action (%), Voluntary Fact-Check",
+      "reported": 3.07,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Depends on untranslated merge and outcome-generation commands."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Intent to share (%)",
+      "reported": 11.9,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Requires full multi-source data preparation and click-stage outcome construction, which were not completed."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "First sharing action (%)",
+      "reported": 3.2,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Requires full multi-source data preparation and click-stage outcome construction, which were not completed."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Second confirmation (%)",
+      "reported": 0.8,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Requires full multi-source data preparation and click-stage outcome construction, which were not completed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Viewers relative reduction (%)",
+      "reported": 39.0,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Requires adaptive LASSO and downstream prediction models; these were not translated or executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Nonviewers relative reduction (%)",
+      "reported": 60.2,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Requires adaptive LASSO and downstream prediction models; these were not translated or executed."
+    }
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "Moderate",
+  "findings": [
+    {
+      "id": "P1-001",
+      "severity": "P1",
+      "type": "defect",
+      "description": "The translated import/filter segment retains 2,533 main-experiment participants, four fewer than reported.",
+      "evidence": "Executed log reports 844 + 845 + 844 retained rows.",
+      "suggested_fix": "Reconcile the four-record sample difference using the shipped code and stated filters; no adjustment was made."
+    },
+    {
+      "id": "P1-002",
+      "severity": "P1",
+      "type": "defect",
+      "description": "The full pipeline was not translated or run; major analysis outputs remain unverified.",
+      "evidence": "Only initial CSV import/filter and descriptive q34 means were executed.",
+      "suggested_fix": "Translate and run the full three-file pipeline, including merges, adaptive LASSO, regressions, tables, and figures."
+    }
+  ],
+  "limitations": [
+    "Incomplete relative to the required whole-pipeline translation and exhaustive claim inventory.",
+    "No original data or code were copied into the bundle; package is at /tmp/scratch_bench_luna/packages/pkg-9c83b5.",
+    "Tables 1\u20133, appendix tables, and other numeric results have not been enumerated or checked."
+  ],
+  "artifacts": {
+    "console_log": "logs/partial_translation.log"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  }
+}

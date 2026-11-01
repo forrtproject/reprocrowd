@@ -1,0 +1,455 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "paper": {
+    "doi": "10.1017/S0003055422000119",
+    "title": "Does Competence Make Citizens Tolerate Undemocratic Behavior?",
+    "authors": [
+      "Kristian Vrede Skaaning Frederiksen"
+    ],
+    "year": 2022
+  },
+  "procedure": {
+    "version": "crowd-repro v1.1.0",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "rules_version": "1.1.0",
+  "engine": "Codex · GPT-6 · OpenAI",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "date": "2026-11-01",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS (Darwin; version recorded in logs/host-os.txt)",
+    "language": "R",
+    "versions": {
+      "R": "4.6.1",
+      "Stata": "not installed",
+      "macOS": "26.7"
+    },
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "readstata13": "0.11.0",
+          "sandwich": "3.1-3",
+          "zoo": "1.9-1",
+          "Rcpp": "1.1.2",
+          "lattice": "0.22-9"
+        },
+        "lockfile": "logs/sessionInfo.txt"
+      },
+      {
+        "name": "Stata",
+        "version": "not installed"
+      }
+    ],
+    "lockfile": "logs/sessionInfo.txt"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "The study included 2,481–3,159 respondents in each country.",
+      "exhibit": "Research Design and Data, p. 1148; Figure 1 note, p. 1151",
+      "page": 1148
+    },
+    {
+      "id": "C2",
+      "claim": "There were 47,221–60,106 candidates in each country.",
+      "exhibit": "Figure 1 note",
+      "page": 1151
+    },
+    {
+      "id": "C3",
+      "claim": "The pooled sample contained 14,058 respondents.",
+      "exhibit": "Research Design and Data; Figure 1 note",
+      "page": 1147
+    },
+    {
+      "id": "C4",
+      "claim": "The pooled sample contained 267,795 candidate observations.",
+      "exhibit": "Research Design and Data; Figure 1 note",
+      "page": 1147
+    },
+    {
+      "id": "C5",
+      "claim": "Undemocratic behavior effects ranged from −0.06 (South Korea) to −0.20 (United States).",
+      "exhibit": "Does Competence Suppress Sanctioning of Undemocratic Behavior?",
+      "page": 1150
+    },
+    {
+      "id": "C6",
+      "claim": "The average effects of undemocratic behavior and competence were statistically significant at p < .001 in every country.",
+      "exhibit": "Does Competence Suppress Sanctioning of Undemocratic Behavior?",
+      "page": 1150
+    },
+    {
+      "id": "C7",
+      "claim": "A one-unit increase in competence yields an effect of approximately 0.14–0.15 on support in each country.",
+      "exhibit": "Does Competence Suppress Sanctioning of Undemocratic Behavior?",
+      "page": 1150
+    },
+    {
+      "id": "C8",
+      "claim": "In the Czech Republic, very incompetent candidates were sanctioned 0.13 points less than average-competence candidates (95% CI 0.05–0.21; p = .001).",
+      "exhibit": "Does Competence Suppress Sanctioning of Undemocratic Behavior?",
+      "page": 1150
+    },
+    {
+      "id": "C9",
+      "claim": "The pooled survey experiments yielded more than 14,000 respondents.",
+      "exhibit": "Introduction",
+      "page": 1147
+    },
+    {
+      "id": "C10",
+      "claim": "The pooled survey experiments yielded more than 260,000 candidate observations.",
+      "exhibit": "Introduction",
+      "page": 1147
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "Lower endpoint of respondents per country",
+      "reported": 2481,
+      "recomputed": 2966,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "The supplied final dataset has 2,966 respondents in its smallest country (CZ), not 2,481."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Upper endpoint of respondents per country",
+      "reported": 3159,
+      "recomputed": 4106,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "The supplied final dataset has 4,106 respondents in its largest country (SK), not 3,159."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Lower endpoint of candidate records per country",
+      "reported": 47221,
+      "recomputed": 59320,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "The supplied final dataset has 59,320 candidate records in its smallest country (CZ), not 47,221."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Upper endpoint of candidate records per country",
+      "reported": 60106,
+      "recomputed": 82120,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "The supplied final dataset has 82,120 candidate records in its largest country (SK), not 60,106."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Pooled respondents",
+      "reported": 14058,
+      "recomputed": 16777,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Counted unique resp identifiers; package data contains more respondents than the published figure note."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Pooled candidate records",
+      "reported": 267795,
+      "recomputed": 335540,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Counted rows in the shipped final dataset; package data contains more candidate records than the published figure note."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Effect of undemocratic behavior at average competence, South Korea",
+      "reported": -0.06,
+      "recomputed": -0.064686,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Rounding to two decimals gives the printed endpoint."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Effect of undemocratic behavior at average competence, United States",
+      "reported": -0.2,
+      "recomputed": -0.200678,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Rounding to two decimals gives the printed endpoint."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "P value for undemocratic behavior at average competence (CZ)",
+      "reported": "<0.001",
+      "recomputed": 1.2477239e-19,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Each country-specific translated interaction model estimates the undemocratic-behavior coefficient at competence category 3; all five p values are below .001."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "P value for undemocratic behavior at average competence (MX)",
+      "reported": "<0.001",
+      "recomputed": 5.1741579e-07,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Each country-specific translated interaction model estimates the undemocratic-behavior coefficient at competence category 3; all five p values are below .001."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "P value for undemocratic behavior at average competence (SK)",
+      "reported": "<0.001",
+      "recomputed": 0.00090757153,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Each country-specific translated interaction model estimates the undemocratic-behavior coefficient at competence category 3; all five p values are below .001."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "P value for undemocratic behavior at average competence (UK)",
+      "reported": "<0.001",
+      "recomputed": 1.2056323e-17,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Each country-specific translated interaction model estimates the undemocratic-behavior coefficient at competence category 3; all five p values are below .001."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "P value for undemocratic behavior at average competence (US)",
+      "reported": "<0.001",
+      "recomputed": 1.1277922e-21,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Each country-specific translated interaction model estimates the undemocratic-behavior coefficient at competence category 3; all five p values are below .001."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Average one-category competence increase (CZ)",
+      "reported": "approximately 0.14–0.15",
+      "recomputed": 0.137302,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Calculated from the additive factor model as (competence 5 minus competence 1)/4, preserving the shipped factor specification."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Average one-category competence increase (MX)",
+      "reported": "approximately 0.14–0.15",
+      "recomputed": 0.14033,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Calculated from the additive factor model as (competence 5 minus competence 1)/4, preserving the shipped factor specification."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Average one-category competence increase (SK)",
+      "reported": "approximately 0.14–0.15",
+      "recomputed": 0.152349,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Calculated from the additive factor model as (competence 5 minus competence 1)/4, preserving the shipped factor specification."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Average one-category competence increase (UK)",
+      "reported": "approximately 0.14–0.15",
+      "recomputed": 0.140976,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Calculated from the additive factor model as (competence 5 minus competence 1)/4, preserving the shipped factor specification."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Average one-category competence increase (US)",
+      "reported": "approximately 0.14–0.15",
+      "recomputed": 0.137679,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Calculated from the additive factor model as (competence 5 minus competence 1)/4, preserving the shipped factor specification."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Very incompetent versus average competence: change in democratic-behavior effect, Czech Republic",
+      "reported": 0.13,
+      "recomputed": 0.128487,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "The translated interaction coefficient rounds to .13."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Lower 95% confidence interval endpoint",
+      "reported": 0.05,
+      "recomputed": 0.0508,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Respondent-clustered t interval, rounded to two decimals."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Upper 95% confidence interval endpoint",
+      "reported": 0.21,
+      "recomputed": 0.2062,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Respondent-clustered t interval, rounded to two decimals."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "P value",
+      "reported": 0.001,
+      "recomputed": 0.001203,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Analysis.do primary Figure 1 interaction regressions and Table A1 additive regressions to R; retained support, candemmg, cancom, respondent-clustered HC1 standard errors, and competence category 3 as the reference. Read the package-supplied final dataset.dta directly. R used t reference degrees of freedom equal to respondent clusters minus one.",
+      "note": "Rounded to three decimals, the translated p value is .001."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "P value for competence contrast, category 5 vs 3 (CZ)",
+      "reported": "<0.001",
+      "recomputed": 2.6938854e-38,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Table A1 additive regression to R, preserving competence as a factor with category 3 as the reference and respondent-clustered HC1 standard errors.",
+      "note": "This coefficient contrast is the most direct printed model contrast supporting the paper’s competence-significance statement; it is not an omnibus test."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "P value for competence contrast, category 5 vs 3 (MX)",
+      "reported": "<0.001",
+      "recomputed": 2.9852234e-49,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Table A1 additive regression to R, preserving competence as a factor with category 3 as the reference and respondent-clustered HC1 standard errors.",
+      "note": "This coefficient contrast is the most direct printed model contrast supporting the paper’s competence-significance statement; it is not an omnibus test."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "P value for competence contrast, category 5 vs 3 (SK)",
+      "reported": "<0.001",
+      "recomputed": 2.0487941e-63,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Table A1 additive regression to R, preserving competence as a factor with category 3 as the reference and respondent-clustered HC1 standard errors.",
+      "note": "This coefficient contrast is the most direct printed model contrast supporting the paper’s competence-significance statement; it is not an omnibus test."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "P value for competence contrast, category 5 vs 3 (UK)",
+      "reported": "<0.001",
+      "recomputed": 1.9111268e-45,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Table A1 additive regression to R, preserving competence as a factor with category 3 as the reference and respondent-clustered HC1 standard errors.",
+      "note": "This coefficient contrast is the most direct printed model contrast supporting the paper’s competence-significance statement; it is not an omnibus test."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "P value for competence contrast, category 5 vs 3 (US)",
+      "reported": "<0.001",
+      "recomputed": 5.7121236e-35,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the shipped Table A1 additive regression to R, preserving competence as a factor with category 3 as the reference and respondent-clustered HC1 standard errors.",
+      "note": "This coefficient contrast is the most direct printed model contrast supporting the paper’s competence-significance statement; it is not an omnibus test."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Respondents, reported lower-bound claim",
+      "reported": ">14000",
+      "recomputed": 16777,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Counted unique resp identifiers in the supplied final dataset using the translated analysis import."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Candidate observations, reported lower-bound claim",
+      "reported": ">260000",
+      "recomputed": 335540,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Counted rows in the supplied final dataset using the translated analysis import."
+    }
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "HighConfidence",
+  "findings": [
+    {
+      "id": "DAT-001",
+      "severity": "P1",
+      "type": "defect",
+      "description": "The supplied final dataset does not reproduce the article’s published sample counts. It contains 16,777 respondents and 335,540 candidate rows, against 14,058 and 267,795 in the Figure 1 note; country extrema also exceed the printed ranges.",
+      "evidence": "R import of package dataset.dta: 335,540 rows; 16,777 unique resp; country count output in logs/translated_analysis.log.",
+      "suggested_fix": "Provide the exact final analysis dataset used for the published results, or document the sample restriction that produces those counts."
+    },
+    {
+      "id": "PREP-001",
+      "severity": "P0",
+      "type": "defect",
+      "description": "Data_prep.do cannot be rerun from this package: its raw country survey exports are absent, and the script references hard-coded U: drive paths. Stata is also unavailable.",
+      "evidence": "Package contains dataset.dta and scripts but no .tsv inputs; see logs/preparation-inputs.log. Data_prep.do imports ukmain.tsv first.",
+      "suggested_fix": "Provide the raw input files and a runnable environment or a fully specified translated preparation script."
+    },
+    {
+      "id": "ANAL-001",
+      "severity": "P2",
+      "type": "normalization",
+      "description": "Analysis.do hard-codes the absent U: drive path to appendedfinal.dta. The analysis was instead translated to R and pointed to the supplied dataset.dta.",
+      "evidence": "The first command in Analysis.do uses U:\\How to Save a Democracy\\Data\\appendedfinal.dta; translated run succeeded on the supplied dataset.",
+      "suggested_fix": "Use a relative path and document the exact dataset version."
+    }
+  ],
+  "limitations": [
+    "The original Stata programs could not be executed because Stata is not installed.",
+    "The raw survey exports required by Data_prep.do are not included. Although the supplied final dataset allowed the primary published models to be translated and run, a command-by-command R translation of the entire 2,755-line preparation script was not produced; intermediate preparation outputs and any article claims dependent on them were not checked.",
+    "R translation of the main Figure 1 and Table A1 model commands only; models and figures not reported numerically in the article body were not rerun.",
+    "No robustness or scientific-validity assessment was performed."
+  ],
+  "artifacts": {
+    "pipeline": "https://forrtproject.github.io/reprocrowd/",
+    "console_log": "logs/translated_analysis.log"
+  },
+  "provenance": {
+    "raw_data": "/tmp/scratch_bench_luna/packages/pkg-984353 (no raw survey exports supplied)",
+    "processed_data": "/tmp/scratch_bench_luna/packages/pkg-984353/dataset.dta",
+    "analysis_script": "/tmp/scratch_bench_luna/packages/pkg-984353/Analysis.do"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  }
+}

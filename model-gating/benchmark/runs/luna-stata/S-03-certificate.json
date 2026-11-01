@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "paper": {
+    "doi": "10.1257/aer.20190433",
+    "title": "Measuring the Welfare Effects of Shame and Pride",
+    "authors": ["Luigi Butera", "Robert Metcalfe", "William Morrison", "Dmitry Taubinsky"],
+    "year": 2022
+  },
+  "procedure": {
+    "version": "0.1.2",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "engine": "Codex",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "rules_version": "1.1.0",
+  "date": "2026-11-01",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS Tahoe 26.7 (aarch64-apple-darwin23)",
+    "language": "R",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "haven": "2.5.5",
+          "dplyr": "1.2.1",
+          "tidyr": "1.3.2",
+          "ggplot2": "4.0.3",
+          "sandwich": "3.1.3",
+          "lmtest": "0.9.40",
+          "lme4": "2.1.0",
+          "MASS": "7.3.65"
+        },
+        "lockfile": "sessionInfo.txt"
+      },
+      {
+        "name": "Stata",
+        "version": "not installed",
+        "packages": {},
+        "lockfile": "none"
+      }
+    ],
+    "versions": {
+      "R": "4.6.1",
+      "Stata": "not installed"
+    },
+    "lockfile": "sessionInfo.txt"
+  },
+  "claims": [],
+  "results": [],
+  "validation_status": "technical failure",
+  "confidence_level": "VeryHighConfidence",
+  "findings": [
+    {
+      "id": "RUN-001",
+      "severity": "P0",
+      "type": "defect",
+      "description": "The shipped computational pipeline was not executed. Stata is absent, and the required full direct translation of the build and analysis scripts into R was not completed in this run.",
+      "evidence": "The package README specifies Stata (last run with version 15). The source package includes master_file.do, three build scripts, and eight analysis scripts. Sys.which('stata') and Sys.which('stata-se') returned empty strings. The environment check log confirms no analysis execution.",
+      "suggested_fix": "Complete a command-by-command R translation of the full pipeline and rerun it against the shipped raw data, then check each printed result at its displayed precision."
+    }
+  ],
+  "limitations": [
+    "No article result values were recomputed or checked. The claims inventory is empty because no result-level audit was completed; this is not evidence that the paper contains no numerical claims.",
+    "The procedure requested direct translation of the entire Stata pipeline. This deliverable does not include that translation, so it does not satisfy the requested reproduction study.",
+    "Original code and data remain at the supplied local package path and were not copied or uploaded."
+  ],
+  "artifacts": {
+    "console_log": "logs/environment_check.log"
+  },
+  "provenance": {
+    "raw_data": "/tmp/scratch_bench_luna/packages/pkg-6db66d/Raw Data",
+    "processed_data": "Not produced",
+    "analysis_script": "/tmp/scratch_bench_luna/packages/pkg-6db66d/master_file.do"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "technical failure",
+    "outcome_robustness": "not checked"
+  }
+}
