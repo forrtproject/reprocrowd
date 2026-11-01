@@ -5,6 +5,13 @@ reach) and the benchmark prompt with the article DOI and code link filled in. Tw
 package rebuilt by build_twin_package.py. Certificates are copied back into
 model-gating/benchmark/runs/<config>/ and listed in runs-<config>.csv for score_certificate.py.
 
+Stata papers (S-xx, ../gold-set/stata/draw-stata.json) get the local package built by
+build_stata_packages.py and, as they have no gold claim list yet, an instruction to extract and
+check every reported number.
+
+Each run installs R packages into its own library, layered over the shared one, so parallel runs
+cannot change each other's packages.
+
 Usage:
   python3 model-gating/benchmark/run_codex.py --config luna --model gpt-6-luna \
       --effort medium --jobs 3 G-08 G-21 T-02
@@ -25,6 +32,15 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 GOLD = HERE.parent / "gold-set"
 WORK = Path("/tmp/scratch_bench_luna")
+LOCAL_NOTE = ("(a local copy of the shipped code and data; treat this folder as the package and do "
+              "not download another copy)")
+STATA_CLAIMS = (
+    "No claim list is given for this paper. Number your own claims C1, C2, and so on. Extract "
+    "every number in the article's abstract, main text and tables that reports a result computed "
+    "from the data (estimates, standard errors, test statistics, p values, intervals, sample sizes, "
+    "descriptive statistics), and check each one. The analysis code is in Stata, and Stata is not "
+    "installed: translate the code you need command by command into R, keep the translation under "
+    "code/, and mark those results basis: translated.")
 
 
 def claim_block(gold_id):
@@ -42,6 +58,14 @@ def claim_block(gold_id):
 
 
 def target_info(target):
+    if target.startswith("S-"):
+        from build_stata_packages import opaque
+        draw = json.loads((GOLD / "stata" / "draw-stata.json").read_text())
+        entry = next(e for e in draw["drawn"] if e["stata_id"] == target)
+        pkg = WORK / "packages" / opaque(target, draw["seed"])
+        if not pkg.exists():
+            raise SystemExit(f"{target}: build the package first (build_stata_packages.py)")
+        return entry["doi"], f"{pkg} {LOCAL_NOTE}", STATA_CLAIMS
     if target.startswith("T-"):
         twin = json.loads((GOLD / "twins" / target / "twin.json").read_text())
         gold = json.loads((GOLD / "gold" / f"{twin['base_gold_id']}.json").read_text())
@@ -49,8 +73,7 @@ def target_info(target):
         if not pkg.exists():
             subprocess.run([sys.executable, str(HERE / "build_twin_package.py"), target, str(pkg)],
                            check=True)
-        link = (f"{pkg} (a local copy of the shipped code and data; treat this folder as the "
-                "package and do not download another copy)")
+        link = f"{pkg} {LOCAL_NOTE}"
         return gold["doi"], link, claim_block(twin["base_gold_id"])
     gold = json.loads((GOLD / "gold" / f"{target}.json").read_text())
     return gold["doi"], f"{gold['package']['url']} ({gold['package']['version_pin']})", claim_block(target)
@@ -64,6 +87,9 @@ def run(target, args):
         return target, "already collected", 0
     doi, link, claims = target_info(target)
     prompt = (HERE / "prompt.txt").read_text().replace("{claims}", claims)
+    if target.startswith("S-"):
+        prompt = prompt.replace("This list\nis your approved claim list; you may add further claims "
+                                "numbered from C100.", "The note below replaces the list.")
     prompt = prompt.replace("Article link or DOI:", f"Article link or DOI: https://doi.org/{doi}")
     prompt = prompt.replace("Code & Data link:", f"Code & Data link: {link}")
     rundir = WORK / "runs" / args.config / target
@@ -72,11 +98,13 @@ def run(target, args):
     rundir.mkdir(parents=True)
     rlib = WORK / "rlib"
     rlib.mkdir(exist_ok=True)
-    env = {**os.environ, "R_LIBS_USER": str(rlib), "XDG_CACHE_HOME": str(rundir / ".cache"),
+    (rundir / "rlib").mkdir()
+    env = {**os.environ, "R_LIBS_USER": f"{rundir / 'rlib'}:{rlib}",
+           "XDG_CACHE_HOME": str(rundir / ".cache"),
            "UV_CACHE_DIR": str(WORK / "uv-cache")}
     cmd = ["codex", "exec", "-m", args.model, "-c", f'model_reasoning_effort="{args.effort}"',
            "-s", "workspace-write", "-c", "sandbox_workspace_write.network_access=true",
-           "--add-dir", str(rlib), "--add-dir", str(WORK / "uv-cache"),
+           "--add-dir", str(WORK / "uv-cache"),
            "--skip-git-repo-check", "-C", str(rundir), "--json",
            "-o", str(rundir / "last-message.txt"), "-"]
     (WORK / "uv-cache").mkdir(exist_ok=True)

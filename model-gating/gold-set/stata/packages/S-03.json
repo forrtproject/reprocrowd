@@ -1,0 +1,187 @@
+{
+ "stata_id": "S-03",
+ "cand_id": "RB-045",
+ "package_dir": "pkg-6db66d",
+ "source": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/45/replication_package (Hugging Face commit 74958fba32daeacff51f2e1fd37be3916595648f)",
+ "strip_rule": [
+  ".eps",
+  ".gph",
+  ".htm",
+  ".html",
+  ".jpeg",
+  ".jpg",
+  ".log",
+  ".png",
+  ".smcl",
+  ".svg",
+  ".tex"
+ ],
+ "kept": [
+  {
+   "path": "Analysis/Code/charity_model_selection.do",
+   "sha256": "497a2961e8c858b369c13774af4ca550faa1107c04ff0eadb519bcc2ebacbdae",
+   "bytes": 7359
+  },
+  {
+   "path": "Analysis/Code/charity_reduced_form_analysis.do",
+   "sha256": "6b7424e62f5832897efb0f129f6a7acfa2f1fae4a2c17e9928e7013cb617df8e",
+   "bytes": 40860
+  },
+  {
+   "path": "Analysis/Code/ind_differences_analysis.do",
+   "sha256": "2404f0fd0503af4eb48c8c4cd380aa31791820761105c9d0e78e7e36ca4015e9",
+   "bytes": 5109
+  },
+  {
+   "path": "Analysis/Code/welfare_estimates.do",
+   "sha256": "db0abaedc93d5118fabec237816cc879162da3239bfa456ccfc718e47319c252",
+   "bytes": 18034
+  },
+  {
+   "path": "Analysis/Code/ymca_impact_of_pr_on_attendance.do",
+   "sha256": "5d4cfa398663f0ab83f427a2ce33f1792e652ebe454c9e537b452a9e658f658b",
+   "bytes": 3736
+  },
+  {
+   "path": "Analysis/Code/ymca_piped_values.do",
+   "sha256": "828ddb83f938469367aa2d8e5e13022c65e9fa8320ab569f182dae2cc979e4ef",
+   "bytes": 15356
+  },
+  {
+   "path": "Analysis/Code/ymca_reduced_form_pr_function.do",
+   "sha256": "21fcdcbd3c185b6b316c1122cd0aa532ca4ebcd492c617448aa48209b2bf8358",
+   "bytes": 27588
+  },
+  {
+   "path": "Analysis/Code/ymca_reduced_form_pr_function_figures.do",
+   "sha256": "fb3f8b742513d2bfe5da1b77ba3f838e48b8b5eeba2be5b13601362ca20c75d4",
+   "bytes": 19515
+  },
+  {
+   "path": "Build/Gen_Vars.do",
+   "sha256": "0bd91a514de9b66f2422ee7ec6b8b5e802cca54c5ccf3fced3fcdf48f882cc79",
+   "bytes": 2882
+  },
+  {
+   "path": "Build/Label_Rounds.do",
+   "sha256": "a8d09716ede8e3dd1629d01be802cc80a08a9081b4c0541ec49954e74bf3a3bc",
+   "bytes": 1521
+  },
+  {
+   "path": "Build/Prolific_Build.do",
+   "sha256": "d7d59497563334aeb85c1ea692bf25f183e9814ba9942f5fd48d819206273c90",
+   "bytes": 1551
+  },
+  {
+   "path": "Build/University_Build.do",
+   "sha256": "a7e3f85851dc7c720e3611f6971c99ab298e313992fba3a494ff0e89d313d6d5",
+   "bytes": 1611
+  },
+  {
+   "path": "Build/build_charity_master.do",
+   "sha256": "4b19e655161bd4b8e05ea0729b13ba501a52a5646ffdc6bcbf6a8eab42f7d1d9",
+   "bytes": 2742
+  },
+  {
+   "path": "Build/build_ymca_admin.do",
+   "sha256": "0366a79a7678fd0e2c9a7b1caae709f903e0221babc3c0696967a0c130947b15",
+   "bytes": 2962
+  },
+  {
+   "path": "Build/build_ymca_survey.do",
+   "sha256": "8763cc31945566d67cea6ac71125589e073a1131ccf9375f7ea386274ca19a58",
+   "bytes": 4870
+  },
+  {
+   "path": "QSF files and scripts/BU_QM221.qsf",
+   "sha256": "77cc26b5c85047467452dd82677439b7c0658e5ae185a30b2e62734cd67682d5",
+   "bytes": 1172529
+  },
+  {
+   "path": "QSF files and scripts/BU_QM222.qsf",
+   "sha256": "c1c52b0b56b6f417e06bf0d601c1f0095e95211ce1e983741ca543499cba7a23",
+   "bytes": 1175088
+  },
+  {
+   "path": "QSF files and scripts/Berkeley.qsf",
+   "sha256": "eaf85512c7718eae375b25ee878972463492487ef19ec17e53345a8f3fa83ce2",
+   "bytes": 1172240
+  },
+  {
+   "path": "QSF files and scripts/Experiment details appendix.pdf",
+   "sha256": "77285b498e3b1e08661f370d85f80183cb87d73fea2f9f68b5efab6dcb54d66f",
+   "bytes": 2895956
+  },
+  {
+   "path": "QSF files and scripts/Prolific.qsf",
+   "sha256": "baf53e0132ea5521a107fc2bedb4f37772d1da24798a6a84ca0d72288fa8c75e",
+   "bytes": 1275722
+  },
+  {
+   "path": "QSF files and scripts/YMCA.qsf",
+   "sha256": "8e21641e0f4ef2ba0c8cd790e49b478d383664ddf5fd561fb9eaa88597acdfc1",
+   "bytes": 238455
+  },
+  {
+   "path": "README.docx",
+   "sha256": "c97a7a3d5fbe5b73320a17ead9460555a6dc5d51813af927d2b31400d02c7b4a",
+   "bytes": 34218
+  },
+  {
+   "path": "README.pdf",
+   "sha256": "0bbfc002de06551ea8b09e50204fcdb941b88a3d8b5c62f53265082848fc64a5",
+   "bytes": 210509
+  },
+  {
+   "path": "Raw Data/berkeley_survey_data.csv",
+   "sha256": "6de78f3f24e41117ca73e03837971e06623dd7548d8bce08fd71f8a749408dc2",
+   "bytes": 135074
+  },
+  {
+   "path": "Raw Data/bu_qm221_survey_data.csv",
+   "sha256": "50db05b0b6a1749a58bea0750039f827dfb3afcfe23e1a13ed41f6d1ee2a983c",
+   "bytes": 20197
+  },
+  {
+   "path": "Raw Data/bu_qm222_survey_data.csv",
+   "sha256": "65d666d2fbd2cb80a05104ec315a6e30e7e5accddabfac81559b780b992e886f",
+   "bytes": 39743
+  },
+  {
+   "path": "Raw Data/prolific_survey_data.csv",
+   "sha256": "1881ec79f3ce940d83911f02cfd3e5db2cdcce0ba3ed9b42e3d9182dd3a88911",
+   "bytes": 351315
+  },
+  {
+   "path": "Raw Data/ymca_membership_data.csv",
+   "sha256": "8c718b0201572b04c5230abdcecd06433feced03bd5777b96ca8fd5fe016b7bc",
+   "bytes": 694219
+  },
+  {
+   "path": "Raw Data/ymca_scans.csv",
+   "sha256": "fba7f02ca3c939d28de360d634bd72217abae14ae9a27531b7a70d98ab84f623",
+   "bytes": 21484274
+  },
+  {
+   "path": "Raw Data/ymca_survey_data.csv",
+   "sha256": "c7047ac27464554d2cbe7b3c8b4efb1d1f7017ac6dbedc96d510606ecaacd43f",
+   "bytes": 64455
+  },
+  {
+   "path": "Raw Data/ymca_treatment_assignment.csv",
+   "sha256": "3f300c2732d9972c03c0c9ee57fa70052029cc5049d7925c06010d9c6a8c4574",
+   "bytes": 5766
+  },
+  {
+   "path": "data dictionary.xlsx",
+   "sha256": "ec3bf806147b10064403af5d96026e4a426939234951575518a9a9b1be26a3f8",
+   "bytes": 29495
+  },
+  {
+   "path": "master_file.do",
+   "sha256": "d855e0b5b7434610ce86704e49e342b4236cc41f451f4a7c2c7625531d7849da",
+   "bytes": 1963
+  }
+ ],
+ "stripped": []
+}

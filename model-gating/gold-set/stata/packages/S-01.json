@@ -1,0 +1,47 @@
+{
+ "stata_id": "S-01",
+ "cand_id": "RB-007",
+ "package_dir": "pkg-4e0ab3",
+ "source": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/7/replication_package (Hugging Face commit 74958fba32daeacff51f2e1fd37be3916595648f)",
+ "strip_rule": [
+  ".eps",
+  ".gph",
+  ".htm",
+  ".html",
+  ".jpeg",
+  ".jpg",
+  ".log",
+  ".png",
+  ".smcl",
+  ".svg",
+  ".tex"
+ ],
+ "kept": [
+  {
+   "path": "APSR Replication Codes.do",
+   "sha256": "84886c72c1b5fe8e36e5a68ae3d6537360f1b2b68b2294a666ff805aea78e6e8",
+   "bytes": 2362
+  },
+  {
+   "path": "Replication Read Me.docx",
+   "sha256": "bfef6b48afa71602061ef4fd4ea9e0f7a1be2865a11767579ebdea886950194c",
+   "bytes": 13699
+  },
+  {
+   "path": "replication data file/SugarReplicate.dta",
+   "sha256": "8498a6ad4eef94b82a2fbc7fa9db2dbd28d327cfd38ee24e3692435b2911d3ee",
+   "bytes": 137653
+  },
+  {
+   "path": "replication data file/SugarReplicate_iter1.dta",
+   "sha256": "4a5eadb37ce5a29d4a11dfdce4beea1560ce23d47768f240b5cc277de14485ce",
+   "bytes": 138257
+  },
+  {
+   "path": "replication data file/SugarReplicate_iter2.dta",
+   "sha256": "a1ff5364d2d170b22083e7891a688aab6f1e5553eddd34ef90cac0cb760d2265",
+   "bytes": 137653
+  }
+ ],
+ "stripped": []
+}

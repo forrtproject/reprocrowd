@@ -1,0 +1,87 @@
+{
+ "stata_id": "S-02",
+ "cand_id": "RB-013",
+ "package_dir": "pkg-9c83b5",
+ "source": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/13/replication_package (Hugging Face commit 74958fba32daeacff51f2e1fd37be3916595648f)",
+ "strip_rule": [
+  ".eps",
+  ".gph",
+  ".htm",
+  ".html",
+  ".jpeg",
+  ".jpg",
+  ".log",
+  ".png",
+  ".smcl",
+  ".svg",
+  ".tex"
+ ],
+ "kept": [
+  {
+   "path": "Master_replication_HZG.do",
+   "sha256": "7455a1f17ca2e630d5eb176021eccfcdbe2b63668ff4b049953dbc40f4a6e4e9",
+   "bytes": 3517
+  },
+  {
+   "path": "README.pdf",
+   "sha256": "49857d282081944165ebc05890f8e6c0ae216526010f5e663385a0d1e13f379b",
+   "bytes": 156252
+  },
+  {
+   "path": "dofiles/1.infile_data.do",
+   "sha256": "600a1a9c91ae522ce4e4060ec9d6ca39400e9aa863a6c76bc1d71321d21c1ec3",
+   "bytes": 36538
+  },
+  {
+   "path": "dofiles/2.analysis_final_paper.do",
+   "sha256": "527985ed17e8cae0670c93cb1b8916fbefda039ffbd9e0947fe447e8e6725d21",
+   "bytes": 77596
+  },
+  {
+   "path": "dofiles/3.numbers_in_text.do",
+   "sha256": "f844b345ab34d3bae46e6dc0ae14152c25a8136556e9ab32a4b9a2d7fcedea79",
+   "bytes": 3917
+  },
+  {
+   "path": "original_data/Description and codebook of original data files.pdf",
+   "sha256": "b0f705e0f1061ca955c07654c2a5af95cdcce6ae143a756ca784f4071c692ef2",
+   "bytes": 1766808
+  },
+  {
+   "path": "original_data/GA_hours.dta",
+   "sha256": "4424b89316fd5e0ee938b9a72df997a1476c293adaa6c492beba1856c3f17cac",
+   "bytes": 19042
+  },
+  {
+   "path": "original_data/ONLINE_APPENDIX_HZG_final_AEJ_Pol.pdf",
+   "sha256": "7e2fcddbc293e3be3f88b795db96c8ffbe62216ec5bd42b4e77e54339f2d2d73",
+   "bytes": 1349394
+  },
+  {
+   "path": "original_data/Survey+1_May+27%2C+2019_01.02.csv",
+   "sha256": "4ea89ffe7fcff5fdaf6a118ae2678e0b247e30d2d730c955fbc28c7b17194188",
+   "bytes": 308215
+  },
+  {
+   "path": "original_data/Survey+2_May+27%2C+2019_01.03.csv",
+   "sha256": "cb02937322642b81c8ce1c1a7bdcbab0f14bfd818eca9358cf4be6a13f8aed74",
+   "bytes": 307572
+  },
+  {
+   "path": "original_data/Survey+3_May+27%2C+2019_01.03.csv",
+   "sha256": "256868d67660464820332c736671c7a07ae7fe6878fdc4be3e2f6576e8adb7bd",
+   "bytes": 312548
+  },
+  {
+   "path": "original_data/Survey+4%2C+5+and+6+-+RANDOMIZED_May+27%2C+2019_01.04.csv",
+   "sha256": "44509400dffa87d65db0e1f8947d2c91da875df119dbcef077daef707817a4f1",
+   "bytes": 982583
+  },
+  {
+   "path": "original_data/share_facebook.dta",
+   "sha256": "52ccc5466440b4cb0844b0a7f6923c19fa3f0172b93c9b656c202a91f5eb229d",
+   "bytes": 19488
+  }
+ ],
+ "stripped": []
+}

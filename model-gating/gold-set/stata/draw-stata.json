@@ -1,0 +1,190 @@
+{
+ "seed": 20261101,
+ "method": "random.Random(seed).sample(sorted eligible cand_ids, 5) per stratum, reproducible first; pool = eligible rows of the three candidates-stata*.csv files",
+ "quota": {
+  "computationally reproducible": 5,
+  "computational issues": 5
+ },
+ "pool": {
+  "computationally reproducible": [
+   "I4R-138",
+   "I4R-rcngs",
+   "RB-007",
+   "RB-013",
+   "RB-014",
+   "RB-020",
+   "RB-022",
+   "RB-026",
+   "RB-033",
+   "RB-034",
+   "RB-040",
+   "RB-041",
+   "RB-045",
+   "RB-048",
+   "RB-050",
+   "RB-057",
+   "RB-062",
+   "RB-068",
+   "RB-070",
+   "RB-071",
+   "RB-085",
+   "RB-089",
+   "RB-105"
+  ],
+  "computational issues": [
+   "I4R-175",
+   "I4R-243",
+   "I4R-289",
+   "I4R-85",
+   "I4R-db26h",
+   "RB-037",
+   "RB-054",
+   "RB-060",
+   "RB-064",
+   "RB-067",
+   "RB-075",
+   "RB-077",
+   "RB-082",
+   "RB-104",
+   "RB-106",
+   "RB-109",
+   "SC-0P4r",
+   "SC-9wya",
+   "SC-L22B",
+   "SC-LyWB",
+   "SC-a2Yx"
+  ]
+ },
+ "excluded_from_draw": {
+  "RB-031": "technical-failure stratum (conditional); Lukas: no pressure to find technical failures"
+ },
+ "drawn": [
+  {
+   "stata_id": "S-01",
+   "cand_id": "RB-007",
+   "stratum": "computationally reproducible",
+   "title": "Campaign Contributions and Roll-Call Voting in the U.S. House of Representatives: The Case of the Sugar Industry",
+   "doi": "10.1017/S0003055422000466",
+   "package_url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/7/replication_package",
+   "translatability": "needs care",
+   "source_file": "candidates-stata.csv"
+  },
+  {
+   "stata_id": "S-02",
+   "cand_id": "RB-013",
+   "stratum": "computationally reproducible",
+   "title": "Checking and Sharing Alt-Facts",
+   "doi": "10.1257/pol.20210037",
+   "package_url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/13/replication_package",
+   "translatability": "needs care",
+   "source_file": "candidates-stata.csv"
+  },
+  {
+   "stata_id": "S-03",
+   "cand_id": "RB-045",
+   "stratum": "computationally reproducible",
+   "title": "Measuring the Welfare Effects of Shame and Pride",
+   "doi": "10.1257/aer.20190433",
+   "package_url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/45/replication_package",
+   "translatability": "specialised",
+   "source_file": "candidates-stata-r2-score-rb.csv"
+  },
+  {
+   "stata_id": "S-04",
+   "cand_id": "RB-020",
+   "stratum": "computationally reproducible",
+   "title": "Does Competence Make Citizens Tolerate Undemocratic Behavior?",
+   "doi": "10.1017/S0003055422000119",
+   "package_url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/20/replication_package",
+   "translatability": "needs care",
+   "source_file": "candidates-stata.csv",
+   "replaced": {
+    "reason": "The only Stata file is a 404-byte script (one cloglog model and a margins plot); the paper's analysis and the human source's compared results come from the R Markdown files, so it does not test Stata translation. Replaced with the first reserve.",
+    "replaced_cand_id": "I4R-rcngs"
+   }
+  },
+  {
+   "stata_id": "S-05",
+   "cand_id": "RB-105",
+   "stratum": "computationally reproducible",
+   "title": "Safe Assets",
+   "doi": "10.1093/ej/ueac017",
+   "package_url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/105/replication_package",
+   "translatability": "needs care",
+   "source_file": "candidates-stata-r2-score-rb.csv"
+  },
+  {
+   "stata_id": "S-06",
+   "cand_id": "I4R-243",
+   "stratum": "computational issues",
+   "title": "Examining inequality in the time cost of waiting",
+   "doi": "10.1038/s41562-023-01524-w",
+   "package_url": "https://github.com/stevebholt/waiting-time/tree/95e2eaec985dfbd7f2dfd5e05ebe768195e4e613",
+   "translatability": "needs care",
+   "source_file": "candidates-stata-r2-i4r.csv"
+  },
+  {
+   "stata_id": "S-07",
+   "cand_id": "SC-a2Yx",
+   "stratum": "computational issues",
+   "title": "Organizing The Global Value Chain",
+   "doi": "10.3982/ecta10813",
+   "package_url": "https://osf.io/qk9v3/",
+   "translatability": "straightforward",
+   "source_file": "candidates-stata-r2-score-rb.csv"
+  },
+  {
+   "stata_id": "S-08",
+   "cand_id": "RB-060",
+   "stratum": "computational issues",
+   "title": "Recessions, Mortality, and Migration Bias: Evidence from the Lancashire Cotton Famine",
+   "doi": "10.1257/app.20190131",
+   "package_url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/60/replication_package",
+   "translatability": "needs care",
+   "source_file": "candidates-stata-r2-score-rb.csv"
+  },
+  {
+   "stata_id": "S-09",
+   "cand_id": "RB-064",
+   "stratum": "computational issues",
+   "title": "Social Class and (Un)Ethical Behaviour: Causal and Correlational Evidence",
+   "doi": "10.1093/ej/ueac022",
+   "package_url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/64/replication_package",
+   "translatability": "straightforward",
+   "source_file": "candidates-stata-r2-score-rb.csv"
+  },
+  {
+   "stata_id": "S-10",
+   "cand_id": "RB-075",
+   "stratum": "computational issues",
+   "title": "The Dynamics and Spillovers of Management Interventions: Evidence from the Training within Industry Program",
+   "doi": "10.1086/719277",
+   "package_url": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/tree/74958fba32daeacff51f2e1fd37be3916595648f/75/replication_package",
+   "translatability": "needs care",
+   "source_file": "candidates-stata-r2-score-rb.csv"
+  }
+ ],
+ "reserve_order": {
+  "computationally reproducible": [
+   "RB-020",
+   "RB-062",
+   "RB-033",
+   "RB-014",
+   "RB-034",
+   "I4R-138",
+   "RB-050",
+   "RB-022",
+   "RB-068",
+   "RB-041",
+   "RB-040",
+   "RB-070",
+   "RB-026",
+   "RB-048",
+   "RB-057",
+   "RB-089",
+   "RB-071",
+   "RB-085"
+  ]
+ },
+ "reserve_method": "random.Random(seed + 1).sample(undrawn eligible cand_ids of the stratum, all); take the first that passes a pre-run check"
+}

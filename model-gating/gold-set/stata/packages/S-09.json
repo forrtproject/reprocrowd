@@ -1,0 +1,323 @@
+{
+ "stata_id": "S-09",
+ "cand_id": "RB-064",
+ "package_dir": "pkg-c4501c",
+ "source": "https://huggingface.co/datasets/chuxuan/REPRO-Bench/resolve/74958fba32daeacff51f2e1fd37be3916595648f/64/replication_package (Hugging Face commit 74958fba32daeacff51f2e1fd37be3916595648f)",
+ "strip_rule": [
+  ".eps",
+  ".gph",
+  ".htm",
+  ".html",
+  ".jpeg",
+  ".jpg",
+  ".log",
+  ".png",
+  ".smcl",
+  ".svg",
+  ".tex"
+ ],
+ "kept": [
+  {
+   "path": "Additional documentation/Approval_Prereg.pdf",
+   "sha256": "7207a2e648b2b3a5bdb611789ddc3a10a0ea04f15bf0e7ba60368e697a906853",
+   "bytes": 427039
+  },
+  {
+   "path": "Additional documentation/Instructions_English_German.pdf",
+   "sha256": "e048e33e98e4517ab24f0665c377cc7aace814685c86c3263ad3174c0d2f76e1",
+   "bytes": 348224
+  },
+  {
+   "path": "Additional documentation/Survey_Design.pdf",
+   "sha256": "608eef1b58b1f2affb36d0bdec9225473ef871c490fe6631b79279caa523ac97",
+   "bytes": 137496
+  },
+  {
+   "path": "ReadMe_Gsottbaueretal.pdf",
+   "sha256": "cf3bc52905264ac5b83405f10ee838b8ae8903e3ffd452c39733803919f34655",
+   "bytes": 215607
+  },
+  {
+   "path": "Survey1/.Rhistory",
+   "sha256": "814bdb18cb0060349ed35f1a07e802a6fa4a5c5b209acf33098af5d004d3d44c",
+   "bytes": 4355
+  },
+  {
+   "path": "Survey1/A_MainFile_Survey1.do",
+   "sha256": "32c92e826e0d5d5f3d6a76f19262b445bbe92e8d822751861e8b3fecc89eec3f",
+   "bytes": 1111
+  },
+  {
+   "path": "Survey1/B_CreateMasterDataSet.do",
+   "sha256": "9a56933a9bb35dbb7f8f775d22fc480f553183f9ec8517ff8d3ea9fe04bddb82",
+   "bytes": 6037
+  },
+  {
+   "path": "Survey1/C_Results.do",
+   "sha256": "78e23695a1e80fa1d8e47b8f7ccc73d466dee4f628d22d8caf6044d160abe63e",
+   "bytes": 3958
+  },
+  {
+   "path": "Survey1/D_Figures.do",
+   "sha256": "df80be2e2ef563c2314422ba537e41d114d095cc9d10d6b1940b9e3ecd693d6a",
+   "bytes": 6377
+  },
+  {
+   "path": "Survey1/Data_Survey1/DELETE_InputFiles/GIP_W39_preview.dta",
+   "sha256": "298d1613d91d049a38991a6131caa912a3516ca49061b8c69ec28645d7a1dfc0",
+   "bytes": 6358105
+  },
+  {
+   "path": "Survey1/Data_Survey1/DELETE_InputFiles/MasterFile_Survey1_OLD.dta",
+   "sha256": "56e65d50a2115263c7684c2e525d98fc3fbe2444dbda1cde60aa1ecf781cec58",
+   "bytes": 28787195
+  },
+  {
+   "path": "Survey1/Data_Survey1/MasterFile_Survey1.csv",
+   "sha256": "7a7389ad9ce3f2e9c99fe0a13b2fd7889a0c16269c140ad7471fe33720bda54b",
+   "bytes": 213432
+  },
+  {
+   "path": "Survey1/Data_Survey1/MasterFile_Survey1.dta",
+   "sha256": "88698b734ee0de2d697c18126aadb29c6a3e8051ba3be6bda280b81e7d98bcfc",
+   "bytes": 406472
+  },
+  {
+   "path": "Survey1/Supplementary-Survey1.Rmd",
+   "sha256": "1fb4c2b87da7bcc1dee190c07050a9080339278c5fc8604907db7626cf6b26cc",
+   "bytes": 5231
+  },
+  {
+   "path": "Survey2/.Rhistory",
+   "sha256": "4a030f7fcda2707b5c171f0b348290d172018b82ecbe247c17a7c6b38328aa50",
+   "bytes": 10074
+  },
+  {
+   "path": "Survey2/A_MainFile_Survey2.do",
+   "sha256": "649a65d754d29ffa3007ca70df620cded1bfdf6df3e99e03198e0608056124af",
+   "bytes": 803
+  },
+  {
+   "path": "Survey2/B_DataCleaning_Survey2.do",
+   "sha256": "6a834f5a197be2c1b7657013064ebbbac23ecd6f139b3ddf2595cabd851d4a92",
+   "bytes": 4699
+  },
+  {
+   "path": "Survey2/C_Results_Survey2.do",
+   "sha256": "ecb8d68cfc24386585a7eb68448739dca93c787b2441a9236e32bfc714301bbe",
+   "bytes": 4495
+  },
+  {
+   "path": "Survey2/D_OnlineExperiment_Figures_Survey2.do",
+   "sha256": "6a7cf85be2427ee8b3f4241362c5f09787a7efc712331606c386cd3392403509",
+   "bytes": 6782
+  },
+  {
+   "path": "Survey2/Data_Survey2/Online_Data_Survey2.csv",
+   "sha256": "f89efa52fc79f5a8a8580726cfa2f172d668f363e321ec38d7d37d351a271059",
+   "bytes": 2193457
+  },
+  {
+   "path": "Survey2/Data_Survey2/Online_Data_Survey2.dta",
+   "sha256": "a3f1c68779f05e97b23ec7b15d77fa03da9bdb495767f3b9ef74234a6067de24",
+   "bytes": 4278580
+  },
+  {
+   "path": "Survey2/Supplementary-Survey2.Rmd",
+   "sha256": "ba67431a16d65ea122aaa8f0027dcd2f04c79541d0bf5cd75a929318af913813",
+   "bytes": 9057
+  },
+  {
+   "path": "SurveyBelief/A_MainFile_SurveyBelief.do",
+   "sha256": "18211727d9a4f6cc2367dbb478fbcd5563bb669d8548ae4e524ea14ebd9f0748",
+   "bytes": 592
+  },
+  {
+   "path": "SurveyBelief/B_DataCleaning_SurveyBelief.do",
+   "sha256": "511fe59888463f4148f04be20c33f1f2a2a6fa9532507b6c08725985feb96f2d",
+   "bytes": 431
+  },
+  {
+   "path": "SurveyBelief/C_Results_SurveyBelief.do",
+   "sha256": "5a623fb41e1ddda76dd62668f53836cde109046fb280f7e0879caf1e7a3fdedb",
+   "bytes": 526
+  },
+  {
+   "path": "SurveyBelief/Data_SurveyBelief/SurveyBelief.csv",
+   "sha256": "621288ffb6e74f5468d4af922a6339fcdf9398268c5066279c0b780ace484d06",
+   "bytes": 152150
+  },
+  {
+   "path": "SurveyBelief/Data_SurveyBelief/SurveyBelief.dta",
+   "sha256": "b963e321ab1ca6f24eec80d24998210773ca9da1a6b5a9009ba4cee655bee9fa",
+   "bytes": 190379
+  }
+ ],
+ "stripped": [
+  {
+   "path": "Survey1/Figures_Survey1/Figure2_Survey1.png",
+   "sha256": "538da5245ff0d756d97c58ed5ab10f3a7ace716e1983c41ba51f1c57f2748b1e",
+   "bytes": 51447
+  },
+  {
+   "path": "Survey1/Figures_Survey1/Figure3_Survey1.png",
+   "sha256": "5f5476240612babca2d73a7cb9abcf104d4c816ddf558e71080ca17a3b441bbb",
+   "bytes": 37186
+  },
+  {
+   "path": "Survey1/Figures_Survey1/FigureA21_Survey1.png",
+   "sha256": "92311f946378b3a749446bec89862aed960ab2fd4b2bc91e4208d85ac531b4fb",
+   "bytes": 47198
+  },
+  {
+   "path": "Survey1/Figures_Survey1/FigureA31_Survey1.png",
+   "sha256": "c9a0af8bfd31ecf597d6759cb52f51140be2b02e348603b5cff2484574e682ad",
+   "bytes": 47038
+  },
+  {
+   "path": "Survey1/Figures_Survey1/FigureA33_Survey1.png",
+   "sha256": "f589cb887269e48fe3c7366f952aa4cb68e0c2d3ddcab0a31d1b3f6a9ab3a03a",
+   "bytes": 71581
+  },
+  {
+   "path": "Survey1/Figures_Survey1/FigureA35_Survey1.png",
+   "sha256": "a9821e61a4efecb4e66922021d6c683fac1f908c25f34f9d5c684309da46fda2",
+   "bytes": 50089
+  },
+  {
+   "path": "Survey1/Figures_Survey1/FigureA41_Survey1.png",
+   "sha256": "49d29abfcf8b02f6ad12125ecb599469beb71e7fda220273aace25fc089c625c",
+   "bytes": 46402
+  },
+  {
+   "path": "Survey1/Figures_Survey1/FigureA43_Survey1.png",
+   "sha256": "0892dbee2a5b272f288c382801ab83bafb3f060acf459d722fe18290e1855645",
+   "bytes": 44354
+  },
+  {
+   "path": "Survey1/Figures_Survey1/histogram_robustness_25_75_Q1.gph",
+   "sha256": "fb2c4db6e98af7dc403cf10373d4d816237b50b8bb8bf0828b7ad3df42d19ffd",
+   "bytes": 13013
+  },
+  {
+   "path": "Survey1/Figures_Survey1/histogram_robustness_25_75_Q1.png",
+   "sha256": "230b12e946946ffd7c14fe98dc6e9da62fb978ac841609034d47863ec623f542",
+   "bytes": 53540
+  },
+  {
+   "path": "Survey1/Figures_Survey1/histogram_robustness_25_75_Q2.gph",
+   "sha256": "5401476df6317362af7df474065737f7f973bc27b0fa3b4b4abca4f75cac4fd1",
+   "bytes": 13013
+  },
+  {
+   "path": "Survey1/Figures_Survey1/histogram_robustness_25_75_Q2.png",
+   "sha256": "d45121b9103c17906c519e88f9cf6b76d0a8ec8540906ddfaec2e8f24601046c",
+   "bytes": 54484
+  },
+  {
+   "path": "Survey1/Figures_Survey1/histogram_robustness_25_75_Q3.gph",
+   "sha256": "bb2100242cb85b75c615fcdcba82f37b541a0365fae331610df4a28e168c37be",
+   "bytes": 13013
+  },
+  {
+   "path": "Survey1/Figures_Survey1/histogram_robustness_25_75_Q3.png",
+   "sha256": "8094823520ba2c7954a1477f14df54013323884723b12a8691ae97fddabecf6c",
+   "bytes": 54401
+  },
+  {
+   "path": "Survey1/Figures_Survey1/histogram_robustness_25_75_Q4.gph",
+   "sha256": "6c771dfef69c17d66420f48077c578b75e50a44396f1ec2c4a548d761e0eb6fa",
+   "bytes": 13013
+  },
+  {
+   "path": "Survey1/Figures_Survey1/histogram_robustness_25_75_Q4.png",
+   "sha256": "e2ac63a9ed2151d07777a83c02ea70f258553b827998163a0b14a5e47d6a3256",
+   "bytes": 54308
+  },
+  {
+   "path": "Survey2/Figures_Survey2/Figure32_Survey2.png",
+   "sha256": "51a6b58117bf53812250e2bc55f4467dd04fd3030b6d78e2d34e7a133cd3bbb3",
+   "bytes": 46536
+  },
+  {
+   "path": "Survey2/Figures_Survey2/Figure36_Survey2.png",
+   "sha256": "774f8872d8df381a5c9e0089c6f7bc47ed0457e6512e9d0c8589b8810b1d51cc",
+   "bytes": 49909
+  },
+  {
+   "path": "Survey2/Figures_Survey2/Figure42_Survey2.png",
+   "sha256": "af34ead8382e75b39a09422ae2837409dc43d98c2c3a1413e282dbd865b53a88",
+   "bytes": 44866
+  },
+  {
+   "path": "Survey2/Figures_Survey2/Figure44_Survey2.png",
+   "sha256": "56b00de1e6734e8e7bc8df0536fbfdca292a25c6750ffd223e5ba1f7e6164002",
+   "bytes": 43526
+  },
+  {
+   "path": "Survey2/Figures_Survey2/Figure4_Survey2.png",
+   "sha256": "878b169288434637b8ae030f04bc8803e01d5e137a9549751971b56899f8a1ad",
+   "bytes": 49131
+  },
+  {
+   "path": "Survey2/Figures_Survey2/Figure5_Survey2.png",
+   "sha256": "845a8c8069412363727aa4dfa205b77220e5a54699f331d2bd433043ed697779",
+   "bytes": 40247
+  },
+  {
+   "path": "Survey2/Figures_Survey2/FigureA22_Survey2.png",
+   "sha256": "5eab6d0d2282c165b899b513b22b258e7d5b18ee3a9039919fd7d009ed703cf3",
+   "bytes": 47396
+  },
+  {
+   "path": "Survey2/Figures_Survey2/FigureA34_Survey2.png",
+   "sha256": "15a18da7ca72f0c38dc905139cb29271d9698bf4481083ebf648f16ba2d10804",
+   "bytes": 70137
+  },
+  {
+   "path": "Survey2/Figures_Survey2/histogram_online_robustness_25_75.png",
+   "sha256": "878b169288434637b8ae030f04bc8803e01d5e137a9549751971b56899f8a1ad",
+   "bytes": 49131
+  },
+  {
+   "path": "Survey2/Figures_Survey2/histogram_online_robustness_25_75_Q1.gph",
+   "sha256": "b488a542a0118dc130f0ba2b07fcf1238e63c6665636c6266916f95ae8cdef3b",
+   "bytes": 12988
+  },
+  {
+   "path": "Survey2/Figures_Survey2/histogram_online_robustness_25_75_Q1.png",
+   "sha256": "b90106599f8c848268433b6a90c27f0835b4a9c6ac482837088cdc1e0a6c2110",
+   "bytes": 50200
+  },
+  {
+   "path": "Survey2/Figures_Survey2/histogram_online_robustness_25_75_Q2.gph",
+   "sha256": "519b575d554655a657817171bc741fc030ff14c4c54c5d8198144d7ad9f70258",
+   "bytes": 12988
+  },
+  {
+   "path": "Survey2/Figures_Survey2/histogram_online_robustness_25_75_Q2.png",
+   "sha256": "5dd815eede153bd3a7da63d3f1145b00c52687c96e71784eed16d908b2cbef3e",
+   "bytes": 50238
+  },
+  {
+   "path": "Survey2/Figures_Survey2/histogram_online_robustness_25_75_Q3.gph",
+   "sha256": "788a0a464980b4478225343fd338e05f5f39179dc5e609e041dec7e73d8da1cc",
+   "bytes": 12988
+  },
+  {
+   "path": "Survey2/Figures_Survey2/histogram_online_robustness_25_75_Q3.png",
+   "sha256": "891540b47dd629390f067db44e04a66d6bd8c0eb0f05b8a136e95243c4629cde",
+   "bytes": 50710
+  },
+  {
+   "path": "Survey2/Figures_Survey2/histogram_online_robustness_25_75_Q4.gph",
+   "sha256": "0b8bc3b9b12bcc4eccedc07cf53ecbe2b0ac393456bd9ec713ffa5cafec8c20f",
+   "bytes": 12987
+  },
+  {
+   "path": "Survey2/Figures_Survey2/histogram_online_robustness_25_75_Q4.png",
+   "sha256": "095305c07661c6e1ab84eca1086c062ccbb5a174d28d737a5d8c3c0075f48066",
+   "bytes": 50272
+  }
+ ]
+}
