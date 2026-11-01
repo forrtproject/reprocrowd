@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ReproCrowd benchmark specification (draft 0.4)</title>
+<title>ReproCrowd benchmark specification (draft 0.6)</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📐%3C/text%3E%3C/svg%3E">
 <style>
   :root { --ink:#1d2433; --muted:#5b6475; --line:#e3e6ec; --accent:#2f6f8f; --warn:#a4561b; --ok:#2e7d4f; --bg:#fbfbfa; --sans:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif; }
@@ -47,164 +47,142 @@
 <body>
 <main>
 <h1>ReproCrowd benchmark: what it measures and how it runs</h1>
-<p class="sub">Specification draft 0.4 · 1 November 2026 · agreed with GPT-6.1 Sol and Gemini 4 Argon · <a href="https://github.com/forrtproject/reprocrowd/blob/main/model-gating/benchmark/SPEC.md">full specification</a></p>
+<p class="sub">Specification draft 0.6 · 1 November 2026 · reviewed with GPT-6.1 Sol and Gemini 4 Argon · <a href="https://github.com/forrtproject/reprocrowd/blob/main/model-gating/benchmark/SPEC.md">full specification</a></p>
 
-<p class="lead">The benchmark tests whether a model can identify a paper's key claims, reproduce them and judge them correctly. It has two tracks: with the authors' code, and blinded without it. Each track gets one end-to-end score. A claim earns credit only when the model shows the computation behind it, not just the right label. Each stage reads and writes fixed file formats, so any model, prompt or sequence of steps can be swapped in and scored the same way. After three review rounds, Sol and Argon both agree with draft 0.4 as written. Seven of its rules are new choices that you have not seen yet.</p>
+<p class="lead">A ReproCrowd check is a statistical spell checker. A model extracts every reported number in a paper, reproduces each one from the authors' materials, and judges it. There are two tracks, with the authors' code and blinded without it, and each gets one end-to-end score. Your rulings on draft 0.4 are now in the specification. Sol and Argon each reviewed draft 0.5, and both of their sets of changes are applied in draft 0.6. In the round 5 confirmation, Argon agreed as drafted. Sol's one remaining point is applied exactly as Sol proposed it.</p>
 
 <h2>Needs your decision</h2>
 
 <div class="decision">
-<h3><span class="tag warn">before freezing</span>1. Seven rules that Claude, Sol and Argon agreed, not yet seen by you</h3>
-<ol>
-<li><b>Variation first.</b> If an analysis is not exactly reproducible (for example an unseeded bootstrap), its result gets <code>within_variation</code>, even when one run happens to print the reported value. The aim is to reward noticing nondeterminism consistently. If a model recovers the original seed and versions, the normal rules apply and earn credit too.</li>
-<li><b>Paper outcome.</b>
-  <ul>
-  <li><em>Computationally reproducible:</em> every assessed result is <code>match</code>, <code>close</code> or <code>within_variation</code>. Reporting slips such as typos are listed, but the computation does not count as failed.</li>
-  <li><em>Technical failure:</em> blockers prevent every primary computation.</li>
-  <li><em>Computational issues:</em> anything in between.</li>
-  </ul></li>
-<li><b>Paper outcome in the headline.</b> A wrong paper outcome halves that paper's score.</li>
-<li><b>Fabrication gate.</b> Two or more values that the model says the paper prints, but which it does not, give the paper a score of 0. One instance is recorded but not penalised.</li>
-<li><b>Evidence for a reporting slip must be in the package.</b> Models may not read reproduction reports, so a typo that only a human report identifies cannot justify <code>close</code>, for the model or in gold. The evidence must be:
-  <ul>
-  <li>an erratum in the package;</li>
-  <li>a donor value visible in the executed output; or</li>
-  <li>a single-character slip whose companion statistics match.</li>
-  </ul>
-  Consequence: G-22 C2 and C3 become <code>discrepant</code>, because the intercept and its interval differ together. Sol checked the published table and the pinned output.</li>
-<li><b>Rendered outputs removed from every package, not just twins.</b> Otherwise a package without outputs would give a twin away, and a model could copy values from shipped tables instead of computing them. Code that exists only inside a rendered document (as in G-22) is extracted first.</li>
-<li><b>At most 15 claims per certificate.</b> Without a cap, listing every number in a paper would reach full recall without any selection. Gold has 5 to 8 claims per paper, and 15 is a judgement, not a calibrated figure.</li>
-</ol>
-<p class="rec">Recommendation: accept all seven. The ones with visible consequences are rules 2 and 5. Under rule 2, G-07 and G-15 may move to computationally reproducible, if checks of their companion statistics and donor row confirm the slips. Under rule 5, G-22 gains two discrepant claims; its paper outcome stays computational issues.</p>
+<h3><span class="tag warn">before freezing</span>1. The paper score formula</h3>
+<p>Paper score = extraction recall × average credit on the labelled results, halved if the paper outcome is wrong. A labelled number the model skips counts against both factors. If omissions alone bring both to 0.8, the product is 0.64. Both reviewers accept this as a deliberate penalty for incompleteness, and each paper still carries equal weight, however many numbers it prints.</p>
+<p class="rec">Recommendation: accept. The alternative, recall and labelled credit as separate headline numbers, would break your "one score per track".</p>
 </div>
 
 <div class="decision">
-<h3><span class="tag warn">blocks ranking runs</span>2. Where should the isolated runs execute?</h3>
-<p>The current Codex sandbox limits what a run can <em>write</em>, but not what it can read. The gold labels are on this Mac and also in the public <code>forrtproject/reprocrowd</code> repository. Ranking runs therefore need a container that holds only the run's package, behind a proxy that allows only package repositories (CRAN, PyPI and similar) and the model's API. Docker, Podman and Colima are not installed on this Mac.</p>
+<h3><span class="tag warn">blocks ranking runs</span>2. Isolation with the built-in macOS sandbox</h3>
+<p>Instead of Docker, each run would execute under <code>sandbox-exec</code>, the macOS sandbox that Codex itself uses:</p>
 <ul>
-<li><b>Colima on this Mac</b> (free and open source, command line only). The Mac has 10 cores and 32 GB of memory.</li>
-<li><b>Docker on the box.</b> It runs Ubuntu with R and Codex already installed and passwordless sudo, but has 4 cores and 15 GB, and Docker is not installed.</li>
+<li><b>Files:</b> nothing is readable except system paths, the run's own folder and a read-only package library. That shuts out <code>/Users</code>, other volumes and the shared temp folders.</li>
+<li><b>Login:</b> <code>HOME</code> points into the run folder and holds a copy of only the login token, so earlier sessions stay invisible.</li>
+<li><b>Network:</b> everything is blocked except one local proxy. The proxy passes package repositories and the model's API, and checks that the provider's own web search is off.</li>
 </ul>
-<p>In either case, the subscription login token (for Codex or Claude Code) is mounted read-only in the container. A proxy can add an API key for API-key models, but it cannot add a login token that refreshes itself. That is acceptable here, because the risk being controlled is access to gold and reports, not credential theft. Section 7.4 of the spec now says so.</p>
-<p class="rec">Recommendation: Colima on this Mac, which has more than twice the box's cores for parallel runs. Until the containers are in place, runs count as diagnostic only.</p>
+<p>A first test worked: R ran and loaded packages, while reading a gold file and connecting directly to CRAN both failed. The spec lists what an acceptance test must still show before ranking runs. Most importantly, the Codex and Claude Code command-line tools must work inside it with their own sandboxes switched off.</p>
+<p class="rec">Recommendation: build the sandbox and its acceptance test as part of the runner work, with no install needed. Colima stays as the fallback if Codex or Claude Code won't run inside it.</p>
 </div>
 
 <div class="decision">
 <h3>3. Approve the order of work</h3>
 <ol>
-<li>Gold v1.4. This includes reruns to settle the held results (G-16, G-28 C3, C4 and C6, and G-29 C1 to C3), plus checks of the G-07 descriptives and the G-15 donor row.</li>
+<li>Gold v1.4:
+  <ul>
+  <li>exhaustive extraction of every reported number in all 30 papers, by two independent extractors with adjudication, which is the new big item;</li>
+  <li>the label changes below;</li>
+  <li>reruns for the held results.</li>
+  </ul></li>
 <li>Rule pack 1.2, the public prompt and schema 1.2, published together.</li>
-<li>Runner and scorer: packages for every target, isolation, run records and evidence checks.</li>
-<li>Adversarial tests of the scorer, for example certificates that copy the printed values.</li>
-<li>Stata papers: screening has started (see below). Drawing, claim lists and labels wait for this specification.</li>
+<li>Runner and scorer: packages, sandbox, run records, evidence checks, and extraction matching.</li>
+<li>Adversarial tests of the scorer, for example copied values, misread and invented numbers, and all-<code>not_checkable</code> certificates.</li>
+<li>Stata papers: second-round screening is running (see below).</li>
 <li>Track B packages and gold.</li>
 <li>Full runs.</li>
 </ol>
-<p class="rec">Recommendation: approve, and I start with gold v1.4 and the reruns. These need the Codex subscription only. The rule pack, prompt and schema change the live site, so they go out together once gold v1.4 is settled.</p>
+<p class="rec">Recommendation: approve, and I start with the extraction protocol on two or three papers. That shows how long full extraction takes, and how often two extractors disagree, before committing to all 30.</p>
 </div>
 
-<h2>Decisions to review</h2>
+<h2>Your rulings, as implemented</h2>
 <ul>
-<li><b>Stata goes to R only.</b> You left R or Python to me. One target language keeps translations comparable.</li>
-<li><b>No numerical ceiling on <code>close</code>.</b> The old rule allowed a gap of up to 1 unit or 1%. Now <code>close</code> needs a demonstrated slip (truncation, transposed digits, a copied cell, or a typo evidenced inside the package), and undoing it must give an exact match. Following your "why more?", rounding is now the only tolerance for <code>match</code>. The trade-off: <code>close</code> now rests on evidence rather than size, so it can cover a large gap. G-07 prints an SD of 0.14 where the code gives 1.14. That is a single-character typo, not a small gap, and it would be <code>close</code> if the accompanying descriptives match.</li>
-<li><b>One label per gold result.</b> Gold v1.4 drops the lists of acceptable alternative labels. A case the labellers cannot settle is held instead.</li>
-<li><b>Print statements are an allowed fix.</b> A model may add lines that only print values (for example the unrounded estimate behind a rounded table), so that it can show the computed number.</li>
-<li><b>"Held" gold results.</b> If the evidence does not yet support a label, the result is excluded from scoring until reruns settle it. It is not called <code>not_checkable</code>, because that would describe the study rather than our evidence.</li>
-<li><b>Claim identification is recall of a must-check subset.</b> The gold lists (5 to 8 claims per paper) are the claims the human sources assessed, not every important claim. The benchmark claims no more than that. Extra claims are audited, not penalised.</li>
-<li><b>Track B gold is built independently</b> by two labellers working only from the article and data, not copied from Track A. The published method and the shipped code can differ, as G-21 shows.</li>
-<li><b>Twins count as one target each</b> in the headline, but uncertainty intervals resample each twin together with its base paper.</li>
-<li><b>Some reviewer suggestions were not adopted.</b>
+<li><b>Every number is extracted.</b> In scope is every printed number that reports a result computed from the data, anywhere in the article except the supplements. That includes estimates, standard errors in parentheses, intervals, p values, sample sizes and descriptives. Excluded are design numbers, significance asterisks, alpha thresholds, confidence levels, codings and indices.
   <ul>
-  <li>Accepting both labels for G-21 (Argon, round 1): this would reopen your decision.</li>
-  <li>Accepting <code>match</code> for G-16 because the shipped tables agree with the paper (Argon, round 1): reading shipped output is not recomputation.</li>
-  <li>A small relative tolerance against gold references (Argon, round 2): rounding both values to the printed precision is enough.</li>
-  <li>A cap on results (Argon, round 2): some claims legitimately have many results, such as G-27 with six per claim.</li>
+  <li><em>Counting:</em> each printed occurrence counts once, so a table value restated in the text counts twice, but one computation can serve both.</li>
+  <li><em>Gold extraction:</em> two extractors match each other mechanically by table row and column labels, or by sentence. Every difference is adjudicated, and the list is frozen before any model runs.</li>
+  <li><em>The 15-claim cap is gone.</em> The existing 5 to 8 labelled claims per paper carry the reproduction labels. A model's discrepancies on other numbers go to adjudication, which is how the labelled set grows.</li>
+  </ul></li>
+<li><b><code>close</code> must be close.</b> It needs both of these:
+  <ul>
+  <li>the printed value is one unit off in its last digit from the correctly rounded value (interval endpoints are checked one at a time);</li>
+  <li>an identified slip, such as truncation, explains it.</li>
   </ul>
-  Both reviewers accepted these decisions.</li>
+  A large deviation stays <code>discrepant</code> however obvious its cause. Every deviation is also labelled as explained (truncation, misrounding, transposition, copied cell, typo) or <code>unexplained</code>, and explanation accuracy is reported. The explanation must be demonstrable from the package and the run, because models may not read the human reports.</li>
+<li><b>Misreading versus hallucination.</b> The evaluator first finds which printed number, in the same paragraph or the same table row or column, the model's value came from.
+  <ul>
+  <li>If there is one, the case is a <em>misreading</em>: a decimal point, a digit, a sign, a percentage read as a proportion, or a neighbouring cell. It counts as not extracted and earns no credit.</li>
+  <li>If there is none, or the model reports a referent the paragraph or table doesn't contain, the case is a <em>hallucination</em>. One verified instance zeroes the paper.</li>
+  </ul></li>
+<li><b>Your other draft 0.4 rules stand</b>, since you did not object: variation first, the paper outcome table, halving for a wrong outcome, and stripping outputs from every package.</li>
 </ul>
 
 <h2>The design at a glance</h2>
 
 <h3>Two tracks, three things to get right</h3>
 <div class="grid">
-  <div class="h"></div><div class="h">1. Identify</div><div class="h">2. Reproduce</div><div class="h">3. Judge</div>
+  <div class="h"></div><div class="h">1. Extract</div><div class="h">2. Reproduce</div><div class="h">3. Judge</div>
   <div class="t">Track A<br><span class="muted" style="font-weight:400">with authors' code</span></div>
-  <div>Recall of the must-check claims, mapped by what each claim is about (study, outcome, statistic) and where it appears</div>
+  <div>Every reported number, with its location and referent; scored by recall against an exhaustive gold extraction</div>
   <div>Run the shipped code, with justified fixes only; Stata translated into R</div>
-  <div>Status per printed number; paper outcome</div>
+  <div>Status and deviation explanation per number; paper outcome</div>
   <div class="t">Track B<br><span class="muted" style="font-weight:400">blinded, no code</span></div>
   <div>Same</div>
   <div>Write the analysis from the article; every analytical choice linked to the text that determines it</div>
-  <div>Same statuses, plus "underspecified" when the article leaves a value-changing choice open</div>
+  <div>Same, plus "underspecified" when the article leaves a value-changing choice open</div>
 </div>
-<p>Targets: the 30 gold papers and 8 seeded twins (Track A), about 10 Stata papers to be added, and the claims in each paper that are eligible for Track B. Twins contain a planted error in the code, so they test Track A only.</p>
 
-<h3>Claim statuses</h3>
+<h3>Statuses</h3>
 <table>
 <tr><th style="width:150px">Status</th><th>When</th></tr>
 <tr><td><code>match</code></td><td>Rounding the recomputed value to the printed precision gives the printed value, by round-half-up or round-half-to-even. That is the only tolerance.</td></tr>
-<tr><td><code>close</code></td><td>A deterministic analysis where the printed value differs because of one reporting slip demonstrated from the package and the run, and undoing the slip gives a match. A flipped sign, a change in whether an interval contains the null, a false printed bound or a crossed threshold always counts as <code>discrepant</code>. Counts must be exact.</td></tr>
-<tr><td><code>within_variation</code></td><td>The analysis is not exactly reproducible, and the printed value lies within the range of repeated runs. The causes are an unseeded random process, a seed whose random stream changed between versions, a package version that cannot be recovered, parallel order, or optimiser sensitivity. How many runs to do, and how the range is built, is fixed before any model runs.</td></tr>
-<tr><td><code>discrepant</code></td><td>Any other difference.</td></tr>
-<tr><td><code>not_checkable</code></td><td>The value cannot be produced: a named blocker in the shipped code, or (Track B) unavailable data or an underspecified method.</td></tr>
+<tr><td><code>close</code></td><td>One unit off in the last printed digit, with an identified slip. Vetoes still apply: a flipped sign, a changed null inclusion, a false printed bound or a crossed threshold is always <code>discrepant</code>. Counts must be exact.</td></tr>
+<tr><td><code>within_variation</code></td><td>The analysis is not exactly reproducible (unseeded, or depends on an unrecoverable version, parallel order or optimiser), and the printed value lies in the range of repeated runs. The protocol is fixed in advance.</td></tr>
+<tr><td><code>discrepant</code></td><td>Any other difference, explained or <code>unexplained</code>. Severity follows the rule pack: P1 if it is a primary result, otherwise P2.</td></tr>
+<tr><td><code>not_checkable</code></td><td>A named blocker in the shipped code (P0), or (Track B) unavailable data or an underspecified method.</td></tr>
 </table>
-<p><b>Fixes.</b> Every fix records the file, the lines, what changed and why the analysis is unchanged. The allowed kinds are:</p>
-<ul>
-<li>path;</li>
-<li>package install or pin;</li>
-<li>exact equivalent call;</li>
-<li>script order;</li>
-<li>skipping a failing statement that the claim does not use;</li>
-<li>print-only statements;</li>
-<li>translation.</li>
-</ul>
-<p>Not allowed: writing missing analysis code, changing the model, sample or data, or switching on an option the authors describe but do not run (G-21).</p>
-<p><b>Claim outcomes.</b> Each claim reproduces, reproduces with justified fixes, or does not reproduce, as you specified.</p>
+<p><b>Fixes</b> state the file, the lines, what changed and why the analysis is unchanged. The allowed kinds are path, package, exact equivalent call, script order, skipping a failing statement the result does not use, print-only statements, and translation. Writing missing analysis code, changing the specification or data, and switching on an option the authors describe but do not run are not fixes.</p>
 
 <h3>Scoring</h3>
 <ul>
-<li><b>Result credit (0 or 1).</b> The result must be identified, given the right status, and computed from the permitted inputs by admissible code, which the evaluator checks in the source and its diff. The value must also be traceable in the run's output. Where gold has a reference value, both values must round to the same printed value. So copying the printed value earns nothing, and a <code>not_checkable</code> earns credit only with the blocker named.</li>
-<li><b>Paper score.</b> The average over claims, halved if the paper outcome is wrong. It is 0 for a hard-gate violation, a timeout, a duplicate result, more than 15 claims or an invalid certificate. Failed runs stay in the denominator.</li>
-<li><b>Headline.</b> The mean over all scheduled targets, one per track, with intervals from a bootstrap over papers (each twin resampled with its base paper).</li>
-<li><b>Diagnostics alongside:</b>
+<li><b>Extraction recall:</b> the share of gold numbers extracted with the exact token at the right place.</li>
+<li><b>Result credit</b> on labelled numbers (0 or 1): the number was extracted, its status is right, and its computation is verified. The evaluator checks the executed source and its diff, and the value must appear in the run's output. Where gold has a reference, both values must round alike. Copying the printed value earns nothing, and <code>not_checkable</code> needs the blocker named.</li>
+<li><b>Paper score:</b> recall × credit, halved for a wrong paper outcome. It is 0 for a hallucination, another hard gate, a timeout or an invalid certificate.</li>
+<li><b>Headline:</b> the mean over targets, one per track, with intervals that resample each twin together with its base paper.</li>
+<li><b>Diagnostics:</b>
   <ul>
-  <li>claim recall and outcome accuracy;</li>
+  <li>extraction precision and misreadings;</li>
+  <li>explanation accuracy;</li>
+  <li>outcome accuracy and a confusion matrix;</li>
   <li>sensitivity and specificity;</li>
-  <li>a status confusion matrix;</li>
+  <li>discrepancies on unlabelled numbers that survive adjudication;</li>
   <li>nondeterminism recognised;</li>
   <li>fix audit;</li>
   <li>twins separately;</li>
   <li>baselines that label everything <code>match</code>, <code>not_checkable</code> or <code>discrepant</code>;</li>
-  <li>minutes, tokens and US$ per target.</li>
+  <li>cost.</li>
   </ul></li>
 </ul>
 
 <h3>A modular pipeline</h3>
 <div class="pipe">
   <div class="st ev"><b>S0 package</b>evaluator builds a local package under a neutral name, plus the article<br><code>input-bundle.json</code></div><div class="ar">→</div>
-  <div class="st"><b>S1 identify</b>claims with locator, referent and typed printed values<br><code>claims.json</code></div><div class="ar">→</div>
+  <div class="st"><b>S1 extract</b>every number with its location, referent and typed value<br><code>claims.json</code></div><div class="ar">→</div>
   <div class="st"><b>S2 reproduce</b>values, code and log references, fixes, variation runs<br><code>results.json</code></div><div class="ar">→</div>
-  <div class="st"><b>S3 judge</b>statuses, evidence, paper outcome<br><code>certificate.json</code></div><div class="ar">→</div>
-  <div class="st ev"><b>Evaluate</b>mapping, evidence checks, gates, scores<br><code>run.json</code> + gold</div>
+  <div class="st"><b>S3 judge</b>statuses, explanations, evidence, paper outcome<br><code>certificate.json</code></div><div class="ar">→</div>
+  <div class="st ev"><b>Evaluate</b>matching, evidence checks, gates, scores<br><code>run.json</code> + gold</div>
 </div>
-<p>Each stage runs in a fresh directory. Earlier stages' files are mounted read-only at fixed paths, and prompts need no filling-in. A pipeline is a short manifest naming the executor, model, options and prompt for each stage. One agent can do S1 to S3 in a single run, or each stage can use a different model. Decomposed runs feed in the gold claim list, or a frozen earlier stage, to isolate one step. Executors are small adapters for the Codex CLI, Claude Code, OpenCode, an API loop or a human, with one function signature. The run record keeps every attempt, the configuration the provider actually used, cost and a network log. In ranking runs, each stage runs in a container that can reach only package repositories and the model's API, with the provider's own web search switched off.</p>
+<p>Each stage runs in a fresh, sandboxed directory, with earlier stages' files mounted read-only at fixed paths, and its prompts need no filling-in. A pipeline is a short manifest naming the executor, model, options and prompt for each stage. One agent can do everything, or each stage can use a different model. Decomposed runs feed in the gold extraction to isolate reproduction and judgement. Executors are small adapters with one function signature, and the run record keeps every attempt, the configuration actually used, cost and a network log.</p>
 
 <h2>Gold changes planned for v1.4</h2>
 <table>
 <tr><th>Claim</th><th>v1.3</th><th>v1.4</th><th>Why</th></tr>
-<tr><td>G-21 C3, C4, C5</td><td>match</td><td>discrepant, P2</td><td>The printed AICs come from an option the script documents but does not run; reference replaced by the shipped code's output</td></tr>
-<tr><td>G-07 C1</td><td>discrepant</td><td>held, then close or discrepant</td><td>0.14 printed for 1.14 looks like a single-character slip; close if the accompanying descriptives match</td></tr>
-<tr><td>G-15 C1, C2</td><td>discrepant</td><td>held, then close or discrepant</td><td>Looks copied from the adjacent row; close if that donor row appears in the package's output</td></tr>
-<tr><td>G-22 C2, C3</td><td>close</td><td>discrepant, P2</td><td>Intercept and interval differ together; only the human report calls it a typo</td></tr>
-<tr><td>G-08 C4; G-18 C1; G-22 C1</td><td>close</td><td>close</td><td>Truncation; paired transposition; truncation</td></tr>
-<tr><td>G-08 C6</td><td>match</td><td>match, with the fix basis recorded</td><td>An earlier statement errors, so reaching it needs the skip-statement fix</td></tr>
-<tr><td>G-16 C1, C2, C4</td><td>close</td><td>held</td><td>Seed is set; we need to confirm that the reruns used the same inputs. If confirmed, they become discrepant, P2, unless reruns show genuine variation</td></tr>
-<tr><td>G-16 C5</td><td>close or not_checkable</td><td>held</td><td>No scalar reference yet</td></tr>
-<tr><td>G-28 C3, C4, C6</td><td>match, match, close</td><td>held, marked unseeded</td><td>Bayes factors computed without a seed; repeated runs needed. G-28 cannot be scheduled until its primary claim, C3, is settled</td></tr>
-<tr><td>G-29 C1 to C3</td><td>not_checkable</td><td>held</td><td>Seed is set and the values are computable; a complete rerun is needed</td></tr>
+<tr><td>G-21 C3, C4, C5</td><td>match</td><td>discrepant, P2, explained</td><td>The printed AICs come from a variant that the script describes in comments but does not run</td></tr>
+<tr><td>G-08 C4; G-22 C1</td><td>close</td><td>close, truncation</td><td>0.198 printed as 0.19; .07849 printed as .07</td></tr>
+<tr><td>G-18 C1</td><td>close</td><td>close, transposed cells</td><td>Two effect sizes printed in each other's place; .004 printed as .01</td></tr>
+<tr><td>G-22 C2, C3</td><td>close</td><td>discrepant, P2, unexplained</td><td>Intercept and interval off by more than one unit; only the human report calls it a typo</td></tr>
+<tr><td>G-07 C1</td><td>discrepant</td><td>discrepant; typo if the descriptives match</td><td>0.14 printed for 1.14: explicable, but far, so not close</td></tr>
+<tr><td>G-15 C1, C2</td><td>discrepant</td><td>discrepant; copied cell if the donor row is in the output</td><td>Large deviation</td></tr>
+<tr><td>G-08 C6</td><td>match</td><td>match, with the skip-statement fix recorded</td><td>An earlier statement errors</td></tr>
+<tr><td>G-16; G-28 C3, C4, C6; G-29 C1 to C3</td><td>various</td><td>held</td><td>Variation or input provenance not yet established; reruns needed. G-28 cannot be scheduled until its primary claim is settled</td></tr>
 <tr><td>G-24</td><td></td><td>audit</td><td>Skipping the failing statement may now reach Table 1</td></tr>
 </table>
-<p class="muted">Every gold result also gets a primary flag. Paper outcomes are recomputed under the new rule once labels settle. Gold results are also split into one result per printed number (for example G-27 C1 to C5 and G-08 C6), and every result gets a nondeterminism record.</p>
+<p class="muted">No paper outcome changes. Every gold result also gets a primary flag, an explanation record and a nondeterminism record.</p>
 
 <h2>How the specification was agreed</h2>
 <div class="review"><b>Sol (GPT-6.1, high effort), round 1:</b> "AGREE subject to the blocking changes listed". Five blocking objections:
@@ -245,14 +223,20 @@ Two of its points were wrong against the code, and parts of its reply drew on st
 </ul>
 Adopted in draft 0.4, apart from two points it later accepted. <a href="https://github.com/forrtproject/reprocrowd/blob/main/model-gating/benchmark/review/argon-r2.md">Review</a></div>
 <div class="review"><b>Round 3, both:</b> "VERDICT: AGREE as drafted". Sol checked the G-22 table in the published article against the pinned output. It also confirmed that stripping outputs breaks neither G-11, whose code does not read its log, nor G-22, whose code is extracted from the HTML first. Argon marked all its round 2 points resolved. Their remaining wording notes are applied. <a href="https://github.com/forrtproject/reprocrowd/blob/main/model-gating/benchmark/review/sol-r3.md">Sol</a> · <a href="https://github.com/forrtproject/reprocrowd/blob/main/model-gating/benchmark/review/argon-r3.md">Argon</a></div>
-
-<h2>Done this session</h2>
+<div class="review"><b>Round 4, both, on your rulings (draft 0.5):</b> both agreed subject to changes.
 <ul>
-<li><b>Twins.</b> Rendered outputs are removed from T-02 (two knitted HTML files), T-03 (two cleaning HTML files) and T-06 (six figure PDFs). Rerunning the twin checks on the stripped packages gives exactly the recorded planted values. No patched script loads cached results that would bypass the planted change. The rule and file list are in <code>gold-set/twins/strip_outputs.json</code>.</li>
-<li><b>Batch 2 archived</b> as <code>runs/luna-batch2</code>, so the full run starts fresh. Its T-02 and T-06 certificates came from packages that still had rendered outputs, so they are a record only.</li>
-<li><b>Specification and reviews</b> are in <code>model-gating/benchmark/SPEC.md</code> and <code>model-gating/benchmark/review/</code>.</li>
-<li><b>Stata screening started.</b> Sol is screening Stata packages with public claim-level reproduction reports, aiming for at least 15 eligible candidates so that 10 can be drawn. For each package it records the Stata version, the user-written commands it needs, and which claims depend on commands with no exact R equivalent. It writes to <code>gold-set/stata/</code>.</li>
-<li><b>Spend:</b> US$0 metered. The Codex and Antigravity reviews and the screening use subscriptions. The one OpenCode attempt went through OpenRouter, which reports US$0.00 of usage today on its key.</li>
+<li><b>Sol:</b> a counting unit for extraction; misreading and hallucination made mutually exclusive; the one-unit rule extended to intervals, percentages and p values; and a sandbox acceptance test before ranking. Sol checked G-08 C4, G-18 C1 and G-22 C1 against gold, and all pass the new <code>close</code> rule.</li>
+<li><b>Argon:</b> canonical locators two extractors can match; explicit exclusions such as asterisks and alpha thresholds; locators per result rather than per claim; evidence checks for explained discrepancies; severity restored; and a tighter sandbox (private <code>HOME</code> and temp folder, Unix sockets blocked, a reverse proxy for the model API, outside resource limits).</li>
+</ul>
+Where they differed, I kept captions and footnotes in scope, let compound transcription errors count as misreadings, and defined severity as in the rule pack. <a href="https://github.com/forrtproject/reprocrowd/blob/main/model-gating/benchmark/review/sol-r4.md">Sol</a> · <a href="https://github.com/forrtproject/reprocrowd/blob/main/model-gating/benchmark/review/argon-r4.md">Argon</a></div>
+<div class="review"><b>Round 5:</b> Argon agreed as drafted and accepted all three of my choices. Sol accepted them too, with one remaining point: a value misread from an identifiable source must not also count as a hallucination. That is now fixed as Sol proposed. <a href="https://github.com/forrtproject/reprocrowd/blob/main/model-gating/benchmark/review/sol-r5.md">Sol</a> · <a href="https://github.com/forrtproject/reprocrowd/blob/main/model-gating/benchmark/review/argon-r5.md">Argon</a></div>
+
+<h2>Done since the last report</h2>
+<ul>
+<li><b>Gemini rule:</b> recorded in <code>~/.claude/CLAUDE.md</code>. Gemini never runs through OpenCode or OpenRouter unless you explicitly authorise it, and subagents use Antigravity only.</li>
+<li><b>Stata, round 1:</b> 34 screened and 17 eligible, but 14 of those reproduce, so the set would have had too few discrepancies. All 17 DOIs match Crossref.</li>
+<li><b>Stata, round 2 (running):</b> two parallel screeners. One covers SCORE's failed reproductions and low-scoring REPRO-Bench tasks, the other the I4R catalogue. Both target issues and technical failures.</li>
+<li><b>Spend:</b> US$0 metered. All reviews and screening ran on subscriptions.</li>
 </ul>
 </main>
 </body>

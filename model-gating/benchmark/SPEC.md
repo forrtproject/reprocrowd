@@ -4,7 +4,9 @@ Draft 0.6, 1 November 2026. Draft 0.4 was agreed by Claude, GPT-6.1 Sol (high ef
 4 Argon (high) after three review rounds (`review/`). Draft 0.5 adds Lukas's rulings on draft 0.4
 (every number is extracted; `close` must be numerically close; explained and unexplained deviations
 are distinguished; hallucinations are gated at one instance). Draft 0.6 applies both reviewers'
-round 4 changes (`review/sol-r4.md`, `review/argon-r4.md`) and is under confirmation.
+round 4 changes (`review/sol-r4.md`, `review/argon-r4.md`). In round 5 Argon agreed as drafted;
+Sol's one remaining point (misreading takes precedence over hallucination when a source is
+identified) is applied as Sol proposed it. Items still marked **[proposed]** await Lukas.
 Items marked **[settled]** are Lukas's decisions and
 are not reopened in review. Items marked **[proposed]** are choices made in this draft that Lukas
 has not yet seen.
@@ -507,7 +509,8 @@ the model's value comes from, if any, recorded as a cell or text span.
   counted with their source and error.
 - **Hallucination:** no printed number in the local neighbourhood can be identified as the source; or
   the model gives a referent (outcome, predictor, sample) that does not appear in that paragraph or
-  table; or it reports as printed a value the article does not contain. **One verified hallucination is a hard gate.** The evaluator verifies it against the
+  table. When a source is identified, the case is a misreading even if the transcribed value appears
+  nowhere in the article; misreading takes precedence. **One verified hallucination is a hard gate.** The evaluator verifies it against the
   article before the gate applies, and records the span searched. A system that invents printed
   values cannot be trusted to check a paper.
 - **Gold miss:** the article does print the number and the gold extraction missed it. The correction
