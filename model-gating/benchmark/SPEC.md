@@ -1,9 +1,10 @@
 # ReproCrowd benchmark: specification
 
-Draft 0.5, 1 November 2026. Draft 0.4 was agreed by Claude, GPT-6.1 Sol (high effort) and Gemini
+Draft 0.6, 1 November 2026. Draft 0.4 was agreed by Claude, GPT-6.1 Sol (high effort) and Gemini
 4 Argon (high) after three review rounds (`review/`). Draft 0.5 adds Lukas's rulings on draft 0.4
 (every number is extracted; `close` must be numerically close; explained and unexplained deviations
-are distinguished; hallucinations are gated at one instance) and is under review.
+are distinguished; hallucinations are gated at one instance). Draft 0.6 applies both reviewers'
+round 4 changes (`review/sol-r4.md`, `review/argon-r4.md`) and is under confirmation.
 Items marked **[settled]** are Lukas's decisions and
 are not reopened in review. Items marked **[proposed]** are choices made in this draft that Lukas
 has not yet seen.
@@ -93,23 +94,44 @@ with it, is recorded.
 
 ### 3.1 Every reported number **[settled]**
 
-**Scope.** Every number in the main text and tables that reports a result computed from the data:
-descriptive statistics, sample sizes, test statistics, estimates, standard errors, intervals, p
-values, effect sizes and model-fit statistics. Excluded: numbers that describe the design rather than
-results (scale points, number of conditions, payment amounts), dates, page and reference numbers,
-and values that appear only graphically in figures. Supplements are out of scope for now.
+**Scope.** Every printed number in the article (abstract, main text, footnotes, tables, table notes and
+figure captions) that reports a result computed from the data: descriptive statistics, sample sizes,
+test statistics, estimates, standard errors, intervals, p values, effect sizes, model-fit statistics,
+and printed bounds (`p < .001`). A threshold stated in words counts only when it carries a number
+("significant at the 5% level" is the bound `p < .05`); "significant" without a number is not
+extracted. Excluded: numbers that describe the design rather than results (scale points, number of
+conditions, payment amounts, variable codings such as `0 = control`), confidence levels that label an
+interval (`95%` in `95% CI`), nominal significance thresholds (`alpha = .05`), cut-offs quoted from
+the literature, model or column indices, significance asterisks, row identifiers, dates, page and
+reference numbers, and values that appear only graphically in figures. Supplements are out of scope
+for now.
 
-**Gold extraction.** Each gold paper gets an exhaustive extraction of these numbers, with locator
-(page, paragraph or table cell, quote), referent and typed value (3.2). Two extractors work
-independently; their lists are matched mechanically by locator and token, and every difference is
-adjudicated. Extraction is scored by recall and precision against this list, so a model gains nothing
+**Counting unit.** Each in-scope printed occurrence at its own location is one result, including every
+eligible table cell and each statistic within a cell. Parentheses do not exclude a statistic: an
+estimate and its parenthesised standard error are two results, as are a count and its percentage
+(`24 (18.5%)`). Brackets, parentheses and asterisks are stripped from the token. An interval is one
+result with two endpoints. The same value printed at two locations (for example a table value
+restated in the text) is two occurrences, which may share one computation. Listing the same location
+and identity twice is a duplicate. Large tables get no cap or sampling exception.
+
+**Canonical locator.** Every result carries a locator that two extractors can match mechanically: for a
+table, `exhibit`, `panel`, `row_label`, `col_label` (the printed row stub and column header) and
+`quantity`; for text, `pdf_page`, `quote` (the sentence), `occurrence` (which number in the quote) and
+`quantity`.
+
+**Gold extraction.** Each gold paper gets an exhaustive extraction of these numbers, with canonical
+locator, referent and typed value (3.2). Two extractors work independently; their lists are matched
+mechanically by canonical locator and normalised token (3.3), and every difference is
+adjudicated. The adjudicated list is versioned and frozen with the scoring inputs before candidate
+runs. Holding a reproduction label, or excluding a result from Track B, does not remove the occurrence
+from extraction recall. Extraction is scored by recall and precision against this list, so a model gains nothing
 by listing numbers that are not there and loses for skipping any.
 
 **Labelled results.** The existing gold claim lists (5 to 8 claims per paper, chosen from results the
 human source assessed) remain the labelled subset: these numbers carry a reproduction status. They
 are a subset of the extraction. A model reproduces every number it extracts; the numbers without a
 gold label are reported as diagnostics, and its discrepancies on them go to adjudication, which is how
-the labelled set grows. Each labelled claim also records whether it is **primary** (a main-text focal
+the labelled set grows. Each claim in the gold extraction records whether it is **primary** (a main-text focal
 hypothesis test or headline estimate; not sample descriptives, manipulation checks or robustness
 tables).
 
@@ -137,9 +159,11 @@ effect and a relative change are different quantities.
 
 In end-to-end runs the model numbers its own results. Mapping uses article location (page, table
 cell, sentence) and scientific identity first, and the printed token as a consistency check. It is one-to-one, and it never
-uses the model's status or recomputed value. Normalisation keeps signs, inequality operators,
-endpoint order, units and printed precision; it standardises typography only (minus signs, dashes,
-thousands separators, a leading zero). Unmatched gold results, near-misses and ambiguous identities
+uses the model's status or recomputed value. **Normalisation**, used identically in mapping (3.3),
+extraction recall (6.1) and the misreading test (6.4), standardises typography only: the minus-sign
+and dash characters, a missing leading zero (`.17`), spaces, and the thousands-separator character
+where it does not change the value. It keeps numerical meaning, signs, inequality operators, endpoint
+order, units and printed precision; any change to these is an error, not typography. Unmatched gold results, near-misses and ambiguous identities
 go to a mapping review file, which is adjudicated without seeing the model's status or value, and
 the adjudication is stored with the run. The mapping code has tests for repeated values, intervals
 written with dashes, values without a leading zero (`.17`), bounds versus equalities, and intervals
@@ -181,9 +205,13 @@ is obvious.
 
 **`close`** needs both:
 
-- **closeness:** the printed value is one unit away, in its last printed digit, from the correctly
-  rounded recomputed value (for example .07849 printed as .07 instead of .08). Counts must be exact;
-  a wrong count is never `close`.
+- **closeness:** `match` takes precedence; otherwise the printed value is exactly one unit away, in
+  its last printed digit, from the correctly rounded recomputed value (for example .07849 printed as
+  .07 instead of .08). For an interval, each endpoint, after unit conversion, either matches or
+  differs by no more than its own printed quantum from its correctly rounded reference, and at least
+  one endpoint differs. Percentages are converted to the printed unit first (one unit of a printed
+  percentage with no decimals is one percentage point). p values follow the same rule with no extra
+  relative tolerance. Counts must be exact; a wrong count is never `close`.
 - **an identified slip** that produces that value: truncation instead of rounding, misrounding at a
   near-tie, transposed values whose difference stays within one unit, or a single-character typo
   within one unit.
@@ -194,16 +222,23 @@ printed bound, or a crossed threshold the paper relies on is `discrepant`, howev
 **Explanation field.** Every result whose status is `close` or `discrepant` carries
 `deviation_explanation`: `truncation`, `misrounding`, `transposed_digits`, `transposed_cells`,
 `copied_cell`, `typo`, `other_identified` or `unexplained`, with its evidence. An explanation must be
-shown from the bundle and the execution output: an erratum in the package, a donor value visible in
-the executed output, or a single-character difference whose companion statistics (same test, table
-row or in-text summary) match. A model may not read reproduction reports, so a slip that only a human
-report identifies counts as `unexplained` for the model and in gold. A one-unit deviation without an
+shown from the bundle and the execution output: a demonstrable truncation or misrounding of the
+recomputed value, an erratum in the package, a donor value visible in the executed output, or a
+single-character difference whose companion statistics (same test, table row or in-text summary)
+match. `unexplained` needs evidence of the deviation, not of a cause. A model may not read reproduction reports, so a slip that only a human
+report identifies counts as `unexplained` for the model and in gold. The evidence is recorded in
+`deviation_evidence`: the operation applied to the recomputed value, the donor result or log line,
+the matching companion results, or the erratum path. A one-unit deviation without an
 identified slip is `discrepant` with `unexplained`.
 
 Examples: G-07 prints an SD of 0.14 where the code gives 1.14. If the accompanying descriptives match,
 that is an explained `typo`, but the deviation is large, so the status is `discrepant`. G-18 prints
 .01 for an effect size of .004, which correctly rounds to .00: one unit, explained by two effect sizes
 printed in each other's place, so `close`.
+
+**Severity** follows rule pack section 9: `P0` for a study blocker (`not_checkable`), `P1` for a
+`discrepant` primary result, `P2` for any other `discrepant` result, and null for `match`, `close`
+and `within_variation`.
 
 ### 4.3 `within_variation`: analyses that are not exactly reproducible **[settled in principle]**
 
@@ -301,9 +336,11 @@ which beats "reproduces".
 
 ### 4.6 Paper outcome **[proposed; Sol and Argon agree; no objection from Lukas]**
 
-Before targets are scheduled, each paper's scored assessment scope is frozen, after removing held and
-(Track B) ineligible results, together with a non-empty primary subset. A target with no scored
-claims or no assessable primary result is not scheduled. Outcomes describe only this scope.
+Before targets are scheduled, each paper's gold outcome is computed over its frozen labelled scope,
+after removing held and (Track B) ineligible results, together with a non-empty primary subset. A
+target with no labelled claims or no assessable primary result is not scheduled. For Track B,
+`input-bundle.json` lists any studies whose data are not in the package; their results are not
+assessed.
 
 - **Computationally reproducible:** every assessed result is `match`, `close` or `within_variation`.
   One-unit reporting slips (`close`) are listed separately in the certificate; they do not make the
@@ -312,9 +349,10 @@ claims or no assessable primary result is not scheduled. Outcomes describe only 
 - **Computational issues:** at least one primary computation completes, and an assessed result is
   `discrepant` or `not_checkable`.
 
-The paper outcome draws on every result the model reproduces. If it differs from gold only because of
-a result outside the labelled subset, it counts as correct when that result passes the evidence
-checks in 6.3; such cases go to adjudication and, if confirmed, extend the labelled set.
+The model's paper outcome draws on every in-scope result it extracts and assesses. If it differs from
+the gold outcome only because of a held result or a result outside the labelled subset whose
+`discrepant` or `not_checkable` judgement passes the evidence checks in 6.3, it counts as correct;
+such cases go to adjudication and, if confirmed, extend the labelled set.
 
 Track B uses the same three terms for the recreation. Its `not_checkable` results carry a structured
 reason: `underspecified`, `contradictory_specification`, `data_unavailable` or `numerical_failure`.
@@ -331,11 +369,11 @@ The changes agreed or still open after round 1:
 
 | Claim | v1.3 | v1.4 | Basis |
 |---|---|---|---|
-| G-21 C3, C4, C5 | match | discrepant, P2; scoring reference replaced by the executable fixed-effects output, mixed-effects values kept as diagnostics | Documented-but-unrun option (4.4); Sol r1 checked the pinned script |
-| G-08 C4 | close | close | Truncation; independent rerun 0.1980 |
+| G-21 C3, C4, C5 | match | discrepant, P2, `other_identified` (the script comments describe the variant that produced the printed values); scoring reference replaced by the executable fixed-effects output, mixed-effects values kept as diagnostics | Documented-but-unrun option (4.4); Sol r1 checked the pinned script |
+| G-08 C4 | close | close, `truncation` | Truncation; independent rerun 0.1980 |
 | G-08 C6 | match | match, expected basis `justified_fix` (`skip_failing_statement`) | An earlier statement errors before the follow-up models |
-| G-18 C1 | close | close (C2 stays discrepant, P2) | Paired transposition; .012 violates C2's printed bound |
-| G-22 C1 | close | close | Truncation (.07849 printed as .07), demonstrable from the recomputed value |
+| G-18 C1 | close | close, `transposed_cells` (C2 stays discrepant, P2, `transposed_cells`) | Paired transposition; .012 violates C2's printed bound |
+| G-22 C1 | close | close, `truncation` | Truncation (.07849 printed as .07), demonstrable from the recomputed value |
 | G-22 C2, C3 | close | discrepant, P2, `unexplained` | The intercept (5.28 printed as 5.25) and its interval differ by more than one unit; only the human report calls this a typo |
 | G-07 C1 | discrepant, P2 | discrepant, P2; explanation `typo` if the accompanying descriptives match, otherwise `unexplained` | 0.14 printed for 1.14 is a large deviation, so never `close` |
 | G-15 C1, C2 | discrepant, P2 | discrepant, P2; explanation `copied_cell` if the donor row (-0.05, 0.06) is in the package's output, otherwise `unexplained` | Large deviation |
@@ -351,8 +389,9 @@ only primary claim, C3, is held). Other held results stay excluded and are repor
 
 Gold v1.4 has one label per result and one outcome per paper; the earlier `acceptable_statuses` and
 `acceptable_alternatives` lists are removed, and a case the labellers cannot settle is held. The only
-exception is the version-recovery rule in 4.3. Every gold result gets a `primary` flag and a
-`nondeterminism` record (null when deterministic). Paper outcomes are recomputed under 4.6 after the
+exception is the version-recovery rule in 4.3. Every gold result gets a `primary` flag, a
+`deviation_explanation` with its evidence (null unless `close` or `discrepant`) and a `nondeterminism`
+record (null when deterministic). Paper outcomes are recomputed under 4.6 after the
 claim labels settle; no change is expected, because G-07 and G-15 keep discrepant claims. Stale explanatory text is repaired (G-08 C4
 and C6, G-11 C2 and C5, and the copied evidence strings in G-29 C4 to C6).
 
@@ -395,7 +434,9 @@ Before runs, the target list, labelled results, evidence rules and weights are f
    unmapped gold result scores 0), so splitting a claim into more rows does not change its weight.
    Claims are averaged within a paper.
 3. **Paper score [proposed].** Extraction recall times the result-credit average, multiplied by 1 if
-   the paper outcome is correct and by 0.5 if not. A paper with a verified hard-gate violation scores
+   the paper outcome is correct and by 0.5 if not. This is a deliberate completeness penalty: a
+   missed labelled result counts against both factors, so if omissions alone bring both to `r`, the
+   product is `r²`. A paper with a verified hard-gate violation scores
    0. A timeout, a crash or a missing or invalid certificate scores 0 and stays in the denominator; an
    infrastructure failure outside the pipeline is rerun under a predeclared rule.
 4. **Headline.** The unweighted mean of paper scores over all scheduled targets. Each twin counts as a
@@ -403,8 +444,10 @@ Before runs, the target list, labelled results, evidence rules and weights are f
 
 ### 6.2 Diagnostics (reported beside the headline, never folded in)
 
-- extraction recall and precision, and the number of misreadings;
-- three-way claim outcome accuracy (4.5) and the binary version (reproduces vs does not);
+- extraction recall and precision (misreadings and out-of-scope numbers count against precision), and
+  the number of misreadings;
+- three-way claim outcome accuracy (4.5, per labelled claim from its mapped results) and the binary
+  version (reproduces vs does not);
 - status confusion matrix with all denominators;
 - explanation accuracy: for labelled `close` and `discrepant` results, whether the model's
   `deviation_explanation` matches gold, including `unexplained`;
@@ -432,10 +475,12 @@ The checks depend on the status:
   deterministic reference value, the model's value and the reference must round to the same value at
   the printed quantum, under the same rounding mode (subject to the reference policy in 5.1). Twins
   have exact planted references.
-- **`close`.** The named slip must be demonstrated from the bundle and the execution output (4.2):
-  truncation or digit transposition applied to the recomputed value, the donor value in the executed
-  output, an erratum in the bundle, or a single-character substitution with matching companion
-  statistics.
+- **`close`, and explained `discrepant`.** Whenever the status is `close` or the explanation is not
+  `unexplained`, the named slip must be demonstrated from the bundle and the execution output (4.2):
+  truncation, misrounding or digit transposition applied to the recomputed value, the donor value in
+  the executed output, an erratum in the bundle, or a single-character substitution with matching
+  companion statistics. On a `discrepant` result, an unverified explanation counts against explanation
+  accuracy (6.2) but does not change the status credit.
 - **`within_variation`.** The repeated runs and their settings must be in the bundle, pass the same
   analysis and provenance check, show actual variation, and meet 4.3.
 - **`not_checkable`.** A specific study blocker must be named (the missing file, the failing statement
@@ -447,26 +492,31 @@ fix's admissibility and a Track B ambiguity need evaluator adjudication, which i
 
 ### 6.4 Extraction errors and hard gates **[settled]**
 
-Every number the model reports as printed is compared with the gold extraction at its stated
-location:
+Every number the model reports as printed is compared, after normalisation (3.3), with the gold
+extraction at its stated location. The evaluator first identifies the **source**: the printed number
+the model's value comes from, if any, recorded as a cell or text span.
 
-- **Extracted:** the same token at the same location.
-- **Misreading:** the article prints a number there and the model's token differs from it by a
-  transcription error: a misplaced decimal point or thousands separator, a dropped, added or swapped
-  digit, a lost minus sign, or the value of a neighbouring cell. A misreading counts as not extracted,
-  its reproduction result earns no credit, and misreadings are counted.
-- **Hallucination:** the article prints no such number at or near the stated location, or the model
-  attaches a number to a referent the article does not give it. **One verified hallucination is a hard
-  gate.** A system that invents printed values cannot be trusted to check a paper.
-- **Gold miss:** the article does print the number and the gold extraction missed it. The gold is
-  corrected (versioned) and the model credited.
+- **Extracted:** the source is the gold occurrence at that location and the token is the same.
+- **Misreading:** a uniquely identifiable printed number in the local neighbourhood (the same
+  paragraph for text; the same row or column of the same table) is the source, but the token or its
+  location was transcribed wrongly: a misplaced decimal point, a changed separator, a dropped, added,
+  substituted or swapped digit, a lost or added minus sign, a percentage read as a proportion or the
+  reverse, a value taken from another cell or sentence in the neighbourhood, or a combination of these.
+  Attaching a neighbourhood number to another referent in the same paragraph or table is a misreading. A
+  misreading counts as not extracted, its reproduction result earns no credit, and misreadings are
+  counted with their source and error.
+- **Hallucination:** no printed number in the local neighbourhood can be identified as the source; or
+  the model gives a referent (outcome, predictor, sample) that does not appear in that paragraph or
+  table; or it reports as printed a value the article does not contain. **One verified hallucination is a hard gate.** The evaluator verifies it against the
+  article before the gate applies, and records the span searched. A system that invents printed
+  values cannot be trusted to check a paper.
+- **Gold miss:** the article does print the number and the gold extraction missed it. The correction
+  is versioned and every affected submission is rescored.
 
-The evaluator decides between misreading and hallucination with recorded evidence (the article text at
-the location and the transcription operation). A model token that one such operation cannot derive
-from a printed number nearby is a hallucination. Numbers outside the scope of 3.1 (dates, design
-parameters) that the article does print are ignored. Recomputed values, diagnostics and intermediates
-are not printed values and are never treated as fabrication. The certificate has one final result per
-location and scientific identity; any duplicate makes it invalid.
+The classification uses the article and the model's output only; it does not infer intent. Numbers
+outside the scope of 3.1 that the article does print are ignored. Recomputed values, diagnostics and
+intermediates are not printed values and are never treated as fabrication. The certificate has one
+final result per location and scientific identity; any duplicate makes it invalid.
 
 Hard gates (verified by the evaluator, with evidence recorded):
 
@@ -515,9 +565,9 @@ file hashes.
 | Stage | Reads | Writes |
 |---|---|---|
 | S0 package (evaluator) | pinned sources | `input-bundle.json` (target id, track, mode, data scope raw or processed, file list with hashes), `article/`, `package/` |
-| S1 extract | input bundle, article, package | `claims.json`: every reported number in scope (3.1), grouped into claims; per claim `claim_id`, wording, `primary`, exhibit, printed and PDF page, quote or table cell, referent (study, sample, outcome, predictor, model, wave, statistic), and its results (`result_id`, quantity, typed printed value) |
+| S1 extract | input bundle, article, package | `claims.json`: every reported number in scope (3.1), grouped into claims; per claim `claim_id`, wording, `primary`; per result `result_id`, `quantity`, canonical locator (3.1), referent (study, sample, outcome, predictor, model, wave, statistic) and typed printed value |
 | S2 reproduce | input bundle, article, package, `claims.json` | `results.json` and `s2-workspace/`: per result, state (completed, blocked, ambiguous, failed, timed out), recomputed value (unrounded and as emitted), execution (script path and hash, lines, command, exit status, log paths, lockfile), ordered fixes with diff paths, method choices with article quotes (Track B), variation runs (setting, value, log path) |
-| S3 judge | everything above | `certificate.json` (schema 1.2): per result `status`, `basis`, claim outcome, comparison, `deviation_explanation` and its evidence, blocker evidence, severity, `printed_match`; paper outcome and findings |
+| S3 judge | everything above | `certificate.json` (schema 1.2): per result `claim_id`, `result_id`, locator and typed printed value (as in `claims.json`), `status`, `basis`, claim outcome, comparison, `deviation_explanation` (null unless `close` or `discrepant`) and `deviation_evidence`, blocker evidence, `severity`, `printed_match`; paper outcome and findings |
 | run record (runner) | all stage directories, proxy and process logs | `run.json`: manifest and input-bundle hashes, and per stage attempt: start and end, exit status, executor and version, provider, requested and resolved model, options, prompt path and hash, tokens, cost, event log, artefact hashes, network log |
 
 In decomposed mode the runner mounts the gold extraction as `claims.json` (same schema, no labels) in
@@ -573,15 +623,37 @@ not reads, and the gold set is in a public repository. Each stage attempt theref
 An executor that cannot enforce this policy produces diagnostic results only, not ranking results.
 
 **Implementation [proposed].** On this Mac the lightest option is the built-in macOS sandbox
-(`sandbox-exec`, the mechanism Codex itself uses), not a container runtime. A profile per stage
-attempt denies reads and writes in the home directory except the stage directory, the read-only
-package library and the executor's login token, and denies all outbound network except a local
-allowlist proxy (a few dozen lines of Python). A test on 1 November 2026 confirmed that R runs and
-loads packages from the shared library under such a profile, while reading a gold file and opening a
-direct connection to CRAN both fail. Still to verify: an agent CLI running inside the profile (Codex
-must run with its own sandbox off, since sandboxes cannot be nested) and its API traffic through the
-proxy. Containers (Docker or Colima, or Apple's `container` tool) remain the fallback, and Linux
-hosts would use `bubblewrap`.
+(`sandbox-exec`, the Seatbelt mechanism Codex itself uses), not a container runtime. Each stage
+attempt runs its whole executor, with all child processes, under a **default-deny** profile. The only
+exceptions are the runtime (system and interpreter paths, read-only), the read-only shared package
+library and earlier-stage artefacts, standard device nodes, and a fresh writable stage directory.
+Reads of `/Users`, `/Volumes` and the shared temporary directories (`/private/tmp`,
+`/private/var/folders`) are denied outside the stage. `HOME` and `TMPDIR` point inside the stage, and
+the stage `HOME` holds a copy of only the executor's login token, so earlier session logs are
+unreachable and token refreshes stay in the stage. The executor starts with a clean environment and
+runs with its own sandbox off. Outbound network, including non-system Unix sockets (for example a
+container daemon's), is denied except one loopback port: a proxy outside the sandbox that logs every
+request. For the model provider it acts as a reverse proxy or inference broker, so it can add an API
+key and check that provider-side search and fetching are off in each request; for package
+repositories it is a host allowlist (never raw `github.com`, because the gold repository is there).
+`sandbox-exec` cannot cap memory or CPU, so the runner enforces timeouts and memory limits outside.
+
+A first test on 1 November 2026 showed that R runs and loads packages from the shared library under
+such a profile, while reading a gold file and connecting directly to CRAN both fail. That is not
+enough for ranking use. Before ranking runs, a recorded acceptance test (with the profile and proxy
+hashes in the run record) must show the following.
+
+- The agent CLI, its subprocesses, R and Python, package installation, inference and login refresh all
+  work, with the executor's own sandbox configuration checked rather than assumed.
+- Gold, reports, previous runs, Track B code, host configuration and writes outside the stage are
+  blocked, including via symlinks, shared temporary directories, inherited file descriptors and local
+  services. Earlier-stage inputs and the shared library cannot be changed.
+- Without the proxy variables, no direct IPv4 or IPv6 traffic gets out, and only the proxy port is
+  reachable. The proxy refuses forbidden hosts, redirects to them and arbitrary GitHub fetches.
+  Provider-side browsing is off.
+
+Until the test passes, runs are diagnostic only. Containers (Docker or Colima, or Apple's `container`
+tool) remain the fallback, and Linux hosts would use `bubblewrap`.
 
 ## 8. What exists and what is left
 
