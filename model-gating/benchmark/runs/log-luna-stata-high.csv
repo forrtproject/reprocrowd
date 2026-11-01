@@ -1,0 +1,11 @@
+target,model,effort,outcome,minutes,finished
+S-01,gpt-6-luna,high,collected (exit 0),4.4,2026-11-01 17:10
+S-02,gpt-6-luna,high,collected (exit 0),3.0,2026-11-01 17:10
+S-03,gpt-6-luna,high,collected (exit 0),27.8,2026-11-01 17:10
+S-04,gpt-6-luna,high,collected (exit 0),15.3,2026-11-01 17:10
+S-05,gpt-6-luna,high,collected (exit 0),7.4,2026-11-01 17:10
+S-06,gpt-6-luna,high,collected (exit 0),1.9,2026-11-01 17:10
+S-07,gpt-6-luna,high,collected (exit 0),9.4,2026-11-01 17:10
+S-08,gpt-6-luna,high,collected (exit 0),2.1,2026-11-01 17:10
+S-09,gpt-6-luna,high,collected (exit 0),9.6,2026-11-01 17:10
+S-10,gpt-6-luna,high,collected (exit 0),4.1,2026-11-01 17:10

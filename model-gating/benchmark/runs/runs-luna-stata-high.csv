@@ -1,0 +1,11 @@
+config,target,certificate
+luna-stata-high,S-01,model-gating/benchmark/runs/luna-stata-high/S-01-certificate.json
+luna-stata-high,S-02,model-gating/benchmark/runs/luna-stata-high/S-02-certificate.json
+luna-stata-high,S-03,model-gating/benchmark/runs/luna-stata-high/S-03-certificate.json
+luna-stata-high,S-04,model-gating/benchmark/runs/luna-stata-high/S-04-certificate.json
+luna-stata-high,S-05,model-gating/benchmark/runs/luna-stata-high/S-05-certificate.json
+luna-stata-high,S-06,model-gating/benchmark/runs/luna-stata-high/S-06-certificate.json
+luna-stata-high,S-07,model-gating/benchmark/runs/luna-stata-high/S-07-certificate.json
+luna-stata-high,S-08,model-gating/benchmark/runs/luna-stata-high/S-08-certificate.json
+luna-stata-high,S-09,model-gating/benchmark/runs/luna-stata-high/S-09-certificate.json
+luna-stata-high,S-10,model-gating/benchmark/runs/luna-stata-high/S-10-certificate.json

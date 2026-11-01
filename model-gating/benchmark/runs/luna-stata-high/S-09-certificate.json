@@ -1,0 +1,4102 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "paper": {
+    "doi": "10.1093/ej/ueac022",
+    "title": "Social class and (un)ethical behaviour: Causal and correlational evidence",
+    "authors": [
+      "Elisabeth Gsottbauer",
+      "Daniel Müller",
+      "Samuel Müller",
+      "Stefan T. Trautmann",
+      "Galina Zudenkova"
+    ],
+    "year": 2022
+  },
+  "procedure": {
+    "version": "0.1.2",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "engine": "Codex · GPT-6 · OpenAI",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "rules_version": "crowd-repro v1.1.0",
+  "date": "2026-11-01",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS Tahoe 26.7 (aarch64-apple-darwin23)",
+    "language": "R",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "haven": "2.5.5",
+          "sandwich": "3.1-3",
+          "lmtest": "0.9-40",
+          "zoo": "1.9-1",
+          "R6": "2.6.1",
+          "lattice": "0.22-9",
+          "tzdb": "0.5.0",
+          "magrittr": "2.0.5",
+          "glue": "1.8.1",
+          "tibble": "3.3.1",
+          "pkgconfig": "2.0.3",
+          "readr": "2.2.0",
+          "lifecycle": "1.0.5",
+          "cli": "3.6.6",
+          "grid": "4.6.1",
+          "vctrs": "0.7.3",
+          "forcats": "1.0.1",
+          "hms": "1.3.0",
+          "pillar": "1.11.1",
+          "rlang": "1.3.0",
+          "dplyr": "1.2.1",
+          "scales": "1.4.0",
+          "ggplot2": "4.0.3",
+          "psych": "2.6.9",
+          "readstata13": "0.11.0",
+          "rmarkdown": "2.31",
+          "knitr": "1.51",
+          "gtable": "0.3.6",
+          "jsonlite": "2.0.0",
+          "tidyselect": "1.2.1",
+          "Rcpp": "1.1.2",
+          "parallel": "4.6.1",
+          "jquerylib": "1.2.2",
+          "yaml": "2.3.12",
+          "fastmap": "1.2.0",
+          "labeling": "0.4.3",
+          "generics": "0.1.4",
+          "bslib": "0.11.0",
+          "RColorBrewer": "1.1-3",
+          "cachem": "1.1.0",
+          "xfun": "0.60",
+          "sass": "0.4.10",
+          "S7": "0.2.2",
+          "otel": "0.2.0",
+          "withr": "3.0.3",
+          "digest": "0.6.39",
+          "nlme": "3.1-169",
+          "mnormt": "2.1.2",
+          "evaluate": "1.0.5",
+          "htmltools": "0.5.9",
+          "farver": "2.1.2"
+        },
+        "lockfile": "logs/sessionInfo.txt; logs/sessionInfo_supplementary.txt"
+      }
+    ],
+    "lockfile": "logs/sessionInfo.txt; logs/sessionInfo_supplementary.txt"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "The two main survey experiments include more than 11,000 participants; the article reports 4,785 completed Survey1 experiments, 6,243 Survey2 participants, and 807 belief-survey respondents.",
+      "exhibit": "Abstract and main text, Sections 1 and 4",
+      "page": 1
+    },
+    {
+      "id": "C2",
+      "claim": "Survey1 sample characteristics by priming condition reproduce Table 1 descriptive statistics.",
+      "exhibit": "Table 1",
+      "page": 4
+    },
+    {
+      "id": "C3",
+      "claim": "Survey2 sample characteristics by treatment reproduce Table 2 descriptive statistics.",
+      "exhibit": "Table 2",
+      "page": 5
+    },
+    {
+      "id": "C4",
+      "claim": "Survey1 manipulation-check means and sample sizes reproduce Table 3.",
+      "exhibit": "Table 3",
+      "page": 8
+    },
+    {
+      "id": "C5",
+      "claim": "Survey1 payment means, sample sizes, and regression estimates reproduce Tables 4 and 5.",
+      "exhibit": "Tables 4 and 5",
+      "page": 10
+    },
+    {
+      "id": "C6",
+      "claim": "Survey2 manipulation-check means and sample sizes reproduce Table 6.",
+      "exhibit": "Table 6",
+      "page": 12
+    },
+    {
+      "id": "C7",
+      "claim": "Survey2 payment means and sample sizes reproduce Table 7.",
+      "exhibit": "Table 7",
+      "page": 14
+    },
+    {
+      "id": "C8",
+      "claim": "Survey2 regression estimates reproduce Table 8.",
+      "exhibit": "Table 8",
+      "page": 15
+    },
+    {
+      "id": "C9",
+      "claim": "Beliefs and moral-judgement descriptive results reproduce Table 9.",
+      "exhibit": "Table 9",
+      "page": 16
+    },
+    {
+      "id": "C10",
+      "claim": "Payment distribution tests reported in the text reject uniform/random payment frequencies except the stated €14 Survey1 and €16 Survey2 bins.",
+      "exhibit": "Main text, Sections 2.2 and 3.2",
+      "page": 9
+    },
+    {
+      "id": "C11",
+      "claim": "Survey1 reported balance comparisons and priming contrasts are consistent with the computed Wilcoxon tests.",
+      "exhibit": "Main text, Sections 2.1 and 2.3",
+      "page": 8
+    },
+    {
+      "id": "C12",
+      "claim": "Survey2 reported priming contrasts and absence of significant payment differences are consistent with computed tests.",
+      "exhibit": "Main text, Sections 3.1 and 3.3",
+      "page": 12
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "Survey1 participants in fielded wave",
+      "reported": 4932,
+      "recomputed": 4932,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Survey1 experiment completions",
+      "reported": 4785,
+      "recomputed": 4785,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Survey2 participants",
+      "reported": 6243,
+      "recomputed": 6243,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "total participants in two experiments",
+      "reported": 11028,
+      "recomputed": 11028,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "belief survey respondents with analyzable binary response",
+      "reported": 807,
+      "recomputed": 807,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Monthly net income (Euros) / Primed rich / N",
+      "reported": 1509,
+      "recomputed": 1509,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Monthly net income (Euros) / Primed rich / mean",
+      "reported": 2075.3,
+      "recomputed": 2075.282,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Monthly net income (Euros) / Primed rich / SD",
+      "reported": 1406.0,
+      "recomputed": 1406.0410000000002,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Monthly net income (Euros) / Primed poor / N",
+      "reported": 1505,
+      "recomputed": 1505,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Monthly net income (Euros) / Primed poor / mean",
+      "reported": 2050.0,
+      "recomputed": 2049.967,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Monthly net income (Euros) / Primed poor / SD",
+      "reported": 1381.5,
+      "recomputed": 1381.492,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Male (in %) / Primed rich / N",
+      "reported": 2253,
+      "recomputed": 2253,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Male (in %) / Primed rich / mean",
+      "reported": 51.7,
+      "recomputed": 51.66445,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Male (in %) / Primed rich / SD",
+      "reported": 0.5,
+      "recomputed": 0.4998338,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Male (in %) / Primed poor / N",
+      "reported": 2254,
+      "recomputed": 2254,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Male (in %) / Primed poor / mean",
+      "reported": 50.8,
+      "recomputed": 50.79858,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Male (in %) / Primed poor / SD",
+      "reported": 0.5,
+      "recomputed": 0.5000472,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Age (in years) / Primed rich / N",
+      "reported": 2252,
+      "recomputed": 2252,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Age (in years) / Primed rich / mean",
+      "reported": 50.6,
+      "recomputed": 50.62345,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Age (in years) / Primed rich / SD",
+      "reported": 15.6,
+      "recomputed": 15.60825,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Age (in years) / Primed poor / N",
+      "reported": 2255,
+      "recomputed": 2255,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Age (in years) / Primed poor / mean",
+      "reported": 49.7,
+      "recomputed": 49.74058,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Age (in years) / Primed poor / SD",
+      "reported": 15.6,
+      "recomputed": 15.62955,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Education / Primed rich / N",
+      "reported": 2268,
+      "recomputed": 2268,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Education / Primed rich / mean",
+      "reported": 2.0,
+      "recomputed": 1.955467,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Education / Primed rich / SD",
+      "reported": 1.4,
+      "recomputed": 1.443312,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Education / Primed poor / N",
+      "reported": 2270,
+      "recomputed": 2270,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Education / Primed poor / mean",
+      "reported": 2.0,
+      "recomputed": 1.998678,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Education / Primed poor / SD",
+      "reported": 1.4,
+      "recomputed": 1.433865,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Married (in %) / Primed rich / N",
+      "reported": 2393,
+      "recomputed": 2393,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Married (in %) / Primed rich / mean",
+      "reported": 52.8,
+      "recomputed": 52.77894,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Married (in %) / Primed rich / SD",
+      "reported": 0.5,
+      "recomputed": 0.4993315,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Married (in %) / Primed poor / N",
+      "reported": 2392,
+      "recomputed": 2392,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Married (in %) / Primed poor / mean",
+      "reported": 50.3,
+      "recomputed": 50.33445,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Married (in %) / Primed poor / SD",
+      "reported": 0.5,
+      "recomputed": 0.5000934,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Student (in %) / Primed rich / N",
+      "reported": 2393,
+      "recomputed": 2393,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Student (in %) / Primed rich / mean",
+      "reported": 4.4,
+      "recomputed": 4.429586,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Student (in %) / Primed rich / SD",
+      "reported": 0.2,
+      "recomputed": 0.2057946,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Student (in %) / Primed poor / N",
+      "reported": 2392,
+      "recomputed": 2392,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Student (in %) / Primed poor / mean",
+      "reported": 4.7,
+      "recomputed": 4.682274,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Student (in %) / Primed poor / SD",
+      "reported": 0.2,
+      "recomputed": 0.2113032,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Religiousness / Primed rich / N",
+      "reported": 2243,
+      "recomputed": 2243,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Religiousness / Primed rich / mean",
+      "reported": 4.4,
+      "recomputed": 4.406152,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Religiousness / Primed rich / SD",
+      "reported": 3.0,
+      "recomputed": 3.023621,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Religiousness / Primed poor / N",
+      "reported": 2263,
+      "recomputed": 2263,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Religiousness / Primed poor / mean",
+      "reported": 4.4,
+      "recomputed": 4.398144,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Religiousness / Primed poor / SD",
+      "reported": 3.0,
+      "recomputed": 3.036782,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "East German (in %) / Primed rich / N",
+      "reported": 2392,
+      "recomputed": 2392,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "East German (in %) / Primed rich / mean",
+      "reported": 19.4,
+      "recomputed": 19.35619,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "East German (in %) / Primed rich / SD",
+      "reported": 0.4,
+      "recomputed": 0.3951721,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "East German (in %) / Primed poor / N",
+      "reported": 2391,
+      "recomputed": 2391,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "East German (in %) / Primed poor / mean",
+      "reported": 19.2,
+      "recomputed": 19.23881,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "East German (in %) / Primed poor / SD",
+      "reported": 0.4,
+      "recomputed": 0.3942587,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Political ideology / Primed rich / N",
+      "reported": 1994,
+      "recomputed": 1994,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Political ideology / Primed rich / mean",
+      "reported": 5.3,
+      "recomputed": 5.305416,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Political ideology / Primed rich / SD",
+      "reported": 2.0,
+      "recomputed": 1.989057,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Political ideology / Primed poor / N",
+      "reported": 2014,
+      "recomputed": 2014,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Political ideology / Primed poor / mean",
+      "reported": 5.2,
+      "recomputed": 5.235849,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Political ideology / Primed poor / SD",
+      "reported": 2.0,
+      "recomputed": 1.945478,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Monthly net income (Euros) / Primed-rich / N",
+      "reported": 2072,
+      "recomputed": 2072,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Monthly net income (Euros) / Primed-rich / mean",
+      "reported": 2271.0,
+      "recomputed": 2258.567,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note.",
+      "note": "Stata B_DataCleaning_Survey2.do assigns income interval 11 to 4,275, while the shipped Supplementary-Survey2.Rmd assigns 4,750. Direct translation of the active Stata main-file path yields this discrepancy."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Monthly net income (Euros) / Primed-rich / SD",
+      "reported": 2310.3,
+      "recomputed": 2298.165,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Monthly net income (Euros) / Primed-poor / N",
+      "reported": 2098,
+      "recomputed": 2098,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Monthly net income (Euros) / Primed-poor / mean",
+      "reported": 2227.0,
+      "recomputed": 2214.812,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note.",
+      "note": "Stata B_DataCleaning_Survey2.do assigns income interval 11 to 4,275, while the shipped Supplementary-Survey2.Rmd assigns 4,750. Direct translation of the active Stata main-file path yields this discrepancy."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Monthly net income (Euros) / Primed-poor / SD",
+      "reported": 2057.6,
+      "recomputed": 2043.9759999999999,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Monthly net income (Euros) / Control / N",
+      "reported": 2073,
+      "recomputed": 2073,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Monthly net income (Euros) / Control / mean",
+      "reported": 2203.9,
+      "recomputed": 2191.715,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note.",
+      "note": "Stata B_DataCleaning_Survey2.do assigns income interval 11 to 4,275, while the shipped Supplementary-Survey2.Rmd assigns 4,750. Direct translation of the active Stata main-file path yields this discrepancy."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Monthly net income (Euros) / Control / SD",
+      "reported": 1974.0,
+      "recomputed": 1959.649,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Male (in %) / Primed-rich / N",
+      "reported": 2072,
+      "recomputed": 2072,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Male (in %) / Primed-rich / mean",
+      "reported": 50.3,
+      "recomputed": 50.33784,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Male (in %) / Primed-rich / SD",
+      "reported": 0.5,
+      "recomputed": 0.5001093,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Male (in %) / Primed-poor / N",
+      "reported": 2098,
+      "recomputed": 2098,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Male (in %) / Primed-poor / mean",
+      "reported": 47.2,
+      "recomputed": 47.23546,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Male (in %) / Primed-poor / SD",
+      "reported": 0.5,
+      "recomputed": 0.4993542,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Male (in %) / Control / N",
+      "reported": 2073,
+      "recomputed": 2073,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Male (in %) / Control / mean",
+      "reported": 50.0,
+      "recomputed": 50.02412,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Male (in %) / Control / SD",
+      "reported": 0.5,
+      "recomputed": 0.5001206,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Age (in years) / Primed-rich / N",
+      "reported": 2072,
+      "recomputed": 2072,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Age (in years) / Primed-rich / mean",
+      "reported": 47.3,
+      "recomputed": 47.29778,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Age (in years) / Primed-rich / SD",
+      "reported": 15.7,
+      "recomputed": 15.6788,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Age (in years) / Primed-poor / N",
+      "reported": 2098,
+      "recomputed": 2098,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Age (in years) / Primed-poor / mean",
+      "reported": 47.1,
+      "recomputed": 47.13012,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Age (in years) / Primed-poor / SD",
+      "reported": 15.5,
+      "recomputed": 15.51589,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Age (in years) / Control / N",
+      "reported": 2073,
+      "recomputed": 2073,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Age (in years) / Control / mean",
+      "reported": 47.1,
+      "recomputed": 47.06657,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Age (in years) / Control / SD",
+      "reported": 15.8,
+      "recomputed": 15.75434,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Education / Primed-rich / N",
+      "reported": 2072,
+      "recomputed": 2072,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Education / Primed-rich / mean",
+      "reported": 4.6,
+      "recomputed": 4.597008,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Education / Primed-rich / SD",
+      "reported": 1.2,
+      "recomputed": 1.175663,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Education / Primed-poor / N",
+      "reported": 2098,
+      "recomputed": 2098,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Education / Primed-poor / mean",
+      "reported": 4.7,
+      "recomputed": 4.673975,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Education / Primed-poor / SD",
+      "reported": 1.2,
+      "recomputed": 1.146619,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Education / Control / N",
+      "reported": 2073,
+      "recomputed": 2073,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Education / Control / mean",
+      "reported": 4.7,
+      "recomputed": 4.684033,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Education / Control / SD",
+      "reported": 1.2,
+      "recomputed": 1.148703,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Married (in %) / Primed-rich / N",
+      "reported": 2072,
+      "recomputed": 2072,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Married (in %) / Primed-rich / mean",
+      "reported": 47.0,
+      "recomputed": 46.95946,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Married (in %) / Primed-rich / SD",
+      "reported": 0.5,
+      "recomputed": 0.4991951,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Married (in %) / Primed-poor / N",
+      "reported": 2098,
+      "recomputed": 2098,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Married (in %) / Primed-poor / mean",
+      "reported": 49.6,
+      "recomputed": 49.57102,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Married (in %) / Primed-poor / SD",
+      "reported": 0.5,
+      "recomputed": 0.5001008,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Married (in %) / Control / N",
+      "reported": 2073,
+      "recomputed": 2073,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Married (in %) / Control / mean",
+      "reported": 49.2,
+      "recomputed": 49.20405,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Married (in %) / Control / SD",
+      "reported": 0.5,
+      "recomputed": 0.5000573,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Student (in %) / Primed-rich / N",
+      "reported": 2072,
+      "recomputed": 2072,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Student (in %) / Primed-rich / mean",
+      "reported": 4.2,
+      "recomputed": 4.150579,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Student (in %) / Primed-rich / SD",
+      "reported": 0.2,
+      "recomputed": 0.1995051,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Student (in %) / Primed-poor / N",
+      "reported": 2098,
+      "recomputed": 2098,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Student (in %) / Primed-poor / mean",
+      "reported": 3.9,
+      "recomputed": 3.86082,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Student (in %) / Primed-poor / SD",
+      "reported": 0.2,
+      "recomputed": 0.1927052,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Student (in %) / Control / N",
+      "reported": 2073,
+      "recomputed": 2073,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Student (in %) / Control / mean",
+      "reported": 4.3,
+      "recomputed": 4.245055,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Student (in %) / Control / SD",
+      "reported": 0.2,
+      "recomputed": 0.2016634,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "religion / Primed-rich / N",
+      "reported": 2072,
+      "recomputed": 2072,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "religion / Primed-rich / mean",
+      "reported": 3.9,
+      "recomputed": 3.848456,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "religion / Primed-rich / SD",
+      "reported": 2.9,
+      "recomputed": 2.870487,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "religion / Primed-poor / N",
+      "reported": 2098,
+      "recomputed": 2098,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "religion / Primed-poor / mean",
+      "reported": 4.0,
+      "recomputed": 3.955195,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "religion / Primed-poor / SD",
+      "reported": 2.9,
+      "recomputed": 2.90854,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "religion / Control / N",
+      "reported": 2073,
+      "recomputed": 2073,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "religion / Control / mean",
+      "reported": 3.9,
+      "recomputed": 3.940183,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "religion / Control / SD",
+      "reported": 2.9,
+      "recomputed": 2.881389,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "East German (in %) / Primed-rich / N",
+      "reported": 2072,
+      "recomputed": 2072,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "East German (in %) / Primed-rich / mean",
+      "reported": 12.0,
+      "recomputed": 12.01737,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "East German (in %) / Primed-rich / SD",
+      "reported": 0.3,
+      "recomputed": 0.3252431,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "East German (in %) / Primed-poor / N",
+      "reported": 2098,
+      "recomputed": 2098,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "East German (in %) / Primed-poor / mean",
+      "reported": 13.6,
+      "recomputed": 13.58437,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "East German (in %) / Primed-poor / SD",
+      "reported": 0.3,
+      "recomputed": 0.3427042,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "East German (in %) / Control / N",
+      "reported": 2073,
+      "recomputed": 2073,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "East German (in %) / Control / mean",
+      "reported": 11.5,
+      "recomputed": 11.48095,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "East German (in %) / Control / SD",
+      "reported": 0.3,
+      "recomputed": 0.3188688,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "ideology / Primed-rich / N",
+      "reported": 2072,
+      "recomputed": 2072,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "ideology / Primed-rich / mean",
+      "reported": 5.5,
+      "recomputed": 5.46139,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "ideology / Primed-rich / SD",
+      "reported": 1.9,
+      "recomputed": 1.876551,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "ideology / Primed-poor / N",
+      "reported": 2098,
+      "recomputed": 2098,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "ideology / Primed-poor / mean",
+      "reported": 5.4,
+      "recomputed": 5.435176,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "ideology / Primed-poor / SD",
+      "reported": 1.9,
+      "recomputed": 1.892142,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "ideology / Control / N",
+      "reported": 2073,
+      "recomputed": 2073,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "ideology / Control / mean",
+      "reported": 5.4,
+      "recomputed": 5.372407,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "ideology / Control / SD",
+      "reported": 1.8,
+      "recomputed": 1.825984,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata summarize/by commands to R grouped nonmissing N, mean, and sample SD on the same coded variables and samples. Survey2 interval-11 income coding is preserved as 4,275; see the result note."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 Poor prime / Real-poor / N",
+      "reported": 831,
+      "recomputed": 831,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 Poor prime / Real-poor / mean",
+      "reported": 4.83,
+      "recomputed": 4.826715,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 Poor prime / Real-rich / N",
+      "reported": 674,
+      "recomputed": 674,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 Poor prime / Real-rich / mean",
+      "reported": 5.69,
+      "recomputed": 5.68546,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 Poor prime / All / N",
+      "reported": 2392,
+      "recomputed": 2392,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 Poor prime / All / mean",
+      "reported": 5.27,
+      "recomputed": 5.265886,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 Rich prime / Real-poor / N",
+      "reported": 844,
+      "recomputed": 844,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 Rich prime / Real-poor / mean",
+      "reported": 5.54,
+      "recomputed": 5.537915,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 Rich prime / Real-rich / N",
+      "reported": 665,
+      "recomputed": 665,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 Rich prime / Real-rich / mean",
+      "reported": 6.54,
+      "recomputed": 6.544361,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 Rich prime / All / N",
+      "reported": 2393,
+      "recomputed": 2393,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 Rich prime / All / mean",
+      "reported": 6.04,
+      "recomputed": 6.042624,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 All / Real-poor / N",
+      "reported": 1675,
+      "recomputed": 1675,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 All / Real-poor / mean",
+      "reported": 5.19,
+      "recomputed": 5.185075,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 All / Real-rich / N",
+      "reported": 1339,
+      "recomputed": 1339,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 All / Real-rich / mean",
+      "reported": 6.11,
+      "recomputed": 6.112024,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 All / All / N",
+      "reported": 4785,
+      "recomputed": 4785,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 All / All / mean",
+      "reported": 5.65,
+      "recomputed": 5.65,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 Poor prime / Real-poor / N",
+      "reported": 831,
+      "recomputed": 831,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 Poor prime / Real-poor / mean",
+      "reported": 11.2,
+      "recomputed": 11.20096,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 Poor prime / Real-rich / N",
+      "reported": 674,
+      "recomputed": 674,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 Poor prime / Real-rich / mean",
+      "reported": 11.16,
+      "recomputed": 11.15727,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 Poor prime / All / N",
+      "reported": 2392,
+      "recomputed": 2392,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 Poor prime / All / mean",
+      "reported": 11.28,
+      "recomputed": 11.28,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 Rich prime / Real-poor / N",
+      "reported": 844,
+      "recomputed": 844,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 Rich prime / Real-poor / mean",
+      "reported": 11.19,
+      "recomputed": 11.19194,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 Rich prime / Real-rich / N",
+      "reported": 665,
+      "recomputed": 665,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 Rich prime / Real-rich / mean",
+      "reported": 10.28,
+      "recomputed": 10.27669,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 Rich prime / All / N",
+      "reported": 2393,
+      "recomputed": 2393,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 Rich prime / All / mean",
+      "reported": 10.93,
+      "recomputed": 10.93,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 All / Real-poor / N",
+      "reported": 1675,
+      "recomputed": 1675,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 All / Real-poor / mean",
+      "reported": 11.2,
+      "recomputed": 11.2,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 All / Real-rich / N",
+      "reported": 1339,
+      "recomputed": 1339,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 All / Real-rich / mean",
+      "reported": 10.72,
+      "recomputed": 10.72,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 All / All / N",
+      "reported": 4785,
+      "recomputed": 4785,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 4 All / All / mean",
+      "reported": 11.11,
+      "recomputed": 11.11,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Poor prime / Real-poor / N",
+      "reported": 1153,
+      "recomputed": 1153,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Poor prime / Real-poor / mean",
+      "reported": 4.48,
+      "recomputed": 4.479618,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Poor prime / Real-rich / N",
+      "reported": 945,
+      "recomputed": 945,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Poor prime / Real-rich / mean",
+      "reported": 5.75,
+      "recomputed": 5.751323,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Poor prime / All / N",
+      "reported": 2098,
+      "recomputed": 2098,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Poor prime / All / mean",
+      "reported": 5.05,
+      "recomputed": 5.05,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Neutral / Real-poor / N",
+      "reported": 1150,
+      "recomputed": 1150,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Neutral / Real-poor / mean",
+      "reported": 5.53,
+      "recomputed": 5.533913,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Neutral / Real-rich / N",
+      "reported": 923,
+      "recomputed": 923,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Neutral / Real-rich / mean",
+      "reported": 6.57,
+      "recomputed": 6.568797,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Neutral / All / N",
+      "reported": 2073,
+      "recomputed": 2073,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Neutral / All / mean",
+      "reported": 5.99,
+      "recomputed": 5.99,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Rich prime / Real-poor / N",
+      "reported": 1140,
+      "recomputed": 1140,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Rich prime / Real-poor / mean",
+      "reported": 5.08,
+      "recomputed": 5.084211,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Rich prime / Real-rich / N",
+      "reported": 932,
+      "recomputed": 932,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Rich prime / Real-rich / mean",
+      "reported": 6.38,
+      "recomputed": 6.375536,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Rich prime / All / N",
+      "reported": 2072,
+      "recomputed": 2072,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 Rich prime / All / mean",
+      "reported": 5.67,
+      "recomputed": 5.67,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 All / Real-poor / N",
+      "reported": 3443,
+      "recomputed": 3443,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 All / Real-poor / mean",
+      "reported": 5.03,
+      "recomputed": 5.03,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 All / Real-rich / N",
+      "reported": 2800,
+      "recomputed": 2800,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 All / Real-rich / mean",
+      "reported": 6.23,
+      "recomputed": 6.23,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 All / All / N",
+      "reported": 6243,
+      "recomputed": 6243,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 All / All / mean",
+      "reported": 5.57,
+      "recomputed": 5.57,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Poor prime / Real-poor / N",
+      "reported": 1153,
+      "recomputed": 1153,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Poor prime / Real-poor / mean",
+      "reported": 10.93,
+      "recomputed": 10.93148,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Poor prime / Real-rich / N",
+      "reported": 945,
+      "recomputed": 945,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Poor prime / Real-rich / mean",
+      "reported": 11.19,
+      "recomputed": 11.19153,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Poor prime / All / N",
+      "reported": 2098,
+      "recomputed": 2098,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Poor prime / All / mean",
+      "reported": 11.05,
+      "recomputed": 11.05,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Neutral / Real-poor / N",
+      "reported": 1150,
+      "recomputed": 1150,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Neutral / Real-poor / mean",
+      "reported": 11.09,
+      "recomputed": 11.09043,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Neutral / Real-rich / N",
+      "reported": 923,
+      "recomputed": 923,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Neutral / Real-rich / mean",
+      "reported": 11.47,
+      "recomputed": 11.47346,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Neutral / All / N",
+      "reported": 2073,
+      "recomputed": 2073,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Neutral / All / mean",
+      "reported": 11.26,
+      "recomputed": 11.26,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Rich prime / Real-poor / N",
+      "reported": 1140,
+      "recomputed": 1140,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Rich prime / Real-poor / mean",
+      "reported": 11.32,
+      "recomputed": 11.31754,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Rich prime / Real-rich / N",
+      "reported": 932,
+      "recomputed": 932,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Rich prime / Real-rich / mean",
+      "reported": 11.1,
+      "recomputed": 11.10086,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Rich prime / All / N",
+      "reported": 2072,
+      "recomputed": 2072,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 Rich prime / All / mean",
+      "reported": 11.22,
+      "recomputed": 11.22,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 All / Real-poor / N",
+      "reported": 3443,
+      "recomputed": 3443,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 All / Real-poor / mean",
+      "reported": 11.11,
+      "recomputed": 11.11,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 All / Real-rich / N",
+      "reported": 2800,
+      "recomputed": 2800,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 All / Real-rich / mean",
+      "reported": 11.25,
+      "recomputed": 11.25,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 All / All / N",
+      "reported": 6243,
+      "recomputed": 6243,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 7 All / All / mean",
+      "reported": 11.18,
+      "recomputed": 11.18,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey1 manipulation, rich-prime effect p",
+      "reported": "<0.001",
+      "recomputed": "<2.2e-16",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey1 payment overall KS p",
+      "reported": "<0.001",
+      "recomputed": "<2.2e-16",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey1 bin €14 exact binomial p",
+      "reported": 0.2,
+      "recomputed": 0.1909982,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey2 overall KS p",
+      "reported": "<0.001",
+      "recomputed": "<2.2e-16",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey2 bin €16 exact binomial p",
+      "reported": 0.45,
+      "recomputed": 0.440983,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R binom.test returns 0.440983 (0.44 at two decimals) versus printed 0.45; two-sided exact-test conventions differ between R and Stata."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Table9 full sample N",
+      "reported": 807,
+      "recomputed": 807,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Table9 real-rich N",
+      "reported": 352,
+      "recomputed": 352,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated SurveyBelief cleaning and Stata tabulate/summarize/ranksum commands to R on the supplied data."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Table9 real-poor N",
+      "reported": 455,
+      "recomputed": 455,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief cheating yes (%) full",
+      "reported": 81,
+      "recomputed": 81,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated SurveyBelief cleaning and Stata tabulate/summarize/ranksum commands to R on the supplied data."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief cheating yes (%) rich",
+      "reported": 85,
+      "recomputed": 85,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated SurveyBelief cleaning and Stata tabulate/summarize/ranksum commands to R on the supplied data."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief cheating yes (%) poor",
+      "reported": 78,
+      "recomputed": 78,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief cheating extent mean full",
+      "reported": 4.8,
+      "recomputed": 4.826421,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated SurveyBelief cleaning and Stata tabulate/summarize/ranksum commands to R on the supplied data."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief cheating extent mean rich",
+      "reported": 4.9,
+      "recomputed": 4.986577,
+      "status": "close",
+      "basis": "translated",
+      "fix": "Translated SurveyBelief cleaning and Stata tabulate/summarize/ranksum commands to R on the supplied data.",
+      "note": "Printed values are consistent with truncation to one decimal (the full-sample mean prints as 4.7 under standard rounding)."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief cheating extent mean poor",
+      "reported": 4.6,
+      "recomputed": 4.691218,
+      "status": "close",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained.",
+      "note": "Printed values are consistent with truncation to one decimal (the full-sample mean prints as 4.7 under standard rounding)."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief extent SD full",
+      "reported": 1.58,
+      "recomputed": 1.588122,
+      "status": "close",
+      "basis": "translated",
+      "fix": "Translated SurveyBelief cleaning and Stata tabulate/summarize/ranksum commands to R on the supplied data.",
+      "note": "The computed 1.588 truncates to the printed 1.58 at two decimals."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief extent SD rich",
+      "reported": 1.5,
+      "recomputed": 1.548265,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated SurveyBelief cleaning and Stata tabulate/summarize/ranksum commands to R on the supplied data."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Belief extent SD poor",
+      "reported": 1.61,
+      "recomputed": 1.610815,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Moral assessment mean full",
+      "reported": 4.6,
+      "recomputed": 4.6,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated SurveyBelief cleaning and Stata tabulate/summarize/ranksum commands to R on the supplied data."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Moral assessment mean rich",
+      "reported": 4.5,
+      "recomputed": 4.488636,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated SurveyBelief cleaning and Stata tabulate/summarize/ranksum commands to R on the supplied data."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Moral assessment mean poor",
+      "reported": 4.6,
+      "recomputed": 4.613187,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Moral assessment SD full",
+      "reported": 1.8,
+      "recomputed": 1.805339,
+      "status": "close",
+      "basis": "translated",
+      "fix": "Translated SurveyBelief cleaning and Stata tabulate/summarize/ranksum commands to R on the supplied data.",
+      "note": "The computed 1.805 truncates to the printed 1.80 at two decimals."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Moral assessment SD rich",
+      "reported": 1.75,
+      "recomputed": 1.754079,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated SurveyBelief cleaning and Stata tabulate/summarize/ranksum commands to R on the supplied data."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Moral assessment SD poor",
+      "reported": 1.84,
+      "recomputed": 1.844101,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table5 model (1) observation count",
+      "reported": 3014,
+      "recomputed": 3014,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table5 model (2) observation count",
+      "reported": 2933,
+      "recomputed": 2933,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table5 model (3) observation count",
+      "reported": 3014,
+      "recomputed": 3014,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table5 model (4) observation count",
+      "reported": 2933,
+      "recomputed": 2933,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table8 model (1) observation count",
+      "reported": 6243,
+      "recomputed": 6243,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table8 model (2) observation count",
+      "reported": 6243,
+      "recomputed": 6243,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table8 model (3) observation count",
+      "reported": 6243,
+      "recomputed": 6243,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table8 model (4) observation count",
+      "reported": 6243,
+      "recomputed": 6243,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 3 overall manipulation-check SD",
+      "reported": 1.56,
+      "recomputed": 1.56,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 6 overall manipulation-check SD",
+      "reported": 1.83,
+      "recomputed": 1.83,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata by-group summarize/collapse commands to R grouped counts and means on the same DTA data and treatment definitions."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Table 9 extent full sample N",
+      "reported": 651,
+      "recomputed": 651,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Table 9 extent real-rich N",
+      "reported": 298,
+      "recomputed": 298,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated SurveyBelief cleaning and Stata tabulate/summarize/ranksum commands to R on the supplied data."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Table 9 extent real-poor N",
+      "reported": 353,
+      "recomputed": 353,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (1) Constant coefficient",
+      "reported": 11.396,
+      "recomputed": 11.39607,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (1) Constant robust SE",
+      "reported": 0.2,
+      "recomputed": 0.19844,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (1) Primed-rich coefficient",
+      "reported": -0.396,
+      "recomputed": -0.39622,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (1) Primed-rich robust SE",
+      "reported": 0.24,
+      "recomputed": 0.23824,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (1) Real-rich coefficient",
+      "reported": -0.479,
+      "recomputed": -0.47935,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (1) Real-rich robust SE",
+      "reported": 0.24,
+      "recomputed": 0.23981,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (2) Constant coefficient",
+      "reported": 13.63,
+      "recomputed": 13.629846,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (2) Constant robust SE",
+      "reported": 0.49,
+      "recomputed": 0.4935985,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (2) Primed-rich coefficient",
+      "reported": -0.302,
+      "recomputed": -0.3024998,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (2) Primed-rich robust SE",
+      "reported": 0.24,
+      "recomputed": 0.240547,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (2) Real-rich coefficient",
+      "reported": -0.245,
+      "recomputed": -0.2542002,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (2) Real-rich robust SE",
+      "reported": 0.27,
+      "recomputed": 0.2708112,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (2) Male coefficient",
+      "reported": -0.2,
+      "recomputed": -0.2026604,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (2) Male robust SE",
+      "reported": 0.26,
+      "recomputed": 0.2553948,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (2) Age coefficient",
+      "reported": -0.04,
+      "recomputed": -0.0365219,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (2) Age robust SE",
+      "reported": 0.01,
+      "recomputed": 0.0079765,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (2) Education coefficient",
+      "reported": -0.16,
+      "recomputed": -0.162122,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (2) Education robust SE",
+      "reported": 0.09,
+      "recomputed": 0.0878219,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (2) East Germany coefficient",
+      "reported": -0.38,
+      "recomputed": -0.3840217,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (2) East Germany robust SE",
+      "reported": 0.3,
+      "recomputed": 0.3026185,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (3) Constant coefficient",
+      "reported": 10.277,
+      "recomputed": 10.27669,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (3) Constant robust SE",
+      "reported": 0.26,
+      "recomputed": 0.25751,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (3) Primed-rich × Real-poor coefficient",
+      "reported": 0.915,
+      "recomputed": 0.91525,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (3) Primed-rich × Real-poor robust SE",
+      "reported": 0.34,
+      "recomputed": 0.34312,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (3) Primed-poor × Real-poor coefficient",
+      "reported": 0.924,
+      "recomputed": 0.92427,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (3) Primed-poor × Real-poor robust SE",
+      "reported": 0.34,
+      "recomputed": 0.34163,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (3) Primed-poor × Real-rich coefficient",
+      "reported": 0.881,
+      "recomputed": 0.88058,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (3) Primed-poor × Real-rich robust SE",
+      "reported": 0.36,
+      "recomputed": 0.35781,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (4) Constant coefficient",
+      "reported": 12.789,
+      "recomputed": 12.7893924,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (4) Constant robust SE",
+      "reported": 0.59,
+      "recomputed": 0.5944755,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (4) Primed-rich × Real-poor coefficient",
+      "reported": 0.749,
+      "recomputed": 0.7491535,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (4) Primed-rich × Real-poor robust SE",
+      "reported": 0.37,
+      "recomputed": 0.3673004,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (4) Primed-poor × Real-poor coefficient",
+      "reported": 0.616,
+      "recomputed": 0.6162413,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (4) Primed-poor × Real-poor robust SE",
+      "reported": 0.37,
+      "recomputed": 0.366794,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (4) Primed-poor × Real-rich coefficient",
+      "reported": 0.844,
+      "recomputed": 0.8439402,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (4) Primed-poor × Real-rich robust SE",
+      "reported": 0.36,
+      "recomputed": 0.3619348,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (4) Male coefficient",
+      "reported": -0.19,
+      "recomputed": -0.1929073,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (4) Male robust SE",
+      "reported": 0.25,
+      "recomputed": 0.2551337,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (4) Age coefficient",
+      "reported": -0.04,
+      "recomputed": -0.0365481,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (4) Age robust SE",
+      "reported": 0.01,
+      "recomputed": 0.0079788,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (4) Education coefficient",
+      "reported": -0.16,
+      "recomputed": -0.1575608,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (4) Education robust SE",
+      "reported": 0.09,
+      "recomputed": 0.0877684,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (4) East Germany coefficient",
+      "reported": -0.4,
+      "recomputed": -0.4011396,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 5 model (4) East Germany robust SE",
+      "reported": 0.3,
+      "recomputed": 0.302547,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (1) Primed-rich coefficient",
+      "reported": 0.172,
+      "recomputed": 0.17155,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (1) Primed-rich robust SE",
+      "reported": 0.21,
+      "recomputed": 0.2088,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (1) Neutral coefficient",
+      "reported": 0.213,
+      "recomputed": 0.2131,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (1) Neutral robust SE",
+      "reported": 0.21,
+      "recomputed": 0.20829,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (1) Real-rich coefficient",
+      "reported": 0.143,
+      "recomputed": 0.14251,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (1) Real-rich robust SE",
+      "reported": 0.17,
+      "recomputed": 0.17118,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (1) Constant coefficient",
+      "reported": 10.984,
+      "recomputed": 10.98443,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (1) Constant robust SE",
+      "reported": 0.17,
+      "recomputed": 0.16675,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (2) Primed-rich coefficient",
+      "reported": 0.164,
+      "recomputed": 0.1644225,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (2) Primed-rich robust SE",
+      "reported": 0.21,
+      "recomputed": 0.2085943,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (2) Neutral coefficient",
+      "reported": 0.213,
+      "recomputed": 0.2133087,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (2) Neutral robust SE",
+      "reported": 0.21,
+      "recomputed": 0.20769,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (2) Real-rich coefficient",
+      "reported": 0.125,
+      "recomputed": 0.1246186,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (2) Real-rich robust SE",
+      "reported": 0.18,
+      "recomputed": 0.1799426,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (2) Male coefficient",
+      "reported": 0.03,
+      "recomputed": 0.0344437,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (2) Male robust SE",
+      "reported": 0.17,
+      "recomputed": 0.174758,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (2) Age coefficient",
+      "reported": -0.03,
+      "recomputed": -0.0306922,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (2) Age robust SE",
+      "reported": 0.01,
+      "recomputed": 0.0055842,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (2) Education coefficient",
+      "reported": -0.05,
+      "recomputed": -0.0512596,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (2) Education robust SE",
+      "reported": 0.08,
+      "recomputed": 0.0768785,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (2) Constant coefficient",
+      "reported": 15.826,
+      "recomputed": 15.8262885,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (2) Constant robust SE",
+      "reported": 0.58,
+      "recomputed": 0.5776621,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (3) Primed-poor × Real-poor coefficient",
+      "reported": -0.169,
+      "recomputed": -0.169375,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (3) Primed-poor × Real-poor robust SE",
+      "reported": 0.3,
+      "recomputed": 0.298627,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (3) Primed-poor × Real-rich coefficient",
+      "reported": 0.091,
+      "recomputed": 0.090676,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (3) Primed-poor × Real-rich robust SE",
+      "reported": 0.31,
+      "recomputed": 0.312108,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (3) Neutral × Real-poor coefficient",
+      "reported": -0.01,
+      "recomputed": -0.010424,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (3) Neutral × Real-poor robust SE",
+      "reported": 0.3,
+      "recomputed": 0.29727,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (3) Neutral × Real-rich coefficient",
+      "reported": 0.373,
+      "recomputed": 0.372598,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (3) Neutral × Real-rich robust SE",
+      "reported": 0.31,
+      "recomputed": 0.312492,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (3) Primed-rich × Real-poor coefficient",
+      "reported": 0.217,
+      "recomputed": 0.216685,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (3) Primed-rich × Real-poor robust SE",
+      "reported": 0.3,
+      "recomputed": 0.297272,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (3) Constant coefficient",
+      "reported": 11.101,
+      "recomputed": 11.100858,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (3) Constant robust SE",
+      "reported": 0.22,
+      "recomputed": 0.222089,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Primed-poor × Real-poor coefficient",
+      "reported": -0.151,
+      "recomputed": -0.1513163,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Primed-poor × Real-poor robust SE",
+      "reported": 0.3,
+      "recomputed": 0.3036131,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Primed-poor × Real-rich coefficient",
+      "reported": 0.082,
+      "recomputed": 0.0820453,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Primed-poor × Real-rich robust SE",
+      "reported": 0.31,
+      "recomputed": 0.3111679,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Neutral × Real-poor coefficient",
+      "reported": 0.01,
+      "recomputed": 0.009578,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Neutral × Real-poor robust SE",
+      "reported": 0.3,
+      "recomputed": 0.3008764,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Neutral × Real-rich coefficient",
+      "reported": 0.361,
+      "recomputed": 0.3610647,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Neutral × Real-rich robust SE",
+      "reported": 0.31,
+      "recomputed": 0.3118299,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Primed-rich × Real-poor coefficient",
+      "reported": 0.214,
+      "recomputed": 0.2142864,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Primed-rich × Real-poor robust SE",
+      "reported": 0.3,
+      "recomputed": 0.3027541,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Male coefficient",
+      "reported": 0.04,
+      "recomputed": 0.038448,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Male robust SE",
+      "reported": 0.17,
+      "recomputed": 0.174796,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Age coefficient",
+      "reported": -0.03,
+      "recomputed": -0.030622,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Age robust SE",
+      "reported": 0.01,
+      "recomputed": 0.0055849,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Education coefficient",
+      "reported": -0.05,
+      "recomputed": -0.051794,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Education robust SE",
+      "reported": 0.08,
+      "recomputed": 0.0768579,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "precision_digits": 2
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Constant coefficient",
+      "reported": 15.922,
+      "recomputed": 15.9222965,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 8 model (4) Constant robust SE",
+      "reported": 0.619,
+      "recomputed": 0.6186787,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the stated Stata OLS regressors and complete-case samples to R lm; HC1 robust covariance corresponds to Stata robust finite-sample scaling. No model or sample changes.",
+      "note": "Direct translated output differs from the printed cell at its stated precision.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Table 9 belief binary rich-poor significance p",
+      "reported": "<0.05",
+      "recomputed": 0.01164,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Table 9 belief extent rich-poor significance p",
+      "reported": "<0.05",
+      "recomputed": 0.01199,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Table 9 moral rich-poor significance p",
+      "reported": "not significant",
+      "recomputed": 0.2849,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey1 bin €0 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 0.006119856,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey1 bin €2 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 0.003820651,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey1 bin €4 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 0.0001185977,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey1 bin €6 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 0.01189047,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "The article says this bin is below .01, but the translated test returns a larger p-value."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey1 bin €8 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 0.0006235522,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey1 bin €10 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 0.006119856,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey1 bin €12 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 0.0007499181,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey1 bin €14 exact binomial test p versus paper statement",
+      "reported": "not stated (exception)",
+      "recomputed": 0.1909982,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey1 bin €16 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 0.001172729,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey1 bin €18 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 0.0001065978,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey1 bin €20 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 4.545618e-32,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey2 bin €0 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 0.0006418693,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey2 bin €2 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 0.01283874,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "The article says this bin is below .01, but the translated test returns a larger p-value."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey2 bin €4 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 0.02616384,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "The article says this bin is below .01, but the translated test returns a larger p-value."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey2 bin €6 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 0.004203322,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey2 bin €8 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 5.111819e-06,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey2 bin €10 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 8.846078e-05,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey2 bin €12 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 0.0002349607,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey2 bin €14 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 0.0002349607,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey2 bin €16 exact binomial test p versus paper statement",
+      "reported": "not stated (exception)",
+      "recomputed": 0.440983,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey2 bin €18 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 0.03094889,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "The article says this bin is below .01, but the translated test returns a larger p-value."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Survey2 bin €20 exact binomial test p versus paper statement",
+      "reported": "<0.01",
+      "recomputed": 3.157138e-99,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ.",
+      "note": "R two-sided exact binomial probability; the €14/€16 exception is not stated as <.01."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Expected payment-bin frequency under uniform distribution (%)",
+      "reported": 9.09,
+      "recomputed": 9.090909090909092,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata bitest/ksmirnov commands to R binom.test/ks.test; the observed values and null probability are preserved. RNG streams and exact two-sided p conventions can differ."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table5 model (1) R2",
+      "reported": 0.002,
+      "recomputed": 0.002225659,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table5 model (2) R2",
+      "reported": 0.011,
+      "recomputed": 0.01100795,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table5 model (3) R2",
+      "reported": 0.003,
+      "recomputed": 0.003320608,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table5 model (4) R2",
+      "reported": 0.012,
+      "recomputed": 0.01238507,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table8 model (1) R2",
+      "reported": 0,
+      "recomputed": 0.0002990309,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table8 model (2) R2",
+      "reported": 0.007,
+      "recomputed": 0.007172013,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table8 model (3) R2",
+      "reported": 0.001,
+      "recomputed": 0.0006638032,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table8 model (4) R2",
+      "reported": 0.006,
+      "recomputed": 0.007495213,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes.",
+      "precision_digits": 3
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Survey1 income nonresponse N",
+      "reported": 1771,
+      "recomputed": 1771,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Survey1 income data available N",
+      "reported": 3014,
+      "recomputed": 3014,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Survey1 income <=€2,000 proportion (%)",
+      "reported": 56,
+      "recomputed": 55.6,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Survey1 income >€2,000 proportion (%)",
+      "reported": 44,
+      "recomputed": 44.4,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Survey1 highest income bracket count",
+      "reported": 30,
+      "recomputed": 30,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Survey1 highest income bracket share (%)",
+      "reported": 1,
+      "recomputed": 0.627,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Survey2 real-poor count",
+      "reported": 3443,
+      "recomputed": 3443,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Survey2 real-rich count",
+      "reported": 2800,
+      "recomputed": 2800,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Survey2 real-poor share (%)",
+      "reported": 55,
+      "recomputed": 55.14,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Survey2 real-rich share (%)",
+      "reported": 45,
+      "recomputed": 44.86,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed the stated count or summary directly from the supplied data using the translated active pipeline; no data or sample changes."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Survey1 payment-vs-€10 t-test p, all groups except primed-rich x real-rich",
+      "reported": "<0.01",
+      "recomputed": "not computed by shipped analysis scripts",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The package contains the data but no shipped command producing this exact comparison or subgroup summary; no missing analysis was added."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Survey1 payment-vs-€10 t-test p, primed-rich x real-rich",
+      "reported": "0.28",
+      "recomputed": "not computed by shipped analysis scripts",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The package contains the data but no shipped command producing this exact comparison or subgroup summary; no missing analysis was added."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Student mean payment (footnote 12)",
+      "reported": "€12 vs €11",
+      "recomputed": "not computed by shipped analysis scripts",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The package contains the data but no shipped command producing this exact comparison or subgroup summary; no missing analysis was added."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Student perceived status poor-prime to rich-prime (footnote 12)",
+      "reported": "5.5 to 5.9",
+      "recomputed": "not computed by shipped analysis scripts",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The package contains the data but no shipped command producing this exact comparison or subgroup summary; no missing analysis was added."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Overall perceived status poor-prime to rich-prime (footnote 12)",
+      "reported": "5.3 to 6.0",
+      "recomputed": "not computed by shipped analysis scripts",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The package contains the data but no shipped command producing this exact comparison or subgroup summary; no missing analysis was added."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Survey1 manipulation rich vs poor rank-sum p",
+      "reported": "<0.001",
+      "recomputed": "<2.2e-16",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Survey1 payment primed-rich vs primed-poor rank-sum p",
+      "reported": "marginal at 10%",
+      "recomputed": 0.08192,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Survey1 payment real-rich vs real-poor rank-sum p",
+      "reported": "significant at 5%",
+      "recomputed": 0.0447,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "Survey2 payment rich vs non-rich rank-sum p",
+      "reported": "not significant",
+      "recomputed": 0.6881,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "Survey2 payment real-rich vs real-poor rank-sum p",
+      "reported": "not significant",
+      "recomputed": 0.3703,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated Stata ranksum to R wilcox.test with continuity correction and asymptotic inference; the same outcome, grouping and subset were retained."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Priming-induced status shift equivalent to monthly income",
+      "reported": "€2,000 to €2,500",
+      "recomputed": "not computed by the shipped analysis commands",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The article reports this comparison, but no shipped command calculates the conversion or the quartile-specific detection result; no new analysis was added."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Cheating detected in top income quartile",
+      "reported": "No cheating detected; top quartile only",
+      "recomputed": "not computed by the shipped analysis commands",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The article reports this comparison, but no shipped command calculates the conversion or the quartile-specific detection result; no new analysis was added."
+    }
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "Moderate",
+  "findings": [
+    {
+      "id": "DATA-001",
+      "severity": "P2",
+      "type": "defect",
+      "description": "Survey2 Stata cleaning recodes the €4,500–€5,000 income interval to €4,275. This lowers the computed Table 2 income means relative to the printed values.",
+      "evidence": "B_DataCleaning_Survey2.do line: replace income = 4275 if income_interval == 11; Supplementary-Survey2.Rmd uses 4750 for q37==11. R translation mean is €2,258.57 in primed-rich vs printed €2,271.0, and €2,214.81 vs €2,227.0 in primed-poor.",
+      "suggested_fix": "Author should resolve the interval-11 value in shipped Stata code and document the intended midpoint; any correction is outside this reproduction."
+    },
+    {
+      "id": "STAT-001",
+      "severity": "P2",
+      "type": "normalization",
+      "description": "Several printed regression cells differ from the direct R translation at their displayed precision.",
+      "evidence": "Table 5 model (2) real-rich coefficient: −0.245 printed versus −0.2542 computed. Table 5 model (4) male robust SE: 0.25 versus 0.2551. Table 8 model (4) R2: 0.006 versus 0.00750.",
+      "suggested_fix": "Review the affected table cells or the original Stata run output; the translation retained shipped specifications and samples."
+    },
+    {
+      "id": "STAT-002",
+      "severity": "P2",
+      "type": "normalization",
+      "description": "SurveyBelief Table 9 values include small discrepancies; most are consistent with truncation to the displayed precision.",
+      "evidence": "The belief-extent means are 4.826, 4.987, and 4.691 (full, rich, poor); the printed group values include 4.8, 4.9, and 4.6. The computed extent SDs truncate to 1.58, 1.5, and 1.61.",
+      "suggested_fix": "Verify Table 9 summaries against the authors’ original Stata output and clarify rounding convention."
+    },
+    {
+      "id": "PIPE-001",
+      "severity": "P3",
+      "type": "normalization",
+      "description": "The Survey1 source-wave build script cannot be run because its required GIP wave input files are not shipped; the active main file comments out this build and uses the provided anonymized master dataset.",
+      "evidence": "A_MainFile_Survey1.do comments out B_CreateMasterDataSet.do; waves 25, 31, and 37 are absent from the package.",
+      "suggested_fix": "Provide the restricted source waves or preserve the documented anonymized-file workflow."
+    },
+    {
+      "id": "STAT-003",
+      "severity": "P2",
+      "type": "defect",
+      "description": "The text overstates how many payment-bin tests have p<.01.",
+      "evidence": "The R exact binomial translation gives p=.0119 for Survey1 €6; for Survey2 it gives p=.0128 for €2, .0262 for €4, and .0309 for €18, although the article says only the €14/€16 bin is an exception.",
+      "suggested_fix": "Recheck the relevant binomial test output and correct the text or test values."
+    }
+  ],
+  "limitations": [
+    "Stata was unavailable; Stata code was translated directly into R.",
+    "Survey1 source-wave data required by the commented-out build script were unavailable.",
+    "Payment-distribution KS tests compare observed outcomes to generated uniform samples; R and Stata RNG streams differ.",
+    "Article appendix is outside the supplied article copy; only its main-text/Table 1–9 claims were considered.",
+    "Figure scripts were translated and executed; temporary PNGs were written to a task-scoped temporary folder and removed after visual inspection."
+  ],
+  "artifacts": {
+    "pipeline": "https://forrtproject.github.io/reprocrowd/",
+    "console_log": "logs/reproduction.log; logs/figures.log; logs/supplementary.log"
+  },
+  "provenance": {
+    "raw_data": "https://zenodo.org/record/6226207 (original replication package); local supplied copy: /tmp/scratch_bench_luna/packages/pkg-c4501c",
+    "processed_data": "The supplied anonymized/prepared DTA files were read in place; no dataset was copied into this bundle.",
+    "analysis_script": "code/reproduction.R; code/figures_translation.R; code/survey1_data_prep.R; code/supplementary_runner.R"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  }
+}

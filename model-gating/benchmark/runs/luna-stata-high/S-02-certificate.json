@@ -1,0 +1,418 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "paper": {
+    "doi": "10.1257/pol.20210037",
+    "title": "Checking and Sharing Alt-Facts",
+    "authors": [
+      "Emeric Henry",
+      "Ekaterina Zhuravskaya",
+      "Sergei Guriev"
+    ],
+    "year": 2022
+  },
+  "procedure": {
+    "version": "0.1.2",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "engine": "Codex",
+  "model": {
+    "name": "GPT-6.1 Luna",
+    "provider": "OpenAI"
+  },
+  "rules_version": "1.1.0",
+  "date": "2026-11-01",
+  "environment": {
+    "os": "macOS Tahoe 26.7 (aarch64-apple-darwin23)",
+    "language": "R",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "haven": "2.5.5",
+          "readr": "2.2.0",
+          "dplyr": "1.2.1",
+          "stringr": "1.6.0",
+          "lmtest": "0.9-40",
+          "sandwich": "3.1-3"
+        },
+        "lockfile": "logs/sessionInfo.txt"
+      }
+    ],
+    "versions": {
+      "Stata": "not installed; source package specifies Stata/MP 16.1"
+    },
+    "lockfile": "logs/sessionInfo.txt"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "The paper's abstract reports fact-checking reduces sharing of false statements by about 45%.",
+      "exhibit": "Abstract",
+      "page": 55
+    },
+    {
+      "id": "C2",
+      "claim": "The experiment included 2,537 participants.",
+      "exhibit": "Main text, Introduction",
+      "page": 57
+    },
+    {
+      "id": "C3",
+      "claim": "302 participants expressed an intention to share.",
+      "exhibit": "Main text, Introduction",
+      "page": 57
+    },
+    {
+      "id": "C4",
+      "claim": "82 participants took the first sharing action.",
+      "exhibit": "Main text, Introduction",
+      "page": 57
+    },
+    {
+      "id": "C5",
+      "claim": "21 participants reconfirmed sharing.",
+      "exhibit": "Main text, Introduction",
+      "page": 57
+    },
+    {
+      "id": "C6",
+      "claim": "Overall intention, first-action and reconfirmation rates were 11.9%, 3.2% and about 0.8%.",
+      "exhibit": "Main text, Introduction",
+      "page": 57
+    },
+    {
+      "id": "C7",
+      "claim": "Alt-Facts, Imposed Fact-Check and Voluntary Fact-Check sharing-intention means were 14.7%, 10.2% and 10.8%.",
+      "exhibit": "Main text, Introduction; Table 2, Panel A",
+      "page": 58
+    },
+    {
+      "id": "C8",
+      "claim": "Fact-checking reduced intention to share by more than 25%.",
+      "exhibit": "Main text, Introduction",
+      "page": 58
+    },
+    {
+      "id": "C9",
+      "claim": "Alt-Facts, Imposed Fact-Check and Voluntary Fact-Check sharing-action means were 4.6%, 2.6% and 2.5%.",
+      "exhibit": "Main text, Introduction; Table 2, Panel A",
+      "page": 58
+    },
+    {
+      "id": "C10",
+      "claim": "Fact-checking reduced actual sharing by about 43% to 45%.",
+      "exhibit": "Main text, Introduction",
+      "page": 58
+    },
+    {
+      "id": "C11",
+      "claim": "Fact-check sharing-action rates were 3.15% and 3.07% under imposed and voluntary fact-checking.",
+      "exhibit": "Main text, Introduction",
+      "page": 58
+    },
+    {
+      "id": "C12",
+      "claim": "Fact-check sharing-intention rates were 14.3% and 11.5% under imposed and voluntary fact-checking.",
+      "exhibit": "Main text, Introduction",
+      "page": 58
+    },
+    {
+      "id": "C13",
+      "claim": "Unadjusted treatment-effect estimates and robust standard errors for sharing intention.",
+      "exhibit": "Table 2, Panel A",
+      "page": 58
+    },
+    {
+      "id": "C14",
+      "claim": "Unadjusted treatment-effect estimates and robust standard errors for sharing action.",
+      "exhibit": "Table 2, Panel A",
+      "page": 58
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "relative reduction in sharing action (imposed; voluntary)",
+      "reported": "about 45%",
+      "recomputed": "43.7%; 46.2% (from translated unadjusted treatment means)",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Direct R translation of source filtering, hour adjustment, GA merge, and unadjusted Table 2 Panel A regressions. Model shares and controls follow the shipped specification; translated sample count is 2,533 rather than 2,537."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "N participants",
+      "reported": 2537,
+      "recomputed": 2533,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Direct R translation of the three survey imports, row exclusion and duration/GC filters; four fewer observations remain than the article reports.",
+      "note": "Wave counts recomputed as 844, 845, and 844, compared with 845, 846, and 846 in Table 1. The mismatch is unresolved and affects downstream denominators."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "sharing-intention count",
+      "reported": 302,
+      "recomputed": 302,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Counted q34==1 after the translated source filters."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "first-click actions",
+      "reported": 82,
+      "recomputed": 82,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Summed the per-respondent GA unique-pageview probabilities from the translated hourly merge; source text rounds the resulting sum to an integer."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "reconfirmed shares",
+      "reported": 21,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated run did not translate the Facebook share-count processing and could not verify this value."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "sharing intention rate",
+      "reported": "11.9%",
+      "recomputed": "11.92% (302/2,533)",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed using the translated retained sample denominator; rate rounds to 11.9% at the paper's precision.",
+      "note": "The underlying sample count is discrepant (C2)."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "first-click rate",
+      "reported": "3.2%",
+      "recomputed": "3.24% (82/2,533)",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Computed using the translated retained sample denominator; rate rounds to 3.2% at the paper's precision.",
+      "note": "The underlying sample count is discrepant (C2)."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "reconfirmation rate",
+      "reported": "about 0.8%",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated run did not translate the Facebook share-count processing."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "sharing-intention mean, Alt-Facts",
+      "reported": "14.7%",
+      "recomputed": "14.7%",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Unadjusted OLS intercept from direct translation of Table 2 Panel A; mean=0.146919."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "sharing-intention mean, Imposed Fact-Check",
+      "reported": "10.2%",
+      "recomputed": "10.2%",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Unadjusted OLS treatment mean from direct translation; mean=0.101775."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "sharing-intention mean, Voluntary Fact-Check",
+      "reported": "10.8%",
+      "recomputed": "10.9%",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Unadjusted OLS treatment mean from direct translation; mean=0.109005.",
+      "note": "The difference is 0.1 percentage point at the paper's printed precision; no identifiable reporting slip established. The translated sample is short by one respondent in this arm."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "relative intention reductions, imposed; voluntary",
+      "reported": "more than 25%",
+      "recomputed": "30.7%; 25.8%",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Calculated from the direct-translation means in C7 using the paper's stated percentage-reduction formula."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "sharing-action mean, Alt-Facts",
+      "reported": "4.6%",
+      "recomputed": "4.6%",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Unadjusted OLS mean from translated GA probability outcome; mean=0.046209."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "sharing-action mean, Imposed Fact-Check",
+      "reported": "2.6%",
+      "recomputed": "2.6%",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Unadjusted OLS treatment mean from translated GA probability outcome; mean=0.026036."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "sharing-action mean, Voluntary Fact-Check",
+      "reported": "2.5%",
+      "recomputed": "2.5%",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Unadjusted OLS treatment mean from translated GA probability outcome; mean=0.024882."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "relative action reductions, imposed; voluntary",
+      "reported": "43% to 45%",
+      "recomputed": "43.7%; 46.2%",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Calculated from the translated unadjusted GA probability means. The voluntary reduction is 46.2%, 1.2 percentage points above the reported upper endpoint; no reporting slip established."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Fact-Check sharing-action rates",
+      "reported": "3.15%; 3.07%",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Panel B outcome construction and regression block were not translated in the executed script."
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "Fact-Check sharing-intention rates",
+      "reported": "14.3%; 11.5%",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Panel B analysis was not translated in the executed script."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "Imposed Fact-Check coefficient (sharing intention)",
+      "reported": -0.045,
+      "recomputed": -0.045144,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Unadjusted OLS treatment coefficient with HC1 robust covariance, translated from Table 2 Panel A."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "Imposed Fact-Check robust standard error (sharing intention)",
+      "reported": 0.016,
+      "recomputed": 0.016031,
+      "status": "match",
+      "basis": "translated",
+      "fix": "HC1 robust standard error from the translated unadjusted Table 2 Panel A regression."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "Voluntary Fact-Check coefficient (sharing intention)",
+      "reported": -0.038,
+      "recomputed": -0.037915,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Unadjusted OLS treatment coefficient with HC1 robust covariance, translated from Table 2 Panel A."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "Voluntary Fact-Check robust standard error (sharing intention)",
+      "reported": 0.016,
+      "recomputed": 0.016245,
+      "status": "match",
+      "basis": "translated",
+      "fix": "HC1 robust standard error from the translated unadjusted Table 2 Panel A regression."
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "Imposed Fact-Check coefficient (sharing action)",
+      "reported": -0.02,
+      "recomputed": -0.020173,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Unadjusted OLS treatment coefficient with HC1 robust covariance, translated from Table 2 Panel A."
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "Imposed Fact-Check robust standard error (sharing action)",
+      "reported": 0.006,
+      "recomputed": 0.006008,
+      "status": "match",
+      "basis": "translated",
+      "fix": "HC1 robust standard error from the translated unadjusted Table 2 Panel A regression."
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "Voluntary Fact-Check coefficient (sharing action)",
+      "reported": -0.021,
+      "recomputed": -0.021327,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Unadjusted OLS treatment coefficient with HC1 robust covariance, translated from Table 2 Panel A."
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "Voluntary Fact-Check robust standard error (sharing action)",
+      "reported": 0.006,
+      "recomputed": 0.005508,
+      "status": "match",
+      "basis": "translated",
+      "fix": "HC1 robust standard error from the translated unadjusted Table 2 Panel A regression."
+    }
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "LowConfidence",
+  "findings": [
+    {
+      "id": "DEF-001",
+      "severity": "P1",
+      "type": "defect",
+      "description": "The translated execution covers only the three-wave import/filter/hourly Google Analytics merge and unadjusted Table 2 Panel A. It does not translate and execute the full 2,610-line shipped pipeline, including wave 2 preparation, all remaining tables and figures, LASSO analyses, and dofile 3 text-number calculations.",
+      "evidence": "Executed code is code/translated_core.R; logs/core_run.txt ends by stating the run covers only that translation.",
+      "suggested_fix": "Complete a command-by-command R translation of the remaining shipped do-files and rerun before treating this as a complete certification."
+    },
+    {
+      "id": "DEF-002",
+      "severity": "P1",
+      "type": "defect",
+      "description": "The translated survey filters retain 2,533 respondents, four fewer than the article's reported 2,537; the third treatment mean for sharing intention is 10.9% rather than 10.8%.",
+      "evidence": "logs/core_run.txt reports n=844, 845, 844 and translated means 14.7%, 10.2%, 10.9%.",
+      "suggested_fix": "Trace the observation-level difference against the shipped Stata import semantics and update the direct translation only if the Stata behavior is established; do not change sample criteria."
+    }
+  ],
+  "limitations": [
+    "This is an incomplete benchmark-mode check. No claim is made that every data-derived result in the abstract, main text or tables has been checked.",
+    "Only Tables 2 Panel A core unadjusted estimates and several introductory counts were recomputed. Other numerical claims are omitted from results because the corresponding shipped analysis blocks were not executed; this does not satisfy the requested exhaustive claim inventory.",
+    "Results are marked translated because Stata/MP 16.1 is unavailable. The R run uses the local package copy in place and does not copy or upload original code or data.",
+    "outcome_robustness is not checked; this certificate reports computational reproducibility only."
+  ],
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "ai_generated": true,
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  },
+  "artifacts": {
+    "console_log": "logs/core_run.txt"
+  },
+  "signatories": [
+    {
+      "name": "OpenAI Codex",
+      "role": "codechecker"
+    }
+  ]
+}

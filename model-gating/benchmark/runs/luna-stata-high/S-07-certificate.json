@@ -1,0 +1,3831 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "paper": {
+    "doi": "10.1093/qje/qjac016",
+    "title": "Reshaping Global Trade: The Immediate and Long-Run Effects of Bank Failures",
+    "authors": [
+      "Chenzi Xu"
+    ],
+    "year": 2022
+  },
+  "procedure": {
+    "version": "ReproCrowd benchmark reproduction check 0.1.2",
+    "uri": "https://forrtproject.github.io/reprocrowd/"
+  },
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "rules_version": "1.1.0",
+  "engine": "Codex · GPT-6 · OpenAI",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "date": "2026-11-01",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS container (Darwin)",
+    "language": "R",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "haven": "2.5.5",
+          "dplyr": "1.2.1",
+          "tidyr": "1.3.2",
+          "fixest": "0.14.2"
+        },
+        "lockfile": "sessionInfo.txt"
+      }
+    ],
+    "lockfile": "sessionInfo.txt"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Summary statistics for ports and countries",
+      "exhibit": "Table I",
+      "page": 2125
+    },
+    {
+      "id": "C2",
+      "claim": "Precrisis bank characteristics: group estimates, dispersions, differences, and sample sizes",
+      "exhibit": "Table II",
+      "page": 2126
+    },
+    {
+      "id": "C3",
+      "claim": "Bank failure balance-test coefficients, standard errors, Ns, and reported derived statistics",
+      "exhibit": "Table III and text",
+      "page": 2132
+    },
+    {
+      "id": "C4",
+      "claim": "Intensive-margin bank-failure effects and supporting sample counts",
+      "exhibit": "Table IV and text",
+      "page": 2136
+    },
+    {
+      "id": "C5",
+      "claim": "Extensive-margin effects and sample counts",
+      "exhibit": "Table V",
+      "page": 2140
+    },
+    {
+      "id": "C6",
+      "claim": "Headline numerical findings stated in the main text",
+      "exhibit": "Abstract/introduction, results, benchmarking discussion",
+      "page": 2110
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "Exposure failed banks: ports mean",
+      "reported": "0.07",
+      "recomputed": "0.07296697",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Exposure failed banks: ports median",
+      "reported": "0.00",
+      "recomputed": "0",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Exposure failed banks: ports SD",
+      "reported": "0.19",
+      "recomputed": "0.1861916",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Exposure failed banks: countries mean",
+      "reported": "0.09",
+      "recomputed": "0.0941448",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Exposure failed banks: countries median",
+      "reported": "0.03",
+      "recomputed": "0.02960307",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Exposure failed banks: countries SD",
+      "reported": "0.14",
+      "recomputed": "0.1430964",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Exports: ports mean",
+      "reported": "118.76",
+      "recomputed": "118.7647",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Exports: ports median",
+      "reported": "27.00",
+      "recomputed": "27",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Exports: ports SD",
+      "reported": "215.53",
+      "recomputed": "215.5252",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Exports: countries mean",
+      "reported": "12.20",
+      "recomputed": "12.19875",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Exports: countries median",
+      "reported": "2.14",
+      "recomputed": "2.141",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Exports: countries SD",
+      "reported": "31.89",
+      "recomputed": "31.88642",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Share to UK: ports mean",
+      "reported": "0.39",
+      "recomputed": "0.3899643",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Share to UK: ports median",
+      "reported": "0.30",
+      "recomputed": "0.3",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Share to UK: ports SD",
+      "reported": "0.34",
+      "recomputed": "0.3421921",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Share to UK: countries mean",
+      "reported": "0.60",
+      "recomputed": "0.6035075",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Share to UK: countries median",
+      "reported": "0.69",
+      "recomputed": "0.68513",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Share to UK: countries SD",
+      "reported": "0.38",
+      "recomputed": "0.3798761",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Destinations: ports mean",
+      "reported": "7.63",
+      "recomputed": "7.630662",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Destinations: ports median",
+      "reported": "5.00",
+      "recomputed": "5",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Destinations: ports SD",
+      "reported": "7.21",
+      "recomputed": "7.206944",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Destinations: countries mean",
+      "reported": "3.85",
+      "recomputed": "3.854545",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Destinations: countries median",
+      "reported": "2.00",
+      "recomputed": "2",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Destinations: countries SD",
+      "reported": "8.06",
+      "recomputed": "8.056325",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Distance: ports mean",
+      "reported": "5.06",
+      "recomputed": "5.062519",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Distance: ports median",
+      "reported": "4.80",
+      "recomputed": "4.796321",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Distance: ports SD",
+      "reported": "3.31",
+      "recomputed": "3.307313",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Distance: countries mean",
+      "reported": "6.52",
+      "recomputed": "6.521885",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Distance: countries median",
+      "reported": "6.31",
+      "recomputed": "6.305863",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Distance: countries SD",
+      "reported": "3.51",
+      "recomputed": "3.506506",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "British banks: ports mean",
+      "reported": "6.03",
+      "recomputed": "6.034602",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "British banks: ports median",
+      "reported": "3.00",
+      "recomputed": "3",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "British banks: ports SD",
+      "reported": "7.54",
+      "recomputed": "7.540091",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "British banks: countries mean",
+      "reported": "13.45",
+      "recomputed": "13.27273",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "British banks: countries median",
+      "reported": "9.00",
+      "recomputed": "9",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "British banks: countries SD",
+      "reported": "13.82",
+      "recomputed": "13.64694",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Non-British banks: ports mean",
+      "reported": "0.45",
+      "recomputed": "0.449827",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Non-British banks: ports median",
+      "reported": "0.00",
+      "recomputed": "0",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Non-British banks: ports SD",
+      "reported": "0.82",
+      "recomputed": "0.8154806",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Non-British banks: countries mean",
+      "reported": "1.26",
+      "recomputed": "1.277778",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Non-British banks: countries median",
+      "reported": "0.00",
+      "recomputed": "0",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Non-British banks: countries SD",
+      "reported": "3.25",
+      "recomputed": "3.281835",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Fraction British Empire: ports mean",
+      "reported": "0.34",
+      "recomputed": "0.3356401",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Fraction British Empire: ports median",
+      "reported": "0.00",
+      "recomputed": "0",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Fraction British Empire: ports SD",
+      "reported": "0.47",
+      "recomputed": "0.4730329",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Fraction British Empire: countries mean",
+      "reported": "0.33",
+      "recomputed": "0.3272727",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Fraction British Empire: countries median",
+      "reported": "0.00",
+      "recomputed": "0",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Fraction British Empire: countries SD",
+      "reported": "0.47",
+      "recomputed": "0.4735424",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table I sample construction and estpost sum statistics; the necessary variable aliases are listed in code/translated_pipeline.R.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "N ports",
+      "reported": "289",
+      "recomputed": "289",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translated table sample construction; counts were 289 ports and 55 countries."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "N countries",
+      "reported": "55",
+      "recomputed": "55",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translated table sample construction; counts were 289 ports and 55 countries."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A OG connection: table scalar 1",
+      "reported": "0.16",
+      "recomputed": "0.16",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A OG connection: table scalar 2",
+      "reported": "0.37",
+      "recomputed": "0.3684529",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A OG connection: table scalar 3",
+      "reported": "0.11",
+      "recomputed": "0.1111111",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A OG connection: table scalar 4",
+      "reported": "0.32",
+      "recomputed": "0.3162278",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A OG connection: table scalar 5",
+      "reported": "0.37",
+      "recomputed": "0.3684211",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A OG connection: table scalar 6",
+      "reported": "0.50",
+      "recomputed": "0.4955946",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A OG connection: table scalar 7",
+      "reported": "-0.26",
+      "recomputed": "-0.2573099",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A OG connection: table scalar 8",
+      "reported": "0.09",
+      "recomputed": "0.09075005",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A authorized capital: table scalar 1",
+      "reported": "1.42",
+      "recomputed": "1.422497",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A authorized capital: table scalar 2",
+      "reported": "1.06",
+      "recomputed": "1.058558",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A authorized capital: table scalar 3",
+      "reported": "1.39",
+      "recomputed": "1.391826",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A authorized capital: table scalar 4",
+      "reported": "1.05",
+      "recomputed": "1.046873",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A authorized capital: table scalar 5",
+      "reported": "1.56",
+      "recomputed": "1.555405",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A authorized capital: table scalar 6",
+      "reported": "1.13",
+      "recomputed": "1.129101",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A authorized capital: table scalar 7",
+      "reported": "-0.16",
+      "recomputed": "-0.163579",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A authorized capital: table scalar 8",
+      "reported": "0.28",
+      "recomputed": "0.2777568",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A paid up capital: table scalar 1",
+      "reported": "0.58",
+      "recomputed": "0.5787981",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A paid up capital: table scalar 2",
+      "reported": "0.38",
+      "recomputed": "0.381465",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A paid up capital: table scalar 3",
+      "reported": "0.60",
+      "recomputed": "0.6028344",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A paid up capital: table scalar 4",
+      "reported": "0.37",
+      "recomputed": "0.3737914",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A paid up capital: table scalar 5",
+      "reported": "0.47",
+      "recomputed": "0.4685138",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A paid up capital: table scalar 6",
+      "reported": "0.41",
+      "recomputed": "0.4083651",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A paid up capital: table scalar 7",
+      "reported": "0.13",
+      "recomputed": "0.1343206",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A paid up capital: table scalar 8",
+      "reported": "0.10",
+      "recomputed": "0.1017026",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A deposits: table scalar 1",
+      "reported": "2.22",
+      "recomputed": "2.215638",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A deposits: table scalar 2",
+      "reported": "2.73",
+      "recomputed": "2.726946",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A deposits: table scalar 3",
+      "reported": "2.29",
+      "recomputed": "2.287575",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A deposits: table scalar 4",
+      "reported": "2.82",
+      "recomputed": "2.815144",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A deposits: table scalar 5",
+      "reported": "1.85",
+      "recomputed": "1.845677",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A deposits: table scalar 6",
+      "reported": "2.37",
+      "recomputed": "2.373511",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A deposits: table scalar 7",
+      "reported": "0.44",
+      "recomputed": "0.4418983",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A deposits: table scalar 8",
+      "reported": "1.14",
+      "recomputed": "1.13801",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A reserve fund: table scalar 1",
+      "reported": "0.13",
+      "recomputed": "0.1274044",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A reserve fund: table scalar 2",
+      "reported": "0.12",
+      "recomputed": "0.1214991",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A reserve fund: table scalar 3",
+      "reported": "0.13",
+      "recomputed": "0.1263691",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A reserve fund: table scalar 4",
+      "reported": "0.12",
+      "recomputed": "0.1161986",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A reserve fund: table scalar 5",
+      "reported": "0.13",
+      "recomputed": "0.1346518",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A reserve fund: table scalar 6",
+      "reported": "0.16",
+      "recomputed": "0.1612291",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A reserve fund: table scalar 7",
+      "reported": "-0.01",
+      "recomputed": "-0.008282734",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A reserve fund: table scalar 8",
+      "reported": "0.04",
+      "recomputed": "0.041326",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A total size: table scalar 1",
+      "reported": "4.76",
+      "recomputed": "4.756585",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A total size: table scalar 2",
+      "reported": "6.08",
+      "recomputed": "6.083793",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A total size: table scalar 3",
+      "reported": "4.96",
+      "recomputed": "4.964044",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A total size: table scalar 4",
+      "reported": "6.38",
+      "recomputed": "6.376709",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A total size: table scalar 5",
+      "reported": "3.83",
+      "recomputed": "3.831",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A total size: table scalar 6",
+      "reported": "4.65",
+      "recomputed": "4.650145",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A total size: table scalar 7",
+      "reported": "1.13",
+      "recomputed": "1.133044",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A total size: table scalar 8",
+      "reported": "1.88",
+      "recomputed": "1.875412",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A leverage: table scalar 1",
+      "reported": "0.06",
+      "recomputed": "0.06423181",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A leverage: table scalar 2",
+      "reported": "0.05",
+      "recomputed": "0.04992214",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A leverage: table scalar 3",
+      "reported": "0.06",
+      "recomputed": "0.06453174",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A leverage: table scalar 4",
+      "reported": "0.05",
+      "recomputed": "0.04978219",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A leverage: table scalar 5",
+      "reported": "0.06",
+      "recomputed": "0.0623122",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A leverage: table scalar 6",
+      "reported": "0.06",
+      "recomputed": "0.05672819",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A leverage: table scalar 7",
+      "reported": "0.00",
+      "recomputed": "0.002219547",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A leverage: table scalar 8",
+      "reported": "0.02",
+      "recomputed": "0.02434443",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A reserve ratio: table scalar 1",
+      "reported": "0.03",
+      "recomputed": "0.02961079",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A reserve ratio: table scalar 2",
+      "reported": "0.02",
+      "recomputed": "0.02208018",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A reserve ratio: table scalar 3",
+      "reported": "0.03",
+      "recomputed": "0.02908036",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A reserve ratio: table scalar 4",
+      "reported": "0.02",
+      "recomputed": "0.02201055",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A reserve ratio: table scalar 5",
+      "reported": "0.03",
+      "recomputed": "0.03299232",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A reserve ratio: table scalar 6",
+      "reported": "0.02",
+      "recomputed": "0.02374856",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A reserve ratio: table scalar 7",
+      "reported": "-0.00",
+      "recomputed": "-0.003911957",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A reserve ratio: table scalar 8",
+      "reported": "0.01",
+      "recomputed": "0.008453975",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A liquidity: table scalar 1",
+      "reported": "0.14",
+      "recomputed": "0.1359514",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A liquidity: table scalar 2",
+      "reported": "0.11",
+      "recomputed": "0.1069862",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A liquidity: table scalar 3",
+      "reported": "0.14",
+      "recomputed": "0.1398052",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A liquidity: table scalar 4",
+      "reported": "0.09",
+      "recomputed": "0.0941742",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A liquidity: table scalar 5",
+      "reported": "0.12",
+      "recomputed": "0.1193503",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A liquidity: table scalar 6",
+      "reported": "0.15",
+      "recomputed": "0.1544166",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A liquidity: table scalar 7",
+      "reported": "0.02",
+      "recomputed": "0.02045488",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "A liquidity: table scalar 8",
+      "reported": "0.03",
+      "recomputed": "0.03308785",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B OG connection: table scalar 1",
+      "reported": "0.16",
+      "recomputed": "0.1640625",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B OG connection: table scalar 2",
+      "reported": "0.37",
+      "recomputed": "0.3717874",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B OG connection: table scalar 3",
+      "reported": "0.13",
+      "recomputed": "0.1308411",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B OG connection: table scalar 4",
+      "reported": "0.34",
+      "recomputed": "0.3388135",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B OG connection: table scalar 5",
+      "reported": "0.33",
+      "recomputed": "0.3333333",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B OG connection: table scalar 6",
+      "reported": "0.48",
+      "recomputed": "0.4830459",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B OG connection: table scalar 7",
+      "reported": "-0.20",
+      "recomputed": "-0.2024922",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B OG connection: table scalar 8",
+      "reported": "0.09",
+      "recomputed": "0.08724154",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B trade finance: table scalar 1",
+      "reported": "105.65",
+      "recomputed": "105.6498",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B trade finance: table scalar 2",
+      "reported": "246.58",
+      "recomputed": "246.5847",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B trade finance: table scalar 3",
+      "reported": "112.21",
+      "recomputed": "112.2085",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B trade finance: table scalar 4",
+      "reported": "263.75",
+      "recomputed": "263.7535",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B trade finance: table scalar 5",
+      "reported": "72.23",
+      "recomputed": "72.23208",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B trade finance: table scalar 6",
+      "reported": "126.50",
+      "recomputed": "126.5045",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B trade finance: table scalar 7",
+      "reported": "39.98",
+      "recomputed": "39.9764",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B trade finance: table scalar 8",
+      "reported": "58.98",
+      "recomputed": "58.97879",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B age: table scalar 1",
+      "reported": "36.95",
+      "recomputed": "36.95312",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B age: table scalar 2",
+      "reported": "53.22",
+      "recomputed": "53.21755",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B age: table scalar 3",
+      "reported": "41.31",
+      "recomputed": "41.30841",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B age: table scalar 4",
+      "reported": "56.48",
+      "recomputed": "56.485",
+      "status": "close",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The recomputed sample SD is 56.485, which truncates to the paper’s printed 56.48; the difference is an identifiable one-unit-last-digit truncation under crowd-repro v1.1.0."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B age: table scalar 5",
+      "reported": "14.76",
+      "recomputed": "14.7619",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B age: table scalar 6",
+      "reported": "21.34",
+      "recomputed": "21.33988",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B age: table scalar 7",
+      "reported": "26.55",
+      "recomputed": "26.54651",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B age: table scalar 8",
+      "reported": "12.53",
+      "recomputed": "12.53068",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B cities: table scalar 1",
+      "reported": "13.91",
+      "recomputed": "13.90625",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B cities: table scalar 2",
+      "reported": "23.11",
+      "recomputed": "23.10995",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B cities: table scalar 3",
+      "reported": "15.01",
+      "recomputed": "15.00935",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B cities: table scalar 4",
+      "reported": "24.74",
+      "recomputed": "24.74264",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B cities: table scalar 5",
+      "reported": "8.29",
+      "recomputed": "8.285714",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B cities: table scalar 6",
+      "reported": "10.34",
+      "recomputed": "10.34477",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B cities: table scalar 7",
+      "reported": "6.72",
+      "recomputed": "6.723632",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B cities: table scalar 8",
+      "reported": "5.51",
+      "recomputed": "5.505077",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B countries: table scalar 1",
+      "reported": "6.98",
+      "recomputed": "6.976562",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B countries: table scalar 2",
+      "reported": "7.78",
+      "recomputed": "7.776873",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B countries: table scalar 3",
+      "reported": "7.16",
+      "recomputed": "7.158879",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B countries: table scalar 4",
+      "reported": "8.00",
+      "recomputed": "8.002534",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B countries: table scalar 5",
+      "reported": "6.05",
+      "recomputed": "6.047619",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B countries: table scalar 6",
+      "reported": "6.60",
+      "recomputed": "6.599062",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B countries: table scalar 7",
+      "reported": "1.11",
+      "recomputed": "1.111259",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B countries: table scalar 8",
+      "reported": "1.86",
+      "recomputed": "1.86085",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B regions: table scalar 1",
+      "reported": "2.58",
+      "recomputed": "2.578125",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B regions: table scalar 2",
+      "reported": "1.58",
+      "recomputed": "1.580438",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B regions: table scalar 3",
+      "reported": "2.62",
+      "recomputed": "2.616822",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B regions: table scalar 4",
+      "reported": "1.61",
+      "recomputed": "1.611544",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B regions: table scalar 5",
+      "reported": "2.38",
+      "recomputed": "2.380952",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B regions: table scalar 6",
+      "reported": "1.43",
+      "recomputed": "1.43095",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B regions: table scalar 7",
+      "reported": "0.24",
+      "recomputed": "0.23587",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B regions: table scalar 8",
+      "reported": "0.38",
+      "recomputed": "0.3781186",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Asia: table scalar 1",
+      "reported": "44.31",
+      "recomputed": "44.3133",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Asia: table scalar 2",
+      "reported": "169.41",
+      "recomputed": "169.4139",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Asia: table scalar 3",
+      "reported": "47.56",
+      "recomputed": "47.55577",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Asia: table scalar 4",
+      "reported": "183.47",
+      "recomputed": "183.4662",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Asia: table scalar 5",
+      "reported": "27.79",
+      "recomputed": "27.79217",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Asia: table scalar 6",
+      "reported": "59.26",
+      "recomputed": "59.26021",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Asia: table scalar 7",
+      "reported": "19.76",
+      "recomputed": "19.7636",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Asia: table scalar 8",
+      "reported": "40.56",
+      "recomputed": "40.55649",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Africa: table scalar 1",
+      "reported": "7.83",
+      "recomputed": "7.834078",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Africa: table scalar 2",
+      "reported": "23.60",
+      "recomputed": "23.5973",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Africa: table scalar 3",
+      "reported": "7.14",
+      "recomputed": "7.135439",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Africa: table scalar 4",
+      "reported": "21.85",
+      "recomputed": "21.84596",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Africa: table scalar 5",
+      "reported": "11.39",
+      "recomputed": "11.39381",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Africa: table scalar 6",
+      "reported": "31.47",
+      "recomputed": "31.47323",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Africa: table scalar 7",
+      "reported": "-4.26",
+      "recomputed": "-4.25837",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Africa: table scalar 8",
+      "reported": "5.64",
+      "recomputed": "5.641604",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B North America: table scalar 1",
+      "reported": "10.89",
+      "recomputed": "10.89396",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B North America: table scalar 2",
+      "reported": "37.47",
+      "recomputed": "37.46626",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B North America: table scalar 3",
+      "reported": "12.30",
+      "recomputed": "12.2991",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B North America: table scalar 4",
+      "reported": "40.47",
+      "recomputed": "40.46641",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B North America: table scalar 5",
+      "reported": "3.73",
+      "recomputed": "3.734452",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B North America: table scalar 6",
+      "reported": "13.05",
+      "recomputed": "13.05099",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B North America: table scalar 7",
+      "reported": "8.56",
+      "recomputed": "8.564651",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B North America: table scalar 8",
+      "reported": "8.95",
+      "recomputed": "8.94512",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B South America: table scalar 1",
+      "reported": "7.44",
+      "recomputed": "7.444394",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B South America: table scalar 2",
+      "reported": "34.26",
+      "recomputed": "34.26007",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B South America: table scalar 3",
+      "reported": "8.38",
+      "recomputed": "8.384673",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B South America: table scalar 4",
+      "reported": "37.22",
+      "recomputed": "37.21617",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B South America: table scalar 5",
+      "reported": "2.65",
+      "recomputed": "2.653452",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B South America: table scalar 6",
+      "reported": "9.15",
+      "recomputed": "9.152384",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B South America: table scalar 7",
+      "reported": "5.73",
+      "recomputed": "5.731221",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B South America: table scalar 8",
+      "reported": "8.19",
+      "recomputed": "8.193447",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Oceania: table scalar 1",
+      "reported": "6.39",
+      "recomputed": "6.387734",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Oceania: table scalar 2",
+      "reported": "17.24",
+      "recomputed": "17.24465",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Oceania: table scalar 3",
+      "reported": "7.06",
+      "recomputed": "7.056201",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Oceania: table scalar 4",
+      "reported": "18.51",
+      "recomputed": "18.51499",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Oceania: table scalar 5",
+      "reported": "2.98",
+      "recomputed": "2.981738",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Oceania: table scalar 6",
+      "reported": "7.54",
+      "recomputed": "7.544055",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Oceania: table scalar 7",
+      "reported": "4.07",
+      "recomputed": "4.074462",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Oceania: table scalar 8",
+      "reported": "4.12",
+      "recomputed": "4.11616",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Europe: table scalar 1",
+      "reported": "25.98",
+      "recomputed": "25.97918",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Europe: table scalar 2",
+      "reported": "61.57",
+      "recomputed": "61.56826",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Europe: table scalar 3",
+      "reported": "26.48",
+      "recomputed": "26.48466",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Europe: table scalar 4",
+      "reported": "64.95",
+      "recomputed": "64.95015",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Europe: table scalar 5",
+      "reported": "23.40",
+      "recomputed": "23.4036",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Europe: table scalar 6",
+      "reported": "41.28",
+      "recomputed": "41.28116",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Europe: table scalar 7",
+      "reported": "3.08",
+      "recomputed": "3.081067",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B Europe: table scalar 8",
+      "reported": "14.75",
+      "recomputed": "14.75033",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B British Empire: table scalar 1",
+      "reported": "60.39",
+      "recomputed": "60.38791",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B British Empire: table scalar 2",
+      "reported": "159.09",
+      "recomputed": "159.0926",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B British Empire: table scalar 3",
+      "reported": "65.47",
+      "recomputed": "65.4679",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B British Empire: table scalar 4",
+      "reported": "171.52",
+      "recomputed": "171.5215",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B British Empire: table scalar 5",
+      "reported": "34.50",
+      "recomputed": "34.50417",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B British Empire: table scalar 6",
+      "reported": "62.90",
+      "recomputed": "62.89659",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B British Empire: table scalar 7",
+      "reported": "30.96",
+      "recomputed": "30.96373",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B British Empire: table scalar 8",
+      "reported": "38.02",
+      "recomputed": "38.02158",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B UK: table scalar 1",
+      "reported": "12.11",
+      "recomputed": "12.1116",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B UK: table scalar 2",
+      "reported": "39.69",
+      "recomputed": "39.68966",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B UK: table scalar 3",
+      "reported": "14.26",
+      "recomputed": "14.2563",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B UK: table scalar 4",
+      "reported": "43.10",
+      "recomputed": "43.10037",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B UK: table scalar 5",
+      "reported": "1.18",
+      "recomputed": "1.183857",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B UK: table scalar 6",
+      "reported": "2.73",
+      "recomputed": "2.731221",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B UK: table scalar 7",
+      "reported": "13.07",
+      "recomputed": "13.07244",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "B UK: table scalar 8",
+      "reported": "9.44",
+      "recomputed": "9.438796",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Direct R translation of Table II estpost summary and grouped equal-variance t-test using the supplied bank_char_final.dta.",
+      "note": "The R statistic was rounded to the table’s printed precision for status comparison."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "N Panel A all",
+      "reported": "100",
+      "recomputed": "100",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translated group counts from supplied bank_char_final.dta; sample restrictions match Table II."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "N Panel A not failed",
+      "reported": "81",
+      "recomputed": "81",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translated group counts from supplied bank_char_final.dta; sample restrictions match Table II."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "N Panel A failed",
+      "reported": "19",
+      "recomputed": "19",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translated group counts from supplied bank_char_final.dta; sample restrictions match Table II."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "N Panel A difference",
+      "reported": "100",
+      "recomputed": "100",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translated group counts from supplied bank_char_final.dta; sample restrictions match Table II."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "N Panel B all",
+      "reported": "128",
+      "recomputed": "128",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translated group counts from supplied bank_char_final.dta; sample restrictions match Table II."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "N Panel B not failed",
+      "reported": "107",
+      "recomputed": "107",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translated group counts from supplied bank_char_final.dta; sample restrictions match Table II."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "N Panel B failed",
+      "reported": "21",
+      "recomputed": "21",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translated group counts from supplied bank_char_final.dta; sample restrictions match Table II."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "N Panel B difference",
+      "reported": "128",
+      "recomputed": "128",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translated group counts from supplied bank_char_final.dta; sample restrictions match Table II."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel A col 1 coefficient",
+      "reported": "0.0273",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel A col 1 SE",
+      "reported": "0.0358",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel A col 2 coefficient",
+      "reported": "0.171",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel A col 2 SE",
+      "reported": "0.0335",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel A col 3 coefficient",
+      "reported": "-0.0641",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel A col 3 SE",
+      "reported": "0.0394",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel A col 4 coefficient",
+      "reported": "-0.0723",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel A col 4 SE",
+      "reported": "0.0411",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel A col 5 coefficient",
+      "reported": "-0.0341",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel A col 5 SE",
+      "reported": "0.0262",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel A col 6 coefficient",
+      "reported": "-0.0612",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel A col 6 SE",
+      "reported": "0.0337",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel A col 7 coefficient",
+      "reported": "-0.131",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel A col 7 SE",
+      "reported": "0.0384",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel A N",
+      "reported": "122",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B col 1 coefficient",
+      "reported": "0.129",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B col 1 SE",
+      "reported": "0.0677",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B col 2 coefficient",
+      "reported": "-0.0269",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B col 2 SE",
+      "reported": "0.0246",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B col 3 coefficient",
+      "reported": "-0.0163",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B col 3 SE",
+      "reported": "0.0346",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B col 4 coefficient",
+      "reported": "-0.0387",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B col 4 SE",
+      "reported": "0.0353",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B col 5 coefficient",
+      "reported": "-0.00457",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B col 5 SE",
+      "reported": "0.0449",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B col 6 coefficient",
+      "reported": "0.0434",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B col 6 SE",
+      "reported": "0.0432",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B col 7 coefficient",
+      "reported": "0.00720",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B col 7 SE",
+      "reported": "0.0456",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B col 8 coefficient",
+      "reported": "-0.00946",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B col 8 SE",
+      "reported": "0.0408",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel B N",
+      "reported": "128",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C col 1 coefficient",
+      "reported": "0.0428",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C col 1 SE",
+      "reported": "0.0299",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C col 2 coefficient",
+      "reported": "-0.0563",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C col 2 SE",
+      "reported": "0.0357",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C col 3 coefficient",
+      "reported": "-0.0438",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C col 3 SE",
+      "reported": "0.0339",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C col 4 coefficient",
+      "reported": "0.0571",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C col 4 SE",
+      "reported": "0.0301",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C col 5 coefficient",
+      "reported": "-0.0624",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C col 5 SE",
+      "reported": "0.0344",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C col 6 coefficient",
+      "reported": "-0.0166",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C col 6 SE",
+      "reported": "0.0252",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C col 7 coefficient",
+      "reported": "-0.0446",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C col 7 SE",
+      "reported": "0.0360",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C col 8 coefficient",
+      "reported": "-0.0253",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C col 8 SE",
+      "reported": "0.0302",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed"
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Panel C N",
+      "reported": "128",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "effective sample size ports",
+      "reported": "27.55",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "effective sample size countries",
+      "reported": "28.05",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "balance joint F statistic",
+      "reported": "1.14",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "balance joint p value",
+      "reported": "0.32",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "column 1 coefficient",
+      "reported": "-0.606",
+      "recomputed": "-0.605573167115",
+      "status": "match",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "column 2 coefficient",
+      "reported": "-0.727",
+      "recomputed": "-0.727096194554",
+      "status": "match",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "column 3 coefficient",
+      "reported": "-0.724",
+      "recomputed": "-0.724180994098",
+      "status": "match",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "column 4 coefficient",
+      "reported": "-0.656",
+      "recomputed": "-0.630686738025",
+      "status": "discrepant",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "column 5 coefficient",
+      "reported": "-0.554",
+      "recomputed": "-0.505090191574",
+      "status": "discrepant",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "column 6 coefficient",
+      "reported": "-0.966",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped Table IV Poisson command includes i.post_country, which is not generated in xu_make_data.do or present in sr_ports.dta."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "column 7 coefficient",
+      "reported": "-0.592",
+      "recomputed": "-0.563986402892",
+      "status": "discrepant",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "column 1 SE",
+      "reported": "0.214",
+      "recomputed": "0.213819780878",
+      "status": "match",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "column 2 SE",
+      "reported": "0.251",
+      "recomputed": "0.250578326317",
+      "status": "match",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "column 3 SE",
+      "reported": "0.159",
+      "recomputed": "0.159098324067",
+      "status": "match",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "column 4 SE",
+      "reported": "0.210",
+      "recomputed": "0.212962886589",
+      "status": "discrepant",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "column 5 SE",
+      "reported": "0.204",
+      "recomputed": "0.207477774521",
+      "status": "discrepant",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "column 6 SE",
+      "reported": "0.169",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped Table IV Poisson command includes i.post_country, which is not generated in xu_make_data.do or present in sr_ports.dta."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "column 7 SE",
+      "reported": "0.208",
+      "recomputed": "0.209609026953",
+      "status": "discrepant",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "N col 1",
+      "reported": "108",
+      "recomputed": "108",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "N col 2",
+      "reported": "578",
+      "recomputed": "578",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "N col 3",
+      "reported": "578",
+      "recomputed": "578",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "N col 4",
+      "reported": "578",
+      "recomputed": "578",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "N col 5",
+      "reported": "494",
+      "recomputed": "494",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "N col 6",
+      "reported": "578",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped Table IV Poisson command references post_country, absent from supplied data and data-preparation script.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "N col 7",
+      "reported": "570",
+      "recomputed": "570",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Ports col 2",
+      "reported": "289",
+      "recomputed": "289",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Ports col 3",
+      "reported": "289",
+      "recomputed": "289",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Ports col 4",
+      "reported": "289",
+      "recomputed": "289",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Ports col 5",
+      "reported": "247",
+      "recomputed": "247",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Ports col 6",
+      "reported": "289",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped Table IV Poisson command references post_country, absent from supplied data and data-preparation script.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Ports col 7",
+      "reported": "289",
+      "recomputed": "289",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Clusters col 1",
+      "reported": "54",
+      "recomputed": "54",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Clusters col 2",
+      "reported": "54",
+      "recomputed": "54",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Clusters col 3",
+      "reported": "54",
+      "recomputed": "54",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Clusters col 4",
+      "reported": "54",
+      "recomputed": "54",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Clusters col 5",
+      "reported": "50",
+      "recomputed": "50",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Clusters col 6",
+      "reported": "54",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped Table IV Poisson command references post_country, absent from supplied data and data-preparation script.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Clusters col 7",
+      "reported": "54",
+      "recomputed": "54",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "narrative controlled coefficient",
+      "reported": "-0.66",
+      "recomputed": "-0.630686738025",
+      "status": "discrepant",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Same direct Table IV column 4 translation; see logs/tables_IV_V.log."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "mean port exposure",
+      "reported": "0.07",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "SD exposure",
+      "reported": "0.2",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "implied export change percent",
+      "reported": "4.6",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "number cotton countries",
+      "reported": "4",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "approx ports per country",
+      "reported": "5",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "ports dropped",
+      "reported": "8",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "ports total",
+      "reported": "289",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "dropped ports percent",
+      "reported": "2.8",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "effective countries",
+      "reported": "46",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "countries before singleton drop",
+      "reported": "54",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Oster bias ratio",
+      "reported": "40",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "country destinations coefficient",
+      "reported": "-0.592",
+      "recomputed": "-0.591746859822",
+      "status": "match",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "country destinations SE",
+      "reported": "0.196",
+      "recomputed": "0.196439577851",
+      "status": "match",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "country average ships coefficient",
+      "reported": "-0.0138",
+      "recomputed": "-0.0138263072924",
+      "status": "match",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "country average ships SE",
+      "reported": "0.299",
+      "recomputed": "0.299221005302",
+      "status": "match",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "port destinations coefficient",
+      "reported": "-0.409",
+      "recomputed": "-0.380312755990",
+      "status": "discrepant",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "port destinations SE",
+      "reported": "0.149",
+      "recomputed": "0.126150223508",
+      "status": "discrepant",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "entry coefficient",
+      "reported": "-0.303",
+      "recomputed": "-0.301533491781",
+      "status": "discrepant",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "entry SE",
+      "reported": "0.0846",
+      "recomputed": "0.090452450164",
+      "status": "discrepant",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "exit coefficient",
+      "reported": "-0.00227",
+      "recomputed": "-0.00483184063842",
+      "status": "discrepant",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "exit SE",
+      "reported": "0.169",
+      "recomputed": "0.166341842075",
+      "status": "discrepant",
+      "basis": "translated",
+      "note": "Compared at the precision printed in the article. Differences are reported as discrepancies; no model, sample or outcome was intentionally respecified.",
+      "fix": "Direct R translation of the shipped reghdfe/poisson specification using fixest, absorbed fixed effects, the stated weights where specified, and origin-country clustered standard errors. The preparation translation applied value-preserving field aliases and the generated *_gdp temporary-variable naming correction; details are in code/translated_pipeline.R and code/translated_tables_IV_V.R."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "N col 1",
+      "reported": "108",
+      "recomputed": "108",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "N col 2",
+      "reported": "108",
+      "recomputed": "108",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "N col 3",
+      "reported": "574",
+      "recomputed": "574",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "N col 4",
+      "reported": "331",
+      "recomputed": "331",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "N col 5",
+      "reported": "318",
+      "recomputed": "318",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Ports col 3",
+      "reported": "289",
+      "recomputed": "289",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Ports col 4",
+      "reported": "331",
+      "recomputed": "331",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Ports col 5",
+      "reported": "318",
+      "recomputed": "318",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Clusters col 1",
+      "reported": "54",
+      "recomputed": "54",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Clusters col 2",
+      "reported": "54",
+      "recomputed": "54",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Clusters col 3",
+      "reported": "54",
+      "recomputed": "54",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Clusters col 4",
+      "reported": "55",
+      "recomputed": "55",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Clusters col 5",
+      "reported": "54",
+      "recomputed": "54",
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated shipped pipeline stopped before analysis at an undefined variable in structural-gravity preparation.",
+      "fix": "Direct translation of the shipped sample construction. Reported N_true adds the singleton observations back as in the Stata code; R logs show estimation N and singleton removals."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "banks failed share (%)",
+      "reported": "16",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "multinational banks failed count",
+      "reported": "21",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "multinational banks total count",
+      "reported": "128",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "world export coverage (%)",
+      "reported": "98",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "data loan records (approximate count)",
+      "reported": "11000",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "short-run country export decline (%)",
+      "reported": "8.5",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "persistent annual importer spending decline (%)",
+      "reported": "18",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "structural postcrisis elasticity",
+      "reported": "-1.88",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "structural elasticity standard error",
+      "reported": "0.84",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "structural vs reduced-form magnitude increase (%)",
+      "reported": "37",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "benchmark aggregate export loss after two years (%)",
+      "reported": "7.9",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "benchmark average exposure (percentage points)",
+      "reported": "9",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "benchmark geodesic-distance elasticity",
+      "reported": "-1.2",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "implied trade-cost-induced export decline (%)",
+      "reported": "6.6",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "benchmark export value share (%)",
+      "reported": "8",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "non-British-bank mitigating share of baseline effect (%)",
+      "reported": "53",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "mean non-British banks available per port",
+      "reported": "0.5",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "alternative finance mitigation (%)",
+      "reported": "26",
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "This narrative statistic was not reached by the translated analysis. The supplied pipeline stops at the absent ssaggregate helper; the full long-run/benchmark analysis was not executed."
+    }
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "HighConfidence",
+  "findings": [
+    {
+      "id": "PIPE-001",
+      "severity": "P0",
+      "type": "defect",
+      "description": "The shipped data preparation calls custom ssaggregate for the port and country balance datasets, but the command implementation is absent from the supplied package, so main.do cannot complete.",
+      "evidence": "logs/translated_pipeline.log ends at ssaggregate after the trade and short-run panels have been generated.",
+      "suggested_fix": "Provide the exact ssaggregate implementation required by the shipped do-file."
+    },
+    {
+      "id": "ANAL-001",
+      "severity": "P1",
+      "type": "defect",
+      "description": "Several Table IV and V coefficients and standard errors do not recur in the direct R translation of the shipped models.",
+      "evidence": "logs/tables_IV_V.log: Table IV columns 4, 5, and 7 and Table V columns 3–5 differ from printed values at reported precision; see results.",
+      "suggested_fix": "Investigate the source data/version and exact Stata estimation behavior after restoring the missing helper; do not change model or sample to force a match."
+    },
+    {
+      "id": "DATA-001",
+      "severity": "P2",
+      "type": "normalization",
+      "description": "The provided data/source names differ for export value and event indicators; the source also omits _gdp suffixes in temporary gravity variables.",
+      "evidence": "The translation aliases expr_ff to expr_f, event_og to event and post_london to post_lon, and uses generated var1_gdp/var2_gdp names in the corresponding aggregations.",
+      "suggested_fix": "Align package field names with the script and correct these naming inconsistencies in the shipped files."
+    },
+    {
+      "id": "TAB-001",
+      "severity": "P2",
+      "type": "defect",
+      "description": "Table IV column 6 references post_country, absent from the supplied data and preparation script.",
+      "evidence": "logs/tables_IV_V.log records the Poisson column as not executable.",
+      "suggested_fix": "Supply the intended post_country variable or correct the shipped command to the intended generated variable."
+    }
+  ],
+  "limitations": [
+    "Stata was unavailable; analysis commands were translated directly into R.",
+    "Data preparation translated and executed through the port/country balance blocks; exact ssaggregate source is missing, so these balance data and dependent outputs were not computed.",
+    "The core short-run Table IV-V regression commands were translated and run. Table IV Poisson column 6 was not executable because post_country is not supplied or generated.",
+    "Tables I-III and other article tables/figures were not recomputed. Claims recorded for Tables I-V include each table scalar, but claims outside these exhibits are not exhaustively enumerated.",
+    "The reported discrepancies are from the R translation; model/provider and R package differences can contribute, and this check makes no judgement about scientific validity."
+  ],
+  "artifacts": {
+    "pipeline": "https://doi.org/10.7910/DVN/EIEQIS",
+    "console_log": "logs/translated_pipeline.log; logs/tables_IV_V.log"
+  },
+  "provenance": {
+    "raw_data": "https://doi.org/10.7910/DVN/EIEQIS; local package copy /tmp/scratch_bench_luna/packages/pkg-6165a5",
+    "analysis_script": "code/translated_pipeline.R"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  }
+}

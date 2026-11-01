@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "paper": {
+    "doi": "10.1038/s41562-023-01524-w",
+    "title": "Examining inequality in the time cost of waiting",
+    "year": 2023
+  },
+  "procedure": {
+    "version": "ReproCrowd benchmark prompt 0.1.2",
+    "uri": "https://forrtproject.github.io/reprocrowd/"
+  },
+  "engine": "Codex",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "rules_version": "crowd-repro v1.1.0",
+  "date": "2026-11-01",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "Linux (container; R 4.6.1)",
+    "language": "R",
+    "versions": {
+      "R": "4.6.1",
+      "Stata": "not installed"
+    },
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "haven": "2.5.5",
+          "jsonlite": "2.0.0"
+        },
+        "lockfile": "sessionInfo.txt; session-packages.csv"
+      }
+    ],
+    "lockfile": "sessionInfo.txt; session-packages.csv"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Weighted conditional means in Supplementary Table 1, panel B",
+      "exhibit": "Supplementary Table 1, panel B",
+      "page": 2
+    },
+    {
+      "id": "C2",
+      "claim": "Annualized gaps in waiting time under three service-use assumptions",
+      "exhibit": "Main text, section A",
+      "page": 2
+    },
+    {
+      "id": "C3",
+      "claim": "Reported sample sizes for supplementary gender figures",
+      "exhibit": "Supplementary Figures 1-3 notes",
+      "page": 4
+    },
+    {
+      "id": "C4",
+      "claim": "Descriptive means and sample sizes in Supplementary Table 2",
+      "exhibit": "Supplementary Table 2",
+      "page": 8
+    },
+    {
+      "id": "C5",
+      "claim": "Income coefficients reported in Supplementary Tables 3-5 and 13-15",
+      "exhibit": "Supplementary Tables 3-5, 13-15",
+      "page": 9
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "low-income Pr(waiting)",
+      "reported": 0.041,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The shipped master pipeline cannot reach the analysis stage: its raw ATUS roster, CPS, response, summary and activity inputs are absent. A supplied downstream atusall0319.dta is present, but the full shipped cleaning pipeline could not be reproduced."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "high-income Pr(waiting)",
+      "reported": 0.037,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Required raw ATUS inputs are absent; see finding DATA-001."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "low-income Pr(waiting | service use)",
+      "reported": 0.072,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Required raw ATUS inputs are absent; see finding DATA-001."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "high-income Pr(waiting | service use)",
+      "reported": 0.067,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Required raw ATUS inputs are absent; see finding DATA-001."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "low-income Pr(service use)",
+      "reported": 0.476,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Required raw ATUS inputs are absent; see finding DATA-001."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "high-income Pr(service use)",
+      "reported": 0.502,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Required raw ATUS inputs are absent; see finding DATA-001."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "low-income conditional wait minutes",
+      "reported": 44.6,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Required raw ATUS inputs are absent; see finding DATA-001."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "high-income conditional wait minutes",
+      "reported": 38.4,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Required raw ATUS inputs are absent; see finding DATA-001."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "observations, Pr(waiting)",
+      "reported": 64540,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Required raw ATUS inputs are absent; see finding DATA-001."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "observations, Pr(waiting | service use)",
+      "reported": 31131,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Required raw ATUS inputs are absent; see finding DATA-001."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "observations, Pr(service use)",
+      "reported": 64540,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Required raw ATUS inputs are absent; see finding DATA-001."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "observations, conditional wait minutes",
+      "reported": 2616,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Required raw ATUS inputs are absent; see finding DATA-001."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "annualized gap, assumption 1 (hours/year)",
+      "reported": 2.48,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The estimates depend on outputs from the unavailable analysis run."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "annualized gap, assumption 2 (hours/year)",
+      "reported": 3.88,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The estimates depend on outputs from the unavailable analysis run."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "annualized gap, assumption 3 (hours/year)",
+      "reported": 11.92,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The estimates depend on outputs from the unavailable analysis run."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "observations, all respondents",
+      "reported": 64540,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Required raw ATUS inputs are absent; see finding DATA-001."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "observations, parents",
+      "reported": 26585,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Required raw ATUS inputs are absent; see finding DATA-001."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "observations, all sample",
+      "reported": 210586,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Not recomputed because the master pipeline fails at the raw-data dependency."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "observations, low-income sample",
+      "reported": 49688,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Not recomputed because the master pipeline fails at the raw-data dependency."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "observations, high-income sample",
+      "reported": 14852,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Not recomputed because the master pipeline fails at the raw-data dependency."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "mean waiting time, all sample (minutes)",
+      "reported": 1.88,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Not recomputed because the master pipeline fails at the raw-data dependency."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "mean waiting time, low-income (minutes)",
+      "reported": 2.24,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Not recomputed because the master pipeline fails at the raw-data dependency."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "mean waiting time, high-income (minutes)",
+      "reported": 1.24,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "Not recomputed because the master pipeline fails at the raw-data dependency."
+    }
+  ],
+  "validation_status": "technical failure",
+  "confidence_level": "HighConfidence",
+  "findings": [
+    {
+      "id": "DATA-001",
+      "severity": "P0",
+      "type": "defect",
+      "description": "The master script starts with 02_cleaning.do, which requires five raw ATUS datasets missing from the supplied package: atusrost0319.dta, atuscps0319.dta, atusresp0319.dta, atussum0319.dta and atusact0319.dta. The only ATUS file supplied is the downstream atusall0319.dta intermediate.",
+      "evidence": "Run log logs/pipeline-run.log records the five absent inputs and exit status 2.",
+      "suggested_fix": "Provide the five raw ATUS datasets identified in the package README, or publish a self-contained reproducibility package with the required intermediate inputs."
+    },
+    {
+      "id": "DATA-002",
+      "severity": "P0",
+      "type": "defect",
+      "description": "The imputation script merges a federal poverty-threshold dataset at draft/nature/check/federal_poverty_threshold.dta, which is not present in the package. Its hard-coded relative path also does not match the supplied package structure.",
+      "evidence": "05_imputation.do line 77; package file inventory contains no poverty-threshold dataset.",
+      "suggested_fix": "Provide the threshold dataset and document its source and expected location."
+    },
+    {
+      "id": "CODE-001",
+      "severity": "P0",
+      "type": "normalization",
+      "description": "Stata is unavailable. The R translation attempted the master execution order and input loading check, then stopped before analysis because required source data were missing. No reported estimates were recomputed.",
+      "evidence": "logs/pipeline-run.log; code/translated_pipeline.R.",
+      "suggested_fix": "After supplying the required data, complete the direct R translation and rerun the full pipeline."
+    }
+  ],
+  "limitations": [
+    "This is a benchmark-mode reproduction check, not a robustness study; outcome_robustness is not checked.",
+    "The supplied article PDF is the author-formatted article and supplementary material. The claims listed here capture headline values and selected table values; a full cell-by-cell inventory of all numeric content was not completed. This is a limitation of this certificate.",
+    "No original code or data were uploaded. The local package was read only; only the reproduction bundle was written."
+  ],
+  "artifacts": {
+    "console_log": "logs/pipeline-run.log"
+  },
+  "provenance": {
+    "raw_data": "Local package /tmp/scratch_bench_luna/packages/pkg-3189d3/data (not redistributed)",
+    "processed_data": "atusall0319.dta supplied in local package; not redistributed",
+    "analysis_script": "Local package 01_master.do and 02_cleaning.do through 05_imputation.do; copies provided under code/source"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "technical failure",
+    "outcome_robustness": "not checked"
+  }
+}

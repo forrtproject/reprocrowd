@@ -1,0 +1,290 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "paper": {
+    "doi": "10.1086/719277",
+    "title": "The Dynamics and Spillovers of Management Interventions: Evidence from the Training within Industry Program",
+    "authors": [
+      "Nicola Bianchi",
+      "Michela Giorcelli"
+    ],
+    "year": 2022
+  },
+  "procedure": {
+    "version": "crowd-repro v1.1.0",
+    "uri": "https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md"
+  },
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "engine": "Codex",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "rules_version": "1.1.0",
+  "date": "2026-11-01",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS Tahoe 26.7 (arm64; Darwin 25.6.0)",
+    "language": "R",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "haven": "2.5.5",
+          "fixest": "0.14.2",
+          "survival": "3.8-6"
+        },
+        "lockfile": "sessionInfo.txt"
+      }
+    ],
+    "versions": {
+      "R": "4.6.1",
+      "Stata": "not installed"
+    },
+    "lockfile": "sessionInfo.txt"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "There are 11,575 applicant firms.",
+      "exhibit": "Abstract; data description"
+    },
+    {
+      "id": "C2",
+      "claim": "7% of applicants received all three J-modules.",
+      "exhibit": "Abstract; Figure 2"
+    },
+    {
+      "id": "C3",
+      "claim": "48% of applicants received no training.",
+      "exhibit": "Abstract; Figure 2"
+    },
+    {
+      "id": "C4",
+      "claim": "90% of trained firms survived at least 10 years.",
+      "exhibit": "Main text; Figure A3"
+    },
+    {
+      "id": "C5",
+      "claim": "64% of nontrained firms survived at least 10 years.",
+      "exhibit": "Main text; Figure A3"
+    },
+    {
+      "id": "C6",
+      "claim": "Training reduced the exit rate by 26 percentage points.",
+      "exhibit": "Main text; Table A4"
+    },
+    {
+      "id": "C7",
+      "claim": "Sales increased by 5.3% in the first post-training year.",
+      "exhibit": "Abstract; Figure 3A"
+    },
+    {
+      "id": "C8",
+      "claim": "Sales reached a peak increase of 21.7% in period 8.",
+      "exhibit": "Abstract; Figure 3A"
+    },
+    {
+      "id": "C9",
+      "claim": "Sales increased by 16% in period 10.",
+      "exhibit": "Abstract; Figure 3A"
+    },
+    {
+      "id": "C10",
+      "claim": "TFP increased by 6% in period 0.",
+      "exhibit": "Abstract; Figure 3B"
+    },
+    {
+      "id": "C11",
+      "claim": "TFP increased by 27% in period 10.",
+      "exhibit": "Abstract; Figure 3B"
+    },
+    {
+      "id": "C12",
+      "claim": "ROA increased by 11% by year 10.",
+      "exhibit": "Main text; Figure 3C"
+    },
+    {
+      "id": "C13",
+      "claim": "Applicant firms employed 40% of the US manufacturing workforce in 1939.",
+      "exhibit": "Main text"
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "There are 11,575 applicant firms.",
+      "reported": 11575,
+      "recomputed": 11575,
+      "status": "match",
+      "basis": "translated",
+      "note": "The supplied applicant-level histogram has 11,575 rows.",
+      "fix": "Direct R translation of the corresponding shipped Stata statements: haven reads the supplied .dta; fixest::feols implements reg/reghdfe with the same covariates, fixed effects, and cluster variable; Figure 3 percentage effects are exp(coefficient)-1. No data or model specification was changed. Figure 2 counts and Figure A3 survival calculations were also translated from their shipped Stata commands."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "7% of applicants received all three J-modules.",
+      "reported": 7,
+      "recomputed": 7.3348,
+      "status": "match",
+      "basis": "translated",
+      "note": "849 of 11,575 applicant records are labelled All; this is 7.3348%, which rounds to 7% at the printed precision.",
+      "fix": "Direct R translation of the corresponding shipped Stata statements: haven reads the supplied .dta; fixest::feols implements reg/reghdfe with the same covariates, fixed effects, and cluster variable; Figure 3 percentage effects are exp(coefficient)-1. No data or model specification was changed. Figure 2 counts and Figure A3 survival calculations were also translated from their shipped Stata commands."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "48% of applicants received no training.",
+      "reported": 48,
+      "recomputed": 47.6803,
+      "status": "match",
+      "basis": "translated",
+      "note": "5,519 of 11,575 applicant records are labelled No; this is 47.6803%, which rounds to 48%.",
+      "fix": "Direct R translation of the corresponding shipped Stata statements: haven reads the supplied .dta; fixest::feols implements reg/reghdfe with the same covariates, fixed effects, and cluster variable; Figure 3 percentage effects are exp(coefficient)-1. No data or model specification was changed. Figure 2 counts and Figure A3 survival calculations were also translated from their shipped Stata commands."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "90% of trained firms survived at least 10 years.",
+      "reported": 90,
+      "recomputed": 90.9091,
+      "status": "close",
+      "basis": "translated",
+      "note": "The translated Kaplan-Meier estimate is 90.91%; the text reports a coarse whole-percent figure consistent with truncation to 90%.",
+      "fix": "Direct R translation of the corresponding shipped Stata statements: haven reads the supplied .dta; fixest::feols implements reg/reghdfe with the same covariates, fixed effects, and cluster variable; Figure 3 percentage effects are exp(coefficient)-1. No data or model specification was changed. Figure 2 counts and Figure A3 survival calculations were also translated from their shipped Stata commands."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "64% of nontrained firms survived at least 10 years.",
+      "reported": 64,
+      "recomputed": 63.9065,
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated Kaplan-Meier estimate rounds to 64% at the printed precision.",
+      "fix": "Direct R translation of the corresponding shipped Stata statements: haven reads the supplied .dta; fixest::feols implements reg/reghdfe with the same covariates, fixed effects, and cluster variable; Figure 3 percentage effects are exp(coefficient)-1. No data or model specification was changed. Figure 2 counts and Figure A3 survival calculations were also translated from their shipped Stata commands."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Training reduced the exit rate by 26 percentage points.",
+      "reported": -26,
+      "recomputed": -25.6755,
+      "status": "match",
+      "basis": "translated",
+      "note": "The translated Table A4 coefficient is -0.2567548; it rounds to -26 percentage points.",
+      "fix": "Direct R translation of the corresponding shipped Stata statements: haven reads the supplied .dta; fixest::feols implements reg/reghdfe with the same covariates, fixed effects, and cluster variable; Figure 3 percentage effects are exp(coefficient)-1. No data or model specification was changed. Figure 2 counts and Figure A3 survival calculations were also translated from their shipped Stata commands."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Sales increased by 5.3% in the first post-training year.",
+      "reported": 5.3,
+      "recomputed": 5.2934,
+      "status": "match",
+      "basis": "translated",
+      "note": "Computed as 100*(exp(0.05157814)-1).",
+      "fix": "Direct R translation of the corresponding shipped Stata statements: haven reads the supplied .dta; fixest::feols implements reg/reghdfe with the same covariates, fixed effects, and cluster variable; Figure 3 percentage effects are exp(coefficient)-1. No data or model specification was changed. Figure 2 counts and Figure A3 survival calculations were also translated from their shipped Stata commands."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Sales reached a peak increase of 21.7% in period 8.",
+      "reported": 21.7,
+      "recomputed": 21.8051,
+      "status": "discrepant",
+      "basis": "translated",
+      "note": "Computed as 100*(exp(0.19702003)-1)=21.8051%; at one decimal this is 21.8%, not 21.7%. Deterministic difference; no reporting slip is established.",
+      "fix": "Direct R translation of the corresponding shipped Stata statements: haven reads the supplied .dta; fixest::feols implements reg/reghdfe with the same covariates, fixed effects, and cluster variable; Figure 3 percentage effects are exp(coefficient)-1. No data or model specification was changed. Figure 2 counts and Figure A3 survival calculations were also translated from their shipped Stata commands."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Sales increased by 16% in period 10.",
+      "reported": 16,
+      "recomputed": 16.09,
+      "status": "match",
+      "basis": "translated",
+      "note": "Computed as 100*(exp(0.14909968)-1), which rounds to 16% at the printed precision.",
+      "fix": "Direct R translation of the corresponding shipped Stata statements: haven reads the supplied .dta; fixest::feols implements reg/reghdfe with the same covariates, fixed effects, and cluster variable; Figure 3 percentage effects are exp(coefficient)-1. No data or model specification was changed. Figure 2 counts and Figure A3 survival calculations were also translated from their shipped Stata commands."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "TFP increased by 6% in period 0.",
+      "reported": 6,
+      "recomputed": 6.2339,
+      "status": "match",
+      "basis": "translated",
+      "note": "Computed as 100*(exp(0.06047359)-1), which rounds to 6%.",
+      "fix": "Direct R translation of the corresponding shipped Stata statements: haven reads the supplied .dta; fixest::feols implements reg/reghdfe with the same covariates, fixed effects, and cluster variable; Figure 3 percentage effects are exp(coefficient)-1. No data or model specification was changed. Figure 2 counts and Figure A3 survival calculations were also translated from their shipped Stata commands."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "TFP increased by 27% in period 10.",
+      "reported": 27,
+      "recomputed": 27.333,
+      "status": "match",
+      "basis": "translated",
+      "note": "Computed as 100*(exp(0.24153999)-1), which rounds to 27%.",
+      "fix": "Direct R translation of the corresponding shipped Stata statements: haven reads the supplied .dta; fixest::feols implements reg/reghdfe with the same covariates, fixed effects, and cluster variable; Figure 3 percentage effects are exp(coefficient)-1. No data or model specification was changed. Figure 2 counts and Figure A3 survival calculations were also translated from their shipped Stata commands."
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "ROA increased by 11% by year 10.",
+      "reported": 11,
+      "recomputed": 10.9555,
+      "status": "match",
+      "basis": "translated",
+      "note": "Computed as 100*(exp(0.10396506)-1), which rounds to 11%.",
+      "fix": "Direct R translation of the corresponding shipped Stata statements: haven reads the supplied .dta; fixest::feols implements reg/reghdfe with the same covariates, fixed effects, and cluster variable; Figure 3 percentage effects are exp(coefficient)-1. No data or model specification was changed. Figure 2 counts and Figure A3 survival calculations were also translated from their shipped Stata commands."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "Applicant firms employed 40% of the US manufacturing workforce in 1939.",
+      "reported": 40,
+      "recomputed": "not computed",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied package has applicant firm employment but not the US manufacturing workforce denominator used for this comparison."
+    }
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "Moderate",
+  "findings": [
+    {
+      "id": "RUN-001",
+      "severity": "P1",
+      "type": "defect",
+      "description": "The translated Figure 3 period-8 sales effect is 21.8% after converting the coefficient to a percentage, while the paper reports 21.7%.",
+      "evidence": "R coefficient 0.19702003; exp(beta)-1 = 21.8051%; paper prose: 21.7%.",
+      "suggested_fix": "Review the original Stata model output and the paper's percent conversion/display calculation."
+    },
+    {
+      "id": "SCOPE-001",
+      "severity": "P2",
+      "type": "defect",
+      "description": "This benchmark bundle translates and executes Figure 2, Figure 3, Figure A3A, Table A4 and Table 1 panel A only. It does not enumerate or check every numeric result in the article or execute all 43 master-listed do-files.",
+      "evidence": "code/run_translation.R contains these translated components; the supplied master file lists 43 figure/table scripts.",
+      "suggested_fix": "Translate and execute the remaining shipped scripts, then enumerate and check every numeric claim in the full article."
+    }
+  ],
+  "limitations": [
+    "The package contains prebuilt analysis .dta files, not upstream raw-data construction code; no upstream construction steps can be translated from absent source.",
+    "Coverage is partial: the abstract and main text values listed here were checked, along with Table 1 panel A computations. The remaining body text and all table/appendix results were not enumerated or checked. This certificate does not claim a complete paper-wide audit.",
+    "Stata was unavailable. R 4.6.1 and haven 2.5.5, fixest 0.14.2, and survival were used for a direct translation of selected shipped Stata analyses."
+  ],
+  "artifacts": {
+    "console_log": "logs/run_full_translation.txt"
+  },
+  "signatories": [
+    {
+      "name": "OpenAI Codex",
+      "role": "codechecker"
+    }
+  ],
+  "provenance": {
+    "raw_data": "Original local package: /tmp/scratch_bench_luna/packages/pkg-775f66/datasets/*.dta (not copied)",
+    "analysis_script": "code/run_translation.R"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  }
+}

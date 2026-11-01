@@ -1,0 +1,1041 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "rules_version": "1.1.0",
+  "paper": {
+    "doi": "10.1017/S0003055422000466",
+    "title": "Campaign Contributions and Roll-Call Voting in the U.S. House of Representatives: The Case of the Sugar Industry",
+    "authors": [
+      "Kevin Grier",
+      "Robin Grier",
+      "Gor Mkrtchian"
+    ],
+    "year": 2023
+  },
+  "procedure": {
+    "version": "0.1.2",
+    "uri": "https://forrtproject.github.io/reprocrowd/"
+  },
+  "engine": "Codex · rules: crowd-repro v1.1.0",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "date": "2026-11-01",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS (aarch64-apple-darwin23)",
+    "language": "R",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "haven": "2.5.5",
+          "sandwich": "3.1.3",
+          "ggplot2": "4.0.3"
+        },
+        "lockfile": "logs/sessionInfo.txt"
+      },
+      {
+        "name": "Python",
+        "version": "3.14.6",
+        "packages": {},
+        "lockfile": "Not used for analysis; Python standard library used only to assemble the certificate."
+      },
+      {
+        "name": "Stata",
+        "version": "15 (not installed)",
+        "packages": {
+          "marhis": "1.0 (not installed; source help inspected)"
+        },
+        "lockfile": "Not applicable; shipped Stata pipeline translated to R."
+      }
+    ],
+    "versions": {
+      "R": "4.6.1",
+      "Python": "3.14.6",
+      "Stata": "15 (not installed)",
+      "haven": "2.5.5",
+      "sandwich": "3.1.3",
+      "ggplot2": "4.0.3"
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Table 1 sugar contributions coefficient and p-value, district fixed effects",
+      "exhibit": "Table 1",
+      "page": 342
+    },
+    {
+      "id": "C2",
+      "claim": "Table 1 ACU coefficient and p-value, district fixed effects",
+      "exhibit": "Table 1",
+      "page": 342
+    },
+    {
+      "id": "C3",
+      "claim": "Table 1 Tenure coefficient and p-value, district fixed effects",
+      "exhibit": "Table 1",
+      "page": 342
+    },
+    {
+      "id": "C4",
+      "claim": "Table 1 Poverty rate coefficient and p-value, district fixed effects",
+      "exhibit": "Table 1",
+      "page": 342
+    },
+    {
+      "id": "C5",
+      "claim": "Table 1 Bachelor degree coefficient and p-value, district fixed effects",
+      "exhibit": "Table 1",
+      "page": 342
+    },
+    {
+      "id": "C6",
+      "claim": "Table 1 Median income coefficient and p-value, district fixed effects",
+      "exhibit": "Table 1",
+      "page": 342
+    },
+    {
+      "id": "C7",
+      "claim": "Table 1 Over 65 coefficient and p-value, district fixed effects",
+      "exhibit": "Table 1",
+      "page": 342
+    },
+    {
+      "id": "C8",
+      "claim": "Table 1 Agriculture committee coefficient and p-value, district fixed effects",
+      "exhibit": "Table 1",
+      "page": 342
+    },
+    {
+      "id": "C9",
+      "claim": "Table 1 Constant coefficient and p-value, district fixed effects",
+      "exhibit": "Table 1",
+      "page": 342
+    },
+    {
+      "id": "C10",
+      "claim": "Table 1 model fit and sample size",
+      "exhibit": "Table 1",
+      "page": 342
+    },
+    {
+      "id": "C12",
+      "claim": "Table 3 sugar contribution coefficient and p-value, time window 1",
+      "exhibit": "Table 3",
+      "page": 345
+    },
+    {
+      "id": "C13",
+      "claim": "Table 3 sugar contribution coefficient and p-value, time window 2",
+      "exhibit": "Table 3",
+      "page": 345
+    },
+    {
+      "id": "C14",
+      "claim": "Table 3 estimation sample sizes",
+      "exhibit": "Table 3",
+      "page": 345
+    },
+    {
+      "id": "C15",
+      "claim": "Descriptive or narrative numerical result not produced by the shipped do-file",
+      "exhibit": "Table 2",
+      "page": 344
+    },
+    {
+      "id": "C16",
+      "claim": "Descriptive or narrative numerical result not produced by the shipped do-file",
+      "exhibit": "Abstract / Data and Model",
+      "page": 340
+    },
+    {
+      "id": "C17",
+      "claim": "Descriptive or narrative numerical result not produced by the shipped do-file",
+      "exhibit": "Figure 1 discussion",
+      "page": 342
+    },
+    {
+      "id": "C18",
+      "claim": "Descriptive or narrative numerical result not produced by the shipped do-file",
+      "exhibit": "Results",
+      "page": 342
+    },
+    {
+      "id": "C19",
+      "claim": "The four Table 3 contribution coefficients are all significant at the 0.01 level, as stated in the main text.",
+      "exhibit": "Results text / Table 3",
+      "page": 345
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "Table 1 District fixed effects: sugar contributions coefficient",
+      "reported": -0.0006,
+      "recomputed": -0.000630727424985,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Table 1 District fixed effects: sugar contributions p-value",
+      "reported": 0.001,
+      "recomputed": 9.13305567006e-07,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Table 1 District fixed effects: ACU coefficient",
+      "reported": 0.2,
+      "recomputed": 0.202253163748,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Table 1 District fixed effects: ACU p-value",
+      "reported": 0.001,
+      "recomputed": 0.0030561862199,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Table 1 District fixed effects: Tenure coefficient",
+      "reported": -0.3,
+      "recomputed": -0.296875809015,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Table 1 District fixed effects: Tenure p-value",
+      "reported": 0.001,
+      "recomputed": 0.000824592370791,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 1 District fixed effects: Poverty rate coefficient",
+      "reported": 2.19,
+      "recomputed": 2.18997237218,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 1 District fixed effects: Poverty rate p-value",
+      "reported": 0.001,
+      "recomputed": 0.00816955946646,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 1 District fixed effects: Bachelor degree coefficient",
+      "reported": 1.2,
+      "recomputed": 1.20579538675,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 1 District fixed effects: Bachelor degree p-value",
+      "reported": 0.1,
+      "recomputed": 0.205459287368,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 1 District fixed effects: Median income coefficient",
+      "reported": 0.0001,
+      "recomputed": 0.000121712339955,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 1 District fixed effects: Median income p-value",
+      "reported": 0.67,
+      "recomputed": 0.771793669581,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 1 District fixed effects: Over 65 coefficient",
+      "reported": -1.88,
+      "recomputed": -1.88613884792,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 1 District fixed effects: Over 65 p-value",
+      "reported": 0.04,
+      "recomputed": 0.154516915247,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 1 District fixed effects: Agriculture committee coefficient",
+      "reported": -36.3,
+      "recomputed": -38.7219326369,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Translated estimate differs materially from the printed coefficient; R glm reported separation/convergence warnings. Stata was unavailable to distinguish engine/version behavior from another cause."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 1 District fixed effects: Agriculture committee p-value",
+      "reported": 0.001,
+      "recomputed": 1.49070911647e-53,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Table 1 District fixed effects: Constant coefficient",
+      "reported": -20.9,
+      "recomputed": -44.6314017593,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Fixed-effects intercept depends on the omitted id category; R and Stata reference-category normalization could not be confirmed without Stata."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Table 1 District fixed effects: Constant p-value",
+      "reported": 0.23,
+      "recomputed": 0.115416612129,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Table 1 Incumbent fixed effects: sugar contributions coefficient",
+      "reported": -0.0006,
+      "recomputed": -0.000392340137074,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C1",
+      "quantity": "Table 1 Incumbent fixed effects: sugar contributions p-value",
+      "reported": 0.001,
+      "recomputed": 0.0203773898417,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Table 1 Incumbent fixed effects: ACU coefficient",
+      "reported": 0.2,
+      "recomputed": 0.0598727568282,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "Table 1 Incumbent fixed effects: ACU p-value",
+      "reported": 0.001,
+      "recomputed": 0.677912530401,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Table 1 Incumbent fixed effects: Tenure coefficient",
+      "reported": -0.3,
+      "recomputed": -1.43274609399,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "Table 1 Incumbent fixed effects: Tenure p-value",
+      "reported": 0.001,
+      "recomputed": 0.00737194615005,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 1 Incumbent fixed effects: Poverty rate coefficient",
+      "reported": 2.19,
+      "recomputed": 2.24581256855,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "Table 1 Incumbent fixed effects: Poverty rate p-value",
+      "reported": 0.001,
+      "recomputed": 0.130648718447,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 1 Incumbent fixed effects: Bachelor degree coefficient",
+      "reported": 1.2,
+      "recomputed": 0.591756476829,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "Table 1 Incumbent fixed effects: Bachelor degree p-value",
+      "reported": 0.1,
+      "recomputed": 0.403148561691,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 1 Incumbent fixed effects: Median income coefficient",
+      "reported": 0.0001,
+      "recomputed": 0.000651378529926,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "Table 1 Incumbent fixed effects: Median income p-value",
+      "reported": 0.67,
+      "recomputed": 0.393864577397,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 1 Incumbent fixed effects: Over 65 coefficient",
+      "reported": -1.88,
+      "recomputed": -0.38218815909,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "Table 1 Incumbent fixed effects: Over 65 p-value",
+      "reported": 0.04,
+      "recomputed": 0.891176483743,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 1 Incumbent fixed effects: Agriculture committee coefficient",
+      "reported": -36.3,
+      "recomputed": -42.1053222155,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Translated estimate differs materially from the printed coefficient; R glm reported separation/convergence warnings. Stata was unavailable to distinguish engine/version behavior from another cause."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "Table 1 Incumbent fixed effects: Agriculture committee p-value",
+      "reported": 0.001,
+      "recomputed": 2.28127250628e-11,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Table 1 Incumbent fixed effects: Constant coefficient",
+      "reported": -20.9,
+      "recomputed": -76.8376064364,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Fixed-effects intercept depends on the omitted id category; R and Stata reference-category normalization could not be confirmed without Stata."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "Table 1 Incumbent fixed effects: Constant p-value",
+      "reported": 0.23,
+      "recomputed": 0.0599952637976,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Table 1 district observations",
+      "reported": 186,
+      "recomputed": 186,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "Table 1 district pseudo-R2",
+      "reported": 0.745,
+      "recomputed": 0.744721303255,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Table 1 incumbent observations",
+      "reported": 106,
+      "recomputed": 106,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "Table 1 incumbent pseudo-R2",
+      "reported": 0.721,
+      "recomputed": 0.72075857954,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "Table 3 window 1 column 1 contribution coefficient",
+      "reported": -0.0006,
+      "recomputed": -0.000574958953346,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "Table 3 window 1 column 1 contribution p-value",
+      "reported": 0.001,
+      "recomputed": 0.000794568200885,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "Table 3 window 1 column 2 contribution coefficient",
+      "reported": -0.0005,
+      "recomputed": -0.00056473245378,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "Table 3 window 1 column 2 contribution p-value",
+      "reported": 0.001,
+      "recomputed": 0.0207600450632,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "Table 3 window 2 column 1 contribution coefficient",
+      "reported": -0.0006,
+      "recomputed": -0.000596474265907,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "Table 3 window 2 column 1 contribution p-value",
+      "reported": 0.001,
+      "recomputed": 0.000126534801273,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "Table 3 window 2 column 2 contribution coefficient",
+      "reported": -0.0003,
+      "recomputed": -0.000317980703424,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "Table 3 window 2 column 2 contribution p-value",
+      "reported": 0.003,
+      "recomputed": 0.0500758118487,
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable.",
+      "note": "Recomputed p-value does not equal the printed value and is outside the 1% tolerance."
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "Table 3 calendar-year window observations",
+      "reported": 186,
+      "recomputed": 186,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "Table 3 incumbent observations",
+      "reported": 106,
+      "recomputed": 106,
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the supplied Stata commands command by command into R: haven import, generated variables, Stata logit with id indicators and robust covariance, and both sample filters. Stata was unavailable."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "Table 2 same-incumbent panel total cases",
+      "reported": 53,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "Table 2 same incumbent Aye-to-No cases",
+      "reported": 47,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "Table 2 same incumbent Aye-to-No contribution change (%)",
+      "reported": 67,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "Table 2 same incumbent No-to-Aye cases",
+      "reported": 6,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "Table 2 same incumbent No-to-Aye contribution change (%)",
+      "reported": -80,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "Table 2 different-incumbent panel total cases",
+      "reported": 40,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "Table 2 different incumbent Aye-to-No cases",
+      "reported": 32,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "Table 2 different incumbent Aye-to-No contribution change (%)",
+      "reported": 348,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "Table 2 different incumbent No-to-Aye cases",
+      "reported": 8,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "Table 2 different incumbent No-to-Aye contribution change (%)",
+      "reported": -38,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "Table 2 same-party cases in different-incumbent panel",
+      "reported": 29,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Abstract and main-text vote-switching districts",
+      "reported": 93,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Abstract and main-text same-incumbent vote-switching cases",
+      "reported": 53,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Main-text contribution increase in real terms (%)",
+      "reported": "more than 50%",
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Narrative cases where new incumbent switched against reform",
+      "reported": 32,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Narrative same-party cases among those 32",
+      "reported": 29,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Narrative contribution increase among those 32 (%)",
+      "reported": "around 300%",
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Narrative contribution increase among 53 same incumbent changers (%)",
+      "reported": 67,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Narrative contribution increase among same incumbent changers (two-thirds, %)",
+      "reported": 66.7,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "Figure 1 contribution value ($)",
+      "reported": 15500,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "Figure 1 predicted probability at zero contributions",
+      "reported": 0.75,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "Figure 1 predicted probability at $15,500 contributions",
+      "reported": 0.2,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "Figure 2 ideology score, moderate Democrat",
+      "reported": 20,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "Figure 2 predicted probability, score 20",
+      "reported": 0.25,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "Figure 2 ideology score, moderate Republican",
+      "reported": 70,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "Figure 2 predicted probability, score 70",
+      "reported": 0.65,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "Figure 3 legislator tenure in terms",
+      "reported": 9,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "Figure 3 predicted probability at nine terms",
+      "reported": 0.35,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C18",
+      "quantity": "Candy company contributions to incumbents in 2018 ($)",
+      "reported": 152900,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C18",
+      "quantity": "Sugar industry contributions to incumbents in 2018 ($)",
+      "reported": 5239896,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C18",
+      "quantity": "Annual consumer cost per person ($)",
+      "reported": "roughly $10",
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Vote-switching districts reported in the Data and Model section",
+      "reported": 93,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Vote-switching districts reported again in the Results section",
+      "reported": 93,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Same-incumbent vote-switching cases reported in the Data and Model section",
+      "reported": 53,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Same-incumbent vote-switching cases reported again in the Results section",
+      "reported": 53,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Aye-to-No cases among the 53 same-incumbent changers, narrative repetition",
+      "reported": 47,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this value. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "Additional mention of the 53 vote-switching members in the data description",
+      "reported": 53,
+      "recomputed": "not produced by supplied code",
+      "status": "not_checkable",
+      "basis": "not_computed",
+      "note": "The supplied do-file contains no command producing this descriptive count. Per the ReproCrowd rule pack, no new analysis was written to generate it."
+    },
+    {
+      "claim_id": "C19",
+      "quantity": "Main-text claim that every Table 3 coefficient is significant at p < 0.01",
+      "reported": "all four p-values < 0.01",
+      "recomputed": "translated p-values 0.000821, 0.020760, 0.000132, 0.050076; two are not below 0.01",
+      "status": "discrepant",
+      "basis": "translated",
+      "fix": "Same direct R translation as Table 3 results in code/translated_pipeline.R; the four values are the translated robust Wald p-values for the four Table 3 contribution coefficients."
+    }
+  ],
+  "validation_status": "computational issues",
+  "confidence_level": "Moderate",
+  "findings": [
+    {
+      "id": "COMP-001",
+      "severity": "P1",
+      "type": "defect",
+      "description": "The translated pipeline reproduced the estimation counts and pseudo-R2 at printed precision, but some coefficients and most displayed p-values did not recur at the rule-pack tolerance. The agriculture-committee and fixed-effects constant coefficients also differ.",
+      "evidence": "See Table 1 and Table 3 result-by-result entries; R run logged warnings about fitted probabilities 0/1 and near-singular HC1 covariance.",
+      "suggested_fix": "Run the original do-file in Stata 15 to determine whether remaining differences reflect translation, Stata estimation behavior, or reporting."
+    },
+    {
+      "id": "COMP-002",
+      "severity": "P2",
+      "type": "defect",
+      "description": "The supplied do-file does not compute Table 2 or several numerical descriptions and predicted probabilities in the text.",
+      "evidence": "The do-file contains data preparation, six logit commands, and three marhis commands; no code for Table 2 or the listed narrative summaries.",
+      "suggested_fix": "Provide the original analysis code for these descriptive results if they are to be computationally checked."
+    }
+  ],
+  "limitations": [
+    "Stata 15 is unavailable; all reported computation uses a direct R translation and results have basis translated.",
+    "The marhis plots were translated from the paper footnote description (50 equally spaced values, other covariates observed) and are approximate; the original Stata package could not be run.",
+    "Original code/data were not copied or uploaded. The translated script reads the local package path supplied in the task.",
+    "Table 2 and narrative statistics not generated by supplied code are recorded as not_checkable rather than recomputed with newly written analysis."
+  ],
+  "artifacts": {
+    "console_log": "logs/run_03.txt"
+  },
+  "signatories": [
+    {
+      "name": "Codex (AI-generated computational check)",
+      "role": "codechecker"
+    }
+  ],
+  "provenance": {
+    "raw_data": "https://doi.org/10.7910/DVN/2IFZR9",
+    "analysis_script": "APSR Replication Codes.do (local user-provided package; translated to code/translated_pipeline.R)"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computational issues",
+    "outcome_robustness": "not checked"
+  }
+}

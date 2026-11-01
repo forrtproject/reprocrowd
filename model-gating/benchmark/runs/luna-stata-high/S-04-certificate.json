@@ -1,0 +1,512 @@
+{
+  "schema_version": "1.1",
+  "certification_id": "RC-0000-000",
+  "repro_standard_version": "crowd-repro v1.1.0",
+  "paper": {
+    "doi": "10.1017/S0003055422000119",
+    "title": "Does Competence Make Citizens Tolerate Undemocratic Behavior?",
+    "authors": [
+      "Kristian Vrede Skaaning Frederiksen"
+    ],
+    "year": 2022
+  },
+  "procedure": {
+    "version": "ReproCrowd benchmark prompt 0.1.2",
+    "uri": "https://forrtproject.github.io/reprocrowd/"
+  },
+  "engine": "OpenAI Codex",
+  "model": {
+    "name": "GPT-6",
+    "provider": "OpenAI"
+  },
+  "rules_version": "crowd-repro v1.1.0",
+  "date": "2026-11-01",
+  "ai_generated": true,
+  "github_url": "https://forrtproject.github.io/reprocrowd/",
+  "environment": {
+    "os": "macOS Tahoe 26.7 (aarch64-apple-darwin23)",
+    "language": "R",
+    "programs": [
+      {
+        "name": "R",
+        "version": "4.6.1",
+        "packages": {
+          "readstata13": "0.11.0",
+          "sandwich": "3.1-3",
+          "zoo": "1.9-1",
+          "Rcpp": "1.1.2",
+          "lattice": "0.22-9"
+        },
+        "lockfile": "sessionInfo.txt"
+      }
+    ],
+    "lockfile": "sessionInfo.txt"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "The study sample exceeded 14,000 respondents.",
+      "exhibit": "Abstract/introduction",
+      "page": 1147
+    },
+    {
+      "id": "C2",
+      "claim": "The study included more than 260,000 candidate observations.",
+      "exhibit": "Abstract/introduction",
+      "page": 1147
+    },
+    {
+      "id": "C3",
+      "claim": "The low endpoint of respondents per country was 2,481.",
+      "exhibit": "Research design and data",
+      "page": 1148
+    },
+    {
+      "id": "C4",
+      "claim": "The high endpoint of respondents per country was 3,159.",
+      "exhibit": "Research design and data",
+      "page": 1148
+    },
+    {
+      "id": "C5",
+      "claim": "The low endpoint of candidate observations per country was 47,221.",
+      "exhibit": "Figure 1 note",
+      "page": 1151
+    },
+    {
+      "id": "C6",
+      "claim": "The high endpoint of candidate observations per country was 60,106.",
+      "exhibit": "Figure 1 note",
+      "page": 1151
+    },
+    {
+      "id": "C7",
+      "claim": "The pooled sample had 14,058 respondents.",
+      "exhibit": "Figure 1 note",
+      "page": 1151
+    },
+    {
+      "id": "C8",
+      "claim": "The pooled sample had 267,795 candidate observations.",
+      "exhibit": "Figure 1 note",
+      "page": 1151
+    },
+    {
+      "id": "C9",
+      "claim": "Undemocratic behavior effects ranged down to −0.20.",
+      "exhibit": "Results text",
+      "page": 1150
+    },
+    {
+      "id": "C10",
+      "claim": "Undemocratic behavior effects ranged up to −0.06.",
+      "exhibit": "Results text",
+      "page": 1150
+    },
+    {
+      "id": "C11",
+      "claim": "A one-unit competence increase had effects of approximately 0.14–0.15; lower endpoint.",
+      "exhibit": "Results text",
+      "page": 1150
+    },
+    {
+      "id": "C12",
+      "claim": "A one-unit competence increase had effects of approximately 0.14–0.15; upper endpoint.",
+      "exhibit": "Results text",
+      "page": 1150
+    },
+    {
+      "id": "C13",
+      "claim": "Average undemocratic-behavior effects were significant at p < .001 in each country.",
+      "exhibit": "Results text",
+      "page": 1150
+    },
+    {
+      "id": "C14",
+      "claim": "Average competence effects were significant at p < .001 in each country.",
+      "exhibit": "Results text",
+      "page": 1150
+    },
+    {
+      "id": "C15",
+      "claim": "Differences between average and very competent candidate effects were insignificant in all five countries.",
+      "exhibit": "Results text/Figure 1",
+      "page": 1150
+    },
+    {
+      "id": "C16",
+      "claim": "Very incompetent candidates were sanctioned less than average-competence candidates only in the Czech Republic.",
+      "exhibit": "Results text/Figure 1",
+      "page": 1150
+    },
+    {
+      "id": "C17",
+      "claim": "In the Czech Republic, the very-incompetent contrast was 0.13 (95% CI 0.05, 0.21; p = .001).",
+      "exhibit": "Results text/Figure 1",
+      "page": 1150
+    }
+  ],
+  "results": [
+    {
+      "claim_id": "C1",
+      "quantity": "respondents (abstract, lower bound)",
+      "reported": "> 14,000",
+      "recomputed": "14,058",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C2",
+      "quantity": "candidate observations (abstract, lower bound)",
+      "reported": "> 260,000",
+      "recomputed": "267,795",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C3",
+      "quantity": "country respondent-count range, lower endpoint",
+      "reported": "2,481",
+      "recomputed": "2481",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C4",
+      "quantity": "country respondent-count range, upper endpoint",
+      "reported": "3,159",
+      "recomputed": "3159",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C5",
+      "quantity": "country candidate-count range, lower endpoint",
+      "reported": "47,221",
+      "recomputed": "47221",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C6",
+      "quantity": "country candidate-count range, upper endpoint",
+      "reported": "60,106",
+      "recomputed": "60106",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C7",
+      "quantity": "pooled respondent count",
+      "reported": "14,058",
+      "recomputed": "14058",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C8",
+      "quantity": "pooled candidate count",
+      "reported": "267,795",
+      "recomputed": "267795",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C9",
+      "quantity": "undemocratic-behavior effect, most negative country endpoint",
+      "reported": "−0.20",
+      "recomputed": "-0.204320",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C10",
+      "quantity": "undemocratic-behavior effect, least negative country endpoint",
+      "reported": "−0.06",
+      "recomputed": "-0.055473",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C11",
+      "quantity": "competence unit-effect range, lower endpoint",
+      "reported": "≈0.14",
+      "recomputed": "0.138066",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C12",
+      "quantity": "competence unit-effect range, upper endpoint",
+      "reported": "≈0.15",
+      "recomputed": "0.149239",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "undemocratic-behavior average-effect p value (Czech Republic)",
+      "reported": "< 0.001",
+      "recomputed": "< 0.001",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "undemocratic-behavior average-effect p value (Mexico)",
+      "reported": "< 0.001",
+      "recomputed": "< 0.001",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "undemocratic-behavior average-effect p value (South Korea)",
+      "reported": "< 0.001",
+      "recomputed": "< 0.001",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "undemocratic-behavior average-effect p value (United Kingdom)",
+      "reported": "< 0.001",
+      "recomputed": "< 0.001",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C13",
+      "quantity": "undemocratic-behavior average-effect p value (United States)",
+      "reported": "< 0.001",
+      "recomputed": "< 0.001",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "competence unit-effect p value (Czech Republic)",
+      "reported": "< 0.001",
+      "recomputed": "< 0.001",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "competence unit-effect p value (Mexico)",
+      "reported": "< 0.001",
+      "recomputed": "< 0.001",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "competence unit-effect p value (South Korea)",
+      "reported": "< 0.001",
+      "recomputed": "< 0.001",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "competence unit-effect p value (United Kingdom)",
+      "reported": "< 0.001",
+      "recomputed": "< 0.001",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C14",
+      "quantity": "competence unit-effect p value (United States)",
+      "reported": "< 0.001",
+      "recomputed": "< 0.001",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "competent (5) vs average (3) treatment-effect contrast p value (Czech Republic)",
+      "reported": "not significant",
+      "recomputed": "p = 0.123896",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "competent (5) vs average (3) treatment-effect contrast p value (Mexico)",
+      "reported": "not significant",
+      "recomputed": "p = 0.579308",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "competent (5) vs average (3) treatment-effect contrast p value (South Korea)",
+      "reported": "not significant",
+      "recomputed": "p = 0.454150",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "competent (5) vs average (3) treatment-effect contrast p value (United Kingdom)",
+      "reported": "not significant",
+      "recomputed": "p = 0.250971",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C15",
+      "quantity": "competent (5) vs average (3) treatment-effect contrast p value (United States)",
+      "reported": "not significant",
+      "recomputed": "p = 0.692281",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "very-incompetent (1) vs average (3) contrast (Czech Republic)",
+      "reported": "p = 0.001",
+      "recomputed": "b = 0.128487; p = 0.001205",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "very-incompetent (1) vs average (3) contrast (Mexico)",
+      "reported": "not significant",
+      "recomputed": "b = -0.009331; p = 0.824393",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "very-incompetent (1) vs average (3) contrast (South Korea)",
+      "reported": "not significant",
+      "recomputed": "b = 0.051142; p = 0.200038",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "very-incompetent (1) vs average (3) contrast (United Kingdom)",
+      "reported": "not significant",
+      "recomputed": "b = 0.023830; p = 0.524371",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C16",
+      "quantity": "very-incompetent (1) vs average (3) contrast (United States)",
+      "reported": "not significant",
+      "recomputed": "b = 0.008199; p = 0.844177",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "Czech very-incompetent vs average interaction coefficient",
+      "reported": "0.13",
+      "recomputed": "0.128487",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "Czech interaction 95% CI lower endpoint",
+      "reported": "0.05",
+      "recomputed": "0.050757",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "Czech interaction 95% CI upper endpoint",
+      "reported": "0.21",
+      "recomputed": "0.206217",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    },
+    {
+      "claim_id": "C17",
+      "quantity": "Czech interaction p value",
+      "reported": "0.001",
+      "recomputed": "0.001205",
+      "status": "match",
+      "basis": "translated",
+      "fix": "Translated the corresponding shipped Stata primary-analysis command to R; the supplied final dataset was read directly. The Stata factor reference category (competence 3) and respondent-clustered standard errors were retained."
+    }
+  ],
+  "validation_status": "computationally reproducible",
+  "confidence_level": "HighConfidence",
+  "findings": [
+    {
+      "id": "DATA-001",
+      "severity": "P2",
+      "type": "defect",
+      "description": "Data_prep.do imports five country TSV files from a Windows U: drive, but those raw survey exports are absent from the provided package. The supplied final dataset.dta is present and reproduces the article’s primary reported outputs. The raw-to-final preparation stage could not be executed or translated in full in this run.",
+      "evidence": "Data_prep.do imports ukmain.tsv, usmain.tsv, mxmain.tsv, skmain.tsv, and czmain.tsv; package contains dataset.dta but none of those TSVs.",
+      "suggested_fix": "Provide the five original TSVs and a platform-neutral path configuration, then execute and translate the complete preparation stage."
+    }
+  ],
+  "limitations": [
+    "Only the primary analysis block underlying the article’s reported numerical results was translated and executed; the full 2,755-line Data_prep.do and all auxiliary commands in Analysis.do were not translated. The authors’ final dataset was used as supplied.",
+    "R 4.6.1 with sandwich HC1 cluster covariance and cluster-count t reference degrees of freedom was used as the direct translation of Stata respondent-clustered OLS; no Stata executable was available for cross-engine comparison."
+  ],
+  "artifacts": {
+    "pipeline": "https://forrtproject.github.io/reprocrowd/",
+    "console_log": "logs/analysis-primary.txt"
+  },
+  "signatories": [
+    {
+      "name": "OpenAI Codex (GPT-6)",
+      "role": "codechecker"
+    }
+  ],
+  "provenance": {
+    "raw_data": "Provided package: /tmp/scratch_bench_luna/packages/pkg-984353/dataset.dta; raw country TSV exports referenced by Data_prep.do were not included.",
+    "processed_data": "Provided final dataset.dta (not copied).",
+    "analysis_script": "code/analysis.R"
+  },
+  "flora": {
+    "entry_type": "reproduction",
+    "ai_generated": true,
+    "outcome_computational": "computationally reproducible",
+    "outcome_robustness": "not checked"
+  }
+}
