@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ReproCrowd benchmark specification (draft 0.3)</title>
+<title>ReproCrowd benchmark specification (draft 0.4)</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📐%3C/text%3E%3C/svg%3E">
 <style>
   :root { --ink:#1d2433; --muted:#5b6475; --line:#e3e6ec; --accent:#2f6f8f; --warn:#a4561b; --ok:#2e7d4f; --bg:#fbfbfa; --sans:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif; }
@@ -41,32 +41,41 @@
   .pipe .st b { display:block; font-size:14.5px; margin-bottom:4px; }
   .pipe .ar { flex:0 0 22px; display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:18px; }
   .pipe code { font-size: 12.5px; }
-  @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } .pipe .ar { display:none; } .pipe { gap:8px; } }
+  @media (max-width: 700px) { table { display:block; overflow-x:auto; } .grid { grid-template-columns: 1fr; } .pipe .ar { display:none; } .pipe { gap:8px; } }
 </style>
 </head>
 <body>
 <main>
 <h1>ReproCrowd benchmark: what it measures and how it runs</h1>
-<p class="sub">Specification draft 0.3 · 1 November 2026 · reviewed with GPT-6.1 Sol and Gemini 4 Argon · <a href="https://github.com/forrtproject/reprocrowd/blob/main/model-gating/benchmark/SPEC.md">full specification</a></p>
+<p class="sub">Specification draft 0.4 · 1 November 2026 · agreed with GPT-6.1 Sol and Gemini 4 Argon · <a href="https://github.com/forrtproject/reprocrowd/blob/main/model-gating/benchmark/SPEC.md">full specification</a></p>
 
-<p class="lead">The benchmark tests whether a model can identify a paper's key claims, reproduce them and judge them correctly. It has two tracks: with the authors' code, and blinded without it. Each track gets one end-to-end score. A claim earns credit only when the model shows the computation behind it, not just the right label. Each stage reads and writes fixed file formats, so any model, prompt or sequence of steps can be swapped in and scored the same way. Sol agrees with draft 0.3: its round 2 blocking changes are applied. ARGON_SUMMARY</p>
+<p class="lead">The benchmark tests whether a model can identify a paper's key claims, reproduce them and judge them correctly. It has two tracks: with the authors' code, and blinded without it. Each track gets one end-to-end score. A claim earns credit only when the model shows the computation behind it, not just the right label. Each stage reads and writes fixed file formats, so any model, prompt or sequence of steps can be swapped in and scored the same way. After three review rounds, Sol and Argon both agree with draft 0.4 as written. Seven of its rules are new choices that you have not seen yet.</p>
 
 <h2>Needs your decision</h2>
 
 <div class="decision">
-<h3><span class="tag warn">before freezing</span>1. Four rules that Claude and Sol proposed, not yet seen by you</h3>
+<h3><span class="tag warn">before freezing</span>1. Seven rules that Claude, Sol and Argon agreed, not yet seen by you</h3>
 <ol>
-<li><b>Variation first.</b> If an analysis is not exactly reproducible (for example an unseeded bootstrap), its result gets <code>within_variation</code>, even when one run happens to print the reported value. The aim is to reward noticing nondeterminism consistently. With the original seed and software versions recovered, the normal <code>match</code> rules apply.</li>
+<li><b>Variation first.</b> If an analysis is not exactly reproducible (for example an unseeded bootstrap), its result gets <code>within_variation</code>, even when one run happens to print the reported value. The aim is to reward noticing nondeterminism consistently. If a model recovers the original seed and versions, the normal rules apply and earn credit too.</li>
 <li><b>Paper outcome.</b>
   <ul>
   <li><em>Computationally reproducible:</em> every assessed result is <code>match</code>, <code>close</code> or <code>within_variation</code>. Reporting slips such as typos are listed, but the computation does not count as failed.</li>
   <li><em>Technical failure:</em> blockers prevent every primary computation.</li>
   <li><em>Computational issues:</em> anything in between.</li>
   </ul></li>
-<li><b>Paper outcome in the headline.</b> A wrong paper outcome halves that paper's score. Sol first proposed setting it to zero, then agreed that halving keeps the claim work visible.</li>
+<li><b>Paper outcome in the headline.</b> A wrong paper outcome halves that paper's score.</li>
 <li><b>Fabrication gate.</b> Two or more values that the model says the paper prints, but which it does not, give the paper a score of 0. One instance is recorded but not penalised.</li>
+<li><b>Evidence for a reporting slip must be in the package.</b> Models may not read reproduction reports, so a typo that only a human report identifies cannot justify <code>close</code>, for the model or in gold. The evidence must be:
+  <ul>
+  <li>an erratum in the package;</li>
+  <li>a donor value visible in the executed output; or</li>
+  <li>a single-character slip whose companion statistics match.</li>
+  </ul>
+  Consequence: G-22 C2 and C3 become <code>discrepant</code>, because the intercept and its interval differ together. Sol checked the published table and the pinned output.</li>
+<li><b>Rendered outputs removed from every package, not just twins.</b> Otherwise a package without outputs would give a twin away, and a model could copy values from shipped tables instead of computing them. Code that exists only inside a rendered document (as in G-22) is extracted first.</li>
+<li><b>At most 15 claims per certificate.</b> Without a cap, listing every number in a paper would reach full recall without any selection. Gold has 5 to 8 claims per paper, and 15 is a judgement, not a calibrated figure.</li>
 </ol>
-<p class="rec">Recommendation: accept all four. The one with real consequences is rule 2: G-07 would probably move from computational issues to computationally reproducible, because its only discrepancy is now a typo identified by the source report.</p>
+<p class="rec">Recommendation: accept all seven. The ones with visible consequences are rules 2 and 5. Under rule 2, G-07 and G-15 may move to computationally reproducible, if checks of their companion statistics and donor row confirm the slips. Under rule 5, G-22 gains two discrepant claims; its paper outcome stays computational issues.</p>
 </div>
 
 <div class="decision">
@@ -82,7 +91,7 @@
 <div class="decision">
 <h3>3. Approve the order of work</h3>
 <ol>
-<li>Gold v1.4. This includes reruns to settle the held results: G-16, G-28 C3, C4 and C6, and G-29 C1 to C3.</li>
+<li>Gold v1.4. This includes reruns to settle the held results (G-16, G-28 C3, C4 and C6, and G-29 C1 to C3), plus checks of the G-07 descriptives and the G-15 donor row.</li>
 <li>Rule pack 1.2, the public prompt and schema 1.2, published together.</li>
 <li>Runner and scorer: packages for every target, isolation, run records and evidence checks.</li>
 <li>Adversarial tests of the scorer, for example certificates that copy the printed values.</li>
@@ -96,12 +105,21 @@
 <h2>Decisions to review</h2>
 <ul>
 <li><b>Stata goes to R only.</b> You left R or Python to me. One target language keeps translations comparable.</li>
-<li><b>No numerical ceiling on <code>close</code>.</b> The old rule allowed a gap of up to 1 unit or 1%. Now <code>close</code> needs a demonstrated slip (truncation, transposed digits, swapped cells, or a typo located by the authors or a source), and undoing it must give an exact match. This answers your "why more?": rounding is the only tolerance for <code>match</code>, and <code>close</code> rests on evidence rather than size. As a result, G-07 C1 and G-15 C1 and C2 move from <code>discrepant</code> to <code>close</code>, and G-22 C3 stays <code>close</code>.</li>
+<li><b>No numerical ceiling on <code>close</code>.</b> The old rule allowed a gap of up to 1 unit or 1%. Now <code>close</code> needs a demonstrated slip (truncation, transposed digits, a copied cell, or a typo evidenced inside the package), and undoing it must give an exact match. This answers your "why more?": rounding is the only tolerance for <code>match</code>, and <code>close</code> rests on evidence rather than size.</li>
+<li><b>One label per gold result.</b> Gold v1.4 drops the lists of acceptable alternative labels. A case the labellers cannot settle is held instead.</li>
+<li><b>Print statements are an allowed fix.</b> A model may add lines that only print values (for example the unrounded estimate behind a rounded table), so that it can show the computed number.</li>
 <li><b>"Held" gold results.</b> If the evidence does not yet support a label, the result is excluded from scoring until reruns settle it. It is not called <code>not_checkable</code>, because that would describe the study rather than our evidence.</li>
 <li><b>Claim identification is recall of a must-check subset.</b> The gold lists (5 to 8 claims per paper) are the claims the human sources assessed, not every important claim. The benchmark claims no more than that. Extra claims are audited, not penalised.</li>
 <li><b>Track B gold is built independently</b> by two labellers working only from the article and data, not copied from Track A. The published method and the shipped code can differ, as G-21 shows.</li>
 <li><b>Twins count as one target each</b> in the headline, but uncertainty intervals resample each twin together with its base paper.</li>
-<li><b>Two of Argon's suggestions were not adopted.</b> It proposed accepting both labels for G-21, which would reopen your decision. It also proposed accepting <code>match</code> for G-16 because the shipped <code>.tex</code> tables agree with the paper, but reading shipped output is not recomputation.</li>
+<li><b>Some reviewer suggestions were not adopted.</b>
+  <ul>
+  <li>Accepting both labels for G-21 (Argon, round 1): this would reopen your decision.</li>
+  <li>Accepting <code>match</code> for G-16 because the shipped tables agree with the paper (Argon, round 1): reading shipped output is not recomputation.</li>
+  <li>A small relative tolerance against gold references (Argon, round 2): rounding both values to the printed precision is enough.</li>
+  <li>A cap on results (Argon, round 2): some claims legitimately have many results, such as G-27 with six per claim.</li>
+  </ul>
+  Both reviewers accepted these decisions.</li>
 </ul>
 
 <h2>The design at a glance</h2>
@@ -124,7 +142,7 @@
 <table>
 <tr><th style="width:150px">Status</th><th>When</th></tr>
 <tr><td><code>match</code></td><td>Rounding the recomputed value to the printed precision gives the printed value, by round-half-up or round-half-to-even. That is the only tolerance.</td></tr>
-<tr><td><code>close</code></td><td>A deterministic analysis where the printed value differs because of one demonstrated reporting slip, and undoing the slip gives a match. A flipped sign, a change in whether an interval contains the null, a false printed bound or a crossed threshold always counts as <code>discrepant</code>. Counts must be exact.</td></tr>
+<tr><td><code>close</code></td><td>A deterministic analysis where the printed value differs because of one reporting slip demonstrated from the package and the run, and undoing the slip gives a match. A flipped sign, a change in whether an interval contains the null, a false printed bound or a crossed threshold always counts as <code>discrepant</code>. Counts must be exact.</td></tr>
 <tr><td><code>within_variation</code></td><td>The analysis is not exactly reproducible, and the printed value lies within the range of repeated runs. The causes are an unseeded random process, a seed whose random stream changed between versions, a package version that cannot be recovered, parallel order, or optimiser sensitivity. How many runs to do, and how the range is built, is fixed before any model runs.</td></tr>
 <tr><td><code>discrepant</code></td><td>Any other difference.</td></tr>
 <tr><td><code>not_checkable</code></td><td>The value cannot be produced: a named blocker in the shipped code, or (Track B) unavailable data or an underspecified method.</td></tr>
@@ -136,6 +154,7 @@
 <li>exact equivalent call;</li>
 <li>script order;</li>
 <li>skipping a failing statement that the claim does not use;</li>
+<li>print-only statements;</li>
 <li>translation.</li>
 </ul>
 <p>Not allowed: writing missing analysis code, changing the model, sample or data, or switching on an option the authors describe but do not run (G-21).</p>
@@ -143,8 +162,8 @@
 
 <h3>Scoring</h3>
 <ul>
-<li><b>Result credit (0 or 1).</b> The result must be identified, computed from the permitted inputs by admissible code, with the value traceable in the run's output, and given the right status. Where gold has a reference value, the recomputed value must equal it. So copying the printed value earns nothing, and a <code>not_checkable</code> earns credit only with the blocker named.</li>
-<li><b>Paper score.</b> The average over claims, halved if the paper outcome is wrong. It is 0 for a hard-gate violation, a timeout or an invalid certificate. Failed runs stay in the denominator.</li>
+<li><b>Result credit (0 or 1).</b> The result must be identified, given the right status, and computed from the permitted inputs by admissible code, which the evaluator checks in the source and its diff. The value must also be traceable in the run's output. Where gold has a reference value, both values must round to the same printed value. So copying the printed value earns nothing, and a <code>not_checkable</code> earns credit only with the blocker named.</li>
+<li><b>Paper score.</b> The average over claims, halved if the paper outcome is wrong. It is 0 for a hard-gate violation, a timeout, a duplicate result, more than 15 claims or an invalid certificate. Failed runs stay in the denominator.</li>
 <li><b>Headline.</b> The mean over all scheduled targets, one per track, with intervals from a bootstrap over papers (each twin resampled with its base paper).</li>
 <li><b>Diagnostics alongside:</b>
   <ul>
@@ -167,22 +186,24 @@
   <div class="st"><b>S3 judge</b>statuses, evidence, paper outcome<br><code>certificate.json</code></div><div class="ar">→</div>
   <div class="st ev"><b>Evaluate</b>mapping, evidence checks, gates, scores<br><code>run.json</code> + gold</div>
 </div>
-<p>A pipeline is a short manifest naming the executor, model, options and prompt for each stage. One agent can do S1 to S3 in a single run, or each stage can use a different model. Decomposed runs feed in the gold claim list, or a frozen earlier stage, to isolate one step. Executors are small adapters for the Codex CLI, Claude Code, OpenCode, an API loop or a human. The run record keeps every attempt, the exact configuration used, cost and a network log.</p>
+<p>Each stage runs in a fresh directory. Earlier stages' files are mounted read-only at fixed paths, and prompts need no filling-in. A pipeline is a short manifest naming the executor, model, options and prompt for each stage. One agent can do S1 to S3 in a single run, or each stage can use a different model. Decomposed runs feed in the gold claim list, or a frozen earlier stage, to isolate one step. Executors are small adapters for the Codex CLI, Claude Code, OpenCode, an API loop or a human, with one function signature. The run record keeps every attempt, the configuration the provider actually used, cost and a network log. In ranking runs, each stage runs in a container that can reach only package repositories and the model's API, with the provider's own web search switched off.</p>
 
 <h2>Gold changes planned for v1.4</h2>
 <table>
 <tr><th>Claim</th><th>v1.3</th><th>v1.4</th><th>Why</th></tr>
 <tr><td>G-21 C3, C4, C5</td><td>match</td><td>discrepant, P2</td><td>The printed AICs come from an option the script documents but does not run; reference replaced by the shipped code's output</td></tr>
-<tr><td>G-07 C1</td><td>discrepant</td><td>close</td><td>Source report identifies 0.14 printed for 1.14</td></tr>
-<tr><td>G-15 C1, C2</td><td>discrepant</td><td>close</td><td>Source identifies the pair as copied from the adjacent row and gives the correction</td></tr>
-<tr><td>G-08 C4; G-18 C1; G-22 C1 to C3</td><td>close</td><td>close</td><td>Truncation; paired transposition; truncation and a located misprint</td></tr>
+<tr><td>G-07 C1</td><td>discrepant</td><td>held, then close or discrepant</td><td>0.14 printed for 1.14 looks like a single-character slip; close if the accompanying descriptives match</td></tr>
+<tr><td>G-15 C1, C2</td><td>discrepant</td><td>held, then close or discrepant</td><td>Looks copied from the adjacent row; close if that donor row appears in the package's output</td></tr>
+<tr><td>G-22 C2, C3</td><td>close</td><td>discrepant, P2</td><td>Intercept and interval differ together; only the human report calls it a typo</td></tr>
+<tr><td>G-08 C4; G-18 C1; G-22 C1</td><td>close</td><td>close</td><td>Truncation; paired transposition; truncation</td></tr>
+<tr><td>G-08 C6</td><td>match</td><td>match, with the fix basis recorded</td><td>An earlier statement errors, so reaching it needs the skip-statement fix</td></tr>
 <tr><td>G-16 C1, C2, C4</td><td>close</td><td>held</td><td>Seed is set; we need to confirm that the reruns used the same inputs. If confirmed, they become discrepant, P2, unless reruns show genuine variation</td></tr>
 <tr><td>G-16 C5</td><td>close or not_checkable</td><td>held</td><td>No scalar reference yet</td></tr>
-<tr><td>G-28 C3, C4, C6</td><td>match, match, close</td><td>held, marked unseeded</td><td>Bayes factors computed without a seed; repeated runs needed</td></tr>
+<tr><td>G-28 C3, C4, C6</td><td>match, match, close</td><td>held, marked unseeded</td><td>Bayes factors computed without a seed; repeated runs needed. G-28 cannot be scheduled until its primary claim, C3, is settled</td></tr>
 <tr><td>G-29 C1 to C3</td><td>not_checkable</td><td>held</td><td>Seed is set and the values are computable; a complete rerun is needed</td></tr>
 <tr><td>G-24</td><td></td><td>audit</td><td>Skipping the failing statement may now reach Table 1</td></tr>
 </table>
-<p class="muted">Paper outcomes are recomputed under the new rule once labels settle. Gold results are also split into one result per printed number (for example G-27 C1 to C5 and G-08 C6), and every result gets a nondeterminism record.</p>
+<p class="muted">Every gold result also gets a primary flag. Paper outcomes are recomputed under the new rule once labels settle. Gold results are also split into one result per printed number (for example G-27 C1 to C5 and G-08 C6), and every result gets a nondeterminism record.</p>
 
 <h2>How the specification was agreed</h2>
 <div class="review"><b>Sol (GPT-6.1, high effort), round 1:</b> "AGREE subject to the blocking changes listed". Five blocking objections:
@@ -212,14 +233,24 @@ All applied in draft 0.3, together with its non-blocking suggestions. Sol agreed
 <li>recomputed values are never compared with gold.</li>
 </ul>
 Two of its points were wrong against the code, and parts of its reply drew on stale context. <a href="https://github.com/forrtproject/reprocrowd/blob/main/model-gating/benchmark/review/argon-r1.md">Points and checks</a></div>
-ARGON_R2
+<div class="review"><b>Argon, round 2:</b> run through the Antigravity command-line tool. Two delegated attempts had returned summaries written as if Argon were the spec's author, and an OpenCode attempt returned nothing. Its review was the most useful on implementation:
+<ul>
+<li>stage contracts that a second team could not build from;</li>
+<li>flooding a certificate with genuine numbers to game recall;</li>
+<li>shipped outputs that a model could copy from;</li>
+<li>slip evidence that only the forbidden human reports contain;</li>
+<li>provider-side web search bypassing the network proxy;</li>
+<li>a credit rule that penalised recovering the original software version.</li>
+</ul>
+Adopted in draft 0.4, apart from two points it later accepted. <a href="https://github.com/forrtproject/reprocrowd/blob/main/model-gating/benchmark/review/argon-r2.md">Review</a></div>
+<div class="review"><b>Round 3, both:</b> "VERDICT: AGREE as drafted". Sol checked the G-22 table in the published article against the pinned output. It also confirmed that stripping outputs breaks neither G-11, whose code does not read its log, nor G-22, whose code is extracted from the HTML first. Argon marked all its round 2 points resolved. Their remaining wording notes are applied. <a href="https://github.com/forrtproject/reprocrowd/blob/main/model-gating/benchmark/review/sol-r3.md">Sol</a> · <a href="https://github.com/forrtproject/reprocrowd/blob/main/model-gating/benchmark/review/argon-r3.md">Argon</a></div>
 
 <h2>Done this session</h2>
 <ul>
 <li><b>Twins.</b> Rendered outputs are removed from T-02 (two knitted HTML files), T-03 (two cleaning HTML files) and T-06 (six figure PDFs). Rerunning the twin checks on the stripped packages gives exactly the recorded planted values. No patched script loads cached results that would bypass the planted change. The rule and file list are in <code>gold-set/twins/strip_outputs.json</code>.</li>
 <li><b>Batch 2 archived</b> as <code>runs/luna-batch2</code>, so the full run starts fresh. Its T-02 and T-06 certificates came from packages that still had rendered outputs, so they are a record only.</li>
 <li><b>Specification and reviews</b> are in <code>model-gating/benchmark/SPEC.md</code> and <code>model-gating/benchmark/review/</code>.</li>
-<li><b>Spend:</b> REVIEW_COST</li>
+<li><b>Spend:</b> Codex and Antigravity reviews used subscriptions. One OpenCode attempt went through metered OpenRouter and returned nothing; the harness did not report its cost.</li>
 </ul>
 </main>
 </body>

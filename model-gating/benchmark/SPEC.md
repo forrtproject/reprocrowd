@@ -1,7 +1,8 @@
 # ReproCrowd benchmark: specification
 
-Draft 0.4, 1 November 2026. Reviews: `review/sol-r1.md`, `review/sol-r2.md` (GPT-6.1 Sol, high
-effort), `review/argon-r1.md`, `review/argon-r2.md` (Gemini 4 Argon, high). Items marked **[settled]** are Lukas's decisions and
+Draft 0.4, 1 November 2026. Agreed by Claude, GPT-6.1 Sol (high effort) and Gemini 4 Argon (high)
+after three review rounds (`review/`): both reviewers' final verdict is "AGREE as drafted".
+Items marked **[settled]** are Lukas's decisions and
 are not reopened in review. Items marked **[proposed]** are choices made in this draft that Lukas
 has not yet seen.
 
@@ -47,7 +48,7 @@ whether a target is a twin, and the run does not depend on downloading from OSF 
 mapping from opaque name to target, the twin relation and the stripping record are evaluator-only
 metadata. The model must not replace the supplied package with an upstream copy.
 
-**Rendered outputs are stripped from every target [proposed].** The twin rule (2.2) applies to
+**Rendered outputs are stripped from every target [proposed; Sol and Argon agree].** The twin rule (2.2) applies to
 originals too: knitted documents, figures, logs and saved result tables that the package's own code
 produces are removed, and code that exists only inside a rendered document is extracted to a script.
 Otherwise a package without outputs would itself mark a twin, and a model could copy values from
@@ -97,7 +98,7 @@ sample or group, outcome, predictor or contrast, model, wave, statistic), and wh
 manipulation checks or robustness tables). Extra claims a model adds are not counted as errors;
 section 6.4 describes how they are audited.
 
-**Submission cap [proposed].** An end-to-end certificate may hold at most 15 claims (the cap is in
+**Submission cap [proposed; Sol and Argon agree].** An end-to-end certificate may hold at most 15 claims (the cap is in
 `input-bundle.json`; gold has 5 to 8). Without a cap, a model could list every number in the paper
 and reach full recall without selecting anything. A certificate over the cap is invalid.
 
@@ -172,10 +173,10 @@ give a `match`:
   effect sizes printed in each other's place; a coefficient and SE pair copied from the adjacent row);
 - a **located typo**: an erratum, corrigendum or other author document in the input bundle
   identifies the entry and gives the corrected value; or the printed value differs from the
-  recomputed value by a single-character substitution while the companion statistics of the same test
-  or table row match.
+  recomputed value by a single-character substitution while the companion statistics of the same test,
+  table row or in-text summary (for example the mean beside an SD) match.
 
-**The evidence must be inside the bundle [proposed].** A model is not allowed to read reproduction
+**The evidence must be inside the bundle [proposed; Sol and Argon agree].** A model is not allowed to read reproduction
 reports, so a slip that only a human report identifies cannot support `close`, either for the model
 or in gold. A copied cell or row needs its donor value in the executed output. A general remark that
 a paper contains typos does not cover any particular entry.
@@ -213,7 +214,7 @@ The printed value is compatible when its rounding region intersects the frozen a
 For an interval, the region is joint for the endpoint pair; endpoints that are compatible only in
 different runs are not enough. The vetoes in 4.2 apply.
 
-**Precedence [proposed; Sol agrees].** A compatible result with established variation is
+**Precedence [proposed; Sol and Argon agree].** A compatible result with established variation is
 `within_variation`, even when a run prints the reported value; the record notes
 `printed_match: true`. When all relevant sources are fixed (original seed and package or RNG versions
 recovered and verified in the bundle), the deterministic rules apply and may give `match`, `close` or
@@ -279,7 +280,7 @@ These are the three settled outcomes **[settled]**. A claim with several results
 outcome among its required results: "does not reproduce" beats "reproduces with justified fixes",
 which beats "reproduces".
 
-### 4.6 Paper outcome **[proposed; Sol agrees]**
+### 4.6 Paper outcome **[proposed; Sol and Argon agree]**
 
 Before targets are scheduled, each paper's scored assessment scope is frozen, after removing held and
 (Track B) ineligible results, together with a non-empty primary subset. A target with no scored
@@ -315,8 +316,8 @@ The changes agreed or still open after round 1:
 | G-08 C6 | match | match, expected basis `justified_fix` (`skip_failing_statement`) | An earlier statement errors before the follow-up models |
 | G-18 C1 | close | close (C2 stays discrepant, P2) | Paired transposition; .012 violates C2's printed bound |
 | G-22 C1 | close | close | Truncation (.07849 printed as .07), demonstrable from the recomputed value |
-| G-22 C2, C3 | close | discrepant, P2 **[proposed; reverses Sol r1]** | The intercept (5.28 printed as 5.25) and its interval ([5.11, 5.44] printed as [5.08, 5.43]) differ together, so no single-character substitution with matching companion statistics explains either; only the human report calls this a typo, and that report is outside the bundle |
-| G-07 C1 | discrepant, P2 | close, severity null, if the companion statistics match | Single-character substitution (0.14 for 1.14) |
+| G-22 C2, C3 | close | discrepant, P2 **[proposed; Sol and Argon agree]** | The intercept (5.28 printed as 5.25) and its interval ([5.11, 5.44] printed as [5.08, 5.43]) differ together, so no single-character substitution with matching companion statistics explains either; only the human report calls this a typo, and that report is outside the bundle |
+| G-07 C1 | discrepant, P2 | held until the companion statistics (the accompanying descriptives) are checked; then close, severity null, otherwise discrepant, P2 | Single-character substitution (0.14 for 1.14) in an in-text SD |
 | G-15 C1, C2 | discrepant, P2 | held until the donor row (-0.05, 0.06) is found in the package's output; then close, otherwise discrepant, P2 | Coefficient and SE pair apparently copied from the adjacent row |
 | G-16 C1, C2, C4 | close | held pending same-input provenance; if confirmed, discrepant, P2, unless claim-specific evidence establishes within_variation | Seed set; no claim-specific evidence that versions explain the gaps; input chosen by file time |
 | G-16 C5 | close or not_checkable | held pending a scalar recomputation and variation adjudication | No scalar reference in the source |
@@ -325,7 +326,7 @@ The changes agreed or still open after round 1:
 | G-24 | as v1.3 | to audit | Table 1 code precedes the parse fault, so `skip_failing_statement` may now reach it |
 
 Held results are resolved by evaluator reruns (five or more runs for each stochastic source, or the
-original package versions). A target whose primary results are still held is not scheduled (G-28's
+original package versions). A target with no assessable primary result is not scheduled (G-28's
 only primary claim, C3, is held). Other held results stay excluded and are reported as such.
 
 Gold v1.4 has one label per result and one outcome per paper; the earlier `acceptable_statuses` and
@@ -371,7 +372,7 @@ Before runs, the target list, scored results, evidence rules and weights are fro
    Otherwise it earns 0. Credit is averaged over the frozen gold results of each must-check claim
    (an unmapped gold result scores 0), so splitting a claim into more rows does not change its weight.
    Claims are averaged within a paper.
-2. **Paper score [proposed; Sol agrees].** Weighted partial credit for the complete check: the claim
+2. **Paper score [proposed; Sol and Argon agree].** Weighted partial credit for the complete check: the claim
    average, multiplied by 1 if the paper outcome is correct and by 0.5 if not. A paper with a verified hard-gate violation scores 0. A timeout, a crash or a missing
    or invalid certificate scores 0 and stays in the denominator; an infrastructure failure outside the
    pipeline is rerun under a predeclared rule.
@@ -426,7 +427,7 @@ distinct extra result identities (or all, if fewer) is drawn with a recorded see
 ordering. The audit counts invented or materially misattributed **reported targets** (values the
 model says the article prints), after permitted normalisation; recomputed values, diagnostics and
 intermediates are not reported targets. Two distinct verified fabrications anywhere in a certificate
-trigger the fabrication gate **[proposed; Sol agrees]**; a single instance is recorded without the
+trigger the fabrication gate **[proposed; Sol and Argon agree]**; a single instance is recorded without the
 gate. Every result used for score credit is audited in full. The certificate has one final result per
 scientific identity; any duplicate result (same result id or same scientific identity) makes it
 invalid, as does exceeding the claim cap (3.1).
@@ -549,7 +550,8 @@ Left, in order:
 2. Gold v1.4: atomic results, typed printed values, nondeterminism records, the section 5.1 changes,
    evaluator reruns for held results, paper outcomes recomputed.
 3. Rule pack 1.2, public prompt and certificate schema 1.2, aligned with section 4.
-4. Stage schemas and validator; packaging for all targets with opaque names; isolated runner with
+4. Stage schemas and validator; packaging for all targets with opaque names, checked so that
+   every frozen checkable result is still reachable after stripping; isolated runner with
    proxy and run records; executor adapters; scorer with evidence checks, mapping review and
    baselines.
 5. Adversarial tests of the scorer: copied printed values, all-`not_checkable`, duplicate rows,
