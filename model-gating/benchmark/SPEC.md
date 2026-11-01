@@ -526,8 +526,11 @@ not reads, and the gold set is in a public repository. Each stage attempt theref
 - network access only through an evaluator-controlled proxy that allows package repositories (CRAN,
   Posit Package Manager, Bioconductor, PyPI, conda, and evaluator mirrors of GitHub-only
   dependencies) and, when the agent runs inside the container, the model provider's inference
-  endpoint. The proxy adds the API credentials, so the container never holds them. Provider-side web
-  search and URL fetching are disabled, because the proxy cannot see what the provider fetches on the
+  endpoint. API-key executors get their key added by the proxy, so the container never holds it.
+  Subscription executors (a ChatGPT-plan Codex login, a Claude-plan Claude Code login) use a
+  self-refreshing login token that a plain proxy cannot add; their token file is mounted read-only
+  in the container, which is acceptable because the risk being controlled is access to gold and
+  reports, not credential theft. Provider-side web search and URL fetching are disabled, because the proxy cannot see what the provider fetches on the
   model's behalf. Every request is logged outside the model's control;
 - a read-only shared base library of R and Python packages plus a per-stage writable library.
 

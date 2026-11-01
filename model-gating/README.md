@@ -30,11 +30,24 @@ idea.
    justified fixes, or it does not. Code a model writes itself counts as "does not reproduce".
 7. **`match` and `close` are distinct (31 October 2026).** In a deterministic analysis, `close`
    asserts a minor reporting slip, so a model must not use it where the value matches.
-8. **Stata (31 October 2026).** Models translate shipped Stata code directly into R (preferred)
-   or Python, and the result is labelled as translated. Stata papers are therefore eligible for
-   the benchmark.
+8. **Stata (31 October 2026; R only from 1 November).** Models translate shipped Stata code
+   command by command into R, and the result is labelled as translated. Stata papers are therefore
+   eligible for the benchmark.
+9. **Benchmark design (1 November 2026).** The benchmark has one end-to-end score per task. It
+   tests whether a model identifies the must-check claims, reproduces them and judges them, and the
+   pipeline is modular. Details are in [`benchmark/SPEC.md`](benchmark/SPEC.md) (draft 0.4, agreed
+   with Sol and Argon; seven proposed rules await Lukas).
+10. **Fix rules (1 November 2026).** Switching on an option the authors describe but do not run is
+    not a justified fix (G-21). Skipping a failing statement that the claim does not use is a
+    justified fix. Every fix states what changed and why the analysis is unchanged.
+11. **Tolerance (1 November 2026).** `match` allows only the rounding convention (round half up or
+    half to even) at the printed precision. An analysis that is not exactly reproducible (unseeded,
+    or dependent on an unrecoverable version) gets its own status, `within_variation`, so the
+    benchmark can test whether models notice it.
+12. **Twins (1 November 2026).** Rendered outputs are stripped from twin packages, because they
+    show the unpatched results.
 
-The idea running through all five is that confidence in a model (or pipeline) and confidence in a
+The idea running through the first five is that confidence in a model (or pipeline) and confidence in a
 single reproduction result are different things. A benchmarked model can still fail on a given
 paper, and a weaker model can produce a result that is fully checkable from its evidence package.
 We record the two separately even where the public label merges them.

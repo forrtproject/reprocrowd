@@ -80,12 +80,13 @@
 
 <div class="decision">
 <h3><span class="tag warn">blocks ranking runs</span>2. Where should the isolated runs execute?</h3>
-<p>The current Codex sandbox limits what a run can <em>write</em>, but not what it can read. The gold labels are on this Mac and also in the public <code>forrtproject/reprocrowd</code> repository. Ranking runs therefore need a container that holds only the run's package, behind a proxy that allows package repositories (CRAN, PyPI and similar) and nothing else. Docker, Podman and Colima are not installed on this Mac.</p>
+<p>The current Codex sandbox limits what a run can <em>write</em>, but not what it can read. The gold labels are on this Mac and also in the public <code>forrtproject/reprocrowd</code> repository. Ranking runs therefore need a container that holds only the run's package, behind a proxy that allows only package repositories (CRAN, PyPI and similar) and the model's API. Docker, Podman and Colima are not installed on this Mac.</p>
 <ul>
-<li><b>Colima on this Mac</b> (free, open source, command line). The Codex subscription runs inside the container.</li>
-<li><b>Another Linux machine</b>, such as the box, if it has Docker. I have not checked this.</li>
+<li><b>Colima on this Mac</b> (free and open source, command line only). The Mac has 10 cores and 32 GB of memory.</li>
+<li><b>Docker on the box.</b> It runs Ubuntu with R and Codex already installed and passwordless sudo, but has 4 cores and 15 GB, and Docker is not installed.</li>
 </ul>
-<p class="rec">Recommendation: Colima here. It keeps the runs next to the Codex login and the shared R library. Until this is in place, runs count as diagnostic only.</p>
+<p>In either case, the subscription login token (for Codex or Claude Code) is mounted read-only in the container. A proxy can add an API key for API-key models, but it cannot add a login token that refreshes itself. That is acceptable here, because the risk being controlled is access to gold and reports, not credential theft. Section 7.4 of the spec now says so.</p>
+<p class="rec">Recommendation: Colima on this Mac, which has more than twice the box's cores for parallel runs. Until the containers are in place, runs count as diagnostic only.</p>
 </div>
 
 <div class="decision">
@@ -95,7 +96,7 @@
 <li>Rule pack 1.2, the public prompt and schema 1.2, published together.</li>
 <li>Runner and scorer: packages for every target, isolation, run records and evidence checks.</li>
 <li>Adversarial tests of the scorer, for example certificates that copy the printed values.</li>
-<li>Stata papers.</li>
+<li>Stata papers: screening has started (see below). Drawing, claim lists and labels wait for this specification.</li>
 <li>Track B packages and gold.</li>
 <li>Full runs.</li>
 </ol>
@@ -105,7 +106,7 @@
 <h2>Decisions to review</h2>
 <ul>
 <li><b>Stata goes to R only.</b> You left R or Python to me. One target language keeps translations comparable.</li>
-<li><b>No numerical ceiling on <code>close</code>.</b> The old rule allowed a gap of up to 1 unit or 1%. Now <code>close</code> needs a demonstrated slip (truncation, transposed digits, a copied cell, or a typo evidenced inside the package), and undoing it must give an exact match. This answers your "why more?": rounding is the only tolerance for <code>match</code>, and <code>close</code> rests on evidence rather than size.</li>
+<li><b>No numerical ceiling on <code>close</code>.</b> The old rule allowed a gap of up to 1 unit or 1%. Now <code>close</code> needs a demonstrated slip (truncation, transposed digits, a copied cell, or a typo evidenced inside the package), and undoing it must give an exact match. Following your "why more?", rounding is now the only tolerance for <code>match</code>. The trade-off: <code>close</code> now rests on evidence rather than size, so it can cover a large gap. G-07 prints an SD of 0.14 where the code gives 1.14. That is a single-character typo, not a small gap, and it would be <code>close</code> if the accompanying descriptives match.</li>
 <li><b>One label per gold result.</b> Gold v1.4 drops the lists of acceptable alternative labels. A case the labellers cannot settle is held instead.</li>
 <li><b>Print statements are an allowed fix.</b> A model may add lines that only print values (for example the unrounded estimate behind a rounded table), so that it can show the computed number.</li>
 <li><b>"Held" gold results.</b> If the evidence does not yet support a label, the result is excluded from scoring until reruns settle it. It is not called <code>not_checkable</code>, because that would describe the study rather than our evidence.</li>
@@ -250,7 +251,8 @@ Adopted in draft 0.4, apart from two points it later accepted. <a href="https://
 <li><b>Twins.</b> Rendered outputs are removed from T-02 (two knitted HTML files), T-03 (two cleaning HTML files) and T-06 (six figure PDFs). Rerunning the twin checks on the stripped packages gives exactly the recorded planted values. No patched script loads cached results that would bypass the planted change. The rule and file list are in <code>gold-set/twins/strip_outputs.json</code>.</li>
 <li><b>Batch 2 archived</b> as <code>runs/luna-batch2</code>, so the full run starts fresh. Its T-02 and T-06 certificates came from packages that still had rendered outputs, so they are a record only.</li>
 <li><b>Specification and reviews</b> are in <code>model-gating/benchmark/SPEC.md</code> and <code>model-gating/benchmark/review/</code>.</li>
-<li><b>Spend:</b> Codex and Antigravity reviews used subscriptions. One OpenCode attempt went through metered OpenRouter and returned nothing; the harness did not report its cost.</li>
+<li><b>Stata screening started.</b> Sol is screening Stata packages with public claim-level reproduction reports, aiming for at least 15 eligible candidates so that 10 can be drawn. For each package it records the Stata version, the user-written commands it needs, and which claims depend on commands with no exact R equivalent. It writes to <code>gold-set/stata/</code>.</li>
+<li><b>Spend:</b> US$0 metered. The Codex and Antigravity reviews and the screening use subscriptions. The one OpenCode attempt went through OpenRouter, which reports US$0.00 of usage today on its key.</li>
 </ul>
 </main>
 </body>

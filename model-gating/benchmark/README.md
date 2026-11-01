@@ -1,6 +1,10 @@
 # Benchmark runs: approach and first results
 
-The benchmark design under review is in [`SPEC.md`](SPEC.md).
+The benchmark design is in [`SPEC.md`](SPEC.md) (draft 0.4, agreed with Sol and Argon on
+1 November 2026). This README describes the **pilot**, which the specification supersedes. The
+pilot ran on gold v1.3 with the gold claim list always supplied, remote packages for gold papers, a
+shared R library and no isolation. `run_codex.py` is the pilot runner; section 7 of the
+specification defines its replacement. The pilot results are diagnostic only.
 
 This folder runs model configurations on the gold set (`../gold-set/`) and scores them. The first
 configuration is GPT-6 Luna through the Codex CLI on the ChatGPT subscription, at the default
