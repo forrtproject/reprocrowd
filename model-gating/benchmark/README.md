@@ -1,5 +1,7 @@
 # Benchmark runs: approach and first results
 
+The benchmark design under review is in [`SPEC.md`](SPEC.md).
+
 This folder runs model configurations on the gold set (`../gold-set/`) and scores them. The first
 configuration is GPT-6 Luna through the Codex CLI on the ChatGPT subscription, at the default
 reasoning effort (medium). So far it has run on five targets: G-08, G-21 and G-23 plus twins T-02
@@ -67,6 +69,8 @@ Five targets cannot rank a model. The five wrong claims come from two cases:
 ## Files
 
 - `run_codex.py`, `build_twin_package.py`, `prompt.txt`
-- `runs/luna/`: batch 2 certificates; `runs/runs-luna.csv`, `runs/log-luna.csv`,
-  `runs/scores-luna-batch2.json`
+- `runs/luna-batch2/`: batch 2 certificates; `runs/runs-luna-batch2.csv`,
+  `runs/log-luna-batch2.csv`, `runs/scores-luna-batch2.json`. The T-02 and T-06 packages in this
+  batch still contained rendered outputs; twin packages now omit them
+  (`../gold-set/twins/strip_outputs.json`), so these two certificates are a record only.
 - `runs/luna-batch1-ownclaims/`: batch 1 (no claim list), kept for comparison

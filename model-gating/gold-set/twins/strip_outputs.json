@@ -1,0 +1,11 @@
+{
+  "rule": "A twin package must not ship outputs that the package's own code renders (knitted HTML/PDF of a shipped Rmd or qmd, figures written by a shipped script, logs). Those files show the unpatched results, so comparing them with a rerun reveals the planted change. Data the analysis reads are kept even when a shipped script created them, as are author documents (README, codebook, surveys, preregistrations, manuscript copies) and experiment task files.",
+  "T-01": [],
+  "T-02": ["AJPS_2021_Kim_Appendix_RMarkdown.html", "AJPS_2021_Kim_Manuscript_RMarkdown.html"],
+  "T-03": ["Data and R Code/MTurk_Cleaning.html", "Data and R Code/REP_Cleaning.html"],
+  "T-04": [],
+  "T-05": [],
+  "T-06": ["Figures/fig2.pdf", "Figures/fig3.pdf", "Figures/fig4.pdf", "Figures/fig5.pdf", "Figures/fig6.pdf", "Figures/supplement.pdf"],
+  "T-07": [],
+  "T-08": []
+}

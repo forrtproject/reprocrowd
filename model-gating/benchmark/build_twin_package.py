@@ -1,8 +1,9 @@
 """Rebuild a seeded twin's package outside the repository: download every input in the twin's
-input_manifest.json, check its SHA-256, then apply twin.patch.
+input_manifest.json, check its SHA-256, apply twin.patch, then remove the rendered outputs listed
+in twins/strip_outputs.json (they show the unpatched results and would reveal the change).
 
-The result is the package a benchmark model receives. It contains no twin metadata, logs or
-references, and nothing that names it a twin.
+The result is the package a benchmark model receives. It contains no twin metadata, logs,
+rendered outputs or references, and nothing that names it a twin.
 
 Usage: python3 model-gating/benchmark/build_twin_package.py T-02 /tmp/scratch_bench_luna/packages/T-02
 """
@@ -44,7 +45,10 @@ def fetch(entry, dest):
 def main(twin_id, out_dir):
     out = Path(out_dir)
     manifest = json.loads((TWINS / twin_id / "input_manifest.json").read_text())
+    strip = set(json.loads((TWINS / "strip_outputs.json").read_text())[twin_id])
     for entry in manifest:
+        if entry["path"] in strip:
+            continue
         dest = out / entry["path"]
         dest.parent.mkdir(parents=True, exist_ok=True)
         if dest.exists() and sha256(dest) in (entry["sha256"], entry.get("lfs_sha256")):
@@ -57,7 +61,10 @@ def main(twin_id, out_dir):
         raise SystemExit(res.stdout.decode() + res.stderr.decode())
     for orig in out.rglob("*.orig"):
         orig.unlink()
-    print(f"{twin_id}: {len(manifest)} inputs verified, patch applied in {out}")
+    for path in strip:  # also clears packages built before stripping was introduced
+        (out / path).unlink(missing_ok=True)
+    print(f"{twin_id}: {len(manifest) - len(strip)} inputs verified, patch applied, "
+          f"{len(strip)} rendered outputs withheld in {out}")
 
 
 if __name__ == "__main__":
