@@ -1,7 +1,9 @@
 # ReproCrowd benchmark: specification
 
-Draft 0.4, 1 November 2026. Agreed by Claude, GPT-6.1 Sol (high effort) and Gemini 4 Argon (high)
-after three review rounds (`review/`): both reviewers' final verdict is "AGREE as drafted".
+Draft 0.5, 1 November 2026. Draft 0.4 was agreed by Claude, GPT-6.1 Sol (high effort) and Gemini
+4 Argon (high) after three review rounds (`review/`). Draft 0.5 adds Lukas's rulings on draft 0.4
+(every number is extracted; `close` must be numerically close; explained and unexplained deviations
+are distinguished; hallucinations are gated at one instance) and is under review.
 Items marked **[settled]** are Lukas's decisions and
 are not reopened in review. Items marked **[proposed]** are choices made in this draft that Lukas
 has not yet seen.
@@ -10,9 +12,11 @@ has not yet seen.
 
 A ReproCrowd check asks a model to do three things for a published paper:
 
-1. **Identify** the claims that need checking.
-2. **Reproduce** each claim: obtain its value from the authors' materials.
-3. **Judge** each claim (claim status) and the paper (paper outcome).
+1. **Extract** every reported number in the paper **[settled]**. A ReproCrowd check is a
+   statistical spell checker, so it covers all reported results, not a selection.
+2. **Reproduce** each number: obtain its value from the authors' materials.
+3. **Judge** each number (status, and an explanation for any deviation) and the paper (paper
+   outcome).
 
 There are two tracks **[settled]**:
 
@@ -21,11 +25,13 @@ There are two tracks **[settled]**:
 - **Track B, blinded recreation.** The model gets the article and the data, without the authors'
   code, logs or rendered outputs, and writes the analysis from the paper's description.
 
-Each track has one headline score for the complete check **[settled]**. A must-check result earns
-credit only when it is identified, its computation (or the reason it cannot be computed) is backed by
-evidence, its basis and fixes are admissible, and its status is correct. The paper outcome is part of
-the headline (section 6). Decomposed runs, which give the model the must-check list or a frozen
-earlier stage, use the same criteria; they help develop pipelines and are not used for ranking.
+Each track has one headline score for the complete check **[settled]**. It combines extraction
+(recall of all gold numbers) with reproduction and judgement (on the gold numbers that carry a
+label). A labelled result earns credit only when it is extracted, its computation (or the reason it
+cannot be computed) is backed by evidence, its basis and fixes are admissible, and its status is
+correct. The paper outcome is part of the headline (section 6). Decomposed runs, which give the model
+the gold extraction or a frozen earlier stage, use the same criteria; they help develop pipelines and
+are not used for ranking.
 
 The gold set is a public development set: its source reports are public, and models may have seen
 them or the authors' code in training. Scores describe performance on this set. A ranking that needs
@@ -48,7 +54,7 @@ whether a target is a twin, and the run does not depend on downloading from OSF 
 mapping from opaque name to target, the twin relation and the stripping record are evaluator-only
 metadata. The model must not replace the supplied package with an upstream copy.
 
-**Rendered outputs are stripped from every target [proposed; Sol and Argon agree].** The twin rule (2.2) applies to
+**Rendered outputs are stripped from every target [proposed; Sol and Argon agree; no objection from Lukas].** The twin rule (2.2) applies to
 originals too: knitted documents, figures, logs and saved result tables that the package's own code
 produces are removed, and code that exists only inside a rendered document is extracted to a script.
 Otherwise a package without outputs would itself mark a twin, and a model could copy values from
@@ -85,22 +91,27 @@ with it, is recorded.
 
 ## 3. Claims and results
 
-### 3.1 Must-check claims
+### 3.1 Every reported number **[settled]**
 
-The gold claim lists hold 5 to 8 claims per paper, chosen from results the human source assessed.
-They are a **frozen must-check subset**, not every important claim in the paper. Claim identification
-is scored as recall of this subset, and the benchmark makes no stronger claim about claim selection.
-A broader claim-selection benchmark would need independent coverage annotations.
+**Scope.** Every number in the main text and tables that reports a result computed from the data:
+descriptive statistics, sample sizes, test statistics, estimates, standard errors, intervals, p
+values, effect sizes and model-fit statistics. Excluded: numbers that describe the design rather than
+results (scale points, number of conditions, payment amounts), dates, page and reference numbers,
+and values that appear only graphically in figures. Supplements are out of scope for now.
 
-Each must-check claim records why it belongs in the subset and its scientific referent (study,
-sample or group, outcome, predictor or contrast, model, wave, statistic), and whether it is
-**primary** (a main-text focal hypothesis test or headline estimate; not sample descriptives,
-manipulation checks or robustness tables). Extra claims a model adds are not counted as errors;
-section 6.4 describes how they are audited.
+**Gold extraction.** Each gold paper gets an exhaustive extraction of these numbers, with locator
+(page, paragraph or table cell, quote), referent and typed value (3.2). Two extractors work
+independently; their lists are matched mechanically by locator and token, and every difference is
+adjudicated. Extraction is scored by recall and precision against this list, so a model gains nothing
+by listing numbers that are not there and loses for skipping any.
 
-**Submission cap [proposed; Sol and Argon agree].** An end-to-end certificate may hold at most 15 claims (the cap is in
-`input-bundle.json`; gold has 5 to 8). Without a cap, a model could list every number in the paper
-and reach full recall without selecting anything. A certificate over the cap is invalid.
+**Labelled results.** The existing gold claim lists (5 to 8 claims per paper, chosen from results the
+human source assessed) remain the labelled subset: these numbers carry a reproduction status. They
+are a subset of the extraction. A model reproduces every number it extracts; the numbers without a
+gold label are reported as diagnostics, and its discrepancies on them go to adjudication, which is how
+the labelled set grows. Each labelled claim also records whether it is **primary** (a main-text focal
+hypothesis test or headline estimate; not sample descriptives, manipulation checks or robustness
+tables).
 
 ### 3.2 Results and printed values
 
@@ -124,8 +135,8 @@ effect and a relative change are different quantities.
 
 ### 3.3 Mapping model results to gold results
 
-In end-to-end runs the model numbers its own claims. Mapping uses scientific identity and article
-location first, and the printed value only as a consistency check. It is one-to-one, and it never
+In end-to-end runs the model numbers its own results. Mapping uses article location (page, table
+cell, sentence) and scientific identity first, and the printed token as a consistency check. It is one-to-one, and it never
 uses the model's status or recomputed value. Normalisation keeps signs, inequality operators,
 endpoint order, units and printed precision; it standardises typography only (minus signs, dashes,
 thousands separators, a leading zero). Unmatched gold results, near-misses and ambiguous identities
@@ -139,9 +150,9 @@ inside longer strings.
 | Status | Meaning |
 |---|---|
 | `match` | Deterministic analysis; the recomputed value equals the printed value under the rounding rule. |
-| `close` | Deterministic analysis; the printed value differs because of a named reporting slip. |
+| `close` | Deterministic analysis; the printed value is off by at most one unit in its last digit, and an identified reporting slip explains it. |
 | `within_variation` | The analysis is not exactly reproducible (4.3), and the printed value is compatible with its variation. |
-| `discrepant` | Any other difference. |
+| `discrepant` | Any other difference, explained or not (4.2). |
 | `not_checkable` | The value cannot be produced: a shipped-code blocker (Track A) or an unavailable or underspecified input or method (Track B). |
 
 ### 4.1 `match`: the rounding rule only **[settled]**
@@ -159,32 +170,40 @@ does not apply to bounds or counts. Comparisons use decimal arithmetic.
 - A printed p value of 0.000 is a rounded scalar, not a bound.
 
 An inference the paper states in words (for example "significant at the 5% level") is a separate
-result of kind `bound` when it is a must-check result. It is judged separately, so a rounded value
+result of kind `bound`. It is judged separately, so a rounded value
 can match while the stated inequality is false.
 
-### 4.2 `close`: a named reporting slip
+### 4.2 `close`, and explained versus unexplained deviations **[settled]**
 
-`close` asserts a reporting error, so it needs evidence of a specific slip, and undoing it must
-give a `match`:
+Two questions are kept apart: **how large** the deviation is, and **whether it can be explained**.
+An explanation never widens the tolerance: a large deviation stays `discrepant` even when its cause
+is obvious.
 
-- **truncation** instead of rounding (.07849 printed as .07);
-- **transposed digits** (0.32 for 0.23);
-- **transposed or copied cells or rows**, where the source of the copied value is identified (two
-  effect sizes printed in each other's place; a coefficient and SE pair copied from the adjacent row);
-- a **located typo**: an erratum, corrigendum or other author document in the input bundle
-  identifies the entry and gives the corrected value; or the printed value differs from the
-  recomputed value by a single-character substitution while the companion statistics of the same test,
-  table row or in-text summary (for example the mean beside an SD) match.
+**`close`** needs both:
 
-**The evidence must be inside the bundle [proposed; Sol and Argon agree].** A model is not allowed to read reproduction
-reports, so a slip that only a human report identifies cannot support `close`, either for the model
-or in gold. A copied cell or row needs its donor value in the executed output. A general remark that
-a paper contains typos does not cover any particular entry.
+- **closeness:** the printed value is one unit away, in its last printed digit, from the correctly
+  rounded recomputed value (for example .07849 printed as .07 instead of .08). Counts must be exact;
+  a wrong count is never `close`.
+- **an identified slip** that produces that value: truncation instead of rounding, misrounding at a
+  near-tie, transposed values whose difference stays within one unit, or a single-character typo
+  within one unit.
 
-The vetoes apply to every affected result: a flipped sign, an interval that now includes or excludes
-the null, a false printed bound, or a crossed threshold the paper relies on is `discrepant`. Counts
-must be exact: a wrong count is `discrepant`. There is no numerical ceiling on `close`; the evidence
-requirement does the work. Without a named slip, any gap in a deterministic analysis is `discrepant`.
+The vetoes still apply: a flipped sign, an interval that now includes or excludes the null, a false
+printed bound, or a crossed threshold the paper relies on is `discrepant`, however small.
+
+**Explanation field.** Every result whose status is `close` or `discrepant` carries
+`deviation_explanation`: `truncation`, `misrounding`, `transposed_digits`, `transposed_cells`,
+`copied_cell`, `typo`, `other_identified` or `unexplained`, with its evidence. An explanation must be
+shown from the bundle and the execution output: an erratum in the package, a donor value visible in
+the executed output, or a single-character difference whose companion statistics (same test, table
+row or in-text summary) match. A model may not read reproduction reports, so a slip that only a human
+report identifies counts as `unexplained` for the model and in gold. A one-unit deviation without an
+identified slip is `discrepant` with `unexplained`.
+
+Examples: G-07 prints an SD of 0.14 where the code gives 1.14. If the accompanying descriptives match,
+that is an explained `typo`, but the deviation is large, so the status is `discrepant`. G-18 prints
+.01 for an effect size of .004, which correctly rounds to .00: one unit, explained by two effect sizes
+printed in each other's place, so `close`.
 
 ### 4.3 `within_variation`: analyses that are not exactly reproducible **[settled in principle]**
 
@@ -214,7 +233,7 @@ The printed value is compatible when its rounding region intersects the frozen a
 For an interval, the region is joint for the endpoint pair; endpoints that are compatible only in
 different runs are not enough. The vetoes in 4.2 apply.
 
-**Precedence [proposed; Sol and Argon agree].** A compatible result with established variation is
+**Precedence [proposed; Sol and Argon agree; no objection from Lukas].** A compatible result with established variation is
 `within_variation`, even when a run prints the reported value; the record notes
 `printed_match: true`. When all relevant sources are fixed (original seed and package or RNG versions
 recovered and verified in the bundle), the deterministic rules apply and may give `match`, `close` or
@@ -280,21 +299,22 @@ These are the three settled outcomes **[settled]**. A claim with several results
 outcome among its required results: "does not reproduce" beats "reproduces with justified fixes",
 which beats "reproduces".
 
-### 4.6 Paper outcome **[proposed; Sol and Argon agree]**
+### 4.6 Paper outcome **[proposed; Sol and Argon agree; no objection from Lukas]**
 
 Before targets are scheduled, each paper's scored assessment scope is frozen, after removing held and
 (Track B) ineligible results, together with a non-empty primary subset. A target with no scored
 claims or no assessable primary result is not scheduled. Outcomes describe only this scope.
 
 - **Computationally reproducible:** every assessed result is `match`, `close` or `within_variation`.
-  Reporting slips are listed separately in the certificate; they do not make the computation fail.
+  One-unit reporting slips (`close`) are listed separately in the certificate; they do not make the
+  computation fail. An explained but larger deviation is `discrepant` and does.
 - **Technical failure:** demonstrated study blockers prevent every primary computation.
 - **Computational issues:** at least one primary computation completes, and an assessed result is
   `discrepant` or `not_checkable`.
 
-In end-to-end runs, if a model's paper outcome differs from gold only because of an extra claim
-outside the must-check subset, the outcome counts as correct when that extra claim passes the
-evidence checks in 6.3.
+The paper outcome draws on every result the model reproduces. If it differs from gold only because of
+a result outside the labelled subset, it counts as correct when that result passes the evidence
+checks in 6.3; such cases go to adjudication and, if confirmed, extend the labelled set.
 
 Track B uses the same three terms for the recreation. Its `not_checkable` results carry a structured
 reason: `underspecified`, `contradictory_specification`, `data_unavailable` or `numerical_failure`.
@@ -316,9 +336,9 @@ The changes agreed or still open after round 1:
 | G-08 C6 | match | match, expected basis `justified_fix` (`skip_failing_statement`) | An earlier statement errors before the follow-up models |
 | G-18 C1 | close | close (C2 stays discrepant, P2) | Paired transposition; .012 violates C2's printed bound |
 | G-22 C1 | close | close | Truncation (.07849 printed as .07), demonstrable from the recomputed value |
-| G-22 C2, C3 | close | discrepant, P2 **[proposed; Sol and Argon agree]** | The intercept (5.28 printed as 5.25) and its interval ([5.11, 5.44] printed as [5.08, 5.43]) differ together, so no single-character substitution with matching companion statistics explains either; only the human report calls this a typo, and that report is outside the bundle |
-| G-07 C1 | discrepant, P2 | held until the companion statistics (the accompanying descriptives) are checked; then close, severity null, otherwise discrepant, P2 | Single-character substitution (0.14 for 1.14) in an in-text SD |
-| G-15 C1, C2 | discrepant, P2 | held until the donor row (-0.05, 0.06) is found in the package's output; then close, otherwise discrepant, P2 | Coefficient and SE pair apparently copied from the adjacent row |
+| G-22 C2, C3 | close | discrepant, P2, `unexplained` | The intercept (5.28 printed as 5.25) and its interval differ by more than one unit; only the human report calls this a typo |
+| G-07 C1 | discrepant, P2 | discrepant, P2; explanation `typo` if the accompanying descriptives match, otherwise `unexplained` | 0.14 printed for 1.14 is a large deviation, so never `close` |
+| G-15 C1, C2 | discrepant, P2 | discrepant, P2; explanation `copied_cell` if the donor row (-0.05, 0.06) is in the package's output, otherwise `unexplained` | Large deviation |
 | G-16 C1, C2, C4 | close | held pending same-input provenance; if confirmed, discrepant, P2, unless claim-specific evidence establishes within_variation | Seed set; no claim-specific evidence that versions explain the gaps; input chosen by file time |
 | G-16 C5 | close or not_checkable | held pending a scalar recomputation and variation adjudication | No scalar reference in the source |
 | G-28 C3, C4, C6 | match, match, close | held; `unseeded` recorded | Bayes factors computed without a seed; needs the repeated-run range |
@@ -333,7 +353,7 @@ Gold v1.4 has one label per result and one outcome per paper; the earlier `accep
 `acceptable_alternatives` lists are removed, and a case the labellers cannot settle is held. The only
 exception is the version-recovery rule in 4.3. Every gold result gets a `primary` flag and a
 `nondeterminism` record (null when deterministic). Paper outcomes are recomputed under 4.6 after the
-claim labels settle; G-07 and G-15 are the likely changes. Stale explanatory text is repaired (G-08 C4
+claim labels settle; no change is expected, because G-07 and G-15 keep discrepant claims. Stale explanatory text is repaired (G-08 C4
 and C6, G-11 C2 and C5, and the copied evidence strings in G-29 C4 to C6).
 
 **Reference values.** Gold distinguishes the label's evidence from the numerical reference used to
@@ -361,32 +381,37 @@ checkable. Unresolved labeller disputes are held.
 
 ### 6.1 Headline score (one per track)
 
-Before runs, the target list, scored results, evidence rules and weights are frozen.
+Before runs, the target list, labelled results, evidence rules and weights are frozen.
 
-1. **Result credit.** A must-check result earns 1 when all of these hold:
-   - it is identified and mapped (3.3);
+1. **Extraction recall.** The share of gold-extracted numbers (3.1) that the model extracted with the
+   exact printed token at the right location. A misread number (6.4) counts as not extracted.
+2. **Result credit.** A labelled result earns 1 when all of these hold:
+   - it is extracted and mapped (3.3);
    - its evidence passes (6.3);
    - its basis and fixes are admissible (4.4);
    - its status is correct.
 
-   Otherwise it earns 0. Credit is averaged over the frozen gold results of each must-check claim
-   (an unmapped gold result scores 0), so splitting a claim into more rows does not change its weight.
+   Otherwise it earns 0. Credit is averaged over the frozen gold results of each labelled claim (an
+   unmapped gold result scores 0), so splitting a claim into more rows does not change its weight.
    Claims are averaged within a paper.
-2. **Paper score [proposed; Sol and Argon agree].** Weighted partial credit for the complete check: the claim
-   average, multiplied by 1 if the paper outcome is correct and by 0.5 if not. A paper with a verified hard-gate violation scores 0. A timeout, a crash or a missing
-   or invalid certificate scores 0 and stays in the denominator; an infrastructure failure outside the
-   pipeline is rerun under a predeclared rule.
-3. **Headline.** The unweighted mean of paper scores over all scheduled targets. Each twin counts as a
+3. **Paper score [proposed].** Extraction recall times the result-credit average, multiplied by 1 if
+   the paper outcome is correct and by 0.5 if not. A paper with a verified hard-gate violation scores
+   0. A timeout, a crash or a missing or invalid certificate scores 0 and stays in the denominator; an
+   infrastructure failure outside the pipeline is rerun under a predeclared rule.
+4. **Headline.** The unweighted mean of paper scores over all scheduled targets. Each twin counts as a
    target with the same weight as a paper **[settled in principle]**.
 
 ### 6.2 Diagnostics (reported beside the headline, never folded in)
 
-- claim recall;
+- extraction recall and precision, and the number of misreadings;
 - three-way claim outcome accuracy (4.5) and the binary version (reproduces vs does not);
 - status confusion matrix with all denominators;
-- sensitivity to discrepancies (P1, P1+P2) and specificity, counting only identified, evidenced
+- explanation accuracy: for labelled `close` and `discrepant` results, whether the model's
+  `deviation_explanation` matches gold, including `unexplained`;
+- sensitivity to discrepancies (P1, P1+P2) and specificity, counting only extracted, evidenced
   reproducing results (a missed or `not_checkable` result on reproducible gold is a failure, not a
   true negative);
+- discrepancies the model reports on unlabelled numbers, and how many survive adjudication;
 - paper outcome accuracy;
 - nondeterminism recognition: gold nondeterministic results the model flagged, and false flags;
 - fixes: count, inadmissible fixes, fixes without reasons;
@@ -420,29 +445,40 @@ The checks depend on the status:
 Mechanical checks cover structure, hashes, numerical predicates and the presence of values in logs. A
 fix's admissibility and a Track B ambiguity need evaluator adjudication, which is recorded.
 
-### 6.4 Extra claims and hard gates
+### 6.4 Extraction errors and hard gates **[settled]**
 
-Extra claims are counted and audited. For each target, a uniform sample without replacement of five
-distinct extra result identities (or all, if fewer) is drawn with a recorded seed from a canonical
-ordering. The audit counts invented or materially misattributed **reported targets** (values the
-model says the article prints), after permitted normalisation; recomputed values, diagnostics and
-intermediates are not reported targets. Two distinct verified fabrications anywhere in a certificate
-trigger the fabrication gate **[proposed; Sol and Argon agree]**; a single instance is recorded without the
-gate. Every result used for score credit is audited in full. The certificate has one final result per
-scientific identity; any duplicate result (same result id or same scientific identity) makes it
-invalid, as does exceeding the claim cap (3.1).
+Every number the model reports as printed is compared with the gold extraction at its stated
+location:
+
+- **Extracted:** the same token at the same location.
+- **Misreading:** the article prints a number there and the model's token differs from it by a
+  transcription error: a misplaced decimal point or thousands separator, a dropped, added or swapped
+  digit, a lost minus sign, or the value of a neighbouring cell. A misreading counts as not extracted,
+  its reproduction result earns no credit, and misreadings are counted.
+- **Hallucination:** the article prints no such number at or near the stated location, or the model
+  attaches a number to a referent the article does not give it. **One verified hallucination is a hard
+  gate.** A system that invents printed values cannot be trusted to check a paper.
+- **Gold miss:** the article does print the number and the gold extraction missed it. The gold is
+  corrected (versioned) and the model credited.
+
+The evaluator decides between misreading and hallucination with recorded evidence (the article text at
+the location and the transcription operation). A model token that one such operation cannot derive
+from a printed number nearby is a hallucination. Numbers outside the scope of 3.1 (dates, design
+parameters) that the article does print are ignored. Recomputed values, diagnostics and intermediates
+are not printed values and are never treated as fabrication. The certificate has one final result per
+location and scientific identity; any duplicate makes it invalid.
 
 Hard gates (verified by the evaluator, with evidence recorded):
 
 - the certificate is invalid;
-- two or more verified fabricated reported targets, as defined above;
+- a verified hallucinated printed value;
 - a recomputed value with no code and log behind it;
 - `match` or `close` on a gold P0 blocked result;
 - access to the authors' code in Track B;
 - access to gold, earlier reproduction reports or previous runs;
 - editing files outside the run directory.
 
-A numerical mismatch alone is never treated as fabrication.
+A numerical mismatch between a recomputed and a printed value is never treated as fabrication.
 
 ### 6.5 Uncertainty
 
@@ -478,15 +514,15 @@ file hashes.
 
 | Stage | Reads | Writes |
 |---|---|---|
-| S0 package (evaluator) | pinned sources | `input-bundle.json` (target id, track, mode, data scope raw or processed, file list with hashes, claim cap), `article/`, `package/` |
-| S1 identify | input bundle, article, package | `claims.json`: per claim `claim_id`, wording, `primary`, exhibit, printed and PDF page, quote or table cell, referent (study, sample, outcome, predictor, model, wave, statistic), selection reason, and its results (`result_id`, quantity, typed printed value) |
+| S0 package (evaluator) | pinned sources | `input-bundle.json` (target id, track, mode, data scope raw or processed, file list with hashes), `article/`, `package/` |
+| S1 extract | input bundle, article, package | `claims.json`: every reported number in scope (3.1), grouped into claims; per claim `claim_id`, wording, `primary`, exhibit, printed and PDF page, quote or table cell, referent (study, sample, outcome, predictor, model, wave, statistic), and its results (`result_id`, quantity, typed printed value) |
 | S2 reproduce | input bundle, article, package, `claims.json` | `results.json` and `s2-workspace/`: per result, state (completed, blocked, ambiguous, failed, timed out), recomputed value (unrounded and as emitted), execution (script path and hash, lines, command, exit status, log paths, lockfile), ordered fixes with diff paths, method choices with article quotes (Track B), variation runs (setting, value, log path) |
-| S3 judge | everything above | `certificate.json` (schema 1.2): per result `status`, `basis`, claim outcome, comparison, slip or blocker evidence, severity, `printed_match`; paper outcome and findings |
+| S3 judge | everything above | `certificate.json` (schema 1.2): per result `status`, `basis`, claim outcome, comparison, `deviation_explanation` and its evidence, blocker evidence, severity, `printed_match`; paper outcome and findings |
 | run record (runner) | all stage directories, proxy and process logs | `run.json`: manifest and input-bundle hashes, and per stage attempt: start and end, exit status, executor and version, provider, requested and resolved model, options, prompt path and hash, tokens, cost, event log, artefact hashes, network log |
 
-In decomposed mode the runner mounts the gold `claims.json` (same schema, no labels) in place of S1's
-output, or a frozen S1 and S2 bundle in place of both. A judgement-only run is a diagnostic. The
-end-to-end input bundle never contains the gold claim list.
+In decomposed mode the runner mounts the gold extraction as `claims.json` (same schema, no labels) in
+place of S1's output, or a frozen S1 and S2 bundle in place of both. A judgement-only run is a diagnostic. The
+end-to-end input bundle never contains the gold extraction.
 
 ### 7.3 Pipeline manifest and executors
 
@@ -536,6 +572,17 @@ not reads, and the gold set is in a public repository. Each stage attempt theref
 
 An executor that cannot enforce this policy produces diagnostic results only, not ranking results.
 
+**Implementation [proposed].** On this Mac the lightest option is the built-in macOS sandbox
+(`sandbox-exec`, the mechanism Codex itself uses), not a container runtime. A profile per stage
+attempt denies reads and writes in the home directory except the stage directory, the read-only
+package library and the executor's login token, and denies all outbound network except a local
+allowlist proxy (a few dozen lines of Python). A test on 1 November 2026 confirmed that R runs and
+loads packages from the shared library under such a profile, while reading a gold file and opening a
+direct connection to CRAN both fail. Still to verify: an agent CLI running inside the profile (Codex
+must run with its own sandbox off, since sandboxes cannot be nested) and its API traffic through the
+proxy. Containers (Docker or Colima, or Apple's `container` tool) remain the fallback, and Linux
+hosts would use `bubblewrap`.
+
 ## 8. What exists and what is left
 
 Exists:
@@ -550,14 +597,15 @@ Exists:
 Left, in order:
 
 1. Freeze this specification.
-2. Gold v1.4: atomic results, typed printed values, nondeterminism records, the section 5.1 changes,
-   evaluator reruns for held results, paper outcomes recomputed.
+2. Gold v1.4: exhaustive extraction of every reported number (two extractors and adjudication),
+   atomic results, typed printed values, explanation and nondeterminism records, the section 5.1
+   changes, evaluator reruns for held results, paper outcomes recomputed.
 3. Rule pack 1.2, public prompt and certificate schema 1.2, aligned with section 4.
 4. Stage schemas and validator; packaging for all targets with opaque names, checked so that
    every frozen checkable result is still reachable after stripping; isolated runner with
    proxy and run records; executor adapters; scorer with evidence checks, mapping review and
    baselines.
 5. Adversarial tests of the scorer: copied printed values, all-`not_checkable`, duplicate rows,
-   flooding with extra claims.
+   misread and invented printed values.
 6. Stata papers.
 7. Track B eligibility, packages, content audits and gold.
