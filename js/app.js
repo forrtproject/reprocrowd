@@ -347,7 +347,12 @@
       '<td>' + programsSummary(r.programs) + '</td>' +
       '<td>' + (r.signature === 'signed' ? escapeHtml(r.signed_by || '') + ' ' + orcidLink(r.orcid) : '<span class="muted">—</span>') + '</td>' +
       '<td>' + fmtDate(r.date) + '</td>' +
-      '<td class="report-cell"><a href="' + escapeHtml(reportHref) + '" target="_blank" rel="noopener">Open report</a><br><a class="comment-link" href="' + escapeHtml(COMMENT_URL) + '" target="_blank" rel="noopener" title="Comment on this report">' + ICONS.comment + '</a></td>';
+      '<td class="report-cell">' +
+        '<a class="report-link" href="' + escapeHtml(reportHref) + '" target="_blank" rel="noopener">Summary</a><br>' +
+        '<a class="discuss-link" href="' + escapeHtml(COMMENT_URL) + '" target="_blank" rel="noopener">Discuss</a><br>' +
+        '<a class="comment-badge" href="' + escapeHtml(COMMENT_URL) + '" target="_blank" rel="noopener" title="' + (r.comments || 0) + ' comment' + (r.comments === 1 ? '' : 's') + '">' + ICONS.comment +
+          '<span class="badge-circle ' + (r.comments > 0 ? 'colored' : 'grey') + '">' + (r.comments || 0) + '</span></a>' +
+      '</td>';
   }
 
   function render(list) {

@@ -19,6 +19,7 @@
     "signature": "signed",
     "signed_by": "Maria Keller",
     "orcid": "0000-0001-2345-6789",
+    "comments": 2,
     "raw_sources": [{ "label": "Raw data", "available": true }],
     "findings": { "P0": 0, "P1": 0, "P2": 1, "P3": 2 },
     "claims": [
@@ -46,6 +47,7 @@
     "signature": "signed",
     "signed_by": "Jonas Weber",
     "orcid": "0000-0002-3456-7890",
+    "comments": 5,
     "raw_sources": [
       { "label": "Baseline survey", "available": true },
       { "label": "Follow-up records", "available": true }
@@ -76,6 +78,7 @@
     "signature": "signed",
     "signed_by": "Priya Nair",
     "orcid": "0000-0003-4567-8901",
+    "comments": 0,
     "raw_sources": [{ "label": "Raw data", "available": true }],
     "findings": { "P0": 0, "P1": 0, "P2": 0, "P3": 1 },
     "claims": [
@@ -101,6 +104,7 @@
     "signature": "signed",
     "signed_by": "Tomás Oliveira",
     "orcid": "0000-0004-5678-9012",
+    "comments": 3,
     "raw_sources": [{ "label": "Raw data", "available": false }],
     "findings": { "P0": 2, "P1": 3, "P2": 1, "P3": 0 },
     "claims": [
@@ -129,6 +133,7 @@
     "signature": "pending",
     "signed_by": "",
     "orcid": "",
+    "comments": 1,
     "raw_sources": [{ "label": "Raw data", "available": false }],
     "findings": { "P0": 1, "P1": 2, "P2": 1, "P3": 1 },
     "claims": [
@@ -157,6 +162,7 @@
     "signature": "signed",
     "signed_by": "Sofia Lindgren",
     "orcid": "0000-0005-6789-0123",
+    "comments": 0,
     "raw_sources": [{ "label": "Raw data", "available": true }],
     "findings": { "P0": 0, "P1": 0, "P2": 1, "P3": 0 },
     "claims": [

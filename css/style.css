@@ -514,11 +514,17 @@ a { color: var(--accent-dark); }
 .orcid-icon { height: 1em; width: auto; display: inline-block; vertical-align: -0.14em; opacity: .85; }
 .orcid-link:hover .orcid-icon { opacity: 1; }
 
-/* Comment icon under the Report link */
+/* Report cell: Summary / Discuss + comment-count badge */
 .report-cell a { display: inline-block; }
-.comment-link { color: var(--muted); margin-top: .4rem; }
-.comment-link:hover { color: var(--accent-dark); }
-.comment-link svg { display: inline-block; vertical-align: middle; }
+.report-link { font-weight: 600; }
+.discuss-link { color: var(--muted); }
+.discuss-link:hover { color: var(--accent-dark); }
+.comment-badge { position: relative; color: var(--muted); margin-top: .4rem; }
+.comment-badge:hover { color: var(--accent-dark); }
+.comment-badge svg { display: inline-block; vertical-align: middle; }
+.badge-circle { position: absolute; top: -6px; right: -10px; min-width: 15px; height: 15px; border-radius: 999px; font-size: .62rem; font-weight: 700; color: #fff; display: inline-flex; align-items: center; justify-content: center; padding: 0 3px; line-height: 1; }
+.badge-circle.grey { background: #cbd5e1; }
+.badge-circle.colored { background: var(--accent); }
 
 /* Expandable table rows */
 .article-row { cursor: pointer; }
