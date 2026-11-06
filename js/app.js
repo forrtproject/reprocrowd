@@ -224,7 +224,7 @@
     });
   }
 
-  /* ---------- Reproductions table ---------- */
+  /* ---------- Reproductions table (click a row to expand its chain) ---------- */
   var tbody = document.getElementById('repro-tbody');
   var search = document.getElementById('search');
   var filter = document.getElementById('filter-outcome');
@@ -232,6 +232,23 @@
   var count = document.getElementById('count');
 
   var rows = [];
+
+  var ORCID_ICON = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf8GIIkNF4uOKbDhPvV8aOzzaqj2Xx_4ePEYYSgCR_iwrsOEgbPsnLCfw&s=10';
+  var COMMENT_URL = 'https://github.com/LukasRoeseler/reprocrowd/issues';
+
+  /* SVG pictograms (no emojis) */
+  var ICONS = {
+    data: '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.2"><ellipse cx="8" cy="3.6" rx="5.6" ry="2.2"/><path d="M2.4 3.6v8.8c0 1.2 2.5 2.2 5.6 2.2s5.6-1 5.6-2.2V3.6"/><path d="M2.4 8c0 1.2 2.5 2.2 5.6 2.2S13.6 9.2 13.6 8"/></svg>',
+    processed: '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="2" width="12" height="12" rx="1.4"/><path d="M2 6.2h12M2 10.4h12M6.2 2v12M10.4 2v12"/></svg>',
+    code: '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4 2 8l3 4M11 4l3 4-3 4M9.2 2.8 6.8 13.2"/></svg>',
+    output: '<svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M2.5 14h11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none"/><rect x="3.5" y="8.5" width="2.2" height="5.5" rx=".6"/><rect x="7" y="5" width="2.2" height="9" rx=".6"/><rect x="10.5" y="10" width="2.2" height="4" rx=".6"/></svg>',
+    reported: '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"><path d="M4 1.6h5.5L12.5 4.6v9.8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2.6a1 1 0 0 1 1-1z"/><path d="M9.5 1.6v3h3" stroke-linecap="round"/><path d="M5 8h6M5 10.4h6" stroke-linecap="round"/></svg>',
+    claim: '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3.2"/><circle cx="8" cy="8" r="0.9" fill="currentColor" stroke="none"/></svg>',
+    chev: '<svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5 11 8l-5 4.5"/></svg>',
+    check: '<svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 6.5 12 13 4.5"/></svg>',
+    cross: '<svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l8 8M12 4l-8 8"/></svg>',
+    comment: '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M3 2.5h10a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H8l-3.4 2.8V10.5H3a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1z"/><path d="M5.5 6.2h5M5.5 8.4h3.4" stroke-linecap="round"/></svg>'
+  };
 
   function pill(outcome) {
     var cls = 'pill-muted';
@@ -258,22 +275,98 @@
     return '<span class="muted" title="' + safe + '">' + text + '</span>';
   }
 
+  function ico(name) { return '<span class="ico">' + ICONS[name] + '</span>'; }
+
+  function orcidLink(id) {
+    if (!id) return '';
+    return '<a class="orcid-link" href="https://orcid.org/' + escapeHtml(id) + '" target="_blank" rel="noopener" title="ORCID ' + escapeHtml(id) + '"><img class="orcid-icon" src="' + ORCID_ICON + '" alt="ORCID iD" /></a>';
+  }
+
+  function node(iconType, label, opts) {
+    opts = opts || {};
+    var cls = opts.cls ? ' ' + opts.cls : '';
+    var t = opts.tooltip ? ' title="' + escapeHtml(opts.tooltip) + '"' : '';
+    return '<div class="node' + cls + '"' + t + '>' + ico(iconType) + label + (opts.extra || '') + '</div>';
+  }
+
+  function rawGroup(r) {
+    var srcs = r.raw_sources || [{ label: 'Raw data', available: true }];
+    var multi = srcs.length > 1;
+    var nodes = srcs.map(function (s) {
+      var cls = 'data' + (s.available ? '' : ' na');
+      var badge = s.available ? '' : '<span class="na-badge" title="Raw data not available — only processed data shipped">!</span>';
+      var title = s.available ? 'Raw data available' : 'Raw data NOT available (grey link)';
+      return node('data', escapeHtml(s.label), { cls: cls, tooltip: title, extra: badge });
+    }).join('');
+    var allNa = srcs.every(function (s) { return !s.available; });
+    var link = '<span class="link h' + (allNa ? ' grey' : '') + '"></span>';
+    return '<div class="raws' + (multi ? ' multi' : '') + '">' + nodes + '</div>' + link;
+  }
+
+  function spine(r) {
+    return '<div class="spine">' + rawGroup(r) +
+      node('processed', 'Processed data', { cls: 'wide' }) + '<span class="link h"></span>' +
+      node('code', 'Code', { cls: 'wide' }) + '<span class="link h"></span>' +
+      node('output', 'Output', { cls: 'output wide', tooltip: 'Single output produced by the code' }) +
+      '</div>';
+  }
+
+  function claimBranch(c, reportUrl) {
+    var ok = c.status === 'reproducible';
+    var dot = '<span class="status ' + (ok ? 'ok' : 'bad') + '" title="' + escapeHtml(ok ? 'Reproduces' : 'Issue') + '">' + (ok ? ICONS.check : ICONS.cross) + '</span>';
+    var tt = 'Reported: ' + c.reported + '\nReproduced: ' + c.reproduced + (c.note ? '\n' + c.note : '');
+    var claimUrl = reportUrl + '#claim-' + c.id;
+    return '<div class="claim ' + (ok ? 'good' : 'issue') + '">' +
+      node('reported', 'Reported result', { tooltip: tt }) +
+      '<span class="link h"></span>' +
+      '<div class="node claim" title="' + escapeHtml(tt) + '">' + dot + ico('claim') +
+      '<a href="' + escapeHtml(claimUrl) + '" target="_blank" rel="noopener">' + escapeHtml(c.label) + '</a></div>' +
+      '</div>';
+  }
+
+  function detailCell(r) {
+    var nOk = r.claims.filter(function (c) { return c.status === 'reproducible'; }).length;
+    var nBad = r.claims.length - nOk;
+    var srcs = r.raw_sources || [{ label: 'Raw data', available: true }];
+    var mt = (srcs.length - 1) * 20;
+    var claims = r.claims.map(function (c) { return claimBranch(c, r.report_url); }).join('');
+    var head = '<div class="chain-head"><span>Provenance</span><span class="cnt">' + r.claims.length + ' claim' + (r.claims.length === 1 ? '' : 's') + '</span>' +
+      '<span class="g">' + ICONS.check + ' ' + nOk + ' reproduces</span><span class="b">' + ICONS.cross + ' ' + nBad + ' issue</span>' +
+      '<span>— ' + srcs.length + ' raw source' + (srcs.length === 1 ? '' : 's') + ' → one output → ' + r.claims.length + ' reported result' + (r.claims.length === 1 ? '' : 's') + '</span></div>';
+    return '<div class="detail-wrap">' + head + '<div class="chain">' + spine(r) +
+      '<div class="claims" style="margin-top:' + mt + 'px">' + claims + '</div></div></div>';
+  }
+
+  function rowCells(r) {
+    var reportHref = r.report_url || r.repo_url;
+    return '<td class="paper"><span class="chev">' + ICONS.chev + '</span><a class="title" href="' + escapeHtml(r.repo_url) + '" target="_blank" rel="noopener">' + escapeHtml(r.title || 'Untitled') + '</a><br><span class="doi">doi: ' + escapeHtml(r.doi || '') + '</span></td>' +
+      '<td>' + escapeHtml(r.field || '-') + '</td>' +
+      '<td>' + pill(r.outcome) + '</td>' +
+      '<td>' + escapeHtml(r.engine || '-') + '<br><span class="muted">' + escapeHtml(r.model || '') + '</span></td>' +
+      '<td>' + escapeHtml(r.repro_standard_version || '-') + '</td>' +
+      '<td>' + programsSummary(r.programs) + '</td>' +
+      '<td>' + (r.signature === 'signed' ? escapeHtml(r.signed_by || '') + ' ' + orcidLink(r.orcid) : '<span class="muted">—</span>') + '</td>' +
+      '<td>' + fmtDate(r.date) + '</td>' +
+      '<td class="report-cell"><a href="' + escapeHtml(reportHref) + '" target="_blank" rel="noopener">Open report</a><br><a class="comment-link" href="' + escapeHtml(COMMENT_URL) + '" target="_blank" rel="noopener" title="Comment on this report">' + ICONS.comment + '</a></td>';
+  }
+
   function render(list) {
     tbody.innerHTML = '';
     list.forEach(function (r) {
       var tr = document.createElement('tr');
-      tr.innerHTML =
-        '<td><a href="' + r.repo_url + '" target="_blank" rel="noopener">' + (r.title || 'Untitled') + '</a>' +
-          '<br><span class="muted">' + (r.doi || '') + '</span></td>' +
-        '<td>' + (r.field || '-') + '</td>' +
-        '<td>' + pill(r.outcome) + '</td>' +
-        '<td>' + (r.engine || '-') + '<br><span class="muted">' + (r.model || '') + '</span></td>' +
-        '<td>' + (r.repro_standard_version || '-') + '</td>' +
-        '<td>' + programsSummary(r.programs) + '</td>' +
-        '<td>' + (r.signature === 'signed' ? (r.signed_by || '✓') : '-') + '</td>' +
-        '<td>' + fmtDate(r.date) + '</td>' +
-        '<td><a href="' + r.repo_url + '" target="_blank" rel="noopener">Report</a></td>';
+      tr.className = 'article-row';
+      tr.innerHTML = rowCells(r);
+      var detail = document.createElement('tr');
+      detail.className = 'detail-row';
+      detail.innerHTML = '<td colspan="9">' + detailCell(r) + '</td>';
+      detail.style.display = 'none';
+      tr.addEventListener('click', function () {
+        var open = detail.style.display !== 'none';
+        detail.style.display = open ? 'none' : '';
+        tr.classList.toggle('open', !open);
+      });
       tbody.appendChild(tr);
+      tbody.appendChild(detail);
     });
     empty.hidden = list.length > 0;
     count.textContent = list.length + ' reproduction(s) shown.';
