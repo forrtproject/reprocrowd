@@ -14,6 +14,11 @@ This repository hosts the public website (GitHub Pages) for ReproCrowd.
 
 - `index.html` - what ReproCrowd is, the prompt, a submission + sign-off flow, and a searchable
   reproductions table linked to the [FLoRA Replication Atlas](https://forrt.org/flora-replication-atlas).
+  The page is split into three tabs: **Landing** (what it is, the workflow, the prompt, submission),
+  **Download** (link to the latest desktop-app release), and **Database** (the reproductions table and
+  filters). The workflow is rendered as a Mermaid flowchart (no build step; Mermaid is loaded from a CDN).
+- `logos/` - the creator logos shown in the footer (Institute for Replication, Münster Center for
+  Open Science, FORRT).
 - `prompt.txt` - the exact certification prompt (the copy button reads this file).
 - `crowd-repro/RULEPACK-v1.1.0.md` - the current rule pack (v1.0.0 is kept for older reports), hosted here so the prompt's link resolves.
 - `schemas/` - the `certificate.schema.json` and `flora-entry.schema.json` used to validate a bundle.

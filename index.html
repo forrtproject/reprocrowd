@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 </head>
 <body>
   <div class="ribbon" aria-hidden="true">Proof of Concept. No real data yet.</div>
@@ -20,16 +22,16 @@
         <img src="./hex-sticker.png" alt="ReproCrowd logo" class="brand-logo" />
         <span class="brand-name">ReproCrowd</span>
       </a>
-      <nav class="main-nav" aria-label="Primary">
-        <a href="#about">What it is</a>
-        <a href="#app">Web app</a>
-        <a href="#reproductions">Reproductions</a>
-        <a href="#creators">Creators</a>
+      <nav class="main-nav" role="tablist" aria-label="Primary">
+        <button class="nav-tab is-active" id="tab-landing" role="tab" aria-selected="true" aria-controls="panel-landing" data-tab="landing">Landing</button>
+        <button class="nav-tab" id="tab-download" role="tab" aria-selected="false" aria-controls="panel-download" data-tab="download">Download</button>
+        <button class="nav-tab" id="tab-database" role="tab" aria-selected="false" aria-controls="panel-database" data-tab="database">Database</button>
       </nav>
     </div>
   </header>
 
   <main id="top">
+    <section class="tab-panel is-active" id="panel-landing" role="tabpanel" aria-labelledby="tab-landing">
     <!-- Hero -->
     <section class="hero">
       <div class="container hero-grid">
@@ -41,8 +43,8 @@
             to find it.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#app">Open the app</a>
-            <a class="btn btn-secondary" href="#reproductions">Browse reproductions</a>
+            <a class="btn btn-primary" href="#prompt">Get the prompt</a>
+            <button class="btn btn-secondary" data-goto-tab="database">Browse reproductions</button>
           </div>
         </div>
         <div class="hero-visual">
@@ -98,33 +100,249 @@
       </div>
     </section>
 
-    <!-- Web app (under construction) -->
-    <section id="app" class="section section-alt">
+    <!-- Workflow -->
+    <section id="workflow" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">The ReproCrowd app</h2>
-        <div class="construction">
-          <div class="construction-icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" width="76" height="76" fill="none">
-              <g stroke-linecap="round">
-                <path d="M13 56 L51 56" stroke="#3f3f46" stroke-width="3"/>
-                <path d="M15 51 L49 51" stroke="#3f3f46" stroke-width="3"/>
-                <path d="M17 46 L47 46" stroke="#3f3f46" stroke-width="3"/>
-                <path d="M17 22 L12 56" stroke="#3f3f46" stroke-width="3"/>
-                <path d="M47 22 L52 56" stroke="#3f3f46" stroke-width="3"/>
-              </g>
-              <rect x="11" y="12" width="42" height="12" rx="2.5" fill="#f6c344"/>
-              <path d="M15 24 L25 12 M28 24 L38 12 M41 24 L51 12" stroke="#3f3f46" stroke-width="2.5"/>
-            </svg>
-          </div>
-          <h3>Under construction</h3>
-          <p class="muted">The web-based workflow is on its way. For now, submit and sign off via the
-            <a href="https://github.com/LukasRoeseler/reprocrowd" target="_blank" rel="noopener">git</a>
-            workflow in the repository.</p>
+        <h2 class="section-title">How a reproduction is made</h2>
+        <p class="lead">
+          The end-to-end flow: from a paper someone wants to check, through acquiring and parsing
+          the full text, to tagging targets, generating code, and publishing the reproduction.
+          Annotations and open questions are omitted here for clarity.
+        </p>
+        <div class="workflow">
+          <pre class="mermaid">
+flowchart TD
+    A[Someone uses AI to run a paper]
+    B[User enters DOI]
+    C{Already in our DB?}
+    D[Inform user]
+    E{Wants a new repro anyway?}
+    F[Initialize local project store]
+    G[Acquire metadata - OpenAlex]
+    H{Open access?}
+    I{Can user get free text?}
+    J[Acquire full text - pdf, xml, ...]
+    K[Parse text - IDs for section / paragraph / sentence, figures, tables]
+    L[User adds files - data, code]
+    M[Local store has metadata + full parsed text]
+    N{User satisfied with state?}
+    O[User updates metadata / text]
+    P[User tags content as procedures and results]
+    Q[Parse tagged content into structured targets - LLM assisted]
+    R[Local store has structured targets]
+    S[User adds / edits / removes targets]
+    T[User sets code generation options]
+    U[Code generation - LLM assisted]
+    V[User edits code directly]
+    W[Run code, generate report]
+    X{User approves?}
+    Y[Publish to DB]
+    Z[END]
+
+    A --> B
+    B --> C
+    C -->|No| F
+    C -->|Yes| D
+    D --> E
+    E -->|No| Z
+    E -->|Yes| F
+    F --> G
+    G --> H
+    H -->|Yes| J
+    H -->|No| I
+    I -->|Yes| J
+    I -->|No| Z
+    J --> K
+    K --> M
+    L --> M
+    M --> N
+    N -->|No| O
+    O --> M
+    N -->|Yes| P
+    P --> Q
+    Q --> R
+    S --> R
+    R --> T
+    T --> U
+    U --> W
+    V --> U
+    W --> X
+    X -->|No| V
+    X -->|Yes| Y
+          </pre>
         </div>
       </div>
     </section>
 
-    <!-- Reproductions overview -->
+    <!-- The prompt -->
+    <section id="prompt" class="section">
+      <div class="container">
+        <h2 class="section-title">Prompt</h2>
+        <p class="lead">
+          Tell your coding agent (Claude, Codex, DeepSeek, …) to certify the computational
+          reproducibility of a paper. The agent needs nothing else. The rule pack is
+          referenced by the prompt and pinned in the report.
+        </p>
+
+        <div class="prompt-box">
+          <div class="prompt-box-header">
+            <span>ReproCrowd certification prompt</span>
+            <button id="copy-prompt" class="btn btn-small">Copy</button>
+          </div>
+          <pre id="prompt-text"><code>ReproCrowd certification.
+Prompt version: 0.1.0.
+
+Certify the computational reproducibility of this paper: run its shipped code and data as a
+Reproduction Study (same methodology, same tools) and record faithfully what reproduces and
+what does not. Do NOT upload the original data or code; the licence may not permit it. Link to
+them instead.
+
+Work in a new directory `<slug>-certification` and produce the whole reproducible bundle, so the
+folder can be re-run from scratch. It must contain ALL of these files:
+- myst.yml (the reproducible-report config)
+- pixi.toml and pixi.lock (the pinned environment, every dependency versioned)
+- Snakefile (the end-to-end workflow; `snakemake --cores 1` re-runs it)
+- notebooks/01_data_download.py, 02_data_clean.py, 03_analysis.py, 04_figures.py
+- environment.json (the full program inventory: host OS, interpreter versions, package versions, lockfile)
+- nanopubs/PUBLISHED.md (the FORRT nanopublication chain URIs)
+- CITATION.cff (the citation metadata)
+- certificate.json, certificate.md, SIGN-OFF.md, flora-entry.json (the report and sign-off)
+
+Certify that the computation is reproducible and executable. Do NOT rule on whether the
+scientific conclusion is correct. Use the FORRT nanopublication chain vocabulary. Report the
+engine, model + provider, rules version, and environment you used.
+
+Follow the ReproCrowd rule pack (https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md).
+If that URL is unreachable, treat the artefact list above as the requirement and do not skip
+any of the files.
+
+Article link or DOI:
+Code & Data link:</code></pre>
+        </div>
+
+        <h3 class="subsection-title">How to use it</h3>
+        <ol class="steps">
+          <li><strong>Copy the prompt.</strong> Add the paper's article link or DOI and the code &amp; data link at the bottom.</li>
+          <li><strong>Feed it to your LLM.</strong> Paste it into the coding agent you already use, in a fresh directory.</li>
+          <li><strong>Run it.</strong> The agent reads the rule pack, builds the reproducible pipeline, and certifies the computation.</li>
+          <li><strong>Submit.</strong> The agent writes <code>certificate.json</code>, <code>certificate.md</code>, <code>SIGN-OFF.md</code> and <code>flora-entry.json</code>; you save the folder to the repo.</li>
+          <li><strong>Get signed.</strong> A human reviews the single <code>SIGN-OFF.md</code>, verifies the artifacts, and approves it for FLoRA.</li>
+        </ol>
+
+        <p class="note">
+          Reports are comparable because the <strong>rule pack version, engine, model and
+          provider</strong> are all recorded in the report. The exact prompt is saved as
+          <a href="./prompt.txt" target="_blank" rel="noopener">prompt.txt</a>. See the
+          <a href="https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md" target="_blank" rel="noopener">rule pack v1.1.0</a>.
+        </p>      </div>
+    </section>
+
+    <!-- Upload + sign-off -->
+    <section id="upload" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Submit a reproduction</h2>
+        <p class="lead">
+          Upload the <code>&lt;slug&gt;-certification</code> folder your agent produced. We check it
+          contains everything a fully reproducible FORRT reproduction needs, then you sign it off.
+          Contributors can download the bundle and submit it via a GitHub issue, or push it with git.
+        </p>
+
+        <p class="notice warn">
+          <strong>Warning:</strong> this is a proof of concept and has no backend yet, so uploads
+          do not actually go anywhere. The folder is only validated in your browser; nothing is
+          submitted. To publish a real reproduction, use the git or GitHub-issue steps below.
+        </p>
+
+        <div class="upload-card">
+          <label class="drop-zone" id="drop-zone" for="folder-input">
+            <input id="folder-input" type="file" webkitdirectory directory multiple />
+            <span class="drop-zone-icon">⬇</span>
+            <span class="drop-zone-text">Drop your <code>&lt;slug&gt;-certification</code> folder here, or click to choose</span>
+          </label>
+
+          <div class="upload-status" id="upload-status" aria-live="polite"></div>
+
+          <div class="checklist" id="checklist" hidden>
+            <h3>Report checklist</h3>
+            <p class="muted checklist-legend">
+              <span class="dot ok"></span> found &middot; <span class="dot missing"></span> required,
+              missing &middot; <span class="dot rec"></span> recommended (full reproducibility, optional)
+            </p>
+            <ul id="checklist-list"></ul>
+          </div>
+
+          <div class="signoff" id="signoff" hidden>
+            <h3>Sign off</h3>
+            <p class="muted">
+              The prompter (the person who nominated the paper) reviews and signs the single
+              <code>SIGN-OFF.md</code>. Signing confirms it is a numerical/computational
+              reproduction, not a robustness test, and accepts it into FLoRA with the AI-generated tag.
+            </p>
+            <div class="signoff-fields">
+              <label>Name
+                <input id="signoff-name" type="text" placeholder="Your name" />
+              </label>
+              <label>ORCID
+                <input id="signoff-orcid" type="text" placeholder="0000-0000-0000-0000" />
+              </label>
+              <label>Role
+                <select id="signoff-role">
+                  <option value="codechecker">Codechecker</option>
+                  <option value="reviewer">Reviewer</option>
+                  <option value="author">Author</option>
+                </select>
+              </label>
+            </div>
+            <label class="signoff-check">
+              <input id="signoff-accept" type="checkbox" />
+              I have reviewed this certification and its artefacts, and accept it for FLoRA as an
+              AI-generated numerical/computational reproduction.
+            </label>
+          </div>
+
+          <div class="upload-actions" id="upload-actions" hidden>
+            <button id="download-btn" class="btn">Download bundle (.zip)</button>
+            <button id="submit-btn" class="btn btn-primary">Submit to GitHub for review</button>
+          </div>
+
+          <div class="submit-result" id="submit-result" hidden></div>
+        </div>
+
+        <p class="note">
+          A complete, self-reproducible reproduction folder carries the report artefacts
+          (<code>certificate.json</code>, <code>certificate.md</code>, <code>SIGN-OFF.md</code>,
+          <code>flora-entry.json</code>), the pipeline and pinned environment
+          (<code>myst.yml</code>, <code>pixi.toml</code>/<code>pixi.lock</code>, <code>Snakefile</code>,
+          <code>environment.json</code>), and the record (<code>nanopubs/PUBLISHED.md</code>,
+          <code>CITATION.cff</code>), so anyone can re-run the certification, not just read it.
+          The original data and code are never uploaded; only linked, since their licence may not
+          permit redistribution.
+        </p>
+      </div>
+    </section>
+    </section><!-- /panel-landing -->
+
+    <!-- Download -->
+    <section class="tab-panel" id="panel-download" role="tabpanel" aria-labelledby="tab-download" hidden>
+      <div class="container section">
+        <h2 class="section-title">Download</h2>
+        <p class="lead">
+          ReproCrowd ships as a self-contained desktop app for AI-assisted computational
+          reproductions. Download the latest release, or grab the source and build it yourself.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://github.com/forrtproject/reprocrowd-app/releases" target="_blank" rel="noopener">Download the latest release</a>
+          <a class="btn btn-secondary" href="https://github.com/forrtproject/reprocrowd-app" target="_blank" rel="noopener">View source on GitHub</a>
+        </div>
+        <p class="note">
+          The app bundles its own Python and backend, so there is nothing else to install. On the
+          release page, pick the installer for your platform (Windows, macOS or Linux).
+        </p>
+      </div>
+    </section>
+
+    <!-- Database -->
+    <section class="tab-panel" id="panel-database" role="tabpanel" aria-labelledby="tab-database" hidden>
     <section id="reproductions" class="section section-alt">
       <div class="container">
         <h2 class="section-title">Reproductions <span class="badge badge-warn">Fictitious example data</span></h2>
@@ -178,24 +396,7 @@
         <p class="count" id="count"></p>
       </div>
     </section>
-
-    <!-- Creators -->
-    <section id="creators" class="section">
-      <div class="container">
-        <h2 class="section-title">Creators</h2>
-        <div class="creators-grid">
-          <a class="creator" href="https://forrt.org" target="_blank" rel="noopener" title="FORRT">
-            <img class="logo" src="https://forrt.org/authors/forrt/avatar_hu_73b8dd49a79c1a40.webp" alt="FORRT logo" loading="lazy" />
-          </a>
-          <a class="creator" href="https://www.i4replication.org" target="_blank" rel="noopener" title="Institute for Replication">
-            <img class="logo" src="https://www.i4replication.org/i4r-logo-horizontal.svg" alt="Institute for Replication logo" loading="lazy" />
-          </a>
-          <a class="creator" href="https://www.uni-muenster.de/MueCOS/en/index.html" target="_blank" rel="noopener" title="MüCOS">
-            <img class="logo" src="https://www.uni-muenster.de/imperia/md/images/MueCOS/mucos_logo.jpg" alt="MüCOS logo" loading="lazy" />
-          </a>
-        </div>
-      </div>
-    </section>
+    </section><!-- /panel-database -->
   </main>
 
   <footer class="site-footer">
@@ -206,6 +407,18 @@
         · <a href="https://forrtproject.github.io/reprocrowd/crowd-repro/RULEPACK-v1.1.0.md" target="_blank" rel="noopener">Rule pack</a>
         · <a href="https://forrt.org/flora-replication-atlas" target="_blank" rel="noopener">FLoRA Atlas</a>
       </span>
+    </div>
+    <div class="container footer-creators">
+      <span class="footer-creators-label">Created by</span>
+      <a class="creator-logo" href="https://i4replication.org/" target="_blank" rel="noopener">
+        <img src="./logos/i4r-logo.svg" alt="Institute for Replication" />
+      </a>
+      <a class="creator-logo" href="https://www.uni-muenster.de/MueCOS/en/forschung/index.html" target="_blank" rel="noopener">
+        <img src="./logos/mucos-logo.webp" alt="Münster Center for Open Science" />
+      </a>
+      <a class="creator-logo" href="https://forrt.org/" target="_blank" rel="noopener">
+        <img src="./logos/forrt-logo.svg" alt="FORRT" />
+      </a>
     </div>
   </footer>
 

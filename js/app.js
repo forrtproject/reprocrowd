@@ -1,6 +1,39 @@
 (function () {
   'use strict';
 
+  /* ---------- Tabs ---------- */
+  var tabs = document.querySelectorAll('.main-nav .nav-tab');
+  var panels = document.querySelectorAll('.tab-panel');
+  function activateTab(tab) {
+    var name = tab.getAttribute('data-tab');
+    tabs.forEach(function (t) {
+      var active = t === tab;
+      t.classList.toggle('is-active', active);
+      t.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+    panels.forEach(function (p) {
+      var show = p.id === 'panel-' + name;
+      p.classList.toggle('is-active', show);
+      p.hidden = !show;
+    });
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () { activateTab(t); });
+  });
+  document.querySelectorAll('[data-goto-tab]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var name = el.getAttribute('data-goto-tab');
+      var tab = document.querySelector('.main-nav .nav-tab[data-tab="' + name + '"]');
+      if (tab) activateTab(tab);
+    });
+  });
+
+  /* ---------- Workflow chart (Mermaid) ---------- */
+  if (window.mermaid) {
+    mermaid.initialize({ startOnLoad: false, theme: 'neutral' });
+    mermaid.run({ querySelector: '.tab-panel.is-active .mermaid' }).catch(function () {});
+  }
+
   /* ---------- Copy prompt ---------- */
   var copyBtn = document.getElementById('copy-prompt');
   if (copyBtn) {
