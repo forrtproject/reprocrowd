@@ -14,7 +14,7 @@ This repository hosts the public website (GitHub Pages) for ReproCrowd.
 
 - `index.html` - what ReproCrowd is, the prompt, a submission + sign-off flow, and a searchable
   reproductions table linked to the [FLoRA Replication Atlas](https://forrt.org/flora-replication-atlas).
-  The page is split into three tabs: **Landing** (what it is, the workflow, the prompt, submission),
+  The page is split into three tabs: **How it works** (what it is and the workflow),
   **Download** (link to the latest desktop-app release), and **Database** (the reproductions table and
   filters). The workflow is rendered as a Mermaid flowchart (no build step; Mermaid is loaded from a CDN).
 - `logos/` - the creator logos shown in the footer (Institute for Replication, Münster Center for
