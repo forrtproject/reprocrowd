@@ -4,6 +4,11 @@
   /* ---------- Tabs ---------- */
   var tabs = document.querySelectorAll('.main-nav .nav-tab');
   var panels = document.querySelectorAll('.tab-panel');
+  var TAB_TITLE = 'ReproCrowd: crowdsourced numerical reproductions';
+  var FRAGMENT = { landing: 'how-it-works', download: 'download', database: 'database', about: 'about' };
+  var BY_FRAGMENT = {};
+  Object.keys(FRAGMENT).forEach(function (k) { BY_FRAGMENT[FRAGMENT[k]] = k; });
+
   function activateTab(tab) {
     var name = tab.getAttribute('data-tab');
     tabs.forEach(function (t) {
@@ -16,7 +21,18 @@
       p.classList.toggle('is-active', show);
       p.hidden = !show;
     });
+    var frag = FRAGMENT[name];
+    if (frag && location.hash !== '#' + frag) {
+      history.replaceState(null, '', '#' + frag);
+    }
+    document.title = tab.textContent.trim() + ' — ' + TAB_TITLE;
   }
+
+  function tabForHash() {
+    var h = location.hash.replace(/^#/, '');
+    return BY_FRAGMENT[h] || null;
+  }
+
   tabs.forEach(function (t) {
     t.addEventListener('click', function () { activateTab(t); });
   });
@@ -27,6 +43,33 @@
       if (tab) activateTab(tab);
     });
   });
+
+  var brand = document.querySelector('.brand');
+  if (brand) {
+    brand.addEventListener('click', function (e) {
+      e.preventDefault();
+      var tab = document.querySelector('.main-nav .nav-tab[data-tab="landing"]');
+      if (tab) activateTab(tab);
+      window.scrollTo(0, 0);
+    });
+  }
+
+  window.addEventListener('hashchange', function () {
+    var name = tabForHash();
+    if (name) {
+      var tab = document.querySelector('.main-nav .nav-tab[data-tab="' + name + '"]');
+      if (tab) activateTab(tab);
+    }
+  });
+
+  var initial = tabForHash();
+  var landingTab = document.querySelector('.main-nav .nav-tab[data-tab="landing"]');
+  if (initial) {
+    var it = document.querySelector('.main-nav .nav-tab[data-tab="' + initial + '"]');
+    activateTab(it || landingTab);
+  } else if (landingTab) {
+    activateTab(landingTab);
+  }
 
   /* ---------- Workflow chart (Mermaid) ---------- */
   if (window.mermaid) {
