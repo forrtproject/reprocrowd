@@ -26,6 +26,7 @@
         <button class="nav-tab is-active" id="tab-landing" role="tab" aria-selected="true" aria-controls="panel-landing" data-tab="landing">How it works</button>
         <button class="nav-tab" id="tab-download" role="tab" aria-selected="false" aria-controls="panel-download" data-tab="download">Download</button>
         <button class="nav-tab" id="tab-database" role="tab" aria-selected="false" aria-controls="panel-database" data-tab="database">Database</button>
+        <button class="nav-tab" id="tab-about" role="tab" aria-selected="false" aria-controls="panel-about" data-tab="about">About</button>
       </nav>
     </div>
   </header>
@@ -251,6 +252,45 @@ flowchart TD
       </div>
     </section>
     </section><!-- /panel-database -->
+
+    <!-- About -->
+    <section class="tab-panel" id="panel-about" role="tabpanel" aria-labelledby="tab-about" hidden>
+      <div class="container section">
+        <h2 class="section-title">About</h2>
+        <p class="lead">
+          ReproCrowd is a crowdsourced platform for numerical reproductions, built by the
+          Institute for Replication, the Münster Center for Open Science, and FORRT.
+        </p>
+
+        <h3 class="subsection-title">Creators</h3>
+        <div class="about-creators">
+          <a class="creator-card" href="https://i4replication.org/" target="_blank" rel="noopener">
+            <img src="./logos/i4r-logo.svg" alt="Institute for Replication logo" />
+            <span>Institute for Replication</span>
+          </a>
+          <a class="creator-card" href="https://www.uni-muenster.de/MueCOS/en/forschung/index.html" target="_blank" rel="noopener">
+            <img src="./logos/mucos-logo.webp" alt="Münster Center for Open Science logo" />
+            <span>Münster Center for Open Science</span>
+          </a>
+          <a class="creator-card" href="https://forrt.org/" target="_blank" rel="noopener">
+            <img src="./logos/forrt-logo.svg" alt="FORRT logo" />
+            <span>FORRT</span>
+          </a>
+        </div>
+
+        <h3 class="subsection-title">Recommended citation</h3>
+        <div class="citation-box">
+          <p>
+            ReproCrowd (2026). <em>ReproCrowd: crowdsourced numerical reproductions</em>
+            [Computer software]. Institute for Replication, Münster Center for Open Science
+            &amp; FORRT. <a href="https://forrt.org/reprocrowd/" target="_blank" rel="noopener">https://forrt.org/reprocrowd/</a>
+          </p>
+        </div>
+
+        <h3 class="subsection-title">Version</h3>
+        <p class="muted">ReproCrowd website <code>0.1.0</code> (placeholder).</p>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
