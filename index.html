@@ -14,7 +14,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
 </head>
 <body>
-  <div class="ribbon" aria-hidden="true">Proof of Concept. No real data yet.</div>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#how-it-works">
@@ -157,6 +156,9 @@
     <section class="tab-panel" id="panel-download" role="tabpanel" aria-labelledby="tab-download" hidden>
       <div class="container section">
         <h2 class="section-title">Download</h2>
+        <div class="notice danger" role="alert">
+          <strong>Under development.</strong> The app is in development and is actively being worked on.
+        </div>
         <p class="lead">
           ReproCrowd ships as a self-contained desktop app for AI-assisted computational
           reproductions. Download the latest release, or grab the source and build it yourself.
@@ -176,15 +178,17 @@
     <section class="tab-panel" id="panel-database" role="tabpanel" aria-labelledby="tab-database" hidden>
     <section id="reproductions" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Reproductions <span class="badge badge-warn">Fictitious example data</span></h2>
+        <div class="notice danger" role="alert">
+          <strong>Fictitious example data.</strong> The entries below are fictitious examples that
+          demonstrate how the table works. No real certifications are listed yet.
+        </div>
+        <h2 class="section-title">Reproductions</h2>
         <p class="lead">
           All submitted reproductions, with their computational outcome. Search by paper, field
           or outcome, and filter by verdict. Click any row to expand its provenance chain — the
           raw data, processed data, code and output, and how each reported result maps to a claim.
           Each row links to the report and to the
           <a href="https://forrt.org/flora-replication-atlas" target="_blank" rel="noopener">FLoRA Replication Atlas</a>.
-          The rows below are <strong>fictitious example data</strong> to show how the table works;
-          no real certifications are listed yet.
         </p>
 
         <div class="table-controls">
