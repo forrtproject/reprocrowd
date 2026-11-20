@@ -514,19 +514,15 @@ a { color: var(--accent-dark); }
   color: var(--muted);
   font-size: .9rem;
 }
-.footer-inner { display: flex; justify-content: flex-end; gap: 1rem; flex-wrap: wrap; }
-.footer-inner a { color: var(--muted); }
-.footer-inner a:hover { color: var(--accent-dark); }
-.footer-github { display: inline-flex; align-items: center; }
-.footer-github svg { width: 22px; height: 22px; fill: currentColor; display: block; }
 .footer-creators {
   display: flex;
   align-items: center;
   gap: 1.6rem;
   flex-wrap: wrap;
   padding: .9rem 0;
-  border-top: 1px solid var(--border);
 }
+.footer-github { display: inline-flex; align-items: center; margin-left: auto; }
+.footer-github svg { width: 22px; height: 22px; fill: currentColor; display: block; }
 .footer-creators-label {
   font-size: .8rem;
   font-weight: 700;
@@ -551,7 +547,7 @@ a { color: var(--accent-dark); }
 /* ReproHack ABC (principles) */
 .abc-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.4rem;
   margin-top: 1.8rem;
 }
