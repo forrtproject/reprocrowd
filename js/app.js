@@ -71,12 +71,6 @@
     activateTab(landingTab);
   }
 
-  /* ---------- Workflow chart (Mermaid) ---------- */
-  if (window.mermaid) {
-    mermaid.initialize({ startOnLoad: false, theme: 'neutral' });
-    mermaid.run({ querySelector: '.tab-panel.is-active .mermaid' }).catch(function () {});
-  }
-
   /* ---------- Copy prompt ---------- */
   var copyBtn = document.getElementById('copy-prompt');
   if (copyBtn) {
