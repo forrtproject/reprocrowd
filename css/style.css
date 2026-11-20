@@ -166,47 +166,6 @@ a { color: var(--accent-dark); }
   filter: drop-shadow(0 10px 24px rgba(133,57,83,.18));
 }
 
-/* Crow scene: an interactive button wrapped around the hex-sticker artwork */
-.crow-scene {
-  position: relative;
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  border: none;
-  background: none;
-  font: inherit;
-  color: inherit;
-  cursor: pointer;
-  line-height: 0;
-  -webkit-tap-highlight-color: transparent;
-}
-.crow-scene .hero-sticker { display: block; }
-.crow-scene-overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-  pointer-events: none;
-}
-.crow-scene:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 4px;
-  border-radius: var(--radius);
-}
-
-/* Crow parts: the animation pivot points and resting pose */
-.crow-scene .crow-body { fill: #2c353c; }
-.crow-scene [data-part="head"] path { fill: #2c353c; }
-
-[data-crow] [data-part] {
-  transform-box: fill-box;
-  transform-origin: center;
-}
-[data-crow] [data-part="head"] { transform-origin: 50% 85%; }
-[data-crow] [data-part="wing"] { transform-origin: 50% 20%; }
-[data-crow] [data-part="neck"] { transform-origin: 50% 90%; }
-
 /* Buttons */
 .btn {
   display: inline-block;
