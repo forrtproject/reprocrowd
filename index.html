@@ -12,7 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./css/style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 </head>
 <body>
   <div class="ribbon" aria-hidden="true">Proof of Concept. No real data yet.</div>
@@ -102,76 +101,42 @@
       </div>
     </section>
 
-    <!-- Workflow -->
-    <section id="workflow" class="section section-alt">
+    <!-- Principles -->
+    <section id="principles" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">How a reproduction is made</h2>
+        <h2 class="section-title">The ReproHack ABC</h2>
         <p class="lead">
-          The end-to-end flow: from a paper someone wants to check, through acquiring and parsing
-          the full text, to tagging targets, generating code, and publishing the reproduction.
-          Annotations and open questions are omitted here for clarity.
+          Checking a research article's numerical reproducibility is now easier than ever. We think
+          that this is also a reason to agree on a minimum standard that such checks should adhere to.
         </p>
-        <div class="workflow">
-          <pre class="mermaid">
-flowchart TD
-    A[Someone uses AI to run a paper]
-    B[User enters DOI]
-    C{Already in our DB?}
-    D[Inform user]
-    E{Wants a new repro anyway?}
-    F[Initialize local project store]
-    G[Acquire metadata - OpenAlex]
-    H{Open access?}
-    I{Can user get free text?}
-    J[Acquire full text - pdf, xml, ...]
-    K[Parse text - IDs for section / paragraph / sentence, figures, tables]
-    L[User adds files - data]
-    M[Local store has metadata + full parsed text]
-    N{User satisfied with state?}
-    O[User updates metadata / text]
-    P[User tags content as procedures and results]
-    Q[Parse tagged content into structured targets - LLM assisted]
-    R[Local store has structured targets]
-    S[User adds / edits / removes targets]
-    T[User sets code generation options]
-    U[Code generation - LLM assisted]
-    V[User edits code directly]
-    W[Run code, generate report]
-    X{User approves?}
-    Y[Publish to DB]
-    Z[END]
-
-    A --> B
-    B --> C
-    C -->|No| F
-    C -->|Yes| D
-    D --> E
-    E -->|No| Z
-    E -->|Yes| F
-    F --> G
-    G --> H
-    H -->|Yes| J
-    H -->|No| I
-    I -->|Yes| J
-    I -->|No| Z
-    J --> K
-    K --> M
-    L --> M
-    M --> N
-    N -->|No| O
-    O --> M
-    N -->|Yes| P
-    P --> Q
-    Q --> R
-    S --> R
-    R --> T
-    T --> U
-    U --> W
-    V --> U
-    W --> X
-    X -->|No| V
-    X -->|Yes| Y
-          </pre>
+        <div class="abc-grid">
+          <article class="abc-card">
+            <span class="abc-letter" aria-hidden="true">A</span>
+            <h3>Accessible for humans</h3>
+            <p>
+              While results are archived in machine-readable formats, the primary purpose is to give
+              <em>humans</em> access to checks for numerical reproducibility. If done on published
+              articles, all elements of the check should be accessible and reproducible.
+            </p>
+          </article>
+          <article class="abc-card">
+            <span class="abc-letter" aria-hidden="true">B</span>
+            <h3>Blunt</h3>
+            <p>
+              There are many reasons why results can be irreproducible, but finding out which apply
+              exceeds the scope of ReproCrowd reports. Results from the reports are thus stated
+              directly without further evaluation. Transparent publications of all reports allow
+              meta-scientists to assess which AI models and which reasons may affect reproducibility.
+            </p>
+          </article>
+          <article class="abc-card">
+            <span class="abc-letter" aria-hidden="true">C</span>
+            <h3>Claim-level</h3>
+            <p>
+              A research article rarely has only a single claim but consists of multiple claims.
+              ReproCrowd checks claims individually for reproducibility.
+            </p>
+          </article>
         </div>
       </div>
     </section>

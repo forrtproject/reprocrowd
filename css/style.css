@@ -546,22 +546,52 @@ a { color: var(--accent-dark); }
   object-fit: contain;
 }
 
-/* Workflow (Mermaid) */
-.workflow {
+/* ReproHack ABC (principles) */
+.abc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
+  margin-top: 1.8rem;
+}
+.abc-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  padding: 1.9rem 1.5rem 1.6rem;
   box-shadow: var(--shadow);
-  padding: 1.2rem;
-  margin-top: 1.4rem;
-  overflow-x: auto;
+  overflow: hidden;
+  transition: border-color .18s ease, transform .18s ease;
 }
-.workflow .mermaid {
-  display: flex;
+.abc-card:hover { border-color: var(--accent-light); transform: translateY(-2px); }
+.abc-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+}
+.abc-letter {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  min-width: 640px;
-  font-family: 'Source Sans 3', 'Segoe UI', Helvetica, Arial, sans-serif;
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 14px;
+  background: var(--accent-faint);
+  color: var(--accent-dark);
+  font-family: 'Domine', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 1rem;
 }
+.abc-card h3 { margin: 0 0 .55rem; font-size: 1.1rem; }
+.abc-card p { margin: 0; color: var(--ink-soft); font-size: .95rem; }
 
 /* About */
 .about-creators {
