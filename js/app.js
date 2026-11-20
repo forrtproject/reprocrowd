@@ -470,4 +470,59 @@
   if (filter) filter.addEventListener('change', applyFilters);
 
   load();
+
+  /* ---------- Crow scene ---------- */
+  function wireCrowScene(scene) {
+    const birds = [...scene.querySelectorAll('[data-crow]')];
+    if (!birds.length) return () => {};
+
+    const randomItem = items => items[Math.floor(Math.random() * items.length)];
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let active = null;
+
+    // Each gesture starts and ends in the exact resting pose.
+    // A glance changes direction edge-on rather than spinning the whole head.
+    const gestures = [
+      { part: 'eye', duration: 180, poses: ['scaleY(1)', 'scaleY(0)', 'scaleY(0)', 'scaleY(1)'] },
+      { part: 'head', duration: 720, poses: ['scaleX(1)', 'scaleX(-1)', 'scaleX(-1)', 'scaleX(1)'] },
+      { part: 'wing', duration: 850, poses: ['rotate(0deg)', 'rotate(-9deg)', 'rotate(-7deg)', 'rotate(0deg)'] },
+      { part: 'head', duration: 680, poses: ['rotate(0deg)', 'rotate(-8deg)', 'rotate(-8deg)', 'rotate(0deg)'] },
+      { part: 'neck', duration: 420, poses: ['scale(1)', 'scale(1.08, 1.04)', 'scale(1)'] }
+    ];
+
+    function onClick(event) {
+      // A new click takes effect immediately, even during a previous gesture.
+      active?.cancel();
+      active = null;
+
+      const distance = bird => {
+        const r = bird.getBoundingClientRect();
+        return Math.hypot(
+          event.clientX - (r.left + r.width / 2),
+          event.clientY - (r.top + r.height / 2)
+        );
+      };
+
+      const bird = event.detail === 0
+        ? randomItem(birds) // keyboard or assistive technology
+        : birds.reduce((a, b) => distance(a) <= distance(b) ? a : b);
+
+      const gesture = reducedMotion.matches ? gestures[0] : randomItem(gestures);
+      const part = bird.querySelector('[data-part="' + gesture.part + '"]');
+      if (!part) return;
+
+      active = part.animate(
+        gesture.poses.map(transform => ({ transform })),
+        { duration: gesture.duration, easing: 'ease-in-out', fill: 'none' }
+      );
+    }
+
+    scene.addEventListener('click', onClick);
+    return () => {
+      scene.removeEventListener('click', onClick);
+      active?.cancel();
+    };
+  }
+
+  document.querySelectorAll('[data-crow-scene]').forEach(wireCrowScene);
 })();
