@@ -514,9 +514,11 @@ a { color: var(--accent-dark); }
   color: var(--muted);
   font-size: .9rem;
 }
-.footer-inner { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.footer-inner { display: flex; justify-content: flex-end; gap: 1rem; flex-wrap: wrap; }
 .footer-inner a { color: var(--muted); }
 .footer-inner a:hover { color: var(--accent-dark); }
+.footer-github { display: inline-flex; align-items: center; }
+.footer-github svg { width: 22px; height: 22px; fill: currentColor; display: block; }
 .footer-creators {
   display: flex;
   align-items: center;
